@@ -1,0 +1,24 @@
+{
+  "id": "conv-1779866884734-kemcpmcw1",
+  "providerId": "claude",
+  "title": "你现在是什么模型？",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1779866884740,
+  "updatedAt": 1779867626003,
+  "lastResponseAt": 1779866894479,
+  "sessionId": "5a9c0ac2-eeee-4faa-96d8-eed1da76d90e",
+  "providerState": {
+    "providerSessionId": "5a9c0ac2-eeee-4faa-96d8-eed1da76d90e"
+  },
+  "currentNote": "欢迎.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 20686,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 20686,
+    "percentage": 10,
+    "contextWindowIsAuthoritative": true
+  }
+}

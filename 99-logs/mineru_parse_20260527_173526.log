@@ -1,0 +1,26 @@
+[2026-05-27 17:35:26] INFO    Log file: /Users/tovey/Desktop/Traffic_Papers/99_Logs/mineru_parse_20260527_173526.log
+[2026-05-27 17:35:26] INFO    ============================================================
+[2026-05-27 17:35:26] INFO    MinerU Batch Parse Started
+[2026-05-27 17:35:26] INFO    ============================================================
+[2026-05-27 17:35:26] INFO    Input  : /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 17:35:26] INFO    Output : /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output
+[2026-05-27 17:35:26] INFO    Parsed : /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown
+[2026-05-27 17:35:26] INFO    Model  : vlm
+[2026-05-27 17:35:26] INFO    Language: ch
+[2026-05-27 17:35:26] INFO    OCR    : False
+[2026-05-27 17:35:26] INFO    Formula: True
+[2026-05-27 17:35:26] INFO    Table  : True
+[2026-05-27 17:35:26] INFO    Batch  : 10
+[2026-05-27 17:35:26] INFO    Found 50 PDF(s) in /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 17:35:26] INFO    To process: 50, Skipped: 0
+[2026-05-27 17:35:26] INFO    --- Batch 1/5 (10 PDFs) ---
+[2026-05-27 17:35:26] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 17:35:27] INFO    Batch ID: 42e129ee-0a8f-4d4b-bd2e-dfc0facce58b
+[2026-05-27 17:35:27] ERROR   Upload failed for 2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.pdf: HTTP 403
+[2026-05-27 17:35:46] ERROR   Upload failed for 2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning.pdf: HTTP 403
+[2026-05-27 17:36:04] ERROR   Upload failed for 2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.pdf: HTTP 403
+[2026-05-27 17:36:23] ERROR   Upload failed for 2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis.pdf: HTTP 403
+[2026-05-27 17:36:23] ERROR   Upload failed for 2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.pdf: HTTP 403
+[2026-05-27 17:36:42] ERROR   Upload failed for 2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.pdf: HTTP 403
+[2026-05-27 17:37:01] ERROR   Upload failed for 2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis.pdf: HTTP 403
+[2026-05-27 17:37:20] ERROR   Upload failed for 2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks.pdf: HTTP 403

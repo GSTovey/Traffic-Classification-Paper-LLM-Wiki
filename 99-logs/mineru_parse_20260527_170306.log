@@ -1,0 +1,91 @@
+[2026-05-27 17:03:06] INFO    Log file: /Users/tovey/Desktop/Traffic_Papers/99_Logs/mineru_parse_20260527_170306.log
+[2026-05-27 17:03:06] INFO    ============================================================
+[2026-05-27 17:03:06] INFO    MinerU Batch Parse Started
+[2026-05-27 17:03:06] INFO    ============================================================
+[2026-05-27 17:03:06] INFO    Input  : /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 17:03:06] INFO    Output : /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output
+[2026-05-27 17:03:06] INFO    Parsed : /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown
+[2026-05-27 17:03:06] INFO    Model  : vlm
+[2026-05-27 17:03:06] INFO    Language: ch
+[2026-05-27 17:03:06] INFO    OCR    : False
+[2026-05-27 17:03:06] INFO    Formula: True
+[2026-05-27 17:03:06] INFO    Table  : True
+[2026-05-27 17:03:06] INFO    Batch  : 10
+[2026-05-27 17:03:06] INFO    Found 50 PDF(s) in /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 17:03:06] INFO    To process: 50, Skipped: 0
+[2026-05-27 17:03:06] INFO    --- Batch 1/5 (10 PDFs) ---
+[2026-05-27 17:03:06] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 17:03:07] ERROR   Batch upload URL request failed: HTTP 401: {"traceId":"9d51f07ccf4b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:07] INFO    --- Batch 2/5 (10 PDFs) ---
+[2026-05-27 17:03:07] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 17:03:07] ERROR   Batch upload URL request failed: HTTP 401: {"traceId":"64292b045e26","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:07] INFO    --- Batch 3/5 (10 PDFs) ---
+[2026-05-27 17:03:07] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 17:03:07] ERROR   Batch upload URL request failed: HTTP 401: {"traceId":"78ff3da73102","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:07] INFO    --- Batch 4/5 (10 PDFs) ---
+[2026-05-27 17:03:07] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 17:03:07] ERROR   Batch upload URL request failed: HTTP 401: {"traceId":"ba15654876c8","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:07] INFO    --- Batch 5/5 (10 PDFs) ---
+[2026-05-27 17:03:07] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 17:03:08] ERROR   Batch upload URL request failed: HTTP 401: {"traceId":"dbfc8ccaae7b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO    ============================================================
+[2026-05-27 17:03:08] INFO    SUMMARY
+[2026-05-27 17:03:08] INFO    ============================================================
+[2026-05-27 17:03:08] INFO    Total PDFs found     : 50
+[2026-05-27 17:03:08] INFO    Skipped (parsed)     : 0
+[2026-05-27 17:03:08] INFO    Successfully parsed  : 0
+[2026-05-27 17:03:08] INFO    Failed               : 50
+[2026-05-27 17:03:08] INFO    
+[2026-05-27 17:03:08] INFO    Failure details:
+[2026-05-27 17:03:08] INFO      - 2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.pdf: HTTP 401: {"traceId":"9d51f07ccf4b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning.pdf: HTTP 401: {"traceId":"9d51f07ccf4b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.pdf: HTTP 401: {"traceId":"9d51f07ccf4b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis.pdf: HTTP 401: {"traceId":"9d51f07ccf4b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.pdf: HTTP 401: {"traceId":"9d51f07ccf4b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.pdf: HTTP 401: {"traceId":"9d51f07ccf4b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis.pdf: HTTP 401: {"traceId":"9d51f07ccf4b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks.pdf: HTTP 401: {"traceId":"9d51f07ccf4b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey.pdf: HTTP 401: {"traceId":"9d51f07ccf4b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_and_Spationtemporal_Characteristics.pdf: HTTP 401: {"traceId":"9d51f07ccf4b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.pdf: HTTP 401: {"traceId":"64292b045e26","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.pdf: HTTP 401: {"traceId":"64292b045e26","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory.pdf: HTTP 401: {"traceId":"64292b045e26","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.pdf: HTTP 401: {"traceId":"64292b045e26","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.pdf: HTTP 401: {"traceId":"64292b045e26","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.pdf: HTTP 401: {"traceId":"64292b045e26","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.pdf: HTTP 401: {"traceId":"64292b045e26","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation.pdf: HTTP 401: {"traceId":"64292b045e26","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic.pdf: HTTP 401: {"traceId":"64292b045e26","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.pdf: HTTP 401: {"traceId":"64292b045e26","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.pdf: HTTP 401: {"traceId":"78ff3da73102","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.pdf: HTTP 401: {"traceId":"78ff3da73102","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification.pdf: HTTP 401: {"traceId":"78ff3da73102","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model.pdf: HTTP 401: {"traceId":"78ff3da73102","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.pdf: HTTP 401: {"traceId":"78ff3da73102","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.pdf: HTTP 401: {"traceId":"78ff3da73102","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.pdf: HTTP 401: {"traceId":"78ff3da73102","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection.pdf: HTTP 401: {"traceId":"78ff3da73102","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks.pdf: HTTP 401: {"traceId":"78ff3da73102","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane.pdf: HTTP 401: {"traceId":"78ff3da73102","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification.pdf: HTTP 401: {"traceId":"ba15654876c8","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-NIPS-Gated_Attention_for_Larg.pdf: HTTP 401: {"traceId":"ba15654876c8","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.pdf: HTTP 401: {"traceId":"ba15654876c8","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification.pdf: HTTP 401: {"traceId":"ba15654876c8","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under_Environment_Shifts.pdf: HTTP 401: {"traceId":"ba15654876c8","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.pdf: HTTP 401: {"traceId":"ba15654876c8","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_Decouple__based_Semantic_Enhancement.pdf: HTTP 401: {"traceId":"ba15654876c8","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting.pdf: HTTP 401: {"traceId":"ba15654876c8","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.pdf: HTTP 401: {"traceId":"ba15654876c8","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification.pdf: HTTP 401: {"traceId":"ba15654876c8","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification.pdf: HTTP 401: {"traceId":"dbfc8ccaae7b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification.pdf: HTTP 401: {"traceId":"dbfc8ccaae7b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_encrypted_traffic_classification.pdf: HTTP 401: {"traceId":"dbfc8ccaae7b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs.pdf: HTTP 401: {"traceId":"dbfc8ccaae7b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification.pdf: HTTP 401: {"traceId":"dbfc8ccaae7b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning.pdf: HTTP 401: {"traceId":"dbfc8ccaae7b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Classification_in_IoT.pdf: HTTP 401: {"traceId":"dbfc8ccaae7b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.pdf: HTTP 401: {"traceId":"dbfc8ccaae7b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.pdf: HTTP 401: {"traceId":"dbfc8ccaae7b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO      - 2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models.pdf: HTTP 401: {"traceId":"dbfc8ccaae7b","msgCode":"A0202","msg":"user authenticate failed","data":null,"success":false,"total":0}
+[2026-05-27 17:03:08] INFO    ============================================================
+[2026-05-27 17:03:08] INFO    Done.

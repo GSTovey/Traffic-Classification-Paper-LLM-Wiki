@@ -1,0 +1,95 @@
+{
+  "userName": "",
+  "permissionMode": "yolo",
+  "model": "haiku",
+  "thinkingBudget": "off",
+  "effortLevel": "high",
+  "serviceTier": "default",
+  "enableAutoTitleGeneration": true,
+  "titleGenerationModel": "",
+  "excludedTags": [],
+  "mediaFolder": "",
+  "systemPrompt": "",
+  "persistentExternalContextPaths": [],
+  "sharedEnvironmentVariables": "\"ANTHROPIC_AUTH_TOKEN\": \"tp-cnefxvvoe1rfph5o3eyh2mzs606hjizdb2v2403b4q0q58h6\",\n\"ANTHROPIC_BASE_URL\": \"https://token-plan-cn.xiaomimimo.com/anthropic\",\n\"ANTHROPIC_MODEL\": \"mimo-v2.5-pro\"",
+  "envSnippets": [
+    {
+      "id": "snippet-1779867370301",
+      "name": "MIMO",
+      "description": "",
+      "envVars": "\"ANTHROPIC_AUTH_TOKEN\": \"tp-cnefxvvoe1rfph5o3eyh2mzs606hjizdb2v2403b4q0q58h6\",\n\"ANTHROPIC_BASE_URL\": \"https://token-plan-cn.xiaomimimo.com/anthropic\",\n\"ANTHROPIC_MODEL\": \"mimo-v2.5-pro\"",
+      "scope": "shared"
+    }
+  ],
+  "customContextLimits": {},
+  "keyboardNavigation": {
+    "scrollUpKey": "w",
+    "scrollDownKey": "s",
+    "focusInputKey": "i"
+  },
+  "requireCommandOrControlEnterToSend": false,
+  "locale": "zh-CN",
+  "providerConfigs": {
+    "claude": {
+      "safeMode": "acceptEdits",
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "loadUserSettings": true,
+      "enableChrome": false,
+      "enableBangBash": false,
+      "enableOpus1M": true,
+      "enableSonnet1M": true,
+      "customModels": "",
+      "lastModel": "haiku",
+      "environmentVariables": "\"ANTHROPIC_AUTH_TOKEN\": \"tp-cnefxvvoe1rfph5o3eyh2mzs606hjizdb2v2403b4q0q58h6\",\n\"ANTHROPIC_BASE_URL\": \"https://token-plan-cn.xiaomimimo.com/anthropic\",\n\"ANTHROPIC_MODEL\": \"mimo-v2.5-pro\"",
+      "environmentHash": ""
+    },
+    "codex": {
+      "enabled": false,
+      "safeMode": "workspace-write",
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "customModels": "",
+      "reasoningSummary": "detailed",
+      "environmentVariables": "",
+      "environmentHash": "",
+      "installationMethodsByHost": {
+        "device:ea7f189f-ce7e-4a7e-95a9-4966bd583e2a": "native-windows"
+      },
+      "wslDistroOverridesByHost": {}
+    },
+    "opencode": {
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "enabled": false,
+      "environmentHash": "",
+      "environmentVariables": "OPENCODE_ENABLE_EXA=1",
+      "modelAliases": {},
+      "preferredThinkingByModel": {},
+      "selectedMode": "",
+      "thinkingOptionsByModel": {},
+      "visibleModels": []
+    }
+  },
+  "settingsProvider": "claude",
+  "savedProviderModel": {
+    "claude": "haiku"
+  },
+  "savedProviderEffort": {
+    "claude": "high"
+  },
+  "savedProviderServiceTier": {},
+  "savedProviderThinkingBudget": {
+    "claude": "off"
+  },
+  "savedProviderPermissionMode": {
+    "claude": "yolo"
+  },
+  "lastCustomModel": "",
+  "maxTabs": 3,
+  "tabBarPosition": "input",
+  "enableAutoScroll": true,
+  "deferMathRenderingDuringStreaming": true,
+  "chatViewPlacement": "right-sidebar",
+  "hiddenProviderCommands": {}
+}

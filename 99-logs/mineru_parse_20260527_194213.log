@@ -1,0 +1,203 @@
+[2026-05-27 19:42:13] INFO    Log file: /Users/tovey/Desktop/Traffic_Papers/99_Logs/mineru_parse_20260527_194213.log
+[2026-05-27 19:42:13] INFO    ============================================================
+[2026-05-27 19:42:13] INFO    MinerU Batch Parse Started
+[2026-05-27 19:42:13] INFO    ============================================================
+[2026-05-27 19:42:13] INFO    Input  : /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 19:42:13] INFO    Output : /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output
+[2026-05-27 19:42:13] INFO    Parsed : /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown
+[2026-05-27 19:42:13] INFO    Model  : vlm
+[2026-05-27 19:42:13] INFO    Language: ch
+[2026-05-27 19:42:13] INFO    OCR    : False
+[2026-05-27 19:42:13] INFO    Formula: True
+[2026-05-27 19:42:13] INFO    Table  : True
+[2026-05-27 19:42:13] INFO    Batch  : 10
+[2026-05-27 19:42:13] INFO    Found 50 PDF(s) in /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 19:42:13] INFO    --force enabled: will re-parse all PDFs
+[2026-05-27 19:42:13] INFO    To process: 50, Skipped: 0
+[2026-05-27 19:42:13] INFO    --- Batch 1/5 (10 PDFs) ---
+[2026-05-27 19:42:13] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 19:42:13] INFO    Batch ID: 1cf8bab7-ac17-489f-9753-37570822f66b
+[2026-05-27 19:42:13] DEBUG   Uploaded: 2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.pdf
+[2026-05-27 19:42:13] DEBUG   Uploaded: 2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning.pdf
+[2026-05-27 19:42:13] DEBUG   Uploaded: 2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.pdf
+[2026-05-27 19:42:14] DEBUG   Uploaded: 2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis.pdf
+[2026-05-27 19:42:14] DEBUG   Uploaded: 2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.pdf
+[2026-05-27 19:42:14] DEBUG   Uploaded: 2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.pdf
+[2026-05-27 19:42:14] DEBUG   Uploaded: 2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis.pdf
+[2026-05-27 19:42:14] DEBUG   Uploaded: 2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks.pdf
+[2026-05-27 19:42:15] DEBUG   Uploaded: 2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey.pdf
+[2026-05-27 19:42:15] DEBUG   Uploaded: 2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_and_Spationtemporal_Characteristics.pdf
+[2026-05-27 19:42:15] INFO    Polling batch 1cf8bab7-ac17-489f-9753-37570822f66b ...
+[2026-05-27 19:42:15] INFO      Batch 1cf8bab7... progress: 5/10 done, 5 pending
+[2026-05-27 19:42:26] INFO      Batch 1cf8bab7... progress: 10/10 done, 0 pending
+[2026-05-27 19:43:11] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/e6821305-ec37-4fd6-901d-bf62414270a6.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:43:59] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/e6821305-ec37-4fd6-901d-bf62414270a6.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:44:50] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/e6821305-ec37-4fd6-901d-bf62414270a6.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:44:50] INFO    Trying curl fallback for 2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries...
+[2026-05-27 19:44:50] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 19:45:35] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/87519729-ad24-4447-8053-736c0fba7db0.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:46:23] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/87519729-ad24-4447-8053-736c0fba7db0.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:47:15] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/87519729-ad24-4447-8053-736c0fba7db0.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:47:15] INFO    Trying curl fallback for 2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning...
+[2026-05-27 19:47:15] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 19:48:00] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/f119046f-b1be-4acd-8360-26ef66f7f1ad.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:48:48] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/f119046f-b1be-4acd-8360-26ef66f7f1ad.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:49:39] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/f119046f-b1be-4acd-8360-26ef66f7f1ad.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:49:39] INFO    Trying curl fallback for 2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification...
+[2026-05-27 19:49:39] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 19:50:24] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/62d2a4e5-2c93-4352-8f9e-1465babd42ac.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:51:12] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/62d2a4e5-2c93-4352-8f9e-1465babd42ac.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:52:03] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/62d2a4e5-2c93-4352-8f9e-1465babd42ac.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:52:03] INFO    Trying curl fallback for 2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis...
+[2026-05-27 19:52:03] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 19:52:48] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/cd104399-40d6-4ba7-993b-dbe0feb4ad6f.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:53:36] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/cd104399-40d6-4ba7-993b-dbe0feb4ad6f.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:54:27] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/cd104399-40d6-4ba7-993b-dbe0feb4ad6f.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:54:27] INFO    Trying curl fallback for 2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification...
+[2026-05-27 19:54:27] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 19:55:12] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/0435c444-2040-49bf-b782-bfaa2a030f59.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:56:00] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/0435c444-2040-49bf-b782-bfaa2a030f59.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:56:51] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/0435c444-2040-49bf-b782-bfaa2a030f59.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:56:51] INFO    Trying curl fallback for 2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic...
+[2026-05-27 19:56:51] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 19:57:37] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/5a939202-1e19-49d5-a5a4-0771d7a0e672.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:58:25] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/5a939202-1e19-49d5-a5a4-0771d7a0e672.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:59:16] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/5a939202-1e19-49d5-a5a4-0771d7a0e672.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:59:16] INFO    Trying curl fallback for 2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis...
+[2026-05-27 19:59:16] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:00:01] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/0cc9cea4-a96b-42bc-9005-202910f1b784.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:00:49] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/0cc9cea4-a96b-42bc-9005-202910f1b784.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:01:40] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/0cc9cea4-a96b-42bc-9005-202910f1b784.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:01:40] INFO    Trying curl fallback for 2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks...
+[2026-05-27 20:01:40] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:02:25] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ee359f80-ee58-42be-80c6-eafd076e6a65.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:03:13] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ee359f80-ee58-42be-80c6-eafd076e6a65.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:04:04] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ee359f80-ee58-42be-80c6-eafd076e6a65.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:04:04] INFO    Trying curl fallback for 2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey...
+[2026-05-27 20:04:04] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:04:49] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/023747cd-a83f-4c15-b34c-77957e24569d.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:05:37] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/023747cd-a83f-4c15-b34c-77957e24569d.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:06:28] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/023747cd-a83f-4c15-b34c-77957e24569d.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:06:28] INFO    Trying curl fallback for 2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_and_Spationtemporal_Characteristics...
+[2026-05-27 20:06:28] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:06:28] INFO    --- Batch 2/5 (10 PDFs) ---
+[2026-05-27 20:06:28] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 20:06:29] INFO    Batch ID: 65be558e-3ffd-445e-a5de-00ba8183a57b
+[2026-05-27 20:06:29] DEBUG   Uploaded: 2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.pdf
+[2026-05-27 20:06:29] DEBUG   Uploaded: 2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.pdf
+[2026-05-27 20:06:29] DEBUG   Uploaded: 2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory.pdf
+[2026-05-27 20:06:29] DEBUG   Uploaded: 2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.pdf
+[2026-05-27 20:06:30] DEBUG   Uploaded: 2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.pdf
+[2026-05-27 20:06:30] DEBUG   Uploaded: 2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.pdf
+[2026-05-27 20:06:30] DEBUG   Uploaded: 2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.pdf
+[2026-05-27 20:06:31] DEBUG   Uploaded: 2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation.pdf
+[2026-05-27 20:06:31] DEBUG   Uploaded: 2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic.pdf
+[2026-05-27 20:06:31] DEBUG   Uploaded: 2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.pdf
+[2026-05-27 20:06:31] INFO    Polling batch 65be558e-3ffd-445e-a5de-00ba8183a57b ...
+[2026-05-27 20:06:31] INFO      Batch 65be558e... progress: 0/10 done, 10 pending
+[2026-05-27 20:06:41] INFO      Batch 65be558e... progress: 10/10 done, 0 pending
+[2026-05-27 20:07:26] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/840c7ff2-81ad-4860-9b06-b757b322e950.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:08:14] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/840c7ff2-81ad-4860-9b06-b757b322e950.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:09:05] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/840c7ff2-81ad-4860-9b06-b757b322e950.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:09:05] INFO    Trying curl fallback for 2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision...
+[2026-05-27 20:09:05] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:09:50] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/96973d7c-c8e2-4b8e-8d0d-0098bbee4c0a.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:10:38] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/96973d7c-c8e2-4b8e-8d0d-0098bbee4c0a.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:11:29] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/96973d7c-c8e2-4b8e-8d0d-0098bbee4c0a.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:11:29] INFO    Trying curl fallback for 2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic...
+[2026-05-27 20:11:29] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:12:15] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/582eaecd-5c1d-4620-a49d-50de1537c601.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:13:03] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/582eaecd-5c1d-4620-a49d-50de1537c601.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:13:54] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/582eaecd-5c1d-4620-a49d-50de1537c601.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:13:54] INFO    Trying curl fallback for 2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory...
+[2026-05-27 20:13:54] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:14:39] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/9fd06c93-39ae-4ec7-9344-9fb400a5e91a.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:15:27] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/9fd06c93-39ae-4ec7-9344-9fb400a5e91a.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:16:18] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/9fd06c93-39ae-4ec7-9344-9fb400a5e91a.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:16:18] INFO    Trying curl fallback for 2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification...
+[2026-05-27 20:16:18] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:17:03] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-25/da0018db-4035-4130-b6fc-bbd042866c2f.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:17:51] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-25/da0018db-4035-4130-b6fc-bbd042866c2f.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:18:42] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-25/da0018db-4035-4130-b6fc-bbd042866c2f.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:18:42] INFO    Trying curl fallback for 2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation...
+[2026-05-27 20:18:42] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:19:27] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/4c61bf4d-6fa0-4d7e-99cf-6beead96c54d.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:20:15] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/4c61bf4d-6fa0-4d7e-99cf-6beead96c54d.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:21:06] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/4c61bf4d-6fa0-4d7e-99cf-6beead96c54d.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:21:06] INFO    Trying curl fallback for 2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning...
+[2026-05-27 20:21:06] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:21:52] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/2a252ece-4641-4320-a504-94fe35a49039.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:22:40] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/2a252ece-4641-4320-a504-94fe35a49039.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:23:31] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/2a252ece-4641-4320-a504-94fe35a49039.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:23:31] INFO    Trying curl fallback for 2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification...
+[2026-05-27 20:23:31] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:24:16] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/305a8afd-f239-4044-8fe9-6c1bf2fc99d0.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:25:04] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/305a8afd-f239-4044-8fe9-6c1bf2fc99d0.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:25:55] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/305a8afd-f239-4044-8fe9-6c1bf2fc99d0.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:25:55] INFO    Trying curl fallback for 2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation...
+[2026-05-27 20:25:55] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:26:40] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ca80e354-470c-4d4a-a3ca-2d467fbbe938.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:27:28] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ca80e354-470c-4d4a-a3ca-2d467fbbe938.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:28:19] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ca80e354-470c-4d4a-a3ca-2d467fbbe938.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:28:19] INFO    Trying curl fallback for 2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic...
+[2026-05-27 20:28:19] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:29:04] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/4187a080-a330-4691-8961-ca482da1f3e9.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:29:52] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/4187a080-a330-4691-8961-ca482da1f3e9.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:30:43] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/4187a080-a330-4691-8961-ca482da1f3e9.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:30:43] INFO    Trying curl fallback for 2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel...
+[2026-05-27 20:30:43] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:30:43] INFO    --- Batch 3/5 (10 PDFs) ---
+[2026-05-27 20:30:43] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 20:30:44] INFO    Batch ID: 365411a7-6f19-46ce-9bf3-0df23e78569d
+[2026-05-27 20:30:44] DEBUG   Uploaded: 2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.pdf
+[2026-05-27 20:30:44] DEBUG   Uploaded: 2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.pdf
+[2026-05-27 20:30:45] DEBUG   Uploaded: 2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification.pdf
+[2026-05-27 20:30:45] DEBUG   Uploaded: 2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model.pdf
+[2026-05-27 20:30:47] DEBUG   Uploaded: 2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.pdf
+[2026-05-27 20:30:48] DEBUG   Uploaded: 2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.pdf
+[2026-05-27 20:30:48] DEBUG   Uploaded: 2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.pdf
+[2026-05-27 20:30:48] DEBUG   Uploaded: 2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection.pdf
+[2026-05-27 20:30:50] DEBUG   Uploaded: 2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks.pdf
+[2026-05-27 20:30:51] DEBUG   Uploaded: 2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane.pdf
+[2026-05-27 20:30:51] INFO    Polling batch 365411a7-6f19-46ce-9bf3-0df23e78569d ...
+[2026-05-27 20:30:51] INFO      Batch 365411a7... progress: 8/10 done, 2 pending
+[2026-05-27 20:31:01] INFO      Batch 365411a7... progress: 10/10 done, 0 pending
+[2026-05-27 20:31:46] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/c9cdcd35-d740-4cb3-90aa-5d982574162e.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:32:34] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/c9cdcd35-d740-4cb3-90aa-5d982574162e.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:33:25] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/c9cdcd35-d740-4cb3-90aa-5d982574162e.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:33:25] INFO    Trying curl fallback for 2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization...
+[2026-05-27 20:33:25] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:34:10] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ffe59433-9dd7-4580-aef0-320626be4265.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:34:58] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ffe59433-9dd7-4580-aef0-320626be4265.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:35:49] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ffe59433-9dd7-4580-aef0-320626be4265.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:35:49] INFO    Trying curl fallback for 2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes...
+[2026-05-27 20:35:49] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:36:35] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/026be1cc-9264-421d-83a1-71e857ad1bf8.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:37:23] WARNING Download attempt 2/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/026be1cc-9264-421d-83a1-71e857ad1bf8.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:38:14] WARNING Download attempt 3/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/026be1cc-9264-421d-83a1-71e857ad1bf8.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 20:38:14] INFO    Trying curl fallback for 2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification...
+[2026-05-27 20:38:14] ERROR   curl failed: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn-mineru.openxlab.org.cn:443 
+
+[2026-05-27 20:38:59] WARNING Download attempt 1/3 failed: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/8c12ff1b-3b7b-45e0-904f-dbf02b388b67.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))

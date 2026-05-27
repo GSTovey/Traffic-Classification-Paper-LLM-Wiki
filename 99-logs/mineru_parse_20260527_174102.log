@@ -1,0 +1,200 @@
+[2026-05-27 17:41:02] INFO    Log file: /Users/tovey/Desktop/Traffic_Papers/99_Logs/mineru_parse_20260527_174102.log
+[2026-05-27 17:41:02] INFO    ============================================================
+[2026-05-27 17:41:02] INFO    MinerU Batch Parse Started
+[2026-05-27 17:41:02] INFO    ============================================================
+[2026-05-27 17:41:02] INFO    Input  : /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 17:41:02] INFO    Output : /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output
+[2026-05-27 17:41:02] INFO    Parsed : /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown
+[2026-05-27 17:41:02] INFO    Model  : vlm
+[2026-05-27 17:41:02] INFO    Language: ch
+[2026-05-27 17:41:02] INFO    OCR    : False
+[2026-05-27 17:41:02] INFO    Formula: True
+[2026-05-27 17:41:02] INFO    Table  : True
+[2026-05-27 17:41:02] INFO    Batch  : 10
+[2026-05-27 17:41:02] INFO    Found 50 PDF(s) in /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 17:41:02] INFO    To process: 50, Skipped: 0
+[2026-05-27 17:41:02] INFO    --- Batch 1/5 (10 PDFs) ---
+[2026-05-27 17:41:02] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 17:41:02] INFO    Batch ID: 490753e2-e7bb-4bcb-b642-3a204d7b2233
+[2026-05-27 17:41:02] DEBUG   Uploaded: 2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.pdf
+[2026-05-27 17:41:03] DEBUG   Uploaded: 2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning.pdf
+[2026-05-27 17:41:03] DEBUG   Uploaded: 2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.pdf
+[2026-05-27 17:41:04] DEBUG   Uploaded: 2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis.pdf
+[2026-05-27 17:41:04] DEBUG   Uploaded: 2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.pdf
+[2026-05-27 17:41:05] DEBUG   Uploaded: 2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.pdf
+[2026-05-27 17:41:05] DEBUG   Uploaded: 2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis.pdf
+[2026-05-27 17:41:06] DEBUG   Uploaded: 2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks.pdf
+[2026-05-27 17:41:07] DEBUG   Uploaded: 2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey.pdf
+[2026-05-27 17:41:07] DEBUG   Uploaded: 2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_and_Spationtemporal_Characteristics.pdf
+[2026-05-27 17:41:07] INFO    Polling batch 490753e2-e7bb-4bcb-b642-3a204d7b2233 ...
+[2026-05-27 17:41:08] INFO      Batch 490753e2... progress: 1/10 done, 9 pending
+[2026-05-27 17:41:18] INFO      Batch 490753e2... progress: 1/10 done, 9 pending
+[2026-05-27 17:41:28] INFO      Batch 490753e2... progress: 3/10 done, 7 pending
+[2026-05-27 17:41:38] INFO      Batch 490753e2... progress: 4/10 done, 6 pending
+[2026-05-27 17:41:48] INFO      Batch 490753e2... progress: 4/10 done, 6 pending
+[2026-05-27 17:41:59] INFO      Batch 490753e2... progress: 4/10 done, 6 pending
+[2026-05-27 17:42:09] INFO      Batch 490753e2... progress: 8/10 done, 2 pending
+[2026-05-27 17:42:19] INFO      Batch 490753e2... progress: 8/10 done, 2 pending
+[2026-05-27 17:42:29] INFO      Batch 490753e2... progress: 9/10 done, 1 pending
+[2026-05-27 17:42:40] INFO      Batch 490753e2... progress: 10/10 done, 0 pending
+[2026-05-27 17:42:40] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/e6821305-ec37-4fd6-901d-bf62414270a6.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:42:40] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/87519729-ad24-4447-8053-736c0fba7db0.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:42:40] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/f119046f-b1be-4acd-8360-26ef66f7f1ad.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:42:40] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/62d2a4e5-2c93-4352-8f9e-1465babd42ac.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:42:40] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/cd104399-40d6-4ba7-993b-dbe0feb4ad6f.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:42:40] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/0435c444-2040-49bf-b782-bfaa2a030f59.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:42:40] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/5a939202-1e19-49d5-a5a4-0771d7a0e672.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:42:40] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/0cc9cea4-a96b-42bc-9005-202910f1b784.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:42:40] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ee359f80-ee58-42be-80c6-eafd076e6a65.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:42:40] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/023747cd-a83f-4c15-b34c-77957e24569d.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:42:40] INFO    --- Batch 2/5 (10 PDFs) ---
+[2026-05-27 17:42:40] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 17:42:40] INFO    Batch ID: f3e6ad91-5800-431e-84c5-ef229c4fe9f2
+[2026-05-27 17:42:40] DEBUG   Uploaded: 2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.pdf
+[2026-05-27 17:42:41] DEBUG   Uploaded: 2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.pdf
+[2026-05-27 17:42:41] DEBUG   Uploaded: 2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory.pdf
+[2026-05-27 17:42:42] DEBUG   Uploaded: 2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.pdf
+[2026-05-27 17:42:42] DEBUG   Uploaded: 2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.pdf
+[2026-05-27 17:42:43] DEBUG   Uploaded: 2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.pdf
+[2026-05-27 17:42:43] DEBUG   Uploaded: 2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.pdf
+[2026-05-27 17:42:44] DEBUG   Uploaded: 2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation.pdf
+[2026-05-27 17:42:45] DEBUG   Uploaded: 2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic.pdf
+[2026-05-27 17:42:45] DEBUG   Uploaded: 2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.pdf
+[2026-05-27 17:42:45] INFO    Polling batch f3e6ad91-5800-431e-84c5-ef229c4fe9f2 ...
+[2026-05-27 17:42:45] INFO      Batch f3e6ad91... progress: 1/10 done, 9 pending
+[2026-05-27 17:42:56] INFO      Batch f3e6ad91... progress: 2/10 done, 8 pending
+[2026-05-27 17:43:06] INFO      Batch f3e6ad91... progress: 5/10 done, 5 pending
+[2026-05-27 17:43:16] INFO      Batch f3e6ad91... progress: 6/10 done, 4 pending
+[2026-05-27 17:43:26] INFO      Batch f3e6ad91... progress: 6/10 done, 4 pending
+[2026-05-27 17:43:36] INFO      Batch f3e6ad91... progress: 9/10 done, 1 pending
+[2026-05-27 17:43:47] INFO      Batch f3e6ad91... progress: 9/10 done, 1 pending
+[2026-05-27 17:43:57] INFO      Batch f3e6ad91... progress: 9/10 done, 1 pending
+[2026-05-27 17:44:07] INFO      Batch f3e6ad91... progress: 9/10 done, 1 pending
+[2026-05-27 17:44:17] INFO      Batch f3e6ad91... progress: 10/10 done, 0 pending
+[2026-05-27 17:44:17] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/840c7ff2-81ad-4860-9b06-b757b322e950.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:44:17] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/96973d7c-c8e2-4b8e-8d0d-0098bbee4c0a.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:44:17] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/582eaecd-5c1d-4620-a49d-50de1537c601.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:44:17] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/9fd06c93-39ae-4ec7-9344-9fb400a5e91a.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:44:17] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-25/da0018db-4035-4130-b6fc-bbd042866c2f.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:44:17] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/4c61bf4d-6fa0-4d7e-99cf-6beead96c54d.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:44:17] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/2a252ece-4641-4320-a504-94fe35a49039.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:44:17] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/305a8afd-f239-4044-8fe9-6c1bf2fc99d0.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:44:17] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ca80e354-470c-4d4a-a3ca-2d467fbbe938.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:44:17] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/4187a080-a330-4691-8961-ca482da1f3e9.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 17:44:17] INFO    --- Batch 3/5 (10 PDFs) ---
+[2026-05-27 17:44:17] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 17:44:17] INFO    Batch ID: 0ab699a6-63b8-4f90-934f-d670d8741336
+[2026-05-27 17:44:18] DEBUG   Uploaded: 2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.pdf
+[2026-05-27 17:44:19] DEBUG   Uploaded: 2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.pdf
+[2026-05-27 17:44:20] DEBUG   Uploaded: 2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification.pdf
+[2026-05-27 17:44:20] DEBUG   Uploaded: 2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model.pdf
+[2026-05-27 17:44:22] DEBUG   Uploaded: 2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.pdf
+[2026-05-27 17:44:23] DEBUG   Uploaded: 2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.pdf
+[2026-05-27 17:44:24] DEBUG   Uploaded: 2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.pdf
+[2026-05-27 17:44:25] DEBUG   Uploaded: 2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection.pdf
+[2026-05-27 17:44:27] DEBUG   Uploaded: 2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks.pdf
+[2026-05-27 17:44:27] DEBUG   Uploaded: 2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane.pdf
+[2026-05-27 17:44:27] INFO    Polling batch 0ab699a6-63b8-4f90-934f-d670d8741336 ...
+[2026-05-27 17:44:28] INFO      Batch 0ab699a6... progress: 0/10 done, 10 pending
+[2026-05-27 17:44:38] INFO      Batch 0ab699a6... progress: 0/10 done, 10 pending
+[2026-05-27 17:44:48] INFO      Batch 0ab699a6... progress: 1/10 done, 9 pending
+[2026-05-27 17:44:58] INFO      Batch 0ab699a6... progress: 1/10 done, 9 pending
+[2026-05-27 17:45:09] INFO      Batch 0ab699a6... progress: 3/10 done, 7 pending
+[2026-05-27 17:45:19] INFO      Batch 0ab699a6... progress: 4/10 done, 6 pending
+[2026-05-27 18:02:47] WARNING Poll error: HTTPSConnectionPool(host='mineru.net', port=443): Read timed out. (read timeout=60)
+[2026-05-27 18:03:00] WARNING Poll error: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/extract-results/batch/0ab699a6-63b8-4f90-934f-d670d8741336 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:22:21] ERROR   Polling timeout (1800s) for batch 0ab699a6-63b8-4f90-934f-d670d8741336
+[2026-05-27 19:22:21] INFO    --- Batch 4/5 (10 PDFs) ---
+[2026-05-27 19:22:21] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 19:22:24] ERROR   Failed to request upload URLs: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/file-urls/batch (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:22:24] INFO    --- Batch 5/5 (10 PDFs) ---
+[2026-05-27 19:22:24] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 19:22:24] INFO    Batch ID: 2cdcd64d-63b9-4457-8e31-cf832b4db9a7
+[2026-05-27 19:22:25] DEBUG   Uploaded: 2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification.pdf
+[2026-05-27 19:22:27] DEBUG   Uploaded: 2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification.pdf
+[2026-05-27 19:22:27] DEBUG   Uploaded: 2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_encrypted_traffic_classification.pdf
+[2026-05-27 19:22:28] DEBUG   Uploaded: 2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs.pdf
+[2026-05-27 19:22:29] DEBUG   Uploaded: 2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification.pdf
+[2026-05-27 19:22:30] DEBUG   Uploaded: 2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning.pdf
+[2026-05-27 19:22:31] DEBUG   Uploaded: 2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Classification_in_IoT.pdf
+[2026-05-27 19:22:31] DEBUG   Uploaded: 2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.pdf
+[2026-05-27 19:22:32] DEBUG   Uploaded: 2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.pdf
+[2026-05-27 19:22:32] DEBUG   Uploaded: 2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models.pdf
+[2026-05-27 19:22:32] INFO    Polling batch 2cdcd64d-63b9-4457-8e31-cf832b4db9a7 ...
+[2026-05-27 19:22:32] INFO      Batch 2cdcd64d... progress: 0/10 done, 10 pending
+[2026-05-27 19:22:42] INFO      Batch 2cdcd64d... progress: 0/10 done, 10 pending
+[2026-05-27 19:22:53] INFO      Batch 2cdcd64d... progress: 1/10 done, 9 pending
+[2026-05-27 19:23:03] INFO      Batch 2cdcd64d... progress: 1/10 done, 9 pending
+[2026-05-27 19:23:13] INFO      Batch 2cdcd64d... progress: 1/10 done, 9 pending
+[2026-05-27 19:40:12] INFO      Batch 2cdcd64d... progress: 10/10 done, 0 pending
+[2026-05-27 19:40:12] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/0818ace0-7b72-4652-b338-67589aa03b3a.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/783a81f1-22ae-4e17-992a-41c2af912eeb.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ae50855e-4f82-4754-abf6-8758916d5093.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/c35365f5-57e2-4944-86ec-f7bed7c1ba46.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/cf56c7f6-ff0d-4318-a879-77ddf6577c2f.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/34323152-e057-4da7-aae1-16a492c8ad50.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/ee62b5c1-c208-47c1-a21e-ace3a2c061a9.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/5aed4709-6d44-46a4-b0af-09b7c94fdce8.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/4f152756-266d-4001-b1dd-aaa8c20c64b5.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] ERROR   Download exception: HTTPSConnectionPool(host='cdn-mineru.openxlab.org.cn', port=443): Max retries exceeded with url: /pdf/2026-05-27/6f5ff8db-ccf1-4d45-b1af-51e45aa55ebe.zip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] INFO    ============================================================
+[2026-05-27 19:40:12] INFO    SUMMARY
+[2026-05-27 19:40:12] INFO    ============================================================
+[2026-05-27 19:40:12] INFO    Total PDFs found     : 50
+[2026-05-27 19:40:12] INFO    Skipped (parsed)     : 0
+[2026-05-27 19:40:12] INFO    Successfully parsed  : 0
+[2026-05-27 19:40:12] INFO    Failed               : 50
+[2026-05-27 19:40:12] INFO    
+[2026-05-27 19:40:12] INFO    Failure details:
+[2026-05-27 19:40:12] INFO      - 2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_and_Spationtemporal_Characteristics.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.pdf: Polling timeout or error
+[2026-05-27 19:40:12] INFO      - 2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.pdf: Polling timeout or error
+[2026-05-27 19:40:12] INFO      - 2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification.pdf: Polling timeout or error
+[2026-05-27 19:40:12] INFO      - 2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model.pdf: Polling timeout or error
+[2026-05-27 19:40:12] INFO      - 2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.pdf: Polling timeout or error
+[2026-05-27 19:40:12] INFO      - 2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.pdf: Polling timeout or error
+[2026-05-27 19:40:12] INFO      - 2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.pdf: Polling timeout or error
+[2026-05-27 19:40:12] INFO      - 2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection.pdf: Polling timeout or error
+[2026-05-27 19:40:12] INFO      - 2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks.pdf: Polling timeout or error
+[2026-05-27 19:40:12] INFO      - 2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane.pdf: Polling timeout or error
+[2026-05-27 19:40:12] INFO      - 2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification.pdf: API request failed: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/file-urls/batch (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] INFO      - 2025-NIPS-Gated_Attention_for_Larg.pdf: API request failed: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/file-urls/batch (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] INFO      - 2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.pdf: API request failed: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/file-urls/batch (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] INFO      - 2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification.pdf: API request failed: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/file-urls/batch (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] INFO      - 2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under_Environment_Shifts.pdf: API request failed: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/file-urls/batch (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] INFO      - 2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.pdf: API request failed: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/file-urls/batch (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] INFO      - 2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_Decouple__based_Semantic_Enhancement.pdf: API request failed: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/file-urls/batch (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] INFO      - 2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting.pdf: API request failed: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/file-urls/batch (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] INFO      - 2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.pdf: API request failed: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/file-urls/batch (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] INFO      - 2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification.pdf: API request failed: HTTPSConnectionPool(host='mineru.net', port=443): Max retries exceeded with url: /api/v4/file-urls/batch (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-05-27 19:40:12] INFO      - 2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_encrypted_traffic_classification.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Classification_in_IoT.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO      - 2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models.pdf: Download/extract failed or full.md missing
+[2026-05-27 19:40:12] INFO    ============================================================
+[2026-05-27 19:40:12] INFO    Done.

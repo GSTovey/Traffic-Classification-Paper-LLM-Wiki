@@ -1,0 +1,17 @@
+[2026-05-27 17:27:26] INFO    Log file: /Users/tovey/Desktop/Traffic_Papers/99_Logs/mineru_parse_20260527_172726.log
+[2026-05-27 17:27:26] INFO    ============================================================
+[2026-05-27 17:27:26] INFO    MinerU Batch Parse Started
+[2026-05-27 17:27:26] INFO    ============================================================
+[2026-05-27 17:27:26] INFO    Input  : /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 17:27:26] INFO    Output : /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output
+[2026-05-27 17:27:26] INFO    Parsed : /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown
+[2026-05-27 17:27:26] INFO    Model  : vlm
+[2026-05-27 17:27:26] INFO    Language: ch
+[2026-05-27 17:27:26] INFO    OCR    : False
+[2026-05-27 17:27:26] INFO    Formula: True
+[2026-05-27 17:27:26] INFO    Table  : True
+[2026-05-27 17:27:26] INFO    Batch  : 10
+[2026-05-27 17:27:26] INFO    Found 50 PDF(s) in /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 17:27:26] INFO    To process: 50, Skipped: 0
+[2026-05-27 17:27:26] INFO    --- Batch 1/5 (10 PDFs) ---
+[2026-05-27 17:27:26] INFO    Requesting upload URLs for 10 PDF(s)...

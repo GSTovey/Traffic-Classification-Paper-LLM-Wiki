@@ -1,0 +1,269 @@
+[2026-05-27 19:47:02] INFO    Log file: /Users/tovey/Desktop/Traffic_Papers/99_Logs/mineru_parse_20260527_194702.log
+[2026-05-27 19:47:02] INFO    ============================================================
+[2026-05-27 19:47:02] INFO    MinerU Batch Parse Started
+[2026-05-27 19:47:02] INFO    ============================================================
+[2026-05-27 19:47:02] INFO    Input  : /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 19:47:02] INFO    Output : /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output
+[2026-05-27 19:47:02] INFO    Parsed : /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown
+[2026-05-27 19:47:02] INFO    Model  : vlm
+[2026-05-27 19:47:02] INFO    Language: ch
+[2026-05-27 19:47:02] INFO    OCR    : False
+[2026-05-27 19:47:02] INFO    Formula: True
+[2026-05-27 19:47:02] INFO    Table  : True
+[2026-05-27 19:47:02] INFO    Batch  : 10
+[2026-05-27 19:47:02] INFO    Found 50 PDF(s) in /Users/tovey/Desktop/Traffic_Papers/00_Inbox/PDFs
+[2026-05-27 19:47:02] INFO    --force enabled: will re-parse all PDFs
+[2026-05-27 19:47:02] INFO    To process: 50, Skipped: 0
+[2026-05-27 19:47:02] INFO    --- Batch 1/5 (10 PDFs) ---
+[2026-05-27 19:47:02] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 19:47:02] INFO    Batch ID: f8a5d42f-a9ca-4eda-bd8c-b74558ff3bd9
+[2026-05-27 19:47:02] DEBUG   Uploaded: 2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.pdf
+[2026-05-27 19:47:03] DEBUG   Uploaded: 2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning.pdf
+[2026-05-27 19:47:03] DEBUG   Uploaded: 2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.pdf
+[2026-05-27 19:47:03] DEBUG   Uploaded: 2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis.pdf
+[2026-05-27 19:47:03] DEBUG   Uploaded: 2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.pdf
+[2026-05-27 19:47:03] DEBUG   Uploaded: 2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.pdf
+[2026-05-27 19:47:03] DEBUG   Uploaded: 2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis.pdf
+[2026-05-27 19:47:03] DEBUG   Uploaded: 2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks.pdf
+[2026-05-27 19:47:04] DEBUG   Uploaded: 2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey.pdf
+[2026-05-27 19:47:05] DEBUG   Uploaded: 2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_and_Spationtemporal_Characteristics.pdf
+[2026-05-27 19:47:05] INFO    Polling batch f8a5d42f-a9ca-4eda-bd8c-b74558ff3bd9 ...
+[2026-05-27 19:47:05] INFO      Batch f8a5d42f... progress: 2/10 done, 8 pending
+[2026-05-27 19:47:15] INFO      Batch f8a5d42f... progress: 10/10 done, 0 pending
+[2026-05-27 19:47:15] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.zip
+[2026-05-27 19:47:15] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries
+[2026-05-27 19:47:15] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.md
+[2026-05-27 19:47:15] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning.zip
+[2026-05-27 19:47:15] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning
+[2026-05-27 19:47:15] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning.md
+[2026-05-27 19:47:16] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.zip
+[2026-05-27 19:47:16] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification
+[2026-05-27 19:47:16] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.md
+[2026-05-27 19:47:16] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis/2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis.zip
+[2026-05-27 19:47:16] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis
+[2026-05-27 19:47:16] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis.md
+[2026-05-27 19:47:17] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.zip
+[2026-05-27 19:47:17] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification
+[2026-05-27 19:47:17] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.md
+[2026-05-27 19:47:17] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic/2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.zip
+[2026-05-27 19:47:17] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic
+[2026-05-27 19:47:17] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.md
+[2026-05-27 19:47:18] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis/2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis.zip
+[2026-05-27 19:47:18] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis
+[2026-05-27 19:47:18] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis.md
+[2026-05-27 19:47:18] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks/2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks.zip
+[2026-05-27 19:47:18] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks
+[2026-05-27 19:47:18] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks.md
+[2026-05-27 19:47:19] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey/2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey.zip
+[2026-05-27 19:47:19] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey
+[2026-05-27 19:47:19] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey.md
+[2026-05-27 19:47:19] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_and_Spationtemporal_Characteristics/2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_and_Spationtemporal_Characteristics.zip
+[2026-05-27 19:47:19] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_and_Spationtemporal_Characteristics
+[2026-05-27 19:47:19] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_and_Spationtemporal_Characteristics.md
+[2026-05-27 19:47:19] INFO    --- Batch 2/5 (10 PDFs) ---
+[2026-05-27 19:47:19] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 19:47:19] INFO    Batch ID: ee32818d-61d3-4871-b30e-4a3c4d73271e
+[2026-05-27 19:47:19] DEBUG   Uploaded: 2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.pdf
+[2026-05-27 19:47:20] DEBUG   Uploaded: 2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.pdf
+[2026-05-27 19:47:20] DEBUG   Uploaded: 2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory.pdf
+[2026-05-27 19:47:20] DEBUG   Uploaded: 2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.pdf
+[2026-05-27 19:47:20] DEBUG   Uploaded: 2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.pdf
+[2026-05-27 19:47:20] DEBUG   Uploaded: 2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.pdf
+[2026-05-27 19:47:20] DEBUG   Uploaded: 2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.pdf
+[2026-05-27 19:47:21] DEBUG   Uploaded: 2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation.pdf
+[2026-05-27 19:47:21] DEBUG   Uploaded: 2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic.pdf
+[2026-05-27 19:47:21] DEBUG   Uploaded: 2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.pdf
+[2026-05-27 19:47:21] INFO    Polling batch ee32818d-61d3-4871-b30e-4a3c4d73271e ...
+[2026-05-27 19:47:21] INFO      Batch ee32818d... progress: 4/10 done, 6 pending
+[2026-05-27 19:47:31] INFO      Batch ee32818d... progress: 10/10 done, 0 pending
+[2026-05-27 19:47:32] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.zip
+[2026-05-27 19:47:32] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision
+[2026-05-27 19:47:32] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.md
+[2026-05-27 19:47:32] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.zip
+[2026-05-27 19:47:32] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic
+[2026-05-27 19:47:32] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.md
+[2026-05-27 19:47:33] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory/2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory.zip
+[2026-05-27 19:47:33] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory
+[2026-05-27 19:47:33] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory.md
+[2026-05-27 19:47:33] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.zip
+[2026-05-27 19:47:33] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification
+[2026-05-27 19:47:33] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.md
+[2026-05-27 19:47:33] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.zip
+[2026-05-27 19:47:33] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation
+[2026-05-27 19:47:33] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.md
+[2026-05-27 19:47:34] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.zip
+[2026-05-27 19:47:34] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning
+[2026-05-27 19:47:34] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.md
+[2026-05-27 19:47:34] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.zip
+[2026-05-27 19:47:34] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification
+[2026-05-27 19:47:34] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.md
+[2026-05-27 19:47:35] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation/2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation.zip
+[2026-05-27 19:47:35] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation
+[2026-05-27 19:47:35] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation.md
+[2026-05-27 19:47:35] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic/2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic.zip
+[2026-05-27 19:47:35] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic
+[2026-05-27 19:47:35] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic.md
+[2026-05-27 19:47:36] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.zip
+[2026-05-27 19:47:36] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel
+[2026-05-27 19:47:36] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.md
+[2026-05-27 19:47:36] INFO    --- Batch 3/5 (10 PDFs) ---
+[2026-05-27 19:47:36] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 19:47:36] INFO    Batch ID: c2606338-0589-4072-ba53-9bf50634a0e2
+[2026-05-27 19:47:36] DEBUG   Uploaded: 2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.pdf
+[2026-05-27 19:47:36] DEBUG   Uploaded: 2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.pdf
+[2026-05-27 19:47:36] DEBUG   Uploaded: 2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification.pdf
+[2026-05-27 19:47:37] DEBUG   Uploaded: 2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model.pdf
+[2026-05-27 19:47:38] DEBUG   Uploaded: 2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.pdf
+[2026-05-27 19:47:39] DEBUG   Uploaded: 2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.pdf
+[2026-05-27 19:47:39] DEBUG   Uploaded: 2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.pdf
+[2026-05-27 19:47:40] DEBUG   Uploaded: 2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection.pdf
+[2026-05-27 19:47:42] DEBUG   Uploaded: 2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks.pdf
+[2026-05-27 19:47:42] DEBUG   Uploaded: 2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane.pdf
+[2026-05-27 19:47:42] INFO    Polling batch c2606338-0589-4072-ba53-9bf50634a0e2 ...
+[2026-05-27 19:47:42] INFO      Batch c2606338... progress: 8/10 done, 2 pending
+[2026-05-27 19:47:53] INFO      Batch c2606338... progress: 10/10 done, 0 pending
+[2026-05-27 19:47:53] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.zip
+[2026-05-27 19:47:53] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization
+[2026-05-27 19:47:53] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.md
+[2026-05-27 19:47:54] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.zip
+[2026-05-27 19:47:54] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes
+[2026-05-27 19:47:54] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.md
+[2026-05-27 19:47:54] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification/2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification.zip
+[2026-05-27 19:47:54] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification
+[2026-05-27 19:47:54] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification.md
+[2026-05-27 19:47:55] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model/2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model.zip
+[2026-05-27 19:47:55] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model
+[2026-05-27 19:47:55] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model.md
+[2026-05-27 19:47:56] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.zip
+[2026-05-27 19:47:56] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis
+[2026-05-27 19:47:56] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.md
+[2026-05-27 19:47:57] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.zip
+[2026-05-27 19:47:57] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning
+[2026-05-27 19:47:57] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.md
+[2026-05-27 19:47:57] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion/2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.zip
+[2026-05-27 19:47:57] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion
+[2026-05-27 19:47:57] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.md
+[2026-05-27 19:47:57] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection/2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection.zip
+[2026-05-27 19:47:57] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection
+[2026-05-27 19:47:57] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection.md
+[2026-05-27 19:47:58] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks/2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks.zip
+[2026-05-27 19:47:58] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks
+[2026-05-27 19:47:58] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks.md
+[2026-05-27 19:47:58] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane/2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane.zip
+[2026-05-27 19:47:58] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane
+[2026-05-27 19:47:58] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane.md
+[2026-05-27 19:47:58] INFO    --- Batch 4/5 (10 PDFs) ---
+[2026-05-27 19:47:58] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 19:47:58] INFO    Batch ID: de419579-b444-49fa-966a-b1cef9278ff1
+[2026-05-27 19:47:59] DEBUG   Uploaded: 2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification.pdf
+[2026-05-27 19:47:59] DEBUG   Uploaded: 2025-NIPS-Gated_Attention_for_Larg.pdf
+[2026-05-27 19:47:59] DEBUG   Uploaded: 2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.pdf
+[2026-05-27 19:47:59] DEBUG   Uploaded: 2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification.pdf
+[2026-05-27 19:47:59] DEBUG   Uploaded: 2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under_Environment_Shifts.pdf
+[2026-05-27 19:48:03] DEBUG   Uploaded: 2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.pdf
+[2026-05-27 19:48:03] DEBUG   Uploaded: 2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_Decouple__based_Semantic_Enhancement.pdf
+[2026-05-27 19:48:03] DEBUG   Uploaded: 2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting.pdf
+[2026-05-27 19:48:04] DEBUG   Uploaded: 2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.pdf
+[2026-05-27 19:48:05] DEBUG   Uploaded: 2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification.pdf
+[2026-05-27 19:48:05] INFO    Polling batch de419579-b444-49fa-966a-b1cef9278ff1 ...
+[2026-05-27 19:48:05] INFO      Batch de419579... progress: 0/10 done, 10 pending
+[2026-05-27 19:48:15] INFO      Batch de419579... progress: 0/10 done, 10 pending
+[2026-05-27 19:48:25] INFO      Batch de419579... progress: 1/10 done, 9 pending
+[2026-05-27 19:48:35] INFO      Batch de419579... progress: 2/10 done, 8 pending
+[2026-05-27 19:48:45] INFO      Batch de419579... progress: 2/10 done, 8 pending
+[2026-05-27 19:48:55] INFO      Batch de419579... progress: 4/10 done, 6 pending
+[2026-05-27 19:49:05] INFO      Batch de419579... progress: 5/10 done, 5 pending
+[2026-05-27 19:49:15] INFO      Batch de419579... progress: 6/10 done, 4 pending
+[2026-05-27 19:49:26] INFO      Batch de419579... progress: 8/10 done, 2 pending
+[2026-05-27 19:49:36] INFO      Batch de419579... progress: 8/10 done, 2 pending
+[2026-05-27 19:49:46] INFO      Batch de419579... progress: 9/10 done, 1 pending
+[2026-05-27 19:49:56] INFO      Batch de419579... progress: 9/10 done, 1 pending
+[2026-05-27 19:50:06] INFO      Batch de419579... progress: 9/10 done, 1 pending
+[2026-05-27 19:50:16] INFO      Batch de419579... progress: 9/10 done, 1 pending
+[2026-05-27 19:50:26] INFO      Batch de419579... progress: 9/10 done, 1 pending
+[2026-05-27 19:50:36] INFO      Batch de419579... progress: 10/10 done, 0 pending
+[2026-05-27 19:50:37] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification/2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification.zip
+[2026-05-27 19:50:37] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification
+[2026-05-27 19:50:37] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification.md
+[2026-05-27 19:50:38] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-NIPS-Gated_Attention_for_Larg/2025-NIPS-Gated_Attention_for_Larg.zip
+[2026-05-27 19:50:38] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-NIPS-Gated_Attention_for_Larg
+[2026-05-27 19:50:38] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-NIPS-Gated_Attention_for_Larg.md
+[2026-05-27 19:50:38] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.zip
+[2026-05-27 19:50:38] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers
+[2026-05-27 19:50:38] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.md
+[2026-05-27 19:50:38] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification.zip
+[2026-05-27 19:50:38] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification
+[2026-05-27 19:50:38] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification.md
+[2026-05-27 19:50:39] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under_Environment_Shifts/2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under_Environment_Shifts.zip
+[2026-05-27 19:50:39] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under_Environment_Shifts
+[2026-05-27 19:50:39] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under_Environment_Shifts.md
+[2026-05-27 19:50:40] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.zip
+[2026-05-27 19:50:40] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning
+[2026-05-27 19:50:40] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.md
+[2026-05-27 19:50:41] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_Decouple__based_Semantic_Enhancement/2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_Decouple__based_Semantic_Enhancement.zip
+[2026-05-27 19:50:41] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_Decouple__based_Semantic_Enhancement
+[2026-05-27 19:50:41] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_Decouple__based_Semantic_Enhancement.md
+[2026-05-27 19:50:41] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting.zip
+[2026-05-27 19:50:41] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting
+[2026-05-27 19:50:41] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting.md
+[2026-05-27 19:50:42] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.zip
+[2026-05-27 19:50:42] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT
+[2026-05-27 19:50:42] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.md
+[2026-05-27 19:50:42] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification/2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification.zip
+[2026-05-27 19:50:42] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification
+[2026-05-27 19:50:42] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification.md
+[2026-05-27 19:50:42] INFO    --- Batch 5/5 (10 PDFs) ---
+[2026-05-27 19:50:42] INFO    Requesting upload URLs for 10 PDF(s)...
+[2026-05-27 19:50:42] INFO    Batch ID: 459c7aaa-7bfc-4ffc-869d-08c244ac9a79
+[2026-05-27 19:50:43] DEBUG   Uploaded: 2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification.pdf
+[2026-05-27 19:50:44] DEBUG   Uploaded: 2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification.pdf
+[2026-05-27 19:50:44] DEBUG   Uploaded: 2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_encrypted_traffic_classification.pdf
+[2026-05-27 19:50:45] DEBUG   Uploaded: 2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs.pdf
+[2026-05-27 19:50:47] DEBUG   Uploaded: 2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification.pdf
+[2026-05-27 19:50:47] DEBUG   Uploaded: 2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning.pdf
+[2026-05-27 19:50:47] DEBUG   Uploaded: 2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Classification_in_IoT.pdf
+[2026-05-27 19:50:48] DEBUG   Uploaded: 2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.pdf
+[2026-05-27 19:50:48] DEBUG   Uploaded: 2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.pdf
+[2026-05-27 19:50:48] DEBUG   Uploaded: 2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models.pdf
+[2026-05-27 19:50:48] INFO    Polling batch 459c7aaa-7bfc-4ffc-869d-08c244ac9a79 ...
+[2026-05-27 19:50:48] INFO      Batch 459c7aaa... progress: 5/10 done, 5 pending
+[2026-05-27 19:50:59] INFO      Batch 459c7aaa... progress: 10/10 done, 0 pending
+[2026-05-27 19:50:59] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification/2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification.zip
+[2026-05-27 19:50:59] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification
+[2026-05-27 19:50:59] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification.md
+[2026-05-27 19:51:00] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification/2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification.zip
+[2026-05-27 19:51:00] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification
+[2026-05-27 19:51:00] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification.md
+[2026-05-27 19:51:00] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_encrypted_traffic_classification/2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_encrypted_traffic_classification.zip
+[2026-05-27 19:51:00] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_encrypted_traffic_classification
+[2026-05-27 19:51:00] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_encrypted_traffic_classification.md
+[2026-05-27 19:51:01] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs/2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs.zip
+[2026-05-27 19:51:01] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs
+[2026-05-27 19:51:01] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs.md
+[2026-05-27 19:51:01] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification/2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification.zip
+[2026-05-27 19:51:01] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification
+[2026-05-27 19:51:01] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification.md
+[2026-05-27 19:51:02] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning/2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning.zip
+[2026-05-27 19:51:02] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning
+[2026-05-27 19:51:02] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning.md
+[2026-05-27 19:51:02] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Classification_in_IoT/2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Classification_in_IoT.zip
+[2026-05-27 19:51:03] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Classification_in_IoT
+[2026-05-27 19:51:03] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Classification_in_IoT.md
+[2026-05-27 19:51:03] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.zip
+[2026-05-27 19:51:03] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis
+[2026-05-27 19:51:03] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.md
+[2026-05-27 19:51:03] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification/2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.zip
+[2026-05-27 19:51:03] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification
+[2026-05-27 19:51:03] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.md
+[2026-05-27 19:51:04] DEBUG   Downloaded: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models/2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models.zip
+[2026-05-27 19:51:04] DEBUG   Extracted to: /Users/tovey/Desktop/Traffic_Papers/01_MinerU_Output/2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models
+[2026-05-27 19:51:04] INFO    Saved: /Users/tovey/Desktop/Traffic_Papers/02_Parsed_Markdown/2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models.md
+[2026-05-27 19:51:04] INFO    ============================================================
+[2026-05-27 19:51:04] INFO    SUMMARY
+[2026-05-27 19:51:04] INFO    ============================================================
+[2026-05-27 19:51:04] INFO    Total PDFs found     : 50
+[2026-05-27 19:51:04] INFO    Skipped (parsed)     : 0
+[2026-05-27 19:51:04] INFO    Successfully parsed  : 50
+[2026-05-27 19:51:04] INFO    Failed               : 0
+[2026-05-27 19:51:04] INFO    ============================================================
+[2026-05-27 19:51:04] INFO    Done.
