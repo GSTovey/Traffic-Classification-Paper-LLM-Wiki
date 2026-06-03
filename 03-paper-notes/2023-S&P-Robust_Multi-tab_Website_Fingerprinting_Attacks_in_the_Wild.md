@@ -200,11 +200,11 @@ N个Trans-WF并行 → Softmax整合 → 多标签分类结果
 - [[website-fingerprinting]] - 网站指纹识别技术
 - [[encrypted-traffic-analysis]] - 加密流量分析方法
 - [[transformer]] - Transformer模型
-- [[multi-label-classification]] - 多标签分类方法
-- [[tor-traffic-analysis]] - Tor流量分析
-- [[sliding-window]] - 滑动窗口方法
-- [[local-pattern-extraction]] - 局部模式提取
-- [[privacy-preservation]] - 隐私保护研究
+- multi-label-classification - 多标签分类方法
+- tor-traffic-analysis - Tor流量分析
+- sliding-window - 滑动窗口方法
+- local-pattern-extraction - 局部模式提取
+- privacy-preservation - 隐私保护研究
 
 ## §10 证据记录
 

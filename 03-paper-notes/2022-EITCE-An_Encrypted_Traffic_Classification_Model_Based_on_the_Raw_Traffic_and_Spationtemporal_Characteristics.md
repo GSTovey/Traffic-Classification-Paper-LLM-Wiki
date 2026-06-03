@@ -18,7 +18,7 @@ research_area: "Encrypted Traffic Classification"
 task: "加密流量分类（12类，含VPN与Non-VPN）"
 method: "ResNet-GRU并行融合模型"
 dataset: "ISCX-VPN-NonVPN2016"
-code: null
+code: unknown
 relevance: "中等——提出并行时空特征提取思路，但实验规模和对比有限"
 created: "2026-05-27"
 updated: "2026-05-27"

@@ -177,8 +177,8 @@ Pre-trained models operating directly on raw bytes have achieved promising perfo
 
 - [[encrypted-traffic-analysis]] — 加密流量分类中的捷径问题
 - [[pre-training-finetuning]] — 预训练模型的捷径学习
-- [[shortcut-learning]] — 捷径学习理论基础
-- [[feature-selection]] — 特征选择和缓解策略
+- shortcut-learning — 捷径学习理论基础
+- feature-selection — 特征选择和缓解策略
 - [[traffic-representation-learning]] — 流量特征表示
 
 ## §10 证据记录

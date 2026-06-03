@@ -7,7 +7,7 @@ year: 2025
 venue: "ICAACE 2025"
 doi: unknown
 url: unknown
-pdf: unknown
+pdf: "00-inbox/PDFs/2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks.pdf"
 mineru_md: "02-parsed-markdown/2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks.md"
 status: processed
 reading_level: L2

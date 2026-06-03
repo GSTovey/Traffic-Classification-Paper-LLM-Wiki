@@ -10,7 +10,7 @@ An Obsidian-based knowledge base for systematic literature review in **network t
 
 - **79 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
 - **14 deep-analyzed papers** (CCF A/B tier) with formula derivations, ablation studies, and cross-paper connections
-- **35 knowledge pages**: 9 concepts, 8 methods, 8 tasks, 5 surveys, 3 comparison tables, 2 claim indexes
+- **35 knowledge pages**: 9 concepts, 8 methods, 8 tasks, 5 surveys, 5 comparison tables, 2 claim indexes
 - **26 confirmed open-source methods** with GitHub/GitLab repositories
 - **Research map** linking papers by topic, method, and venue
 
@@ -27,7 +27,7 @@ Traffic_Papers/
 ├── 05-methods/             # Method pages (8 files) ★
 ├── 06-tasks/               # Task pages (8 files) ★
 ├── 07-surveys/             # Survey pages (5 files) ★
-├── 08-comparisons/         # Comparison tables (3 files, incl. open-source registry) ★
+├── 08-comparisons/         # Comparison tables (5 files, incl. open-source registry) ★
 ├── 09-claims/              # Claims & contradictions (2 files) ★
 ├── 10-outputs/             # Drafts, reports, reproduction notes
 ├── 00-dashboard/           # Reading queue, research map, open questions

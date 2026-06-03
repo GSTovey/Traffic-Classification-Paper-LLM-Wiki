@@ -7,7 +7,7 @@ year: 2025
 venue: "Artificial Intelligence and Applications, Vol. 4(1), 125-138"
 doi: "10.47852/bonviewAIA52025552"
 url: "https://doi.org/10.47852/bonviewAIA52025552"
-pdf: "unknown"
+pdf: "00-inbox/PDFs/2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model.pdf"
 mineru_md: "02-parsed-markdown/2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model.md"
 status: processed
 reading_level: L2

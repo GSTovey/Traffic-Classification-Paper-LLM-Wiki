@@ -170,10 +170,10 @@ SSL/TLS流量 → 提取消息类型序列 → 二阶马尔可夫链建模
 
 - [[encrypted-traffic-analysis]] - 加密流量分析核心技术
 - [[traffic-classification]] - 流量分类基础方法
-- [[markov-chain]] - 马尔可夫链建模方法
-- [[ssl-tls-protocol]] - SSL/TLS协议特征提取
-- [[statistical-fingerprinting]] - 统计指纹方法
-- [[application-identification]] - 应用识别任务
+- markov-chain - 马尔可夫链建模方法
+- ssl-tls-protocol - SSL/TLS协议特征提取
+- statistical-fingerprinting - 统计指纹方法
+- application-identification - 应用识别任务
 
 ## §10 证据记录
 

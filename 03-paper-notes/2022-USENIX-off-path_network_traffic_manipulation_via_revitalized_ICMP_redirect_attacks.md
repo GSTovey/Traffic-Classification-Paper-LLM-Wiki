@@ -187,13 +187,13 @@ Step 6: 受害者后续流量被重定向到攻击者指定位置
 ## §9 知识链接
 
 - [[malicious-traffic-detection]] - 恶意流量检测技术
-- [[network-security]] - 网络安全基础
-- [[protocol-analysis]] - 协议安全分析
-- [[attack-detection]] - 攻击检测方法
-- [[vulnerability-analysis]] - 漏洞分析方法
-- [[internet-measurement]] - 互联网测量技术
-- [[dos-attack]] - DoS攻击与防御
-- [[man-in-the-middle]] - 中间人攻击
+- network-security - 网络安全基础
+- protocol-analysis - 协议安全分析
+- attack-detection - 攻击检测方法
+- vulnerability-analysis - 漏洞分析方法
+- internet-measurement - 互联网测量技术
+- dos-attack - DoS攻击与防御
+- man-in-the-middle - 中间人攻击
 
 ## §10 证据记录
 

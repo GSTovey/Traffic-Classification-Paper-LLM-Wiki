@@ -163,7 +163,7 @@ Recent advancements in deep learning (DL) have significantly enhanced the perfor
 - [[traffic-classification]] — 论文核心任务
 - [[encrypted-traffic-analysis]] — 解释加密流量分类决策
 - [[transformer]] — 作为分类器和解释对象
-- [[explainable-AI]] — 输入扰动解释方法
+- explainable-AI — 输入扰动解释方法
 - [[traffic-representation-learning]] — 字节序列表示
 
 ## §10 证据记录

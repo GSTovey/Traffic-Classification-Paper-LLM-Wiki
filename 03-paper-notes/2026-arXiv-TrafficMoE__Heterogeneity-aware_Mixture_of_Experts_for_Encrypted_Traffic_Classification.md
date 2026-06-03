@@ -202,7 +202,7 @@ Stage 2: 微调
 ## §9 知识链接
 
 - [[encrypted-traffic-analysis]] — 加密流量分类
-- [[mixture-of-experts]] — 稀疏混合专家架构
+- mixture-of-experts — 稀疏混合专家架构
 - [[pre-training-finetuning]] — 预训练-微调范式
 - [[traffic-representation-learning]] — 流量表示学习
 - [[transformer]] — 自注意力和序列建模

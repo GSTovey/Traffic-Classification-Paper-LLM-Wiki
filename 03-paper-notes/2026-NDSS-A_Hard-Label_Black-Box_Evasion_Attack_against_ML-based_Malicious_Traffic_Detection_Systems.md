@@ -194,7 +194,7 @@ Stage 2: 对抗流量生成
 ## §9 知识链接
 
 - [[malicious-traffic-detection]] — 论文攻击目标
-- [[adversarial-attack]] — 对抗逃逸攻击方法
+- adversarial-attack — 对抗逃逸攻击方法
 - [[pre-training-finetuning]] — Traffic-BERT 预训练
 - [[transformer]] — BERT 架构和 bi-cross attention
 - [[encrypted-traffic-analysis]] — 加密流量场景

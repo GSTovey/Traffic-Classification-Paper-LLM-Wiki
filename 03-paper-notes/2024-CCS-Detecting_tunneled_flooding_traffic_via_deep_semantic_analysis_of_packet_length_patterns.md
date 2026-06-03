@@ -189,12 +189,12 @@ CNN语义分析 → 相关性提取 → 流量分类
 
 - [[tunnel-detection]] - 隧道流量检测技术
 - [[malicious-traffic-detection]] - 恶意流量检测方法
-- [[ddos-detection]] - DDoS攻击检测
-- [[packet-length-analysis]] - 包长度分析方法
-- [[deep-learning]] - 深度学习方法
-- [[cnn]] - 卷积神经网络
-- [[semantic-analysis]] - 语义分析技术
-- [[fpga-acceleration]] - FPGA加速实现
+- ddos-detection - DDoS攻击检测
+- packet-length-analysis - 包长度分析方法
+- deep-learning - 深度学习方法
+- cnn - 卷积神经网络
+- semantic-analysis - 语义分析技术
+- fpga-acceleration - FPGA加速实现
 - [[encrypted-traffic-analysis]] - 加密流量分析
 
 ## §10 证据记录

@@ -187,11 +187,11 @@ Step 3: 异常交互检测 (Abnormal Interaction Detection)
 - [[malicious-traffic-detection]] - 恶意流量检测技术
 - [[encrypted-traffic-analysis]] - 加密流量分析方法
 - [[graph-neural-network]] - 图神经网络方法
-- [[unsupervised-learning]] - 无监督学习
-- [[flow-interaction-analysis]] - 流交互分析
-- [[real-time-detection]] - 实时检测技术
+- unsupervised-learning - 无监督学习
+- flow-interaction-analysis - 流交互分析
+- real-time-detection - 实时检测技术
 - [[anomaly-detection]] - 异常检测方法
-- [[zero-day-attack]] - 零日攻击检测
+- zero-day-attack - 零日攻击检测
 
 ## §10 证据记录
 

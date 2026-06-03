@@ -7,7 +7,7 @@ year: 2026
 venue: "IEEE Transactions on Network and Service Management (TNSM)"
 doi: "10.1109/TNSM.2026.3651599"
 url: unknown
-pdf: unknown
+pdf: "00-inbox/PDFs/2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Classification_in_IoT.pdf"
 mineru_md: "02-parsed-markdown/2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Classification_in_IoT.md"
 status: processed
 reading_level: L2

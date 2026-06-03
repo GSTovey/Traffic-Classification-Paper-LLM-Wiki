@@ -7,7 +7,7 @@ year: 2026
 venue: "JCN"
 doi: "unknown"
 url: "unknown"
-pdf: "00-inbox/PDFs/2026-JCN-Plug-in_enhancement_framework__Breaking_through_performance_bottleneck_of_pre-trained_models_for_encrypted_traffic_classification.md"
+pdf: "00-inbox/PDFs/2026-JCN-Plug-in_enhancement_framework__Breaking_through_performance_bottleneck_of_pre-trained_models_for_encrypted_traffic_classification.pdf"
 mineru_md: "02-parsed-markdown/2026-JCN-Plug-in_enhancement_framework__Breaking_through_performance_bottleneck_of_pre-trained_models_for_encrypted_traffic_classification.md"
 status: processed
 reading_level: L2

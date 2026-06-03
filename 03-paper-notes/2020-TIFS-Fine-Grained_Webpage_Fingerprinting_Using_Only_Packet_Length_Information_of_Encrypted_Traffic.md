@@ -180,11 +180,11 @@ Step 4: 训练分类器
 
 - [[website-fingerprinting]] - 网站指纹识别核心技术
 - [[encrypted-traffic-analysis]] - 加密流量分析方法
-- [[packet-length-features]] - 包长度特征提取
+- packet-length-features - 包长度特征提取
 - [[traffic-classification]] - 流量分类基础方法
-- [[machine-learning]] - 传统机器学习方法
-- [[feature-engineering]] - 特征工程方法
-- [[privacy-preservation]] - 隐私保护研究
+- machine-learning - 传统机器学习方法
+- feature-engineering - 特征工程方法
+- privacy-preservation - 隐私保护研究
 
 ## §10 证据记录
 

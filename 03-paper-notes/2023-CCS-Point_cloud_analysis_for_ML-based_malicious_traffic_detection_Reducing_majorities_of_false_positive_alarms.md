@@ -192,11 +192,11 @@ ML检测告警 → 特征向量点云构建 → 体素化
 
 - [[malicious-traffic-detection]] - 恶意流量检测技术
 - [[anomaly-detection]] - 异常检测方法
-- [[false-positive-reduction]] - 误报减少技术
-- [[point-cloud-analysis]] - 点云分析方法
-- [[unsupervised-learning]] - 无监督学习
-- [[feature-space-analysis]] - 特征空间分析
-- [[voxel-analysis]] - 体素分析方法
+- false-positive-reduction - 误报减少技术
+- point-cloud-analysis - 点云分析方法
+- unsupervised-learning - 无监督学习
+- feature-space-analysis - 特征空间分析
+- voxel-analysis - 体素分析方法
 - [[traffic-classification]] - 流量分类基础
 
 ## §10 证据记录

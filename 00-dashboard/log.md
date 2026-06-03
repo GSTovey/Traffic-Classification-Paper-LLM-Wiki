@@ -251,3 +251,26 @@ Next steps:
 - Notes:
   - 最小结构迭代：不删除任何文件，不批量重写已有笔记
   - 试运行论文：Flowprint、Deep Fingerprinting、ET-BERT（3 篇代表性论文）
+
+---
+
+## [2026-06-03] quality-fix | 全库质量检查与补全
+
+- Fixed:
+  - H1: COMST frontmatter doi 缺少闭合引号 → 已修复
+  - H2: Plug-in 论文 pdf 字段 .md → .pdf → 已修复
+  - H3: TNSM/AIA/ICAACE 三篇 pdf: unknown → 已补充实际 PDF 路径
+  - H4: 12 篇论文缺失 reading-queue 条目 → 已补充
+  - H5: JKing/JKSU 重复文件清理 → 删除 JKing 重复 PDF/MinerU MD，创建 JKSU 标准命名笔记
+  - M1: 48 条断链 wikilinks → 已在 13 篇论文笔记中转为纯文本
+  - M6: EITCE code: null → code: unknown
+- Updated:
+  - `00-dashboard/paper-registry.md` — JKing → JKSU 条目修正
+  - `00-dashboard/reading-queue.md` — 新增 12 条阅读记录 + JKing→JKSU 引用修正
+  - `AGENTS.md` — §2.3 补充 5 个对比表列表，§9 新增 prompt 07 入口
+  - `README.md` — 对比表数量 3→5
+  - `README.zh-CN.md` — 对比表数量 3→5
+- Notes:
+  - 全库 79 篇论文审计完成，所有 HIGH/MEDIUM 优先级问题已修复
+  - 12 篇新增 reading-queue 论文：2017-TIFS, 2020-TIFS, 2022-USENIX, 2023-CCS(Point), 2023-NDSS, 2023-S&P, 2023-TNET, 2024-CCS×3, 2024-NDSS, 2024-TNET
+  - JKing 是 JKSU (Journal of King Saud University) 的错误缩写，已统一为 JKSU

@@ -196,12 +196,12 @@ Step 5: 统计聚类模块
 
 - [[malicious-traffic-detection]] - 恶意流量检测技术
 - [[anomaly-detection]] - 异常检测方法
-- [[frequency-domain-analysis]] - 频域分析方法
-- [[fourier-transform]] - 傅里叶变换
-- [[real-time-detection]] - 实时检测技术
-- [[robust-detection]] - 鲁棒检测方法
-- [[zero-day-attack]] - 零日攻击检测
-- [[traffic-feature-extraction]] - 流量特征提取
+- frequency-domain-analysis - 频域分析方法
+- fourier-transform - 傅里叶变换
+- real-time-detection - 实时检测技术
+- robust-detection - 鲁棒检测方法
+- zero-day-attack - 零日攻击检测
+- traffic-feature-extraction - 流量特征提取
 
 ## §10 证据记录
 
