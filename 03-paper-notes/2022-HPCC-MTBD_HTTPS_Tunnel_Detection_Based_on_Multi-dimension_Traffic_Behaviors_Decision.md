@@ -1,6 +1,7 @@
 ---
 type: paper
-title: "MTBD: HTTPS Tunnel Detection Based on Multi-dimension Traffic Behaviors Decision"
+title_original: "MTBD: HTTPS Tunnel Detection Based on Multi-dimension Traffic Behaviors Decision"
+title_cn: "MTBD: 基于多维流量行为决策的HTTPS隧道检测"
 authors:
   - Bingxu Wang
   - Yangyang Guan
@@ -10,19 +11,31 @@ authors:
   - Qingya Yang
   - Chang Liu
 year: 2022
-venue: HPCC
-keywords:
-  - HTTPS tunnel
-  - multi-dimension traffic behaviors decision
-  - traffic burst
-  - tunnel detection
-  - machine learning
-topic: HTTPS隧道流量检测
+venue: "HPCC"
+doi: "10.1109/HPCC57118.2022.00178"
+url: ""
+pdf: "00-inbox/PDFs/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.pdf"
+mineru_md: "02-parsed-markdown/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.md"
 status: processed
 reading_level: L2
-pdf: 00-inbox/PDFs/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.pdf
+research_area:
+  - HTTPS-tunnel-detection
+  - encrypted-traffic-analysis
+  - network-security
+task:
+  - tunnel-detection
+  - traffic-classification
+method:
+  - burst-traffic-filtering
+  - heterogeneous-feature-extraction
+  - multi-dimension-voting
+  - machine-learning
+dataset:
+  - unknown
+code: "unknown"
+relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # MTBD: HTTPS Tunnel Detection Based on Multi-dimension Traffic Behaviors Decision

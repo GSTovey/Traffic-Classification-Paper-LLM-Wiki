@@ -2,15 +2,16 @@
 
 [中文说明](./README.zh-CN.md)
 
-An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 50+ structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, etc.), covering 2008--2026.
+An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 79 structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, KDD, etc.), covering 2008--2026.
 
 ---
 
 ## Highlights
 
-- **50 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
+- **79 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
 - **14 deep-analyzed papers** (CCF A/B tier) with formula derivations, ablation studies, and cross-paper connections
-- **34 knowledge pages**: 9 concepts, 8 methods, 8 tasks, 5 surveys, 2 comparison tables, 2 claim indexes
+- **35 knowledge pages**: 9 concepts, 8 methods, 8 tasks, 5 surveys, 3 comparison tables, 2 claim indexes
+- **26 confirmed open-source methods** with GitHub/GitLab repositories
 - **Research map** linking papers by topic, method, and venue
 
 ## Directory Structure
@@ -18,15 +19,15 @@ An Obsidian-based knowledge base for systematic literature review in **network t
 ```
 Traffic_Papers/
 ├── 00-inbox/
-│   └── PDFs/              # 50 paper PDFs (source files)
+│   └── PDFs/              # 79 paper PDFs (source files)
 ├── 01-mineru-output/       # MinerU raw API output (gitignored, regenerable)
-├── 02-parsed-markdown/     # MinerU-parsed markdown (50 files)
-├── 03-paper-notes/         # Structured paper notes (50 files) ★
+├── 02-parsed-markdown/     # MinerU-parsed markdown (79 files)
+├── 03-paper-notes/         # Structured paper notes (79 files) ★
 ├── 04-concepts/            # Concept pages (9 files) ★
 ├── 05-methods/             # Method pages (8 files) ★
 ├── 06-tasks/               # Task pages (8 files) ★
 ├── 07-surveys/             # Survey pages (5 files) ★
-├── 08-comparisons/         # Comparison tables (2 files) ★
+├── 08-comparisons/         # Comparison tables (3 files, incl. open-source registry) ★
 ├── 09-claims/              # Claims & contradictions (2 files) ★
 ├── 10-outputs/             # Drafts, reports, reproduction notes
 ├── 00-dashboard/           # Reading queue, research map, open questions

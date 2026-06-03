@@ -1,10 +1,39 @@
 ---
 type: paper
+title_original: "Few-shot encrypted traffic classification via multi-task representation enhanced meta-learning"
+title_cn: "基于多任务表示增强元学习的少样本加密流量分类"
+authors:
+  - Chen Yang
+  - Gang Xiong
+  - Qing Zhang
+  - Junzheng Shi
+  - Gaopeng Gou
+  - Zhen Li
+  - Chang Liu
+year: 2023
+venue: "Computer Networks"
+doi: ""
+url: ""
 pdf: "00-inbox/PDFs/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.pdf"
+mineru_md: "02-parsed-markdown/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.md"
 status: processed
 reading_level: L2
+research_area:
+  - encrypted-traffic-classification
+  - meta-learning
+  - few-shot-learning
+task:
+  - traffic-classification
+method:
+  - meta-learning
+  - deep-learning
+  - unsupervised-learning
+  - CNN
+dataset: []
+code: "unknown"
+relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # 0 基础信息

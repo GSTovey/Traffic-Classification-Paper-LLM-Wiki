@@ -1,6 +1,7 @@
 ---
 type: paper
-title: "Causality Correlation and Context Learning Aided Robust Lightweight Multi-Tab Website Fingerprinting Over Encrypted Tunnel"
+title_original: "Causality Correlation and Context Learning Aided Robust Lightweight Multi-Tab Website Fingerprinting Over Encrypted Tunnel"
+title_cn: "因果关联与上下文学习辅助的鲁棒轻量级多标签加密隧道网站指纹识别"
 authors:
   - Siyang Chen
   - Shuangwu Chen
@@ -8,23 +9,30 @@ authors:
   - Xiaofeng Jiang
   - Jian Yang
   - Siyu Cheng
-affiliations:
-  - University of Science and Technology of China
-  - Institute of Artificial Intelligence, Hefei Comprehensive National Science Center
-venue: INFOCOM 2024
 year: 2024
+venue: "INFOCOM 2024"
+doi: ""
+url: ""
 pdf: "00-inbox/PDFs/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.pdf"
+mineru_md: "02-parsed-markdown/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.md"
 status: processed
 reading_level: L2
-tags:
+research_area:
   - website-fingerprinting
   - multi-tab
   - encrypted-traffic
+  - robustness
+task:
+  - website-fingerprinting
+method:
   - causality-learning
   - context-learning
-  - robustness
+  - random-forest
+dataset: []
+code: "https://github.com/chenxiailian/robustweb"
+relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # 0. 元信息

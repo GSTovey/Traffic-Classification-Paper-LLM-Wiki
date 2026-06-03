@@ -1,6 +1,7 @@
 ---
 type: paper
-title: "Yet Another Traffic Classifier: A Masked Autoencoder Based Traffic Transformer with Multi-Level Flow Representation"
+title_original: "Yet Another Traffic Classifier: A Masked Autoencoder Based Traffic Transformer with Multi-Level Flow Representation"
+title_cn: "又一个流量分类器：基于掩码自编码器的多层级流表示流量Transformer"
 authors:
   - Ruijie Zhao
   - Mingwei Zhan
@@ -10,21 +11,33 @@ authors:
   - Guan Gui
   - Zhi Xue
 year: 2023
-venue: AAAI
-project: YaTC
-pdf: 00-inbox/PDFs/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.pdf
-code: https://github.com/NSSL-SJTU/YaTC
-tags:
-  - traffic-classification
-  - self-supervised-learning
-  - transformer
-  - masked-autoencoder
-  - encrypted-traffic
-  - multi-level-representation
+venue: "AAAI"
+doi: ""
+url: ""
+pdf: "00-inbox/PDFs/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.pdf"
+mineru_md: "02-parsed-markdown/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.md"
 status: processed
 reading_level: L2
+research_area:
+  - traffic-classification
+  - self-supervised-learning
+  - representation-learning
+task:
+  - traffic-classification
+  - encrypted-traffic-classification
+method:
+  - masked-autoencoder
+  - Transformer
+  - multi-level-flow-representation
+  - self-supervised-learning
+dataset:
+  - USTC-TFC2016
+  - ISCX-VPN-Service
+  - CSTNET-TLS1.3
+code: "https://github.com/NSSL-SJTU/YaTC"
+relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # 0. 元信息

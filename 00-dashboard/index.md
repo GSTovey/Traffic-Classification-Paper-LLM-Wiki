@@ -14,9 +14,12 @@
 
 | 页面 | 说明 |
 |---|---|
-| [[reading-queue]] | 全部 50 篇论文的阅读状态与重要性标记 |
+| [[project-overview]] | **项目全景速览** — 任何智能体首次对齐上下文的入口 |
+| [[paper-registry]] | **论文去重注册表** — 79 篇论文的 DOI/标题索引，新入库前必须比对 |
+| [[reading-queue]] | 全部 79 篇论文的阅读状态与重要性标记 |
 | [[open-questions]] | 从 Claims 与矛盾记录中提炼的开放研究问题 |
 | [[research-map]] | 研究主题地图，链接到实际存在的概念页与方法页 |
+| [[quality-check-report]] | 知识库质量检查报告 |
 | [[log]] | 知识库维护日志 |
 
 ---
@@ -25,9 +28,9 @@
 
 | 目录 | 用途 |
 |---|---|
-| `00-inbox/PDFs/` | 待处理和已处理的 50 篇 PDF 原文 |
-| `01-mineru-output/` | MinerU API 返回的 50 份原始解析结果 |
-| `02-parsed-markdown/` | 整理后的 50 份 MinerU Markdown 文件 |
+| `00-inbox/PDFs/` | 待处理和已处理的 79 篇 PDF 原文 |
+| `01-mineru-output/` | MinerU API 返回的 79 份原始解析结果 |
+| `02-parsed-markdown/` | 整理后的 79 份 MinerU Markdown 文件 |
 
 ---
 
@@ -35,12 +38,12 @@
 
 | 目录 | 用途 | 当前数量 |
 |---|---|---|
-| `03-paper-notes/` | 单篇论文结构化笔记 | 50 篇 |
+| `03-paper-notes/` | 单篇论文结构化笔记 | 79 篇 |
 | `04-concepts/` | 研究概念页 | 9 个 |
 | `05-methods/` | 方法页 | 8 个 |
 | `06-tasks/` | 任务页 | 8 个 |
 | `07-surveys/` | 综述页 | 5 个 |
-| `08-comparisons/` | 对比表 | 2 个 |
+| `08-comparisons/` | 对比表（含开源注册表） | 3 个 |
 | `09-claims/` | 观点、证据与矛盾记录 | 2 个 |
 | `10-outputs/` | 草稿、报告、项目申报材料和复现笔记 | — |
 
@@ -101,6 +104,7 @@
 - [[survey-few-shot-learning]] — 少样本学习综述
 - [[dataset-comparison-table]] — 数据集对比表
 - [[method-comparison-table]] — 方法对比表
+- [[open-source-registry]] — 开源模型/方法注册表（26 个已确认开源 + 高频基线追踪）
 
 ---
 
@@ -113,14 +117,15 @@
 
 ## 9. 当前状态
 
-- 50 篇 PDF 已导入 `00-inbox/PDFs/`。
-- 50 篇 MinerU Markdown 已生成至 `01-mineru-output/`。
-- 50 篇结构化论文笔记已创建于 `03-paper-notes/`。
+- 79 篇 PDF 已导入 `00-inbox/PDFs/`。
+- 79 篇 MinerU Markdown 已生成至 `01-mineru-output/`。
+- 79 篇结构化论文笔记已创建于 `03-paper-notes/`。
 - 9 个概念页已创建于 `04-concepts/`。
 - 8 个方法页已创建于 `05-methods/`。
 - 8 个任务页已创建于 `06-tasks/`。
 - 5 个综述页已创建于 `07-surveys/`。
-- 2 个对比表已创建于 `08-comparisons/`。
+- 3 个对比表已创建于 `08-comparisons/`（含开源注册表）。
+- 1 个开源注册表已创建于 `08-comparisons/open-source-registry.md`。
 - 2 个 Claims 页面已创建于 `09-claims/`（含 20 条核心观点和 8 组矛盾记录）。
 
 ---

@@ -1,34 +1,38 @@
 ---
 type: paper
-title: "Separating Flows in Encrypted Tunnel Traffic"
+title_original: "Separating Flows in Encrypted Tunnel Traffic"
+title_cn: "加密隧道流量中的流分离"
 authors:
   - Alexander Hartl
   - Joachim Fabini
   - Tanja Zseby
 year: 2022
-venue: ICMLA
-keywords:
-  - tunnel encryption
-  - encrypted traffic analysis
-  - flow separation
-  - deanonymization
-  - anomaly detection
-  - LSTM
-  - random projection
-date_added: 2026-05-27
-related_papers:
-  - "2021-ICDMW-Shedding_Light_in_the_Tunnel"
-tags:
-  - encrypted-traffic
-  - flow-separation
-  - deep-learning
-  - anomaly-detection
-  - privacy
+venue: "ICMLA"
+doi: ""
+url: ""
 pdf: "00-inbox/PDFs/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.pdf"
+mineru_md: "02-parsed-markdown/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.md"
 status: processed
 reading_level: L2
+research_area:
+  - encrypted-traffic-analysis
+  - flow-separation
+  - traffic-deanonymization
+task:
+  - flow-separation
+  - packet-attribution
+method:
+  - LSTM
+  - random-projection
+  - anomaly-detection
+  - Viterbi-search
+dataset:
+  - synthetic-flows
+  - real-network-traces
+code: "https://gitlab.tuwien.ac.at/e389-cnpub/separatingflows/"
+relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # Separating Flows in Encrypted Tunnel Traffic

@@ -1,18 +1,7 @@
 ---
 type: paper
-pdf: "00-inbox/PDFs/2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation.md"
-status: processed
-reading_level: L2
-created: "2026-05-27"
-updated: "2026-05-27"
-tags:
-  - website-fingerprinting
-  - traffic-analysis
-  - Tor
-  - deep-learning
-  - CNN
-  - adversarial-robustness
-venue: USENIX Security 2023
+title_original: "Subverting Website Fingerprinting Defenses with Robust Traffic Representation"
+title_cn: "以鲁棒流量表示颠覆网站指纹防御"
 authors:
   - Meng Shen
   - Kexin Ji
@@ -20,9 +9,28 @@ authors:
   - Qi Li
   - Liehuang Zhu
   - Ke Xu
-affiliations:
-  - Beijing Institute of Technology
-  - Tsinghua University
+year: 2023
+venue: "USENIX Security 2023"
+doi: ""
+url: ""
+pdf: "00-inbox/PDFs/2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation.pdf"
+mineru_md: "02-parsed-markdown/2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation.md"
+status: processed
+reading_level: L2
+research_area:
+  - website-fingerprinting
+  - traffic-analysis
+  - adversarial-robustness
+task:
+  - website-fingerprinting
+method:
+  - CNN
+  - adversarial-training
+dataset: []
+code: "https://github.com/robust-fingerprinting/RF"
+relevance: high
+created: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # Subverting Website Fingerprinting Defenses with Robust Traffic Representation

@@ -1,5 +1,7 @@
 ---
-title: "An Efficient Feature Generation Approach Based on Deep Learning and Feature Selection Techniques for Traffic Classification"
+type: paper
+title_original: "An Efficient Feature Generation Approach Based on Deep Learning and Feature Selection Techniques for Traffic Classification"
+title_cn: "基于深度学习和特征选择技术的高效特征生成方法用于流量分类"
 authors:
   - Hongtao Shi
   - Hongping Li
@@ -7,21 +9,35 @@ authors:
   - Chaqiu Cheng
   - Xuanxuan Cao
 year: 2018
-journal/conference: "Computer Science (Elsevier)"
+venue: "Computer Science (Elsevier)"
 doi: ""
-arxiv: ""
-type: paper
-tags:
+url: ""
+pdf: "00-inbox/PDFs/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.pdf"
+mineru_md: "02-parsed-markdown/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.md"
+status: processed
+reading_level: L2
+research_area:
+  - traffic-classification
   - feature-generation
   - feature-selection
   - deep-learning
+task:
   - traffic-classification
+  - feature-optimization
+  - multi-class-imbalance-handling
+  - concept-drift-adaptation
+method:
   - DBN
-  - multi-class-imbalance
-  - concept-drift
   - symmetric-uncertainty
-status: read
-date_added: 2026-05-27
+  - weighted-symmetric-uncertainty
+  - feature-generation
+  - dimensionality-reduction
+dataset:
+  - unknown
+code: "unknown"
+relevance: high
+created: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # 0. 基础信息

@@ -1,6 +1,7 @@
 ---
 type: paper
-title: "FS-Net: A Flow Sequence Network For Encrypted Traffic Classification"
+title_original: "FS-Net: A Flow Sequence Network For Encrypted Traffic Classification"
+title_cn: "FS-Net: 用于加密流量分类的流序列网络"
 authors:
   - Chang Liu
   - Longtao He
@@ -8,22 +9,32 @@ authors:
   - Zigang Cao
   - Zhen Li
 year: 2019
-venue: INFOCOM
-keywords:
-  - encrypted traffic classification
-  - flow sequence
-  - recurrent neural network
-  - GRU
-  - end-to-end model
-  - reconstruction mechanism
-date_added: 2026-05-27
-related_papers:
-  - "2018-IWQoS-MaMPF"
-tags:
-  - traffic-classification
+venue: "INFOCOM"
+doi: ""
+url: ""
+pdf: "00-inbox/PDFs/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.pdf"
+mineru_md: "02-parsed-markdown/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.md"
+status: processed
+reading_level: L2
+research_area:
+  - encrypted-traffic-classification
   - deep-learning
+  - traffic-classification
+task:
+  - encrypted-traffic-classification
+  - application-identification
+method:
   - RNN
-  - encrypted-traffic
+  - GRU
+  - encoder-decoder
+  - reconstruction-mechanism
+  - end-to-end-learning
+dataset:
+  - unknown
+code: "unknown"
+relevance: high
+created: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # FS-Net: A Flow Sequence Network For Encrypted Traffic Classification

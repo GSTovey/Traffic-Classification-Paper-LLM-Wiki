@@ -1,25 +1,34 @@
 ---
 type: paper
-pdf: "00-inbox/PDFs/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.md"
-status: processed
-reading_level: L2
-created: "2026-05-27"
-updated: "2026-05-27"
-title: "A Lightweight, Efficient and Explainable-by-Design Convolutional Neural Network for Internet Traffic Classification"
+title_original: "A Lightweight, Efficient and Explainable-by-Design Convolutional Neural Network for Internet Traffic Classification"
+title_cn: "一种轻量级、高效且设计可解释的互联网流量分类卷积神经网络"
 authors:
   - Kevin Fauvel
   - Fuxing Chen
   - Dario Rossi
-affiliation: Huawei Technologies Co., Ltd France
-venue: SIGKDD 2023
-tags:
+year: 2023
+venue: "SIGKDD 2023"
+doi: ""
+url: ""
+pdf: "00-inbox/PDFs/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.pdf"
+mineru_md: "02-parsed-markdown/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.md"
+status: processed
+reading_level: L2
+research_area:
   - traffic-classification
-  - encrypted-traffic
   - explainable-AI
   - lightweight-CNN
-  - prototype-network
+task:
+  - traffic-classification
+method:
   - CNN
+  - prototype-network
   - ResNet
+dataset: []
+code: "https://github.com/XAIseries/LEXNet"
+relevance: high
+created: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # 0. 元信息

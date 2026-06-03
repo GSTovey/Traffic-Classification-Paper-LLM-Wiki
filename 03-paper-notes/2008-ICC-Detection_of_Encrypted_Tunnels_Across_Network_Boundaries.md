@@ -25,20 +25,20 @@ updated: "2026-05-27"
 
 ## 0. 论文基础信息
 
-| 项目 | 内容 |
-|---|---|
-| 原文标题 | Detection of Encrypted Tunnels across Network Boundaries |
-| 中文标题 | 跨网络边界加密隧道检测 |
-| 作者 | Maurizio Dusi, Manuel Crotti, Francesco Gringoli, Luca Salgarelli |
-| 年份 | 2008 |
-| 会议/期刊 | IEEE International Conference on Communications (ICC 2008) |
-| 研究方向 | 网络安全、加密流量分类 |
-| 任务类型 | 加密 SSH 隧道中的 protocol tunneling 检测 |
-| 方法关键词 | statistical fingerprinting, naive Bayes, histogram density estimation, anomaly score, shifted window |
-| 数据集 | 校园网络真实流量（约4000个合法SSH会话 + 约12000个评估会话） |
-| 是否开源 | 否 |
-| PDF | 00-inbox/PDFs/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.pdf |
-| MinerU Markdown | 02-parsed-markdown/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.md |
+| 项目              | 内容                                                                                                   |
+| --------------- | ---------------------------------------------------------------------------------------------------- |
+| 原文标题            | Detection of Encrypted Tunnels across Network Boundaries                                             |
+| 中文标题            | 跨网络边界加密隧道检测                                                                                          |
+| 作者              | Maurizio Dusi, Manuel Crotti, Francesco Gringoli, Luca Salgarelli                                    |
+| 年份              | 2008                                                                                                 |
+| 会议/期刊           | IEEE International Conference on Communications (ICC 2008)                                           |
+| 研究方向            | 网络安全、加密流量分类                                                                                          |
+| 任务类型            | 加密 SSH 隧道中的 protocol tunneling 检测                                                                    |
+| 方法关键词           | statistical fingerprinting, naive Bayes, histogram density estimation, anomaly score, shifted window |
+| 数据集             | 校园网络真实流量（约4000个合法SSH会话 + 约12000个评估会话）                                                                |
+| 是否开源            | 否                                                                                                    |
+| PDF             | 00-inbox/PDFs/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.pdf                  |
+| MinerU Markdown | 02-parsed-markdown/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.md              |
 
 ## 1. 一句话总结
 

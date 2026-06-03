@@ -17,6 +17,10 @@ wheels/
 
 # Claude Code internal
 .claude/
+.claudian/sessions/
+
+# Internal logs
+99-logs/
 
 # MinerU raw API output (381MB, regenerable via scripts/)
 01-mineru-output/

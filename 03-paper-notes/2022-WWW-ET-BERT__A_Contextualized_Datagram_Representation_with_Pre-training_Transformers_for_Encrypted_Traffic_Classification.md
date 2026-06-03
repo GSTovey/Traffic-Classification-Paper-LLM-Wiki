@@ -1,6 +1,7 @@
 ---
 type: paper
-title: "ET-BERT: A Contextualized Datagram Representation with Pre-training Transformers for Encrypted Traffic Classification"
+title_original: "ET-BERT: A Contextualized Datagram Representation with Pre-training Transformers for Encrypted Traffic Classification"
+title_cn: "ET-BERT：基于预训练Transformer的加密流量分类上下文化数据报表示"
 authors:
   - Xinjie Lin
   - Gang Xiong
@@ -9,33 +10,35 @@ authors:
   - Junzhi Shi
   - Jing Yu
 year: 2022
-venue: WWW
-keywords:
-  - encrypted traffic classification
-  - pre-training
-  - Transformer
-  - BERT
-  - datagram representation
-  - masked BURST model
-  - same-origin BURST prediction
-  - fine-tuning
-date_added: 2026-05-27
-related_papers:
-  - "2020-ITU-PERT"
-  - "2019-NAACL-BERT"
-  - "2016-ISCX-VPN"
-tags:
-  - traffic-classification
-  - pre-training
-  - Transformer
-  - encrypted-traffic
-  - BERT
-  - self-supervised-learning
+venue: "WWW"
+doi: ""
+url: ""
 pdf: "00-inbox/PDFs/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.pdf"
+mineru_md: "02-parsed-markdown/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.md"
 status: processed
 reading_level: L2
+research_area:
+  - encrypted-traffic-classification
+  - pre-training
+  - representation-learning
+task:
+  - encrypted-traffic-classification
+  - datagram-representation
+method:
+  - Transformer
+  - BERT
+  - masked-BURST-model
+  - same-origin-BURST-prediction
+  - self-supervised-learning
+  - fine-tuning
+dataset:
+  - ISCX-VPN-Service
+  - Cross-Platform-Android
+  - CSTNET-TLS1.3
+code: "https://github.com/linwhitehat/ET-BERT"
+relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # ET-BERT: A Contextualized Datagram Representation with Pre-training Transformers for Encrypted Traffic Classification

@@ -1,6 +1,7 @@
 ---
 type: paper
-title: "Identification of Encrypted Traffic Through Attention Mechanism Based Long Short Term Memory"
+title_original: "Identification of Encrypted Traffic Through Attention Mechanism Based Long Short Term Memory"
+title_cn: "基于注意力机制长短期记忆网络的加密流量识别"
 authors:
   - Haipeng Yao
   - Chong Liu
@@ -9,28 +10,31 @@ authors:
   - Chunxiao Jiang
   - Shui Yu
 year: 2022
-venue: IEEE Transactions on Big Data
-doi: 10.1109/TBDATA.2019.2940675
-pdf: 00-inbox/PDFs/2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory.md
-tags:
-  - encrypted-traffic
-  - traffic-classification
-  - LSTM
-  - attention-mechanism
-  - deep-learning
-  - time-series
-  - HAN
-dataset:
-  - ISCX VPN-NonVPN
-methods:
-  - Attention-based LSTM
-  - Hierarchical Attention Network (HAN)
-  - Bi-LSTM
-  - Cost-sensitive learning
+venue: "IEEE Transactions on Big Data"
+doi: "10.1109/TBDATA.2019.2940675"
+url: ""
+pdf: "00-inbox/PDFs/2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory.pdf"
+mineru_md: "02-parsed-markdown/2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory.md"
 status: processed
 reading_level: L2
+research_area:
+  - encrypted-traffic-classification
+  - attention-mechanism
+  - deep-learning
+task:
+  - encrypted-traffic-identification
+  - traffic-classification
+method:
+  - attention-based-LSTM
+  - hierarchical-attention-network
+  - Bi-LSTM
+  - cost-sensitive-learning
+dataset:
+  - ISCX-VPN-NonVPN
+code: "unknown"
+relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # 0. 元信息

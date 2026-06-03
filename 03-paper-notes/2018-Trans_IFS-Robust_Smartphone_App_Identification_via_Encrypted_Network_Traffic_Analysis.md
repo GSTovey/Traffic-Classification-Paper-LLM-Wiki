@@ -1,24 +1,41 @@
 ---
 type: paper
-title: "Robust Smartphone App Identification via Encrypted Network Traffic Analysis"
+title_original: "Robust Smartphone App Identification via Encrypted Network Traffic Analysis"
+title_cn: "基于加密网络流量分析的鲁棒智能手机应用识别"
 authors:
   - Vincent F. Taylor
   - Riccardo Spolaor
   - Mauro Conti
   - Ivan Martinovic
 year: 2018
-journal: IEEE Transactions on Information Forensics and Security (TIFS)
-doi: 10.1109/TIFS.2017.2737970
-tags:
+venue: "IEEE Transactions on Information Forensics and Security (TIFS)"
+doi: "10.1109/TIFS.2017.2737970"
+url: ""
+pdf: "00-inbox/PDFs/2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis.pdf"
+mineru_md: "02-parsed-markdown/2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis.md"
+status: processed
+reading_level: L2
+research_area:
   - smartphone-app-identification
-  - encrypted-traffic
-  - network-traffic-analysis
-  - machine-learning
+  - encrypted-traffic-analysis
   - traffic-fingerprinting
-  - side-channel
-  - Android
-status: read
-date_created: 2026-05-27
+  - network-security
+task:
+  - app-identification
+  - traffic-fingerprinting
+  - encrypted-traffic-classification
+method:
+  - machine-learning
+  - side-channel-analysis
+  - reinforcement-learning
+  - ambiguity-detection
+  - classification-validation
+dataset:
+  - unknown
+code: "unknown"
+relevance: high
+created: "2026-05-27"
+updated: "2026-05-29"
 ---
 
 # Robust Smartphone App Identification via Encrypted Network Traffic Analysis
