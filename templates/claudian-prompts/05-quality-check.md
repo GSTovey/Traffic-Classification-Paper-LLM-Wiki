@@ -18,7 +18,12 @@
 10. 是否存在任务页缺失；
 11. 是否存在综述页长期未更新；
 12. 是否存在 Claims 没有证据来源；
-13. 是否存在 MinerU 抽取质量问题未标注。
+13. 是否存在 MinerU 抽取质量问题未标注；
+14. 深度分析论文（CCF A/B 级或 reading_level ≥ L3）是否缺少 §3.4 问题发现路径；
+15. 深度分析论文是否缺少 §3.5 科学假设形成；
+16. 深度分析论文是否缺少 §13 全文叙事分析；
+17. `08-comparisons/motivation-pattern-comparison.md` 是否超过 30 天未更新（有新深度论文入库但未加入对比表）；
+18. `08-comparisons/narrative-pattern-comparison.md` 是否超过 30 天未更新。
 
 ## 输出格式
 

@@ -43,7 +43,7 @@
 | `05-methods/` | 方法页 | 8 个 |
 | `06-tasks/` | 任务页 | 8 个 |
 | `07-surveys/` | 综述页 | 5 个 |
-| `08-comparisons/` | 对比表（含开源注册表） | 3 个 |
+| `08-comparisons/` | 对比表（含开源注册表） | 5 个 |
 | `09-claims/` | 观点、证据与矛盾记录 | 2 个 |
 | `10-outputs/` | 草稿、报告、项目申报材料和复现笔记 | — |
 
@@ -105,6 +105,8 @@
 - [[dataset-comparison-table]] — 数据集对比表
 - [[method-comparison-table]] — 方法对比表
 - [[open-source-registry]] — 开源模型/方法注册表（26 个已确认开源 + 高频基线追踪）
+- [[motivation-pattern-comparison]] — 研究动机模式横向对比
+- [[narrative-pattern-comparison]] — 叙事模式横向对比
 
 ---
 

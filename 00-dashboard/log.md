@@ -233,3 +233,21 @@ Next steps:
   - MinerU 解析：30 篇新解析（1 篇已有解析）
   - 笔记级别：L2（标准阅读）
   - 处理方式：4 批并行 Agent 生成笔记
+
+---
+
+## [2026-06-01] refactor | 研究动机链与叙事分析结构迭代
+
+- Updated:
+  - `templates/paper-note-template.md` — 新增 §3.4 问题发现路径、§3.5 科学假设形成、§13 写作叙事与故事线分析
+  - `templates/claudian-prompts/01-ingest-paper.md` — 深度分析论文（CCF A/B 或 L3+）必须补充 §3.4/§3.5/§13
+  - `templates/claudian-prompts/02-update-knowledge-base.md` — 新增动机模式和叙事模式对比表输出要求
+  - `templates/claudian-prompts/05-quality-check.md` — 新增 5 项检查（问题发现路径、科学假设、叙事分析、对比表时效性）
+  - `00-dashboard/index.md` — 对比表数量 3→5，新增 motivation-pattern-comparison 和 narrative-pattern-comparison 链接
+- Added:
+  - `templates/claudian-prompts/07-motivation-narrative-analysis.md` — 研究动机链与全文叙事分析专用提示词
+  - `08-comparisons/motivation-pattern-comparison.md` — 研究动机模式横向对比表
+  - `08-comparisons/narrative-pattern-comparison.md` — 叙事模式横向对比表
+- Notes:
+  - 最小结构迭代：不删除任何文件，不批量重写已有笔记
+  - 试运行论文：Flowprint、Deep Fingerprinting、ET-BERT（3 篇代表性论文）

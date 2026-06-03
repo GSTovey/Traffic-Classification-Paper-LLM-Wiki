@@ -26,6 +26,16 @@
 
 请严格按照 `templates/paper-note-template.md` 的结构生成论文主笔记。
 
+### 深度分析论文的额外要求
+
+如果该论文满足以下任一条件，**必须补充 §3.4、§3.5 和 §13**（研究动机链 + 全文叙事分析）：
+
+- 论文发表在 CCF A/B 级会议或期刊（CCS、S&P、USENIX、NDSS、SIGCOMM、INFOCOM、TIFS、TDSC、TON、KDD、NeurIPS、AAAI、WWW 等）
+- 用户明确指定该论文需要深度分析（reading_level ≥ L3）
+- 论文是用户研究方向的核心论文
+
+对于不符合上述条件的论文（L1/L2 级），§3.4、§3.5 和 §13 为**可选**，可留空或简要填写。
+
 ## 额外要求
 
 处理完成后，请给出：
