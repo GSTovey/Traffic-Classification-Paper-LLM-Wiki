@@ -364,9 +364,9 @@ Next steps:
 ## [2026-06-09] fix | 全库断链修复（267 → 0）
 
 - Fixed:
-  - 213 条概念名 wikilinks 转为纯文本（13 篇论文笔记中的 `[[ET-BERT]]`、`[[YaTC]]`、`[[加密流量分类]]` 等）
+  - 213 条概念名 wikilinks 转为纯文本（13 篇论文笔记中的 ET-BERT、YaTC、加密流量分类 等）
   - 15 条跨论文引用文件名修正（CertTA、Low-quality training data、MirageFlow、Wedjat、ET-BERT venue typo、Holmes WF 等，8 个文件）
-  - 98 条知识层路径限定 wikilinks 去除路径前缀和 `.md` 后缀（`[[03-paper-notes/filename.md]]` → `[[filename]]`，13 个知识层页面）
+  - 98 条知识层路径限定 wikilinks 去除路径前缀和 `.md` 后缀（路径前缀去除 + 后缀去除，13 个知识层页面）
   - 13 个 dashboard 待扩展页面 wikilinks 转为纯文本（index.md + research-map.md）
   - 5 个 dashboard AGENTS.md 引用修复（log.md + quality-check-report.md + project-overview.md）
 - Updated:
@@ -375,3 +375,20 @@ Next steps:
   - 断链分三类：① 概念名 stubs（213 条，批量 Python 脚本转纯文本）② 跨论文引用文件名不匹配（15 条，Agent 逐一修正）③ 路径限定+.md 后缀链接（98 条，批量去除前缀和后缀）
   - 全库验证通过：03-paper-notes/（92 篇）、04-concepts/（9 个）、05-methods/（8 个）、06-tasks/（8 个）、07-surveys/（5 个）、08-comparisons/（5 个）、09-claims/（2 个）、00-dashboard/ — 全部 wikilinks 指向有效目标
   - 3 批并行处理（Python 批量脚本 + 2 个 Agent），总耗时约 5 分钟
+
+---
+
+## [2026-06-09] fix | 全库质量验证与补全
+
+- Fixed:
+  - 34 篇论文 frontmatter 补充 research_area/task/method 字段（25 篇转换为 inline 数组格式，9 篇已有 multi-line 格式）
+  - `00-dashboard/index.md` — Claims 计数修正 42→27
+  - `00-dashboard/project-overview.md` — Claims 计数修正 42→27
+  - `00-dashboard/log.md` — 5 条 wikilinks 转为纯文本（ET-BERT、YaTC、加密流量分类等）
+  - `00-dashboard/quality-check-report.md` — 全面更新至 2026-06-09 状态
+- Verified:
+  - reading-queue.md：101 行 = 9 important + 92 processed（9 篇核心论文在两个 section 中各出现一次，设计如此）
+  - open-source-registry.md：30 个已确认开源方法，数量正确
+  - 全库 92 篇论文均有 research_area/task/method 字段（100%）
+- Updated:
+  - `00-dashboard/quality-check-report.md` — 统计数据更新至 92 篇 / 40 篇深度 / 30 开源 / 0 断链

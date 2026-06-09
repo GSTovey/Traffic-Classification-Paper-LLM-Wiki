@@ -14,27 +14,13 @@ year: 2025
 venue: Journal of Parallel and Distributed Computing (JPDC)
 doi: unknown
 url: unknown
-pdf: "../00-inbox/PDFs/2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification.pdf"
-mineru_md: "../02-parsed-markdown/2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification.md"
+pdf: "00-inbox/PDFs/2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification.pdf"
+mineru_md: "02-parsed-markdown/2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification.md"
 status: processed
 reading_level: L2
-research_area:
-  - encrypted traffic classification
-  - continual learning
-  - machine unlearning
-  - distributed learning
-  - multimodal learning
-task:
-  - application classification
-  - continual learning with class changes
-method:
-  - Multimodal Feature Extraction
-  - Adaptive Relay-based Continual Learning (ARCL)
-  - Optimization Constraint-driven Parameter Discarding
-  - Novel Replay-based CL
-  - Distributed Learning
-  - SIF Weighted Word Vectors
-  - CNN Classifier
+research_area: ["加密流量分类", "持续学习", "机器遗忘", "分布式学习", "多模态学习"]
+task: ["应用分类", "类别变化下的持续学习"]
+method: ["Multimodal Feature Extraction", "Adaptive Relay-based Continual Learning (ARCL)", "Optimization Constraint-driven Parameter Discarding", "Replay-based CL", "Distributed Learning", "SIF Weighted Word Vectors", "CNN Classifier"]
 dataset:
   - MIRAGE2019
   - ISCX2016

@@ -18,21 +18,9 @@ pdf: "00-inbox/PDFs/2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scal
 mineru_md: "02-parsed-markdown/2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale.md"
 status: processed
 reading_level: L2
-research_area:
-  - website-fingerprinting
-  - traffic-classification
-  - privacy-attack
-task:
-  - webpage-fingerprinting
-  - multi-tab-identification
-  - fine-grained-traffic-classification
-method:
-  - metric-learning
-  - multi-label-classification
-  - data-augmentation
-  - proxy-based-loss
-  - sample-based-loss
-  - k-NN-classifier
+research_area: ["网站指纹识别", "流量分类", "隐私攻击"]
+task: ["网页指纹识别", "多标签识别", "细粒度流量分类"]
+method: ["metric-learning", "multi-label-classification", "data-augmentation", "proxy-based-loss", "sample-based-loss", "k-NN-classifier"]
 dataset:
   - Alexa-1000-webpages
   - unmonitored-9000-webpages

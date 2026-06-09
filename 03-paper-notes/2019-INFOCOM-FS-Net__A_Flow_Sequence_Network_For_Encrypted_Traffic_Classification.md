@@ -16,23 +16,13 @@ pdf: "00-inbox/PDFs/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_T
 mineru_md: "02-parsed-markdown/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.md"
 status: processed
 reading_level: L2
-research_area:
-  - encrypted-traffic-classification
-  - deep-learning
-  - traffic-classification
-task:
-  - encrypted-traffic-classification
-  - application-identification
-method:
-  - RNN
-  - GRU
-  - encoder-decoder
-  - reconstruction-mechanism
-  - end-to-end-learning
 dataset:
   - unknown
 code: "unknown"
 relevance: high
+research_area: ["加密流量分类", "深度学习"]
+task: ["加密流量分类", "应用识别"]
+method: ["RNN", "GRU", "encoder-decoder"]
 created: "2026-05-27"
 updated: "2026-05-29"
 ---

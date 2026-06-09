@@ -14,20 +14,9 @@ pdf: "00-inbox/PDFs/2024-CCS-Robust_and_reliable_early-stage_website_fingerprint
 mineru_md: "02-parsed-markdown/2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis.md"
 status: processed
 reading_level: L2
-research_area:
-  - website-fingerprinting
-  - traffic-classification
-  - privacy-attack
-task:
-  - website-fingerprinting
-  - early-stage-traffic-identification
-  - dark-web-detection
-method:
-  - supervised-contrastive-learning
-  - adaptive-data-augmentation
-  - spatial-temporal-distribution-analysis
-  - feature-attribution
-  - SHAP
+research_area: ["网站指纹识别", "流量分类", "隐私攻击"]
+task: ["网站指纹识别", "早期流量识别", "暗网检测"]
+method: ["supervised-contrastive-learning", "adaptive-data-augmentation", "spatial-temporal-distribution-analysis", "feature-attribution", "SHAP"]
 dataset:
   - Alexa-top-10k
   - dark-web-80

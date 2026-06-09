@@ -17,22 +17,9 @@ pdf: "00-inbox/PDFs/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Tr
 mineru_md: "02-parsed-markdown/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data.md"
 status: processed
 reading_level: L2
-research_area:
-  - traffic-representation-learning
-  - pre-training
-  - traffic-foundation-model
-task:
-  - traffic-classification
-  - protocol-understanding
-  - malware-detection
-  - website-fingerprinting
-method:
-  - Transformer
-  - BERT
-  - masked-burst-modeling
-  - SODF
-  - RIFA
-  - pre-training-finetuning
+research_area: ["流量表示学习", "预训练", "流量基础模型"]
+task: ["流量分类", "协议理解", "恶意软件检测", "网站指纹"]
+method: ["Transformer", "BERT", "masked burst modeling", "SODF", "RIFA", "pre-training & fine-tuning"]
 dataset:
   - ISCX-VPN-Service
   - Cross-Platform-Android

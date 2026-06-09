@@ -17,15 +17,9 @@ pdf: "00-inbox/PDFs/2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_
 mineru_md: "02-parsed-markdown/2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation.md"
 status: processed
 reading_level: L2
-research_area:
-  - website-fingerprinting
-  - traffic-analysis
-  - adversarial-robustness
-task:
-  - website-fingerprinting
-method:
-  - CNN
-  - adversarial-training
+research_area: ["网站指纹识别", "流量分析", "对抗鲁棒性"]
+task: ["网站指纹识别"]
+method: ["CNN", "adversarial-training"]
 dataset: []
 code: "https://github.com/robust-fingerprinting/RF"
 relevance: high

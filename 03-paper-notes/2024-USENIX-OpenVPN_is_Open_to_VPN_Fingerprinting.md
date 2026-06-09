@@ -14,8 +14,8 @@ year: 2022
 venue: USENIX Security
 doi: unknown
 url: https://www.usenix.org/conference/usenixsecurity22/presentation/xue-diwen
-pdf: "../00-inbox/PDFs/2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting.pdf"
-mineru_md: "../02-parsed-markdown/2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting.md"
+pdf: "00-inbox/PDFs/2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting.pdf"
+mineru_md: "02-parsed-markdown/2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting.md"
 status: processed
 reading_level: L2
 research_area:

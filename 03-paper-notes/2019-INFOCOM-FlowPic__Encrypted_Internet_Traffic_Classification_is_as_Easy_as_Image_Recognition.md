@@ -9,29 +9,19 @@ year: 2019
 venue: IEEE INFOCOM
 doi: unknown
 url: unknown
-pdf: "../00-inbox/PDFs/2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition.pdf"
-mineru_md: "../02-parsed-markdown/2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition.md"
+pdf: "00-inbox/PDFs/2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition.pdf"
+mineru_md: "02-parsed-markdown/2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition.md"
 status: processed
 reading_level: L2
-research_area:
-  - encrypted traffic classification
-  - traffic categorization
-  - image-based traffic analysis
-task:
-  - traffic categorization
-  - application identification
-  - encryption technique classification
-method:
-  - CNN
-  - image transformation
-  - FlowPic
-  - LeNet-5
 dataset:
   - ISCX VPN-nonVPN
   - ISCX Tor-nonTor
   - TAU (self-collected)
 code: unknown
 relevance: high
+research_area: ["加密流量分类", "流量图像化", "深度学习"]
+task: ["流量分类", "应用识别", "加密方式识别"]
+method: ["CNN", "FlowPic", "LeNet-5"]
 created: 2026-06-09
 updated: 2026-06-09
 ---

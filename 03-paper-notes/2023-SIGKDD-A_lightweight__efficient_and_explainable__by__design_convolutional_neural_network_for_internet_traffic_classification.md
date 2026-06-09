@@ -14,16 +14,9 @@ pdf: "00-inbox/PDFs/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__de
 mineru_md: "02-parsed-markdown/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.md"
 status: processed
 reading_level: L2
-research_area:
-  - traffic-classification
-  - explainable-AI
-  - lightweight-CNN
-task:
-  - traffic-classification
-method:
-  - CNN
-  - prototype-network
-  - ResNet
+research_area: ["流量分类", "可解释AI", "轻量级CNN"]
+task: ["流量分类"]
+method: ["CNN", "prototype-network", "ResNet"]
 dataset: []
 code: "https://github.com/XAIseries/LEXNet"
 relevance: high

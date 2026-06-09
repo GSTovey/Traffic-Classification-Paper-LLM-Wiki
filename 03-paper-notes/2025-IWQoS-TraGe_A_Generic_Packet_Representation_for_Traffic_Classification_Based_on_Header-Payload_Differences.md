@@ -13,24 +13,13 @@ year: 2025
 venue: IWQoS
 doi: unknown
 url: unknown
-pdf: "../00-inbox/PDFs/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences.pdf"
-mineru_md: "../02-parsed-markdown/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences.md"
+pdf: "00-inbox/PDFs/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences.pdf"
+mineru_md: "02-parsed-markdown/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences.md"
 status: processed
 reading_level: L2
-research_area:
-  - encrypted traffic classification
-  - pre-trained model
-  - generic packet representation
-task:
-  - application classification
-  - service identification
-method:
-  - Pre-training
-  - Masked Language Modeling
-  - Field-level Masking
-  - Dynamic Masking
-  - Transformer
-  - BERT
+research_area: ["加密流量分类", "预训练模型", "通用数据包表示"]
+task: ["应用分类", "服务识别"]
+method: ["Pre-training", "Masked Language Modeling", "Field-level Masking", "Dynamic Masking", "Transformer", "BERT"]
 dataset:
   - ISCX-VPN
   - USTC-TFC

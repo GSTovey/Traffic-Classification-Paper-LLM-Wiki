@@ -11,25 +11,13 @@ year: 2023
 venue: IEEE TIFS
 doi: "10.1109/TIFS.2023.3342607"
 url: unknown
-pdf: "../00-inbox/PDFs/2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting.pdf"
-mineru_md: "../02-parsed-markdown/2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting.md"
+pdf: "00-inbox/PDFs/2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting.pdf"
+mineru_md: "02-parsed-markdown/2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting.md"
 status: processed
 reading_level: L2
-research_area:
-  - website fingerprinting
-  - Tor anonymity
-  - graph neural networks
-  - traffic analysis
-task:
-  - website fingerprinting
-  - DApp fingerprinting
-  - reload traffic analysis
-method:
-  - GNN
-  - Graph Fingerprinting Node Classification (GFNC)
-  - Graph Fingerprinting Graph Classification (GFGC)
-  - CTDNE
-  - CNN
+research_area: ["网站指纹识别", "Tor匿名", "图神经网络", "流量分析"]
+task: ["网站指纹识别", "DApp指纹识别", "重载流量分析"]
+method: ["GNN", "Graph Fingerprinting Node Classification (GFNC)", "Graph Fingerprinting Graph Classification (GFGC)", "CTDNE", "CNN"]
 dataset:
   - NORMAL_TOR_NOREFRESH
   - NORMAL_TOR_REFRESH

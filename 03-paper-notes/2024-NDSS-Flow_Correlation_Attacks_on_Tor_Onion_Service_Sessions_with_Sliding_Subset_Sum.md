@@ -17,8 +17,8 @@ year: 2024
 venue: NDSS
 doi: unknown
 url: unknown
-pdf: "../00-inbox/PDFs/2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum.pdf"
-mineru_md: "../02-parsed-markdown/2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum.md"
+pdf: "00-inbox/PDFs/2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum.pdf"
+mineru_md: "02-parsed-markdown/2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum.md"
 status: processed
 reading_level: L2
 research_area:

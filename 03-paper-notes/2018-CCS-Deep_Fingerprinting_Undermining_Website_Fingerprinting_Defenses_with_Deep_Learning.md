@@ -15,21 +15,14 @@ pdf: "00-inbox/PDFs/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprint
 mineru_md: "02-parsed-markdown/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning.md"
 status: processed
 reading_level: L2
-research_area:
-  - Website Fingerprinting
-  - Traffic Analysis
-  - Privacy & Anonymity
-task:
-  - Website Classification
-  - Tor Traffic Analysis
-method:
-  - CNN
-  - Deep Learning
 dataset:
   - "Closed-world: 95 sites, 1000 traces/site (Alexa top 100)"
   - "Open-world: 40,716 traces (Alexa top 50,000)"
 code: "https://github.com/deep-fingerprinting/df"
 relevance: high
+research_area: ["网站指纹", "流量分析", "隐私与匿名"]
+task: ["网站指纹识别", "Tor流量分析"]
+method: ["CNN", "deep learning"]
 created: "2026-05-27"
 updated: "2026-05-27"
 ---

@@ -14,23 +14,14 @@ pdf: "00-inbox/PDFs/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.pdf"
 mineru_md: "02-parsed-markdown/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.md"
 status: processed
 reading_level: L2
-research_area:
-  - encrypted-traffic-analysis
-  - flow-separation
-  - traffic-deanonymization
-task:
-  - flow-separation
-  - packet-attribution
-method:
-  - LSTM
-  - random-projection
-  - anomaly-detection
-  - Viterbi-search
 dataset:
   - synthetic-flows
   - real-network-traces
 code: "https://gitlab.tuwien.ac.at/e389-cnpub/separatingflows/"
 relevance: high
+research_area: ["加密流量分析", "流分离", "流量去匿名化"]
+task: ["流分离", "数据包归属"]
+method: ["LSTM", "random projection", "Viterbi search"]
 created: "2026-05-27"
 updated: "2026-05-29"
 ---

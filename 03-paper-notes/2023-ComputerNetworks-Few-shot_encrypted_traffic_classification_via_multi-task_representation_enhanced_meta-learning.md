@@ -18,17 +18,9 @@ pdf: "00-inbox/PDFs/2023-ComputerNetworks-Few-shot_encrypted_traffic_classificat
 mineru_md: "02-parsed-markdown/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.md"
 status: processed
 reading_level: L2
-research_area:
-  - encrypted-traffic-classification
-  - meta-learning
-  - few-shot-learning
-task:
-  - traffic-classification
-method:
-  - meta-learning
-  - deep-learning
-  - unsupervised-learning
-  - CNN
+research_area: ["加密流量分类", "元学习", "少样本学习"]
+task: ["流量分类"]
+method: ["meta-learning", "deep-learning", "unsupervised-learning", "CNN"]
 dataset: []
 code: "unknown"
 relevance: high

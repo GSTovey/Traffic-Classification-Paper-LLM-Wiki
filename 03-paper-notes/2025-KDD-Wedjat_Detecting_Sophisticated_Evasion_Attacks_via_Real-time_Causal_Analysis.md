@@ -16,20 +16,9 @@ pdf: "00-inbox/PDFs/2025-KDD-Wedjat_Detecting_Sophisticated_Evasion_Attacks_via_
 mineru_md: "02-parsed-markdown/2025-KDD-Wedjat_Detecting_Sophisticated_Evasion_Attacks_via_Real-time_Causal_Analysis.md"
 status: processed
 reading_level: L2
-research_area:
-  - malicious-traffic-detection
-  - encrypted-traffic-analysis
-  - evasion-attack-detection
-task:
-  - malicious-traffic-detection
-  - evasion-attack-detection
-  - realtime-detection
-method:
-  - causal-network
-  - belief-propagation
-  - packet-embedding
-  - DAG
-  - unsupervised-learning
+research_area: ["恶意流量检测", "加密流量分析", "逃逸攻击检测"]
+task: ["恶意流量检测", "逃逸攻击检测", "实时检测"]
+method: ["causal network", "belief propagation", "packet embedding", "DAG", "unsupervised learning"]
 dataset:
   - 13-million-flows
   - real-world-enterprise

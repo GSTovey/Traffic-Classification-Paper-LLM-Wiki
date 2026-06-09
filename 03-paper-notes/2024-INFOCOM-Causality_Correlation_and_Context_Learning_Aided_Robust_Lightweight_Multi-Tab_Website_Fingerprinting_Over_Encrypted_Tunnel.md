@@ -17,17 +17,9 @@ pdf: "00-inbox/PDFs/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aide
 mineru_md: "02-parsed-markdown/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.md"
 status: processed
 reading_level: L2
-research_area:
-  - website-fingerprinting
-  - multi-tab
-  - encrypted-traffic
-  - robustness
-task:
-  - website-fingerprinting
-method:
-  - causality-learning
-  - context-learning
-  - random-forest
+research_area: ["网站指纹识别", "多标签", "加密流量", "鲁棒性"]
+task: ["网站指纹识别"]
+method: ["causality-learning", "context-learning", "random-forest"]
 dataset: []
 code: "https://github.com/chenxiailian/robustweb"
 relevance: high

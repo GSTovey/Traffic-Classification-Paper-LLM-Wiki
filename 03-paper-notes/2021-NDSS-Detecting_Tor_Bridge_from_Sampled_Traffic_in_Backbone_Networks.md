@@ -11,29 +11,18 @@ year: 2021
 venue: NDSS
 doi: unknown
 url: unknown
-pdf: "../00-inbox/PDFs/2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks.pdf"
-mineru_md: "../02-parsed-markdown/2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks.md"
+pdf: "00-inbox/PDFs/2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks.pdf"
+mineru_md: "02-parsed-markdown/2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks.md"
 status: processed
 reading_level: L2
-research_area:
-  - Tor traffic detection
-  - bridge detection
-  - traffic sampling
-  - network security
-task:
-  - Tor bridge detection
-  - obfs4 bridge identification
-  - sampled traffic analysis
-method:
-  - Nested Count Bloom Filter (NCBF)
-  - traffic sampling
-  - random forest
-  - feature engineering
 dataset:
   - MAWI backbone traffic
   - self-collected Tor obfs4 traffic
 code: unknown
 relevance: high
+research_area: ["Tor流量检测", "流量采样", "网络安全"]
+task: ["Tor bridge检测", "obfs4 bridge识别", "采样流量分析"]
+method: ["Nested Count Bloom Filter", "random forest", "traffic sampling"]
 created: 2026-06-09
 updated: 2026-06-09
 ---

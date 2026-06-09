@@ -13,8 +13,8 @@ year: 2024
 venue: arXiv
 doi: unknown
 url: https://arxiv.org/abs/2405.xxxxx
-pdf: "../00-inbox/PDFs/2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba.pdf"
-mineru_md: "../02-parsed-markdown/2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba.md"
+pdf: "00-inbox/PDFs/2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba.pdf"
+mineru_md: "02-parsed-markdown/2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba.md"
 status: processed
 reading_level: L2
 research_area:

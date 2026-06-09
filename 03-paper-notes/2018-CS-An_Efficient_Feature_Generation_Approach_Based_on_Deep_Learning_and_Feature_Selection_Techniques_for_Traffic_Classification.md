@@ -16,26 +16,13 @@ pdf: "00-inbox/PDFs/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_De
 mineru_md: "02-parsed-markdown/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.md"
 status: processed
 reading_level: L2
-research_area:
-  - traffic-classification
-  - feature-generation
-  - feature-selection
-  - deep-learning
-task:
-  - traffic-classification
-  - feature-optimization
-  - multi-class-imbalance-handling
-  - concept-drift-adaptation
-method:
-  - DBN
-  - symmetric-uncertainty
-  - weighted-symmetric-uncertainty
-  - feature-generation
-  - dimensionality-reduction
 dataset:
   - unknown
 code: "unknown"
 relevance: high
+research_area: ["流量分类", "特征工程", "特征选择", "深度学习"]
+task: ["流量分类", "特征优化"]
+method: ["DBN", "symmetric uncertainty", "feature generation", "dimensionality reduction"]
 created: "2026-05-27"
 updated: "2026-05-29"
 ---

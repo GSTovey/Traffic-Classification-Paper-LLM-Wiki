@@ -14,28 +14,13 @@ year: 2025
 venue: IEEE Transactions on Information Forensics and Security (TIFS)
 doi: "10.1109/TIFS.2025.3529316"
 url: unknown
-pdf: "../00-inbox/PDFs/2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding.pdf"
-mineru_md: "../02-parsed-markdown/2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding.md"
+pdf: "00-inbox/PDFs/2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding.pdf"
+mineru_md: "02-parsed-markdown/2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding.md"
 status: processed
 reading_level: L2
-research_area:
-  - encrypted traffic classification
-  - pre-trained language model
-  - prompt learning
-  - word sense aggregating
-  - semantic separating
-task:
-  - VPN classification
-  - application classification
-  - malware detection
-  - IoT attack detection
-  - Tor service classification
-method:
-  - Word Sense Aggregator (WSA)
-  - Category-constrained Semantic Separator (CSS)
-  - Task-aware Prompts
-  - BERT Encoder
-  - Parameter-free Aggregation
+research_area: ["加密流量分类", "预训练语言模型", "提示学习", "词义聚合", "语义分离"]
+task: ["VPN分类", "应用分类", "恶意软件检测", "IoT攻击检测", "Tor服务分类"]
+method: ["Word Sense Aggregator (WSA)", "Category-constrained Semantic Separator (CSS)", "Task-aware Prompts", "BERT Encoder", "Parameter-free Aggregation"]
 dataset:
   - ISCXVPN
   - USTC-TFC

@@ -12,8 +12,8 @@ year: 2024
 venue: NDSS
 doi: unknown
 url: https://www.ndss-symposium.org/
-pdf: "../00-inbox/PDFs/2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor.pdf"
-mineru_md: "../02-parsed-markdown/2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor.md"
+pdf: "00-inbox/PDFs/2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor.pdf"
+mineru_md: "02-parsed-markdown/2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor.md"
 status: processed
 reading_level: L2
 research_area:

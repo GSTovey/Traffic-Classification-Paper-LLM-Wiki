@@ -11,8 +11,8 @@ year: 2025
 venue: AAAI
 doi: unknown
 url: unknown
-pdf: "../00-inbox/PDFs/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification.pdf"
-mineru_md: "../02-parsed-markdown/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification.md"
+pdf: "00-inbox/PDFs/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification.pdf"
+mineru_md: "02-parsed-markdown/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification.md"
 status: processed
 reading_level: L2
 research_area:

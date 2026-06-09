@@ -18,18 +18,9 @@ pdf: "00-inbox/PDFs/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencode
 mineru_md: "02-parsed-markdown/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.md"
 status: processed
 reading_level: L2
-research_area:
-  - traffic-classification
-  - self-supervised-learning
-  - representation-learning
-task:
-  - traffic-classification
-  - encrypted-traffic-classification
-method:
-  - masked-autoencoder
-  - Transformer
-  - multi-level-flow-representation
-  - self-supervised-learning
+research_area: ["流量分类", "自监督学习", "表示学习"]
+task: ["流量分类", "加密流量分类"]
+method: ["masked-autoencoder", "Transformer", "multi-level-flow-representation", "self-supervised-learning"]
 dataset:
   - USTC-TFC2016
   - ISCX-VPN-Service

@@ -18,22 +18,13 @@ pdf: "00-inbox/PDFs/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimensi
 mineru_md: "02-parsed-markdown/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.md"
 status: processed
 reading_level: L2
-research_area:
-  - HTTPS-tunnel-detection
-  - encrypted-traffic-analysis
-  - network-security
-task:
-  - tunnel-detection
-  - traffic-classification
-method:
-  - burst-traffic-filtering
-  - heterogeneous-feature-extraction
-  - multi-dimension-voting
-  - machine-learning
 dataset:
   - unknown
 code: "unknown"
 relevance: high
+research_area: ["HTTPS隧道检测", "加密流量分析", "网络安全"]
+task: ["隧道检测", "流量分类"]
+method: ["burst traffic filtering", "multi-dimension voting", "machine learning"]
 created: "2026-05-27"
 updated: "2026-05-29"
 ---

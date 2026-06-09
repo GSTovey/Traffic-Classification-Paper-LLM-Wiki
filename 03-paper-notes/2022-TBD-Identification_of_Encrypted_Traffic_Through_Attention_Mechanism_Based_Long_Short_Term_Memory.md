@@ -17,22 +17,13 @@ pdf: "00-inbox/PDFs/2022-TBD-Identification_of_Encrypted_Traffic_Through_Attenti
 mineru_md: "02-parsed-markdown/2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory.md"
 status: processed
 reading_level: L2
-research_area:
-  - encrypted-traffic-classification
-  - attention-mechanism
-  - deep-learning
-task:
-  - encrypted-traffic-identification
-  - traffic-classification
-method:
-  - attention-based-LSTM
-  - hierarchical-attention-network
-  - Bi-LSTM
-  - cost-sensitive-learning
 dataset:
   - ISCX-VPN-NonVPN
 code: "unknown"
 relevance: high
+research_area: ["加密流量分类", "注意力机制", "深度学习"]
+task: ["加密流量识别", "流量分类"]
+method: ["attention-based LSTM", "Bi-LSTM", "cost-sensitive learning"]
 created: "2026-05-27"
 updated: "2026-05-29"
 ---

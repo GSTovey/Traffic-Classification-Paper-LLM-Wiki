@@ -17,20 +17,9 @@ pdf: "00-inbox/PDFs/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_w
 mineru_md: "02-parsed-markdown/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.md"
 status: processed
 reading_level: L2
-research_area:
-  - encrypted-traffic-classification
-  - pre-training
-  - representation-learning
-task:
-  - encrypted-traffic-classification
-  - datagram-representation
-method:
-  - Transformer
-  - BERT
-  - masked-BURST-model
-  - same-origin-BURST-prediction
-  - self-supervised-learning
-  - fine-tuning
+research_area: ["加密流量分类", "预训练", "表示学习"]
+task: ["加密流量分类", "数据报表示"]
+method: ["Transformer", "BERT", "masked-BURST-model", "same-origin-BURST-prediction", "self-supervised-learning", "fine-tuning"]
 dataset:
   - ISCX-VPN-Service
   - Cross-Platform-Android

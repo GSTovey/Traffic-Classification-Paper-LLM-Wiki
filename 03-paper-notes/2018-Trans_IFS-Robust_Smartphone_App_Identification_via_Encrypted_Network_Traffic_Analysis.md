@@ -15,25 +15,13 @@ pdf: "00-inbox/PDFs/2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encr
 mineru_md: "02-parsed-markdown/2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis.md"
 status: processed
 reading_level: L2
-research_area:
-  - smartphone-app-identification
-  - encrypted-traffic-analysis
-  - traffic-fingerprinting
-  - network-security
-task:
-  - app-identification
-  - traffic-fingerprinting
-  - encrypted-traffic-classification
-method:
-  - machine-learning
-  - side-channel-analysis
-  - reinforcement-learning
-  - ambiguity-detection
-  - classification-validation
 dataset:
   - unknown
 code: "unknown"
 relevance: high
+research_area: ["移动应用识别", "加密流量分析", "流量指纹"]
+task: ["应用识别", "加密流量分类"]
+method: ["machine learning", "reinforcement learning", "side-channel analysis"]
 created: "2026-05-27"
 updated: "2026-05-29"
 ---

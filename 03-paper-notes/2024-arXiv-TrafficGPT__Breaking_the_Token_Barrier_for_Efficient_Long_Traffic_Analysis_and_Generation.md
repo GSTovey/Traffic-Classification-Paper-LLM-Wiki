@@ -10,8 +10,8 @@ year: 2024
 venue: arXiv
 doi: unknown
 url: https://arxiv.org/abs/2403.05822
-pdf: "../00-inbox/PDFs/2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation.pdf"
-mineru_md: "../02-parsed-markdown/2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation.md"
+pdf: "00-inbox/PDFs/2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation.pdf"
+mineru_md: "02-parsed-markdown/2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation.md"
 status: processed
 reading_level: L2
 research_area:

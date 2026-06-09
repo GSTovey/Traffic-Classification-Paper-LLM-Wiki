@@ -19,21 +19,9 @@ pdf: "00-inbox/PDFs/2025-NIPS-FlowRefiner__A_Robust_Traffic_Classification_Frame
 mineru_md: "02-parsed-markdown/2025-NIPS-FlowRefiner__A_Robust_Traffic_Classification_Framework_against_Label_Noise.md"
 status: processed
 reading_level: L2
-research_area:
-  - traffic-classification
-  - robust-machine-learning
-  - label-noise
-task:
-  - traffic-classification
-  - label-noise-detection
-  - label-correction
-method:
-  - pre-training
-  - MAE
-  - Transformer
-  - K-means-clustering
-  - confidence-guided-correction
-  - cross-granularity-classification
+research_area: ["流量分类", "鲁棒机器学习", "标签噪声"]
+task: ["流量分类", "标签噪声检测", "标签纠正"]
+method: ["pre-training", "MAE", "Transformer", "K-means clustering", "confidence-guided correction", "cross-granularity classification"]
 dataset:
   - ISCXVPN
   - CrossPlatform
