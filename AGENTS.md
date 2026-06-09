@@ -250,6 +250,7 @@ multi-agent-system.md
 3. 如果论文重要，再使用：
    - `templates/claudian-prompts/03-deep-method-analysis.md`
    - `templates/claudian-prompts/04-reproduction-analysis.md`
+   - `templates/claudian-prompts/07-motivation-narrative-analysis.md`
 
 当用户要求检查知识库时，使用：
 
@@ -258,6 +259,10 @@ multi-agent-system.md
 当用户要求对论文进行研究动机链分析或全文叙事分析时，使用：
 
 - `templates/claudian-prompts/07-motivation-narrative-analysis.md`
+
+当用户要求一键入库新论文时，使用：
+
+- `templates/claudian-prompts/06-ingest-pipeline.md`
 
 ---
 
