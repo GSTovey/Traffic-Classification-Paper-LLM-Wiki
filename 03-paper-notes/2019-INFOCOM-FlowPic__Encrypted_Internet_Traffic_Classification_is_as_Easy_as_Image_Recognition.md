@@ -151,9 +151,34 @@ Identifying the type of a network flow or a specific application has many advant
 
 ### 4.4 公式、算法和机制解释
 
-- **FlowPic 构造**：X 轴为归一化到达时间（0-1500），Y 轴为包大小（1-1500 字节，超过 MTU 的包被丢弃）。每个 cell 记录对应时间间隔和大小范围内到达的包数量。
-- **训练细节**：使用 Adam 优化器，batch size 128，categorical cross-entropy 损失函数，Dropout（CONV2: 0.25, FC: 0.5），40 个 epoch。
-- **数据增强**：将每个单向流分割为 60 秒时间块，增加训练样本数。
+**FlowPic 构造公式：**
+
+给定一个单向流的包记录序列 $\{(s_i, t_i)\}_{i=1}^{N}$，其中 $s_i$ 是包大小，$t_i$ 是到达时间。FlowPic 是一个二维直方图 $H \in \mathbb{R}^{1500 \times 1500}$：
+
+$$H[x, y] = \sum_{i=1}^{N} \mathbb{1}[\lfloor \frac{t_i - t_1}{t_N - t_1} \times 1500 \rfloor = x] \cdot \mathbb{1}[\lfloor s_i \rfloor = y]$$
+
+其中 $x \in [0, 1499]$，$y \in [1, 1500]$。超过 1500 字节（Ethernet MTU）的包被丢弃（<5%）。时间归一化将 60 秒映射到 [0, 1500]。
+
+**卷积操作：**
+
+$$\text{CONV}(X)_{i,j} = \sum_{m=0}^{k_h-1} \sum_{n=0}^{k_w-1} W_{m,n} \cdot X_{i \cdot s + m, j \cdot s + n} + b$$
+
+CONV1: $k_h = k_w = 10$，stride $s = 5$，10 个滤波器。输出尺寸：$\lfloor \frac{1500 - 10}{5} + 1 \rfloor = 299$（论文报告 300x300，含 padding）。CONV2: 同样参数，20 个滤波器。
+
+**Categorical Cross-Entropy Loss：**
+
+$$L = -\frac{1}{N} \sum_{i=1}^{N} \sum_{c=1}^{C} y_{i,c} \log(\hat{y}_{i,c})$$
+
+**Adam 优化器更新规则：**
+
+$$m_t = \beta_1 m_{t-1} + (1-\beta_1) g_t, \quad v_t = \beta_2 v_{t-1} + (1-\beta_2) g_t^2$$
+$$\hat{m}_t = \frac{m_t}{1-\beta_1^t}, \quad \hat{v}_t = \frac{v_t}{1-\beta_2^t}, \quad \theta_t = \theta_{t-1} - \alpha \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}$$
+
+使用默认参数 $\beta_1=0.9, \beta_2=0.999, \epsilon=10^{-8}$。
+
+**Dropout：** CONV2 后 $p=0.25$，FC 后 $p=0.5$。训练时随机置零，测试时乘以保留概率。
+
+**数据增强：** 将每个单向流按 60 秒分割为时间块（session blocks），块大小对精度影响仅 1.25%（15/30/60/120 秒对比）。
 
 ### 4.5 方法优势
 
@@ -183,9 +208,11 @@ Identifying the type of a network flow or a specific application has many advant
 
 | 创新点 | 具体内容 | 贡献度 | 是否可迁移 |
 |---|---|---|---|
-| 流量图像化 | 将网络流的包大小和到达时间转化为二维直方图图像 | 高 | 是 |
-| 通用 CNN 架构 | 同一架构适用于流量分类、应用识别、加密方式分类等多种任务 | 中 | 是 |
-| 跨加密泛化 | 在 Non-VPN 上训练后可分类 VPN 流量 | 中 | 是 |
+| 流量图像化（FlowPic） | 将网络流的包大小和到达时间转化为 1500x1500 二维直方图图像，首次将流量分类完全转化为图像分类问题 | 高 | 是 — 可迁移到恶意流量检测、IoT 识别等 |
+| 通用 CNN 架构 | 同一 LeNet-5 架构适用于流量分类、应用识别、加密方式分类等多种任务，无针对性调整 | 中 | 是 — 证明了方法的通用性 |
+| 跨加密泛化 | 在 Non-VPN 上训练后可分类 VPN 流量（78.9%-99.4%），证明 FlowPic 捕获的是流量内在特征而非加密特征 | 高 | 是 — 为零样本加密迁移提供基础 |
+| 新应用泛化 | 排除 Vimeo/YouTube 训练后仍能 83.1% 正确分类，证明方法不依赖特定应用特征 | 高 | 是 — 为开放世界场景提供信心 |
+| 单向流短窗口 | 仅使用单向流的 60 秒时间块，无需完整双向会话 | 中 | 是 — 适合实时分类 |
 
 ### 5.3 适用场景
 
@@ -196,12 +223,18 @@ Identifying the type of a network flow or a specific application has many advant
 
 ### 5.4 方法对比表
 
-| 方法 | 优点 | 缺点 | 本文改进点 |
-|---|---|---|---|
-| 手工特征 + SVM/KNN | 可解释性强 | 依赖领域知识，特征选择困难 | 用 CNN 自动学习特征 |
-| Payload-based (DPI) | 精度高 | 无法处理加密流量，隐私侵入 | 仅使用元数据 |
-| PSD-based (Qin et al.) | 无需 payload | 仅使用一维信息 | 扩展为二维直方图 |
-| RNN+CNN (Lopez-Martin) | 端到端 | 依赖端口信息 | 不依赖端口 |
+| 方法 | 分类器 | 特征类型 | Non-VPN Acc. | VPN Acc. | Tor Acc. | 应用识别 | 隐私保护 |
+|---|---|---|---|---|---|---|---|
+| Gil et al. | C4.5/RF | 时间统计特征 | 84.0% | 89.0% | 84.3% | - | 是 |
+| Wang et al. | 1D-CNN | payload bytes | 83.0% | 98.6% | - | - | 否 |
+| Yamansavascilar et al. | k-NN | 111 flow features | - | - | - | 93.9% | 是 |
+| Lopez-Martin et al. | RNN+CNN | 6 features/packet | - | - | - | 95% (w/ port) | 部分 |
+| **FlowPic** | **LeNet-5 CNN** | **2D 直方图（size+time）** | **85.0%** | **98.4%** | **67.8%** | **99.7%** | **是** |
+
+**关键对比发现：**
+- FlowPic 在应用识别上大幅领先（99.7% vs 93.9%），且不依赖端口信息
+- VPN 分类上 FlowPic（98.4%）与 Wang et al.（98.6%）相当，但 Wang 使用 payload 数据
+- Tor 分类是 FlowPic 的弱项（67.8%），低于 Gil et al.（84.3%），因 Tor 加密显著改变流量模式
 
 ---
 
@@ -256,6 +289,48 @@ Identifying the type of a network flow or a specific application has many advant
 - Tor 流量分类精度较低（67.8%），因 Tor 的加密显著改变了流量模式
 - 仅使用 LeNet-5 架构，未探索更先进的 CNN 架构
 - 数据集规模有限，类别数量较少
+
+### 6.8 消融实验分析
+
+FlowPic 论文未设置传统的逐组件消融实验，但通过多维度实验提供了等效的消融证据：
+
+**1. 时间块大小消融（§III-B）**
+
+| 块大小 | 平均准确率差异 |
+|--------|---------------|
+| 15 秒 | 基准 ±1.25% |
+| 30 秒 | 与 60 秒差异 <1% |
+| 60 秒 | 选定值 |
+| 120 秒 | 与 60 秒差异 <1% |
+
+**关键发现**：块大小对精度影响极小（仅 1.25%），说明 FlowPic 的特征表示对时间窗口不敏感。
+
+**2. 跨加密方式消融（Table IV 对角线 vs 非对角线）**
+
+| 训练/测试 | Non-VPN | VPN | Tor |
+|-----------|---------|-----|-----|
+| Non-VPN→Non-VPN | 97.0% (avg) | 92.7% (avg) | 64.9% (avg) |
+| VPN→VPN | 71.7% (avg) | 99.7% (avg) | 58.0% (avg) |
+| Tor→Tor | 66.5% (avg) | 62.6% (avg) | 85.7% (avg) |
+
+**关键发现**：Non-VPN 训练后分类 VPN 效果好（92.7%），但分类 Tor 效果差（64.9%）。Tor 的加密模式与其他两种显著不同。
+
+**3. 新应用泛化消融（§VI-D）**
+
+| 排除应用 | 测试集 | 准确率 | 分析 |
+|----------|--------|--------|------|
+| Vimeo+YouTube | Video test | 83.1% | Vimeo/YouTube 的 FlowPic 模式独特 |
+| Facebook | Video test | 99.9% | Facebook 与 Google Hangouts/Skype 模式相似 |
+| Facebook | VoIP test | 96.3% | VoIP 类别内在特征稳定 |
+
+**关键发现**：FlowPic 捕获的是流量类别的内在行为特征，而非特定应用的表面特征。当排除的应用模式独特时（Vimeo/YouTube），精度下降但仍合理。
+
+**4. 架构复杂度消融**
+
+FlowPic 使用最简单的 LeNet-5 风格架构（仅 2 层 Conv），但已实现 99.7% 应用识别准确率。这说明：
+- 流量图像化（FlowPic 构造）是核心贡献，而非复杂的网络架构
+- 更复杂的架构（如 VGG/ResNet）可能进一步提升 Tor 分类精度
+- 论文未尝试优化架构，这是明确的未来工作方向
 
 ---
 
@@ -317,6 +392,10 @@ Identifying the type of a network flow or a specific application has many advant
 
 ## 9. Obsidian 知识链接
 
+### 跨论文关联
+
+- [[2022-WWWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification]] — ET-BERT 使用完全不同的表示范式（tokenized datagram sequences + Transformer），与 FlowPic 的图像化方法形成对比，代表了流量表示的两个极端
+
 ### 9.1 相关概念
 
 - [[encrypted traffic classification]]
@@ -352,13 +431,23 @@ Identifying the type of a network flow or a specific application has many advant
 
 ## 10. 证据记录
 
-| 关键观点 | 论文依据 | 位置 |
-|---|---|---|
-| FlowPic 可以捕获流量类别的内在特征 | 排除 Vimeo/YouTube 后仍能 83.1% 正确分类 | §VI-D |
-| VPN 流量的 FlowPic 与 Non-VPN 显著不同 | 混淆矩阵显示 Tor 与 Non-VPN/VPN 差异大 | §VI-C |
-| 时间块大小对精度影响不大 | 15/30/60/120 秒的平均精度差异仅 1.25% | §III-B |
-| Browsing 与 Chat 容易混淆 | 混淆矩阵显示 Browsing 主要被误分类为 Chat | §VI-C |
-| 同一 CNN 架构适用于所有子问题 | 所有实验使用完全相同的架构 | §V-B |
+| 编号 | 关键观点 | 论文依据 | 位置 |
+|---|---|---|---|
+| E1 | FlowPic 可以捕获流量类别的内在特征 | 排除 Vimeo/YouTube 后仍能 83.1% 正确分类 | §VI-D |
+| E2 | VPN 流量的 FlowPic 与 Non-VPN 显著不同 | 混淆矩阵显示 Tor 与 Non-VPN/VPN 差异大 | §VI-C, Figure 4 |
+| E3 | 时间块大小对精度影响不大 | 15/30/60/120 秒的平均精度差异仅 1.25% | §III-B |
+| E4 | Browsing 与 Chat 容易混淆 | 混淆矩阵显示 Browsing 主要被误分类为 Chat（72.2%） | §VI-C, Figure 4a |
+| E5 | 同一 CNN 架构适用于所有子问题 | 所有实验使用完全相同的架构，无针对性调整 | §V-B |
+| E6 | VPN Class vs All 平均准确率 99.7% | 所有 VPN 类别的对角线值平均 | Table IV |
+| E7 | 应用识别准确率 99.7%（10 类 VoIP+Video） | 混淆矩阵几乎完全分离 | §VI-F, Figure 5 |
+| E8 | 跨加密分类：Non-VPN 训练后分类 VPN 达 78.9%-99.4% | VoIP 99.4%, Video 98.8%, Chat 78.9% | Table IV |
+| E9 | Tor 流量分类最难，准确率仅 67.8% | Tor 加密显著改变流量模式 | §VI-C |
+| E10 | 排除 Facebook 后仍能 99.9% 正确分类 Video | Facebook FlowPic 与 Google Hangouts/Skype 相似 | §VI-D |
+| E11 | Tor 使用 block cipher，产生离散包大小 | FlowPic 可视化中可见 Tor 流量的离散特征 | §IV-B |
+| E12 | Non-VPN 分类准确率 85.0%，Browsing 是主要瓶颈 | Browsing recall 仅 30.5%，72.2% 被误判为 Chat | Figure 4a |
+| E13 | 训练 10-25 epoch 即收敛 | 所有子问题在 40 epoch 内收敛 | §V-C |
+| E14 | 仅使用包大小和到达时间，不依赖 payload | 每包仅需传输两个字（size, time） | §I |
+| E15 | 总可训练参数：CONV1 1010 + CONV2 20020 + FC 288064 + Output 65×m | 逐层参数计算 | §V-B |
 
 ---
 

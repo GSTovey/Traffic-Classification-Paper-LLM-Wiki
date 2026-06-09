@@ -571,3 +571,90 @@ Palette 在 real-world 中的平均准确率 20.80%，甚至低于 Tamaraw（21.
 6. **与其他防御的组合**：Palette 能否与流量拆分（TrafficSliver）等方案结合，进一步增强保护？
 7. **动态 anonymity set 更新**：随着网站流量模式变化，能否动态更新 anonymity set 的划分？
 8. **对更先进攻击的鲁棒性**：如果攻击者使用 TAM 的变体或其他更高级特征表示，Palette 是否仍然有效？
+
+## §13 写作叙事与故事线分析
+
+### §13.1 论文核心叙事
+
+**主线：** WF 防御在对抗训练下失效 → 需要从流量模式层面根本性消除可区分性 → 相似网站可统一调节为相同模式（低开销 + k-anonymity）→ Palette 实现 traffic cluster anonymization
+
+**叙事策略：** 攻防对抗视角（从攻击方的能力提升切入）+ 直觉驱动（TAM 的相似性观察）+ 系统设计（三模块 pipeline）+ 全面验证（closed/open-world + real-world Tor + adaptive attack）
+
+### §13.2 开篇策略
+
+开篇强调 WF 攻击的现实威胁和现有防御的不足："existing defenses are fragile when facing state-of-the-art attacks with adversarial training"。然后指出关键洞察——相似流量模式的网站可以统一调节，既保护隐私又控制开销。
+
+**Hook 设计：** 不是介绍新防御方法，而是先建立"现有防御在对抗训练下全面失效"的认知（Table 12: 无对抗训练时所有防御有效，有对抗训练时大部分被击穿），为 Palette 的必要性铺垫。
+
+### §13.3 技术叙事线
+
+1. **威胁建模**（§3）：WF 攻击在 Tor 上的现实威胁；现有防御在对抗训练下的脆弱性
+2. **关键观察**（§4.1）：TAM 分析——相似网站的包模式高度相似，可统一调节
+3. **系统设计**（§4.2-4.4）：anonymity set generation → super-matrix refinement → trace regularization
+4. **理论保证**（§4）：k-anonymity 保证；cover rate 泛化性证明
+5. **全面验证**（§6）：4 种攻击 × 7 种防御 × closed/open-world + real-world Tor + adaptive attack
+6. **工程可行性**（§6.6-6.7）：带宽/时间开销分析 + 部署开销 + 通信开销
+
+### §13.4 跨域叙事技巧
+
+**从聚类到隐私保护的迁移叙事：** 论文将 TAM 相似性聚类（机器学习概念）迁移到 k-anonymity 隐私保护（隐私计算概念）。这种"特征相似性→隐私等价类"的桥接比直接套用 k-anonymity 更有说服力，因为它同时解释了为什么低开销是可能的（相似网站调节代价小）。
+
+**Super-matrix 的工程直觉：** 论文用 TAM 热力图（Figure 2）直观展示相似网站的包模式，然后自然引出 super-matrix——将多个网站的 TAM 融合为一个统一模式。这种"观察→抽象→设计"的叙事比直接定义 super-matrix 更易理解。
+
+**攻防博弈的叙事张力：** 论文始终围绕"攻击者能力"展开——从无对抗训练（Table 12: 所有防御有效）到有对抗训练（Table 3: 大部分防御被击穿）再到 adaptive attack（Table 9: Palette 仍有效）。这种递进式攻防叙事增强了说服力。
+
+### §13.5 说服力构建
+
+| 说服力维度 | 具体策略 |
+|-----------|----------|
+| 问题紧迫性 | 对抗训练使现有防御全面失效（Table 3 vs Table 12 的对比） |
+| 设计直觉 | TAM 热力图可视化相似网站的包模式（Figure 2） |
+| 理论保证 | k-anonymity + cover rate 泛化性（§4.3） |
+| 实验全面性 | 4 种 SOTA 攻击 × 7 种防御 × 3 种场景（closed/open/real-world） |
+| 工程可行性 | 148s 训练 + 228KB 存储 + 0.66% 通信开销（Table 8, Figure 13） |
+| 鲁棒性验证 | Adaptive attack 最高准确率仅 36.92%（Table 9）；5 天后仍有效（§6.6） |
+| 信息泄露分析 | 14 个 feature category 泄露均低于 1.1 bit（Table 13） |
+
+### §13.6 论文结构评价
+
+**优点：**
+- TAM 的观察为整个方法提供了坚实的直觉基础
+- 三模块 pipeline 设计清晰，每个模块都有明确的功能和消融验证
+- 攻防对抗视角贯穿全文，从 threat model 到 adaptive attack 形成完整闭环
+- Real-world Tor 部署验证了工程可行性
+- 消融实验（Table 14）详细展示了每个组件的贡献
+
+**不足：**
+- 仅评估单标签页场景，未考虑 multi-tab 流量混淆
+- 使用 Tranco 列表而非真实 Tor 用户访问列表
+- Palette 优势主要体现在对抗训练场景（Table 12 显示无对抗训练时所有防御都有效）
+- 未讨论网站流量模式随时间变化的长期稳定性（仅测试 5 天）
+
+## §14 跨论文关联
+
+### 与 WF 攻击的关联
+
+- **DF [2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning]：** Palette 的主要攻击对手之一。DF 使用 CNN 从流量 trace 中提取特征进行网站指纹识别。Palette 在 closed-world 中将 DF 准确率从 98%+ 降至 20.27%（AdvTrain）/24.46%（Adaptive）。DF 的成功依赖于流量模式的可区分性，Palette 通过 TAM 统一调节消除这种可区分性。
+- **Swallow [2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]：** 新一代 WF 攻击，强调跨域迁移鲁棒性。Swallow 的 consistent feature learning 可能对 Palette 构成新挑战——如果 Swallow 能学习到 anonymity set 内部的微小差异，Palette 的 k-anonymity 保护可能被突破。这是 Palette 面临的潜在威胁。
+- **Tik-Tok [2020-PETS]：** 利用包时间特征的 WF 攻击。Palette 将 Tik-Tok 准确率降至 24.73%（AdvTrain）/25.33%（Adaptive），说明 TAM 调节能有效干扰时间特征。
+- **Var-CNN [2019-PETS]：** 数据高效的 WF 攻击。Palette 将 Var-CNN 准确率降至 22.79%/23.27%，与 DF 和 Tik-Tok 相近，说明 Palette 对不同攻击架构具有通用防御能力。
+- **RF [2023-USENIX]：** 最强攻击对手，使用 robust traffic representation。Palette 将 RF 准确率降至 36.43%/36.92%，虽然仍是最高，但相比 undefended 的 98%+ 已大幅下降。
+
+### 与 WF 防御的关联
+
+- **Surakav [2022-SP]：** Palette 的直接对比对象。Surakav 使用生成式模型生成 realistic traces，但其 Interval-II/III 信息泄露超过 undefended（Table 13），导致被 RF 击穿。Palette 通过 TAM 统一调节避免了这种信息泄露。
+- **RegulaTor [2022-PETS]：** 基于规则的 WF 防御。RegulaTor 的 Pkt. per Second 泄露 1.401 bit（超过 undefended 的 1.347 bit），说明规则化方法可能引入新的信息泄露。Palette 的 TAM 调节避免了这一问题。
+- **FRONT [2020-USENIX]：** 基于 padding 的防御。FRONT 的 Pkt. per Second 泄露 1.197 bit，且 Interval-II/III 泄露超过 undefended，说明 padding 可能改变统计特征。Palette 的 super-matrix refinement 通过 shrinking 和 sampling 控制开销，避免了过度 padding。
+- **Tamaraw [2014-CCS]：** 保守的固定速率防御。Tamaraw 的 Time 和 Burst 泄露超过 undefended（Table 13），说明固定速率 padding 可能引入新的时序模式。Palette 的 TAM 调节更灵活。
+
+### 与隐私保护方法论的关联
+
+- **k-anonymity [Sweeney 2002]：** Palette 的理论基础。Palette 将 k-anonymity 从数据隐私领域迁移到流量隐私领域——每个 anonymity set 至少包含 k 个网站，攻击者最多以 1/k 概率猜测目标网站。
+- **TrafficSliver [2020-CCS]：** 流量拆分防御。Palette 可以与 TrafficSliver 结合——先用 TAM 调节统一流量模式，再用流量拆分分散流量路径，形成多层防御。
+- **Mockingbird [2021-TIFS]：** 对抗样本防御。Mockingbird 通过生成对抗 trace 欺骗 WF 分类器，但需要知道攻击模型。Palette 不需要攻击模型知识，通过 TAM 调节从根本上消除可区分性。
+
+### 方法论关联
+
+- **TAM 分析：** TAM 是 Palette 的核心创新，将流量模式可视化为矩阵。这种方法可以推广到其他流量分析任务——例如恶意流量检测中的行为模式矩阵、应用指纹中的流量模式矩阵。
+- **Super-matrix refinement：** shrinking + sampling 的两级精炼策略可以推广到其他需要平衡精度和开销的任务——例如差分隐私中的噪声添加策略。
+- **信息泄露分析：** Table 13 的 14-category 信息泄露分析框架可以用于评估其他隐私保护方法的有效性，不仅限于 WF 防御。

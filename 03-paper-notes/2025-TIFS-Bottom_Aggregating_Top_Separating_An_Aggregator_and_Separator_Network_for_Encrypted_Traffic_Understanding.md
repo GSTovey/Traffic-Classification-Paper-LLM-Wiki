@@ -387,20 +387,35 @@ macro F1, micro F1
 - [[Word Sense Preservation Strategies]]
 - [[Semantic Separation Methods]]
 
+### 9.6 论文交叉引用
+
+- [[2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification]] — ET-BERT，本文主要 baseline，需大规模预训练
+- [[2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation]] — YaTC，本文另一主要 baseline，需 MAE 预训练
+- [[2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classification__A_Traffic-Explainer_Framework]] — Traffic-Explainer，同为 Transformer-based 流量分类的可解释性研究
+- [[2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under_Environment_Shifts]] — FG-SAT，同为轻量级流量分类方法
+- [[2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning]] — MT-DEGCL，同为加密流量分类方法
+
 ---
 
 ## 10. 证据记录
 
-| 关键观点 | 论文依据 | 位置 |
-|---|---|---|
-| WordPiece 破坏流量词义 | "splitting 'xde' into ['x', '##d', '##e']" | §I |
-| WSA 降低类间高频词重叠约 36% | "reduced by about 36% and 24% compared to setting one" | §V-A, Fig. 4 |
-| CSS 移除后 macro F1 大幅下降 | USTC-TFC task2: 0.9861 → 0.5998 | Table IV |
-| 不需预训练即达 SOTA | "without pre-training, our model surpasses the performance of ET-BERT and YaTC" | §IV-D |
-| CICIoT 上 macro-micro 差距仅 2.89% | "the performance gap of ASNet on macro F1 and micro F1 metrics has been reduced to 2.89%" | §IV-D |
-| 简单 prompt 优于复杂 prompt | Prompt Two 99.65% vs Prompt Three 96.23% | Table VI |
-| 输入长度 256 为最优 | "micro F1 reaches its peak value when the length is 256" | §IV-G |
-| WSA 使高频词分布更差异化 | "the distribution of high-frequency word varies significantly across the 4 categories" | §V-B |
+| 关键观点 | 论文依据 | 位置 | 可信度 |
+|---|---|---|---|
+| WordPiece 破坏流量词义 | "splitting 'xde' into ['x', '##d', '##e']" | §I | 高 |
+| WSA 降低类间高频词重叠约 36% | "reduced by about 36% and 24% compared to setting one" | §V-A, Fig. 4 | 高 |
+| CSS 移除后 macro F1 大幅下降 | USTC-TFC task2: 0.9861 → 0.5998 | Table IV | 高 |
+| 不需预训练即达 SOTA | "without pre-training, our model surpasses the performance of ET-BERT and YaTC" | §IV-D | 高 |
+| CICIoT 上 macro-micro 差距仅 2.89% | "the performance gap of ASNet on macro F1 and micro F1 metrics has been reduced to 2.89%" | §IV-D | 高 |
+| 简单 prompt 优于复杂 prompt | Prompt Two 99.65% vs Prompt Three 96.23% | Table VI | 高 |
+| 输入长度 256 为最优 | "micro F1 reaches its peak value when the length is 256" | §IV-G | 高 |
+| WSA 使高频词分布更差异化 | "the distribution of high-frequency word varies significantly across the 4 categories" | §V-B | 高 |
+| ISCXVPN task2 macro F1 达 99.43% | 比 YaTC 96.67% 提升 2.76% | Table II | 高 |
+| CHNAPP 真实场景 macro F1 达 98.10% | 比 PacRep 95.10% 提升 3.00% | Table II | 高 |
+| CSS 可视化 PCA 投影分离清晰 | Figure 6 不同类别语义空间分离 | §V-C | 中 |
+| WSA 移除后 BERT 直接处理性能下降 | 消融实验证明 WSA 的必要性 | Table IV | 高 |
+| α=0.2 为最优残差权重 | grid search 实验 | §IV-F | 中 |
+| 3 个 epoch 即收敛 | "only 3 epochs are needed" | §IV-A | 高 |
+| CHNAPP micro F1 略低于 EETS | 98.75% vs 99.14%（-0.39%） | Table II | 高 |
 
 ---
 

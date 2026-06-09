@@ -9,9 +9,9 @@ An Obsidian-based knowledge base for systematic literature review in **network t
 ## Highlights
 
 - **92 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
-- **14 deep-analyzed papers** (CCF A/B tier) with formula derivations, ablation studies, and cross-paper connections
+- **40 deep-analyzed papers** (CCF A/B tier) with formula derivations, ablation studies, and cross-paper connections
 - **35 knowledge pages**: 9 concepts, 8 methods, 8 tasks, 5 surveys, 5 comparison tables, 2 claim indexes
-- **26 confirmed open-source methods** with GitHub/GitLab repositories
+- **30 confirmed open-source methods** with GitHub/GitLab repositories
 - **Research map** linking papers by topic, method, and venue
 
 ## Directory Structure

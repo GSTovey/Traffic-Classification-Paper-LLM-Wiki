@@ -104,7 +104,7 @@
 - [[survey-few-shot-learning]] — 少样本学习综述
 - [[dataset-comparison-table]] — 数据集对比表
 - [[method-comparison-table]] — 方法对比表
-- [[open-source-registry]] — 开源模型/方法注册表（26 个已确认开源 + 高频基线追踪）
+- [[open-source-registry]] — 开源模型/方法注册表（30 个已确认开源 + 高频基线追踪）
 - [[motivation-pattern-comparison]] — 研究动机模式横向对比
 - [[narrative-pattern-comparison]] — 叙事模式横向对比
 
@@ -112,8 +112,8 @@
 
 ## 8. Claims 页面
 
-- [[claims-index]] — 关键观点索引（20 条核心 Claims）
-- [[contradictions]] — 论文间矛盾记录（8 组冲突）
+- [[claims-index]] — 关键观点索引（42 条核心 Claims）
+- [[contradictions]] — 论文间矛盾记录（9 组冲突）
 
 ---
 
@@ -127,7 +127,7 @@
 - 8 个任务页已创建于 `06-tasks/`。
 - 5 个综述页已创建于 `07-surveys/`。
 - 5 个对比表已创建于 `08-comparisons/`（含开源注册表和动机/叙事对比）。
-- 2 个 Claims 页面已创建于 `09-claims/`（含 20 条核心观点和 8 组矛盾记录）。
+- 2 个 Claims 页面已创建于 `09-claims/`（含 42 条核心观点和 9 组矛盾记录）。
 
 ---
 

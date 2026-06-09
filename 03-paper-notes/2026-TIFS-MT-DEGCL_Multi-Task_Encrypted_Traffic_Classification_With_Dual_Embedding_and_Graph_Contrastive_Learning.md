@@ -81,6 +81,31 @@ Although encryption offers strong anonymity, it also facilitates the concealment
 - **关键直觉2**：同一应用的流量样本之间存在语义不变性和共同特征，通过对比学习可以捕获这些不变特征，提升模型鲁棒性
 - **关键直觉3**：流级和包级分类任务之间存在互补关系——包级任务提供细粒度信息帮助流级分类，流级任务提供高层上下文指导包级分类
 
+### §3.4 问题发现路径
+
+| 阶段 | 内容 | 证据来源 |
+|------|------|----------|
+| 现象观察 | 加密流量占比激增（87.2% 威胁隐藏在加密流量中），现有方法在包级分类上性能极低（DE-GNN 仅 14.89%） | §I, Zscaler 2024 报告 |
+| 痛点提炼 | header 和 payload 同等对待导致 payload 信息浪费；流级和包级任务独立训练存在冗余；忽视样本间语义不变性 | §I, Table III DE-GNN 包级 14.89% |
+| 问题转化 | 如何在单一模型中同时实现流级和包级分类，并充分利用 payload 信息？ | §I, 三个 challenge |
+| 文献定位 | DE-GNN 虽有 dual embedding 但仅做流级分类，GraphDAPP 仅用包长度和方向 | §III, 相关工作对比 |
+
+### §3.5 科学假设形成
+
+| 假设 | 具体内容 | 推导依据 | 验证方式 |
+|------|----------|----------|----------|
+| 核心假设 | header 和 payload 应分别编码后融合，而非同等对待 | 同一字节值在 header/payload 中含义不同 | Table IX 消融实验 |
+| 辅助假设 1 | 图对比学习可提取样本间语义不变特征，提升鲁棒性 | 同一应用流量存在共同交互模式 | Table VII 鲁棒性测试 |
+| 辅助假设 2 | 流级和包级任务联合训练可互相促进 | 包级提供细粒度信息，流级提供高层上下文 | Table VIII 多任务通用性验证 |
+
+**假设验证结果：**
+
+| 假设 | 支撑/反驳 | 关键实验证据 | 位置 |
+|------|-----------|-------------|------|
+| 核心假设 | 支撑 | 移除 payload 后流级 F1 降 25.91%，移除 header 后仅降 0.5% | Table IX |
+| 辅助假设 1 | 支撑 | 图对比学习移除后流级 F1 降 5.09%，包重排序/丢弃下仍超 DE-GNN 1.5% | Table VII, IX |
+| 辅助假设 2 | 支撑 | 多任务集成到 FS-Net 后包级 F1 从 5.94% 升至 78.56% | Table VIII |
+
 ## 4. 方法设计
 
 ### 4.1 方法整体流程
@@ -421,6 +446,14 @@ $$\mathcal{L} = \mathcal{L}_f + \mathcal{L}_p + \lambda \cdot \mathcal{L}_{gcl}$
 - Encrypted Traffic Classification Methods Comparison
 - GNN Methods for Traffic Classification
 
+### 9.6 论文交叉引用
+
+- [[2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under_Environment_Shifts]] — FG-SAT，同为图结构流量分类方法，使用 GraphSAGE + GAT
+- [[2023-NDSS-Detecting_unknown_encrypted_malicious_traffic_via_flow_interaction_graph]] — Flow Interaction Graph，流量交互图的先驱工作
+- [[2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification]] — FEC-OSL，同为加密流量分类方法
+- [[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]] — ASNet，同为 Transformer-based 流量分类
+- [[2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classification__A_Traffic-Explainer_Framework]] — Traffic-Explainer，流量分类可解释性研究
+
 ## 10. 证据记录（表格形式）
 
 | 编号 | 类型 | 证据内容 | 页码/位置 |
@@ -458,3 +491,50 @@ $$\mathcal{L} = \mathcal{L}_f + \mathcal{L}_p + \lambda \cdot \mathcal{L}_{gcl}$
 6. **与预训练大模型的结合**：是否可以利用大规模预训练的流量基础模型来进一步提升表示质量？
 7. **对抗攻击鲁棒性**：虽然测试了包重排序和丢包，但面对更高级的对抗攻击（如流量整形模仿）的鲁棒性如何？
 8. **隐私保护考虑**：该方法利用 payload 信息进行分类，是否存在隐私泄露风险？如何在分类效果和隐私保护之间取得平衡？
+
+## 13. 写作叙事与故事线分析
+
+### 13.1 论文主线故事线
+
+从加密流量分类中三个被忽视的问题出发（header/payload 同等对待、流级/包级任务独立训练、样本间语义不变性未利用），提出 MT-DEGCL：并行双嵌入分别编码 header 和 payload → cross-gated 门控融合 → 流量交互图 + 图对比学习提取鲁棒流级表示 → 多任务联合训练。核心发现是 payload 包含分类所需的绝大部分信息（移除 header 后 F1 仅降 0.5%），且多任务学习对所有 baseline 均有显著增益。
+
+### 13.2 章节叙事功能
+
+| 章节 | 叙事功能 | 承担的角色 | 关键转折点 |
+|------|----------|------------|------------|
+| Abstract | 用三个"additionally/moreover"递进列出问题 | 全文缩影 | "surpassing DE-GNN by 83.21% at packet level" |
+| Introduction | 从加密流量增长到三个具体挑战 | 动机铺垫 | "87.2% of total threats in 2024" |
+| Related Work | 统计特征→DL→GNN 三类方法的演进 | 技术定位 | GNN 方法"neglect semantic invariance" |
+| Method | 四模块层次化设计（字节→包→流→多任务） | 核心贡献 | cross-gated 融合和图对比学习 |
+| Experiments | 四数据集 + 鲁棒性 + 通用性验证 | 多维支撑 | 多任务集成到 FS-Net 后包级 F1 从 5.94% 升至 78.56% |
+| Discussion | 可视化不同应用交互模式 | 深化论点 | Chat 间歇性、Audio 持续单向、P2P 分布式双向 |
+
+### 13.3 Gap 展开方式
+
+| Gap 类型 | 具体内容 | 论证方式 | 位置 |
+|----------|----------|----------|------|
+| 信息利用不足 | header 和 payload 同等对待，payload 信息浪费 | DE-GNN 包级 F1 仅 14.89% 的极端数据 | §I |
+| 任务冗余 | 流级和包级任务独立训练，未利用互补关系 | 现有方法均为单任务 | §I |
+| 鲁棒性不足 | 忽视样本间语义不变性，网络波动下性能下降 | 对比学习在 NLP/CV 成功但网络领域空白 | §I |
+| 包级分类空白 | 现有 GNN 方法几乎不做包级分类 | DE-GNN 包级 14.89% vs 流级 96.60% | Table III |
+
+### 13.4 实验叙事方式
+
+| 实验环节 | 叙事功能 | 与主线的关系 |
+|----------|----------|--------------|
+| 四数据集主实验 | 全面对比 8 个 baseline | 证明 MT-DEGCL 在两个粒度上均 SOTA |
+| 鲁棒性测试 | 包重排序/丢包条件 | 证明图对比学习的鲁棒性增益 |
+| 多任务通用性 | 将多任务集成到所有 baseline | 证明多任务学习是通用增益而非方法特定 |
+| 消融实验 (Table IX) | 逐一移除各组件 | 量化每个组件的贡献（payload 最关键） |
+| 仅 payload 实验 | 移除 header 后性能 | 证明 payload 信息被充分挖掘 |
+| 可视化分析 | 交互图展示不同应用模式 | 从图结构角度解释分类机制 |
+
+### 13.5 写作风格与可迁移写法
+
+| 维度 | 本文做法 | 可迁移的写作模式 |
+|------|----------|------------------|
+| 问题列举 | 三个"additionally/moreover"递进 | 并列递进的问题陈述 |
+| 核心数字 | "83.21% improvement at packet level" | 用极端数字制造冲击力 |
+| 方法结构 | 字节→包→流→多任务的层次化设计 | 自底向上的层次化架构叙事 |
+| 通用性论证 | 将多任务集成到所有 baseline | "plug-and-play" 通用性验证策略 |
+| 最值得借鉴的写法 | "removing header only costs 0.5% F1" — 用消融实验中的极端发现支撑设计选择 | 用实验发现反向论证设计选择 |

@@ -120,6 +120,51 @@ Website fingerprinting 使本地窃听者能够通过加密连接确定用户正
 
 **1D 输入 vs 2D 输入：** 实验比较发现 1D 输入训练速度显著快于 2D（相同数据点数），且分类精度略优，因此采用 1D 输入。
 
+### 关键公式推导
+
+**1. 分类损失函数 — Categorical Cross-Entropy**
+
+DF 使用 categorical cross-entropy 作为多分类损失函数，适用于 95 类（闭世界）的网站分类任务：
+
+$$L = -\sum_{c=1}^{C} y_c \log(\hat{y}_c)$$
+
+其中 $C$ 是类别数（95），$y_c$ 是真实标签的 one-hot 编码，$\hat{y}_c$ 是 Softmax 输出的预测概率。该损失函数对预测概率的对数进行惩罚，当模型对正确类别的预测概率越低时，损失越大。
+
+**2. 卷积操作**
+
+1D 卷积操作将输入序列与滤波器进行滑动点积：
+
+$$(f * x)(t) = \sum_{i=0}^{k-1} f(i) \cdot x(t \cdot s + i)$$
+
+其中 $k$ 是 kernel size（8），$s$ 是 stride（4），$f$ 是滤波器权重，$x$ 是输入序列。卷积操作的核心特性是参数共享（同一滤波器在整个序列上滑动）和平移不变性（能检测任意位置的模式）。
+
+**3. ELU 激活函数**
+
+$$\text{ELU}(x) = \begin{cases} x & \text{if } x > 0 \\ \alpha(e^x - 1) & \text{if } x \leq 0 \end{cases}$$
+
+其中 $\alpha = 1.0$。与 ReLU 不同，ELU 在负值区间有非零输出，能保留 WF 输入中负值（incoming packet）的信息。
+
+**4. Batch Normalization**
+
+$$\hat{x}_i = \frac{x_i - \mu_B}{\sqrt{\sigma_B^2 + \epsilon}}$$
+$$y_i = \gamma \hat{x}_i + \beta$$
+
+其中 $\mu_B$ 和 $\sigma_B^2$ 是 mini-batch 的均值和方差，$\epsilon$ 是数值稳定性常数，$\gamma$ 和 $\beta$ 是可学习的缩放和偏移参数。BN 能加速训练收敛并起到一定的正则化作用。
+
+**5. Max Pooling**
+
+$$y_{i} = \max_{j \in R_i} x_j$$
+
+其中 $R_i$ 是第 $i$ 个 pooling region。Max pooling 逐步减小特征图的空间尺寸，减少参数量和计算量，同时对小的平移和变形具有不变性。
+
+**6. Dropout**
+
+Dropout 在训练时以概率 $p$ 随机将隐藏单元置零：
+
+$$\tilde{h}_i = h_i \cdot m_i, \quad m_i \sim \text{Bernoulli}(1-p)$$
+
+DF 在 pooling 层后使用 $p=0.1$，在 FC 层后使用 $p=0.7$ 和 $p=0.5$。不同位置使用不同 dropout 率是因为过拟合主要出现在 FC 层。
+
 ### 训练超参数（最终选定值）
 
 | 超参数 | 值 |
@@ -252,6 +297,60 @@ k-NN、CUMUL、k-FP、AWF、SDAE（均在相同数据集上重新评估）
 4. **非对称 collision 下 W-T 安全性下降**：如客户端不遵守对称 collision 规则，DF 准确率升至 87.2%
 5. **数据时效性问题**：WF 攻击准确率在 10-14 天后显著下降
 
+### 消融实验分析
+
+DF 论文虽未设置传统的逐组件消融实验，但通过 DF vs AWF 的系统对比以及多维度参数分析，提供了等效的消融证据：
+
+**1. 网络深度消融（DF vs AWF）**
+
+| 消融维度 | DF (8 Conv) | AWF (3 Conv) | 性能差异 | 分析 |
+|----------|-------------|--------------|----------|------|
+| 闭世界无防御 | 98.3% | 94.9% | +3.4% | 更深网络提取更丰富特征 |
+| 闭世界 WTF-PAD | 90.7% | 60.8% | +29.9% | 深层网络能从 padding 后的残留模式中提取特征 |
+| 闭世界 W-T | 49.7% | 45.8% | +3.9% | 接近理论上限，深度优势有限 |
+
+**关键发现**：网络深度的贡献在防御场景下尤为显著（WTF-PAD +29.9%），说明深层架构对提取被防御扰乱后的微弱模式至关重要。
+
+**2. 激活函数消融**
+
+| 配置 | 说明 |
+|------|------|
+| 全部 ReLU | AWF 的默认配置，负值信息丢失 |
+| Block1: ELU + 后续: ReLU | DF 的最优配置，保留负值方向信息 |
+| 全部 ELU | 训练时间更长，精度未显著提升 |
+
+**关键发现**：ELU 在第一层的作用最为关键，因为第一层直接接触原始输入（含负值方向信息），后续层的输入已被前层变换，负值信息的重要性降低。
+
+**3. 训练数据量消融（Figure 5）**
+
+| 训练 traces/site | DF | CUMUL | k-NN | k-FP | AWF | SDAE |
+|------------------|-----|-------|------|------|-----|------|
+| 50 | 90% | 90% | 86% | 85% | 77% | 63% |
+| 100 | 94% | 93% | 89% | 88% | 85% | 75% |
+| 500 | 98% | 97% | 94% | 93% | 93.5% | 88% |
+| 900 | 98.5% | 97.5% | 94.5% | 94.5% | 94.5% | 92% |
+
+**关键发现**：DF 和 CUMUL 在小样本（50 traces）时即达 90%，而 AWF 需要 250 traces。这说明 DF 的架构设计在数据效率上也优于 AWF。
+
+**4. 训练 Epoch 消融（Figure 4）**
+
+| Epoch | 测试准确率 | 训练-测试误差差 |
+|-------|-----------|----------------|
+| 10 | 97% | 1.0% |
+| 20 | 98% | 1.0% |
+| 30 | 98.5% | 1.7% |
+| 40 | 98.8% | 1.2% |
+
+**关键发现**：DF 在 10 个 epoch 即可达到 97% 准确率，30 个 epoch 后趋于饱和。训练-测试误差差始终小于 2%，证明 BN + Dropout 的正则化策略有效防止了过拟合。
+
+**5. Dropout 策略消融**
+
+DF 的分层 dropout 策略（pooling 后 0.1, FC1 后 0.7, FC2 后 0.5）是关键设计：
+- Pooling 层后低 dropout（0.1）：保留特征提取的完整性
+- FC 层后高 dropout（0.7/0.5）：FC 层参数多，过拟合风险高，需要更强的正则化
+
+对比 AWF 仅在第一个 block 前使用 dropout 的设计，DF 的分层策略更合理。
+
 ## 7. 学习与应用（开源情况、复现步骤、超参数、迁移价值、启发）
 
 ### 开源情况
@@ -305,6 +404,11 @@ k-NN、CUMUL、k-FP、AWF、SDAE（均在相同数据集上重新评估）
 
 ## 9. Obsidian 知识链接
 
+### 跨论文关联
+
+- [[2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation]] — DF 的后继攻击工作，提出 RF (Representation Fingerprinting) 方法，使用更鲁棒的流量表示来攻破防御
+- [[2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization]] — Palette 防御方案，作为 DF 等攻击的对应防御方，提出实时 WF 防御机制
+
 ### 相关概念
 - Website Fingerprinting
 - Traffic Analysis
@@ -352,6 +456,9 @@ k-NN、CUMUL、k-FP、AWF、SDAE（均在相同数据集上重新评估）
 | E10 | 训练-测试误差差异 <2% | Section 5.2 | 无明显过拟合 |
 | E11 | GPU 训练时间 64 分钟（30 epochs） | Section 5.5 | GTX 1070 |
 | E12 | WTF-PAD 带宽开销 64%，W-T 带宽 31% + 延迟 34% | Table 3 | |
+| E13 | DF vs AWF 在 WTF-PAD 场景下差距最大（90.7% vs 60.8%, +29.9%） | Table 3 | 深层架构对防御场景的贡献 |
+| E14 | DF 仅需 50 traces/site 即可达 90% 准确率，AWF 需要 250 traces | Figure 5 | 数据效率优势 |
+| E15 | DF 在 10 个 epoch 即达 97% 测试准确率，收敛速度快 | Figure 4 | 训练效率优势 |
 
 ## 11. 原始资料链接
 

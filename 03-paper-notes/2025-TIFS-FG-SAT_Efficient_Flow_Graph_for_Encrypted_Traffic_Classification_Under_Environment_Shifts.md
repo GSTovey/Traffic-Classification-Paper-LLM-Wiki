@@ -429,6 +429,14 @@ APP-SHIFTS 数据集统计：
 - GNN Models for Traffic Analysis
 - Feature Selection Algorithms for Traffic Classification
 
+### 9.6 论文交叉引用
+
+- [[2023-NDSS-Detecting_unknown_encrypted_malicious_traffic_via_flow_interaction_graph]] — Flow Interaction Graph，与本文 Flow Graph 构建思路相关
+- [[2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_GNNs]] — GNN 用于加密流量分类的早期工作
+- [[2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning]] — MT-DEGCL，同为图结构流量分类方法
+- [[2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification]] — FEC-OSL，同为环境偏移/开放集场景
+- [[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]] — ASNet，同为 Transformer-based 流量分类
+
 ## 10. 证据记录（表格形式）
 
 | 编号 | 类型 | 证据内容 | 页码/位置 |
@@ -465,3 +473,50 @@ APP-SHIFTS 数据集统计：
 5. **与其他预训练方法的结合**：能否将 Flow Graph 与 ET-BERT 等预训练方法结合，进一步提升泛化能力？
 6. **实时部署**：虽然模型轻量，但在高速网络（10Gbps+）上的 Flow Graph 构建开销如何？
 7. **隐私保护**：虽然删除了 MAC/IP 地址，但 TTL、窗口大小等字段是否仍可能泄露隐私信息？
+
+## 13. 写作叙事与故事线分析
+
+### 13.1 论文主线故事线
+
+从加密流量分类在环境偏移（应用版本更新、网络配置变化、带宽波动）下的性能退化问题出发，提出 FG-SAT：用 Flow Graph 建模传输层交互结构（滑动窗口 + 确认机制），用 JSD 特征选择保留环境鲁棒特征，用 GraphSAT（GraphSAGE + GAT 混合）实现环境偏移鲁棒的加密流量分类。核心洞察是传输层机制产生的交互模式比内容特征更稳定。
+
+### 13.2 章节叙事功能
+
+| 章节 | 叙事功能 | 承担的角色 | 关键转折点 |
+|------|----------|------------|------------|
+| Abstract | 概述环境偏移问题和轻量级解决方案 | 全文缩影 | "43013 parameters, 0.03% of ET-BERT" |
+| Introduction | 从环境偏移现象到三个具体偏移类型 | 动机铺垫 | 内容偏移、带宽偏移、应用版本偏移 |
+| Related Work | 流量分类方法 + 环境偏移应对策略 | 技术定位 | 现有方法在偏移下性能退化 |
+| Method | Flow Graph + JSD + GraphSAT 三模块 | 核心贡献 | 传输层机制比内容更稳定的洞察 |
+| Experiments | 四个任务 + 效率 + 鲁棒性 | 多维验证 | 参数量仅 43013，为 ET-BERT 的 0.03% |
+| Analysis | 特征重要性 + 开放世界探索 | 深化论点 | IP 头字段在环境偏移下最鲁棒 |
+
+### 13.3 Gap 展开方式
+
+| Gap 类型 | 具体内容 | 论证方式 | 位置 |
+|----------|----------|----------|------|
+| 性能瓶颈 | 现有方法在环境偏移下性能大幅退化 | 实验数据对比 | §I |
+| 方法缺陷 | 预训练方法（ET-BERT/YaTC）参数量大、计算成本高 | 参数量对比（43013 vs 145M） | §I, Table IV |
+| 表示局限 | 字节序列表示忽略传输层交互结构 | Flow Graph vs 序列的对比论证 | §I |
+| 场景缺失 | 现有方法未系统评估环境偏移鲁棒性 | 偏移因子构造实验 | §I, APP-SHIFTS 数据集 |
+
+### 13.4 实验叙事方式
+
+| 实验环节 | 叙事功能 | 与主线的关系 |
+|----------|----------|--------------|
+| 四任务主实验 (Table III) | 环境偏移下全面对比 | 证明 FG-SAT 在偏移场景下的优势 |
+| 效率对比 (Table IV) | 参数量和推理时间 | 证明轻量级设计的实用性 |
+| 图结构消融 (Table VI) | GraphSAT vs GCN/GraphSAGE/GAT | 证明混合架构的优势 |
+| 特征选择对比 (Table V) | JSD vs Chi-Squared/L1-LR/RFE | 证明 JSD 对环境偏移的适配性 |
+| 对抗鲁棒性 (Table VII) | 对抗攻击下 Acc 变化 | 证明 Flow Graph 的内在鲁棒性 |
+| 特征分析 (Section VII-C) | 偏移稳定性特征排名 | 从数据角度解释设计选择 |
+
+### 13.5 写作风格与可迁移写法
+
+| 维度 | 本文做法 | 可迁移的写作模式 |
+|------|----------|------------------|
+| 问题定义 | 将"环境偏移"细化为三个具体因子（内容/带宽/版本） | 概念具体化的分解策略 |
+| 核心洞察 | "传输层机制比内容更稳定" | 从协议栈层次寻找不变性 |
+| 效率叙事 | 用"0.03% of ET-BERT"的极端对比 | 极端数字驱动的效率论证 |
+| 实验设计 | 自采 APP-SHIFTS 数据集 + 人工偏移因子 | 可控偏移实验的设计范式 |
+| 最值得借鉴的写法 | "transport layer mechanisms produce more stable patterns than content features" — 从协议栈层次提炼不变性 | 不变性发现（invariance discovery）叙事 |

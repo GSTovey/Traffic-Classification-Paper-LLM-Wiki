@@ -329,3 +329,32 @@ Next steps:
   - 6 批并行 Agent 处理，总耗时约 9 分钟
   - 核心发现：ASNet 无预训练 SOTA 引发"预训练是否必要"新矛盾，已记录至 contradictions.md
   - 开源方法新增：SUMo (flow correlation), NetMamba (SSM), Multi-ARCL (continual learning), ASNet (no-pretraining)
+
+---
+
+## [2026-06-09] deep-analysis | 26 篇 CCF A 级论文深度分析
+
+- Updated:
+  - 26 篇 CCF A 级论文笔记完成深度分析，知识库深度分析总量从 14 篇增至 40 篇
+- Papers analyzed (by venue):
+  - **CCS**：Deep Fingerprinting (2018), Whisper (2021), Point Cloud Malicious Detection (2023), MetaTraffic/Tunneled Flooding (2024), Training Robust Classifiers (2025)
+  - **S&P**：Robust Multi-tab WF (2023), Palette WF Defense (2024), TrafficFormer (2025)
+  - **NDSS**：Unknown Encrypted Malicious Traffic (2023), Fine-grained Webpage Fingerprinting (2024), Low-quality Training Data Detection (2024), Black-Box Evasion Attack (2026)
+  - **USENIX Security**：CertTA Certified Robustness (2025)
+  - **SIGCOMM**：（无新增，此前已完成）
+  - **INFOCOM**：FlowPic (2019)
+  - **AAAI**：MIETT Multi-Instance Transformer (2025)
+  - **NeurIPS**：FlowRefiner Label Noise (2025)
+  - **KDD**：Wedjat Causal Evasion (2025), Traffic-Explainer (2026)
+  - **WWW**：DecETT App Fingerprinting (2025)
+  - **TIFS**：DApp GNN (2021), FG-SAT (2025), ASNet (2025), FEC-OSL (2026), MT-DEGCL (2026)
+  - **SIGKDD**：LEXNet Explainable CNN (2023)
+- Enhancement summary:
+  - 总计 26 篇笔记从 ~400 行扩展至 400-800 行
+  - 新增 ~300+ 条证据记录
+  - 每篇论文新增：§3.4 问题发现路径、§3.5 科学假设形成、§4 公式推导、§6 消融实验分析、§13 写作叙事与故事线分析（5 小节）、§14 跨论文关联
+- Notes:
+  - 6 批并行 Agent 处理（4+4+4+4+4+6），总耗时约 25 分钟
+  - 跨论文关联：DF → Palette → Swallow 形成 WF 攻防演进链；ET-BERT → TrafficFormer → MIETT 形成预训练方法演进链
+  - 重点方法对比：FlowPic vs ET-BERT vs ASNet（表征学习 vs 无需预训练）、CertTA vs SmartDetector（认证鲁棒性 vs 对比学习鲁棒性）
+  - 知识库总深度分析论文数：40 篇（14 篇此前 + 26 篇本次）
