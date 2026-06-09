@@ -45,6 +45,10 @@ updated: "2026-06-01"
 | 24 | Plug-in Enhancement Framework | 2026 | 预训练模型增强 | [GitHub](https://github.com/slg6/Plug-inEnhancementFramework) | 代码 | Python | [[2026-JCN-Plug-in_enhancement_framework__Breaking_through_performance_bottleneck_of_pre-trained_models_for_encrypted_traffic_classification]] |
 | 25 | Traffic-Explainer | 2026 | 流量分类可解释性 | [4open.science](https://anonymous.4open.science/r/TrafficExplainer-5E2E/README.md) | 代码 | Python | [[2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classification__A_Traffic-Explainer_Framework]] |
 | 26 | TrafficMoE | 2026 | 加密流量分类（MoE） | [GitHub](https://github.com/Posuly/TrafficMoE) | 代码 | Python | [[2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification]] |
+| 27 | SUMo | 2024 | Tor 流量关联 | [GitHub](https://github.com/danielaLopes/sumo) | 代码 + 数据集 | Python | [[2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum]] |
+| 28 | NetMamba | 2024 | 加密流量分类 | [GitHub](https://github.com/UniBuc/NetMamba) | 代码 | Python | [[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]（注：与 NetMamba+ 共用同一仓库） |
+| 29 | Multi-ARCL | 2025 | 加密流量分类（持续学习） | [GitHub](https://github.com/sailorlee97/What-changes-you) | 代码 | Python | [[2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification]] |
+| 30 | ASNet | 2025 | 加密流量分类 | [GitHub](https://github.com/pengwei-iie/ASNET) | 代码 | Python | [[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]] |
 
 ---
 
@@ -154,7 +158,7 @@ updated: "2026-06-01"
 
 | 类别 | 数量 |
 |---|---:|
-| 已确认开源（本知识库论文） | 21 |
+| 已确认开源（本知识库论文） | 30 |
 | 计划开源 / 待确认 | 3 |
 | 高频对比基线无开源地址 | 20+ |
 | CLET 论文确认有实现但缺地址 | 6 |
@@ -164,11 +168,14 @@ updated: "2026-06-01"
 
 | 领域 | 已开源数量 | 代表方法 |
 |---|---:|---|
-| 加密流量分类 | 8 | ET-BERT, YaTC, LEXNet, CTT, NetMamba+, FGFR-Net, SweetDanger, TFusion |
+| 加密流量分类 | 12 | ET-BERT, YaTC, LEXNet, CTT, NetMamba+, FGFR-Net, SweetDanger, TFusion, NetMamba, Multi-ARCL, ASNet, TrafficMoE |
 | 网站指纹（攻击+防御） | 6 | DF, RF, Palette, RobustWF, STAR, Swallow（待确认） |
-| 恶意流量检测 | 4 | Whisper, SmartDetector（无代码）→ 实际为 Whisper, TFusion, MET-LLM, JA4 |
+| 恶意流量检测 | 4 | Whisper, TFusion, MET-LLM, JA4 |
 | 应用/匿名流量分类 | 3 | Flowprint, AN-Net, DecETT |
+| 流量关联/匿名攻击 | 1 | SUMo |
 | 评估/基准 | 2 | SoK Decoding, SweetDanger |
+| 可解释性 | 1 | Traffic-Explainer |
+| 预训练模型增强 | 1 | Plug-in Enhancement Framework |
 
 ---
 

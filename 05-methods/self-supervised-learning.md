@@ -79,6 +79,10 @@ updated: "2026-05-27"
 | Yet Another Traffic Classifier: A Masked Autoencoder Based Traffic Transformer with Multi-Level Flow Representation | 2023 | MAE 预训练（90% mask ratio），CV-style | 提出 MFR 矩阵编码 byte/packet/flow 三级信息，将流量分析从 NLP 范式转向 CV 范式，分层注意力机制降低复杂度，在 5 个数据集上大幅领先 |
 | A Semi-Supervised Learning Framework for Encrypted Traffic Classification Based on Supervised Contrastive Learning and Masked Sequence Prediction Tasks | 2025 | MSP + SCL 交替训练，半监督 | 首次整合监督对比学习与掩码序列预测用于加密流量分类，交替训练策略协同利用标注和未标注数据，平均 F1 提升 3.3% |
 | NetMamba+: A Framework of Pre-trained Models for Efficient and Accurate Network Traffic Classification | 2026 | MAE 预训练 + Mamba 架构 | 首次将 Mamba (SSM) 引入流量分类，线性复杂度实现 1.7 倍推理加速，多模态表示融合字节级和传输模式特征 |
+| MIETT: Multi-Instance Encrypted Traffic Transformer (AAAI 2025) | 2025 | PRPP（Packet Relative Position Prediction）+ FCL（Flow Contrastive Learning）+ MFP（Masked Flow Prediction） | 提出两个面向流量特性的新 SSL 任务：PRPP 在 packet 级别预测 packet 对的相对位置（时序信号），FCL 在 flow 级别通过对比学习拉近同 flow 内不同 position 的 packet 表示、推远不同 flow 的 packet 表示；添加 PRPP+FCL 后 F1 从 73.62% 提升至 82.36% |
+| TraGe: A Generic Packet Representation (IWQoS 2025) | 2025 | Field-level Masking + Random Masking + Dynamic Masking | 提出新的 SSL 掩码策略：对 header 使用 Field-level Masking（从几何分布 Geo(p) 采样连续长度掩码，保持协议字段字节连续性），对 payload 使用 Random Masking（适配非连续字节分布），配合 Dynamic Masking 防止过拟合；移除 FM 后 F1 下降 5.88% |
+| TrafficGPT (arXiv 2024) | 2024 | GPT-style 自回归 SSL（next token prediction） | 使用自回归方式（GPT-style）预测下一个 token 进行预训练，通过线性注意力机制支持 12K token 上下文；可逆 token 表示实现 pcap ↔ token 双向映射，同一模型同时支持分类和生成 |
+| ASNet (TIFS 2025) | 2025 | **反例**：无需 SSL/预训练即达 SOTA | 通过 WSA（无参数词义聚合器）+ CSS（类别约束语义分离器）+ 任务感知提示，直接利用 BERT 已有知识，在 5 个数据集 7 个任务上无需任何自监督预训练即超越需要预训练的 ET-BERT 和 YaTC；证明 SSL/预训练并非流量分类 SOTA 的必要条件 |
 
 ## 9. 与其他方法的比较
 

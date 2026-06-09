@@ -53,20 +53,30 @@ updated: "2026-05-27"
   - F1 > 0.96
   - 论文笔记：`[[03-paper-notes/2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection.md]]`
 
-### 3.5 基于预训练基础模型的方法
+### 3.5 基于 Transformer 特征提取的方法
+
+- **Session-Transformer**：修改 Transformer encoder + DNN 分类器的加密恶意流量检测方法（Wei et al., JIoT 2025）
+  - 核心思想：TLS 流量具有请求-响应模型结构，payload 之间存在长度关联、内容关联和时序关联
+  - 修改 Transformer encoder 自动提取上下文关联和时序特征，无需解密
+  - 使用 DNN 作为分类器进行二分类（恶意 vs 正常）和多分类（恶意软件家族）
+  - DataCon2020 召回率 98.34%，CIC-AndMal-2017 精确率 93.54%
+  - 局限：仅使用统计特征（ST Feature），未直接处理原始字节
+  - 论文笔记：`[[03-paper-notes/2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis.md]]`
+
+### 3.6 基于预训练基础模型的方法
 
 - **ET-BERT**：BERT 预训练 + 微调，ISCX-VPN F1 98.9%
 - **YaTC**：MAE 预训练 + 分层注意力，所有数据集 SOTA
 - **NetMamba+**：Mamba + 多模态，1.7x 推理加速
 
-### 3.6 基于开放集识别的方法
+### 3.7 基于开放集识别的方法
 
 - **FEC-OSL**：能量模型 + CViT + TAGCN + 自适应深度聚类
   - 端到端开放集半监督学习
   - 99.60% AC
   - 论文笔记：`[[03-paper-notes/2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification.md]]`
 
-### 3.7 基于多维异构特征的方法
+### 3.8 基于多维异构特征的方法
 
 - **MTBD**：融合 flow-level、host-level、packet-level 三维异构特征
   - Burst filtering 过滤噪声
@@ -82,6 +92,7 @@ updated: "2026-05-27"
 | 2018-2020 | 深度学习方法 | DF, FS-Net | CNN/LSTM 自动特征学习 |
 | 2021 | 频域分析 | Whisper | DFT 特征，13.22 Gbps 吞吐量 |
 | 2022 | 预训练范式 | ET-BERT | BERT 预训练加密流量表示 |
+| 2025 | Transformer 特征提取 | Session-Transformer | 修改 Transformer encoder + DNN 检测加密恶意流量 |
 | 2025 | 对比学习 + 多模态 | SmartDetector, tFusion | 对抗鲁棒，0.1% 标注数据 |
 | 2025 | 大语言模型 | MET-LLM | LLM 适配恶意流量检测 |
 | 2026 | 开放集识别 | FEC-OSL, UT-PAB | 未知攻击类型泛化 |
@@ -97,6 +108,7 @@ updated: "2026-05-27"
 - ET-BERT (WWW 2022)：BERT 预训练加密流量表示 — `[[03-paper-notes/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.md]]`
 - YaTC (AAAI 2023)：MAE 预训练 + 分层注意力 — `[[03-paper-notes/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.md]]`
 - MTBD (HPCC 2022)：三维异构特征 + 投票 — `[[03-paper-notes/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.md]]`
+- Session-Transformer (JIoT 2025)：修改 Transformer + DNN 检测加密恶意流量，DataCon2020 召回率 98.34% — `[[03-paper-notes/2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis.md]]`
 
 ## 6. 当前趋势
 

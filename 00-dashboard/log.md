@@ -305,3 +305,27 @@ Next steps:
   - MinerU 解析：13 篇全部成功（vlm 模型，1 批次）
   - 笔记级别：L2（标准阅读）
   - 处理方式：3 批并行 Agent 生成笔记
+
+---
+
+## [2026-06-09] knowledge-update | 13 篇新论文知识层全量更新
+
+- Updated:
+  - `04-concepts/` — 7 个概念页更新（traffic-classification, encrypted-traffic-analysis, traffic-representation-learning, traffic-foundation-model, website-fingerprinting, malicious-traffic-detection, tunnel-detection）
+  - `05-methods/` — 7 个方法页更新（transformer, state-space-model, graph-neural-network, pre-training-finetuning, convolutional-network, self-supervised-learning, multi-modal-fusion）
+  - `06-tasks/` — 6 个任务页更新（traffic-classification, website-fingerprinting, encrypted-traffic-detection, tunnel-detection, malicious-traffic-detection, traffic-representation）
+  - `07-surveys/` — 4 个综述页更新（survey-encrypted-traffic-analysis, survey-traffic-foundation-model, survey-website-fingerprinting, survey-malicious-traffic-detection）
+  - `08-comparisons/` — 5 个对比表全部更新
+    - `method-comparison-table.md` — 新增 13 个方法条目
+    - `dataset-comparison-table.md` — 新增 14 个数据集条目
+    - `open-source-registry.md` — 新增 4 个已确认开源方法（SUMo, NetMamba, Multi-ARCL, ASNet），确认开源总数从 26 增至 30
+    - `motivation-pattern-comparison.md` — 新增 6 个论文的动机模式分析
+    - `narrative-pattern-comparison.md` — 新增 3 个论文的叙事模式分析
+  - `09-claims/` — 2 个 Claims 页面更新
+    - `claims-index.md` — 新增 7 条核心观点（#36–#42）
+    - `contradictions.md` — 新增 1 组矛盾（预训练是否必要：ASNet vs ET-BERT/YaTC/MM4flow）
+- Notes:
+  - 31/37 个知识层页面完成更新，6 个无需更新（anomaly-detection×2, few-shot-traffic-learning, contrastive-learning, app-fingerprinting, survey-few-shot-learning）
+  - 6 批并行 Agent 处理，总耗时约 9 分钟
+  - 核心发现：ASNet 无预训练 SOTA 引发"预训练是否必要"新矛盾，已记录至 contradictions.md
+  - 开源方法新增：SUMo (flow correlation), NetMamba (SSM), Multi-ARCL (continual learning), ASNet (no-pretraining)

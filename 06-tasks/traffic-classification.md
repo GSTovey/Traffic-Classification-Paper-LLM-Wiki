@@ -43,6 +43,7 @@ updated: "2026-05-27"
 6. **分布偏移**：流量模式随时间演变（应用更新、CDN 变化），跨时间、跨网络环境的泛化能力不足
 7. **多视图融合**：时间序列视图（T-view）和字节视图（B-view）各有所长，但多视图训练中存在梯度竞争和视图抑制问题
 8. **可解释性**：监管要求 AI 系统具备可解释性，而深度学习模型的决策过程缺乏透明度
+9. **持续学习中的类变化**：真实网络环境中应用频繁上架/下架（静默应用），持续学习需同时处理新类学习和旧类遗忘，静默应用的神经元会干扰活跃应用分类（Multi-ARCL）
 
 ## 4. 常用方法
 
@@ -54,6 +55,11 @@ updated: "2026-05-27"
 | State Space Model (Mamba) | NetMamba+ (Mamba + Flash Attention + LDA loss) | 线性复杂度，推理吞吐量高（比 Transformer 快 1.7x），多模态融合，长尾处理 | Mamba 在网络领域首次应用，验证尚不充分；分布偏移敏感 |
 | 多视图学习 | ByteDance (TBFE 字节提取 + PDGC 梯度补偿) | 充分利用协议头字节和时间序列的互补性，解决视图抑制问题，参数量小（2.4M） | 需要协议格式先验知识，视图数量有限 |
 | 统计特征 + 传统 ML | AppScanner (packet size 统计 + RF)、FlowPrint (指纹 + 聚类) | 计算效率高，可解释性强 | 特征设计依赖专家经验，泛化能力有限，难以应对海量应用 |
+| 图像化 CNN | FlowPic (2D 直方图 + LeNet-5) | 将流转化为图像，自动学习特征，无需手工特征工程 | 1500x1500 分辨率计算开销大，Tor 流量精度较低 |
+| 多实例 Transformer | MIETT (Two-Level Attention + PRPP + FCL) | 分层建模 token 级和 packet 级关系，专用预训练任务 | 固定 N=5 packets 可能遗漏长 flow 信息，预训练计算成本高 |
+| Header-Payload 差异化预训练 | TraGe (Field-level Masking + Dynamic Masking) | 针对 header/payload 字节分布差异设计差异化掩码策略 | 仅处理单包，未建模 packet 间关系 |
+| 无预训练词义聚合 | ASNet (WSA + CSS + Task-aware Prompts) | 无需预训练即达 SOTA，参数量小，WSA 恢复完整词义 | 依赖 BERT 词表，仅分析单包，prompt 设计依赖经验 |
+| 线性注意力 GPT | TrafficGPT (Linear Attention + 可逆 Tokenization) | 突破 512 token 限制至 12K，同时支持分类和生成 | TLS 生成存在 malformed，自回归预训练未显式考虑分类任务 |
 | GNN 图方法 | TFE-GNN (图神经网络) | 建模流量的图结构关系 | 计算复杂度高，对无 payload 流量处理困难 |
 
 ## 5. 常用数据集
@@ -69,6 +75,11 @@ updated: "2026-05-27"
 | MIRAGE | 40 | ~100K flows | 流量分类 benchmark | 公开数据集 |
 | CESNET-TLS | 191 | ~38M flows | TLS 流量分类 | CESNET, 公开 |
 | CipherSpectrum | 41 | ~82,000 flows | 全加密流量（TLS 1.3/1.1） | 公开数据集 |
+| CHNAPP | 6 | ~1.29M packets | 真实世界应用分类（6 类） | 公开数据集（ASNet） |
+| DataCon2020 | 2 | ~10,000 pcap | 加密恶意流量检测（恶意/正常） | DataCon 竞赛, 2020 |
+| CIC-AndMal-2017 | 4 | ~40 pcap | Android 恶意软件流量（4 类恶意软件） | 公开数据集 |
+| MIRAGE2019 | 19 | ~100K flows | 移动应用流量分类 | 公开数据集 |
+| NJUPT2023 | 19 | 91 维统计特征 | 校园网流量分类（私有） | 南京邮电大学, 2023 |
 | CICIoT2022 | 6 | ~10,400 flows | IoT 攻击流量检测 | 公开数据集 |
 | Huawei-VPN | 12 | ~38,000 flows | VPN 流量分类（真实部署） | 华为 |
 
@@ -81,6 +92,11 @@ updated: "2026-05-27"
 | A Lightweight, Efficient and Explainable-by-Design CNN for Internet Traffic Classification (LEXNet) | 2023 | LERes Block + LProto Layer（原型网络） | AppClassNet (200 类, 9.7M flows), MIRAGE, CESNET-TLS | 119K 参数实现 89.7% 准确率，by-design 可解释性远超 Grad-CAM/SHAP；推理效率高，适合资源受限设备 |
 | NetMamba+: A Framework of Pre-trained Models for Efficient and Accurate Network Traffic Classification | 2026 | Mamba SSM + Flash Attention + 多模态表示 + LDA loss | CipherSpectrum, CSTNET-TLS1.3, USTC-TFC, ISCXVPN, Huawei-VPN 等 12 个数据集 | 首次将 Mamba 引入流量分类，推理吞吐量比 Transformer 快 1.7x；多模态融合和长尾处理提升显著，F1 最高提升 6.44% |
 | ByteDance: Let bytes perform brilliantly in multi-view encrypted traffic classification | 2026 | TBFE 两阶段字节提取 + PDGC 动态梯度补偿 | CSTNET-TLS1.3, MOBILE-APP, TOR, TROJAN-VPN | 解决多视图训练中 B-view 被 T-view 抑制的问题，四个数据集 ACC 显著超越次优方案；参数量仅 2.4M，GPU 内存 1.4GB |
+| FlowPic: Encrypted Internet Traffic Classification is as Easy as Image Recognition | 2019 | 2D 直方图图像化 + LeNet-5 CNN | ISCX VPN-nonVPN, ISCX Tor-nonTor | 首次将流量转化为图像进行分类，VPN 流量分类 99.7%，应用识别 99.7%，无需手工特征工程 — `[[03-paper-notes/2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition.md]]` |
+| MIETT: Multi-Instance Encrypted Traffic Transformer for Encrypted Traffic Classification | 2025 | Multi-Instance Learning + Two-Level Attention + PRPP/FCL 预训练 | ISCXVPN, ISCXTor, CrossPlatform, CICIoT | 将 flow 视为 packet 的 bag，分层建模 token/packet 级关系，CrossPlatform(Android) F1 提升 14.66% — `[[03-paper-notes/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification.md]]` |
+| TraGe: A Generic Packet Representation for Traffic Classification Based on Header-Payload Differences | 2025 | Field-level Masking (header) + Random Masking (payload) + Dynamic Masking | ISCX-VPN, USTC-TFC, CIC-IoT | 根据 header/payload 字节分布差异进行差异化预训练，应用分类 F1 超越 SOTA 6.97% — `[[03-paper-notes/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences.md]]` |
+| ASNet: Bottom Aggregating, Top Separating | 2025 | WSA 无参数词义聚合 + CSS 类别约束语义分离 + Task-aware Prompts | ISCXVPN, USTC-TFC, CICIoT, ISCXTor, CHNAPP | 无需预训练即在 5 数据集 7 任务上达 SOTA，WSA 使类间高频词重叠降低 36% — `[[03-paper-notes/2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding.md]]` |
+| TrafficGPT: Breaking the Token Barrier for Efficient Long Traffic Analysis and Generation | 2024 | 线性注意力 GPT + 可逆 Tokenization | CrossPlatform, ISCX-VPN, USTC-TFC, ISCX-Tor, CICIoT | 突破 512 token 限制至 12K，分类平均 F1 提升 2%，同时支持 pcap 生成 — `[[03-paper-notes/2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation.md]]` |
 
 ## 7. 工程落地问题
 
@@ -111,3 +127,4 @@ updated: "2026-05-27"
 - 大语言模型（LLM）能否与流量分析结合，实现更通用的网络流量理解？
 - 如何平衡模型可解释性与分类性能？by-design 方法的适用范围能否进一步扩展？
 - 在线学习（online learning）和增量学习（incremental learning）如何支持新应用类别的实时纳入？
+- 持续学习（Continual Learning）如何处理静默应用（silent applications）的遗忘问题？Multi-ARCL 的参数丢弃方法能否扩展到更大规模场景？ — 参见 `[[03-paper-notes/2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification.md]]`

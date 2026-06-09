@@ -93,7 +93,8 @@ $$h'(t) = \mathbf{A}h(t) + \mathbf{B}x(t), \quad y(t) = \mathbf{C}h(t)$$
 
 | 论文 | 年份 | 使用方式 | 贡献 |
 |---|---|---|---|
-| NetMamba+ (Wang et al.) | 2026 (arXiv, ICNP 2024) | 首次将 Mamba 引入网络流量分类 | 提出融合 Mamba + Flash Attention 的高效架构；设计多模态流量表示方案（stride + size + interval）；引入 LDA loss 处理长尾分布；推理吞吐量比 YaTC 高 1.7 倍，F1 最高提升 6.44% |
+| NetMamba (Wang et al., arXiv 2024) | 2024 | 首个将 Mamba/SSM 应用于网络流量分类的原始工作 | 提出单向 Mamba 架构 + MAE 预训练 + stride-based 流量表示方案；保留头部+载荷综合信息；推理速度比 Transformer 快 60 倍（batch=5），参数量仅 2.2M；在 6 个数据集上实现 SOTA（CrossPlatform/ISCXTor2016/ISCXVPN2016/CICIoT2022/USTC-TFC2016）。**注意**：此为 NetMamba 原始版本，与后续 NetMamba+ (ICNP 2024 / arXiv 2026) 为不同论文 |
+| NetMamba+ (Wang et al.) | 2026 (arXiv, ICNP 2024) | 在 NetMamba 基础上引入 Flash Attention | 提出融合 Mamba + Flash Attention 的高效架构；设计多模态流量表示方案（stride + size + interval）；引入 LDA loss 处理长尾分布；推理吞吐量比 YaTC 高 1.7 倍，F1 最高提升 6.44% |
 | Mamba: Linear-Time Sequence Modeling with Selective State Spaces (Gu & Dao) | 2023 | 原始 Mamba 架构 | 提出 Selective Scan 机制，将 SSM 参数设计为输入的函数；实现硬件感知的并行 scan 算法；在语言建模上匹配 Transformer 性能 |
 
 ## 9. 与其他方法的比较

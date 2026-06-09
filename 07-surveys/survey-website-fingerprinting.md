@@ -66,7 +66,18 @@ updated: "2026-05-27"
   - Zero-shot top-1 准确率 87.9%，AUC 0.963
   - 论文笔记：`[[03-paper-notes/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting.md]]`
 
-### 3.6 基于注意力机制的方法
+### 3.6 基于图神经网络的方法
+
+- **GFNC / GFGC**：两种基于 GNN 的网站指纹识别技术（Karunanayake et al., TIFS 2023）
+  - GFNC（节点分类）：将每个流量 trace 表示为图中的节点，客户端和入口守卫作为中心节点，175 个统计特征作为节点属性，使用消息传递 GNN + GRU 更新进行分类
+  - GFGC（图分类）：为每个流量 trace 创建独立的图（每包一个节点，包大小为属性，连续包间创建边，burst 间创建额外边），使用 CTDNE（Continuous-Time Dynamic Network Embedding）生成时序图嵌入
+  - 核心发现：DApp 比传统网站更难被指纹识别（精度下降 25%）；reload 流量显著降低现有方法性能（AWF 下降 6%，TikTok 下降 14%）
+  - GNN 在 reload 场景下表现最佳：GFNC Top-1 62.01%，超越所有 baseline
+  - 5 个新数据集覆盖多种 WF 场景
+  - 局限：GFGC 的 CTDNE 嵌入生成计算开销大（约 400 小时），数据集规模较小
+  - 论文笔记：`[[03-paper-notes/2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting.md]]`
+
+### 3.7 基于注意力机制的方法
 
 - **BAPM**：CNN + 块注意力 profiling，需预知标签数量
 - **ARES**：每网站独立 Transformer，支持动态标签数但模型数量随网站增长
@@ -78,6 +89,7 @@ updated: "2026-05-27"
 | 2014-2016 | 统计特征方法 | CUMUL, APPscanner, k-fingerprinting | 手工特征 + 传统 ML |
 | 2018 | 深度学习突破 | DF (Deep Fingerprinting) | CNN 攻破流量防御 |
 | 2019-2020 | 多标签场景 | BAPM, ARES | 固定/动态标签数的多标签 WF |
+| 2023 | GNN 方法 + DApp WF | GFNC, GFGC | GNN 建模流量图结构，首次系统研究 DApp 和 reload 流量 |
 | 2024 | 因果关系引入 | RobustWF | Causality + Context，鲁棒多标签 |
 | 2025 | 迁移鲁棒性 | Swallow | CIF + BYOL，跨环境一致特征 |
 | 2025 | 零样本能力 | STAR | 跨模态检索，零样本 WF |
@@ -89,6 +101,7 @@ updated: "2026-05-27"
 - Swallow (CCS 2025)：迁移鲁棒 WF，CIF + BYOL — `[[03-paper-notes/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.md]]`
 - STAR (arXiv 2025)：零样本 WF，跨模态检索 — `[[03-paper-notes/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting.md]]`
 - FlowPrint (NDSS 2020)：半监督移动应用指纹识别，目的地时间相关性 — `[[03-paper-notes/2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.md]]`
+- GFNC/GFGC (TIFS 2023)：GNN-based WF，节点分类+图分类，DApp 和 reload 场景 — `[[03-paper-notes/2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting.md]]`
 
 ## 6. 当前趋势
 

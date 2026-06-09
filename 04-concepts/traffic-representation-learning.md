@@ -37,6 +37,10 @@ Traffic Representation Learning 是指将原始网络流量数据（字节序列
 | **图级表示（Graph-level）** | 将流量流抽象为图结构（如 TIG），节点代表数据包，边编码交互关系，用 GNN 提取特征 | 隐式保留 direction、length、ordering、burst 等多维信息；无需手工特征 | 计算复杂度较高；图构建方式影响表示质量；难以建模长距离依赖 | GraphDApp (TIFS 2021) |
 | **多模态表示（Multimodal / Cross-domain）** | 将流量映射到其他信号域（如音频），利用该域成熟的特征提取技术（如 MFCC）获取紧凑表示 | 保留时间连续性；低维紧凑；计算高效；可利用跨域先验知识 | 映射方式的选择缺乏理论指导；语义混淆（header/payload 未分离）；对参数（如 bit depth）敏感 | TrafficAudio (TNSM 2026) |
 | **协议头语义表示（Header-aware）** | 专门从协议头部字段提取语义信息，忽略加密 payload，通过问答等任务学习协议头的结构化含义 | 避免对加密 payload 的无效建模；表征质量在 frozen encoder 下最优 | 依赖协议头字段的可获取性；当头部也被加密（如 ECH）时适用性受限 | Pcap-Encoder (SIGCOMM 2025) |
+| **图像化 2D 直方图表示（Image-based）** | 将流量的包大小和到达时间转化为二维直方图图像（FlowPic），利用 CNN 从图像中提取流量特征 | 开创性地将流量分类转化为图像分类；对 VPN/Tor 流量有效 | 固定图像尺寸限制灵活性；对超长/超短流适应性有限 | FlowPic (INFOCOM 2019) |
+| **多实例包级表示（Multi-instance Packet-level）** | 将 flow 中每个 packet 视为独立实例，通过 Two-Level Attention（Packet Attention + Flow Attention）同时学习 packet 级和 flow 级表示 | 显式建模 packet 间交互关系；PRPP 预训练捕获 packet 相对位置信息 | 计算开销较高；对 packet 数量敏感 | MIETT (AAAI 2025) |
+| **Header-Payload 差异化表示** | 区分 header（连续字节序列）和 payload（非连续字节序列），分别采用 Field-level Masking 和 Random Masking 学习差异化表示 | 充分利用协议结构先验知识；Dynamic Masking 防止过拟合；通用表示可迁移到多种任务 | 依赖 header/payload 分离的准确性 | TraGe (IWQoS 2025) |
+| **无参数词义聚合表示（Word Sense Aggregation）** | 通过无参数聚合器（WSA）将 BERT 的 WordPiece 子词聚合为完整字节级词义，保持流量数据的完整语义信息 | 无需预训练；WSA 保持完整词义避免 WordPiece 破坏；配合 CSS 实现语义空间显式分离 | 仍依赖预训练 BERT 的通用语言知识作为初始化 | ASNet (TIFS 2025) |
 
 ## 4. 相关方法
 
@@ -68,6 +72,10 @@ Traffic Representation Learning 是指将原始网络流量数据（字节序列
 | GraphDApp (TIFS) | 2021 | 首次将图分类用于加密流量分类；提出 TIG 图结构隐式保留 direction/length/ordering/burst 四维特征；基于 WL test 的理论保证；闭世界准确率 89.22%，开世界 AUC 0.9973 | 未使用时间戳信息；对应用流量特征变化的适应性有限；图构建方式固定 |
 | TrafficAudio (TNSM) | 2026 | 首次将音频表示应用于加密流量分类；流量字节自动转音频 + MFCC 提取时频特征；FLOPs 仅 1.86M（较最优基线降低 87%）；6 个任务准确率均超 98% | 语义混淆（header/payload 未分离）；固定会话长度 1568 字节；封闭集假设；bit depth 参数敏感 |
 | Sweet Danger (SIGCOMM) | 2025 | 系统性揭示已有表征学习模型的数据泄漏和 shortcut learning 问题；证明 per-packet split + unfrozen encoder 下的高准确率主要源于 SeqNo/AckNo 等 implicit flow ID；提出 Pcap-Encoder（T5 + Autoencoder + Q&A）；倡导 per-flow split + frozen encoder + macro F1 的正确评估方法 | 浅层模型（RF/XGBoost/LightGBM）仍优于 Pcap-Encoder；Pcap-Encoder 计算开销大（16x RF） |
+| FlowPic (INFOCOM) | 2019 | 开创性地将流量的包大小和到达时间转化为 2D 直方图图像，用 CNN 进行分类；在 VPN/Tor 流量上实现高精度类别识别 | 固定图像尺寸限制灵活性；数据集规模较小 |
+| MIETT (AAAI) | 2025 | 首次将多实例学习引入流量表示，将 flow 中每个 packet 视为独立实例，通过 Two-Level Attention 同时学习 packet 级和 flow 级表示；PRPP+FCL 预训练任务 | 计算开销较高；对 packet 数量敏感 |
+| TraGe (IWQoS) | 2025 | 基于 header-payload 差异的通用数据包表示，Field-level Masking 和 Dynamic Masking 差异化预训练，超越 SOTA 最高 6.97% | 依赖 header/payload 分离的准确性 |
+| ASNet (TIFS) | 2025 | 无参数词义聚合器（WSA）保持完整字节级词义，配合类别约束语义分离器（CSS）显式分离不同类别语义空间，无需预训练即达 SOTA | 仍依赖预训练 BERT 作为初始化 |
 
 ## 7. 当前共识
 
@@ -101,3 +109,4 @@ Traffic Representation Learning 是指将原始网络流量数据（字节序列
 - 流量表示学习中的 shortcut learning 问题能否通过数据增强、对比学习或其他技术手段缓解？
 - 在跨时间（temporal shift）、跨网络环境（domain shift）的场景下，如何保证流量表示的泛化能力？
 - 能否将 LLM 的大规模预训练经验（如 scaling law）迁移到流量表示学习中？
+- 多实例表示（Multi-instance Representation）作为介于 packet-level 和 flow-level 之间的新范式，能否在更多任务和数据集上验证其有效性？MIETT 的 Two-Level Attention 框架是否可以与其他表示方法（如图像化、图级表示）结合？

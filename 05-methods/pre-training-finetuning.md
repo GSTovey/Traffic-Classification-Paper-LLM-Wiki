@@ -90,6 +90,11 @@ Pre-training and Fine-tuning（预训练-微调范式）是一种两阶段学习
 | ET-BERT (WWW 2022) | 2022 | Encoder-only BERT，MBM + SBP 预训练，packet/flow-level 微调 | 首个面向加密流量设计专属预训练任务的 BERT 模型；提出 Datagram2Token 框架；在 5 个加密流量分类任务上取得 SOTA；通过密码随机性分析提供理论解释 |
 | NetMamba+ (ICNP 2024 / arXiv 2026) | 2026 | Mamba + Flash Attention 骨干，MAE 预训练，LDA 微调 | 首次将 Mamba 引入流量分类；多模态流量表示（stride + size + interval）；LDA loss 处理长尾分布；推理吞吐量比最佳 baseline 高 1.7 倍 |
 | MM4flow (CCS 2025) | 2025 | 双模态 BERT（BERT-bytes + BERT-ps），uni-modal 预训练 + cross-attention 微调 | 首次在 TB 级（77.6 TB）真实流量上预训练；多模态融合（payload byte stream + packet length sequence）；加密隧道网站识别准确率比现有预训练模型提升 84% |
+| MIETT (AAAI 2025) | 2025 | Multi-Instance Transformer，PRPP + FCL 预训练任务 | 提出两个面向流量特性的预训练任务：PRPP（Packet Relative Position Prediction，预测 packet 对的相对位置以捕获时序关系）和 FCL（Flow Contrastive Learning，同 flow 内不同 position 的 packet 为正对进行对比学习以捕获 flow 级别特征）；配合 MFP（Masked Flow Prediction）预训练，在 5 个数据集上达到 SOTA |
+| TraGe (IWQoS 2025) | 2025 | Transformer + Field-level Masking 预训练 | 提出针对流量数据特点的差异化预训练策略：对 header 使用 Field-level Masking（从几何分布 Geo(p) 采样连续长度进行掩码，保持协议字段字节连续性），对 payload 使用 Random Masking（适配非连续字节分布）；引入 Dynamic Masking 防止过拟合；在应用分类上超越 SOTA 6.97% |
+| TrafficGPT (arXiv 2024) | 2024 | GPT-style 自回归预训练，线性注意力 Transformer | 使用 GPT-style 自回归预训练（next token prediction）学习流量模式，通过线性注意力机制将 token 容量从 512 扩展到 12,032；结合可逆 token 表示实现 pcap ↔ token 双向映射；同一模型同时支持分类和生成，分类平均 F1 提升 2% |
+| NetMamba (arXiv 2024) | 2024 | 单向 Mamba + MAE 预训练，stride-based 表示 | 首个将 Mamba/SSM 应用于流量分类的预训练模型；使用 MAE（Masked Autoencoder）对 stride 序列进行 90% 比例的遮蔽重建预训练；stride-based 1D cutting 保留序列语义优于 2D patch splitting；参数量仅 2.2M，推理速度比 Transformer 快 60 倍 |
+| ASNet (TIFS 2025) | 2025 | **反例**：无需预训练即达 SOTA | 通过 WSA（无参数词义聚合器）恢复 BERT 对流量字节的完整词义 + CSS（类别约束语义分离器）配合任务感知提示显式分离不同类别语义空间，直接利用 BERT 已有通用知识，在 5 个数据集 7 个任务上无需预训练即超越 ET-BERT 和 YaTC，大幅降低计算成本 |
 | Talk Like a Packet (arXiv 2026) | 2026 | 统一预训练-微调流水线，系统分类现有模型 | 提出 Transformer 流量基础模型的统一工作流程；从架构、输入模态、预训练策略三个维度对现有模型进行系统分类；验证基础模型在分类、预测、生成三类任务上的泛化能力 |
 
 ## 9. 与其他方法的比较

@@ -54,6 +54,7 @@ updated: "2026-05-27"
 - LoRA - Low-Rank Adaptation - 低秩适应
 - K-Means Clustering - K-Means 聚类
 - AutoML - 自动机器学习
+- Session-Transformer - 基于修改 Transformer encoder 的加密流量特征提取方法，可作为传统 ML 的 plug-in 模块
 
 ## 5. 相关任务
 
@@ -78,6 +79,7 @@ updated: "2026-05-27"
 | MET-LLM - Enhancing Large Language Models for Malicious Encrypted Traffic Detection | 2025 | 首次将 LLM（Deepseek-7B）应用于恶意加密流量检测，领域专用 BPE tokenization + DATA 参数高效适配（0.0009% 参数），四个数据集 F1 均 > 0.96，100 样本 + 20 秒快速适应 | 计算资源需求高（14GB GPU），吞吐量约 2,500 flows/s，高速链路线速检测可能不足 |
 | IDRF - Malicious QUIC C2 Traffic Detection based on Random Forest in Programmable Data Plane | 2025 | 在 P4 可编程交换机上部署 Random Forest + INT 遥测特征，微秒级推理延迟（~0.5 us），服务器端准确率 99.83% | 交换机端准确率降至 82.1%，仅用 Merlin C2 合成数据，强依赖 INT 基础设施 |
 | JA4+ - Using JA4+ Fingerprints for Malware Detection in Encrypted Traffic | 2024 | 系统评估 JA4+JA4S+SNI 组合指纹在加密恶意软件检测中的效果，唯一性 87%，覆盖约 80% 恶意软件家族，恶意/良性重叠仅 1.02% | JA4X 覆盖率低（<30%），依赖 SNI（可被伪造/加密），无法检测零日攻击 |
+| Session-Transformer: A Detection Method for Malware Communication Traffic via Encrypted Traffic Analysis (Wei et al., JIoT) | 2025 | 提出基于修改 Transformer encoder 的 Session-Transformer 特征提取 + DNN 分类器，自动提取 TLS 流量的上下文关联和时序特征；ST 特征提取可作为传统 ML 的 plug-in 模块增强性能；DataCon2020 召回率 98.34%，CIC-AndMal-2017 精确率 93.54% | CIC-AndMal-2017 存在 timestamp-high 数据泄漏问题（同一恶意样本的时间戳特征可能泄漏类别信息）；未验证跨数据集泛化 |
 
 ## 7. 当前共识
 
@@ -127,5 +129,6 @@ updated: "2026-05-27"
 - 在可编程数据平面上部署更复杂的模型（如轻量级神经网络）是否可行？准确率损失能否控制在可接受范围内？
 - 对比学习中的拓扑驱动预训练策略能否推广到其他网络分析任务（如应用分类、网站指纹识别）？
 - 如何构建覆盖更广泛攻击类型和网络环境的标准化恶意流量检测基准数据集？
+- DataCon2020（10000 pcap，二分类）和 CIC-AndMal-2017（4 类恶意软件家族）作为新基准数据集的价值：CIC-AndMal-2017 存在 timestamp-high 数据泄漏问题（同一恶意样本的时间戳特征可能泄漏类别信息），使用时需注意评估方法的合理性
 - 持续学习（continual learning）在恶意流量检测中的应用：如何在适应新威胁的同时避免灾难性遗忘？
 - 模型的可解释性在安全运维中的实际价值：决策树和指纹方法的可解释性优势是否能转化为更好的运维效率？

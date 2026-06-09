@@ -57,6 +57,7 @@ updated: "2026-05-27"
 | 对比学习 | SmartDetector (SAM + Contrastive Learning) | 对混淆流量鲁棒、few-shot 学习能力强、SAM 表示区分度高 | 预训练时间较长、嵌入字典构建需大量背景流量 |
 | 可编程数据平面部署 | IDRF (Random Forest + INT + P4 Switch) | 微秒级推理延迟（~0.5 us）、近源检测、模型可解释 | 交换机端准确率损失大（82.1% vs 99.83%）、强依赖 INT |
 | 元学习 | FC-Net / TF (Meta-Learning) | 支持 few-shot 学习、预训练一次可复用 | 预训练阶段仍依赖大量标注数据、对混淆流量鲁棒性差 |
+| Session-Transformer + DNN | ST (Modified Transformer Encoder) + DNN | 自动提取加密流量上下文和时序特征，ST 可作为传统 ML 插件增强性能 | 计算开销大、小数据集上对部分模型有负向影响 |
 | 图神经网络 | EULER / HyperVision (GNN) | 能建模主机间通信拓扑、捕获跨流关联 | 计算复杂度高、对实时检测支持有限 |
 
 ## 5. 常用数据集
@@ -70,6 +71,8 @@ updated: "2026-05-27"
 | MAWI (WIDE) | 骨干网流量 | 百万级流 | 真实互联网骨干网流量，用于预训练和异常检测基准 |
 | USTC-TFC | 恶意软件流量 | 14K+ flows | 包含 Htbot、Neris、Miuref、Virut 等恶意软件家族 |
 | CIC-IoV-2024 | 车联网安全 | 76K+ flows | 包含漏洞扫描、OS 扫描、洪泛攻击等车联网攻击 |
+| DataCon2020 | 加密恶意流量 | 10,000 pcap (5000 benign + 5000 malicious) | TLS 加密恶意流量二分类（DataCon 竞赛） |
+| CIC-AndMal-2017 | Android 恶意软件 | 40 pcap (4 类恶意软件各 10) | 四分类恶意软件家族识别 |
 
 ## 6. 代表论文
 
@@ -80,6 +83,7 @@ updated: "2026-05-27"
 | [MET-LLM: Enhancing Large Language Models for Malicious Encrypted Traffic Detection](03-paper-notes/2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection.md) (MET-LLM) | 2025 | 领域 BPE + Deepseek LLM + DATA 适配器 | ISCX Tor/VPN, APP-53, CSTNET | 首次将 LLM 系统应用于恶意加密流量检测，F1 均超 0.96，仅需 0.0009% 参数微调，100 样本 20 秒即可适应新威胁 |
 | [Robust Detection of Malicious Encrypted Traffic via Contrastive Learning](03-paper-notes/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.md) (SmartDetector) | 2025 | SAM 流量表示 + 对比学习 + ResNet | CIC-IDS-2017, CIC-DDoS-2019, DoHBrw, USTC-TFC, CIC-IoV | 提出 Semantic Attribute Matrix 表示，evasion attack 场景下 F1/AUC 超 93%，比 SOTA 平均提升 19.84% |
 | [Malicious QUIC C2 Traffic Detection based on Random Forest in Programmable Data Plane](03-paper-notes/2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane.md) (IDRF) | 2025 | Random Forest + INT + P4 交换机 | NetFlow-QUIC + Merlin C2 | 在 P4 可编程交换机上实现微秒级（~0.5 us）C2 检测，INT 特征使交换机端准确率从 9.6% 提升至 82.1% |
+| A Detection Method for Malware Communication Traffic via Encrypted Traffic Analysis (Session-Transformer) | 2025 | Modified Transformer Encoder (8 heads, 8 layers) + DNN 分类器 | DataCon2020, CIC-AndMal-2017 | Session-Transformer 自动提取加密流量上下文和时序特征，DataCon2020 召回率 98.34%，CIC-AndMal-2017 精确率 93.54%；ST 特征可作为传统 ML 插件增强 KNN 性能 7.92% — `[[03-paper-notes/2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis.md]]` |
 
 ## 7. 工程落地问题
 

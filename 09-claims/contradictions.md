@@ -2,7 +2,7 @@
 type: claims
 name: contradictions
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-09"
 ---
 
 # Contradictions
@@ -21,3 +21,4 @@ updated: "2026-05-27"
 | 评估指标的选择与结论可靠性 | Sweet Danger (SIGCOMM 2025)：批评 micro F1-Score 偏向多数类，推荐使用 macro F1-Score；指出在 macro F1 下已有模型性能被严重高估 | 多数加密流量分类论文（ET-BERT、YaTC、NetMamba 等）：使用 micro F1 或整体准确率报告结果，少数类性能被掩盖 | Sweet Danger 认为使用 micro F1 是误导性的，掩盖了模型在少数类上的糟糕表现；其他论文认为 micro F1 反映了整体分类效果 | 类别不平衡数据集中，micro F1 按样本数加权，少数类的贡献被稀释。例如 ET-BERT 在 120 类 TLS 分类中，热门网站的良好表现可掩盖冷门网站的低准确率。Sweet Danger 的实验显示 micro F1 与 macro F1 差异可达 30%+ |
 | 流量表示中信息来源的本质 | SoK (S&P 2025)：通过遮蔽实验证明仅头部信息时 ET-BERT 准确率 0.63（与基线一致），仅加密 payload 时仅 0.12，说明头部信息是主要分类依据 | ET-BERT (WWW 2022)：提出 Datagram2Token 框架，声称从加密 datagram 的字节级模式中通过 MBM 学习到上下文关系，是分类性能的关键来源（去除 MBM 后 F1 下降 9.33%） | SoK 认为加密 payload 本身几乎不包含可学习信息，分类主要依赖协议头；ET-BERT 认为 payload 中的字节模式是可学习的且对分类至关重要 | SoK 使用 CipherSpectrum（纯 TLS 1.3 数据集，强加密），ET-BERT 的预训练数据包含弱加密流量（RC4、3DES）和未加密流量。在弱加密/未加密场景下 payload 确实包含可学习模式，但在强加密（TLS 1.3 + AES-GCM）下这些模式消失。两者结论在各自条件下均成立，但泛化性不同 |
 | WF 防御的鲁棒性与可迁移攻击 | Palette (S&P 2024)：声称在 adversarial training 设置下仍有效，将 RF 攻击准确率降至 36.43%，是唯一同时抵抗 AdvTrain、适应实时流量、掩盖 informative features 的防御 | Swallow (CCS 2025)：通过 CIF 动态对齐和自监督学习，在 Front 防御下准确率 62.41%（比 NetCLR 高 44%），在 RegulaTor 下 33.60%，证明自适应攻击仍可部分攻破防御 | Palette 声称现有防御的不足可通过 traffic cluster anonymization 解决；Swallow 证明即使先进的防御也可通过更好的特征表示和迁移学习部分攻破 | 攻击和防御评估的假设不同：Palette 评估的是传统 WF 攻击（DF、RF 等）在 adversarial training 下的表现；Swallow 提出了全新的攻击范式（CIF + BYOL 自监督 + few-shot 迁移），通过动态时间间隔对齐捕获跨网络条件的一致性特征。两者说明攻防是持续演进的，不存在"终极"防御 |
+| 预训练是否必要 | ASNet (TIFS 2025)：不使用任何预训练，在 5 个数据集 / 7 个任务上达到 SOTA，通过 WSA+CSS 模块直接利用 BERT 已有的通用语言知识进行领域适配 | ET-BERT (WWW 2022)、YaTC (AAAI 2023)、MM4flow (CCS 2025)、TrafficGPT (arXiv 2024)：ET-BERT 去除预训练后 F1 从 93.95% 降至 56.38%（-37.57%），MM4flow 和 TrafficGPT 均证明大规模预训练带来显著性能增益 | ASNet 证明无需预训练即可通过领域适配模块（WSA 词义聚合 + CSS 语义分离）达到 SOTA；预训练阵营认为从头构建领域知识是性能的关键来源 | ASNet 通过词义聚合复用 BERT 已有的通用语言知识（本质是 transfer learning），而预训练方法从零构建流量领域专用知识。两种路径可能在不同条件下均有效：ASNet 的方法适合计算资源有限、标注数据充足的场景；预训练方法适合有大规模原始流量数据、追求极致性能的场景。核心差异在于知识来源：通用语言模型的已有知识 vs 流量领域从头学习的知识 |

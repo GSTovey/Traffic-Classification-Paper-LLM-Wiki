@@ -50,10 +50,13 @@ updated: "2026-05-27"
 | 技术路线 | 核心思想 | 优点 | 局限 | 代表论文 |
 |---|---|---|---|---|
 | **传统机器学习 + 手工特征** | 从加密流量中提取统计特征（包大小均值/方差/分位数、包间隔时间、突发模式等），使用 RF/SVM/k-NN 等分类器 | 可解释性强、训练快、计算成本低、在正确评估下仍优于深度学习 | 依赖专家经验进行特征工程、泛化能力有限、难以应对海量类别 | AppScanner (Taylor et al., 2018), CUMUL (Panchenko et al., 2016) |
-| **深度学习 + 原始流量表示** | 将原始流量数据转换为序列/图像/图结构，使用 CNN/LSTM/GNN 等深度网络自动提取特征 | 自动特征提取、端到端学习、可处理复杂流量结构 | 需大量标注数据、计算资源消耗大、黑盒可解释性差 | DeepFingerprinting (Sirinam et al., 2018), GraphDApp (Shen et al., 2021) |
-| **预训练 + Fine-tuning 范式** | 从大规模无标注流量数据中预训练通用表示模型，再用少量标注数据 fine-tuning 适配下游任务 | 解决标注数据稀缺问题、few-shot 能力强、可复用预训练知识 | 预训练计算成本高、预训练数据安全性风险、表征质量存疑 | ET-BERT (Lin et al., 2022), PERT, TrafficFormer, netFound |
+| **深度学习 + 原始流量表示** | 将原始流量数据转换为序列/图像/图结构，使用 CNN/LSTM/GNN 等深度网络自动提取特征 | 自动特征提取、端到端学习、可处理复杂流量结构 | 需大量标注数据、计算资源消耗大、黑盒可解释性差 | DeepFingerprinting (Sirinam et al., 2018), GraphDApp (Shen et al., 2021), FlowPic (Shapira et al., 2019) |
+| **预训练 + Fine-tuning 范式** | 从大规模无标注流量数据中预训练通用表示模型，再用少量标注数据 fine-tuning 适配下游任务 | 解决标注数据稀缺问题、few-shot 能力强、可复用预训练知识 | 预训练计算成本高、预训练数据安全性风险、表征质量存疑 | ET-BERT (Lin et al., 2022), PERT, TrafficFormer, netFound, MIETT (PRPP+FCL), TraGe (Field-level Masking), TrafficGPT (GPT-style autoregressive) |
 | **协议头特征 + 浅层模型** | 仅从协议头部字段提取特征，忽略加密 payload，使用浅层 ML 模型（RF/XGBoost/LightGBM） | 在正确评估下性能最优、计算效率高、可解释性强 | 特征设计仍需专家知识、难以利用 payload 长度以外的信息 | Sweet Danger (Zhao et al., 2025) 中的 Shallow Baseline |
 | **表征学习 + Transformer 架构** | 使用 ViT/Mamba/T5 等架构从原始流量字节中学习上下文化表示 | 架构先进、理论上可捕获复杂模式 | 实际性能存疑（per-flow split 下大幅下降）、计算开销大、shortcut learning 问题严重 | YaTC, NetMamba, Pcap-Encoder |
+| **无预训练 SOTA（ASNet）** | 通过无参数词义聚合器（WSA）使 BERT 快速适配流量数据，配合类别约束语义分离器（CSS）和任务感知提示显式分离不同类别语义空间 | 无需预训练即达 SOTA；大幅降低计算成本；WSA 保持完整词义避免 WordPiece 破坏 | 仍依赖预训练 BERT 的通用语言知识作为初始化；WSA 聚合粒度需进一步验证 | ASNet (Peng et al., TIFS 2025) |
+| **多实例 Transformer + 预训练** | 将 flow 中每个 packet 视为独立实例，通过 Two-Level Attention（Packet+Flow）捕获 token 级和 packet 级关系，PRPP+FCL 预训练任务适配流量数据 | 显式建模 packet 间交互；预训练任务针对流量特性设计 | 计算开销较高；对 packet 数量敏感 | MIETT (Chen et al., AAAI 2025) |
+| **Header-Payload 差异化预训练** | 区分 header（连续字节）和 payload（非连续字节），分别采用 Field-level Masking 和 Random Masking 进行差异化预训练 | 充分利用协议结构先验知识；Dynamic Masking 防止过拟合 | 依赖 header/payload 分离的准确性 | TraGe (Lin et al., IWQoS 2025) |
 
 ## 4. 相关方法
 
@@ -92,6 +95,9 @@ updated: "2026-05-27"
 | **The Sweet Danger of Sugar: Debunking Representation Learning for Encrypted Traffic Classification** (Zhao et al., SIGCOMM) | 2025 | 系统性揭示已有表征学习模型（ET-BERT、YaTC、NetMamba 等）的 per-packet split 数据泄漏和 shortcut learning 问题，证明正确评估下准确率暴跌至 30%-40% | Pcap-Encoder 性能仍不及浅层模型（RF/XGBoost/LightGBM），表征学习的实际价值尚不明确 |
 | **DeepFingerprinting: Website Fingerprinting Attacks and Defenses in the Age of Deep Learning** (Sirinam et al., CCS) | 2018 | 首个将 CNN 应用于网站指纹攻击的工作，包方向序列表示 + CNN 架构，可对抗 WTF-PAD 和 Walkie-Talkie 防御 | 依赖 closed-world 评估，open-world 场景性能下降 |
 | **GraphDApp: A Accurate and Efficient DApp Identification System based on Graph Neural Networks** (Shen et al., TIFS) | 2021 | 将流量交互建模为图结构，使用 GNN 识别区块链去中心化应用，捕获应用内交互模式 | 计算复杂度高，仅针对 DApp 场景 |
+| **ASNet: Bottom Aggregating, Top Separating** (Peng et al., TIFS) | 2025 | 通过无参数词义聚合器（WSA）和类别约束语义分离器（CSS），无需预训练即在 5 个数据集 7 个任务上达到 SOTA，挑战了预训练在加密流量分类中的必要性 | 仍依赖预训练 BERT 作为初始化；WSA 聚合粒度需进一步验证 |
+| **MIETT: Multi-Instance Encrypted Traffic Transformer** (Chen et al., AAAI) | 2025 | 首次将多实例学习引入加密流量分类，Two-Level Attention 同时捕获 token 级和 packet 级关系，PRPP+FCL 预训练任务在 5 个数据集上 SOTA | 计算开销较高；对 packet 数量敏感 |
+| **TraGe: A Generic Packet Representation** (Lin et al., IWQoS) | 2025 | 基于 header-payload 差异的通用数据包表示，Field-level Masking 和 Dynamic Masking 差异化预训练，超越 SOTA 最高 6.97% | 依赖 header/payload 分离的准确性 |
 
 ## 7. 当前共识
 
@@ -106,6 +112,8 @@ updated: "2026-05-27"
 5. **加密 payload 中是否存在可学习模式仍是开放问题**：SoK 的特征遮蔽实验（E1-E3）表明分类器无法从加密 payload 学习内在模式（准确率仅 0.12），但 ET-BERT 的消融实验显示去除预训练后 F1 下降 37.57%，两种证据相互矛盾。
 
 6. **预训练范式在加密流量分类中的价值尚不确定**：ET-BERT 声称预训练带来巨大提升，但 Sweet Danger 证明其高性能源于 per-packet split 的数据泄漏（移除 SeqNo/AckNo/Timestamp 后准确率从 97.4% 暴跌至 19.5%，随机初始化权重仍达 97.1%）。
+
+7. **无预训练范式已成为反趋势**：ASNet (Peng et al., 2025) 证明通过无参数词义聚合器（WSA）和类别约束语义分离器（CSS），无需预训练即可在 5 个数据集 7 个任务上达到 SOTA，直接挑战了"预训练是必要的"这一共识。
 
 ## 8. 争议与矛盾
 
@@ -135,7 +143,15 @@ updated: "2026-05-27"
 
 **核心矛盾**：per-packet split 下的高准确率是否具有实际意义？如果模型学会的是"将包关联到已知流"而非"从包内容推断类别"，则这种能力在实际部署中毫无价值。
 
-### 8.4 SNI 的可用性前景
+### 8.5 预训练是否必要？
+
+**预训练必要方**：ET-BERT、MIETT、TraGe 等模型通过预训练在多个数据集上取得 SOTA，预训练任务（PRPP、FCL、Field-level Masking 等）针对流量数据特性设计，能有效学习通用表示。
+
+**预训练非必要方**：ASNet (Peng et al., 2025) 通过无参数词义聚合器（WSA）使 BERT 快速适配流量数据，配合类别约束语义分离器（CSS）显式分离不同类别的语义空间，无需预训练即在 5 个数据集 7 个任务上达到 SOTA。Sweet Danger 也证明在 per-flow split + frozen encoder 下，浅层模型优于所有预训练表征学习模型。
+
+**核心矛盾**：预训练的价值是否被高估？ASNet 的成功表明，精心设计的特征聚合和语义分离机制可能比大规模预训练更重要，但 ASNet 仍依赖预训练 BERT 的通用语言知识作为初始化。
+
+### 8.6 SNI 的可用性前景
 
 当前多数研究依赖 Server Name Indication (SNI) 进行数据标注和分类，但 TLS 1.3 的 Encrypted Client Hello (ECH) 机制将加密 SNI，这将从根本上改变数据标注方式和部分分类方法的可行性。这一变化的时间表和影响程度存在不确定性。
 

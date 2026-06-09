@@ -78,6 +78,9 @@ updated: "2026-05-27"
 - Feature Decoupling - 特征解耦
 - Semantic Anchor - 语义锚点
 - Burst Traffic Model - 流量突发模型
+- Opcode Fingerprinting - 基于 OpenVPN 操作码字节模式的被动指纹识别
+- ACK Fingerprinting - 基于 OpenVPN ACK 包大小和模式的被动指纹识别
+- Active Probing - 主动探测，通过发送特定探测包验证服务身份
 - N-gram Feature Extraction - N-gram 特征提取
 - Chi-squared Test - 卡方检验
 - Mahalanobis Distance - 马氏距离
@@ -106,6 +109,7 @@ updated: "2026-05-27"
 | AN-Net: an Anti-Noise Network for Anonymous Traffic Classification | 2024 | WWW | 提出短期表征学习 + 高温自注意力机制抵抗 irrelevant packet noise，多模态融合对抗 per-packet attribute noise，SJTU-AN21 F1 达 94.39% | 自建数据集验证；噪声模型假设简化（随机注入） |
 | Fingerprinting Obfuscated Proxy Traffic with Encapsulated TLS Handshakes | 2024 | USENIX Security | 利用嵌套协议栈中封装 TLS 握手作为 protocol-agnostic 代理指纹，ISP 部署 30 天处理 1.1 亿+ flows，FPR 仅 0.0544% | multiplexing 将 TPR 降低 70%+；TLS 1.3 检测精度低于 1.2 |
 | DecETT: Accurate App Fingerprinting Under Encrypted Tunnels via Dual Decouple-based Semantic Enhancement | 2025 | WWW | 引入 TLS 流量作为语义锚点，双解耦模块分离隧道特征与应用语义，5 种隧道下 F1 达 84%-94% | 需要并行 TLS-隧道流对训练；单应用假设；不涉及隧道检测 |
+| OpenVPN is Open to VPN Fingerprinting (Xue et al.) | 2022 | USENIX Security | 提出两阶段框架（Opcode+ACK 被动指纹 + 活跃探测），在百万用户 ISP 网络中以极低误报率识别超 85% OpenVPN 流量，成功识别 41 个"混淆"配置中的 34 个 | 仅针对 OpenVPN 协议；活跃探测需要网络控制能力 |
 
 ## 7. 当前共识
 

@@ -25,6 +25,19 @@ updated: "2026-05-27"
 | DF95 (Deep Fingerprinting) | Tor 网站指纹攻击（闭世界） | 流量方向序列 | 95 网站 x 1,000 traces = 95,000 traces | 网站指纹攻击领域最广泛使用的基准数据集；数据量充足，支持 10-fold 交叉验证；Alexa Top-100 网站，代表性强 | 闭世界假设过于理想化；仅使用 packet direction，忽略 packet size 和 timing；数据时效性下降（10-14 天后准确率下降） | Deep Fingerprinting (CCS 2018)；Swallow (CCS 2025)；Palette (S&P 2024) |
 | Browser | 浏览器流量分类 | 流量包（PCAP） | 7.4 GB (4 类浏览器) | 区分不同浏览器的加密流量特征；在多模态方法研究中有参考价值 | 类别数量极少（仅 4 类）；任务相对简单；公开获取途径有限 | FlowPrint (NDSS 2020)；MM4flow (CCS 2025) |
 | CIC-IOT2023 | IoT 加密流量分类与攻击检测 | 流量包（PCAP）+ CSV 特征 | 涵盖 33 种 IoT 设备和多种攻击类型 | 覆盖最新的 IoT 设备和攻击场景；设备种类丰富；包含正常和攻击流量 | IoT 流量模式相对简单，分类难度较低；数据集较新，使用论文尚少 | FG-SAT (TIFS 2025) |
+| MAWI (WIDE Backbone) | Tor Bridge 流量检测 | 流量包（PCAP） | 日本 WIDE 骨干网真实流量，Tor 流量占比仅 0.15% | 真实骨干网流量，规模极大；流量比例贴近实际部署场景；长期持续采集 | Tor 流量占比极低（0.15%），类不平衡严重；未直接公开，需申请；仅覆盖日本骨干网 | Tor Bridge Detection (NDSS 2021) |
+| UCDA18 | 加密流量分类 | 流量包（PCAP） | 加密流量分类基准数据集 | 加密流量分类早期常用数据集之一；涵盖多种加密应用 | 数据量有限；类别数量较少；时效性受限 | FlowPic (INFOCOM 2019) |
+| CHNAPP | 移动应用加密流量分类 | 流量包（PCAP） | 中国移动应用流量数据集 | 覆盖中国本土移动应用场景；贴近国内实际网络环境 | 公开获取途径有限；主要在中国网络环境下采集；国际研究使用较少 | FlowPic (INFOCOM 2019) |
+| NORMAL_TOR + DAPP variants | 网站指纹攻击（DApp + Reload） | 流量方向序列 | 5 个场景数据集：普通网站 Tor 访问、DApp Chrome/Tor 访问、普通网站/DApp Reload | 首次涵盖 DApp 流量和 reload traffic 的 WF 数据集；4/5 个数据集无公开替代品；使用最新版 Tor Browser 采集 | 数据集规模未详细公开；仅涵盖有限数量的网站/DApp；采集环境特定 | Exploring Uncharted Waters (TIFS 2023) |
+| OSTrain / OSValidate / OSTest | Tor 洋葱服务流量关联 | 流量包（PCAP）+ 元数据 | 3 个划分集（训练/验证/测试），涵盖 14 个地理位置的洋葱服务会话 | 涵盖 clearnet 和 onion service 网站；14 个全球地理位置部署；遵循 Tor 研究安全委员会建议；代码和数据集公开 | 数据采集需控制 Tor 节点；实验环境特定；仅覆盖特定时间段的流量 | SUMo Flow Correlation (NDSS 2024) |
+| DataCon2020 | 加密恶意流量检测 | 流量包（PCAP） | 加密恶意流量检测竞赛数据集 | 聚焦加密恶意流量检测的实战场景；竞赛背景保证数据质量和标注可靠性 | 类别信息有限；数据来源和采集方式公开信息有限；主要在中国网络环境下采集 | Session-Transformer (JIoT 2025) |
+| CIC-AndMal-2017 | Android 恶意软件加密流量检测 | 流量包（PCAP）+ CSV 特征 | 多种 Android 恶意软件家族的网络流量 | 覆盖多种 Android 恶意软件家族；在恶意软件检测领域广泛使用；提供丰富的流量特征 | 仅覆盖 Android 平台；恶意软件样本时效性有限；部分流量非加密 | MIETT (AAAI 2025)；Session-Transformer (JIoT 2025)；Multi-ARCL (JPDC 2025)；ASNet (TIFS 2025) |
+| MIRAGE2019 | 移动应用加密流量分类 | 流量包（PCAP） | 移动应用流量基准数据集 | 聚焦移动应用场景；在预训练模型评估中被采用 | 公开获取途径需确认；研究使用论文相对较少 | TraGe (IWQoS 2025) |
+| NJUPT2023 | 加密流量分类（持续学习） | 流量包（PCAP） | 南京邮电大学采集的移动应用流量数据集 | 涵盖中国本土应用场景；在持续学习场景下具有挑战性；包含应用上/下架变化 | 采集环境特定（中国校园网）；公开获取途径有限；国际研究使用较少 | Multi-ARCL (JPDC 2025) |
+| DoHBrw-2020 | DNS-over-HTTPS 流量检测 | 流量包（PCAP） | 约 60 万条 DoH 流量记录 (正常 DoH + 恶意 DoH) | 覆盖新兴的 DoH 加密 DNS 协议；同时包含正常和恶意 DoH 流量；在加密 DNS 分析领域具有独特价值 | 领域相对小众，使用者较少；DoH 协议本身在演化，数据时效性受限；类别较少（二分类为主） | TrafficGPT (arXiv 2024)；SmartDetector (TIFS 2025) |
+| ISP Dataset (Merit Network) | VPN 流量指纹检测 | 流量包（PCAP） | 美国 Merit Network ISP 镜像流量，日均 15TB、20亿流 | 百万用户级真实 ISP 流量；涵盖真实 VPN 和混淆 VPN 连接；规模极大 | 非公开数据集，需与 ISP 合作；仅覆盖特定 ISP 用户群；VPN 标注需额外验证 | OpenVPN Fingerprinting (USENIX 2024) |
+| ZMap Set | VPN 流量指纹检测（互联网扫描） | 流量包/元数据 | 通过 ZMap 扫描获取的全球 VPN 服务器响应数据 | 覆盖全球范围 VPN 服务器；大规模互联网扫描数据 | 非传统流量数据集；仅包含服务器响应；需结合其他数据使用 | OpenVPN Fingerprinting (USENIX 2024) |
+| Censys Set | VPN 流量指纹检测（互联网扫描） | 流量包/元数据 | 通过 Censys 扫描获取的 VPN 服务元数据 | 覆盖全球范围 VPN 服务；提供丰富的服务端元数据 | 非传统流量数据集；仅包含服务端信息；需结合其他数据使用 | OpenVPN Fingerprinting (USENIX 2024) |
 
 ## 数据集使用频率统计
 

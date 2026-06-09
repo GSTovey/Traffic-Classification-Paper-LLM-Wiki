@@ -2,7 +2,7 @@
 type: claims
 name: claims-index
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-09"
 ---
 
 # Claims Index
@@ -33,3 +33,10 @@ updated: "2026-05-27"
 | 2-gram tokenization 的 masked token 可由相邻 token 直接推断（如 06D6 和 0100 之间的 mask 必然是 D601），无法学到语义信息；byte tokenization 更优 | MM4flow 2025            | Section 3.3              | 综述写作、tokenization 策略选择、模型设计指导 | medium |
 | 预训练数据规模从 GB 级提升到 TB 级（77.6 TB）带来显著性能增益，数据多样性比模型复杂度更重要                                                             | MM4flow 2025            | Table 1, Table 2         | 综述写作、数据规模论证、项目申报中的数据规划        | high   |
 | MET-LLM 仅需 100 个新样本和 20 秒即可达到 94.2% 的检测准确率，比完全重训练快 150 倍                                                          | MET-LLM 2025            | Figure 6                 | 综述写作、快速适应新威胁、实际安全运维           | medium |
+| WSA（Word Sense Aggregation）将 inter-class 高频词重叠降低约 36%（top 10），证明无参数词义聚合可有效改善分类质量                                              | ASNet (TIFS 2025)       | Section V-A, Fig. 4      | 综述写作、词义消歧方法论证、NLP 启发的流量分析       | high   |
+| 移除 CSS（Category Semantic Separator）后 macro F1 从 0.9861 暴跌至 0.5998（USTC-TFC task2），证明显式语义分离对分类至关重要                                    | ASNet (TIFS 2025)       | Table IV                 | 综述写作、消融实验设计、模块重要性论证            | high   |
+| 简单类别列表 prompt（99.65%）优于复杂指令 prompt（96.23%），证明流量分类场景下无需复杂的 prompt engineering                                              | ASNet (TIFS 2025)       | Table VI                 | 综述写作、LLM 应用于流量分析的 prompt 设计指导   | high   |
+| Linear attention 实现 12K token 容量（从 512 扩展），达成 SOTA 分类性能（average F1 +2%）和逼真 pcap 生成（discriminator F1 0.6683，接近随机水平）           | TrafficGPT (arXiv 2024) | Tables I-III             | 综述写作、长序列建模方法论证、流量生成评估方法       | medium |
+| 多模态特征（SIF payload 语义 + 统计特征）达成 F1 0.9356 vs 单模态 0.8141，提升 12.15%，证明多模态融合在加密流量分类中的有效性                                    | Multi-ARCL (JPDC 2025)  | Section 4.3.1, Tables 5/6 | 综述写作、多模态方法论证、持续学习场景分析         | high   |
+| 静默应用（silent applications）加速模型稳定性衰减；移除其参数可提升准确率 8.64% 以上，说明持续学习中应识别并处理不活跃类别                                        | Multi-ARCL (JPDC 2025)  | Table 8                  | 综述写作、持续学习策略设计、类别不平衡处理         | high   |
+| NetMamba 是首个将 Mamba/SSM 架构应用于流量分类的工作，速度比 Transformer 快 60 倍且准确率相当                                                       | NetMamba (arXiv 2024)   | —                        | 综述写作、高效架构设计论证、边缘部署可行性分析       | medium |

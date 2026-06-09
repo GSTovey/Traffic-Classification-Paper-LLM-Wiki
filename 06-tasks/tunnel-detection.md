@@ -57,7 +57,17 @@ Encrypted Tunnel Detection（加密隧道检测）是指识别网络流量中使
   - 98% 的分离准确率
   - 核心创新：首次解决加密隧道内多应用流量的解耦问题
 
-### 4.4 基于预训练基础模型的方法
+### 4.4 基于协议指纹的方法
+
+- **OpenVPN Fingerprinting**：两阶段检测框架（Filter + Prober）
+  - Filter（被动）：Opcode 动态指纹（检查前 N 包 opcode 种类数 4-10）+ ACK 指纹（10 包 bin 中 ACK 分布模式）
+  - Prober（主动）：发送完整/截断 Client Reset 探测包，利用 OpenVPN 包重组行为的响应时间差异确认
+  - RST 阈值探测：OpenVPN 服务器 RST 阈值集中在 1550-1660 字节
+  - ISP 规模评估：在百万用户 Merit Network ISP 部署 8 天，85%+ vanilla OpenVPN 识别率，误报率 < 0.0039%
+  - 混淆 VPN：成功识别 34/41 个"混淆"配置（XOR、Stunnel、SSH、obfs3 等）
+  - 局限：UDP 模式 OpenVPN 无法通过活跃探测确认；obfs4/VMess 等带随机填充的混淆可逃逸
+
+### 4.5 基于预训练基础模型的方法
 
 - **MM4flow**：在 77.6 TB 真实流量上预训练的多模态基础模型
   - Payload byte stream + packet length sequence 双模态融合
@@ -72,6 +82,10 @@ Encrypted Tunnel Detection（加密隧道检测）是指识别网络流量中使
 | CSTNET-TLS1.3 | TLS 1.3 隧道 | 真实 TLS 1.3 流量 | 现代加密隧道场景 |
 | OpenVPN Dataset | OpenVPN 隧道 | 多应用封装流量 | VPN 隧道场景 |
 | ISCX-VPN2016 | VPN 隧道 | 6 类加密应用 | VPN 流量分类 |
+| ISP Dataset (Merit Network) | OpenVPN | 百万用户 ISP 流量（461GB, 221K 流） | 真实 ISP 网络中 OpenVPN 检测评估 |
+| VPN Dataset | OpenVPN | 20 商业 VPN + 2 自建 OpenVPN（2,200 traces） | 81 配置（40 vanilla + 41 混淆） |
+| ZMap Set | OpenVPN | 全 IPv4 65,535 端口扫描（13M+ 端点） | OpenVPN 服务器 RST 阈值分析 |
+| Censys Set | OpenVPN | 180,858 已知 OpenVPN 端点 | OpenVPN 服务器分布验证 |
 | Hartl Dataset | 混合隧道 | 多应用封装流量 | 隧道内流量分离基准 |
 
 ## 6. 代表论文
@@ -80,6 +94,7 @@ Encrypted Tunnel Detection（加密隧道检测）是指识别网络流量中使
 - MTBD：三维异构特征 + 投票机制的 HTTPS 隧道检测，P/R/F1 99% — `[[03-paper-notes/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.md]]`
 - Hartl：LSTM + beam search 的加密隧道流量分离，98% 准确率 — `[[03-paper-notes/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.md]]`
 - MM4flow：多模态预训练基础模型在加密隧道任务上的强大泛化能力 — `[[03-paper-notes/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.md]]`
+- OpenVPN Fingerprinting：Opcode + ACK 双指纹 + 主动探测的两阶段 VPN 检测框架，ISP 规模下 85%+ 识别率，误报率 < 0.0039%，可应对 XOR 混淆和大多数隧道混淆 — `[[03-paper-notes/2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting.md]]`
 
 ## 7. 工程落地问题
 

@@ -71,6 +71,7 @@ updated: "2026-05-27"
 | tFusion (CCS 2025) | 2025 | packet + flow + host | Crossmodal Attention（Hadamard product） | 仅需 1.0 标注即达 99.82% 精度，拓扑驱动对比学习实现跨网络通用 |
 | ByteDance (JNCA 2026) | 2026 | T-view + B-view | BiGRU 拼接 + PDGC 梯度补偿 | 解决多视图训练中的 B-view 抑制问题，TBFE 准确提取字节特征 |
 | TrafficAudio (TNSM 2026) | 2026 | 原始字节 -> 音频（MFCC 时频域） | 并行 1D-CNN + Bi-GRU | 将流量转换为音频表示保留时间连续性，FLOPs 降低 86.88% |
+| Multi-ARCL (JPDC 2025) | 2025 | SIF 加权词向量（payload 语义）+ 统计特征（packet/flow 级别） | 特征拼接 + CNN 分类器 | 首次在持续学习框架中融合 payload 加密语义（SIF weighted word vectors）和统计特征；SIF 通过词频逆权重降低高频词影响，再减去第一主成分去除共性信息；多模态 F1 0.9356 vs 单模态 F1 0.8141，提升 12.15% |
 
 ## 9. 与其他方法的比较
 

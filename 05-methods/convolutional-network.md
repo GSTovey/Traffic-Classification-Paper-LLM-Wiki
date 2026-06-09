@@ -109,6 +109,7 @@ CNN 在流量分类中主要解决以下问题：
 |---|---:|---|---|
 | Fauvel et al., "A Lightweight, Efficient and Explainable-by-Design CNN for Internet Traffic Classification" (SIGKDD) | 2023 | 基于 ResNet 的轻量级 prototype-based CNN，输入为 20x2 MTS（packet size + direction），直接用于流量分类 | 提出 LERes Block（线性变换 + 拼接替代部分卷积，参数 -19%，推理 -41%）和 LProto Layer（轻量原型层，参数 -36%，准确率 +4%），LEXNet 总参数 119k，准确率 89.7%，首次量化 by-design 可解释性的性能代价 |
 | Shi et al., "An Efficient Feature Generation Approach Based on Deep Learning and Feature Selection Techniques for Traffic Classification" (Computer Science) | 2018 | 利用基于 DBN 的 RFGM 进行特征生成和降维，将深度学习用于特征优化而非直接分类 | 提出 EFOA 三阶段流程（symmetric uncertainty 去无关特征、DBN-based RFGM 生成鲁棒特征、WSU 去冗余特征），综合解决 feature redundancy、multi-class imbalance 和 concept drift，flow OA 0.978，flow g-mean 0.601 |
+| FlowPic (INFOCOM 2019) | 2019 | 将网络流的包大小和到达时间转化为 2D 直方图图像（FlowPic），使用 LeNet-5 风格 CNN 分类 | 首创将加密流量分类转化为图像识别问题；FlowPic 以到达时间为 X 轴、包大小为 Y 轴构建 1500×1500 二维直方图；仅使用元数据（包大小+到达时间），不依赖 payload，保护隐私；VPN 流量分类准确率 98.4%，应用识别 99.7%；在 Non-VPN 上训练后可泛化分类 VPN 流量（78.9%-99.4%） |
 | Zhang et al., "FGFR-Net: An Improved Residual Network Encrypted Traffic Classification Model Based on Byte-Level Traffic Graphs" (JNSM) | 2026 | 基于改进 ResNet-34 的分类器，结合 GIN 图编码，输入为字节级流量图的特征向量 | 首次将 ResNet-34 引入加密流量分类，引入可变形卷积（DCN）、深度可分离卷积（DSC）和通道注意力机制（CAM），ISCX-VPNnonVPN F1 99.08%，USTC-TFC F1 99.21%，跨数据集泛化 F1 96.13% |
 
 ## 9. 与其他方法的比较

@@ -69,6 +69,8 @@ updated: "2026-05-27"
 | **预训练模型（SSM 类）** | 使用 Mamba 等状态空间模型替代 Transformer，以线性时间复杂度建模流量序列 | NetMamba+ (Wang et al., 2026) | 线性复杂度、推理效率高（比 Transformer 高 1.7 倍）、内存占用低 | 在网络流量领域验证尚不充分、单向建模可能遗漏部分信息 |
 | **协议头特征 + 浅层模型** | 仅从协议头部字段提取特征，忽略加密 payload，使用浅层 ML 模型 | Sweet Danger (Zhao et al., 2025) 中的 Shallow Baseline | 在正确评估下性能最优、计算效率高、可解释性强 | 特征设计仍需专家知识、难以利用 payload 长度以外的信息 |
 | **多模态融合** | 将流量划分为多种互补模态（如 payload byte stream + packet length sequence），分别预训练后融合 | MM4flow (CCS 2025); tFusion (CCS 2025) | 兼顾内容信息和行为信息、在加密隧道等任务上优势显著 | 计算成本高（双模型 + 融合模块）、模态选择仍需探索 |
+| **多实例 Transformer** | 将 flow 中每个 packet 视为独立实例，通过 Two-Level Attention（Packet Attention + Flow Attention）分层建模 token 级和 packet 级关系 | MIETT (Chen et al., AAAI 2025) | 层次化建模符合流量结构、计算效率优于扁平化方案、专用预训练任务（PRPP+FCL） | Packet 数量固定、预训练-微调不一致、packet 级 encoder 冻结限制端到端优化 |
+| **无预训练方法** | 直接使用预训练 BERT 并通过流量特定适配模块（词义聚合 + 语义分离）快速适配，无需从头预训练 | ASNet (Peng et al., TIFS 2025) | 无需预训练大幅降低计算成本、WSA 保持完整词义、CSS 显式分离类别语义空间 | 依赖 BERT 的通用语言知识、流量特定预训练的长期价值尚不明确 |
 | **零样本/跨模态方法** | 将流量分析重新定义为跨模态检索问题，通过学习模态间的对齐关系实现对未见类别的泛化 | STAR (2025); Swallow (2025) | 无需目标类别的流量样本、可扩展性强 | 依赖高质量的语义侧信息获取、跨模态对齐的理论基础仍在探索中 |
 
 ## 4. 发展脉络
@@ -103,6 +105,9 @@ updated: "2026-05-27"
 - **CV 范式引入**：YaTC (2023) 将流量分析从 NLP 范式转向 CV 范式（MAE），提出 MFR 多层级流量表示
 - **SSM 新架构**：NetMamba+ (2024/2026) 首次将 Mamba（State Space Model）引入网络流量分类
 - **多模态预训练**：MM4flow (2025) 在 77.6 TB 真实流量上预训练，加密隧道网站识别准确率提升 84%
+- **多实例预训练**：MIETT (AAAI 2025) 提出多实例学习框架，将 flow 中每个 packet 视为独立实例，通过 Two-Level Attention（Packet Attention + Flow Attention）分层建模，配合 PRPP（Packet Relative Position Prediction）和 FCL（Flow Contrastive Learning）两个专用预训练任务，在 5 个数据集上达到 SOTA
+- **结构感知预训练**：TraGe (IWQoS 2025) 针对 header 和 payload 的字节分布差异（header 连续 vs. payload 非连续），提出 Field-level Masking（几何分布连续掩码）和 Random Masking 的差异化预训练策略，配合 Dynamic Masking 防止过拟合，超越 SOTA 最高 6.97%
+- **GPT 类自回归预训练**：TrafficGPT (arXiv 2024) 使用线性注意力机制将 token 长度从 512 扩展到 12,032，结合可逆 token 表示实现 pcap 双向映射，统一支持分类和生成两类任务，分类 F1 平均提升 2%
 - **少样本学习**：预训练模型在 10% 标注数据下 F1=87%（ET-BERT），远超从零训练的方法
 
 ### 4.5 反思与修正期（2025-至今）：方法论批判
@@ -143,6 +148,10 @@ updated: "2026-05-27"
 | **Whisper** (CCS 2021) | 2021 | 频域分析 | 首个基于频域分析的实时鲁棒检测系统，DFT 提取频域特征 + K-Means 聚类，吞吐量 13.22 Gbps | 聚类算法表达能力有限，仅使用三个每包特征 |
 | **tFusion** (CCS 2025) | 2025 | 多模态融合 | 将流量视为多模态数据（packet/flow/host），仅需千分之一标注样本即达 99.82% 准确率 | 预训练依赖外部无标注数据（MAWI 骨干网） |
 | **DecETT** (WWW 2025) | 2025 | 特征解耦 | 引入 TLS 流量作为语义锚点，双解耦模块分离隧道特征与应用语义，5 种隧道下 F1 达 84%-94% | 需要并行 TLS-隧道流对训练，单应用假设 |
+| **MIETT** (Chen et al., AAAI) | 2025 | 多实例 Transformer | 将 flow 中每个 packet 视为独立实例，Two-Level Attention（Packet + Flow）分层建模，PRPP+FCL 预训练任务，CrossPlatform(Android) F1 提升 14.66% | Packet 数量固定 N=5，packet 级 encoder 冻结 |
+| **TraGe** (Lin et al., IWQoS) | 2025 | 结构感知预训练 | 区分 header/payload 字节分布差异，Field-level Masking（几何分布连续掩码）+ Random Masking 差异化预训练，Dynamic Masking 防过拟合，超越 SOTA 最高 6.97% | 仅处理单包，未建模 packet 间关系 |
+| **ASNet** (Peng et al., TIFS) | 2025 | 无预训练 SOTA | WSA 无参数词义聚合器 + CSS 类别约束语义分离器 + 任务感知提示，无需预训练即在 5 数据集 7 任务上达到 SOTA，大幅降低计算成本 | 依赖 BERT 通用知识，流量特定预训练价值存疑 |
+| **FlowPic** (Shapira et al., INFOCOM) | 2019 | 图像化 CNN | 首个将流量转化为 2D 直方图图像（FlowPic）并用 CNN 分类的方法，VPN 流量分类 98.4%，应用识别 99.7% | 仅用 LeNet-5，Tor 分类精度较低（67.8%） |
 
 ## 6. 当前趋势
 
@@ -171,7 +180,11 @@ updated: "2026-05-27"
 
 随着 VPN、Tor、Shadowsocks 等加密隧道的广泛使用，隧道检测和隧道下的应用识别成为新的研究热点。DecETT 通过语义锚点和特征解耦在 5 种加密隧道下实现 84%-94% F1 的应用识别。
 
-### 6.6 LLM 与流量分析的融合
+### 6.6 无需预训练的 SOTA 方法（反趋势）
+
+ASNet (TIFS 2025) 提出了一种与预训练范式截然不同的路径：直接使用预训练 BERT 作为 backbone，通过无参数词义聚合器（WSA）使 BERT 快速适配流量数据，配合类别约束语义分离器（CSS）显式分离不同类别的语义空间，在 5 个数据集 7 个任务上无需从头预训练即达到 SOTA。这一"反趋势"挑战了领域内对大规模流量预训练必要性的假设，表明通过巧妙的适配模块设计，可以利用 BERT 已有的通用知识而无需付出高昂的预训练成本。论文笔记：`[[03-paper-notes/2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding.md]]`
+
+### 6.7 LLM 与流量分析的融合
 
 大语言模型（LLM）开始被引入恶意加密流量检测领域。MET-LLM (2025) 首次将 LLM（Deepseek-7B）应用于恶意加密流量检测，通过领域专用 BPE tokenization 和参数高效微调，四个数据集 F1 均 > 0.96。
 
@@ -203,7 +216,15 @@ updated: "2026-05-27"
 
 **核心矛盾**：per-packet split 下的高准确率是否具有实际意义？
 
-### 7.4 SNI 的可用性前景
+### 7.4 预训练是否必要？
+
+**预训练必要方**：ET-BERT、YaTC、MM4flow 等工作通过大规模流量预训练在多个任务上取得优异性能，预训练被认为能学习流量数据的内在结构和模式。
+
+**预训练非必要方**：ASNet (TIFS 2025) 证明无需从头预训练，仅通过 WSA（无参数词义聚合器）和 CSS（类别约束语义分离器）使 BERT 快速适配流量数据，即在 5 个数据集 7 个任务上达到 SOTA。这表明 BERT 的通用语言知识足以处理流量数据，流量特定预训练可能并非必需。
+
+**核心矛盾**：如果无需预训练即可达到 SOTA，那么大规模流量预训练（ET-BERT 30GB 数据 500K 步、MM4flow 77.6TB 350 小时）的计算成本是否合理？ASNet 的成功是否仅限于特定数据集和任务，还是具有普遍性？
+
+### 7.5 SNI 的可用性前景
 
 当前多数研究依赖 Server Name Indication (SNI) 进行数据标注和分类，但 TLS 1.3 的 Encrypted Client Hello (ECH) 机制将加密 SNI，这将从根本上改变数据标注方式和部分分类方法的可行性。
 
@@ -292,7 +313,9 @@ updated: "2026-05-27"
 - QUIC 协议下的加密流量分类方法
 - TLS 1.3 ECH 机制对流量分析的影响研究
 - 联邦学习在加密流量分类中的应用
-- 流量生成（Traffic Generation）相关工作（NetGPT、TrafficGPT、TrafficLLM）
+- 流量生成（Traffic Generation）相关工作（NetGPT、TrafficLLM）——TrafficGPT 已纳入
 - 可解释性方法在加密流量分析中的应用（如 LEXNet 的原型网络、Grad-CAM 可视化）
 - 对抗性攻击与防御（adversarial attack/defense）在加密流量分析中的研究
 - 概念漂移（concept drift）检测与适应方法
+- Multi-ARCL：多模态持续学习中的静默应用遗忘问题
+- OpenVPN 指纹识别（被动过滤 + 主动探测两阶段框架）

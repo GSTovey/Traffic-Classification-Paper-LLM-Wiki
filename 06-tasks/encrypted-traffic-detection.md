@@ -56,7 +56,14 @@ updated: "2026-05-27"
 - **tFusion**：融合 packet-level、flow-level、host-level 三种模态特征，通过 crossmodal attention 进行特征融合，拓扑驱动的对比学习减少标注依赖
 - **MM4flow**：将流量分为 payload byte stream 和 packet length sequence 两种互补模态，通过 cross-attention 融合
 
-### 4.5 基于预训练基础模型的方法
+### 4.5 基于协议指纹的方法
+
+- **OpenVPN Fingerprinting**：基于 Opcode 动态指纹 + ACK 指纹的两阶段检测框架（被动过滤 + 主动探测），在 ISP 规模下识别 85%+ OpenVPN 流量，误报率 < 0.0039%，可应对 XOR 混淆和大多数隧道混淆
+  - 仅检查前 100 个数据包，中位延迟 7.9 秒
+  - 单服务器每天处理 15TB / 20 亿流
+  - 成功识别 34/41 个"混淆"VPN 配置
+
+### 4.6 基于预训练基础模型的方法
 
 - **ET-BERT**：BERT 预训练框架，MBM + SBP 两个流量特定自监督任务
 - **YaTC**：MAE 预训练 + 分层注意力机制，90% 最优掩码率验证流量冗余性
@@ -70,6 +77,8 @@ updated: "2026-05-27"
 | CSTNET-TLS1.3 | TLS 1.3 流量 | 真实 TLS 1.3 流量 | 现代加密协议 |
 | CICIoT2022 | IoT 流量 | 物联网设备流量 | IoT 加密流量 |
 | USTC-TFC2016 | 恶意加密流量 | 恶意软件流量 | 含恶意加密流量 |
+| ISP Dataset (Merit Network) | VPN 检测 | 百万用户 ISP 流量 | 真实 ISP 网络中 OpenVPN 流量检测评估（2024-USENIX） |
+| VPN Dataset | VPN 检测 | 20 商业 VPN + 2 自建 OpenVPN | 2,200 traces，覆盖 vanilla 和混淆配置（2024-USENIX） |
 
 ## 6. 代表论文
 
@@ -78,6 +87,7 @@ updated: "2026-05-27"
 - tFusion：跨模态特征融合 + 拓扑对比学习，仅需 0.1% 标注数据达 99.82% 准确率 — `[[03-paper-notes/2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.md]]`
 - ET-BERT：首个加密流量 BERT 预训练模型 — `[[03-paper-notes/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.md]]`
 - YaTC：MAE 预训练 Traffic Transformer，分层注意力 — `[[03-paper-notes/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.md]]`
+- OpenVPN Fingerprinting：Opcode + ACK 双指纹 + 主动探测的两阶段 VPN 检测框架，ISP 规模下 85%+ 识别率，误报率 < 0.0039% — `[[03-paper-notes/2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting.md]]`
 
 ## 7. 工程落地问题
 
