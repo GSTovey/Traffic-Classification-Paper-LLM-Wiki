@@ -103,15 +103,28 @@ updated: "2026-06-01"
 | 77 | unknown | bias in the shadows explore shortcuts in encrypted network traffic classification | 2026 | arXiv | Li | 2026-arXiv-Bias_in_the_Shadows__Explore_Shortcuts_in_Encrypted_Network_Traffic_Classification | [[2026-arXiv-Bias_in_the_Shadows__Explore_Shortcuts_in_Encrypted_Network_Traffic_Classification]] |
 | 78 | unknown | nethira a heterogeneity-aware hierarchical pre-trained model for network traffic classification | 2026 | arXiv | Ye | 2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Network_Traffic_Classification | [[2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Network_Traffic_Classification]] |
 | 79 | unknown | traffimoe heterogeneity-aware mixture of experts for encrypted traffic classification | 2026 | arXiv | Ye | 2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification | [[2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification]] |
+| 80 | unknown | flowpic encrypted internet traffic classification is as easy as image recognition | 2019 | INFOCOM | Tamer | 2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition | [[2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition]] |
+| 81 | unknown | detecting tor bridge from sampled traffic in backbone networks | 2021 | NDSS | Zhao | 2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks | [[2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks]] |
+| 82 | 10.1109/TIFS.2023.3342607 | exploring uncharted waters of website fingerprinting | 2023 | TIFS | Karunanayake | 2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting | [[2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting]] |
+| 83 | unknown | flow correlation attacks on tor onion service sessions with sliding subset sum | 2024 | NDSS | Lopes | 2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum | [[2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum]] |
+| 84 | unknown | mirageflow a new bandwidth inflation attack on tor | 2024 | NDSS | Wu | 2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor | [[2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor]] |
+| 85 | unknown | openvpn is open to vpn fingerprinting | 2024 | USENIX Security | Diwen | 2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting | [[2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting]] |
+| 86 | unknown | netmamba efficient network traffic classification via pre-training unidirectional mamba | 2024 | arXiv | Ye | 2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba | [[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]] |
+| 87 | unknown | trafficgpt breaking the token barrier for efficient long traffic analysis and generation | 2024 | arXiv | Lin | 2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation | [[2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation]] |
+| 88 | unknown | miett multi-instance encrypted traffic transformer for encrypted traffic classification | 2025 | AAAI | Hu | 2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification | [[2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification]] |
+| 89 | unknown | trage a generic packet representation for traffic classification based on header-payload differences | 2025 | IWQoS | Ren | 2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences | [[2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences]] |
+| 90 | 10.1109/JIOT.2025.3577245 | a detection method for malware communication traffic via encrypted traffic analysis | 2025 | JIoT | Chen | 2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis | [[2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis]] |
+| 91 | unknown | multi-arcl multimodal adaptive relay-based distributed continual learning for encrypted traffic classification | 2025 | JPDC | Li | 2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification | [[2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification]] |
+| 92 | 10.1109/TIFS.2025.3529316 | bottom aggregating top separating an aggregator and separator network for encrypted traffic understanding | 2025 | TIFS | Peng | 2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding | [[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]] |
 
 ---
 
 ## 统计
 
-- **总论文数**：79
-- **有 DOI**：32 篇
-- **DOI unknown**：47 篇
-- **年份分布**：2008 (1), 2018 (3), 2019 (1), 2020 (1), 2021 (2), 2022 (6), 2023 (4), 2024 (5), 2025 (28), 2026 (28)
+- **总论文数**：92
+- **有 DOI**：35 篇
+- **DOI unknown**：57 篇
+- **年份分布**：2008 (1), 2018 (3), 2019 (2), 2020 (1), 2021 (2), 2022 (7), 2023 (5), 2024 (10), 2025 (33), 2026 (28)
 
 ---
 

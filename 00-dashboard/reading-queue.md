@@ -1,6 +1,6 @@
 # Reading Queue
 
-本页面用于管理知识库中全部 79 篇论文的阅读状态。
+本页面用于管理知识库中全部 92 篇论文的阅读状态。
 
 ---
 
@@ -105,6 +105,19 @@
 | processed | Towards Fine-Grained Webpage Fingerprinting at Scale | 2024 | 网站指纹 | [[2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale]] | [[2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale]] |
 | processed | Low-Quality Training Data Only? A Robust Framework for Detecting Encrypted Malicious Network Traffic | 2024 | 恶意检测 | [[2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic]] | [[2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic]] |
 | processed | Flow Interaction Graph Analysis: Unknown Encrypted Malicious Traffic Detection | 2024 | 恶意检测 | [[2024-TNET-Flow_Interaction_Graph_Analysis_Unknown_Encrypted_Malicious_Traffic_Detection]] | [[2024-TNET-Flow_Interaction_Graph_Analysis_Unknown_Encrypted_Malicious_Traffic_Detection]] |
+| processed | FlowPic: Encrypted Internet Traffic Classification is as Easy as Image Recognition | 2019 | 流量分类 | [[2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition]] | [[2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition]] |
+| processed | Detecting Tor Bridge from Sampled Traffic in Backbone Networks | 2021 | 流量分类 | [[2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks]] | [[2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks]] |
+| processed | Exploring Uncharted Waters of Website Fingerprinting | 2023 | 网站指纹 | [[2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting]] | [[2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting]] |
+| processed | Flow Correlation Attacks on Tor Onion Service Sessions with Sliding Subset Sum | 2024 | 流量关联 | [[2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum]] | [[2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum]] |
+| processed | MirageFlow: A New Bandwidth Inflation Attack on Tor | 2024 | 网络安全 | [[2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor]] | [[2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor]] |
+| processed | OpenVPN is Open to VPN Fingerprinting | 2024 | VPN指纹 | [[2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting]] | [[2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting]] |
+| processed | NetMamba: Efficient Network Traffic Classification via Pre-training Unidirectional Mamba | 2024 | 流量分类 | [[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]] | [[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]] |
+| processed | TrafficGPT: Breaking the Token Barrier for Efficient Long Traffic Analysis and Generation | 2024 | 流量分类 | [[2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation]] | [[2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation]] |
+| processed | MIETT: Multi-Instance Encrypted Traffic Transformer for Encrypted Traffic Classification | 2025 | 流量分类 | [[2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification]] | [[2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification]] |
+| processed | TraGe: A Generic Packet Representation for Traffic Classification Based on Header-Payload Differences | 2025 | 流量分类 | [[2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences]] | [[2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences]] |
+| processed | A Detection Method for Malware Communication Traffic via Encrypted Traffic Analysis | 2025 | 恶意检测 | [[2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis]] | [[2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis]] |
+| processed | Multi-ARCL: Multimodal adaptive relay-based distributed continual learning for encrypted traffic classification | 2025 | 流量分类 | [[2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification]] | [[2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification]] |
+| processed | Bottom Aggregating, Top Separating: An Aggregator and Separator Network for Encrypted Traffic Understanding | 2025 | 流量分类 | [[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]] | [[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]] |
 
 ---
 

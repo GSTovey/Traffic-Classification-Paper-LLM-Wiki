@@ -1,0 +1,668 @@
+# TrafficGPT: Breaking the Token Barrier for Efficient Long Traffic Analysis and Generation
+
+Jian Qu†§, Xiaobo Ma†§, Jianfeng Li†§
+
+†MOE Key Lab for Intelligent Networks and Network Security, Xi’an Jiaotong University, Xi’an, China
+
+§Faculty of Electronic and Information Engineering, Xi’an Jiaotong University, Xi’an, China
+
+Abstract—Over the years, network traffic analysis and generation have advanced significantly. From traditional statistical methods, the field has progressed to sophisticated deep learning techniques. This progress has improved the ability to detect complex patterns and security threats, as well as to test and optimize network performance. However, obstacles persist, such as the dependence on labeled data for analysis and the difficulty of generating traffic samples that follow realistic patterns. Pretrained deep neural networks have emerged as powerful tools to resolve these issues, offering improved performance by learning robust data representations from large unlabeled datasets. Despite their benefits, existing pre-trained models face challenges like token length limitation, which restricts their usefulness in comprehensive traffic analysis and realistic traffic generation. To address these challenges, we introduce TrafficGPT, a deep learning model that can tackle complex challenges related to long flow classification and generation tasks. This model uses generative pre-training with the linear attention mechanism, which allows for a substantially increased capacity of up to 12,032 tokens from the previous limit of only 512 tokens. TrafficGPT demonstrates superior performance in classification tasks, reaching state-of-the-art levels. In generation tasks, it closely resembles real traffic flows, with low JS divergence and an F1 score close to 0.5 (representing a random guess) in discriminating generated data. These advancements hold promise for future applications in both traffic flow classification and generation tasks.
+
+## I. INTRODUCTION
+
+The analysis and generation of network traffic have long been two critical tasks. Network traffic analysis can be utilized to identify patterns, detect security threats, and optimize network performance among other applications [1]–[3]. Meanwhile, network traffic generation can be used to simulate various scenarios for testing network infrastructure, validating security measures, and training machine learning models to recognize and respond to different network behaviors [4], [5].
+
+Network traffic analysis has made significant strides in recent years, transitioning from traditional statistical methods to more advanced deep learning techniques. Early approaches heavily relied on manually crafted features, which limited their ability to capture complex patterns in raw traffic data [6]–[8]. However, the advent of deep learning methods has revolutionized this field by enabling automatic extraction of intricate patterns, leading to remarkable performance improvements [9]–[13]. Despite these advancements, a critical obstacle remains, i.e., the dependency on labeled training data. The quantity and distribution of labeled data greatly influence the effectiveness and robustness of deep learning models, leading to biases and poor generalization in real-world scenarios.
+
+On the other hand, significant progress has been made in generating network traffic, especially with the emergence of software-defined networking and network function virtualization. Research in this field has led to the development of experimental environments that resemble actual networks in terms of node variety and network topology [5]. However, generating diverse and realistic traffic patterns continues to be a major challenge. Despite the increased accessibility of experimental setups, creating traffic that accurately reflects real-world scenarios remains a difficult task.
+
+In recent times, pre-trained deep neural networks have emerged as leading methodologies for both network traffic analysis and generation tasks. One such model, ET-BERT [14], uses the BERT architecture and has showcased superior performance compared to models without pre-training across various traffic classification tasks. Another model, Lens [15], employs the T5 architecture for pre-training and has achieved state-of-the-art results in generating packet header fields. By leveraging large amounts of unlabeled data, pre-training-based approaches adeptly learn robust representations. Subsequently, these representations can be seamlessly applied to downstream tasks through fine-tuning with limited labeled data, exemplifying pre-training’s versatility and efficacy in network analysis and generation.
+
+While pre-trained models have many benefits, they encounter two primary challenges. Firstly, the tokenization process in these models needs refinement. Existing methods of tokenization in pre-trained models have shortcomings, as they struggle to accurately reconstruct pcap files from the token lists generated by the model. This limitation hinders their practical usefulness. Secondly, pre-trained models have a significant constraint on token length. Most pre-trained models used for traffic analysis are restricted to a maximum of 512 tokens. This limit is insufficient for realistic traffic analysis. This issue becomes even more pronounced in traffic generation, where the token count for a single packet can exceed 512, making it difficult to generate real-world traffic samples.
+
+To address these challenges, we propose TrafficGPT, a deep-learning model that leverages generative pre-training with the linear attention mechanism. Starting with the tokenization issue, we develop a reversible token representation method. This approach allows for the direct generation of pcap files from token lists, effectively solving the problem of accurately reconstructing traffic flows from the model’s output. Furthermore, to overcome the token length limitation, we implement a linear attention mechanism in place of the traditional quadratic self-attention mechanism found in Transformer [16]. This modification significantly increases the model’s capacity, supporting a maximum token length of 12,032. Together, these enhancements greatly enhance the model’s capabilities in both traffic analysis and generation.
+
+Our major contributions are summarized as follows.
+
+• We introduce TrafficGPT, a deep-learning model using generative pre-training. It utilizes a linear attention mechanism to replace the traditional quadratic selfattention mechanism in Transformer, enabling a token scope of up to 12,032 tokens, making it suitable for both flow classification and generation tasks.  
+• We develop a reversible token representation method, which enables bidirectional mapping between pcap files and token representation. This approach facilitates the direct generation of pcap files from token lists, effectively addressing the challenge of accurately reconstructing traffic flows from the model’s output.  
+• Our model performs exceptionally well in classification experiments, achieving state-of-the-art results with an average improvement of 2% in Macro F1-Score across various datasets. In the generation evaluation, our model demonstrates its ability to generate traffic flows similar to real ones, with an average JS divergence of 0.1605 for packet headers and 0.2396 for flow features. Moreover, the F1 score for discriminating our generated flows is 0.6683, very close to 0.5 (representing a random guess), indicating that our generated flows are highly realistic and difficult to distinguish from actual ones.
+
+Roadmap. Sec. II introduces related work. Sec. III elaborates system design and Sec. IV evaluates it. Sec. V discusses the limitations in our work and promising directions for future research. We conclude in Sec. VI.
+
+## II. RELATED WORK
+
+This section provides an overview of the existing literature related to our work, focusing on three main areas: traffic classification, network traffic generation, and advancements in Transformer architectures for handling long sequences efficiently. Each of these areas contributes to the foundation upon which our proposed model is built, addressing the challenges and limitations encountered in current methodologies.
+
+Traffic Classification. There are several papers on the largescale pre-training of models in the field of traffic [14], [15], [17]–[20]. He et al. pretrained a transformer on the payload of encrypted packets [20]. Lin et al. extracted bursts from the traffic and used the burst bytes as the pretext for pretraining the BERT model, naming it ET-BERT [14]. Meng et al. proposed a generative pre-trained Transformer and used the first three packets with a maximum token size of 512 for training and testing. The results outperformed ET-BERT in several tasks [17]. Zhao et al. introduced a masked autoencoder-based model for traffic classification, converting the initial five packets of each flow into images and subsequently employing pre-training based on the Transformer [18].
+
+Guthula et al. put forth a hierarchical Transformer architecture for flow modeling, incorporating a packet-burst-flow structure [19]. Wang et al. introduced Lens, a model that leverages the T5 architecture to learn representations from large-scale data [15].
+
+Prior to the advent of pre-trained models, researchers typically relied on small-scale datasets for model training and testing. Hayes et al. proposed a system for website fingerprinting on Tor, utilizing random forests to extract fingerprints [6]. Yan et al. examined the situation of keywordbased searching fingerprinting through the development of a hand-crafted feature set [21]. Rimmer et al. introduced a website fingerprinting attack over Tor by comparing multiple neural network structures [9]. Liu et al. examined the use of an attention-based bidirectional gated recurrent unit neural network for the identification of HTTPS web services [10]. Holland et al. integrated nPrint with automated machine learning, streamlining the workflow for traffic classification [22]. Luo et al. developed a Transformer-based IoT devicetype identification method [11]. Lin et al. devised an adaptive balancing training method to address dataset imbalances and employed multi-level features for detecting malicious traffic [23]. Li et al. achieved open-world Android app user action identification via synthesizing traffic and binary analysis [24]. Song et al. proposed an incremental and interpretable recurrent neural network model for encrypted traffic classification [12]. Qu et al. designed a hierarchical deep learning model capable of integrating multiple flows of information [13]. Guan et al. leveraged federated learning for encrypted traffic classification [25]. Xie et al. devised data augmentation techniques tailored for TCP traffic, leveraging BYOL [26] for self-supervised learning of robust features [27].
+
+Network Traffic Generation. Adeleke et al. comprehensively analyzed the traffic generation tools used by researchers over the past decade, including 92 different tools such as application layer generators, traffic replay tools, model-based traffic generators, and more [5]. Ring et al. utilized Generative Adversarial Network (GAN) techniques to generate flow-based characteristics [28]. Cheng et al. utilized a convolutional neural network-based GAN to conduct the generation of IP packets [29]. Manocchio et al. mitigated the issue of model collapse by incorporating the concept of Manifold Guided Generative Adversarial Networks in the synthetic generation of network flow [30]. Fan et al. integrated the concept of differential privacy into GANs to generate features of flows, aiming to achieve secure sharing of network data [31]. Zolbayar et al. utilized GAN to generate traffic features and investigated their adversarial impact on certain machine learning classifier-based methods in whitebox, blackbox, and restricted-blackbox threat models [32]. Hui et al. introduced a knowledge-enhanced GAN framework for large-scale IoT traffic generation, addressing the limitations of existing IoT synthetic data methods [33]. Yin et al. utilized a time-series GAN to generate packet header fields in the flows [4]. Du et al. adopted dynamic word embedding and long short-term memory networks to generate the communication patterns between IP addresses and ports [34]. Kim et al. employed GAN to simulate and generate the spectral data in the context of 5G networks [35]. Kholgh et al. fine-tuned GPT-3 to generate ICMP and DNS packets [36].
+
+Efficient Transformers. Keles et al. prove that the time complexity of self-attention is necessarily quadratic in the input length under the Strong Exponential Time Hypothesis [37]. This implies that currently we can only resort to approximate algorithms to reduce the complexity of self-attention. Guo et al. [38], Beltagy et al. [39], Zaheer et al. [40] and Roy et al. [41] respectively employ different types of sparse selfattention to reduce computational overhead. Katharopoulos et al. replaced the dot product with a simple feature map, achieving linear complexity in the Transformer [42]. Lee et al. [43], Wang et al. [44] and Zhang et al. [45] compressed key–value memory in different ways and achieved linear complexity. Guo et al. developed low-rank attention and band attention to parameterize the self-attention mechanism [46]. Fan et al. further used the low-rank decomposed self-attention to achieve the linear complexity [47]. Kitaev et al. used Locality-Sensitive Hashing and reversible residual network to reduce computational cost [48]. Peng et al. proposed a new attention mechanism reformulation that results in linear attention [49]. Sun et al. proposed the Retentive Network, demonstrating its performance to be comparable to that of a Transformer of similar size in language modeling. They highlighted its advantages, including training parallelism, costeffective deployment, and efficient inference [50].
+
+## III. SYSTEM DESIGN
+
+We present TrafficGPT, a deep-learning model that leverages generative pre-training with the linear attention mechanism. Our approach integrates fundamental principles from ET-BERT [14] and NetGPT [17] while introducing refinements to optimize token representation and enhance the neural network architecture. Our model is tailored to effectively handle long token sequences, improving the generation and classification of network traffic.
+
+## A. Model Architecture
+
+The primary objective of TrafficGPT is to learn and represent universal features, focusing on network flows as the basic unit. This model will be tested in scenarios involving traffic generation and classification. Its methodology encompasses a series of steps, as depicted in Figure 1. Initially, it converts network flows into token representations, followed by extensive pre-training on large-scale traffic data. The final phase involves testing the model’s proficiency in understanding traffic tasks, including traffic generation and classification.
+
+During the token representation phase, each network flow is meticulously mapped into a list of tokens. This bijective process ensures that every token list can be accurately converted back into its original flow, thereby maintaining the integrity of the extracted information. In the pre-training stage, the model engages in self-supervised learning using unlabeled flows, employing an autoregressive approach to develop a comprehensive feature representation of network traffic. For the final application stages, strategies for traffic generation and fine-tuning approaches for traffic classification are thoughtfully formulated.
+
+Architecturally, TrafficGPT is grounded in a linear attention mechanism [42], enhanced by integrating local attention strategies [51] and the reversible network in Reformer [48], effectively optimizing memory usage. The inclusion of token shift [49] is a strategic choice to expedite the model’s convergence. The mechanisms are detailed in Appendix A. The model is characterized by a hidden layer dimension of 512, encompassing 12 attention heads and spanning a depth of 24 layers. For a comprehensive breakdown of additional parameters, kindly consult Section IV-A.
+
+## B. Tokenization
+
+In the tokenization stage, we optimized the tokenization processes of both ET-BERT [14] and NetGPT [17], achieving a more seamless overall workflow. One key innovation is the integration of time information into tokens. It empowers TrafficGPT to generate timestamp intervals for pcap files. By incorporating temporal data into our tokenization strategy, we have enabled a more native and comprehensive representation of the information contained in pcap files.
+
+Firstly, we segment the pcap files within the dataset into distinct flows. A flow is precisely defined by a quintuple, representing a sequence of packets sharing identical source addresses, destination addresses, source ports, destination ports, and protocols. Following this segmentation, we proceed to tokenize each flow.
+
+Figure 2 elucidates the token composition for a singular flow. Within this framework, each flow comprises tokens corresponding to multiple packets, culminating in an end token denoting termination. The tokens assigned to each packet can be dissected into four components:
+
+Packet Start Token. This pivotal token signifies the commencement of a packet, playing a fundamental role in clearly defining the boundaries between individual packets.
+
+Link Type Token. This token denotes the specific link layer protocol in use, discerning between protocols like Ethernet or Linux cooked mode. Its critical importance in pcap generation stems from the distinct formats inherent in different link layer protocols.
+
+Time Interval Tokens. These tokens indicate the time interval between the current packet and the preceding one. In the case of the initial data packet, we establish its time interval as 0. We transform the timestamp into exponential form, representing it with 8 bytes, where each byte functions as a distinct token.
+
+Hex Tokens. These tokens encapsulate all pertinent information for each packet, encompassing values from both the packet header and payload. Considering the presence of both encrypted and non-encrypted data within packets, the decision to convert all bytes into hexadecimal tokens provides a universal representation.
+
+## C. Pre-training
+
+To attain efficient multitasking performance, especially in generative tasks, we employ a pre-training approach akin to the auto-regressive method utilized in GPT-2. This methodology, characterized by the incremental generation of sequences, empowers the model to acquire nuanced representations of context, leading to improved generalization across diverse tasks.
+
+![](images/7ad69a2f9b6b54c46ea2e7d44a406d55776ac63b545ea9b8e508f1b8a061349d.jpg)
+
+<details>
+<summary>flowchart</summary>
+
+```mermaid
+graph LR
+  A["Tokenization"] --> B["Pre-training"]
+  B --> C["Fine-tuning"]
+
+    subgraph Tokenization
+  D["PCAP Trace"] --> E["Session Flow"]
+  F["Flow-based Splitting"] --> E
+  G["Flow2Token Encoding"] --> E
+  H["Flow Tokens"] --> E
+
+    end
+
+    subgraph Pre_training["Pre-training"]
+  I["0x9"] --> J["Transformer with linear complexity"]
+  K["0x0"] --> J
+  L["0x1"] --> J
+  M["0x0"] --> J
+  N["..."] --> J
+  O["h₁ᴺ"] --> J
+  P["h₂ᴺ"] --> J
+  Q["h₃ᴺ"] --> J
+  R["h₄ᴺ"] --> J
+  S["0x100"] --> J
+  T["0x9"] --> J
+  U["0x0"] --> J
+  V["0x1"] --> J
+  W["..."] --> J
+  X["0x100"] --> J
+  Y["h₁ᴵ"] --> J
+  Z["h₂ᴵ"] --> J
+  AA["h₃ᴵ"] --> J
+  AB["h₄ᴵ"] --> J
+    end
+
+    subgraph Fine_tuning["Fine-tuning"]
+  AC["Transformer with linear complexity"] --> AD["[cls"]]
+        AE["..."]
+        AF["[end"]]
+        AG["Labels"]
+    end
+
+    style Tokenization fill:#f9f,stroke:#333
+    style Pre-training fill:#ccf,stroke:#333
+    style Fine-tuning fill:#cfc,stroke:#333
+```
+</details>
+
+Fig. 1. The framework of TrafficGPT.
+
+![](images/34dd05dd9b63d7cbf00047d997e9f925670896e07b52508aba37a7adaa35df9b.jpg)
+
+<details>
+<summary>flowchart</summary>
+
+```mermaid
+graph TD
+  A["Flow Tokens"] --> B["Packet Tokens"]
+  A --> C["Packet Tokens"]
+  A --> D["..."]
+  A --> E["Packet Tokens"]
+  A --> F["End Token"]
+  B --> G["Start Token"]
+  C --> H["Link Type Token"]
+  D --> I["Time Interval"]
+  E --> J["Hex Tokens"]
+```
+</details>
+
+Fig. 2. The structure of flow tokens.
+
+In this process, the model incrementally predicts the subsequent vocabulary token, leveraging previously generated content as context. This approach enables the model to refine its language understanding and generation capabilities. The auto-regressive method excels particularly in generative tasks, allowing the model to produce text with contextual coherence and semantic consistency.
+
+Specifically, in the context of a given input traffic sequence denoted as $X = [ x _ { 1 } , x _ { 2 } , . . . , x _ { T } ]$ , the model is trained to predict the probability distribution of the next token based on the preceding tokens in the sequence. This probability distribution is typically determined using a softmax activation function:
+
+$$
+P (x _ {t} | x _ {1: t - 1}) = \text { softmax } (f (x _ {1: t - 1}; \theta)). \tag {1}
+$$
+
+Here, $x _ { t }$ is the target token at position $t ,$ and $x _ { 1 : t - 1 }$ represents the sequence of tokens from position 1 to $t - 1$ . The function $f$ embodies the model’s parameters denoted as $\theta .$
+
+For the training process, the auto-regressive pre-training employs cross-entropy loss, expressed as:
+
+$$
+\text { Loss } = - \sum_ {i = 1} ^ {V} y _ {t, i} \cdot \log (P (x _ {t = i} | x _ {1: t - 1})), \tag {2}
+$$
+
+In this equation, ?? represents the vocabulary size, and $y _ { t , i }$ is the one-hot encoded ground truth corresponding to the target token. This loss function quantifies the disparity between the predicted probability distribution and the actual distribution, guiding the model towards optimal token prediction.
+
+## D. Traffic Generation
+
+In the traffic generation tasks, we kickstart the process by manually providing a straightforward start token or a predefined set of initial tokens. These initial tokens serve as the foundation for the generation process. They are then input into the pre-trained model, prompting it to predict the subsequent token sequentially until a termination token is reached.
+
+It’s important to highlight that proficiently trained models can generate sequences comprising a huge number of tokens. The length of these generated sequences can easily surpass the maximum window length established during the training phase, a limitation typically dictated by the available GPU memory. This phenomenon is analogous to creating tokens through a sliding window. Even though the maximum token length set confines the model’s perspective during training, it consistently generates tokens based on the preceding tokens within the window of its perspective. This continuous generation process enables the model to produce coherent and contextually relevant sequences.
+
+We use Top-k sampling to enhance the quality and diversity of generated sequences. Top-k sampling is a probabilistic method employed during the generation phase to select the next token from the model’s probability distribution. Instead of choosing the token with the highest probability outright, Topk sampling involves sampling from the top ?? tokens with the highest probabilities, where $k$ is a predefined hyperparameter. By restricting the potential choices to a smaller set of highprobability tokens, we prioritize the model’s most confident predictions. This helps mitigate the risk of introducing irrelevant or nonsensical tokens into the sequence, contributing to more contextually relevant and coherent outputs.
+
+The subsequent phase in the workflow involves translating the generated token sequence into a format suitable for representing network traffic data, such as a pcap (Packet Capture) file. This translation process is essentially the inverse of tokenization, whereby each token in the sequence is utilized to construct a corresponding segment of the network traffic data.
+
+The process initiates with identifying and extracting individual data packets from the token list. This is achieved by leveraging a designated packet start token, which serves as a delimiter to delineate the boundaries of each packet within the sequence. Subsequently, parsing operations extract pertinent information from the tokens, such as the link type and hexadecimal representations.
+
+It’s crucial to note that, despite the model’s proficiency, there’s a slight probability of generating ”illegal packets.” These problems might occur when the model generates data packets that cannot be properly parsed due to protocol inconsistencies, such as undefined packet header fields or lengths exceeding protocol-defined limits. To mitigate the impact of such irregularities, a straightforward strategy is employed: any packet deemed ”illegal” is discarded, and the generation process restarts from the beginning of the preceding packet using the start token. This iterative approach ensures the production of a coherent and protocol-compliant network traffic data sequence.
+
+## E. Fine-tuning
+
+Fine-tuning involves adjusting the parameters of a preexisting, pre-trained model to better suit the specific requirements of a particular task or domain. In this paper, we align our approach with methodologies seen in ET-BERT [14] and NetGPT [17], focusing specifically on a classification task designed to categorize network flows.
+
+Our model employs a straightforward yet effective method for fine-tuning. As a first step, we introduce a [cls] token at the beginning of the flow’s token list. This addition signals the model that it is about to undertake a classification task. Subsequently, both the [cls] token and the flow’s tokens are fed into the model. This allows the model to utilize the next output as the label for classification, as depicted in Figure 1.
+
+The model we have developed can handle a total of 260 different tokens. Consequently, using a single token enables the classification of up to 260 distinct classes. In scenarios where the number of classes exceeds 260, we can expand this capacity by employing multiple tokens. For instance, using two tokens can facilitate labeling for as many as 2602 classes.
+
+## IV. EVALUATION
+
+We systematically assess the performance of TrafficGPT across various metrics and comparison analyses. We begin by outlining the settings, which include detailed dataset descriptions, data preprocessing methods, and hyper-parameter setups, laying the groundwork for an in-depth evaluation. Following this, we explore both classification and generation evaluations in detail. These analyses compare our models against existing methodologies in tasks such as traffic flow classification and generation.
+
+## A. Settings
+
+Datasets. We have assembled a comprehensive compilation of five publicly accessible datasets, totaling an extensive 189 gigabytes in size. The included datasets are ISCX-Tor2016 [52], USTCTFC2016 [53], ISCXVPN2016 [54], Do-HBrw2020 [55], and CICIoT2022 [56], covering a diverse range of network traffic types operating within the TCP/IP framework. This encompasses terminal user internet activity, Virtual Private Network (VPN) traffic, Tor network traffic, and Internet of Things (IoT) communication. Notably, some datasets provide both traffic feature files and labels alongside pcap or pcapng files. Our exclusive focus in the analysis is on the raw packets, and any supplementary data has been disregarded for our study.
+
+Data Pre-processing. In the data preprocessing phase, we start by categorizing traffic into flows using the five-tuple approach, considering source IP address, destination IP, source port, destination port, and protocol. This allows us to isolate and extract specific flows within the network. For traffic that doesn’t fall under the TCP or UDP categories, such as Address Resolution Protocol (ARP) and Dynamic Host Configuration Protocol (DHCP) packets, we adopt a method akin to ET-BERT [14], simply discarding them as they are irrelevant to the particular content being transmitted. After that, 99% of the flows is allocated for the pretraining process, while the remaining 1% is set aside for testing.
+
+Hyper-parameters. TrafficGPT is specified with 260 tokens, a feed-forward dimensional of 512, 12 attention heads, and a depth of 24 layers, catering to sequences up to 3,072 (3k) and 12,032 (12k) tokens in length. It incorporates a dropout rate of 0.1 for feed-forward layers, self-attention layers, and post-attention mechanisms to mitigate overfitting. The model utilizes an embedding dimension of 256 and a head dimension of 256. It is also complemented by 8 local attention heads and a local window of 256, enhancing the model’s focus on relevant local sequence segments. The architecture is made reversible, drawing inspiration from the Reformer [48], to improve memory efficiency further. A GLU variant is used for enhanced non-linearity. Additionally, token shifting is applied to improve convergence. The training regimen involves a learning rate of $1 \times 1 0 ^ { - 4 }$ , a batch size of 4, and spans 750,000 steps.
+
+## B. Classification Evaluation
+
+We conduct experiments to evaluate the performance of flow classification tasks. We introduce two models, named TrafficGPT(3k) and TrafficGPT(12k), each pre-trained using distinct maximum token lengths of 3k and 12k, respectively.
+
+For the Cross-Platform datasets, encompassing both iOS and Android, we adopted the preprocessing approach detailed in ET-BERT [14]. This preprocessing approach involved removing flow files smaller than 5KB and discarding classes with insufficient data. As a result, the dataset for Cross-Platform (iOS) comprised 196 labels, while Cross-Platform (Android) contained 215 labels.
+
+TABLE I COMPARISON OF TRAFFIC CLASSIFICATION MACRO F1-SCORES.
+
+<table><tr><td rowspan="2">Method</td><td colspan="2">Cross-Platform(iOS)</td><td colspan="2">Cross-Platform(Android)</td><td colspan="2">ISCX-VPN-App</td><td colspan="2">USTC-TFC</td></tr><tr><td>AC</td><td>F1</td><td>AC</td><td>F1</td><td>AC</td><td>F1</td><td>AC</td><td>F1</td></tr><tr><td>PERT [20]</td><td>0.9789</td><td>0.9584</td><td>0.9772</td><td>0.8550</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr><tr><td>ET-BERT [14]</td><td>0.9844</td><td>0.9643</td><td>0.9865</td><td>0.9246</td><td>0.9206</td><td>0.4314</td><td>0.9524</td><td>0.6986</td></tr><tr><td>NetGPT [17]</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>0.9683</td><td>0.8056</td><td>0.9563</td><td>0.9463</td></tr><tr><td>YaTC [18]</td><td>0.9842</td><td>0.9644</td><td>0.9816</td><td>0.9217</td><td>0.9908</td><td>0.9860</td><td>0.8071</td><td>0.7452</td></tr><tr><td>Lens [15]</td><td>0.9189</td><td>0.9143</td><td>0.9063</td><td>0.8981</td><td>0.9984</td><td>0.9958</td><td>0.9940</td><td>0.9937</td></tr><tr><td>TrafficGPT(3k)</td><td>0.9844</td><td>0.9829</td><td>0.9540</td><td>0.9483</td><td>0.9912</td><td>0.9912</td><td>0.9856</td><td>0.9854</td></tr><tr><td>TrafficGPT(12k)</td><td>0.9839</td><td>0.9863</td><td>0.9444</td><td>0.9498</td><td>1.0000</td><td>1.0000</td><td>0.9900</td><td>0.9877</td></tr></table>
+
+![](images/fc1d5a529c103fe2b0dee4886b094eb869028d66d589ea0181b68f0ac0c3ef87.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| Token Length | Cross-Platform(iOS) | Cross-Platform(Android) | ISCX-VPN-App | USTC-TFC |
+| ------------ | ------------------- | ---------------------- | ------------ | -------- |
+| 32           | 0.98                | 0.98                   | 0.98         | 0.63     |
+| 64           | 0.98                | 0.87                   | 0.98         | 0.92     |
+| 128          | 0.98                | 0.92                   | 0.98         | 0.98     |
+| 256          | 0.98                | 0.94                   | 0.98         | 0.98     |
+| 512          | 0.98                | 0.94                   | 0.98         | 0.98     |
+| 1024         | 0.98                | 0.94                   | 0.98         | 0.98     |
+| 2048         | 0.98                | 0.94                   | 0.98         | 0.98     |
+| 4096         | 0.98                | 0.94                   | 0.98         | 0.98     |
+</details>
+
+Fig. 3. Variation of Macro F1-Scores with token length using TrafficGPT(12k) fine-tuning in classification.
+
+Regarding the ISCX-VPN-App and USTC-TFC datasets, our preprocessing was aligned with the methodology used in NetGPT [17]. In this case, no flow files were removed. The ISCX-VPN-App dataset was used for application classification across 13 distinct classes. Meanwhile, the USTC-TFC dataset focused on software identification, featuring 20 classes.
+
+To mitigate potential dataset-level overfitting associated with specific fields, we excluded MAC addresses, IP addresses, and port information from all datasets before conducting evaluations. This approach prevents the model from relying solely on tricks, such as IP addresses, for classification, ensuring a more suitable evaluation of model performance.
+
+We showcase the performance of five distinct pre-trained models: PERT [20], ET-BERT [14], NetGPT [17], YaTC [18], and Lens [15]. These pre-trained models showcase their superiority over non-pre-trained counterparts, such as Kfingerprinting [6], FS-Net [57], FlowPrint [58], and TSCRNN [59].
+
+The Macro F1-Scores of the aforementioned five pre-trained models and our model’s results are displayed in Table I. We observe that our Macro F1-Score outperforms others across most datasets, showing an average improvement of approximately 2%. This indicates that our model achieves state-of-theart performance in traffic classification tasks. Another notable finding is that the overall performance of TrafficGPT(12k) is slightly better than TrafficGPT(3k), suggesting that pretraining with a longer token length may yield some benefits.
+
+In the fine-tuning process detailed in Table I, a maximum token length of 256 was established. Subsequent investigations into the impact of varying maximum token lengths on macro F1 scores, as depicted in Figure 3, revealed a clear trend.
+
+Using TrafficGPT(12k) with token lengths ranging from 32 to 4096, it was observed that classification accuracy increased sharply as the token length expanded from 32 to 128. Beyond this threshold, the improvement in F1 scores began to level off with further increases in token length. A more detailed examination of dataset-specific performances showed subtle differences; notably, on the Cross-Platform (Android) dataset, F1 scores improved consistently with longer token lengths, reaching a peak of 0.9578 for a token length of 4096. In contrast, for other datasets, optimal F1 scores were achieved at a token length of around 256, with no significant benefits from extending the token length. This analysis highlights two critical insights. Firstly, a token length of 256 generally suffices for accurate flow classification across most datasets. Secondly, increasing the token length can significantly boost classification accuracy for specific datasets, such as Cross-Platform (Android).
+
+## C. Generation Evaluation
+
+In Figure 4, we present three traffic flows generated by our model, utilizing HTTP, DNS, and TLS protocols. These flows are stored in pcap format and visualized using Wireshark. Our model’s traffic closely mimics authentic network patterns. In Figure 4(a), we observe precise generation of packet header fields, with the requested URL /HTTPConnTest.txt adhering to a standard format, making it indistinguishable from real traffic. Similarly, in Figure 4(b), DNS packet requests exhibit high realism, showcasing the model’s efficacy in replicating genuine traffic patterns. Notably, the TLS flow in Figure 4(c) demonstrates commendable generation quality. However, upon meticulous analysis, a slight deviation from standard protocol specifications is observed as a malformed Client Hello packet. This anomaly indicates limitations in the model’s ability to generate encrypted traffic.
+
+In the realm of generative tasks, Natural Language Processing (NLP) has witnessed substantial advancements, accompanied by the emergence of robust evaluation metrics. However, assessing generated network traffic poses unique challenges that conventional NLP metrics may not adequately address. Unlike text generation, network traffic generation involves intricate patterns and structures, necessitating specialized metrics for accurate evaluation.
+
+Common NLP metrics such as BLEU [60], ROUGE [61], or perplexity are tailored for linguistic tasks and may not effectively capture the nuances of traffic generation. For instance, the intricacies involved in packet header and flow feature generation demand metrics capable of quantifying dissimilarity between probability distributions and discerning subtle differences in complex structures.
+
+<table><tr><td>No.</td><td>Time</td><td>Source</td><td>Destination</td><td>Protocol</td><td>Length</td><td>Info</td></tr><tr><td rowspan="13"></td><td>1 0.000000</td><td>192.168.137.67</td><td>13.225.198.110</td><td>TCP</td><td>74 58178  $\rightarrow$  80 [SYN]</td><td>Seq=0 Win=65535 Len=0 MSS=1460 SACK_PERM TSval=151715089 TSecr=0 WS=64</td></tr><tr><td>2 0.016134</td><td>13.225.198.110</td><td>192.168.137.67</td><td>TCP</td><td>74 80  $\rightarrow$  58178 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1440 SACK_PERM TSval=2439201240 TSecr=151715089 WS=512</td><td></td></tr><tr><td>3 0.049191</td><td>192.168.137.67</td><td>13.225.198.110</td><td>TCP</td><td colspan="2">66 58178  $\rightarrow$  80 [ACK] Seq=1 Ack=1 Win=87616 Len=0 TSval=151715092 TSecr=2439201240</td></tr><tr><td>4 0.049191</td><td>192.168.137.67</td><td>13.225.198.110</td><td>HTTP</td><td colspan="2">256 GET /HTTPConnTest.txt HTTP/1.1</td></tr><tr><td>5 0.064775</td><td>13.225.198.110</td><td>192.168.137.67</td><td>TCP</td><td colspan="2">66 80  $\rightarrow$  58178 [ACK] Seq=1 Ack=191 Win=67072 Len=0 TSval=2439201296 TSecr=151715092</td></tr><tr><td>6 0.065244</td><td>13.225.198.110</td><td>192.168.137.67</td><td>TCP</td><td colspan="2">554 80  $\rightarrow$  58178 [PSH, ACK] Seq=1 Ack=191 Win=67072 Len=464 TSval=2439201297 TSecr=151715092 [TCP segment of a reassembled PDU]</td></tr><tr><td>7 0.065304</td><td>13.225.198.110</td><td>192.168.137.67</td><td>TCP</td><td colspan="2">99 HTTP/1.1 200 OK [TCP segment of a reassembled PDU]</td></tr><tr><td>8 0.116912</td><td>192.168.137.67</td><td>13.225.198.110</td><td>TCP</td><td colspan="2">66 58178  $\rightarrow$  80 [ACK] Seq=4294967231 Ack=465 Win=90048 Len=0 TSval=151715107 TSecr=2439201297</td></tr><tr><td>9 0.116912</td><td>192.168.137.67</td><td>13.225.198.110</td><td>TCP</td><td colspan="2">66 58178  $\rightarrow$  80 [ACK] Seq=4294967231 Ack=242 Win=90048 Len=0 TSval=151715107 TSecr=2439201297</td></tr><tr><td>10 240.053175</td><td>13.225.198.110</td><td>192.168.137.67</td><td>TCP</td><td colspan="2">66 [TCP Retransmission] 80  $\rightarrow$  58178 [FIN, ACK] Seq=242 Ack=4294967231 Win=67072 Len=0 TSval=2439441297 TSecr=151715107</td></tr><tr><td>11 240.096030</td><td>192.168.137.67</td><td>13.225.198.110</td><td>TCP</td><td colspan="2">66 58178  $\rightarrow$  80 [ACK] Seq=4294967231 Ack=243 Win=90048 Len=0 TSval=151775114 TSecr=2439441297</td></tr><tr><td>12 300.049243</td><td>192.168.137.67</td><td>13.225.198.110</td><td>TCP</td><td colspan="2">66 [TCP Retransmission] 58178  $\rightarrow$  80 [FIN, ACK] Seq=4294967231 Ack=243 Win=90048 Len=0 TSval=151724527 TSecr=2439441297</td></tr><tr><td>13 300.065135</td><td>13.225.198.110</td><td>192.168.137.67</td><td>TCP</td><td colspan="2">66 80  $\rightarrow$  58178 [ACK] Seq=243 Ack=4294967232 Win=67072 Len=0 TSval=2439501324 TSecr=151724527</td></tr></table>
+
+(a) HTTP Flow
+
+<table><tr><td>No.</td><td>Time</td><td>Source</td><td>Destination</td><td>Protocol</td><td>Length</td><td>Info</td></tr><tr><td rowspan="4"></td><td>1 0.000000</td><td>192.168.137.22</td><td>8.8.8.8</td><td>DNS</td><td>94</td><td>Standard query 0xde7d A wirelessdevicestats.googleapis.com</td></tr><tr><td>2 0.000000</td><td>192.168.137.22</td><td>8.8.8.8</td><td>DNS</td><td>94</td><td>Standard query 0x41dc AAAA wirelessdevicestats.googleapis.com</td></tr><tr><td>3 0.025765</td><td>8.8.8.8</td><td>192.168.137.22</td><td>DNS</td><td>110</td><td>Standard query response 0xde7d A wirelessdevicestats.googleapis.com A 142.251.33.170</td></tr><tr><td>4 0.025821</td><td>8.8.8.8</td><td>192.168.137.22</td><td>DNS</td><td>122</td><td>Standard query response 0x41dc AAAA wirelessdevicestats.googleapis.com AAAA 2607:f8b0:400b:807::200a</td></tr></table>
+
+(b) DNS Flow
+
+<table><tr><td>No.</td><td>Time</td><td>Source</td><td>Destination</td><td>Protocol</td><td>Length</td><td>Info</td></tr><tr><td rowspan="8"></td><td>1 0.000000</td><td>192.168.20.111</td><td>35.244.167.214</td><td>TCP</td><td colspan="2">74 50380 → 443 [SYN] Seq=0 Win=29200 Len=0 MSS=1460 SACK_PERM TSval=3414459628 TSecr=0 WS=128</td></tr><tr><td>2 0.025082</td><td>35.244.167.214</td><td>192.168.20.111</td><td>TCP</td><td colspan="2">74 443 → 50380 [SYN, ACK] Seq=0 Ack=1 Win=65006 Len=0 MSS=1460 SACK_PERM TSval=425880721 TSecr=3414459628 WS=512</td></tr><tr><td>3 0.025102</td><td>192.168.20.111</td><td>35.244.167.214</td><td>TCP</td><td colspan="2">66 50380 → 443 [ACK] Seq=1 Ack=1 Win=29312 Len=0 TSval=3414459653 TSecr=425880721</td></tr><tr><td>4 0.026914</td><td>192.168.20.111</td><td>35.244.167.214</td><td>TLSv1.3</td><td colspan="2">583 Client Hello[Malformed Packet]</td></tr><tr><td>5 0.051898</td><td>35.244.167.214</td><td>192.168.20.111</td><td>TCP</td><td colspan="2">66 443 → 50380 [ACK] Seq=1 Ack=518 Win=257024 Len=0 TSval=425880747 TSecr=3414459654</td></tr><tr><td>6 0.052307</td><td>35.244.167.214</td><td>192.168.20.111</td><td>TLSv1.3</td><td colspan="2">1488 Server Hello, Change Cipher Spec, Application Data, Continuation Data</td></tr><tr><td>7 0.052315</td><td>192.168.20.111</td><td>35.244.167.214</td><td>TCP</td><td colspan="2">66 50380 → 443 [ACK] Seq=518 Ack=1294 Win=36864 Len=0 TSval=3414459680 TSecr=425880747</td></tr><tr><td>8 0.057045</td><td>192.168.20.111</td><td>35.244.167.214</td><td>TLSv1.3</td><td colspan="2">126 Change Cipher Spec</td></tr></table>
+
+(c) TLS Flow  
+Fig. 4. The flows generated by TrafficGPT(12k).
+
+![](images/56e62b0fbca6d14cdc53dd81eff5ee448d43f1950906c64c4b48c1a01d9e8d66.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| Step   | Real  | Generated |
+| ------ | ----- | --------- |
+| 0      | 0.3   | 0.2       |
+| 25000  | 0.4   | 0.3       |
+| 50000  | 0.8   | 0.7       |
+| 75000  | 1.0   | 1.0       |
+</details>
+
+(a) sport
+
+![](images/c15fa31450e9e9d95606f9bd2207305edc61056475ea4f02cb2f8954c7fab2a7.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| Step   | Real  | Generated |
+| ------ | ----- | --------- |
+| 0      | 0.3   | 0.2       |
+| 25000  | 0.5   | 0.4       |
+| 50000  | 0.8   | 0.7       |
+| 60000  | 1.0   | 1.0       |
+</details>
+
+(b) dport
+
+![](images/7943d9f5f6dfd86aefb918601e7e6be9d3f5e329e8d6ad3b4446b02892282f38.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| x        | Real  | Generated |
+| -------- | ----- | --------- |
+| 0        | 0.0   | 0.0       |
+| 1.5x10^9 | 0.3   | 0.25      |
+| 3x10^9   | 0.4   | 0.35      |
+| 4x10^9   | 1.0   | 1.0       |
+</details>
+
+(c) src address
+
+![](images/f756b07db3125c57fbac60dff603c34bfebf4bcf962a261f2ed382a936a8189d.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| x        | Real  | Generated |
+| -------- | ----- | --------- |
+| 1.5x10^9 | 0.2   | 0.2       |
+| 3x10^9   | 0.4   | 0.4       |
+</details>
+
+(d) dst address
+
+![](images/198e2813a38653ee0c784548eb8369202674a6a185ac3006fcd76db0ea8d58e2.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| x    | Real  | Generated |
+| ---- | ----- | --------- |
+| 0    | 0.0   | 0.0       |
+| 1500 | 1.0   | 1.0       |
+| 3000 | 1.0   | 1.0       |
+</details>
+
+(e) packet length
+
+![](images/7ff38aaf187b1f22491e4f291ad44834f87d0812f66fc9abf7bbe0709b065e27.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| x   | Real | Generated |
+| --- | ---- | --------- |
+| 0   | 0.0  | 0.0       |
+| 50  | 0.3  | 0.4       |
+| 100 | 0.7  | 0.8       |
+| 150 | 0.9  | 0.95      |
+| 200 | 0.95 | 0.98      |
+| 250 | 0.98 | 0.99      |
+</details>
+
+(f) TTL  
+Fig. 5. CDF plots of packet headers generated by TrafficGPT(12k).
+
+![](images/8ae9253bd20cd85b7f921d3ee1f99fb259e57a670865280ea1904c6e5f05e6e9.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| x  | Real  | Generated |
+|----|-------|-----------|
+| 0  | 0.0   | 0.0       |
+| 5  | 0.5   | 0.8       |
+| 10 | 0.7   | 0.9       |
+| 15 | 0.85  | 0.95      |
+| 20 | 0.95  | 0.98      |
+| 25 | 0.98  | 0.99      |
+| 30 | 0.99  | 1.0       |
+</details>
+
+(a) feature 1
+
+![](images/e4780623ed3cdc6bf0afe4abaa3d99a9de82db280b2200fd486f49e85683ef57.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| x    | Real  | Generated |
+| ---- | ----- | --------- |
+| 0.0  | 0.3   | 0.6       |
+| 0.2  | 0.4   | 0.6       |
+| 0.4  | 0.7   | 0.7       |
+| 0.5  | 1.0   | 1.0       |
+| 0.6  | 1.0   | 1.0       |
+</details>
+
+(b) feature 2
+
+![](images/aa77d126c4ab997bae5a30383be20486ab4b2ecbadf8579e76962feeb271bb36.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| x    | Real  | Generated |
+| ---- | ----- | --------- |
+| 0.0  | 0.0   | 0.0       |
+| 0.5  | 0.5   | 0.5       |
+| 1.0  | 1.0   | 0.5       |
+</details>
+
+(c) feature 3
+
+![](images/7cea7722e25ae076bb253bf48e732c845059766d3faf37cbb37ac50729935c65.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| x  | Real  | Generated |
+|----|-------|-----------|
+| 0  | 0.2   | 0.5       |
+| 1  | 0.3   | 0.6       |
+| 2  | 0.4   | 0.7       |
+| 3  | 0.5   | 0.8       |
+| 4  | 0.6   | 0.85      |
+| 5  | 0.7   | 0.9       |
+| 6  | 0.8   | 0.92      |
+| 7  | 0.85  | 0.94      |
+| 8  | 0.9   | 0.96      |
+| 9  | 0.95  | 0.97      |
+| 10 | 1.0   | 1.0       |
+</details>
+
+(d) feature 4
+
+![](images/bd521f4b2313007a4c445168194da758040b86f7d2748fae47a6d1f6eed8dcaa.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| x  | Real  | Generated |
+|----|-------|-----------|
+| 0  | 0.3   | 0.5       |
+| 10 | 0.8   | 0.9       |
+| 20 | 0.95  | 0.98      |
+| 30 | 0.98  | 0.99      |
+| 40 | 0.99  | 0.995     |
+</details>
+
+(e) feature 5
+
+![](images/ffe62175caad7c500d9eb65ddfc9f2506022d581e3cc6b50b29c13408d0da1ea.jpg)
+
+<details>
+<summary>line chart</summary>
+
+| x  | Real  | Generated |
+|----|-------|-----------|
+| 0  | 0.3   | 0.7       |
+| 10 | 0.5   | 0.85      |
+| 20 | 0.7   | 0.9       |
+| 30 | 0.85  | 0.95      |
+| 40 | 0.95  | 0.98      |
+| 50 | 0.98  | 0.99      |
+</details>
+
+(f) feature 6  
+Fig. 6. CDF plots of flow features generated by TrafficGPT(12k).
+
+In recognition of these challenges, our evaluation framework incorporates specialized metrics and discriminative models tailored to the unique demands of network traffic generation.
+
+Packet Header Divergence. Jensen-Shannon Divergence (JSD) is employed in this study as a key evaluation metric to quantify the dissimilarity between probability distributions. Derived from information theory, JSD offers a symmetric and continuous measure of the difference between two probability distributions, making it particularly suitable for applications such as text classification and clustering. It is computed by averaging the Kullback-Leibler Divergence (KL Divergence) between each distribution and their arithmetic mean. The resulting metric ranges between 0 and 1, with 0 indicating perfect similarity and 1 representing complete dissimilarity. NetGPT utilizes JSD as a metric to assess the packet header generation quality [17], and our paper adopts this idea for evaluating the performance.
+
+To comprehensively evaluate packet header generation, we introduced assessments for several crucial fields, including IP addresses, ports, packet lengths, and TTL.
+
+Figure 5 illustrates the Cumulative Distribution Function (CDF) plots for generated traffic compared to real traffic, while
+
+TABLE II TRAFFIC GENERATION PERFORMANCE COMPARISON ON PACKET-LEVEL JSD.
+
+<table><tr><td>Method</td><td>sport</td><td>dport</td><td>src address</td><td>dst address</td><td>packet length</td><td>TTL</td><td>Average</td></tr><tr><td>TrafficGPT(3k)</td><td>0.1156</td><td>0.1347</td><td>0.1689</td><td>0.1779</td><td>0.1736</td><td>0.2803</td><td>0.1752</td></tr><tr><td>TrafficGPT(12k)</td><td>0.1346</td><td>0.1551</td><td>0.1684</td><td>0.2304</td><td>0.1874</td><td>0.0872</td><td>0.1605</td></tr></table>
+
+TABLE III TRAFFIC GENERATION PERFORMANCE COMPARISON ON FLOW-LEVEL JSD.
+
+<table><tr><td>Method</td><td>feature 1</td><td>feature 2</td><td>feature 3</td><td>feature 4</td><td>feature 5</td><td>feature 6</td><td>Average</td></tr><tr><td>TrafficGPT(3k)</td><td>0.7417</td><td>0.2613</td><td>0.1161</td><td>0.4051</td><td>0.2931</td><td>0.2465</td><td>0.3440</td></tr><tr><td>TrafficGPT(12k)</td><td>0.4028</td><td>0.2529</td><td>0.1146</td><td>0.3043</td><td>0.2581</td><td>0.1046</td><td>0.2396</td></tr></table>
+
+Table II presents the JSD scores for generated samples. Two notable observations emerge. Firstly, the distribution of the generated data closely aligns with that of the actual data, emphasizing TrafficGPT(12k)’s effectiveness with an average JSD score of 0.1605. Secondly, the marginal discrepancies in JSD scores among various headers of the data packets suggest consistent performance across different packet header evaluations. This indicates the model’s ability to maintain coherence in diverse headers of traffic generation.
+
+Flow Feature Divergence. To further evaluate the quality of flow generation on a broader scale, we introduce a divergence analysis focused on flow features. Specifically, we derive features from the generated flows and compare them with those of the test set using JSD. Flow features play a pivotal role in tasks related to traffic analysis, and in this paper, we leverage the feature generation approach outlined in [6]. We meticulously select the top 6 effective features for computing JSD, and the specific features are detailed in Table IV.
+
+The assessment of flow generation is further elucidated through Figure 6, illustrating CDF plots for flow features, and Table III, which presents the corresponding JSD scores. A noteworthy finding is the JSD score of TrafficGPT(12k) for flow features, standing at 0.2396, indicating a somewhat more significant deviation than the packet header scores. Examining the CDF plots reveals a similarity in the curves between the generated flow features and the authentic distribution, albeit with some distinctions.
+
+These distinctions imply that generating flows may pose a more intricate challenge than generating packet headers. One plausible explanation could be the inherent complexity of capturing long-range token dependencies. Despite these challenges, the generated flow features still resemble the actual distribution, underscoring the model’s capability to capture critical flow characteristics.
+
+Additionally, the JSD scores demonstrate that the 12k model significantly outperforms the 3k model in flow generation. This observation emphasizes the positive impact of increasing token length on enhancing the effectiveness of flow generation. The longer context provided by a higher token length allows the model to better comprehend intricate patterns and dependencies within flows, resulting in a more coherent and realistic generation of network traffic flows.
+
+Discriminative Model Assessment. In addition to evaluating generative models through JSD analysis, we employ discriminative models to further assess the performance and authenticity of the generated flows. Discriminative models are instrumental in distinguishing between real and synthetic data, providing a complementary perspective to generative model evaluations. To implement discriminative model assessment, we train a classifier on the combined dataset comprising both real and generated flows. This classifier is designed to discern subtle differences and patterns between genuine and synthetic flow data.
+
+TABLE IV THE SIX FEATURES FOR CALCULATING FLOW FEATURE DIVERGENCE.
+
+<table><tr><td>ID</td><td>Feature Description</td></tr><tr><td>1</td><td>Number of incoming packets.</td></tr><tr><td>2</td><td>Number of outgoing packets as a fraction of the total number of packets.</td></tr><tr><td>3</td><td>Number of incoming packets as a fraction of the total number of packets.</td></tr><tr><td>4</td><td>Standard deviation of the outgoing packet ordering list.</td></tr><tr><td>5</td><td>Number of outgoing packets.</td></tr><tr><td>6</td><td>Sum of all items in the alternative concentration feature list.</td></tr></table>
+
+If the discriminator struggles to differentiate between real and generated data effectively, it suggests that the generative model has successfully captured intricate patterns and features present in the authentic dataset. This difficulty in discrimination implies that the generated flows closely resemble the characteristics of real data, demonstrating high authenticity and realism in the generated samples.
+
+Specifically, we adopt a traffic classifier proposed by Qu et al. [13]. This classifier employs a hierarchical structure, capable of taking packet byte inputs, making it well-suited for the context. The hierarchical nature of the classifier allows it to analyze and discern patterns at different levels of abstraction within the data, enhancing its ability to capture intricate details in both real and generated flow data.
+
+In the experiment, 1,000 flow samples were generated and stored as pcap files, followed by a binary classification test on an equal number of randomly selected flows from the test dataset. The TrafficGPT(3k) model achieved a Macro F1-Score of 0.6634(±0.0412), while the TrafficGPT(12k) model scored slightly higher at 0.6683(±0.0232). These results indicate a significant challenge for the discriminative model in distinguishing between real and generated flows, suggesting a high degree of realism in the generated data.
+
+## D. Comparative Analysis of Linear Mechanisms
+
+In addition to TrafficGPT utilized in this paper, we also tested two other models that have shown success in NLP tasks with linear complexity: RWKV and RetNet. Their main mechanisms are detailed in Appendix A.
+
+TABLE V COMPARISON OF TRAFFIC CLASSIFICATION MACRO F1-SCORES WITH VARIOUS LINEAR COMPLEXITY MODELS.
+
+<table><tr><td rowspan="2">Method</td><td colspan="2">Cross-Platform(iOS)</td><td colspan="2">Cross-Platform(Android)</td><td colspan="2">ISCX-VPN-App</td><td colspan="2">USTC-TFC</td></tr><tr><td>AC</td><td>F1</td><td>AC</td><td>F1</td><td>AC</td><td>F1</td><td>AC</td><td>F1</td></tr><tr><td>RWKV [20]</td><td>0.9275</td><td>0.8992</td><td>0.8625</td><td>0.8269</td><td>0.9750</td><td>0.9750</td><td>0.9950</td><td>0.9946</td></tr><tr><td>RetNet [50]</td><td>0.9675</td><td>0.9629</td><td>0.9350</td><td>0.9190</td><td>0.9906</td><td>0.9906</td><td>0.9863</td><td>0.9856</td></tr><tr><td>TrafficGPT(3k)</td><td>0.9844</td><td>0.9829</td><td>0.9540</td><td>0.9483</td><td>0.9912</td><td>0.9912</td><td>0.9856</td><td>0.9854</td></tr><tr><td>TrafficGPT(12k)</td><td>0.9839</td><td>0.9863</td><td>0.9444</td><td>0.9498</td><td>1.0000</td><td>1.0000</td><td>0.9900</td><td>0.9877</td></tr></table>
+
+TABLE VI TRAFFIC GENERATION PERFORMANCE COMPARISON ON PACKET-LEVEL JSD WITH VARIOUS LINEAR COMPLEXITY MODELS.
+
+<table><tr><td>Method</td><td>sport</td><td>dport</td><td>src address</td><td>dst address</td><td>packet length</td><td>TTL</td><td>Average</td></tr><tr><td>RWKV [20]</td><td>1.1841</td><td>1.2595</td><td>0.7159</td><td>1.1287</td><td>1.0192</td><td>0.6510</td><td>0.9931</td></tr><tr><td>RetNet [50]</td><td>0.9350</td><td>0.9578</td><td>1.0928</td><td>1.0264</td><td>0.9976</td><td>0.5813</td><td>0.9318</td></tr><tr><td>TrafficGPT(3k)</td><td>0.1156</td><td>0.1347</td><td>0.1689</td><td>0.1779</td><td>0.1736</td><td>0.2803</td><td>0.1752</td></tr><tr><td>TrafficGPT(12k)</td><td>0.1346</td><td>0.1551</td><td>0.1684</td><td>0.2304</td><td>0.1874</td><td>0.0872</td><td>0.1605</td></tr></table>
+
+TABLE VII TRAFFIC GENERATION PERFORMANCE COMPARISON ON FLOW-LEVEL JSD WITH VARIOUS LINEAR COMPLEXITY MODELS. ’NONE’ REPRESENTS INSUFFICIENT DATA TO COMPUTE THE FEATURE.
+
+<table><tr><td>Method</td><td>feature 1</td><td>feature 2</td><td>feature 3</td><td>feature 4</td><td>feature 5</td><td>feature 6</td><td>Average</td></tr><tr><td>RWKV [20]</td><td>0.8785</td><td>0.3938</td><td>0.6042</td><td>None</td><td>0.9361</td><td>1.0881</td><td>0.7801</td></tr><tr><td>RetNet [50]</td><td>1.2641</td><td>0.411</td><td>0.5257</td><td>0.8547</td><td>0.6999</td><td>0.5044</td><td>0.7100</td></tr><tr><td>TrafficGPT(3k)</td><td>0.7417</td><td>0.2613</td><td>0.1161</td><td>0.4051</td><td>0.2931</td><td>0.2465</td><td>0.3440</td></tr><tr><td>TrafficGPT(12k)</td><td>0.4028</td><td>0.2529</td><td>0.1146</td><td>0.3043</td><td>0.2581</td><td>0.1046</td><td>0.2396</td></tr></table>
+
+For each model, we established a learning rate of $1 \times 1 0 ^ { - 4 }$ , a token embedding dimension of 256, a maximum token length of 3k, and a total training step of 3,000,000. Due to distinct GPU memory demands for each model, we adjusted the batch size and depth to maximize GPU efficiency. For RetNet, we opted for a batch size of 8 and a model depth of 24. In the case of RWKV, constrained by hardware limitations, we set the batch size to 2 and the model depth to 18. It’s worth noting that, for RetNet, we employed its chunkwise mode to economize on GPU memory, albeit with the trade-off of increased computation time.
+
+Table V showcases the performance of these models in classification tasks, while Tables VI and VII illustrate their performance in traffic generation. Although they excel in NLP tasks, particularly classification, RWKV and RetNet demonstrate suboptimal performance in tasks related to traffic, especially in traffic generation. In our experiments, we observed that both models often generate packets that cannot be parsed correctly. We conjecture that this issue may arise from RWKV and RetNet’s use of the exponential decay technique, which poses challenges in maintaining correlations between tokens over extended distances.
+
+## V. DISCUSSION
+
+The utilization of deep learning in traffic analysis has gained significant traction, owing to its inherent ability for automatic feature extraction [9]–[11]. Despite its popularity, achieving high generalization poses a challenge due to the limited number of available samples. Self-supervised pretraining, obviating the need for labeled data, emerges as a pivotal strategy for acquiring and training large-scale traffic data. The superiority of pre-trained models over non-pretrained counterparts underscores a promising direction for the future of traffic analysis.
+
+An inherent limitation in existing self-supervised pre-trained models is the token length constraint, typically capped at 512. This constraint can severely impede the effectiveness of analysis when data packets exceed this limit, leading to a failure in capturing relationships between packets, especially in traffic generation tasks. In response to this challenge, our approach enhances the model using linear attention mechanisms, extending the token length to 12k. Experimental results validate the efficacy of this modification, demonstrating improved performance in both traffic classification and generation tasks.
+
+While our model is pre-trained in an auto-regressive manner, which economically addresses classification and traffic generation tasks, it comes with minor drawbacks. For example, the lack of consideration for classification tasks during pretraining may introduce conceptual gaps. Adopting a multitask training strategy could mitigate this limitation and enhance classification results. By incorporating classification tasks alongside auto-regressive learning during training, the model can develop a more comprehensive understanding of the data, potentially improving its performance across various tasks.
+
+Furthermore, the current model treats TCP and UDP flows as the basic units, overlooking information correlation between multiple flows. We recognize this as a future direction for improvement, exploring the integration of a multi-flow architecture with self-supervised learning to enhance overall performance potentially.
+
+Regarding dataset composition, our current dataset primarily consists of TCP/IP data. However, the model architecture is designed to support packet analysis for diverse protocol stacks such as Bluetooth [62]–[64], Zigbee [65]–[67], etc. This opens up an important avenue for future research, where expanding the dataset to encompass a broader range of protocols could further enhance the model’s versatility and applicability.
+
+## VI. CONCLUSION
+
+We developed a deep learning model TrafficGPT that is specifically designed for analyzing and generating network traffic. Our model combines generative pre-training with a linear attention mechanism to tackle the challenges associated with traditional approaches to network traffic studies. With a token limit of 12,032 tokens, our model significantly surpasses existing models in terms of capacity, enabling a more comprehensive analysis and generation of long traffic flows. Our evaluation showcased our model’s superiority in network traffic classification, where it consistently outperforms other models across various datasets. Moreover, in traffic generation, our model demonstrates a remarkable ability to mimic real network flows, with metrics such as JS divergence attesting to the high quality and realism of the generated traffic.
+
+## REFERENCES
+
+[1] E. Papadogiannaki and S. Ioannidis, “A survey on encrypted network traffic analysis applications, techniques, and countermeasures,” ACM Computing Surveys (CSUR), 2021.  
+[2] M. Abbasi, A. Shahraki, and A. Taherkordi, “Deep learning for network traffic monitoring and analysis (NTMA): A survey,” Computer Communications, 2021.  
+[3] D. Javaheri, S. Gorgin, J.-A. Lee, and M. Masdari, “Fuzzy logicbased DDoS attacks and network traffic anomaly detection methods: Classification, overview, and future perspectives,” Information Sciences, 2023.  
+[4] Y. Yin, Z. Lin, M. Jin, G. Fanti, and V. Sekar, “Practical gan-based synthetic ip header trace generation using netshare,” in Proc. ACM SIGCOMM, 2022.  
+[5] O. A. Adeleke, N. Bastin, and D. Gurkan, “Network traffic generation: A survey and methodology,” ACM Computing Surveys (CSUR), 2022.  
+[6] J. Hayes and G. Danezis, “k-fingerprinting: A robust scalable website fingerprinting technique,” in Proc. USENIX Security, 2016.  
+[7] K. Al-Naami, S. Chandra, A. Mustafa, L. Khan, Z. Lin, K. Hamlen, and B. Thuraisingham, “Adaptive encrypted traffic fingerprinting with bi-directional dependence,” in Proc. ACM ACSAC, 2016.  
+[8] V. F. Taylor, R. Spolaor, M. Conti, and I. Martinovic, “Robust smartphone app identification via encrypted network traffic analysis,” IEEE Transactions on Information Forensics and Security, 2017.  
+[9] V. Rimmer, D. Preuveneers, M. Juarez, T. Van Goethem, and W. Joosen, “Automated website fingerprinting through deep learning,” arXiv preprint arXiv:1708.06376, 2017.  
+[10] X. Liu, J. You, Y. Wu, T. Li, L. Li, Z. Zhang, and J. Ge, “Attention-based bidirectional GRU networks for efficient HTTPS traffic classification,” Information Sciences, 2020.  
+[11] Y. Luo, X. Chen, N. Ge, W. Feng, and J. Lu, “Transformer-Based Device-Type Identification in Heterogeneous IoT Traffic,” IEEE Internet of Things Journal, 2022.  
+[12] Z. Song, Z. Zhao, F. Zhang, G. Xiong, G. Cheng, X. Zhao, S. Guo, and B. Chen, “I2RNN: An Incremental and Interpretable Recurrent Neural Network for Encrypted Traffic Classification,” IEEE Transactions on Dependable and Secure Computing, 2023.  
+[13] J. Qu, X. Ma, J. Li, X. Luo, L. Xue, J. Zhang, Z. Li, L. Feng, and X. Guan, “An Input-Agnostic Hierarchical Deep Learning Framework for Traffic Fingerprinting,” in Proc. USENIX Security, 2023, pp. 589– 606.  
+[14] X. Lin, G. Xiong, G. Gou, Z. Li, J. Shi, and J. Yu, “Et-bert: A contextualized datagram representation with pre-training transformers for encrypted traffic classification,” in Proc. ACM WWW, 2022.  
+[15] Q. Wang, C. Qian, X. Li, Z. Yao, and H. Shao, “Lens: A Foundation Model for Network Traffic,” arXiv preprint arXiv:2402.03646, 2024.  
+[16] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, “Attention is all you need,” Advances in neural information processing systems, 2017.  
+[17] X. Meng, C. Lin, Y. Wang, and Y. Zhang, “NetGPT: Generative Pretrained Transformer for Network Traffic,” arXiv preprint arXiv:2304.09513, 2023.  
+[18] R. Zhao, M. Zhan, X. Deng, Y. Wang, Y. Wang, G. Gui, and Z. Xue, “Yet another traffic classifier: a masked autoencoder based traffic transformer with multi-level flow representation,” in Proc. AAAI, 2023.  
+[19] S. Guthula, N. Battula, R. Beltiukov, W. Guo, and A. Gupta, “net-Found: Foundation Model for Network Security,” arXiv preprint arXiv:2310.17025, 2023.  
+[20] H. Y. He, Z. G. Yang, and X. N. Chen, “PERT: Payload encoding representation from transformer for encrypted traffic classification,” in Proc. IEEE ITU K, 2020.  
+[21] J. Yan, H. F. Alan, and J. Kaur, “Fingerprinting Search Keywords over HTTPS at Scale,” arXiv preprint arXiv:2008.08161, 2020.  
+[22] J. Holland, P. Schmitt, N. Feamster, and P. Mittal, “New directions in automated traffic analysis,” in Proc. ACM SIGSAC, 2021.  
+[23] K. Lin, X. Xu, and F. Xiao, “MFFusion: A multi-level features fusion model for malicious traffic detection based on deep learning,” Computer Networks, 2022.  
+[24] J. Li, H. Zhou, S. Wu, X. Luo, T. Wang, X. Zhan, and X. Ma, “{FOAP}:{Fine-Grained} {Open-World} Android App Fingerprinting,” in Proc. USENIX Security, 2022.  
+[25] X. Guan, R. Du, X. Wang, and H. Qu, “A Personalized Federated Multitask Learning Scheme for Encrypted Traffic Classification,” in Proc. Springer ICANN, 2023.  
+[26] J.-B. Grill, F. Strub, F. Altche, C. Tallec, P. Richemond, E. Buchatskaya, ´ C. Doersch, B. Avila Pires, Z. Guo, M. Gheshlaghi Azar et al., “Bootstrap your own latent-a new approach to self-supervised learning,” Advances in neural information processing systems, 2020.  
+[27] R. Xie, Y. Wang, J. Cao, E. Dong, M. Xu, K. Sun, Q. Li, L. Shen, and M. Zhang, “Rosetta: Enabling robust tls encrypted traffic classification in diverse network environments with tcp-aware traffic augmentation,” in Proc. ACM TURC, 2023.  
+[28] M. Ring, D. Schlor, D. Landes, and A. Hotho, “Flow-based network ¨ traffic generation using generative adversarial networks,” Computers & Security, 2019.  
+[29] A. Cheng, “PAC-GAN: Packet generation of network traffic using generative adversarial networks,” in Proc. IEEE IEMCON, 2019.  
+[30] L. D. Manocchio, S. Layeghy, and M. Portmann, “Flowgan-synthetic network flow generation using generative adversarial networks,” in Proc. IEEE CSE, 2021.  
+[31] L. Fan and A. Pokkunuru, “DPNeT: Differentially private network traffic synthesis with generative adversarial networks,” in Proc. Springer DBSec, 2021.  
+[32] B.-E. Zolbayar, R. Sheatsley, P. McDaniel, M. J. Weisman, S. Zhu, S. Zhu, and S. Krishnamurthy, “Generating practical adversarial network traffic flows using NIDSGAN,” arXiv preprint arXiv:2203.06694, 2022.  
+[33] S. Hui, H. Wang, Z. Wang, X. Yang, Z. Liu, D. Jin, and Y. Li, “Knowledge enhanced gan for IoT traffic generation,” in Proc. ACM WWW, 2022.  
+[34] L. Du, J. He, T. Li, Y. Wang, X. Lan, and Y. Huang, “DBWE-Corbat: Background network traffic generation using dynamic word embedding and contrastive learning for cyber range,” Computers & Security, 2023.  
+[35] D. Kim, M. Ko, S. Kim, S. Moon, K.-Y. Cheon, S. Park, Y. Kim, H. Yoon, and Y.-H. Choi, “Design and implementation of traffic generation model and spectrum requirement calculator for private 5G network,” IEEE Access, 2022.  
+[36] D. K. Kholgh and P. Kostakos, “PAC-GPT: A novel approach to generating synthetic network traffic with GPT-3,” IEEE Access, 2023.  
+[37] F. D. Keles, P. M. Wijewardena, and C. Hegde, “On the computational complexity of self-attention,” in Proc. PMLR ALT, 2023.  
+[38] Q. Guo, X. Qiu, P. Liu, Y. Shao, X. Xue, and Z. Zhang, “Startransformer,” arXiv preprint arXiv:1902.09113, 2019.  
+[39] I. Beltagy, M. E. Peters, and A. Cohan, “Longformer: The longdocument transformer,” arXiv preprint arXiv:2004.05150, 2020.  
+[40] M. Zaheer, G. Guruganesh, K. A. Dubey, J. Ainslie, C. Alberti, S. Ontanon, P. Pham, A. Ravula, Q. Wang, L. Yang et al., “Big bird: Transformers for longer sequences,” Advances in neural information processing systems, 2020.  
+[41] A. Roy, M. Saffar, A. Vaswani, and D. Grangier, “Efficient contentbased sparse attention with routing transformers,” Transactions of the Association for Computational Linguistics, 2021.  
+[42] A. Katharopoulos, A. Vyas, N. Pappas, and F. Fleuret, “Transformers are rnns: Fast autoregressive transformers with linear attention,” in International conference on machine learning. PMLR, 2020.  
+[43] J. Lee, Y. Lee, J. Kim, A. Kosiorek, S. Choi, and Y. W. Teh, “Set transformer: A framework for attention-based permutation-invariant neural networks,” in International conference on machine learning. PMLR, 2019.  
+[44] S. Wang, B. Z. Li, M. Khabsa, H. Fang, and H. Ma, “Linformer: Self-attention with linear complexity,” arXiv preprint arXiv:2006.04768, 2020.  
+[45] H. Zhang, Y. Gong, Y. Shen, W. Li, J. Lv, N. Duan, and W. Chen, “Poolingformer: Long document modeling with pooling attention,” in Proc. PMLR ICML, 2021.  
+[46] Q. Guo, X. Qiu, X. Xue, and Z. Zhang, “Low-rank and locality constrained self-attention for sequence modeling,” IEEE/ACM Transactions on Audio, Speech, and Language Processing, 2019.  
+[47] X. Fan, Z. Liu, J. Lian, W. X. Zhao, X. Xie, and J.-R. Wen, “Lighter and better: low-rank decomposed self-attention networks for next-item recommendation,” in Proc. ACM SIGIR, 2021.  
+[48] N. Kitaev, Ł. Kaiser, and A. Levskaya, “Reformer: The efficient transformer,” arXiv preprint arXiv:2001.04451, 2020.  
+[49] B. Peng, E. Alcaide, Q. Anthony, A. Albalak, S. Arcadinho, H. Cao, X. Cheng, M. Chung, M. Grella, K. K. GV et al., “RWKV: Reinventing RNNs for the Transformer Era,” arXiv preprint arXiv:2305.13048, 2023.  
+[50] Y. Sun, L. Dong, S. Huang, S. Ma, Y. Xia, J. Xue, J. Wang, and F. Wei, “Retentive network: A successor to transformer for large language models,” arXiv preprint arXiv:2307.08621, 2023.  
+[51] W. Xiong, B. Oguz, A. Gupta, X. Chen, D. Liskovich, O. Levy, W.-t. ˘ Yih, and Y. Mehdad, “Simple local attentions remain competitive for long-context tasks,” arXiv preprint arXiv:2112.07210, 2021.  
+[52] A. H. Lashkari, G. D. Gil, M. S. I. Mamun, and A. A. Ghorbani, “Characterization of tor traffic using time based features,” in Proc. SciTePress ICISSP, 2017.  
+[53] W. Wang and D. Lu, “USTC-TFC2016,” [Online], 2016, Available:https: //github.com/yungshenglu/USTC-TFC2016.  
+[54] G. Draper-Gil, A. H. Lashkari, M. S. I. Mamun, and A. A. Ghorbani, “Characterization of encrypted and vpn traffic using time-related,” in Proc. SciTePress ICISSP, 2016.  
+[55] M. MontazeriShatoori, L. Davidson, G. Kaur, and A. H. Lashkari, “Detection of doh tunnels using time-series classification of encrypted traffic,” in Proc. IEEE DASC/PiCom/CBDCom/CyberSciTech, 2020.  
+[56] S. Dadkhah, H. Mahdikhani, P. K. Danso, A. Zohourian, K. A. Truong, and A. A. Ghorbani, “Towards the development of a realistic multidimensional IoT profiling dataset,” in Proc. IEEE PST, 2022.  
+[57] C. Liu, L. He, G. Xiong, Z. Cao, and Z. Li, “Fs-net: A flow sequence network for encrypted traffic classification,” in Proc. IEEE INFOCOM, 2019.  
+[58] T. Van Ede, R. Bortolameotti, A. Continella, J. Ren, D. J. Dubois, M. Lindorfer, D. Choffnes, M. van Steen, and A. Peter, “Flowprint: Semi-supervised mobile-app fingerprinting on encrypted network traffic,” in Network and distributed system security symposium (NDSS), vol. 27, 2020.  
+[59] K. Lin, X. Xu, and H. Gao, “TSCRNN: A novel classification scheme of encrypted traffic based on flow spatiotemporal features for efficient management of IIoT,” Computer Networks, 2021.  
+[60] K. Papineni, S. Roukos, T. Ward, and W.-J. Zhu, “Bleu: a method for automatic evaluation of machine translation,” in Proc. ACL, 2002.  
+[61] “Rouge: A package for automatic evaluation of summaries, author=Lin, Chin-Yew,” in Text summarization branches out, 2004.  
+[62] S. Dong, Z. Li, D. Tang, J. Chen, M. Sun, and K. Zhang, “Your smart home can’t keep a secret: Towards automated fingerprinting of iot traffic,” in Proc. ACM ASIACCS, 2020.  
+[63] B. Bezawada, I. Ray, and I. Ray, “Behavioral fingerprinting of Internetof-Things devices,” Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 2021.  
+[64] L. Barman, A. Dumur, A. Pyrgelis, and J.-P. Hubaux, “Every byte matters: Traffic analysis of bluetooth wearable devices,” Proc. ACM IMWUT, 2021.  
+[65] L. Babun, H. Aksu, L. Ryan, K. Akkaya, E. S. Bentley, and A. S. Uluagac, “Z-iot: Passive device-class fingerprinting of zigbee and zwave iot devices,” in Proc. IEEE ICC, 2020.  
+[66] N. Shafqat, D. J. Dubois, D. Choffnes, A. Schulman, D. Bharadia, and A. Ranganathan, “Zleaks: Passive inference attacks on Zigbee based smart homes,” in Proc. Springer ACNS, 2022.  
+[67] K. Cheng, C. Cheng, L. Zhang, J. Chen, and W. Luo, “Fingerprint Recognition and Classification of IoT Devices Based on Z-Wave,” in Proc. VDE CIBDA, 2022.  
+[68] Y. Sun, L. Dong, B. Patra, S. Ma, S. Huang, A. Benhaim, V. Chaudhary, X. Song, and F. Wei, “A length-extrapolatable transformer,” arXiv preprint arXiv:2212.10554, 2022.
+
+## APPENDICES
+
+## A. Detailed Mechanism of Efficient Transformers
+
+We delve into the detailed mechanisms of several existing models designed to mitigate the quadratic complexity bottleneck of the Transformer.
+
+Vaswani’s Attention. The original Transformer uses Vaswani’s scaled dot-product self-attention [16]:
+
+$$
+\left\{ \begin{array}{l} \text { Attention } = V ^ {\prime} = \operatorname{Softmax} (\frac {Q K ^ {T}}{\sqrt {d _ {k}}}) V, \\ Q = X W ^ {Q}, \\ K = X W ^ {K}, \\ V = X W ^ {V}, \end{array} \right. \tag {3}
+$$
+
+where ?? is the input, $W ^ { Q }$ , $W ^ { K }$ and $W ^ { V }$ are leachable parameters. The primary computational cost of Vaswani’s Attention arises from the attention calculation. Assuming the input sequence ?? has a length of ?? and each position’s vector dimension is $d ,$ the computational time complexity of selfattention is $O ( N ^ { 2 } d )$ . This is because, for each position, attention distributions to all other positions need to be computed, involving matrix multiplication with a complexity of $O ( N ^ { 2 } )$ .
+
+Linear Attention. In 2020, Katharopoulos et al. expressed the self-attention mechanism as a linear dot-product of kernel feature maps and leveraging the associativity property of matrix products to reduce complexity from $O ( N ^ { 2 } d )$ to $O ( N d ^ { 2 } )$ [42]. The key idea is to rewrite the attention formula as follows,
+
+$$
+V _ {i} ^ {\prime} = \frac {\sum_ {j = 1} ^ {N} \text { sim } (Q _ {i} , K _ {j}) V _ {j}}{\sum_ {j = 1} ^ {N} \text { sim } (Q _ {i} , K _ {j})}. \tag {4}
+$$
+
+The index ?? is the ??-th row vector of the matrix. Next, they introduced a special kernel ??(??) to represent similarity, and (6) can be rewritten as
+
+$$
+V _ {i} ^ {\prime} = \frac {\sum_ {j = 1} ^ {N} \phi (Q _ {i} ^ {T}) \phi (K _ {j}) V _ {j}}{\sum_ {j = 1} ^ {N} \phi (Q _ {i} ^ {T}) \phi (K _ {j})}, \tag {5}
+$$
+
+and the equation can be further simplified to
+
+$$
+V _ {i} ^ {\prime} = \frac {\phi (Q _ {i} ^ {T}) \sum_ {j = 1} ^ {N} \phi (K _ {j}) V _ {j}}{\phi (Q _ {i} ^ {T}) \sum_ {j = 1} ^ {N} \phi (K _ {j})}. \tag {6}
+$$
+
+So far, the Linear Transformer has exchanged the calculation sequence from (????)?? to ??(????), thereby significantly reducing the computation and achieving linear complexity.
+
+Reformer. In 2020, Kitaev et al. introduced a novel Transformer variant designed to significantly reduce memory usage and computational demands, named the Reformer [48]. The Reformer addresses the limitations of traditional Transformer models by incorporating two key innovations: localitysensitive hashing (LSH) for attention and reversible residual layers. The core idea is to replace the standard softmax attention mechanism with an LSH-based mechanism that clusters similar keys together, reducing the complexity of attention from quadratic to almost linear with respect to sequence length. The mathematical representation for the LSH attention is not as straightforward as RWKV’s due to its algorithmic nature, but the essence is:
+
+$$
+V ^ {\prime} = \text { Aggregate } (\text { Hash } (Q), \text { Hash } (K), V), \tag {7}
+$$
+
+where ??, ??, and ?? are the query, key, and value matrices, respectively, and Hash(·) denotes the hashing function that groups similar items. Additionally, the Reformer employs reversible layers, allowing for the computation of gradients without storing activations for each layer, further reducing memory footprint. This innovative approach makes the Reformer particularly well-suited for processing long sequences, with a time complexity that scales linearly with sequence length, specifically ??(?? log ??) due to the sorting step in LSH. RWKV. In 2023, Peng et al. introduced a new Transformer variant with a attention-like structure called RWKV [49]. This structure replaces the dot product with addition, and the formula is as follows:
+
+$$
+V _ {i} ^ {\prime} = \frac {\sum_ {j = 1} ^ {N} e ^ {W _ {i , j} + K _ {j}} V _ {j}}{\sum_ {j = 1} ^ {N} e ^ {W _ {i , j} + K _ {j}}}, \tag {8}
+$$
+
+in which
+
+$$
+W _ {i, j} = - (j - i) W, \tag {9}
+$$
+
+where $W \in ( R _ { \geq 0 } ) ^ { d }$ , with ?? the number of channels. The time complexity is $O ( N d )$ .
+
+RetNet. In 2023, Sun et al. devised another Transformerlike model with linear complexity, named RetNet [50]. It outperforms Linear Transformers and RWKV in the field of natural language processing. The parallel representation of retention is defined as:
+
+$$
+\left\{ \begin{array}{l} \text {Retention} = V ^ {\prime} = (Q K ^ {T} \odot D) V, \\ Q = (X W ^ {Q}) \odot \Theta , \\ K = (X W ^ {K}) \odot \overline {{{\Theta}}}, \\ V = (X W ^ {V}). \end{array} \right. \tag {10}
+$$
+
+In the expression, Θ and $\overline { { \Theta } }$ represent a relative position embedding [68], and ${ D } \in { \cal R } ^ { N \times N }$ combines causal masking and exponential decay along relative distance. The parallel training has linear time complexity, but the space consumption is greater than Linear Transformer and RWKV.

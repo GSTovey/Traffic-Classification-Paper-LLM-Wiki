@@ -274,3 +274,34 @@ Next steps:
   - 全库 79 篇论文审计完成，所有 HIGH/MEDIUM 优先级问题已修复
   - 12 篇新增 reading-queue 论文：2017-TIFS, 2020-TIFS, 2022-USENIX, 2023-CCS(Point), 2023-NDSS, 2023-S&P, 2023-TNET, 2024-CCS×3, 2024-NDSS, 2024-TNET
   - JKing 是 JKSU (Journal of King Saud University) 的错误缩写，已统一为 JKSU
+
+---
+
+## [2026-06-09] ingest | 批量入库 13 篇新论文
+
+- Added:
+  - 13 篇新论文笔记（`03-paper-notes/`），知识库总量从 79 篇增至 92 篇
+  - 13 篇 PDF 导入 `00-inbox/PDFs/`
+  - 13 份 MinerU Markdown 生成至 `02-parsed-markdown/`
+- Updated:
+  - `00-dashboard/paper-registry.md` — 新增 13 条注册记录（#80–#92），统计更新至 92 篇
+  - `00-dashboard/reading-queue.md` — 新增 13 条阅读队列条目
+  - `00-dashboard/index.md` — 论文数量 79→92，PDF/MinerU/笔记/对比表计数同步更新
+  - `README.md` — 论文数量 79→92
+  - `README.zh-CN.md` — 论文数量 79→92
+- New papers by venue:
+  - **顶级会议**：NDSS (Flow Correlation, MirageFlow, Tor Bridge), USENIX Security (OpenVPN), AAAI (MIETT), INFOCOM (FlowPic)
+  - **知名期刊**：TIFS (Exploring Uncharted Waters, ASNet), JIoT (Malware Detection), JPDC (Multi-ARCL), IWQoS (TraGe)
+  - **其他**：arXiv (NetMamba, TrafficGPT)
+- Research topics:
+  - 流量分类：7 篇（FlowPic, NetMamba, TrafficGPT, MIETT, TraGe, Multi-ARCL, ASNet）
+  - 网站指纹：1 篇（Exploring Uncharted Waters）
+  - Tor 匿名性/攻击：3 篇（Flow Correlation, MirageFlow, Tor Bridge）
+  - VPN 指纹：1 篇（OpenVPN）
+  - 恶意流量检测：1 篇（Malware Detection）
+- Notes:
+  - 来源：`/Users/tovey/Downloads/papers_temp/`（13 篇 PDF）
+  - 去重检查：NetMamba (2024-arXiv) 与已有 NetMamba+ (2026-arXiv) 疑似相关但用户确认两篇都保留
+  - MinerU 解析：13 篇全部成功（vlm 模型，1 批次）
+  - 笔记级别：L2（标准阅读）
+  - 处理方式：3 批并行 Agent 生成笔记

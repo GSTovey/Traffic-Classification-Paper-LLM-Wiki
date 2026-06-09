@@ -2,13 +2,13 @@
 
 [中文说明](./README.zh-CN.md)
 
-An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 79 structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, KDD, etc.), covering 2008--2026.
+An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 92 structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, KDD, etc.), covering 2008--2026.
 
 ---
 
 ## Highlights
 
-- **79 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
+- **92 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
 - **14 deep-analyzed papers** (CCF A/B tier) with formula derivations, ablation studies, and cross-paper connections
 - **35 knowledge pages**: 9 concepts, 8 methods, 8 tasks, 5 surveys, 5 comparison tables, 2 claim indexes
 - **26 confirmed open-source methods** with GitHub/GitLab repositories
@@ -19,10 +19,10 @@ An Obsidian-based knowledge base for systematic literature review in **network t
 ```
 Traffic_Papers/
 ├── 00-inbox/
-│   └── PDFs/              # 79 paper PDFs (source files)
+│   └── PDFs/              # 92 paper PDFs (source files)
 ├── 01-mineru-output/       # MinerU raw API output (gitignored, regenerable)
-├── 02-parsed-markdown/     # MinerU-parsed markdown (79 files)
-├── 03-paper-notes/         # Structured paper notes (79 files) ★
+├── 02-parsed-markdown/     # MinerU-parsed markdown (92 files)
+├── 03-paper-notes/         # Structured paper notes (92 files) ★
 ├── 04-concepts/            # Concept pages (9 files) ★
 ├── 05-methods/             # Method pages (8 files) ★
 ├── 06-tasks/               # Task pages (8 files) ★

@@ -2,13 +2,13 @@
 
 [English](./README.md)
 
-基于 Obsidian 的**网络流量分类**、**加密流量分析**和**流量基础模型**研究论文知识库。收录 79 篇来自顶级会议/期刊（CCS、S&P、USENIX、NDSS、SIGCOMM、INFOCOM、AAAI、NeurIPS、TIFS、TSC、WWW、KDD 等）的结构化论文笔记，覆盖 2008--2026 年的研究成果。
+基于 Obsidian 的**网络流量分类**、**加密流量分析**和**流量基础模型**研究论文知识库。收录 92 篇来自顶级会议/期刊（CCS、S&P、USENIX、NDSS、SIGCOMM、INFOCOM、AAAI、NeurIPS、TIFS、TSC、WWW、KDD 等）的结构化论文笔记，覆盖 2008--2026 年的研究成果。
 
 ---
 
 ## 亮点
 
-- **79 篇结构化论文笔记**，中英双语 frontmatter，含方法分析与证据追踪
+- **92 篇结构化论文笔记**，中英双语 frontmatter，含方法分析与证据追踪
 - **14 篇深度分析论文**（CCF A/B 级），含公式推导、消融实验、跨论文关联
 - **35 个知识页面**：9 概念页 + 8 方法页 + 8 任务页 + 5 综述页 + 5 对比表 + 2 索引页
 - **26 个已确认开源方法**，含 GitHub/GitLab 代码仓库
@@ -19,10 +19,10 @@
 ```
 Traffic_Papers/
 ├── 00-inbox/
-│   └── PDFs/              # 79 篇论文 PDF 原文
+│   └── PDFs/              # 92 篇论文 PDF 原文
 ├── 01-mineru-output/       # MinerU 原始解析结果（已 gitignore，可重新生成）
-├── 02-parsed-markdown/     # MinerU 解析后的 Markdown（79 份）
-├── 03-paper-notes/         # 结构化论文笔记（79 篇）★
+├── 02-parsed-markdown/     # MinerU 解析后的 Markdown（92 份）
+├── 03-paper-notes/         # 结构化论文笔记（92 篇）★
 ├── 04-concepts/            # 概念页（9 个）★
 ├── 05-methods/             # 方法页（8 个）★
 ├── 06-tasks/               # 任务页（8 个）★
