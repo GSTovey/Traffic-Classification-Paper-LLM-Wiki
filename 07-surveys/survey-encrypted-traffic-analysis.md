@@ -182,7 +182,7 @@ updated: "2026-05-27"
 
 ### 6.6 无需预训练的 SOTA 方法（反趋势）
 
-ASNet (TIFS 2025) 提出了一种与预训练范式截然不同的路径：直接使用预训练 BERT 作为 backbone，通过无参数词义聚合器（WSA）使 BERT 快速适配流量数据，配合类别约束语义分离器（CSS）显式分离不同类别的语义空间，在 5 个数据集 7 个任务上无需从头预训练即达到 SOTA。这一"反趋势"挑战了领域内对大规模流量预训练必要性的假设，表明通过巧妙的适配模块设计，可以利用 BERT 已有的通用知识而无需付出高昂的预训练成本。论文笔记：`[[03-paper-notes/2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding.md]]`
+ASNet (TIFS 2025) 提出了一种与预训练范式截然不同的路径：直接使用预训练 BERT 作为 backbone，通过无参数词义聚合器（WSA）使 BERT 快速适配流量数据，配合类别约束语义分离器（CSS）显式分离不同类别的语义空间，在 5 个数据集 7 个任务上无需从头预训练即达到 SOTA。这一"反趋势"挑战了领域内对大规模流量预训练必要性的假设，表明通过巧妙的适配模块设计，可以利用 BERT 已有的通用知识而无需付出高昂的预训练成本。论文笔记：`[[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]]`
 
 ### 6.7 LLM 与流量分析的融合
 

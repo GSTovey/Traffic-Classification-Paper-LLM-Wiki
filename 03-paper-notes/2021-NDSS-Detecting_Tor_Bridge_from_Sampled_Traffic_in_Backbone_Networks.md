@@ -312,34 +312,34 @@ Due to the concealment of the dark web, many criminal activities choose to be co
 
 ### 9.1 相关概念
 
-- [[Tor bridge detection]]
-- [[obfs4 protocol]]
-- [[traffic sampling]]
-- [[Bloom Filter]]
-- [[dark web monitoring]]
+- Tor bridge detection
+- obfs4 protocol
+- traffic sampling
+- Bloom Filter
+- dark web monitoring
 
 ### 9.2 相关方法
 
-- [[Nested Count Bloom Filter]]
-- [[systematic sampling]]
-- [[Random Forest]]
-- [[feature engineering for sampled traffic]]
+- Nested Count Bloom Filter
+- systematic sampling
+- Random Forest
+- feature engineering for sampled traffic
 
 ### 9.3 相关任务
 
-- [[Tor traffic identification]]
-- [[bridge detection in backbone networks]]
-- [[anonymous communication detection]]
+- Tor traffic identification
+- bridge detection in backbone networks
+- anonymous communication detection
 
 ### 9.4 可更新的综述页面
 
-- [[Tor traffic analysis survey]]
-- [[network sampling techniques]]
+- Tor traffic analysis survey
+- network sampling techniques
 
 ### 9.5 可加入的对比表
 
-- [[Tor bridge detection methods comparison]]
-- [[sampling-based traffic analysis]]
+- Tor bridge detection methods comparison
+- sampling-based traffic analysis
 
 ---
 

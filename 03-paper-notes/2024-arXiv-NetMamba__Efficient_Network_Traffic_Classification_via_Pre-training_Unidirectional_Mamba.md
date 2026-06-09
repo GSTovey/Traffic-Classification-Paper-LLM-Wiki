@@ -323,33 +323,33 @@ Accuracy (AC), Precision (PR), Recall (RC), weighted F1 Score (F1)
 
 ### 9.1 相关概念
 
-- [[State Space Model (SSM)]]
-- [[Mamba 架构]]
-- [[Masked Autoencoder (MAE)]]
-- [[加密流量分类]]
-- [[预训练模型]]
+- State Space Model (SSM)
+- Mamba 架构
+- Masked Autoencoder (MAE)
+- 加密流量分类
+- 预训练模型
 
 ### 9.2 相关方法
 
-- [[ET-BERT]]
-- [[YaTC]]
-- [[Transformer 流量分类]]
+- ET-BERT
+- YaTC
+- Transformer 流量分类
 
 ### 9.3 相关任务
 
-- [[加密应用分类]]
-- [[恶意流量检测]]
-- [[攻击流量分类]]
+- 加密应用分类
+- 恶意流量检测
+- 攻击流量分类
 
 ### 9.4 可更新的综述页面
 
-- [[预训练流量模型综述]]
-- [[加密流量分类方法对比]]
+- 预训练流量模型综述
+- 加密流量分类方法对比
 
 ### 9.5 可加入的对比表
 
-- [[预训练流量模型性能对比]]
-- [[流量表示方案对比]]
+- 预训练流量模型性能对比
+- 流量表示方案对比
 
 ---
 

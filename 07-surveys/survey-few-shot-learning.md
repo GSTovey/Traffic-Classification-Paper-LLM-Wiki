@@ -27,7 +27,7 @@ updated: "2026-05-27"
   - Clustering-based FDM (Few-shot Descriptor Mapping)：基于聚类的少样本描述符映射
   - MAML (Model-Agnostic Meta-Learning)：模型无关的元学习框架
   - 核心创新：多任务表示增强 + 聚类辅助的少样本描述
-  - 论文笔记：`[[03-paper-notes/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.md]]`
+  - 论文笔记：`[[2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning]]`
 
 ### 3.2 基于对比学习的方法
 
@@ -35,13 +35,13 @@ updated: "2026-05-27"
   - 利用网络拓扑结构（host-flow 关系）构建正负样本对
   - Crossmodal Attention 融合 packet/flow/host 三模态特征
   - 仅需 0.1% 标注数据达 99.82% 准确率
-  - 论文笔记：`[[03-paper-notes/2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.md]]`
+  - 论文笔记：`[[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]]`
 
 - **SmartDetector**：SAM + InfoNCE 对比学习
   - Semantic Attribute Matrix (SAM) 表示流量语义属性
   - InfoNCE loss 学习语义级表示
   - 在对抗逃举场景下 F1 > 93%
-  - 论文笔记：`[[03-paper-notes/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.md]]`
+  - 论文笔记：`[[2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning]]`
 
 ### 3.3 基于原型学习的方法
 
@@ -50,7 +50,7 @@ updated: "2026-05-27"
   - 微调：SUP (Supervised Uniformity loss) + SSCT (Self-Supervised Contrastive loss)
   - 原型对齐：将已知类和未知类映射到统一的原型空间
   - H-score 达 94.77
-  - 论文笔记：`[[03-paper-notes/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.md]]`
+  - 论文笔记：`[[2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT]]`
 
 ### 3.4 基于跨模态检索的方法
 
@@ -58,7 +58,7 @@ updated: "2026-05-27"
   - 将流量和网站逻辑内容映射到同一语义空间
   - 零样本能力：无需目标网站的流量训练样本
   - Zero-shot top-1 准确率 87.9%，AUC 0.963
-  - 论文笔记：`[[03-paper-notes/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting.md]]`
+  - 论文笔记：`[[2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
 
 ### 3.5 基于开放集半监督学习的方法
 
@@ -67,7 +67,7 @@ updated: "2026-05-27"
   - CViT + TAGCN 提取多粒度流量特征
   - 自适应深度聚类发现未知攻击模式
   - 99.60% AC
-  - 论文笔记：`[[03-paper-notes/2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification.md]]`
+  - 论文笔记：`[[2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification]]`
 
 ### 3.6 基于预训练微调的方法
 
@@ -81,7 +81,7 @@ updated: "2026-05-27"
   - BYOL (Bootstrap Your Own Latent) 自监督学习框架
   - 学习跨环境一致的交互特征，避免依赖虚假模式
   - RobustAugment 数据增强模拟真实网络变化
-  - 论文笔记：`[[03-paper-notes/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.md]]`
+  - 论文笔记：`[[2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]]`
 
 ## 4. 发展脉络
 
@@ -96,14 +96,14 @@ updated: "2026-05-27"
 
 ## 5. 代表论文列表
 
-- MetaMRE (Computer Networks 2023)：元学习 + 多任务表示增强 — `[[03-paper-notes/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.md]]`
-- tFusion (CCS 2025)：拓扑对比学习，0.1% 数据 99.82% — `[[03-paper-notes/2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.md]]`
-- SmartDetector (TIFS 2025)：SAM + InfoNCE 对比学习 — `[[03-paper-notes/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.md]]`
-- UT-PAB (JCN 2026)：BERT 预训练 + 原型对齐，H-score 94.77 — `[[03-paper-notes/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.md]]`
-- STAR (arXiv 2025)：跨模态检索，零样本 WF — `[[03-paper-notes/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting.md]]`
-- FEC-OSL (TIFS 2026)：开放集半监督学习，99.60% AC — `[[03-paper-notes/2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification.md]]`
-- Swallow (CCS 2025)：BYOL + CIF，迁移鲁棒 WF — `[[03-paper-notes/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.md]]`
-- YaTC (AAAI 2023)：MAE 预训练，少样本微调 — `[[03-paper-notes/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.md]]`
+- MetaMRE (Computer Networks 2023)：元学习 + 多任务表示增强 — `[[2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning]]`
+- tFusion (CCS 2025)：拓扑对比学习，0.1% 数据 99.82% — `[[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]]`
+- SmartDetector (TIFS 2025)：SAM + InfoNCE 对比学习 — `[[2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning]]`
+- UT-PAB (JCN 2026)：BERT 预训练 + 原型对齐，H-score 94.77 — `[[2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT]]`
+- STAR (arXiv 2025)：跨模态检索，零样本 WF — `[[2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
+- FEC-OSL (TIFS 2026)：开放集半监督学习，99.60% AC — `[[2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification]]`
+- Swallow (CCS 2025)：BYOL + CIF，迁移鲁棒 WF — `[[2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]]`
+- YaTC (AAAI 2023)：MAE 预训练，少样本微调 — `[[2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation]]`
 
 ## 6. 当前趋势
 

@@ -33,7 +33,7 @@ updated: "2026-05-27"
   - 在 undefended Tor 上准确率 98.3%
   - 在 WTF-PAD 防御下仍保持 90.7%
   - 首次证明深度学习可有效攻破流量防御
-  - 论文笔记：`[[03-paper-notes/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning.md]]`
+  - 论文笔记：`[[2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning]]`
 
 - **Var-CNN**：变长 CNN 处理 packet direction 和 timing 序列
 - **LSTM / Bi-LSTM**：使用 RNN 建模流量序列的时序依赖
@@ -46,7 +46,7 @@ updated: "2026-05-27"
   - 鲁棒性：off-chain packet 的 loss/duplication/disorder 不影响因果链构建
   - 统一模型：无需为每个网站或每种标签数量训练独立模型
   - F1-Score：SSH70 0.919，OpenVPN40 0.981
-  - 论文笔记：`[[03-paper-notes/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.md]]`
+  - 论文笔记：`[[2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel]]`
 
 ### 3.4 基于一致性特征学习的方法（迁移鲁棒性）
 
@@ -55,7 +55,7 @@ updated: "2026-05-27"
   - RobustAugment 数据增强模拟真实网络变化
   - BYOL (Bootstrap Your Own Latent) 对比学习框架
   - 相比 SOTA 提升 17.50%
-  - 论文笔记：`[[03-paper-notes/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.md]]`
+  - 论文笔记：`[[2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]]`
 
 ### 3.5 基于跨模态检索的方法（零样本场景）
 
@@ -64,7 +64,7 @@ updated: "2026-05-27"
   - 跨模态检索：给定流量查询，在语义库中检索最匹配的网站
   - 零样本能力：无需目标网站的流量训练样本即可识别
   - Zero-shot top-1 准确率 87.9%，AUC 0.963
-  - 论文笔记：`[[03-paper-notes/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting.md]]`
+  - 论文笔记：`[[2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
 
 ### 3.6 基于图神经网络的方法
 
@@ -75,7 +75,7 @@ updated: "2026-05-27"
   - GNN 在 reload 场景下表现最佳：GFNC Top-1 62.01%，超越所有 baseline
   - 5 个新数据集覆盖多种 WF 场景
   - 局限：GFGC 的 CTDNE 嵌入生成计算开销大（约 400 小时），数据集规模较小
-  - 论文笔记：`[[03-paper-notes/2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting.md]]`
+  - 论文笔记：`[[2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting]]`
 
 ### 3.7 基于注意力机制的方法
 
@@ -96,12 +96,12 @@ updated: "2026-05-27"
 
 ## 5. 代表论文列表
 
-- DF (CCS 2018)：CNN-based 网站指纹识别，98.3% undefended accuracy — `[[03-paper-notes/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning.md]]`
-- RobustWF (INFOCOM 2024)：因果关联 + 上下文学习的多标签 WF — `[[03-paper-notes/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.md]]`
-- Swallow (CCS 2025)：迁移鲁棒 WF，CIF + BYOL — `[[03-paper-notes/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.md]]`
-- STAR (arXiv 2025)：零样本 WF，跨模态检索 — `[[03-paper-notes/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting.md]]`
-- FlowPrint (NDSS 2020)：半监督移动应用指纹识别，目的地时间相关性 — `[[03-paper-notes/2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.md]]`
-- GFNC/GFGC (TIFS 2023)：GNN-based WF，节点分类+图分类，DApp 和 reload 场景 — `[[03-paper-notes/2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting.md]]`
+- DF (CCS 2018)：CNN-based 网站指纹识别，98.3% undefended accuracy — `[[2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning]]`
+- RobustWF (INFOCOM 2024)：因果关联 + 上下文学习的多标签 WF — `[[2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel]]`
+- Swallow (CCS 2025)：迁移鲁棒 WF，CIF + BYOL — `[[2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]]`
+- STAR (arXiv 2025)：零样本 WF，跨模态检索 — `[[2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
+- FlowPrint (NDSS 2020)：半监督移动应用指纹识别，目的地时间相关性 — `[[2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic]]`
+- GFNC/GFGC (TIFS 2023)：GNN-based WF，节点分类+图分类，DApp 和 reload 场景 — `[[2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting]]`
 
 ## 6. 当前趋势
 

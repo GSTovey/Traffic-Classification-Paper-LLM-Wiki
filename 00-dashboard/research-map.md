@@ -70,9 +70,9 @@
 
 以下方向尚无独立页面，可后续逐步创建：
 
-**概念页**：[[vpn-traffic-classification]]、[[tor-traffic-classification]]、[[intrusion-detection]]、[[malware-detection]]、[[dns-security]]、[[network-privacy]]、[[iot-security]]
+**概念页**：vpn-traffic-classification、tor-traffic-classification、intrusion-detection、malware-detection、dns-security、network-privacy、iot-security
 
-**方法页**：[[meta-learning]]、[[attention-mechanism]]、[[autoencoder]]、[[random-forest]]、[[fingerprinting-methods]]、[[data-augmentation]]
+**方法页**：meta-learning、attention-mechanism、autoencoder、random-forest、fingerprinting-methods、data-augmentation
 
 **任务页**：（当前已覆盖主要任务方向）
 

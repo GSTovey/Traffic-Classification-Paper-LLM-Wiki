@@ -339,35 +339,35 @@ NJUPT2023 数据集上，ARCL 相比 iCaRL 准确率提升 39.88%，相比 Fine-
 
 ### 9.1 相关概念
 
-- [[Continual Learning]]
-- [[Machine Unlearning]]
-- [[Silent Applications]]
-- [[Stability-Plasticity Dilemma]]
-- [[Multimodal Feature Extraction]]
+- Continual Learning
+- Machine Unlearning
+- Silent Applications
+- Stability-Plasticity Dilemma
+- Multimodal Feature Extraction
 
 ### 9.2 相关方法
 
-- [[iCaRL]]
-- [[Bic]]
-- [[Knowledge Distillation]]
-- [[Memory Replay]]
-- [[SIF Weighted Word Vectors]]
+- iCaRL
+- Bic
+- Knowledge Distillation
+- Memory Replay
+- SIF Weighted Word Vectors
 
 ### 9.3 相关任务
 
-- [[Encrypted Traffic Classification]]
-- [[Application Classification]]
-- [[Incremental Learning for ETC]]
+- Encrypted Traffic Classification
+- Application Classification
+- Incremental Learning for ETC
 
 ### 9.4 可更新的综述页面
 
-- [[Continual Learning for Traffic Classification]]
-- [[Multimodal Traffic Representation]]
+- Continual Learning for Traffic Classification
+- Multimodal Traffic Representation
 
 ### 9.5 可加入的对比表
 
-- [[CL Methods Comparison for ETC]]
-- [[Silent Application Handling Strategies]]
+- CL Methods Comparison for ETC
+- Silent Application Handling Strategies
 
 ---
 

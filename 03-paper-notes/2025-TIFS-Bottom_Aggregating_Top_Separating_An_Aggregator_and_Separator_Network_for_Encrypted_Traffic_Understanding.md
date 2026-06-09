@@ -352,40 +352,40 @@ macro F1, micro F1
 
 ### 9.1 相关概念
 
-- [[Word Sense Aggregator]]
-- [[Category-constrained Semantic Separator]]
-- [[Task-aware Prompts]]
-- [[Parameter-free Module]]
-- [[Prompt Learning for Traffic]]
+- Word Sense Aggregator
+- Category-constrained Semantic Separator
+- Task-aware Prompts
+- Parameter-free Module
+- Prompt Learning for Traffic
 
 ### 9.2 相关方法
 
-- [[ET-BERT]]
-- [[YaTC]]
-- [[BERT]]
-- [[PacRep]]
-- [[EETS]]
+- ET-BERT
+- YaTC
+- BERT
+- PacRep
+- EETS
 
 ### 9.3 相关任务
 
-- [[Encrypted Traffic Classification]]
-- [[VPN Classification]]
-- [[Application Classification]]
-- [[Malware Detection]]
-- [[IoT Attack Detection]]
-- [[Tor Service Classification]]
+- Encrypted Traffic Classification
+- VPN Classification
+- Application Classification
+- Malware Detection
+- IoT Attack Detection
+- Tor Service Classification
 
 ### 9.4 可更新的综述页面
 
-- [[PLM-based Traffic Classification Methods]]
-- [[Prompt Learning for Network Traffic]]
-- [[Pre-training vs No Pre-training for ETC]]
+- PLM-based Traffic Classification Methods
+- Prompt Learning for Network Traffic
+- Pre-training vs No Pre-training for ETC
 
 ### 9.5 可加入的对比表
 
-- [[Pre-training Cost Comparison]]
-- [[Word Sense Preservation Strategies]]
-- [[Semantic Separation Methods]]
+- Pre-training Cost Comparison
+- Word Sense Preservation Strategies
+- Semantic Separation Methods
 
 ### 9.6 论文交叉引用
 

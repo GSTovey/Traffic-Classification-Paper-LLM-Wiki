@@ -26,7 +26,7 @@ updated: "2026-05-27"
   - 频域特征具有时移不变性和可加性，在噪声和 packet loss 下保持鲁棒性
   - 仅使用正常流量样本训练 One-Class SVM
   - AUC 0.93-0.999，吞吐量 13.22 Gbps
-  - 论文笔记：`[[03-paper-notes/2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis.md]]`
+  - 论文笔记：`[[2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis]]`
 
 ### 3.2 基于对比学习的方法
 
@@ -34,7 +34,7 @@ updated: "2026-05-27"
   - SAM 表示流量的语义属性，比原始特征更具区分性
   - InfoNCE loss 学习语义级表示
   - 在对抗逃举场景（evasion attacks）下 F1 > 93%
-  - 论文笔记：`[[03-paper-notes/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.md]]`
+  - 论文笔记：`[[2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning]]`
 
 ### 3.3 基于多模态融合的方法
 
@@ -43,7 +43,7 @@ updated: "2026-05-27"
   - Crossmodal Attention 融合不同粒度特征
   - 拓扑驱动对比学习利用网络拓扑结构减少标注依赖
   - 仅需 0.1% 标注数据达 99.82% 准确率
-  - 论文笔记：`[[03-paper-notes/2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.md]]`
+  - 论文笔记：`[[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]]`
 
 ### 3.4 基于大语言模型的方法
 
@@ -51,7 +51,7 @@ updated: "2026-05-27"
   - 领域特定 BPE 编码器：适配流量数据的字节分布，而非使用通用 NLP tokenizer
   - DATA adapter：桥接流量表示与语言模型的语义空间
   - F1 > 0.96
-  - 论文笔记：`[[03-paper-notes/2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection.md]]`
+  - 论文笔记：`[[2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection]]`
 
 ### 3.5 基于 Transformer 特征提取的方法
 
@@ -61,7 +61,7 @@ updated: "2026-05-27"
   - 使用 DNN 作为分类器进行二分类（恶意 vs 正常）和多分类（恶意软件家族）
   - DataCon2020 召回率 98.34%，CIC-AndMal-2017 精确率 93.54%
   - 局限：仅使用统计特征（ST Feature），未直接处理原始字节
-  - 论文笔记：`[[03-paper-notes/2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis.md]]`
+  - 论文笔记：`[[2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis]]`
 
 ### 3.6 基于预训练基础模型的方法
 
@@ -74,7 +74,7 @@ updated: "2026-05-27"
 - **FEC-OSL**：能量模型 + CViT + TAGCN + 自适应深度聚类
   - 端到端开放集半监督学习
   - 99.60% AC
-  - 论文笔记：`[[03-paper-notes/2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification.md]]`
+  - 论文笔记：`[[2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification]]`
 
 ### 3.8 基于多维异构特征的方法
 
@@ -82,7 +82,7 @@ updated: "2026-05-27"
   - Burst filtering 过滤噪声
   - 投票机制整合多粒度检测结果
   - P/R/F1 均达 99%
-  - 论文笔记：`[[03-paper-notes/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.md]]`
+  - 论文笔记：`[[2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision]]`
 
 ## 4. 发展脉络
 
@@ -99,16 +99,16 @@ updated: "2026-05-27"
 
 ## 5. 代表论文列表
 
-- Whisper (CCS 2021)：频域分析，AUC 0.93-0.999，13.22 Gbps — `[[03-paper-notes/2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis.md]]`
-- SmartDetector (TIFS 2025)：SAM + 对比学习，F1 > 93% under evasion — `[[03-paper-notes/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.md]]`
-- tFusion (CCS 2025)：跨模态融合 + 拓扑对比学习，0.1% 数据 99.82% — `[[03-paper-notes/2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.md]]`
-- MET-LLM (ESA 2025)：大语言模型辅助检测，F1 > 0.96 — `[[03-paper-notes/2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection.md]]`
-- FEC-OSL (TIFS 2026)：开放集半监督学习，99.60% AC — `[[03-paper-notes/2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification.md]]`
-- UT-PAB (JCN 2026)：BERT 预训练 + 原型对齐，H-score 94.77 — `[[03-paper-notes/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.md]]`
-- ET-BERT (WWW 2022)：BERT 预训练加密流量表示 — `[[03-paper-notes/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.md]]`
-- YaTC (AAAI 2023)：MAE 预训练 + 分层注意力 — `[[03-paper-notes/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.md]]`
-- MTBD (HPCC 2022)：三维异构特征 + 投票 — `[[03-paper-notes/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.md]]`
-- Session-Transformer (JIoT 2025)：修改 Transformer + DNN 检测加密恶意流量，DataCon2020 召回率 98.34% — `[[03-paper-notes/2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis.md]]`
+- Whisper (CCS 2021)：频域分析，AUC 0.93-0.999，13.22 Gbps — `[[2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis]]`
+- SmartDetector (TIFS 2025)：SAM + 对比学习，F1 > 93% under evasion — `[[2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning]]`
+- tFusion (CCS 2025)：跨模态融合 + 拓扑对比学习，0.1% 数据 99.82% — `[[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]]`
+- MET-LLM (ESA 2025)：大语言模型辅助检测，F1 > 0.96 — `[[2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection]]`
+- FEC-OSL (TIFS 2026)：开放集半监督学习，99.60% AC — `[[2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification]]`
+- UT-PAB (JCN 2026)：BERT 预训练 + 原型对齐，H-score 94.77 — `[[2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT]]`
+- ET-BERT (WWW 2022)：BERT 预训练加密流量表示 — `[[2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification]]`
+- YaTC (AAAI 2023)：MAE 预训练 + 分层注意力 — `[[2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation]]`
+- MTBD (HPCC 2022)：三维异构特征 + 投票 — `[[2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision]]`
+- Session-Transformer (JIoT 2025)：修改 Transformer + DNN 检测加密恶意流量，DataCon2020 召回率 98.34% — `[[2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis]]`
 
 ## 6. 当前趋势
 

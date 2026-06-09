@@ -28,7 +28,7 @@ updated: "2026-05-27"
   - Datagram2Token 框架：BPE 编码 + MBM (Masked Byte-gram Modeling) + SBP (Same-position Bag Prediction)
   - 5 个加密流量分类任务上全面超越现有方法
   - 局限：30GB 预训练数据，500K 步训练
-  - 论文笔记：`[[03-paper-notes/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.md]]`
+  - 论文笔记：`[[2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification]]`
 
 - **PERT**：Payload Encoding Representation from Transformer
   - 类似 ET-BERT 的 BERT 预训练框架
@@ -44,7 +44,7 @@ updated: "2026-05-27"
   - 90% 最优掩码率验证了流量数据的高冗余性（远高于 NLP 的 <20%）
   - 在 5 个数据集上以大幅优势超越 BERT 类方法（ISCXTor2016 F1 从 80% 提升至 99.72%）
   - 迁移学习能力显著：Cross-Platform F1 提升 12.42%，而 ET-BERT 和 PERT 提升不到 1%
-  - 论文笔记：`[[03-paper-notes/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.md]]`
+  - 论文笔记：`[[2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation]]`
 
 ### 3.3 SSM 类（State Space Model）
 
@@ -57,14 +57,14 @@ updated: "2026-05-27"
   - 参数量最少（2.2M），推理速度比 Transformer 快 60 倍
   - 6 个数据集 3 类任务上准确率均超 90%，部分超 99%
   - 与 NetMamba+ (2026) 为不同作者团队的独立工作
-  - 论文笔记：`[[03-paper-notes/2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba.md]]`
+  - 论文笔记：`[[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]`
 
 - **NetMamba+**：融合多模态表示的 Mamba 流量分类框架
   - 融合多模态表示（payload + packet length）
   - 标签分布感知微调（LDA loss）
   - 推理吞吐量比最佳 Transformer baseline 高 1.7 倍
   - 局限：CSTNET-TLS1.3 时序划分准确率下降 8.47%，payload 贡献不稳定
-  - 论文笔记：`[[03-paper-notes/2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.md]]`
+  - 论文笔记：`[[2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification]]`
 
 ### 3.4 多模态类
 
@@ -76,7 +76,7 @@ updated: "2026-05-27"
   - 加密隧道网站识别准确率提升 84%
   - 关键发现：byte-level 编码优于 2-gram（避免 mask 信息泄露）
   - 局限：8 块 RTX 6000 Ada，350 小时预训练
-  - 论文笔记：`[[03-paper-notes/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.md]]`
+  - 论文笔记：`[[2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis]]`
 
 ### 3.5 GPT / 自回归类（Decoder-only）
 
@@ -89,7 +89,7 @@ updated: "2026-05-27"
   - 分类 SOTA：平均 F1 提升 2%（CrossPlatform iOS 0.9863, Android 0.9498）
   - 生成质量高：判别器 F1 仅 0.6683（接近随机猜测 0.5），JS 散度 0.1605
   - 局限：TLS 流量生成存在 malformed Client Hello
-  - 论文笔记：`[[03-paper-notes/2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation.md]]`
+  - 论文笔记：`[[2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation]]`
 
 ### 3.6 多实例 Transformer 类
 
@@ -101,7 +101,7 @@ updated: "2026-05-27"
   - 两个专用预训练任务：PRPP（Packet Relative Position Prediction）+ FCL（Flow Contrastive Learning）
   - CrossPlatform(Android) 上 F1 从 ET-BERT 的 67.70% 提升至 82.36%（+14.66%）
   - 局限：Packet 数量固定 N=5，packet 级 encoder 冻结
-  - 论文笔记：`[[03-paper-notes/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification.md]]`
+  - 论文笔记：`[[2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification]]`
 
 ### 3.7 结构感知预训练类
 
@@ -113,7 +113,7 @@ updated: "2026-05-27"
   - Dynamic Masking：训练时动态生成掩码位置，防止过拟合
   - 应用分类 F1 超越 SOTA 最高 6.97%，服务识别 F1 93.31%
   - 局限：仅处理单包，未建模 packet 间关系
-  - 论文笔记：`[[03-paper-notes/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences.md]]`
+  - 论文笔记：`[[2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences]]`
 
 ### 3.8 混合架构类
 
@@ -135,16 +135,16 @@ updated: "2026-05-27"
 
 ## 5. 代表论文列表
 
-- ET-BERT (WWW 2022)：BERT 类，加密流量 BERT 预训练 — `[[03-paper-notes/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.md]]`
-- YaTC (AAAI 2023)：MAE 类，分层注意力 + MFR — `[[03-paper-notes/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.md]]`
-- MM4flow (CCS 2025)：多模态类，77.6TB 预训练 — `[[03-paper-notes/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.md]]`
-- NetMamba+ (arXiv 2026)：SSM 类，Mamba + 多模态 — `[[03-paper-notes/2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.md]]`
-- Talk Like a Packet (arXiv 2026)：系统分类，统一预训练-微调流水线 — `[[03-paper-notes/2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models.md]]`
-- Sweet Danger (SIGCOMM 2025)：揭示数据泄露和 shortcut learning — `[[03-paper-notes/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification.md]]`
-- NetMamba (arXiv 2024)：SSM 类，首个 Mamba 流量分类，60x 加速 — `[[03-paper-notes/2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba.md]]`
-- TrafficGPT (arXiv 2024)：GPT 类，线性注意力 12K token，分类+生成 — `[[03-paper-notes/2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation.md]]`
-- MIETT (AAAI 2025)：多实例 Transformer，Two-Level Attention + PRPP/FCL — `[[03-paper-notes/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification.md]]`
-- TraGe (IWQoS 2025)：结构感知预训练，Header-Payload 差异化 Field-level Masking — `[[03-paper-notes/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences.md]]`
+- ET-BERT (WWW 2022)：BERT 类，加密流量 BERT 预训练 — `[[2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification]]`
+- YaTC (AAAI 2023)：MAE 类，分层注意力 + MFR — `[[2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation]]`
+- MM4flow (CCS 2025)：多模态类，77.6TB 预训练 — `[[2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis]]`
+- NetMamba+ (arXiv 2026)：SSM 类，Mamba + 多模态 — `[[2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification]]`
+- Talk Like a Packet (arXiv 2026)：系统分类，统一预训练-微调流水线 — `[[2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models]]`
+- Sweet Danger (SIGCOMM 2025)：揭示数据泄露和 shortcut learning — `[[2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification]]`
+- NetMamba (arXiv 2024)：SSM 类，首个 Mamba 流量分类，60x 加速 — `[[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]`
+- TrafficGPT (arXiv 2024)：GPT 类，线性注意力 12K token，分类+生成 — `[[2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation]]`
+- MIETT (AAAI 2025)：多实例 Transformer，Two-Level Attention + PRPP/FCL — `[[2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification]]`
+- TraGe (IWQoS 2025)：结构感知预训练，Header-Payload 差异化 Field-level Masking — `[[2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences]]`
 
 ## 6. 当前趋势
 

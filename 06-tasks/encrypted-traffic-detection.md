@@ -82,12 +82,12 @@ updated: "2026-05-27"
 
 ## 6. 代表论文
 
-- Whisper：基于 DFT 频域分析的恶意加密流量实时检测，AUC 0.93-0.999，吞吐量 13.22 Gbps — `[[03-paper-notes/2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis.md]]`
-- SmartDetector：基于 SAM + 对比学习的对抗鲁棒加密恶意流量检测，F1 > 93% under evasion — `[[03-paper-notes/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.md]]`
-- tFusion：跨模态特征融合 + 拓扑对比学习，仅需 0.1% 标注数据达 99.82% 准确率 — `[[03-paper-notes/2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.md]]`
-- ET-BERT：首个加密流量 BERT 预训练模型 — `[[03-paper-notes/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.md]]`
-- YaTC：MAE 预训练 Traffic Transformer，分层注意力 — `[[03-paper-notes/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.md]]`
-- OpenVPN Fingerprinting：Opcode + ACK 双指纹 + 主动探测的两阶段 VPN 检测框架，ISP 规模下 85%+ 识别率，误报率 < 0.0039% — `[[03-paper-notes/2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting.md]]`
+- Whisper：基于 DFT 频域分析的恶意加密流量实时检测，AUC 0.93-0.999，吞吐量 13.22 Gbps — `[[2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis]]`
+- SmartDetector：基于 SAM + 对比学习的对抗鲁棒加密恶意流量检测，F1 > 93% under evasion — `[[2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning]]`
+- tFusion：跨模态特征融合 + 拓扑对比学习，仅需 0.1% 标注数据达 99.82% 准确率 — `[[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]]`
+- ET-BERT：首个加密流量 BERT 预训练模型 — `[[2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification]]`
+- YaTC：MAE 预训练 Traffic Transformer，分层注意力 — `[[2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation]]`
+- OpenVPN Fingerprinting：Opcode + ACK 双指纹 + 主动探测的两阶段 VPN 检测框架，ISP 规模下 85%+ 识别率，误报率 < 0.0039% — `[[2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting]]`
 
 ## 7. 工程落地问题
 

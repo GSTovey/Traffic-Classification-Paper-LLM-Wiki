@@ -316,33 +316,33 @@ Precision, Recall, F1-Score
 
 ### 9.1 相关概念
 
-- [[Field-level Masking]]
-- [[Dynamic Masking]]
-- [[Header-Payload Differentiated Pre-training]]
-- [[Generic Packet Representation]]
+- Field-level Masking
+- Dynamic Masking
+- Header-Payload Differentiated Pre-training
+- Generic Packet Representation
 
 ### 9.2 相关方法
 
-- [[ET-BERT]]
-- [[YaTC]]
-- [[NetGPT]]
-- [[BERT MLM]]
+- ET-BERT
+- YaTC
+- NetGPT
+- BERT MLM
 
 ### 9.3 相关任务
 
-- [[Application Classification]]
-- [[Service Identification]]
-- [[Encrypted Traffic Classification]]
+- Application Classification
+- Service Identification
+- Encrypted Traffic Classification
 
 ### 9.4 可更新的综述页面
 
-- [[Pre-training Strategies for Network Traffic]]
-- [[Masking Strategies Comparison]]
+- Pre-training Strategies for Network Traffic
+- Masking Strategies Comparison
 
 ### 9.5 可加入的对比表
 
-- [[Masking Strategy Comparison]]
-- [[Header vs Payload Information Usage]]
+- Masking Strategy Comparison
+- Header vs Payload Information Usage
 
 ---
 

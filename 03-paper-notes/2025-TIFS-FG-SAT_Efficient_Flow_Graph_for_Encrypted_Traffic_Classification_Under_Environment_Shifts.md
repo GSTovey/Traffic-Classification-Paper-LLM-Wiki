@@ -431,8 +431,8 @@ APP-SHIFTS 数据集统计：
 
 ### 9.6 论文交叉引用
 
-- [[2023-NDSS-Detecting_unknown_encrypted_malicious_traffic_via_flow_interaction_graph]] — Flow Interaction Graph，与本文 Flow Graph 构建思路相关
-- [[2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_GNNs]] — GNN 用于加密流量分类的早期工作
+- [[2023-NDSS-Detecting_unknown_encrypted_malicious_traffic_in_real_time_via_flow_interaction_graph_analysis]] — Flow Interaction Graph，与本文 Flow Graph 构建思路相关
+- [[2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks]] — GNN 用于加密流量分类的早期工作
 - [[2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning]] — MT-DEGCL，同为图结构流量分类方法
 - [[2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification]] — FEC-OSL，同为环境偏移/开放集场景
 - [[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]] — ASNet，同为 Transformer-based 流量分类

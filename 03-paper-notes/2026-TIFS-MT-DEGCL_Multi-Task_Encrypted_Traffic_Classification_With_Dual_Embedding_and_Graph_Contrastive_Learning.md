@@ -449,7 +449,7 @@ $$\mathcal{L} = \mathcal{L}_f + \mathcal{L}_p + \lambda \cdot \mathcal{L}_{gcl}$
 ### 9.6 论文交叉引用
 
 - [[2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under_Environment_Shifts]] — FG-SAT，同为图结构流量分类方法，使用 GraphSAGE + GAT
-- [[2023-NDSS-Detecting_unknown_encrypted_malicious_traffic_via_flow_interaction_graph]] — Flow Interaction Graph，流量交互图的先驱工作
+- [[2023-NDSS-Detecting_unknown_encrypted_malicious_traffic_in_real_time_via_flow_interaction_graph_analysis]] — Flow Interaction Graph，流量交互图的先驱工作
 - [[2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification]] — FEC-OSL，同为加密流量分类方法
 - [[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]] — ASNet，同为 Transformer-based 流量分类
 - [[2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classification__A_Traffic-Explainer_Framework]] — Traffic-Explainer，流量分类可解释性研究

@@ -90,7 +90,7 @@ Next steps:
   - 5 个综述页（07-surveys/）— 清除断链
   - ~50 篇论文笔记（03-paper-notes/）— 清除断链
 - Notes:
-  - 概念页中大量使用人类可读名称（如 `[[Contrastive Learning]]`）而非 kebab-case（`[[contrastive-learning]]`），全部转为纯文本
+  - 概念页中大量使用人类可读名称（如 `Contrastive Learning`）而非 kebab-case（`contrastive-learning`），全部转为纯文本
   - 论文笔记中 paper title 级别的 wikilinks 全部转为纯文本
   - 修复总计约 200+ 条断链
 
@@ -172,11 +172,11 @@ Next steps:
 
 - Updated:
   - `00-dashboard/quality-check-report.md` — 全面重写，更新为 2026-05-29 状态
-  - `00-dashboard/project-overview.md` — 修复格式错误链接 `[[AGENTS.md]]` → `[[AGENTS]]`
+  - `00-dashboard/project-overview.md` — 修复格式错误链接 `AGENTS.md` → `AGENTS.md`
 - Notes:
   - 复查结果：断链从 ~300 条降至 27 条（仅 dashboard 待创建页面），实验章节 2 篇已修复
   - 未修复：12 篇旧格式 frontmatter、12 篇缺失 mineru_md、3 篇缺失 pdf、1 篇 pdf 指向错误
-  - 新发现：project-overview.md 中 `[[AGENTS.md]]` 格式错误，已修复
+  - 新发现：project-overview.md 中 `AGENTS.md` 格式错误，已修复
   - 剩余断链全部位于 dashboard 待扩展页面章节，指向 13 个尚未创建的概念/方法页面
 
 ---
@@ -358,3 +358,20 @@ Next steps:
   - 跨论文关联：DF → Palette → Swallow 形成 WF 攻防演进链；ET-BERT → TrafficFormer → MIETT 形成预训练方法演进链
   - 重点方法对比：FlowPic vs ET-BERT vs ASNet（表征学习 vs 无需预训练）、CertTA vs SmartDetector（认证鲁棒性 vs 对比学习鲁棒性）
   - 知识库总深度分析论文数：40 篇（14 篇此前 + 26 篇本次）
+
+---
+
+## [2026-06-09] fix | 全库断链修复（267 → 0）
+
+- Fixed:
+  - 213 条概念名 wikilinks 转为纯文本（13 篇论文笔记中的 `[[ET-BERT]]`、`[[YaTC]]`、`[[加密流量分类]]` 等）
+  - 15 条跨论文引用文件名修正（CertTA、Low-quality training data、MirageFlow、Wedjat、ET-BERT venue typo、Holmes WF 等，8 个文件）
+  - 98 条知识层路径限定 wikilinks 去除路径前缀和 `.md` 后缀（`[[03-paper-notes/filename.md]]` → `[[filename]]`，13 个知识层页面）
+  - 13 个 dashboard 待扩展页面 wikilinks 转为纯文本（index.md + research-map.md）
+  - 5 个 dashboard AGENTS.md 引用修复（log.md + quality-check-report.md + project-overview.md）
+- Updated:
+  - `00-dashboard/project-overview.md` — 质量问题表更新：断链 ~300→0
+- Notes:
+  - 断链分三类：① 概念名 stubs（213 条，批量 Python 脚本转纯文本）② 跨论文引用文件名不匹配（15 条，Agent 逐一修正）③ 路径限定+.md 后缀链接（98 条，批量去除前缀和后缀）
+  - 全库验证通过：03-paper-notes/（92 篇）、04-concepts/（9 个）、05-methods/（8 个）、06-tasks/（8 个）、07-surveys/（5 个）、08-comparisons/（5 个）、09-claims/（2 个）、00-dashboard/ — 全部 wikilinks 指向有效目标
+  - 3 批并行处理（Python 批量脚本 + 2 个 Agent），总耗时约 5 分钟

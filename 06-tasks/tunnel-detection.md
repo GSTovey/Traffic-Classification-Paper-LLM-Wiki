@@ -90,11 +90,11 @@ Encrypted Tunnel Detection（加密隧道检测）是指识别网络流量中使
 
 ## 6. 代表论文
 
-- Dusi：基于统计指纹的 SSH 隧道检测，> 98% 合法流量识别率 — `[[03-paper-notes/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.md]]`
-- MTBD：三维异构特征 + 投票机制的 HTTPS 隧道检测，P/R/F1 99% — `[[03-paper-notes/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.md]]`
-- Hartl：LSTM + beam search 的加密隧道流量分离，98% 准确率 — `[[03-paper-notes/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.md]]`
-- MM4flow：多模态预训练基础模型在加密隧道任务上的强大泛化能力 — `[[03-paper-notes/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.md]]`
-- OpenVPN Fingerprinting：Opcode + ACK 双指纹 + 主动探测的两阶段 VPN 检测框架，ISP 规模下 85%+ 识别率，误报率 < 0.0039%，可应对 XOR 混淆和大多数隧道混淆 — `[[03-paper-notes/2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting.md]]`
+- Dusi：基于统计指纹的 SSH 隧道检测，> 98% 合法流量识别率 — `[[2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries]]`
+- MTBD：三维异构特征 + 投票机制的 HTTPS 隧道检测，P/R/F1 99% — `[[2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision]]`
+- Hartl：LSTM + beam search 的加密隧道流量分离，98% 准确率 — `[[2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic]]`
+- MM4flow：多模态预训练基础模型在加密隧道任务上的强大泛化能力 — `[[2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis]]`
+- OpenVPN Fingerprinting：Opcode + ACK 双指纹 + 主动探测的两阶段 VPN 检测框架，ISP 规模下 85%+ 识别率，误报率 < 0.0039%，可应对 XOR 混淆和大多数隧道混淆 — `[[2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting]]`
 
 ## 7. 工程落地问题
 

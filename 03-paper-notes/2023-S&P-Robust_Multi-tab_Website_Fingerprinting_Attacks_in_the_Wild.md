@@ -346,7 +346,7 @@ N个Trans-WF并行 → Softmax整合 → 多标签分类结果
 ### 跨论文关联
 
 - [[2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning]] — DF 是 ARES 的重要基线之一，ARES 在多标签场景下显著优于 DF（2标签 F1 0.907 vs 0.710）
-- [[2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_via_spatial-temporal_features_analysis]] — CCS 2024 WF 工作，与 ARES 同属鲁棒WF攻击方向
+- [[2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis]] — CCS 2024 WF 工作，与 ARES 同属鲁棒WF攻击方向
 - [[2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale]] — CCS 2024 细粒度WF，与 ARES 的大规模评估形成呼应
 
 - [[website-fingerprinting]] - 网站指纹识别技术

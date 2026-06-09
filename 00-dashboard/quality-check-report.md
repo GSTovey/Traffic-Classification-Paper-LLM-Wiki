@@ -47,7 +47,7 @@
 
 **剩余 27 条断链详情**：全部位于 `00-dashboard/` 的"待扩展页面"章节，指向 13 个尚未创建的概念/方法页面（见第 5 节）和 1 个格式错误链接。
 
-**新发现**：`00-dashboard/project-overview.md` 第 165 行 `[[AGENTS.md]]` 应为 `[[AGENTS]]`（Obsidian 解析时会查找 `AGENTS.md.md`）。
+**新发现**：`00-dashboard/project-overview.md` 第 165 行 `AGENTS.md` 应为 `AGENTS.md`（纯文本，避免断裂链接）。
 
 ### 2.2 实验章节补充（✅ 已完成）
 
@@ -197,5 +197,5 @@
 ### 第三阶段：持续改进
 
 1. 创建中优先级概念/方法页面
-2. 修复 `[[AGENTS.md]]` → `[[AGENTS]]`
+2. 格式化 AGENTS.md 引用为纯文本（去除 wikilink 语法）
 3. 补充 25 篇论文缺失的 DOI（当前为 `unknown`）

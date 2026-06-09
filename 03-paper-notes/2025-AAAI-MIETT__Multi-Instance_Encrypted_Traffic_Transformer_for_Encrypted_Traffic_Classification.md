@@ -398,34 +398,34 @@ Accuracy (AC), F1-Score (F1)
 
 ### 9.1 相关概念
 
-- [[Multi-Instance Learning]]
-- [[Two-Level Attention]]
-- [[Packet-Level Attention]]
-- [[Flow-Level Attention]]
+- Multi-Instance Learning
+- Two-Level Attention
+- Packet-Level Attention
+- Flow-Level Attention
 
 ### 9.2 相关方法
 
-- [[ET-BERT]]
-- [[YaTC]]
-- [[PERT]]
-- [[BERT]]
+- ET-BERT
+- YaTC
+- PERT
+- BERT
 
 ### 9.3 相关任务
 
-- [[Encrypted Traffic Classification]]
-- [[VPN Service Classification]]
-- [[Application Classification]]
-- [[IoT Attack Detection]]
+- Encrypted Traffic Classification
+- VPN Service Classification
+- Application Classification
+- IoT Attack Detection
 
 ### 9.4 可更新的综述页面
 
-- [[Foundation Models for Traffic Classification]]
-- [[Pre-training Methods for Network Traffic]]
+- Foundation Models for Traffic Classification
+- Pre-training Methods for Network Traffic
 
 ### 9.5 可加入的对比表
 
-- [[Encrypted Traffic Classification Baselines]]
-- [[Pre-training Tasks Comparison]]
+- Encrypted Traffic Classification Baselines
+- Pre-training Tasks Comparison
 
 ---
 
