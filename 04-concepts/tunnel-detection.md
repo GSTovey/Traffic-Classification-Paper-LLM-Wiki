@@ -12,7 +12,7 @@ tags:
   - traffic-fingerprinting
   - network-security
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # Encrypted Tunnel Detection（加密隧道检测）
@@ -44,6 +44,7 @@ updated: "2026-05-27"
 | **检测（Detection）** | 建立正常协议的统计指纹，通过 anomaly score 偏离程度判断是否存在隧道；或利用多维度异构特征投票决策 | 无需 payload 内容；可配置误报率目标；多维度特征互补提升鲁棒性 | 需要纯净训练数据；单一协议指纹难以覆盖所有合法使用模式；不同恶意工具实现各异 | Dusi et al. (ICC 2008), MTBD (HPCC 2022) |
 | **分类（Classification）** | 对匿名/VPN 隧道中的流量进行应用类型分类；通过短期表征学习和多模态融合抵抗隧道引入的噪声 | 可识别隧道中传输的具体应用类型；短期特征天然降低无关包噪声 | 受 irrelevant packet noise 影响严重；训练与测试环境不一致时性能下降；需要标注数据 | AN-Net (WWW 2024), Hartl et al. (ICMLA 2022) |
 | **指纹（Fingerprinting）** | 利用嵌套协议栈中封装 TLS 握手的独特模式进行 protocol-agnostic 检测；或通过语义锚点和特征解耦在隧道下实现精准应用指纹识别 | 不依赖特定协议实现缺陷；可解释性强；语义锚点增强隧道下的特征学习 | multiplexing 有效降低检测率；需要并行流对训练数据；对长流和多应用并发场景泛化不足 | Xue et al. (USENIX 2024), DecETT (WWW 2025) |
+| **稀疏 MoE + 异质性感知分类** | 将 header 和 payload 解耦为双分支稀疏 MoE，通过不确定性感知过滤抑制隧道封装引入的加密噪声，条件聚合动态融合跨模态特征 | 从静态同质建模转向异质性感知动态建模；自适应利用不同流量段判别特征；对 VPN/Tor 隧道流量有效 | 未专门针对隧道场景设计；MoE 路由可解释性有待提升 | TrafficMoE (He et al., arXiv 2026) |
 
 ### 技术路线详解
 
@@ -86,6 +87,9 @@ updated: "2026-05-27"
 - Mahalanobis Distance - 马氏距离
 - LSTM - 长短期记忆网络
 - Beam Search - 束搜索
+- Mixture of Experts (MoE) - 稀疏混合专家模型，TrafficMoE 用于解耦 header/payload 的异质性感知建模
+- Uncertainty-aware Filtering - 不确定性感知过滤，TrafficMoE 用于抑制隧道封装引入的加密噪声
+- Conditional Aggregation - 条件聚合，TrafficMoE 基于 MoE 路由概率的动态跨模态特征融合策略
 
 ## 5. 相关任务
 
@@ -110,6 +114,7 @@ updated: "2026-05-27"
 | Fingerprinting Obfuscated Proxy Traffic with Encapsulated TLS Handshakes | 2024 | USENIX Security | 利用嵌套协议栈中封装 TLS 握手作为 protocol-agnostic 代理指纹，ISP 部署 30 天处理 1.1 亿+ flows，FPR 仅 0.0544% | multiplexing 将 TPR 降低 70%+；TLS 1.3 检测精度低于 1.2 |
 | DecETT: Accurate App Fingerprinting Under Encrypted Tunnels via Dual Decouple-based Semantic Enhancement | 2025 | WWW | 引入 TLS 流量作为语义锚点，双解耦模块分离隧道特征与应用语义，5 种隧道下 F1 达 84%-94% | 需要并行 TLS-隧道流对训练；单应用假设；不涉及隧道检测 |
 | OpenVPN is Open to VPN Fingerprinting (Xue et al.) | 2022 | USENIX Security | 提出两阶段框架（Opcode+ACK 被动指纹 + 活跃探测），在百万用户 ISP 网络中以极低误报率识别超 85% OpenVPN 流量，成功识别 41 个"混淆"配置中的 34 个 | 仅针对 OpenVPN 协议；活跃探测需要网络控制能力 |
+| TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification (He et al.) | 2026 | arXiv | 提出 Disentangle-Filter-Aggregate 范式，双分支稀疏 MoE 解耦 header/payload，不确定性感知过滤抑制加密噪声，条件聚合动态融合；在 VPN/Tor 隧道流量分类上 6 个数据集一致超越 SOTA | 未专门针对隧道场景设计；MoE 路由可解释性有待提升 |
 
 ## 7. 当前共识
 
@@ -118,6 +123,7 @@ updated: "2026-05-27"
 3. **短期特征对匿名流量更鲁棒**：AN-Net 的实验表明，短期连续包更可能来自同一流，以此为基础的表征学习能有效抵抗 irrelevant packet noise。
 4. **嵌套协议栈是结构性指纹**：Xue et al. 揭示了代理/隧道活动的根本共性——嵌套协议栈，比单个协议实现缺陷更难规避。padding 只能增大 burst，multiplexing 只能增加 round trip，这些是结构性限制。
 5. **特征解耦是隧道下应用识别的关键**：DecETT 证明将隧道协议特征与应用语义特征显式解耦，比混合提取效果显著更好（尤其在复杂混淆隧道如 V2Ray 下差距约 20%）。
+6. **异质性感知建模适用于隧道流量分类**：TrafficMoE (He et al., 2026) 证明将 header（确定性协议逻辑）和 payload（随机加密噪声）解耦为双分支稀疏 MoE，通过不确定性感知过滤抑制隧道封装引入的噪声，条件聚合动态融合，在 VPN/Tor 隧道流量分类上一致超越 SOTA，验证了异质性感知建模在隧道场景下的有效性。
 
 ## 8. 争议与矛盾
 

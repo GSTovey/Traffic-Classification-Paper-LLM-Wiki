@@ -112,8 +112,8 @@
 
 ## 8. Claims 页面
 
-- [[claims-index]] — 关键观点索引（27 条核心 Claims）
-- [[contradictions]] — 论文间矛盾记录（9 组冲突）
+- [[claims-index]] — 关键观点索引（33 条核心 Claims）
+- [[contradictions]] — 论文间矛盾记录（13 组冲突）
 
 ---
 
@@ -121,13 +121,13 @@
 
 - 92 篇 PDF 已导入 `00-inbox/PDFs/`。
 - 92 篇 MinerU Markdown 已生成至 `01-mineru-output/`。
-- 92 篇结构化论文笔记已创建于 `03-paper-notes/`。
+- 92 篇结构化论文笔记已创建于 `03-paper-notes/`（其中 46 篇已完成 L3 深度分析）。
 - 9 个概念页已创建于 `04-concepts/`。
 - 8 个方法页已创建于 `05-methods/`。
 - 8 个任务页已创建于 `06-tasks/`。
 - 5 个综述页已创建于 `07-surveys/`。
 - 5 个对比表已创建于 `08-comparisons/`（含开源注册表和动机/叙事对比）。
-- 2 个 Claims 页面已创建于 `09-claims/`（含 27 条核心观点和 9 组矛盾记录）。
+- 2 个 Claims 页面已创建于 `09-claims/`（含 27+ 条核心观点和 13+ 组矛盾记录）。
 
 ---
 

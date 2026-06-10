@@ -2,7 +2,7 @@
 type: comparison
 name: dataset-comparison-table
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # Dataset Comparison Table
@@ -38,6 +38,9 @@ updated: "2026-05-27"
 | ISP Dataset (Merit Network) | VPN 流量指纹检测 | 流量包（PCAP） | 美国 Merit Network ISP 镜像流量，日均 15TB、20亿流 | 百万用户级真实 ISP 流量；涵盖真实 VPN 和混淆 VPN 连接；规模极大 | 非公开数据集，需与 ISP 合作；仅覆盖特定 ISP 用户群；VPN 标注需额外验证 | OpenVPN Fingerprinting (USENIX 2024) |
 | ZMap Set | VPN 流量指纹检测（互联网扫描） | 流量包/元数据 | 通过 ZMap 扫描获取的全球 VPN 服务器响应数据 | 覆盖全球范围 VPN 服务器；大规模互联网扫描数据 | 非传统流量数据集；仅包含服务器响应；需结合其他数据使用 | OpenVPN Fingerprinting (USENIX 2024) |
 | Censys Set | VPN 流量指纹检测（互联网扫描） | 流量包/元数据 | 通过 Censys 扫描获取的 VPN 服务元数据 | 覆盖全球范围 VPN 服务；提供丰富的服务端元数据 | 非传统流量数据集；仅包含服务端信息；需结合其他数据使用 | OpenVPN Fingerprinting (USENIX 2024) |
+| CW_500 (STAR) | 网站指纹攻击（闭世界） | 流量方向序列 | 500 网站，每网站多条 trace | STAR 论文构建的大规模闭世界 WF 数据集；覆盖 500 个网站；支持零样本/少样本 WF 评估 | 闭世界假设过于理想化；与 STAR 方法耦合，独立使用需确认 | STAR (arXiv 2025) |
+| IW_2000 (STAR) | 网站指纹攻击（增世界） | 流量方向序列 | 2,000 网站，含已见和未见网站 | STAR 论文构建的增世界 WF 数据集；支持评估模型对未见网站的泛化能力 | 数据集与 STAR 方法耦合；规模和采集细节需参考原论文 | STAR (arXiv 2025) |
+| OW_top500 (STAR) | 网站指纹攻击（开世界） | 流量方向序列 | top-500 监控网站 + 百万级干扰网站 | STAR 论文构建的开世界 WF 数据集；模拟真实场景（百万级干扰网站中识别目标）；评估 AUC 和精确率-召回率 | 数据集与 STAR 方法耦合；开世界设置的负样本比例需参考原论文 | STAR (arXiv 2025) |
 
 ## 数据集使用频率统计
 

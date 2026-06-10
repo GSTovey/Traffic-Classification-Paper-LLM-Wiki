@@ -4,7 +4,7 @@ name: "Malicious Traffic Detection"
 aliases: ["恶意流量检测", "Malicious Traffic Identification"]
 tags: ["network-security", "intrusion-detection", "encrypted-traffic", "C2-detection", "anomaly-detection"]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # Malicious Traffic Detection
@@ -58,6 +58,8 @@ updated: "2026-05-27"
 | 可编程数据平面部署 | IDRF (Random Forest + INT + P4 Switch) | 微秒级推理延迟（~0.5 us）、近源检测、模型可解释 | 交换机端准确率损失大（82.1% vs 99.83%）、强依赖 INT |
 | 元学习 | FC-Net / TF (Meta-Learning) | 支持 few-shot 学习、预训练一次可复用 | 预训练阶段仍依赖大量标注数据、对混淆流量鲁棒性差 |
 | Session-Transformer + DNN | ST (Modified Transformer Encoder) + DNN | 自动提取加密流量上下文和时序特征，ST 可作为传统 ML 插件增强性能 | 计算开销大、小数据集上对部分模型有负向影响 |
+| 稀疏 MoE + 不确定性过滤 | TrafficMoE (DFA: 解耦-过滤-聚合) | 显式解耦头部/载荷异质性，不确定性感知过滤加密噪声，条件聚合自适应融合 | 三阶段 MoE 结构参数量较大 |
+| SSM + 多模态 + OOD 检测 | NetMamba+ (Mamba + Flash Attention + LDA loss) | 线性复杂度高效推理，多模态表示提升恶意流量识别，OOD 检测 AUROC 最高 0.9825 | 分布偏移敏感，预训练需 4 块 A100 |
 | 图神经网络 | EULER / HyperVision (GNN) | 能建模主机间通信拓扑、捕获跨流关联 | 计算复杂度高、对实时检测支持有限 |
 
 ## 5. 常用数据集
@@ -84,6 +86,8 @@ updated: "2026-05-27"
 | [Robust Detection of Malicious Encrypted Traffic via Contrastive Learning](03-paper-notes/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning.md) (SmartDetector) | 2025 | SAM 流量表示 + 对比学习 + ResNet | CIC-IDS-2017, CIC-DDoS-2019, DoHBrw, USTC-TFC, CIC-IoV | 提出 Semantic Attribute Matrix 表示，evasion attack 场景下 F1/AUC 超 93%，比 SOTA 平均提升 19.84% |
 | [Malicious QUIC C2 Traffic Detection based on Random Forest in Programmable Data Plane](03-paper-notes/2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane.md) (IDRF) | 2025 | Random Forest + INT + P4 交换机 | NetFlow-QUIC + Merlin C2 | 在 P4 可编程交换机上实现微秒级（~0.5 us）C2 检测，INT 特征使交换机端准确率从 9.6% 提升至 82.1% |
 | A Detection Method for Malware Communication Traffic via Encrypted Traffic Analysis (Session-Transformer) | 2025 | Modified Transformer Encoder (8 heads, 8 layers) + DNN 分类器 | DataCon2020, CIC-AndMal-2017 | Session-Transformer 自动提取加密流量上下文和时序特征，DataCon2020 召回率 98.34%，CIC-AndMal-2017 精确率 93.54%；ST 特征可作为传统 ML 插件增强 KNN 性能 7.92% — `[[2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis]]` |
+| TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification | 2026 | DFA 范式 + 稀疏 MoE + 不确定性感知过滤 + 条件聚合 | CSTNET-TLS1.3, ISCX-Tor, CIC-IoT2022, USTC-TFC2016, ISCX-VPN | 首个异质性感知 MoE 框架，在恶意流量检测（USTC-TFC F1=97.88%）和 IoT 攻击检测（CIC-IoT F1=92.65%）上一致超越 baseline；预训练贡献最大（去除后 F1 暴跌 24.4%） — `[[2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification]]` |
+| NetMamba+: A Framework of Pre-trained Models for Efficient and Accurate Network Traffic Classification | 2026 | Mamba + Flash Attention + 多模态表示 + LDA loss | USTC-TFC, CICIoT2022, CipherSpectrum, CSTNET-TLS1.3 等 12 个数据集 | 恶意软件分类 F1=97.65%，IoT 攻击检测 F1=97.50%；OOD 检测 AUROC 最高 0.9825（Unknown Attack），支持在线部署（261.87 Mb/s） — `[[2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification]]` |
 
 ## 7. 工程落地问题
 

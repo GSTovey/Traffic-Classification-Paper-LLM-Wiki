@@ -4,7 +4,7 @@ name: "State Space Model / Mamba"
 aliases: ["状态空间模型", "SSM", "Mamba"]
 tags: [state-space-model, mamba, sequence-modeling, linear-complexity, traffic-classification, pre-training]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # State Space Model / Mamba（状态空间模型）
@@ -70,6 +70,16 @@ $$h'(t) = \mathbf{A}h(t) + \mathbf{B}x(t), \quad y(t) = \mathbf{C}h(t)$$
 
 实验表明，单向 Mamba 在网络流量分类任务上的性能与双向变体相当，且效率更高，说明流量序列的因果结构与单向扫描方式天然匹配。
 
+**NetMamba 流量表示方案（Stride-based Representation）**：
+
+NetMamba 提出了一种全面的流量表示方案，核心创新是使用 **1D stride cutting** 替代传统的 2D patch splitting。具体流程为：(1) 从每个流中选取前 M 个数据包，统一裁剪 header 为 N_h 字节、payload 为 N_p 字节；(2) 将所有字节拼接为一维数组 [b_1, b_2, ..., b_Lb]；(3) 以步长 L_s 进行非重叠切分，生成 stride 序列。与 YaTC 的 2D patch splitting 相比，stride cutting 保留了字节间的顺序语义关系，避免了将语义无关的垂直相邻字节分组到同一 patch 中的偏差问题。消融实验表明，使用 2D patch splitting 替换 stride cutting 会导致最高 1.88% 的准确率下降。此外，NetMamba 同时保留 header 和 payload 信息（通过字节平衡分配固定大小），并通过 IP 匿名化消除可识别信息偏差。
+
+**NetMamba+ 多模态嵌入（Multimodal Embedding）与 NetTrans Block**：
+
+NetMamba+ 在 NetMamba 的 stride 嵌入基础上引入了可插拔的多模态嵌入机制。除了字节级 stride 序列外，还提取 packet size 序列和 inter-arrival time 序列作为额外模态。对 size 和 interval 序列采用正弦位置编码（sinusoidal encoding）保留序列依赖关系，再通过模态特定的 segment indicator 区分特征来源，最终将三种模态的嵌入与 class token 拼接后加入可学习位置编码，形成统一的流量 token 序列。预训练时，stride 使用 MAE 遮蔽重建，size 使用分类重建（cross-entropy loss），interval 使用回归重建（MSE loss），三者联合优化。
+
+此外，NetMamba+ 提出了 **NetTrans block** 作为 Transformer 的高效替代骨干，核心包含三个优化：(1) Flash Attention 2 通过 IO-aware tiling 和 recomputation 技术加速二次注意力计算，减少内存访问；(2) Pre-normalization 架构提升训练稳定性；(3) GeGLU 激活的前馈网络（FFN）提升分类精度。消融实验表明，NetTrans 在 5 个数据集上的平均性能优于 vanilla Transformer（NetTransV）和 Linear Transformer（NetTransL）。
+
 ## 6. 优点
 
 1. **线性复杂度**：对序列长度 L 的计算复杂度为 O(L)，远低于 Transformer 的 O(L^2)，在长序列上优势显著
@@ -94,7 +104,7 @@ $$h'(t) = \mathbf{A}h(t) + \mathbf{B}x(t), \quad y(t) = \mathbf{C}h(t)$$
 | 论文 | 年份 | 使用方式 | 贡献 |
 |---|---|---|---|
 | NetMamba (Wang et al., arXiv 2024) | 2024 | 首个将 Mamba/SSM 应用于网络流量分类的原始工作 | 提出单向 Mamba 架构 + MAE 预训练 + stride-based 流量表示方案；保留头部+载荷综合信息；推理速度比 Transformer 快 60 倍（batch=5），参数量仅 2.2M；在 6 个数据集上实现 SOTA（CrossPlatform/ISCXTor2016/ISCXVPN2016/CICIoT2022/USTC-TFC2016）。**注意**：此为 NetMamba 原始版本，与后续 NetMamba+ (ICNP 2024 / arXiv 2026) 为不同论文 |
-| NetMamba+ (Wang et al.) | 2026 (arXiv, ICNP 2024) | 在 NetMamba 基础上引入 Flash Attention | 提出融合 Mamba + Flash Attention 的高效架构；设计多模态流量表示方案（stride + size + interval）；引入 LDA loss 处理长尾分布；推理吞吐量比 YaTC 高 1.7 倍，F1 最高提升 6.44% |
+| NetMamba+ (Wang et al.) | 2026 (arXiv, ICNP 2024) | 在 NetMamba 基础上引入 Flash Attention 和多模态融合 | 提出融合 Mamba + Flash Attention 的高效架构（NetMamba block + NetTrans block）；设计多模态流量表示方案（stride + size + interval），通过正弦编码和 segment indicator 实现早期融合；引入 LDA loss 处理长尾分布（结合 CB loss 重加权和 LDAM 大间隔策略）；在 4 类分类任务（加密应用、攻击、恶意软件、VPN）上 F1 最高提升 6.44%；实现在线分类系统吞吐量 261.87 Mb/s |
 | Mamba: Linear-Time Sequence Modeling with Selective State Spaces (Gu & Dao) | 2023 | 原始 Mamba 架构 | 提出 Selective Scan 机制，将 SSM 参数设计为输入的函数；实现硬件感知的并行 scan 算法；在语言建模上匹配 Transformer 性能 |
 
 ## 9. 与其他方法的比较

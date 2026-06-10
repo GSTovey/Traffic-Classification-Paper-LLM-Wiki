@@ -4,7 +4,7 @@ name: "Traffic Foundation Model"
 aliases: ["流量基础模型", "Traffic FM"]
 tags: [foundation-model, pre-training, self-supervised-learning, traffic-analysis, transfer-learning]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # Traffic Foundation Model（流量基础模型）

@@ -3,7 +3,7 @@ type: survey
 topic: "Traffic Foundation Model"
 status: evolving
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # 流量基础模型综述 (Survey: Traffic Foundation Model)
@@ -119,6 +119,21 @@ updated: "2026-05-27"
 
 结合多种架构优势（如 Transformer + GNN、Encoder-Decoder 等），代表工作包括 Lens (T5-style)、PACKETCLIP。
 
+### 3.9 异质性 MoE 预训练类
+
+针对加密流量的内在模态异质性（头部 vs 载荷），使用稀疏混合专家（MoE）架构进行条件计算和专家特化预训练。
+
+- **TrafficMoE**：异质性感知的混合专家加密流量分类框架
+  - DFA 范式：解耦（异质 MoE 双分支）→ 过滤（不确定性感知过滤 UF）→ 聚合（条件聚合 CA）
+  - 头部 MoE 分支 + 载荷 MoE 分支 + 全局 MoE 分支，三阶段稀疏路由
+  - 不确定性感知过滤基于跨模态交互熵（Shannon 熵），抑制加密噪声 token
+  - 条件聚合利用 MoE 路由概率作为隐式上下文信号，自适应融合而非静态加权
+  - 预训练阶段使用双分支 MLM（头部 + 载荷独立），微调阶段使用交叉熵分类损失
+  - 6 个数据集一致超越 baseline，ISCX-Tor 上 F1=97.65%（+6.49%）
+  - 消融实验：预训练贡献最大（去除后 F1 暴跌 24.4%），异质 MoE 优于同质变体（-5.33%）
+  - 局限：三阶段 MoE 结构参数量较大，未引入显式负载均衡损失
+  - 论文笔记：`[[2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification]]`
+
 ## 4. 发展脉络
 
 | 时间 | 里程碑 | 代表工作 | 核心贡献 |
@@ -132,6 +147,7 @@ updated: "2026-05-27"
 | 2025 | 多模态范式 | MM4flow | TB 级预训练，多模态融合 |
 | 2026 | SSM 多模态 | NetMamba+ | 线性复杂度，1.7x 推理加速，LDA 微调 |
 | 2026 | 系统分类 | Talk Like a Packet | 统一预训练-微调流水线，三维度分类 |
+| 2026 | 异质性 MoE | TrafficMoE | DFA 范式（解耦-过滤-聚合），稀疏 MoE 条件计算 |
 
 ## 5. 代表论文列表
 
@@ -145,6 +161,7 @@ updated: "2026-05-27"
 - TrafficGPT (arXiv 2024)：GPT 类，线性注意力 12K token，分类+生成 — `[[2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation]]`
 - MIETT (AAAI 2025)：多实例 Transformer，Two-Level Attention + PRPP/FCL — `[[2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification]]`
 - TraGe (IWQoS 2025)：结构感知预训练，Header-Payload 差异化 Field-level Masking — `[[2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences]]`
+- TrafficMoE (arXiv 2026)：异质性 MoE，DFA 范式（解耦-过滤-聚合），稀疏 MoE 预训练 — `[[2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification]]`
 
 ## 6. 当前趋势
 
@@ -153,6 +170,7 @@ updated: "2026-05-27"
 3. **效率优化受到关注**：Mamba 类线性复杂度架构开始被引入，NetMamba+ 推理吞吐量提升 1.7 倍
 4. **Fine-tuning 策略精细化**：两阶段微调、标签分布感知损失（LDA loss）、原型对齐等策略被广泛采用
 5. **数据泄露和 shortcut learning 被重视**：Sweet Danger 论文揭示了 per-packet split 数据泄露问题，促使社区重新审视评估方法
+6. **异质性 MoE 架构兴起**：TrafficMoE 将稀疏混合专家引入流量分类，通过解耦头部/载荷的异质性建模、不确定性感知过滤和条件聚合，在 6 个数据集上一致超越现有方法，展示了 MoE 在流量基础模型中的潜力
 
 ## 7. 关键争议
 

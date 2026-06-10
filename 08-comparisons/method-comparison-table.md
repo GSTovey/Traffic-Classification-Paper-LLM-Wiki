@@ -2,7 +2,7 @@
 type: comparison
 name: method-comparison-table
 created: "2026-05-27"
-updated: "2026-06-01"
+updated: "2026-06-10"
 ---
 
 # Method Comparison Table
@@ -49,3 +49,5 @@ updated: "2026-06-01"
 | Session-Transformer | 2025 | 恶意加密流量检测 | Modified Transformer + DNN | 从原始加密流量中提取上下文相关性和时序特征，使用 Session-Transformer 编码后用 DNN 分类器检测恶意流量 | 隐私保护（不解密即可检测）；结合结构、信息和通信三个维度分析 TLS 流量；DataCon2020 召回率 98.34% | Transformer 对长序列计算开销大；仅在两个数据集验证；对新型恶意软件泛化能力待验证 | 加密恶意流量检测；企业网络安全监控；隐私保护场景下的威胁检测 | ❌ | 暂未找到 |
 | Multi-ARCL | 2025 | 加密流量分类（持续学习） | 持续学习 + 多模态 + 分布式 | 提出自适应 relay 持续学习框架，利用 payload 语义信息和统计特征多模态表示，通过选择性消除"静默"神经元和重训练解决稳定性-可塑性困境 | 首次关注"静默应用"（已下架应用）对持续学习的影响；自适应 relay 机制消除静默神经元；分布式学习降低存储成本；NJUPT2023 上准确率提升 8.64%+ | 静默应用检测依赖外部信息；分布式学习增加系统复杂度；多模态融合策略需调优 | 动态网络环境下的持续分类；应用频繁更新/下架的实际场景；大规模加密流量分类 | ✅ | [GitHub](https://github.com/sailorlee97/What-changes-you) |
 | ASNet | 2025 | 加密流量分类 | WSA + CSS（无预训练） | 提出 Word Sense Aggregator (WSA) 使 BERT 适应流量数据（无额外参数）+ Category-constrained Semantic Separator (CSS) 在不同类别语义空间独立学习特征 | 无需预训练即可达到 SOTA（节省大量计算资源）；WSA 保持完整 word sense；CSS 显式分离类别语义空间；5 个数据集 7 个任务全面领先 | WSA 依赖 BERT 预训练权重；CSS 需要类别标签信息；对 BERT 架构有依赖性 | 加密流量分类的高效替代方案；计算资源受限场景；需可解释性的流量分析 | ✅ | [GitHub](https://github.com/pengwei-iie/ASNET) |
+| STAR | 2025 | 网站指纹（零样本） | 双编码器 + 对比学习 + Tip-Adapter | 将 WF 重构为零样本跨模态检索问题，设计双编码器架构学习加密流量 trace 与语义逻辑 profile 的联合嵌入空间，通过对比学习和结构感知增强训练，推理时用 cosine 相似度匹配 | 首次实现零样本 WF（无需目标网站流量数据）；1,600 个未见网站 top-1 准确率 87.9%、AUC 0.963；仅需 4 个标注样本即可通过 Tip-Adapter 提升至 top-5 98.8%；STAR-200K 数据集开源 | 依赖语义逻辑 profile 的质量；跨模态对齐假设在极端混淆下可能失效；推理时需构建大规模指纹库 | HTTPS/ECH 场景下的网站指纹攻击；零样本/少样本 WF 研究；语义泄漏隐私风险评估 | ✅ | [GitHub](https://github.com/2654400439/STAR-Website-Fingerprinting) |
+| BiasSeeker (Bias in the Shadows) | 2026 | 加密流量分类（鲁棒性分析） | AMI + 统计相关性 + 特征遮蔽 | 提出首个模型无关、数据驱动的半自动框架 BiasSeeker，通过互信息 (AMI) 统计相关性分析直接在原始二进制流量上检测数据集特定的 shortcut 特征，引入系统化分类和类别特定验证策略 | 首个模型无关的 shortcut 检测框架；跨 19 个公开数据集、3 个 NTC 任务验证；揭示预训练模型依赖 TCP Timestamp 等虚假相关性的问题；为数据集质量评估提供新视角 | 分析框架而非分类方法，不直接提升分类性能；shortcut 检测依赖统计阈值选择；对动态网络环境的适应性未验证 | 数据集质量诊断与 benchmark 可靠性评估；模型训练前的特征选择；加密流量分类鲁棒性研究 | N/A | N/A（分析方法，非分类模型） |

@@ -10,7 +10,7 @@ tags:
   - foundation-model
   - traffic-analysis
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # Pre-training and Fine-tuning（预训练-微调范式）
@@ -95,6 +95,8 @@ Pre-training and Fine-tuning（预训练-微调范式）是一种两阶段学习
 | TrafficGPT (arXiv 2024) | 2024 | GPT-style 自回归预训练，线性注意力 Transformer | 使用 GPT-style 自回归预训练（next token prediction）学习流量模式，通过线性注意力机制将 token 容量从 512 扩展到 12,032；结合可逆 token 表示实现 pcap ↔ token 双向映射；同一模型同时支持分类和生成，分类平均 F1 提升 2% |
 | NetMamba (arXiv 2024) | 2024 | 单向 Mamba + MAE 预训练，stride-based 表示 | 首个将 Mamba/SSM 应用于流量分类的预训练模型；使用 MAE（Masked Autoencoder）对 stride 序列进行 90% 比例的遮蔽重建预训练；stride-based 1D cutting 保留序列语义优于 2D patch splitting；参数量仅 2.2M，推理速度比 Transformer 快 60 倍 |
 | ASNet (TIFS 2025) | 2025 | **反例**：无需预训练即达 SOTA | 通过 WSA（无参数词义聚合器）恢复 BERT 对流量字节的完整词义 + CSS（类别约束语义分离器）配合任务感知提示显式分离不同类别语义空间，直接利用 BERT 已有通用知识，在 5 个数据集 7 个任务上无需预训练即超越 ET-BERT 和 YaTC，大幅降低计算成本 |
+| TrafficMoE (arXiv 2026) | 2026 | 双分支稀疏 MoE + MLM 预训练，Disentangle-Filter-Aggregate 范式 | 提出异质性感知的 MoE 框架：Header 和 Payload 分支各自使用独立的稀疏 MoE 编码器和 Top-K 路由，实现模态特定的专家激活；预训练使用 MLM（分别对 header 和 payload token 进行随机遮蔽重建），同时联合优化不确定性感知过滤（UF）模块；微调阶段通过条件聚合（CA）自适应融合跨模态特征；在 6 个加密流量数据集上全面超越 SOTA，ISCX-Tor2016 F1 达 97.65% |
+| STAR (arXiv 2025) | 2025 | 跨模态对比学习预训练（InfoNCE），双编码器零样本检索 | 首次将零样本网站指纹建模为跨模态检索问题；使用双编码器分别处理流量模态和逻辑模态（网站语义描述），通过 InfoNCE 对比损失 + 分类损失 + 类内一致性损失联合训练；引入结构感知数据增强提升泛化；在 150K+ 自动收集的流量-逻辑配对上预训练，1,600 个未见网站零样本 top-1 准确率 87.9%，开放世界 AUC 0.963 |
 | Talk Like a Packet (arXiv 2026) | 2026 | 统一预训练-微调流水线，系统分类现有模型 | 提出 Transformer 流量基础模型的统一工作流程；从架构、输入模态、预训练策略三个维度对现有模型进行系统分类；验证基础模型在分类、预测、生成三类任务上的泛化能力 |
 
 ## 9. 与其他方法的比较

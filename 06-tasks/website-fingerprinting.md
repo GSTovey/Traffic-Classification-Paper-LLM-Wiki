@@ -4,7 +4,7 @@ name: "Website Fingerprinting"
 aliases: ["WF", "网站指纹", "网站指纹攻击"]
 tags: ["traffic-analysis", "privacy", "anonymity", "Tor", "encrypted-traffic"]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # Website Fingerprinting

@@ -8,7 +8,7 @@ tags:
   - traffic-classification
   - representation-learning
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # Self-Supervised Learning（自监督学习）
@@ -82,6 +82,8 @@ updated: "2026-05-27"
 | MIETT: Multi-Instance Encrypted Traffic Transformer (AAAI 2025) | 2025 | PRPP（Packet Relative Position Prediction）+ FCL（Flow Contrastive Learning）+ MFP（Masked Flow Prediction） | 提出两个面向流量特性的新 SSL 任务：PRPP 在 packet 级别预测 packet 对的相对位置（时序信号），FCL 在 flow 级别通过对比学习拉近同 flow 内不同 position 的 packet 表示、推远不同 flow 的 packet 表示；添加 PRPP+FCL 后 F1 从 73.62% 提升至 82.36% |
 | TraGe: A Generic Packet Representation (IWQoS 2025) | 2025 | Field-level Masking + Random Masking + Dynamic Masking | 提出新的 SSL 掩码策略：对 header 使用 Field-level Masking（从几何分布 Geo(p) 采样连续长度掩码，保持协议字段字节连续性），对 payload 使用 Random Masking（适配非连续字节分布），配合 Dynamic Masking 防止过拟合；移除 FM 后 F1 下降 5.88% |
 | TrafficGPT (arXiv 2024) | 2024 | GPT-style 自回归 SSL（next token prediction） | 使用自回归方式（GPT-style）预测下一个 token 进行预训练，通过线性注意力机制支持 12K token 上下文；可逆 token 表示实现 pcap ↔ token 双向映射，同一模型同时支持分类和生成 |
+| TrafficMoE (arXiv 2026) | 2026 | 双分支 MLM（Header + Payload 独立遮蔽重建） | 提出异质性感知的 SSL 预训练：对 header 和 payload 分别施加随机 token 遮蔽，使用独立的稀疏 MoE 编码器进行 MLM 重建；预训练同时优化不确定性感知过滤（UF）模块，使不可靠 token 在早期阶段就获得低可靠性系数；MoE 架构在预训练阶段允许专家有机地对不同流量特征进行专业化分工；在 30GB 无标注流量（ISCX-VPN2016 NonVPN + CICIDS2017 + WIDE backbone trace）上预训练，去除预训练后 F1 从 97.65% 骤降至 73.25% |
+| STAR (arXiv 2025) | 2025 | InfoNCE 跨模态对比学习 + 分类损失 + 类内一致性损失 | 首次为零样本网站指纹设计跨模态 SSL 预训练：双编码器分别处理加密流量轨迹和网站语义逻辑描述，通过 InfoNCE 对比损失对齐配对嵌入空间；辅助分类损失促进类间可分性，类内一致性损失促进同类流量嵌入聚集；引入结构感知数据增强（对两种模态施加语义一致的扰动）；在 150K+ 自动收集的流量-逻辑配对上预训练，无需目标网站流量即可零样本识别 |
 | ASNet (TIFS 2025) | 2025 | **反例**：无需 SSL/预训练即达 SOTA | 通过 WSA（无参数词义聚合器）+ CSS（类别约束语义分离器）+ 任务感知提示，直接利用 BERT 已有知识，在 5 个数据集 7 个任务上无需任何自监督预训练即超越需要预训练的 ET-BERT 和 YaTC；证明 SSL/预训练并非流量分类 SOTA 的必要条件 |
 
 ## 9. 与其他方法的比较

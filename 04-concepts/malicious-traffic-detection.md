@@ -4,7 +4,7 @@ name: "Malicious Traffic Detection"
 aliases: ["恶意流量检测", "Malware Traffic Detection", "Malicious Network Traffic Detection"]
 tags: ["network-security", "intrusion-detection", "encrypted-traffic", "machine-learning", "deep-learning"]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # Malicious Traffic Detection
@@ -55,6 +55,11 @@ updated: "2026-05-27"
 - K-Means Clustering - K-Means 聚类
 - AutoML - 自动机器学习
 - Session-Transformer - 基于修改 Transformer encoder 的加密流量特征提取方法，可作为传统 ML 的 plug-in 模块
+- Mixture of Experts (MoE) - 稀疏混合专家模型，TrafficMoE 用于解耦 header/payload 的异质性感知建模
+- Uncertainty-aware Filtering - 不确定性感知过滤，TrafficMoE 用于抑制加密噪声的机制
+- State Space Model (SSM) - 状态空间模型，NetMamba/NetMamba+ 的核心架构
+- Flash Attention - IO 感知的高效注意力机制，NetMamba+ 用于优化 Transformer 效率
+- Label Distribution-Aware Fine-tuning - 标签分布感知微调，NetMamba+ 处理长尾分布的策略
 
 ## 5. 相关任务
 
@@ -80,6 +85,8 @@ updated: "2026-05-27"
 | IDRF - Malicious QUIC C2 Traffic Detection based on Random Forest in Programmable Data Plane | 2025 | 在 P4 可编程交换机上部署 Random Forest + INT 遥测特征，微秒级推理延迟（~0.5 us），服务器端准确率 99.83% | 交换机端准确率降至 82.1%，仅用 Merlin C2 合成数据，强依赖 INT 基础设施 |
 | JA4+ - Using JA4+ Fingerprints for Malware Detection in Encrypted Traffic | 2024 | 系统评估 JA4+JA4S+SNI 组合指纹在加密恶意软件检测中的效果，唯一性 87%，覆盖约 80% 恶意软件家族，恶意/良性重叠仅 1.02% | JA4X 覆盖率低（<30%），依赖 SNI（可被伪造/加密），无法检测零日攻击 |
 | Session-Transformer: A Detection Method for Malware Communication Traffic via Encrypted Traffic Analysis (Wei et al., JIoT) | 2025 | 提出基于修改 Transformer encoder 的 Session-Transformer 特征提取 + DNN 分类器，自动提取 TLS 流量的上下文关联和时序特征；ST 特征提取可作为传统 ML 的 plug-in 模块增强性能；DataCon2020 召回率 98.34%，CIC-AndMal-2017 精确率 93.54% | CIC-AndMal-2017 存在 timestamp-high 数据泄漏问题（同一恶意样本的时间戳特征可能泄漏类别信息）；未验证跨数据集泛化 |
+| TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification (He et al., arXiv) | 2026 | 提出 Disentangle-Filter-Aggregate 范式，双分支稀疏 MoE 解耦 header/payload 进行模态特定建模，不确定性感知过滤抑制加密噪声，条件聚合动态融合；在加密流量分类（含恶意流量场景）上 6 个数据集一致超越 SOTA | MoE 路由可解释性有待提升；未专门针对恶意流量设计检测策略 |
+| NetMamba+: A Framework of Pre-trained Models for Efficient and Accurate Network Traffic Classification (Wang et al., ICNP/arXiv) | 2026 | Mamba+Flash Attention 双骨干 + 多模态流量表示 + 标签分布感知微调（LDA）；在 VPN/Tor 流量分类任务上 F1 最高提升 6.44%；4 个 OOD 任务 AUROC 超 94%，具备对未知恶意流量的泛化检测潜力；在线系统吞吐量 261.87 Mb/s | 分布偏移敏感（时序划分准确率下降 8.47%）；未专门验证恶意流量检测场景 |
 
 ## 7. 当前共识
 
@@ -94,6 +101,10 @@ updated: "2026-05-27"
 5. **轻量级模型适合实时部署**：在高速网络环境中，Random Forest、K-Means 等轻量级模型或编译到可编程数据平面的模型，比复杂深度学习模型更具部署可行性。
 
 6. **领域知识迁移有价值**：安全领域的预训练知识（CVE 报告、威胁情报、RFC 文档等）可以有效迁移到流量检测任务中，提升模型对恶意行为的理解能力。
+
+7. **异质性感知建模对加密恶意流量检测有潜力**：TrafficMoE (He et al., 2026) 证明将 header 和 payload 解耦建模、通过不确定性感知过滤抑制加密噪声的范式，在加密流量分类（含恶意流量场景）上一致超越 SOTA，表明异质性感知建模可应用于恶意流量检测。
+
+8. **预训练模型的 OOD 检测能力值得关注**：NetMamba+ (Wang et al., 2026) 在 4 个 OOD 任务上 AUROC 超 94%，展示了预训练流量基础模型对未知恶意流量的泛化检测潜力，这对零日攻击检测具有重要意义。
 
 ## 8. 争议与矛盾
 

@@ -9,7 +9,7 @@ tags:
   - deep-learning
   - network-security
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # Traffic Classification
@@ -60,6 +60,7 @@ updated: "2026-05-27"
 | Header-Payload 差异化预训练 | TraGe (Field-level Masking + Dynamic Masking) | 针对 header/payload 字节分布差异设计差异化掩码策略 | 仅处理单包，未建模 packet 间关系 |
 | 无预训练词义聚合 | ASNet (WSA + CSS + Task-aware Prompts) | 无需预训练即达 SOTA，参数量小，WSA 恢复完整词义 | 依赖 BERT 词表，仅分析单包，prompt 设计依赖经验 |
 | 线性注意力 GPT | TrafficGPT (Linear Attention + 可逆 Tokenization) | 突破 512 token 限制至 12K，同时支持分类和生成 | TLS 生成存在 malformed，自回归预训练未显式考虑分类任务 |
+| 稀疏 MoE | TrafficMoE (DFA: 解耦-过滤-聚合 + 稀疏 MoE) | 显式解耦头部/载荷异质性，不确定性感知过滤噪声 token，条件聚合自适应融合 | 三阶段 MoE 结构参数量较大，步幅分割可能引入边界效应 |
 | GNN 图方法 | TFE-GNN (图神经网络) | 建模流量的图结构关系 | 计算复杂度高，对无 payload 流量处理困难 |
 
 ## 5. 常用数据集
@@ -97,6 +98,8 @@ updated: "2026-05-27"
 | TraGe: A Generic Packet Representation for Traffic Classification Based on Header-Payload Differences | 2025 | Field-level Masking (header) + Random Masking (payload) + Dynamic Masking | ISCX-VPN, USTC-TFC, CIC-IoT | 根据 header/payload 字节分布差异进行差异化预训练，应用分类 F1 超越 SOTA 6.97% — `[[2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences]]` |
 | ASNet: Bottom Aggregating, Top Separating | 2025 | WSA 无参数词义聚合 + CSS 类别约束语义分离 + Task-aware Prompts | ISCXVPN, USTC-TFC, CICIoT, ISCXTor, CHNAPP | 无需预训练即在 5 数据集 7 任务上达 SOTA，WSA 使类间高频词重叠降低 36% — `[[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]]` |
 | TrafficGPT: Breaking the Token Barrier for Efficient Long Traffic Analysis and Generation | 2024 | 线性注意力 GPT + 可逆 Tokenization | CrossPlatform, ISCX-VPN, USTC-TFC, ISCX-Tor, CICIoT | 突破 512 token 限制至 12K，分类平均 F1 提升 2%，同时支持 pcap 生成 — `[[2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation]]` |
+| NetMamba: Efficient Network Traffic Classification via Pre-training Unidirectional Mamba | 2024 | 单向 Mamba + MAE 预训练 + Stride-based 表示 | CrossPlatform, ISCXTor, ISCXVPN, CICIoT, USTC-TFC | 首个将 Mamba 应用于流量分类，2.2M 参数，推理速度比 Transformer 快 60 倍，6 数据集准确率均超 90% — `[[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]` |
+| TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification | 2026 | DFA 范式（解耦-过滤-聚合）+ 稀疏 MoE + 不确定性感知过滤 | CSTNET-TLS1.3, ISCX-Tor, CIC-IoT, USTC-TFC, ISCX-VPN | 首个在加密流量分类中引入异质性感知 MoE，6 数据集一致超越 baseline，ISCX-Tor 上 F1=97.65%（+6.49%） — `[[2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification]]` |
 
 ## 7. 工程落地问题
 

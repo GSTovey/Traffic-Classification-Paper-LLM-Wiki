@@ -3,7 +3,7 @@ type: survey
 topic: "Website Fingerprinting"
 status: evolving
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-06-10"
 ---
 
 # 网站指纹识别综述 (Survey: Website Fingerprinting)

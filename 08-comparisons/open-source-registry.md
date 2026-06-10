@@ -2,7 +2,7 @@
 type: comparison
 name: open-source-registry
 created: "2026-05-29"
-updated: "2026-06-01"
+updated: "2026-06-10"
 ---
 
 # 开源模型/方法注册表

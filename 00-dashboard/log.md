@@ -392,3 +392,37 @@ Next steps:
   - 全库 92 篇论文均有 research_area/task/method 字段（100%）
 - Updated:
   - `00-dashboard/quality-check-report.md` — 统计数据更新至 92 篇 / 40 篇深度 / 30 开源 / 0 断链
+
+---
+
+## [2026-06-10] deep-analysis | 6 篇 arXiv 论文深度分析
+
+- Updated:
+  - 6 篇 arXiv 论文笔记完成 L3 深度分析，知识库深度分析总量从 40 篇增至 46 篇
+- Papers analyzed:
+  - **NetMamba+ (2026-arXiv)**: Mamba+Flash Attention+多模态+OOD+LDA，786 行
+  - **TrafficMoE (2026-arXiv)**: 稀疏 MoE+不确定性过滤+条件聚合，555 行
+  - **STAR (2025-arXiv)**: 零样本 HTTPS 网站指纹+跨模态对比学习，663 行
+  - **Bias in the Shadows (2026-arXiv)**: 捷径学习检测+AMI+特征遮蔽，596 行
+  - **TrafficGPT (2024-arXiv)**: GPT-style 自回归+线性注意力+流量生成（升级已有 §13），733 行
+  - **NetMamba (2024-arXiv)**: 单向 Mamba+MAE 预训练（升级已有 §13），731 行
+- Enhancement summary:
+  - 6 篇笔记总计从 ~1800 行扩展至 ~4000 行
+  - 每篇新增：§3.4 问题发现路径、§3.5 科学假设形成、§4.4 公式推导、§6 消融实验分析、§13 写作叙事分析、§14 跨论文关联
+  - 新增 ~100+ 条证据记录
+- Updated knowledge layer:
+  - `04-concepts/` — 7 个概念页更新（traffic-foundation-model, encrypted-traffic-analysis, traffic-classification, traffic-representation-learning, website-fingerprinting, malicious-traffic-detection, tunnel-detection）
+  - `05-methods/` — 6 个方法页更新（state-space-model, transformer, contrastive-learning, pre-training-finetuning, multi-modal-fusion, self-supervised-learning）
+  - `06-tasks/` — 3 个任务页更新（traffic-classification, website-fingerprinting, malicious-traffic-detection）
+  - `07-surveys/` — 3 个综述页更新（survey-encrypted-traffic-analysis, survey-traffic-foundation-model, survey-website-fingerprinting）
+  - `08-comparisons/` — 5 个对比表更新
+  - `09-claims/` — 新增 6 条 Claims（#28–#33）+ 4 组新矛盾
+- Updated dashboard:
+  - `00-dashboard/index.md` — 深度分析 40→46，Claims 27→33，矛盾 9→13
+  - `00-dashboard/project-overview.md` — 新增第三批深度分析列表、跨论文关联链新增 4 条
+  - `00-dashboard/reading-queue.md` — 6 篇论文状态 processed → deep-analyzed
+  - `00-dashboard/quality-check-report.md` — 统计更新
+- Notes:
+  - 2 批并行处理（6 篇深度分析 + 5 篇知识层更新），总耗时约 15 分钟
+  - 新增跨论文关联链：SSM 演进线、MoE 架构线、评估批判三角、流量生成线
+  - 关键发现：TrafficMoE 去预训练 F1 下降 24.4%，进一步支持预训练必要性

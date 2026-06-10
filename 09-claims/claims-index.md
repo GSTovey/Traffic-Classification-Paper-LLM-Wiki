@@ -2,7 +2,7 @@
 type: claims
 name: claims-index
 created: "2026-05-27"
-updated: "2026-06-09"
+updated: "2026-06-10"
 ---
 
 # Claims Index
@@ -40,3 +40,9 @@ updated: "2026-06-09"
 | 多模态特征（SIF payload 语义 + 统计特征）达成 F1 0.9356 vs 单模态 0.8141，提升 12.15%，证明多模态融合在加密流量分类中的有效性                                    | Multi-ARCL (JPDC 2025)  | Section 4.3.1, Tables 5/6 | 综述写作、多模态方法论证、持续学习场景分析         | high   |
 | 静默应用（silent applications）加速模型稳定性衰减；移除其参数可提升准确率 8.64% 以上，说明持续学习中应识别并处理不活跃类别                                        | Multi-ARCL (JPDC 2025)  | Table 8                  | 综述写作、持续学习策略设计、类别不平衡处理         | high   |
 | NetMamba 是首个将 Mamba/SSM 架构应用于流量分类的工作，速度比 Transformer 快 60 倍且准确率相当                                                       | NetMamba (arXiv 2024)   | —                        | 综述写作、高效架构设计论证、边缘部署可行性分析       | medium |
+| SSM 架构（Mamba）比 Transformer 参数量减少 72 倍但性能接近，多模态融合（头部+载荷）进一步提升 F1 +8.69%；OOD 检测对真实部署至关重要                                        | NetMamba+ (2026)        | Section 4, Ablation Study | 综述写作、高效架构设计、多模态融合论证、部署鲁棒性分析    | high   |
+| 异质 MoE（头部+载荷分开路由）优于同质 MoE，F1 差距 5.33%；预训练不可或缺，去除后 F1 下降 24.4%；Payload-only MoE F1 仅 45.22%，头部信息仍关键                 | TrafficMoE (2026)       | Section 5, Tables        | 综述写作、MoE 架构设计、预训练重要性论证、多模态路由策略 | high   |
+| 零样本 WF 可匹配其他方法 8-shot 水平；三个对齐锚点（IP 分组、请求-响应、TLS 特征）揭示协议结构泄漏；CMA 贡献最大（+10.75%）                                           | STAR (2025)             | Section 5, Tables        | 综述写作、零样本学习论证、WF 攻击新范式、协议泄漏分析    | high   |
+| DL 分类器大量依赖捷径特征（IP/Timestamp/端口）；遮蔽捷径特征后准确率反常上升（USTC-TFC2016, Ransomware），说明模型存在虚假学习                                       | Bias in the Shadows (2026) | Section 4, Experiments   | 综述写作、评估批判、捷径学习风险分析、DL 可信度讨论     | high   |
+| 线性注意力替代标准注意力实现 12K token 容量，生成质量差距 5-6 倍；可逆 token 实现无损编解码；同时实现分类和生成的首个 GPT-style 流量模型                                      | TrafficGPT (2024)       | Tables I-III             | 综述写作、长序列建模、流量生成、统一模型架构论证       | high   |
+| 单向 Mamba 优于双向（因果性更适合流量序列）；MAE 预训练显著提升性能；参数量仅 Transformer 的 1/85；90% mask ratio 有效（与 YaTC 一致）                              | NetMamba (2024)         | Section 5, Ablation      | 综述写作、SSM 架构设计、预训练策略、mask ratio 选择   | high   |
