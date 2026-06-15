@@ -1,0 +1,2105 @@
+{
+  "generated": "2026-06-15T15:29:39.935676",
+  "papers": {
+    "2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries": {
+      "processed_at": "2026-06-15T15:29:33.632597",
+      "figures": [
+        {
+          "img_path": "images/00024a93fdfea79214bc5d78b6456bec34ecc6efad8aecdad891949a0b405146.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. How tunnels work: high-level scheme. "
+          ],
+          "sub_type": "flowchart",
+          "score": 10,
+          "dest_name": "2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries__Fig__1__00024a93fdfea792.jpg",
+          "dest_rel": "images/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries__Fig__1__00024a93fdfea792.jpg"
+        }
+      ]
+    },
+    "2017-TIFS-Classification_of_Encrypted_Traffic_With_Second-Order_Markov_Chains_and_Application_Attribute_Bigrams": {
+      "processed_at": "2026-06-15T15:29:33.634055",
+      "figures": [
+        {
+          "img_path": "images/1b239b717edee88b9830cffcd7286f8dd4566a3d4f0881cab99241eb53ae58c4.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. System Overview. "
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2017-TIFS-Classification_of_Encrypted_Traffic_With_Second-Order_Markov_Chains_an__Fig__4__1b239b717edee88b.jpg",
+          "dest_rel": "images/2017-TIFS-Classification_of_Encrypted_Traffic_With_Second-Order_Markov_Chains_an__Fig__4__1b239b717edee88b.jpg"
+        }
+      ]
+    },
+    "2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning": {
+      "processed_at": "2026-06-15T15:29:33.635065",
+      "figures": [
+        {
+          "img_path": "images/ff022a01acc2ac81ebd2047db2e720151db4910c89c2c2fa5da8c937f77cb092.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: A basic architecture of convolutional neural networks (CNN) "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_De__Figure_2__ff022a01acc2ac81.jpg",
+          "dest_rel": "images/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_De__Figure_2__ff022a01acc2ac81.jpg"
+        }
+      ]
+    },
+    "2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.637038",
+      "figures": [
+        {
+          "img_path": "images/e253f299e73b2cf6f8a70a01a7c977921ac7e7db39f24db28179d30203d97cb9.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. The deep architecture of RFGM. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feat__Fig__4__e253f299e73b2cf6.jpg",
+          "dest_rel": "images/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feat__Fig__4__e253f299e73b2cf6.jpg"
+        },
+        {
+          "img_path": "images/6f4b44dfef9df1f1d1665e44c84e4c230f795edc783f307bdfbb1590eb234d5b.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Overview of ML based traffic classification system. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feat__Fig__2__6f4b44dfef9df1f1.jpg",
+          "dest_rel": "images/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feat__Fig__2__6f4b44dfef9df1f1.jpg"
+        }
+      ]
+    },
+    "2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffic_Analysis": {
+      "processed_at": "2026-06-15T15:29:33.638842",
+      "figures": [
+        {
+          "img_path": "images/518d65422ca8ac7ddce079a29b2e2592c4fe90b1c2eff8300dfc1fe81d3964ad.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. High-level representation of classifier training, and a visualisation of bursts and flows within network traffic. (a) Equipment setup. (b) Network trace capture. (c) Traffic burstification. (d) Flow separation. (e) Ambiguity detection. (f) Classifier training. (g) Trained classifiers. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffi__Fig__1__518d65422ca8ac7d.jpg",
+          "dest_rel": "images/2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffi__Fig__1__518d65422ca8ac7d.jpg"
+        },
+        {
+          "img_path": "images/ed3e4f02a9c7291efeac86d17468ec906295659f21b545b7c238ce2922b53033.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Generating features from flows for classifier training. "
+          ],
+          "sub_type": "flowchart",
+          "score": 5,
+          "dest_name": "2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffi__Fig__2__ed3e4f02a9c7291e.jpg",
+          "dest_rel": "images/2018-Trans_IFS-Robust_Smartphone_App_Identification_via_Encrypted_Network_Traffi__Fig__2__ed3e4f02a9c7291e.jpg"
+        }
+      ]
+    },
+    "2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.640221",
+      "figures": [
+        {
+          "img_path": "images/9fc36599f075155dfc8939d1b41c74f36e09f37d6d51464ac9dfbd2a90bfbbcc.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The system overview of the FS-Net. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classificatio__Fig__2__9fc36599f075155d.jpg",
+          "dest_rel": "images/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classificatio__Fig__2__9fc36599f075155d.jpg"
+        },
+        {
+          "img_path": "images/acd23e150b6451187ba3bc00b3b628580cffbe9287b9096d5b077adfe31c0b29.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(b) ",
+            "Fig. 1. 1(a) shows the architecture of gated recurrent unit, and 1(b) shows the basic structure of autoencoder. "
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classificatio__Figure__acd23e150b645118.jpg",
+          "dest_rel": "images/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classificatio__Figure__acd23e150b645118.jpg"
+        }
+      ]
+    },
+    "2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition": {
+      "processed_at": "2026-06-15T15:29:33.641152",
+      "figures": [
+        {
+          "img_path": "images/4b1b91ab03bce12132f1f4fed3404ef47acd8bc15ed8e0a65bd26be232535840.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: An illustration of the architecture of our LeNet-5 style CNN."
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Im__Figure_3__4b1b91ab03bce121.jpg",
+          "dest_rel": "images/2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Im__Figure_3__4b1b91ab03bce121.jpg"
+        }
+      ]
+    },
+    "2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic": {
+      "processed_at": "2026-06-15T15:29:33.642200",
+      "figures": [
+        {
+          "img_path": "images/176a9a7823aa15242a558e8c09b07a6ca20d965958676ec13d396fe11576fbd5.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Overview of the creation and matching of app fingerprints. (A) We extract features from the network traces. (B) We cluster the flows from each device per network destination. (C) We detect and isolate browsers. (D) We discover correlations between network destinations. (E) We create fingerprints based on strong correlations. (F) We match newly found fingerprints against previously generated fingerprints and update them accordingly. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Netw__Fig__1__176a9a7823aa1524.jpg",
+          "dest_rel": "images/2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Netw__Fig__1__176a9a7823aa1524.jpg"
+        }
+      ]
+    },
+    "2020-TIFS-Fine-Grained_Webpage_Fingerprinting_Using_Only_Packet_Length_Information_of_Encrypted_Traffic": {
+      "processed_at": "2026-06-15T15:29:33.643364",
+      "figures": [
+        {
+          "img_path": "images/af47fe711ddd7bfd3745ea62c8a47b2e81e86958ccb4e046324602dcbfc5af01.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Overview of FineWP. "
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2020-TIFS-Fine-Grained_Webpage_Fingerprinting_Using_Only_Packet_Length_Informati__Fig__2__af47fe711ddd7bfd.jpg",
+          "dest_rel": "images/2020-TIFS-Fine-Grained_Webpage_Fingerprinting_Using_Only_Packet_Length_Informati__Fig__2__af47fe711ddd7bfd.jpg"
+        }
+      ]
+    },
+    "2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analysis": {
+      "processed_at": "2026-06-15T15:29:33.644578",
+      "figures": [
+        {
+          "img_path": "images/89aeb10209d6e81f3eda5fcf4a8653291731d207325199178900daf248cad366.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: High-level design of Whisper. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analys__Figure_1__89aeb10209d6e81f.jpg",
+          "dest_rel": "images/2021-CCS-Realtime_Robust_Malicious_Traffic_Detection_via_Frequency_Domain_Analys__Figure_1__89aeb10209d6e81f.jpg"
+        }
+      ]
+    },
+    "2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks": {
+      "processed_at": "2026-06-15T15:29:33.645895",
+      "figures": [
+        {
+          "img_path": "images/a52d81f91b17617a71c0e66dc6fd7f6b206aca1d6bf9f199eb26b08faf9e3a0d.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4: The architecture of the detection method"
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks__Fig__4__a52d81f91b17617a.jpg",
+          "dest_rel": "images/2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks__Fig__4__a52d81f91b17617a.jpg"
+        },
+        {
+          "img_path": "images/4c0bd33ffe9bdd361414cc164141af4300f2190a53d84f296a65143f9a7fdadd.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Tor network architecture with bridge"
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks__Fig__2__4c0bd33ffe9bdd36.jpg",
+          "dest_rel": "images/2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks__Fig__2__4c0bd33ffe9bdd36.jpg"
+        }
+      ]
+    },
+    "2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks": {
+      "processed_at": "2026-06-15T15:29:33.647440",
+      "figures": [
+        {
+          "img_path": "images/c09585d08a618913ab59e21526329077e8eeb7f7daec1941431fc4051a5b2ae4.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. Structure of Neural Networks in GraphDApp. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffi__Fig__5__c09585d08a618913.jpg",
+          "dest_rel": "images/2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffi__Fig__5__c09585d08a618913.jpg"
+        },
+        {
+          "img_path": "images/09433e3aa7f0096f53f230cccb12b064312df3adbcc1bfe2afffce5067fe0380.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Typical Workflow of DApps on Ethereum. "
+          ],
+          "sub_type": "flowchart",
+          "score": 11,
+          "dest_name": "2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffi__Fig__1__09433e3aa7f0096f.jpg",
+          "dest_rel": "images/2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffi__Fig__1__09433e3aa7f0096f.jpg"
+        }
+      ]
+    },
+    "2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey": {
+      "processed_at": "2026-06-15T15:29:33.649479",
+      "figures": [
+        {
+          "img_path": "images/2236330d72e31efa763a5ada16a11e02a8dfd9d3125d26de02d3d6512f8cb645.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. A general workflow of encrypted traffic analysis. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Compreh__Fig__4__2236330d72e31efa.jpg",
+          "dest_rel": "images/2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Compreh__Fig__4__2236330d72e31efa.jpg"
+        },
+        {
+          "img_path": "images/afce8feb1dd9eee0c4578be3996a92519c8c9a1fddd3c21b24bc6256220d4f68.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. Mechanisms in the network model. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Compreh__Fig__5__afce8feb1dd9eee0.jpg",
+          "dest_rel": "images/2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Compreh__Fig__5__afce8feb1dd9eee0.jpg"
+        }
+      ]
+    },
+    "2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_and_Spationtemporal_Characteristics": {
+      "processed_at": "2026-06-15T15:29:33.650615",
+      "figures": [
+        {
+          "img_path": "images/58eed759a4c2bfa957bf4d2ff8f6b335f91321902d5ac768c8d5c2e7b93458e6.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: Framework of encrypted traffic classification model based on raw traffic and its spatiotemporal characteristics "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_an__Figure_1__58eed759a4c2bfa9.jpg",
+          "dest_rel": "images/2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_an__Figure_1__58eed759a4c2bfa9.jpg"
+        },
+        {
+          "img_path": "images/7dadf65a5d0d233b11d82e3f247b9ee99a6e82744f5a8a8ec9846df255e85e6c.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: Data pre-processing steps "
+          ],
+          "sub_type": "flowchart",
+          "score": 5,
+          "dest_name": "2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_an__Figure_2__7dadf65a5d0d233b.jpg",
+          "dest_rel": "images/2022-EITCE-An_Encrypted_Traffic_Classification_Model_Based_on_the_Raw_Traffic_an__Figure_2__7dadf65a5d0d233b.jpg"
+        }
+      ]
+    },
+    "2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision": {
+      "processed_at": "2026-06-15T15:29:33.651488",
+      "figures": [
+        {
+          "img_path": "images/986b6f5a531e24636c5372ab819f3dd80c64a6224d57aebbdd1b662c4d62a800.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The Framework of MTBD "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors__Fig__2__986b6f5a531e2463.jpg",
+          "dest_rel": "images/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors__Fig__2__986b6f5a531e2463.jpg"
+        }
+      ]
+    },
+    "2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic": {
+      "processed_at": "2026-06-15T15:29:33.652305",
+      "figures": [
+        {
+          "img_path": "images/b593e67ef075ce2578b8cc8fe10ea751af162619320f3797b2b7e5b4c1372658.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The architecture of our deep learning model. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic__Fig__2__b593e67ef075ce25.jpg",
+          "dest_rel": "images/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic__Fig__2__b593e67ef075ce25.jpg"
+        }
+      ]
+    },
+    "2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_Long_Short_Term_Memory": {
+      "processed_at": "2026-06-15T15:29:33.653706",
+      "figures": [
+        {
+          "img_path": "images/fd2803334051e114284a9a92c66a839d8abc5a3cacfd6b3d279e1e6b1a738b32.jpg",
+          "figure_label": "Fig. 6",
+          "caption": [
+            "Fig. 6. The architecture diagram of HAN model. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_L__Fig__6__fd2803334051e114.jpg",
+          "dest_rel": "images/2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_L__Fig__6__fd2803334051e114.jpg"
+        },
+        {
+          "img_path": "images/9509e0391f736ff5cba9edba35ee4b574a4eb6aac6a21a6e41e0a3b82213cb67.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. The architecture diagram of the attention based LSTM model. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_L__Fig__5__9509e0391f736ff5.jpg",
+          "dest_rel": "images/2022-TBD-Identification_of_Encrypted_Traffic_Through_Attention_Mechanism_Based_L__Fig__5__9509e0391f736ff5.jpg"
+        }
+      ]
+    },
+    "2022-USENIX-off-path_network_traffic_manipulation_via_revitalized_ICMP_redirect_attacks": {
+      "processed_at": "2026-06-15T15:29:33.655271",
+      "figures": [
+        {
+          "img_path": "images/5bec896d610bd536616608b1d531a1f78f7b8c011c3928086be13e5bf9c28f0f.jpg",
+          "figure_label": "Figure 6",
+          "caption": [
+            "Figure 6: Overview of DoS attacks. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2022-USENIX-off-path_network_traffic_manipulation_via_revitalized_ICMP_redirect___Figure_6__5bec896d610bd536.jpg",
+          "dest_rel": "images/2022-USENIX-off-path_network_traffic_manipulation_via_revitalized_ICMP_redirect___Figure_6__5bec896d610bd536.jpg"
+        },
+        {
+          "img_path": "images/d06f7edb9a9f32cb77d892e665a99d1dbb63186996d973e3bfe7aa2dca6210c1.jpg",
+          "figure_label": "Figure 10",
+          "caption": [
+            "Figure 10: Off-path DNS requests hijacking in NAT networks. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2022-USENIX-off-path_network_traffic_manipulation_via_revitalized_ICMP_redirect___Figure_10__d06f7edb9a9f32cb.jpg",
+          "dest_rel": "images/2022-USENIX-off-path_network_traffic_manipulation_via_revitalized_ICMP_redirect___Figure_10__d06f7edb9a9f32cb.jpg"
+        }
+      ]
+    },
+    "2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.656173",
+      "figures": [
+        {
+          "img_path": "images/c283ff368d8dd1425cd1a3241d14aedb49cf44a34a1df71a465867e0d6335f31.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: Overview of ET-BERT Framework. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Tra__Figure_2__c283ff368d8dd142.jpg",
+          "dest_rel": "images/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Tra__Figure_2__c283ff368d8dd142.jpg"
+        }
+      ]
+    },
+    "2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation": {
+      "processed_at": "2026-06-15T15:29:33.658283",
+      "figures": [
+        {
+          "img_path": "images/a291ceeb9904f60a006a73af6b952bee4b0a4e6c2b229ebd1ad00a4b44994df7.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: The schematic illustration of YaTC. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Tran__Figure_2__a291ceeb9904f60a.jpg",
+          "dest_rel": "images/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Tran__Figure_2__a291ceeb9904f60a.jpg"
+        },
+        {
+          "img_path": "images/cad170a5efcb79cca9d1f7518a4cff08f7463d11191b887f1807b0c87cc38bdf.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: The schematic illustration of multi-level fow representation (MFR). "
+          ],
+          "sub_type": "flowchart",
+          "score": 10,
+          "dest_name": "2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Tran__Figure_1__cad170a5efcb79cc.jpg",
+          "dest_rel": "images/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Tran__Figure_1__cad170a5efcb79cc.jpg"
+        }
+      ]
+    },
+    "2023-CCS-Point_cloud_analysis_for_ML-based_malicious_traffic_detection_Reducing_majorities_of_false_positive_alarms": {
+      "processed_at": "2026-06-15T15:29:33.660038",
+      "figures": [
+        {
+          "img_path": "images/813843a2d2326e2c1afc0d97b9fca84fc351deeb6b6606362b4e98cef8f595bf.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: The overview of pVoxel. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2023-CCS-Point_cloud_analysis_for_ML-based_malicious_traffic_detection_Reducing___Figure_3__813843a2d2326e2c.jpg",
+          "dest_rel": "images/2023-CCS-Point_cloud_analysis_for_ML-based_malicious_traffic_detection_Reducing___Figure_3__813843a2d2326e2c.jpg"
+        }
+      ]
+    },
+    "2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning": {
+      "processed_at": "2026-06-15T15:29:33.661045",
+      "figures": [
+        {
+          "img_path": "images/3363ff4edd7758734c9c7df9fb9cf1f4ad3ee70259c687416d23ae1d01bb7e2d.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The whole architecture of the MetaMRE model. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_r__Fig__1__3363ff4edd775873.jpg",
+          "dest_rel": "images/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_r__Fig__1__3363ff4edd775873.jpg"
+        }
+      ]
+    },
+    "2023-NDSS-Detecting_unknown_encrypted_malicious_traffic_in_real_time_via_flow_interaction_graph_analysis": {
+      "processed_at": "2026-06-15T15:29:33.662348",
+      "figures": [
+        {
+          "img_path": "images/52ce5f16474e63876f51514fbe454d564f9c01dc66ad05a8762a5c9bb306ba59.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The overview of HyperVision. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2023-NDSS-Detecting_unknown_encrypted_malicious_traffic_in_real_time_via_flow_in__Fig__1__52ce5f16474e6387.jpg",
+          "dest_rel": "images/2023-NDSS-Detecting_unknown_encrypted_malicious_traffic_in_real_time_via_flow_in__Fig__1__52ce5f16474e6387.jpg"
+        }
+      ]
+    },
+    "2023-S&P-Robust_Multi-tab_Website_Fingerprinting_Attacks_in_the_Wild": {
+      "processed_at": "2026-06-15T15:29:33.663877",
+      "figures": [
+        {
+          "img_path": "images/8a70572c2b8abeb0f7bf462592bb57bb55cebb195a68826cb3d9cd00b98a9fa9.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: The overview of our generic robust WF attack ARES. ARES is based on multi-tab WF architecture with multiple Trans-WF, and each Trans-WF identifies a specific website. Trans-WF consists of three module: traffic division module, local profiling module and website identification module. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2023-S_P-Robust_Multi-tab_Website_Fingerprinting_Attacks_in_the_Wild__Fig__2__8a70572c2b8abeb0.jpg",
+          "dest_rel": "images/2023-S_P-Robust_Multi-tab_Website_Fingerprinting_Attacks_in_the_Wild__Fig__2__8a70572c2b8abeb0.jpg"
+        },
+        {
+          "img_path": "images/00c7b380b444d8f1596d259c916f9a8ba9b511e5a630f565e1119581cc1ace52.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4: The multi-head top-m attention method correlates local traffic patterns for website fingerprinting even in the presence of noise interference. Different from the full connection of the original Transformer, Trans-WF keeps only the top-m attention. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2023-S_P-Robust_Multi-tab_Website_Fingerprinting_Attacks_in_the_Wild__Fig__4__00c7b380b444d8f1.jpg",
+          "dest_rel": "images/2023-S_P-Robust_Multi-tab_Website_Fingerprinting_Attacks_in_the_Wild__Fig__4__00c7b380b444d8f1.jpg"
+        }
+      ]
+    },
+    "2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification": {
+      "processed_at": "2026-06-15T15:29:33.665048",
+      "figures": [
+        {
+          "img_path": "images/8c7c14622270e9e5721fbe6585856596e40bf4a96d1eae2a7ef45eb442338b2a.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: The prototype block of ProtoPNet and the new Lightweight Prototype Layer of LEXNet (LProto) with its contributions in red. Sim. M. - similarity matrix. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_n__Figure_3__8c7c14622270e9e5.jpg",
+          "dest_rel": "images/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_n__Figure_3__8c7c14622270e9e5.jpg"
+        },
+        {
+          "img_path": "images/3f52adcf23ede2a03a68142ad427fd6c2cd1cb4a09824158a73e2a8675cabda9.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: ResNet original residual block (Res) and our new Lightweight and Efficient Residual block (LERes) with its contributions in red. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_n__Figure_2__3f52adcf23ede2a0.jpg",
+          "dest_rel": "images/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_n__Figure_2__3f52adcf23ede2a0.jpg"
+        }
+      ]
+    },
+    "2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting": {
+      "processed_at": "2026-06-15T15:29:33.666413",
+      "figures": [
+        {
+          "img_path": "images/6ac105ccb5eb94acdc3884092eb5a94ba42d9a4eb23ab4c16799328bba9d644a.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Overview of the research. We collect five datasets representing five distinct scenarios and evaluate them using seven WF techniques, including two novel techniques and five state-of-the-art techniques."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting__Fig__3__6ac105ccb5eb94ac.jpg",
+          "dest_rel": "images/2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting__Fig__3__6ac105ccb5eb94ac.jpg"
+        },
+        {
+          "img_path": "images/21dc808d701956601727801052423bca0e574a002aa10f29811d83e506252b84.jpg",
+          "figure_label": "Fig. 7",
+          "caption": [
+            "Fig. 7. GFGC model architecture."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting__Fig__7__21dc808d70195660.jpg",
+          "dest_rel": "images/2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting__Fig__7__21dc808d70195660.jpg"
+        }
+      ]
+    },
+    "2023-TNET-Frequency_Domain_Feature_Based_Robust_Malicious_Traffic_Detection": {
+      "processed_at": "2026-06-15T15:29:33.667620",
+      "figures": [
+        {
+          "img_path": "images/ea0f27a88f638dba74f69fefe4c7654e874c439675bdcd065d75d00d927cf0ce.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. High-level design of Whisper. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2023-TNET-Frequency_Domain_Feature_Based_Robust_Malicious_Traffic_Detection__Fig__1__ea0f27a88f638dba.jpg",
+          "dest_rel": "images/2023-TNET-Frequency_Domain_Feature_Based_Robust_Malicious_Traffic_Detection__Fig__1__ea0f27a88f638dba.jpg"
+        }
+      ]
+    },
+    "2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation": {
+      "processed_at": "2026-06-15T15:29:33.668704",
+      "figures": [
+        {
+          "img_path": "images/ceadf549c24be450f0624f18628a75e860d5a09e89b2008dcc1b0cf6933a516f.jpg",
+          "figure_label": "Figure 7",
+          "caption": [
+            "Figure 7: The detail RF model’s architecture "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Repre__Figure_7__ceadf549c24be450.jpg",
+          "dest_rel": "images/2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Repre__Figure_7__ceadf549c24be450.jpg"
+        }
+      ]
+    },
+    "2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packet_length_patterns": {
+      "processed_at": "2026-06-15T15:29:33.670425",
+      "figures": [
+        {
+          "img_path": "images/aaca90e37b050c9c6600805f71981480f282ba0ed2ee7f24b777cbcd45318be5.jpg",
+          "figure_label": "Figure 5",
+          "caption": [
+            "Figure 5: High-level architecture of Exosphere. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packe__Figure_5__aaca90e37b050c9c.jpg",
+          "dest_rel": "images/2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packe__Figure_5__aaca90e37b050c9c.jpg"
+        },
+        {
+          "img_path": "images/747b972551d12edf898329c1118c0e57e475820464a59a419c86c5c29d27500b.jpg",
+          "figure_label": "Figure 8",
+          "caption": [
+            "Figure 8: Architecture of the semicircular DNN model $\\left( D = 3 \\right)$ . "
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packe__Figure_8__747b972551d12edf.jpg",
+          "dest_rel": "images/2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packe__Figure_8__747b972551d12edf.jpg"
+        }
+      ]
+    },
+    "2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis": {
+      "processed_at": "2026-06-15T15:29:33.671876",
+      "figures": [
+        {
+          "img_path": "images/f7786f7134dc563646e3313714e48eeb0981edfadd449212a1e5ed6e29ce45b5.jpg",
+          "figure_label": "Figure 5",
+          "caption": [
+            "Figure 5: The overview of Holmes. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spat__Figure_5__f7786f7134dc5636.jpg",
+          "dest_rel": "images/2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spat__Figure_5__f7786f7134dc5636.jpg"
+        },
+        {
+          "img_path": "images/9e2af83bf36f533bdef07e388af89fa762a28da335ca7a96c2f46ce98c42c68a.jpg",
+          "figure_label": "Figure 7",
+          "caption": [
+            "Figure 7: The Encoder of Holmes. "
+          ],
+          "sub_type": "flowchart",
+          "score": 7,
+          "dest_name": "2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spat__Figure_7__9e2af83bf36f533b.jpg",
+          "dest_rel": "images/2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spat__Figure_7__9e2af83bf36f533b.jpg"
+        }
+      ]
+    },
+    "2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale": {
+      "processed_at": "2026-06-15T15:29:33.673321",
+      "figures": [
+        {
+          "img_path": "images/86eb7fcbb7942d9b5d897a8884761a1787981516c29f46cbd956e4af61a5881e.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: Design overview of Oscar, which consists of three modules: Data Augmentation module, Feature Transformation Original Samples Diversmodule and Webpage Identification module. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale__Figure_3__86eb7fcbb7942d9b.jpg",
+          "dest_rel": "images/2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale__Figure_3__86eb7fcbb7942d9b.jpg"
+        },
+        {
+          "img_path": "images/e03b68e917ef1d2d189d3a1bef7ec5e1f59ef636679d464b0086dfbd38722f74.jpg",
+          "figure_label": "Figure 6",
+          "caption": [
+            "Figure 6: Details of the Feature Transformation module, which comprises a DF-based model and a multi-label metric learning loss function. We display the samples and their correlated proxies in the same color. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale__Figure_6__e03b68e917ef1d2d.jpg",
+          "dest_rel": "images/2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale__Figure_6__e03b68e917ef1d2d.jpg"
+        }
+      ]
+    },
+    "2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic": {
+      "processed_at": "2026-06-15T15:29:33.674066",
+      "figures": [
+        {
+          "img_path": "images/150fa6d61648fe43d0057fb74a9f3b465b5d0d58333122b565ed031291186712.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(c) Malware JA4+JA4X fingerprints "
+          ],
+          "sub_type": "text_image",
+          "score": 0,
+          "dest_name": "2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Enc__Figure__150fa6d61648fe43.jpg",
+          "dest_rel": "images/2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Enc__Figure__150fa6d61648fe43.jpg"
+        }
+      ]
+    },
+    "2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel": {
+      "processed_at": "2026-06-15T15:29:33.675582",
+      "figures": [
+        {
+          "img_path": "images/0300a196964fbf8f7f9ecf36f452ea8497c4fab68b29ab526e01ea56408f0beb.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The architecture of our website fingerprinting attack "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight__Fig__2__0300a196964fbf8f.jpg",
+          "dest_rel": "images/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight__Fig__2__0300a196964fbf8f.jpg"
+        },
+        {
+          "img_path": "images/00e2116f17bab5b330cb47a4e112df4ad71f3d69ef1e4c19662daca706094658.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Illustration of multi-tab web accessing. "
+          ],
+          "sub_type": "flowchart",
+          "score": 10,
+          "dest_name": "2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight__Fig__1__00e2116f17bab5b3.jpg",
+          "dest_rel": "images/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight__Fig__1__00e2116f17bab5b3.jpg"
+        }
+      ]
+    },
+    "2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum": {
+      "processed_at": "2026-06-15T15:29:33.676825",
+      "figures": [
+        {
+          "img_path": "images/04048ef60676b042b5801c608c51cd34d300a6e411c648ecb066d04ffdacc089.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: The SUMo pipeline comprising two online phases – filtering and matching phase – and one offline training phase. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Su__Figure_2__04048ef60676b042.jpg",
+          "dest_rel": "images/2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Su__Figure_2__04048ef60676b042.jpg"
+        }
+      ]
+    },
+    "2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic": {
+      "processed_at": "2026-06-15T15:29:33.678528",
+      "figures": [
+        {
+          "img_path": "images/7ee9b372135144232901e2d4c032afb83ae8ac451d03f48e91176cab2d7c6e1f.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1: The overview of our robust encrypted malicious traffic detection system RAPIER. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encry__Fig__1__7ee9b37213514423.jpg",
+          "dest_rel": "images/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encry__Fig__1__7ee9b37213514423.jpg"
+        },
+        {
+          "img_path": "images/ba7fe58c12d741031a46083a6c1728d2944bf4479956cdc95a424bc147112d0e.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5: The overview of our data augmentation module. We use three generators to generate samples $( G _ { M B } , G _ { M O } , G _ { N B } )$ based on three strategies $( M _ { B } , \\ M _ { O } , \\ N _ { B } ) .$ , respectively. The $\\sim M _ { B }$ indicates the generator that fits the target distribution region of $M _ { B }$ , and the same goes for $\\sim M _ { O }$ and $\\sim N _ { B }$ . "
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encry__Fig__5__ba7fe58c12d74103.jpg",
+          "dest_rel": "images/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encry__Fig__5__ba7fe58c12d74103.jpg"
+        }
+      ]
+    },
+    "2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor": {
+      "processed_at": "2026-06-15T15:29:33.679729",
+      "figures": [
+        {
+          "img_path": "images/d699d2340355564cd00dadac644c60f63ba68f03a882b71b34bf9ac9f98bdcba.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1: C-MirageFlow: MirageFlow with Co-Resident Relays. "
+          ],
+          "sub_type": "flowchart",
+          "score": 3,
+          "dest_name": "2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor__Fig__1__d699d2340355564c.jpg",
+          "dest_rel": "images/2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor__Fig__1__d699d2340355564c.jpg"
+        }
+      ]
+    },
+    "2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization": {
+      "processed_at": "2026-06-15T15:29:33.680915",
+      "figures": [
+        {
+          "img_path": "images/c5a1c020aa2ff034ad2312253281f67b68708a9fd8dca15c96f3e519d97fb75a.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: Palette overview: 1) Generate anonymity sets and corresponding super-matrices through website clustering. 2) Refine super-matrices using historical traces to lower overhead. 3) Use refined super-matrices for online trace regularization. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-S_P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymizat__Figure_2__c5a1c020aa2ff034.jpg",
+          "dest_rel": "images/2024-S_P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymizat__Figure_2__c5a1c020aa2ff034.jpg"
+        }
+      ]
+    },
+    "2024-TNET-Flow_Interaction_Graph_Analysis_Unknown_Encrypted_Malicious_Traffic_Detection": {
+      "processed_at": "2026-06-15T15:29:33.682433",
+      "figures": [
+        {
+          "img_path": "images/392d23bc9493354303861d33eefa3483e4111f9fefcb8bf8c83a297d6c085844.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The overview of HyperVision. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-TNET-Flow_Interaction_Graph_Analysis_Unknown_Encrypted_Malicious_Traffic_De__Fig__1__392d23bc94933543.jpg",
+          "dest_rel": "images/2024-TNET-Flow_Interaction_Graph_Analysis_Unknown_Encrypted_Malicious_Traffic_De__Fig__1__392d23bc94933543.jpg"
+        }
+      ]
+    },
+    "2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes": {
+      "processed_at": "2026-06-15T15:29:33.683567",
+      "figures": [
+        {
+          "img_path": "images/7a6a6fc85cb285c6f9e0e8bfcb1ddc2a7d7449facb1c51b700d1161b28b0918f.jpg",
+          "figure_label": "Figure 5",
+          "caption": [
+            "Figure 5: Detection Framework in Merit. For TLS flows, we remove the handshake of the cover TLS layer before feature extraction in order to only identify handshakes that are encapsulated.⋄ "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handsh__Figure_5__7a6a6fc85cb285c6.jpg",
+          "dest_rel": "images/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handsh__Figure_5__7a6a6fc85cb285c6.jpg"
+        }
+      ]
+    },
+    "2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting": {
+      "processed_at": "2026-06-15T15:29:33.685132",
+      "figures": [
+        {
+          "img_path": "images/b7d02fd6196d7add59cc21bd3f3372f83cbed76389aeb2deb71fb2369ae30b68.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: Framework Deployment on Merit Steps: (1) Client connects to VPN servers. (2) VPN connections, along with passing traffic, are being mirrored to the Filter. (3) Filter forwards server IP of suspected connections to the probing system. (4) Targets are sent to each dedicated Probers. (5) Probers send probes asynchronously. (6) Connections confirmed by probing are logged. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting__Figure_2__b7d02fd6196d7add.jpg",
+          "dest_rel": "images/2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting__Figure_2__b7d02fd6196d7add.jpg"
+        },
+        {
+          "img_path": "images/c950fe90d8c671720f79fdc0fba0c605a335afc7a16fcf2ad3ada7cb272264b5.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "A Appendix ",
+            "Figure 11: Evaluation Process for Active Server Fingerprinting. "
+          ],
+          "sub_type": "flowchart",
+          "score": 5,
+          "dest_name": "2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting__Figure__c950fe90d8c67172.jpg",
+          "dest_rel": "images/2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting__Figure__c950fe90d8c67172.jpg"
+        }
+      ]
+    },
+    "2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.686728",
+      "figures": [
+        {
+          "img_path": "images/a494e019b6e17210c1f04576f858077b25b9275b332e5e1df6ceb50305a8605a.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: Overview of AN-Net Framework. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification__Figure_3__a494e019b6e17210.jpg",
+          "dest_rel": "images/2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification__Figure_3__a494e019b6e17210.jpg"
+        },
+        {
+          "img_path": "images/d471db2c8d9eb84fbb225c3c6e9593a978dfcab3916f560e4d9096c9a60ddea4.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: Threat models of encrypted network traffic classification and anonymous network traffic classification. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification__Figure_1__d471db2c8d9eb84f.jpg",
+          "dest_rel": "images/2024-WWW-AN-Net__an_Anti-Noise_Network_for_Anonymous_Traffic_Classification__Figure_1__d471db2c8d9eb84f.jpg"
+        }
+      ]
+    },
+    "2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba": {
+      "processed_at": "2026-06-15T15:29:33.688221",
+      "figures": [
+        {
+          "img_path": "images/bb8e52d3f956e99456e75c48ed34fadc54346e6efac833105d021229aa8c13d1.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Overview of NetMamba Framework "
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__1__bb8e52d3f956e994.jpg",
+          "dest_rel": "images/2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__1__bb8e52d3f956e994.jpg"
+        },
+        {
+          "img_path": "images/1ceb8fe7e8b4f085d19a92606133aa5c0325a2c80a2171d85694b53db30bf9c1.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. NetMamba Encoder (Decoder) "
+          ],
+          "sub_type": "flowchart",
+          "score": 7,
+          "dest_name": "2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__2__1ceb8fe7e8b4f085.jpg",
+          "dest_rel": "images/2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__2__1ceb8fe7e8b4f085.jpg"
+        }
+      ]
+    },
+    "2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation": {
+      "processed_at": "2026-06-15T15:29:33.689667",
+      "figures": [
+        {
+          "img_path": "images/7ad69a2f9b6b54c46ea2e7d44a406d55776ac63b545ea9b8e508f1b8a061349d.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The framework of TrafficGPT."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Ana__Fig__1__7ad69a2f9b6b54c4.jpg",
+          "dest_rel": "images/2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Ana__Fig__1__7ad69a2f9b6b54c4.jpg"
+        },
+        {
+          "img_path": "images/34dd05dd9b63d7cbf00047d997e9f925670896e07b52508aba37a7adaa35df9b.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The structure of flow tokens."
+          ],
+          "sub_type": "flowchart",
+          "score": 10,
+          "dest_name": "2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Ana__Fig__2__34dd05dd9b63d7cb.jpg",
+          "dest_rel": "images/2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Ana__Fig__2__34dd05dd9b63d7cb.jpg"
+        }
+      ]
+    },
+    "2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.691110",
+      "figures": [
+        {
+          "img_path": "images/58acb8ce073199ca423c61f9aded87ed973b437f09e80027d254f8152ae416f6.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: Overall architecture of the Multi-Instance Encrypted Traffc Transformer (MIETT). After passing through the MIETT encoder, the fow representation is processed by M Two-Level Attention (TLA) layers, each comprising a packet attention mechanism and a fow attention mechanism."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traf__Figure_3__58acb8ce073199ca.jpg",
+          "dest_rel": "images/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traf__Figure_3__58acb8ce073199ca.jpg"
+        },
+        {
+          "img_path": "images/ad8e6dab9ddb81583ee8ba6b452529b3a67818a5bcf4faf0059f2e51a61e5ce8.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "Flow Contrastive Learning (FCL) Task",
+            "(c)",
+            "Figure 4: Overview of pre-training tasks. (a) Masked Flow Prediction (MFP) Task: The model is tasked with predicting the original content of masked tokens using the context provided by the unmasked tokens. (b) Packet Relative Position Prediction (PRPP) Task: The model’s objective is to determine, for each pair of packets (i, j), whether packet i precedes packet j. (c) Flow Contrastive Learning (FCL) Task: The goal is to ensure that packets within the same fow (positive pairs) are more similar in the embedding space, while packets from different fows (negative pairs) are less similar."
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traf__Figure__ad8e6dab9ddb8158.jpg",
+          "dest_rel": "images/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traf__Figure__ad8e6dab9ddb8158.jpg"
+        }
+      ]
+    },
+    "2025-AIA-Enhancing DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networks_Through_Latent_Space_Analysis_with_a_Tabular-Variational_Autoencoder_and_Self-Attention_Classifier_Model": {
+      "processed_at": "2026-06-15T15:29:33.692574",
+      "figures": [
+        {
+          "img_path": "images/349ba34c5df38817b9489943415c22b5462b282d0bc613df8e34bc4d16761828.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3 Tab-VAE architecture "
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2025-AIA-Enhancing_DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networ__Figure_3__349ba34c5df38817.jpg",
+          "dest_rel": "images/2025-AIA-Enhancing_DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networ__Figure_3__349ba34c5df38817.jpg"
+        },
+        {
+          "img_path": "images/5ad806988a273ab73ae5d37d3f9a77f0d69e8b36410cb17eec28f4a562d69c99.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1 Process diagram of Tab-VAE model "
+          ],
+          "sub_type": "flowchart",
+          "score": 9,
+          "dest_name": "2025-AIA-Enhancing_DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networ__Figure_1__5ad806988a273ab7.jpg",
+          "dest_rel": "images/2025-AIA-Enhancing_DNS-over-HTTPS_Traffic_Classification_in_Heterogeneous_Networ__Figure_1__5ad806988a273ab7.jpg"
+        }
+      ]
+    },
+    "2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis": {
+      "processed_at": "2026-06-15T15:29:33.694400",
+      "figures": [
+        {
+          "img_path": "images/512ab6e7b492205b737f635373c99c5ae159c0be74a066e7dd27191fcbba2b53.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: The overview of MM4flow. It consists of four modules: (1) data collection, (2) tokenization, (3) uni-modal pre-training, and (4) multi-modal fine-tuning. BERT-bytes and BERT-ps are applied to represent two modalities of network flows, that is, the payload byte stream (raw byte stream) and packet length sequence (transmission pattern), respectively. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic___Figure_2__512ab6e7b492205b.jpg",
+          "dest_rel": "images/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic___Figure_2__512ab6e7b492205b.jpg"
+        },
+        {
+          "img_path": "images/ae2849f61d35f9ba1725612c023e8c0216f9897b81a2ec16a47543ed31f423cd.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: At the network gateway, it is the the architecture for real-time network traffic capture, whose configuration primarily consists of port mirroring and the Zeek cluster. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic___Figure_3__ae2849f61d35f9ba.jpg",
+          "dest_rel": "images/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic___Figure_3__ae2849f61d35f9ba.jpg"
+        }
+      ]
+    },
+    "2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning": {
+      "processed_at": "2026-06-15T15:29:33.696042",
+      "figures": [
+        {
+          "img_path": "images/c37734dfc37e8c590c487c3a024e66d55c3f74fbe3f2f0642b9e998a9687381a.jpg",
+          "figure_label": "Figure 5",
+          "caption": [
+            "Figure 5: The overview of Swallow. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent__Figure_5__c37734dfc37e8c59.jpg",
+          "dest_rel": "images/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent__Figure_5__c37734dfc37e8c59.jpg"
+        },
+        {
+          "img_path": "images/fdaa885a05d98fa47616cefb4834f9dff32e82e4371ac3928052334da1c8737a.jpg",
+          "figure_label": "Figure 7",
+          "caption": [
+            "Figure 7: The pre-training phase of Swallow, which is based on a self-supervised learning framework BYOL [11]. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent__Figure_7__fdaa885a05d98fa4.jpg",
+          "dest_rel": "images/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent__Figure_7__fdaa885a05d98fa4.jpg"
+        }
+      ]
+    },
+    "2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dynamic_Network_Conditions": {
+      "processed_at": "2026-06-15T15:29:33.697592",
+      "figures": [
+        {
+          "img_path": "images/38c082eccbca6a1e3f850880dd1ef87e5f5066812a7f554c60c94cd2b21b7ee0.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: The overview of MetaTraffic. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dyn__Figure_2__38c082eccbca6a1e.jpg",
+          "dest_rel": "images/2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dyn__Figure_2__38c082eccbca6a1e.jpg"
+        },
+        {
+          "img_path": "images/9e4ee582895b2db5db0ce5575d26ae876e3708d25300c9ee13ea375eea57cc24.jpg",
+          "figure_label": "Figure 5",
+          "caption": [
+            "Figure 5: The performance of our framework and baselines under dynamic network conditions of different multiple types. The upper and lower subfigures show the original ?????? and $F 1 _ { m a c r o }$ of DF and ARES under dynamic conditions across the datasets, respectively, as well as the performance improvements after applying our framework and baselines. HOS, ENV, and OBF represent host, network environment, and obfuscation conditions, respectively. "
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dyn__Figure_5__9e4ee582895b2db5.jpg",
+          "dest_rel": "images/2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dyn__Figure_5__9e4ee582895b2db5.jpg"
+        }
+      ]
+    },
+    "2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion": {
+      "processed_at": "2026-06-15T15:29:33.699958",
+      "figures": [
+        {
+          "img_path": "images/70ef0b930c1ac479dc68e5727e625d4088a9b920746661a0ceab260517810165.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: High-level architecture of tFusion malicious traffic detection system. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-CCS-Training_with_Only_1_0___Samples__Malicious_Traffic_Detection_via_Cross__Figure_2__70ef0b930c1ac479.jpg",
+          "dest_rel": "images/2025-CCS-Training_with_Only_1_0___Samples__Malicious_Traffic_Detection_via_Cross__Figure_2__70ef0b930c1ac479.jpg"
+        },
+        {
+          "img_path": "images/5fae10e8373c6f132d327ef149683a720e70f3cc04a35ab69b079599b93abb1f.jpg",
+          "figure_label": "Figure 8",
+          "caption": [
+            "Figure 8: Network topology of deployment. "
+          ],
+          "sub_type": "flowchart",
+          "score": 7,
+          "dest_name": "2025-CCS-Training_with_Only_1_0___Samples__Malicious_Traffic_Detection_via_Cross__Figure_8__5fae10e8373c6f13.jpg",
+          "dest_rel": "images/2025-CCS-Training_with_Only_1_0___Samples__Malicious_Traffic_Detection_via_Cross__Figure_8__5fae10e8373c6f13.jpg"
+        }
+      ]
+    },
+    "2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection": {
+      "processed_at": "2026-06-15T15:29:33.701358",
+      "figures": [
+        {
+          "img_path": "images/f8f07882bebdf6fb99a2af4f2382798ee2aa8fdb4a526e14eb893fe0e04e3e54.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: The architectural overview of our proposed MET-LLM. Our MET-LLM comprises of three primary components: traffic embedding, pretrained LLM, and DATA. The first component transforms heterogeneous network data into LLM-compatible representations. The second leverages domainadapted contextual modeling. The third enables efficient parameter updates and adaptation to the evolving threats. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffi__Figure_2__f8f07882bebdf6fb.jpg",
+          "dest_rel": "images/2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffi__Figure_2__f8f07882bebdf6fb.jpg"
+        },
+        {
+          "img_path": "images/64fa1732181d3bff0525d51d98a313902e9b4b83761459febacba1fb31b64616.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: The illustration of traffic vocabulary construction. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffi__Figure_3__64fa1732181d3bff.jpg",
+          "dest_rel": "images/2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffi__Figure_3__64fa1732181d3bff.jpg"
+        }
+      ]
+    },
+    "2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks": {
+      "processed_at": "2026-06-15T15:29:33.702750",
+      "figures": [
+        {
+          "img_path": "images/c6f5e2625894e60973a0bfe15f474df39318be7c5b196dd0788305f259ed70ac.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1. CoMask Framework "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classific__Figure_1__c6f5e2625894e609.jpg",
+          "dest_rel": "images/2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classific__Figure_1__c6f5e2625894e609.jpg"
+        }
+      ]
+    },
+    "2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Programmable_Data_Plane": {
+      "processed_at": "2026-06-15T15:29:33.703888",
+      "figures": [
+        {
+          "img_path": "images/a39f5bcd7c5e25f89e1ca43777cbfc679825e39a3b4272a0ad74bde5eb5fe40f.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: System architecture for real-time QUIC C2 detection using programmable data planes. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Program__Figure_1__a39f5bcd7c5e25f8.jpg",
+          "dest_rel": "images/2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Program__Figure_1__a39f5bcd7c5e25f8.jpg"
+        },
+        {
+          "img_path": "images/3349f24a5bc09e471e12cfcda88c7938dd11f4c61a2b0cc78a73cc92126b38f3.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: Example deployment of a two-tree Random Forest model in P4 switch using encoded match-action tables. "
+          ],
+          "sub_type": "flowchart",
+          "score": 5,
+          "dest_name": "2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Program__Figure_2__3349f24a5bc09e47.jpg",
+          "dest_rel": "images/2025-INCAS-Malicious_QUIC_C2_Traffic_Detection_based_on_Random_Forest_in_Program__Figure_2__3349f24a5bc09e47.jpg"
+        }
+      ]
+    },
+    "2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.705288",
+      "figures": [
+        {
+          "img_path": "images/7ce6e1bdb19ee4df6ad18613cc25306d4007d858c3de3e7181fa61b4437ea4a3.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1: An illustration of the MoA architecture. "
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classificat__Fig__1__7ce6e1bdb19ee4df.jpg",
+          "dest_rel": "images/2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classificat__Fig__1__7ce6e1bdb19ee4df.jpg"
+        },
+        {
+          "img_path": "images/3cae112a25e1784772177fab82e4fbc9aeef6f92016701353ec84fe6826d2dd9.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4: Design of MOTA "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classificat__Fig__4__3cae112a25e17847.jpg",
+          "dest_rel": "images/2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classificat__Fig__4__3cae112a25e17847.jpg"
+        }
+      ]
+    },
+    "2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences": {
+      "processed_at": "2026-06-15T15:29:33.706048",
+      "figures": [
+        {
+          "img_path": "images/4d299cf6859e07bcfb0c4a4157a73cf0ee8265702aa19da48a529453aae0b0f9.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The framework of TraGe."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Base__Fig__1__4d299cf6859e07bc.jpg",
+          "dest_rel": "images/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Base__Fig__1__4d299cf6859e07bc.jpg"
+        }
+      ]
+    },
+    "2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis": {
+      "processed_at": "2026-06-15T15:29:33.707514",
+      "figures": [
+        {
+          "img_path": "images/010966943f02515bc4f3ea60a909fa85693213f2f740628f24ebfb51a5677cc9.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Overall structure of the method. (a) Data Preprocessing Module. (b) Transformer Module. (c) Classification and Evaluation Module."
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Tra__Fig__2__010966943f02515b.jpg",
+          "dest_rel": "images/2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Tra__Fig__2__010966943f02515b.jpg"
+        },
+        {
+          "img_path": "images/77e5231a5d959d5fbe3fdfcb172342d724f54d86f63f0f27e4b40b6b4ef2c99d.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Structure of PCAPNG."
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Tra__Fig__3__77e5231a5d959d5f.jpg",
+          "dest_rel": "images/2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Tra__Fig__3__77e5231a5d959d5f.jpg"
+        }
+      ]
+    },
+    "2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification": {
+      "processed_at": "2026-06-15T15:29:33.709099",
+      "figures": [
+        {
+          "img_path": "images/71c2e7bfe423d780a6ac9c00df4aa8bfb730bcafe5a73b73ca8e9cbcca151f31.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The framework of the proposed method."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_lear__Fig__2__71c2e7bfe423d780.jpg",
+          "dest_rel": "images/2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_lear__Fig__2__71c2e7bfe423d780.jpg"
+        },
+        {
+          "img_path": "images/89148e8e0b2fa5946a8071733b6e97d2e2fd3e56b1611ad4583d718e427d69ee.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Comparison of model structures before and after classes change."
+          ],
+          "sub_type": "flowchart",
+          "score": 5,
+          "dest_name": "2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_lear__Fig__3__89148e8e0b2fa594.jpg",
+          "dest_rel": "images/2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_lear__Fig__3__89148e8e0b2fa594.jpg"
+        }
+      ]
+    },
+    "2025-KDD-Wedjat_Detecting_Sophisticated_Evasion_Attacks_via_Real-time_Causal_Analysis": {
+      "processed_at": "2026-06-15T15:29:33.710208",
+      "figures": [
+        {
+          "img_path": "images/c82314bd25f9afa4f65824f11541d16946c3721dcfbdfb4a8935c999ac569093.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: The overview of Wedjat. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-KDD-Wedjat_Detecting_Sophisticated_Evasion_Attacks_via_Real-time_Causal_Ana__Figure_1__c82314bd25f9afa4.jpg",
+          "dest_rel": "images/2025-KDD-Wedjat_Detecting_Sophisticated_Evasion_Attacks_via_Real-time_Causal_Ana__Figure_1__c82314bd25f9afa4.jpg"
+        }
+      ]
+    },
+    "2025-NIPS-FlowRefiner__A_Robust_Traffic_Classification_Framework_against_Label_Noise": {
+      "processed_at": "2026-06-15T15:29:33.711839",
+      "figures": [
+        {
+          "img_path": "images/52831cad5e4932f4653338bda994604df24635f8f8c541330a3cb56c926f953c.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: The overview of FLOWREFINER. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-NIPS-FlowRefiner__A_Robust_Traffic_Classification_Framework_against_Label_N__Figure_1__52831cad5e4932f4.jpg",
+          "dest_rel": "images/2025-NIPS-FlowRefiner__A_Robust_Traffic_Classification_Framework_against_Label_N__Figure_1__52831cad5e4932f4.jpg"
+        },
+        {
+          "img_path": "images/a9eed4c2c72b08fa128bcebbe0c9ea056781481a95acd1ed1efb3a2bcd4df463.jpg",
+          "figure_label": "Figure 5",
+          "caption": [
+            "Figure 5: The pre-training paradigm of masked autoencoder for building traffic semantics-oriented encoder. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2025-NIPS-FlowRefiner__A_Robust_Traffic_Classification_Framework_against_Label_N__Figure_5__a9eed4c2c72b08fa.jpg",
+          "dest_rel": "images/2025-NIPS-FlowRefiner__A_Robust_Traffic_Classification_Framework_against_Label_N__Figure_5__a9eed4c2c72b08fa.jpg"
+        }
+      ]
+    },
+    "2025-NIPS-Gated_Attention_for_Larg": {
+      "processed_at": "2026-06-15T15:29:33.713008",
+      "figures": [
+        {
+          "img_path": "images/7f1c90ca033af7d76ab46bd9cb7c65e8af655ea4977108601acb508846929352.jpg",
+          "figure_label": "Figure",
+          "caption": [],
+          "sub_type": "flowchart",
+          "score": 3,
+          "dest_name": "2025-NIPS-Gated_Attention_for_Larg__Figure__7f1c90ca033af7d7.jpg",
+          "dest_rel": "images/2025-NIPS-Gated_Attention_for_Larg__Figure__7f1c90ca033af7d7.jpg"
+        }
+      ]
+    },
+    "2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers": {
+      "processed_at": "2026-06-15T15:29:33.714068",
+      "figures": [
+        {
+          "img_path": "images/345ed0c53ef7c72451f7dbcb7fa11066d4733c411f4c4b135f8474e6de0ff787.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1. Taxonomy of design choices in raw information based NTC "
+          ],
+          "sub_type": "flowchart",
+          "score": 4,
+          "dest_name": "2025-S_P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers__Figure_1__345ed0c53ef7c724.jpg",
+          "dest_rel": "images/2025-S_P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers__Figure_1__345ed0c53ef7c724.jpg"
+        }
+      ]
+    },
+    "2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data": {
+      "processed_at": "2026-06-15T15:29:33.715802",
+      "figures": [
+        {
+          "img_path": "images/9ade3db642260571ebbfb3749ff42d32a43a9ca7a504b962484f856a25578f66.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: The framework of TrafficFormer. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-S_P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data__Figure_1__9ade3db642260571.jpg",
+          "dest_rel": "images/2025-S_P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data__Figure_1__9ade3db642260571.jpg"
+        },
+        {
+          "img_path": "images/a1f3d7cf73d7364f873602775050ae7d3922dd20c5e7ed21403f8bcf51c9fbc6.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: An illustration of the MBM task. "
+          ],
+          "sub_type": "flowchart",
+          "score": 11,
+          "dest_name": "2025-S_P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data__Figure_2__a1f3d7cf73d7364f.jpg",
+          "dest_rel": "images/2025-S_P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data__Figure_2__a1f3d7cf73d7364f.jpg"
+        }
+      ]
+    },
+    "2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.717227",
+      "figures": [
+        {
+          "img_path": "images/9f733f976159d008d33f9dd5e927e663690f908b120e3b3b19150323ce62f3fa.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: Schema of Pcap-Encoder, our proposal. "
+          ],
+          "sub_type": "flowchart",
+          "score": 7,
+          "dest_name": "2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Enc__Figure_2__9f733f976159d008.jpg",
+          "dest_rel": "images/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Enc__Figure_2__9f733f976159d008.jpg"
+        }
+      ]
+    },
+    "2025-TDSC-DAIR-FedMoE__Hierarchical_MoE_for_Federated_Encrypted_Traffic_Classification_under_Compound_Drift": {
+      "processed_at": "2026-06-15T15:29:33.718616",
+      "figures": [
+        {
+          "img_path": "images/89d6691c6393dda2bb1aaf138c60c49983d23f25f5dbb86558ce38ce7044b7bd.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Overview of the DAIR-FedMoE framework. (a) GShard Transformer backbone in which each MoE layer is replaced by a hierarchical Mixture-of-Experts (HMoE) sublayer. (b) Server-side HMoE pipeline, where encrypted-flow embeddings are scored for drift, smoothed, and routed by a root gate to stable or drift-specialist experts; model updates are aggregated federatively and expert spawning, pruning, and merging are controlled by a PPO-based policy. (c) Client-side workflow, where local drift scores guide hierarchical routing, adaptive confidence-based loss reweighting is applied during training, and differentially private expert and gate updates with confidence summaries are returned to the server. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-TDSC-DAIR-FedMoE__Hierarchical_MoE_for_Federated_Encrypted_Traffic_Classifi__Fig__2__89d6691c6393dda2.jpg",
+          "dest_rel": "images/2025-TDSC-DAIR-FedMoE__Hierarchical_MoE_for_Federated_Encrypted_Traffic_Classifi__Fig__2__89d6691c6393dda2.jpg"
+        }
+      ]
+    },
+    "2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding": {
+      "processed_at": "2026-06-15T15:29:33.719849",
+      "figures": [
+        {
+          "img_path": "images/5b337c810f7c372f5045392265f385ca5a1eb6d996284e83207f79556f13a83f.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The overview of ASNet. Note: in the solid blue boxes in the lower left corner of the figure, to highlight the aggregation process of word sense, we represent them as characters, which are actually vector representations after encoding."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network___Fig__2__5b337c810f7c372f.jpg",
+          "dest_rel": "images/2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network___Fig__2__5b337c810f7c372f.jpg"
+        }
+      ]
+    },
+    "2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under_Environment_Shifts": {
+      "processed_at": "2026-06-15T15:29:33.721161",
+      "figures": [
+        {
+          "img_path": "images/9c8b387f859c3f1afe41333aec2ddf0f541314cfb65667b436e38dc1241ca4ab.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The framework of FG-SAT, including 1. Flow Graph construction, 2. JSD-based feature selection, 3. GraphSAT for encrypted traffic classification. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under__Fig__2__9c8b387f859c3f1a.jpg",
+          "dest_rel": "images/2025-TIFS-FG-SAT_Efficient_Flow_Graph_for_Encrypted_Traffic_Classification_Under__Fig__2__9c8b387f859c3f1a.jpg"
+        }
+      ]
+    },
+    "2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning": {
+      "processed_at": "2026-06-15T15:29:33.722738",
+      "figures": [
+        {
+          "img_path": "images/55f383bae2d9d14fc4ad15e20aaa3ac375ef3c47f999b6485737ad115d625aa8.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. The overview of SmartDetector. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learni__Fig__4__55f383bae2d9d14f.jpg",
+          "dest_rel": "images/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learni__Fig__4__55f383bae2d9d14f.jpg"
+        },
+        {
+          "img_path": "images/c0e90f2c45462e33f5f0e6b07c08bb8fc1640876d4a77bc41c3b0c2b6c0a8df0.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. The construction process of SAM. For a given traffic flow, SAM extracts three features from the first K packets, including packet length, packet direction and IAT. Then SAM employs feature embedding to capture contextual information. "
+          ],
+          "sub_type": "flowchart",
+          "score": 9,
+          "dest_name": "2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learni__Fig__3__c0e90f2c45462e33.jpg",
+          "dest_rel": "images/2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learni__Fig__3__c0e90f2c45462e33.jpg"
+        }
+      ]
+    },
+    "2025-TON-One_Model_Fits_All_Nodes_Neuron_Activation_Pattern_Analysis-Based_Attack_Traffic_Detection_Framework_for_P2P_Networks": {
+      "processed_at": "2026-06-15T15:29:33.724193",
+      "figures": [
+        {
+          "img_path": "images/0bfba48ec3161cde70ab48513313a4af142863be8cdbd66c345c360b09f3dac8.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The overview of tNeuron. At training phase, tNeuron constructs Transformer based surrogate model which provides rich neurons for the training of activation patterns models. At testing phase, tNeuron execute surrogate model for traffic triggering each alarm, and apply neuron activation model to predict if the alarm is a false one. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-TON-One_Model_Fits_All_Nodes_Neuron_Activation_Pattern_Analysis-Based_Attac__Fig__2__0bfba48ec3161cde.jpg",
+          "dest_rel": "images/2025-TON-One_Model_Fits_All_Nodes_Neuron_Activation_Pattern_Analysis-Based_Attac__Fig__2__0bfba48ec3161cde.jpg"
+        }
+      ]
+    },
+    "2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis": {
+      "processed_at": "2026-06-15T15:29:33.725640",
+      "figures": [
+        {
+          "img_path": "images/2cc6d18c708bbd274d9d36e23c50f7968d20acc3c15c98d8ec9c8da0a998ca16.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: The workflow of CertTA. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traff__Figure_2__2cc6d18c708bbd27.jpg",
+          "dest_rel": "images/2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traff__Figure_2__2cc6d18c708bbd27.jpg"
+        }
+      ]
+    },
+    "2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_Decouple__based_Semantic_Enhancement": {
+      "processed_at": "2026-06-15T15:29:33.726981",
+      "figures": [
+        {
+          "img_path": "images/efa9f2ad5429ac403f7dad172ac99438236d08b59c93f3a534dbe4a7c926e7f5.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: The overall architecture of DecETT. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_De__Figure_3__efa9f2ad5429ac40.jpg",
+          "dest_rel": "images/2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_De__Figure_3__efa9f2ad5429ac40.jpg"
+        }
+      ]
+    },
+    "2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting": {
+      "processed_at": "2026-06-15T15:29:33.728414",
+      "figures": [
+        {
+          "img_path": "images/23487a7f81ffa63d1d061c66832204d35d7e3071a3544ece0c01e6810efd0994.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Overview of cross-modality alignment anchors in our setting. (A–C) illustrate three hypothesized alignment anchors between website semantic logic (left) and encrypted traffic behavior (right): request-side, response-side, and transport protocol. (D–F) present empirical support for each anchor via Pearson correlation or Wasserstein distance on representative samples. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__1__23487a7f81ffa63d.jpg",
+          "dest_rel": "images/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__1__23487a7f81ffa63d.jpg"
+        },
+        {
+          "img_path": "images/0ead5cd95426d74b195f570d4e75eaa821de47750f37481b4b6e3420bb9e0518.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Training-stage framework of STAR. Structure-aware logic–traffic sample pairs and labeled traffic samples are passed through the Logic Encoder and Traffic Encoder, whose weights are jointly learned so that (1) paired embeddings align via contrastive loss, (2) traffic embeddings support supervised classification, and (3) same-class traffic embeddings remain consistent. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__2__0ead5cd95426d74b.jpg",
+          "dest_rel": "images/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__2__0ead5cd95426d74b.jpg"
+        }
+      ]
+    },
+    "2026-CCPE-A_Lightweight_Deep_Learning_Framework_for_Encrypted_Traffic_Classification_via_Visual_Flow_Representation": {
+      "processed_at": "2026-06-15T15:29:33.729933",
+      "figures": [
+        {
+          "img_path": "images/d0027248f71e27cb099f6378706868462996ecc3173298a658a8d6388ab8e6c2.jpg",
+          "figure_label": "FIGURE 4",
+          "caption": [
+            "FIGURE 4 Invert residual architecture. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-CCPE-A_Lightweight_Deep_Learning_Framework_for_Encrypted_Traffic_Classifica__FIGURE_4__d0027248f71e27cb.jpg",
+          "dest_rel": "images/2026-CCPE-A_Lightweight_Deep_Learning_Framework_for_Encrypted_Traffic_Classifica__FIGURE_4__d0027248f71e27cb.jpg"
+        },
+        {
+          "img_path": "images/a75f3ce90e9b015d7fe0409ca49d999e9b6030b29c7a22f770c9bee333d1c95b.jpg",
+          "figure_label": "FIGURE 5",
+          "caption": [
+            "FIGURE 5  MiTNetBlock module architecture. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-CCPE-A_Lightweight_Deep_Learning_Framework_for_Encrypted_Traffic_Classifica__FIGURE_5__a75f3ce90e9b015d.jpg",
+          "dest_rel": "images/2026-CCPE-A_Lightweight_Deep_Learning_Framework_for_Encrypted_Traffic_Classifica__FIGURE_5__a75f3ce90e9b015d.jpg"
+        }
+      ]
+    },
+    "2026-ICASSP-TriFusion_A_Self-Supervised_Learning_Enhanced_Dual-Level_Multimodal_Framework_for_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.730809",
+      "figures": [
+        {
+          "img_path": "images/293a11ee9bef6e8ae846e22e0ed56654645222a7169df43425acfdd24814c60f.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1: Overview of TriFusion Framework."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-ICASSP-TriFusion_A_Self-Supervised_Learning_Enhanced_Dual-Level_Multimodal___Fig__1__293a11ee9bef6e8a.jpg",
+          "dest_rel": "images/2026-ICASSP-TriFusion_A_Self-Supervised_Learning_Enhanced_Dual-Level_Multimodal___Fig__1__293a11ee9bef6e8a.jpg"
+        }
+      ]
+    },
+    "2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT": {
+      "processed_at": "2026-06-15T15:29:33.732363",
+      "figures": [
+        {
+          "img_path": "images/088649f9f003df2eb18939e23142a86451cffbb2e2920cf8e79ab55e8112083a.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Overview of the proposed method UT-PAB. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_usi__Fig__1__088649f9f003df2e.jpg",
+          "dest_rel": "images/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_usi__Fig__1__088649f9f003df2e.jpg"
+        },
+        {
+          "img_path": "images/741bbac7da0c0f5573a3a225aeab4bdb0a4e7d497afd75cb4f29fda7e7ea92c2.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Structure of fine-tuning. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_usi__Fig__3__741bbac7da0c0f55.jpg",
+          "dest_rel": "images/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_usi__Fig__3__741bbac7da0c0f55.jpg"
+        }
+      ]
+    },
+    "2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification": {
+      "processed_at": "2026-06-15T15:29:33.733832",
+      "figures": [
+        {
+          "img_path": "images/d0bacf69e06324c69464388206a917beb46718d2b18fde289a433eb0ede468d6.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Suppression of B-view and T-view in three multi-view ETC schemes. ",
+            "Fig. 4. The overall structure of ByteDance. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffi__Fig__3__d0bacf69e06324c6.jpg",
+          "dest_rel": "images/2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffi__Fig__3__d0bacf69e06324c6.jpg"
+        },
+        {
+          "img_path": "images/fa73bc362a1f97698a48d728d3f60bebdce722c9a8c8bc95052d8b16d3e86bd3.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. The input layer of ByteDance. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffi__Fig__5__fa73bc362a1f9769.jpg",
+          "dest_rel": "images/2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffi__Fig__5__fa73bc362a1f9769.jpg"
+        }
+      ]
+    },
+    "2026-JCN-DenTC__An_expandable_framework_for_dynamic_malicious_traffic_classification": {
+      "processed_at": "2026-06-15T15:29:33.735543",
+      "figures": [
+        {
+          "img_path": "images/5a6e4134f4ed30cd8a6aaaa58f2e7122a6bbae553cff4d3d93ca7b4849aa7feb.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Overview of the DenTC framework. It comprises three modules: traffic preprocessing module (TPM), dynamically expandable module (DEM), and classifier learning module (CLM). First, raw traffic is preprocessed into traffic images. DEM then incrementally updates the model by adding new feature extractors for acquiring new knowledge while freezing previously learned representations to retain prior knowledge. To further reinforce past knowledge, a small set of representative samples from old classes is replayed. Finally, the classifier is trained using cross-entropy and auxiliary losses, with a weight alignment strategy. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-JCN-DenTC__An_expandable_framework_for_dynamic_malicious_traffic_classifica__Fig__2__5a6e4134f4ed30cd.jpg",
+          "dest_rel": "images/2026-JCN-DenTC__An_expandable_framework_for_dynamic_malicious_traffic_classifica__Fig__2__5a6e4134f4ed30cd.jpg"
+        },
+        {
+          "img_path": "images/8119b0317353ae59aa85287c06deecccf9a22af42018aa208d4cd267db0db06f.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. The process of the traffic preprocessing module. It extracts packets from the pcap files through traffic splitting and traffic filtering and then transforms them into two-dimensional traffic matrices. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2026-JCN-DenTC__An_expandable_framework_for_dynamic_malicious_traffic_classifica__Fig__3__8119b0317353ae59.jpg",
+          "dest_rel": "images/2026-JCN-DenTC__An_expandable_framework_for_dynamic_malicious_traffic_classifica__Fig__3__8119b0317353ae59.jpg"
+        }
+      ]
+    },
+    "2026-JCN-GMM-cGAN__Mitigating_data_scarcity_and_label_noise_for_robust_encrypted_malicious_traffic_classification": {
+      "processed_at": "2026-06-15T15:29:33.737404",
+      "figures": [
+        {
+          "img_path": "images/f58ec45eb634eb746691535fe2b8db6aea491c619c874251f0347ac9c6c1a638.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. An overview of proposed GMM-cGAN framework for robust encrypted malicious traffic detection. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-JCN-GMM-cGAN__Mitigating_data_scarcity_and_label_noise_for_robust_encrypted__Fig__1__f58ec45eb634eb74.jpg",
+          "dest_rel": "images/2026-JCN-GMM-cGAN__Mitigating_data_scarcity_and_label_noise_for_robust_encrypted__Fig__1__f58ec45eb634eb74.jpg"
+        },
+        {
+          "img_path": "images/d9cf0a8e3c5f763a83935e75d38982e3d056cdd6937e74e19f1a0420a2986437.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Density distributions of network traffic in GMM-cGAN. Each subplot shows kernel density estimation of benign (solid blue) and malicious (dashed red) traffic in reduced feature space. The y-axis indicates relative density (Low to High), demonstrating our key observation that benign traffic consistently exhibits higher density than malicious traffic across all datasets. This density difference enables reliable label noise correction in our framework. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.) ",
+            "Label Noise Correction Module for GMM-CGAN ",
+            "Fig. 3. Three-stage label noise correction process: (1) GMM clustering in original high-dimensional space preserves feature relationships, (2) Density analysis shows clear separation between normal (dense) and malicious (sparse) distributions, (3) Correction pipeline uses high-confidence samples to guide ensemble learning. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2026-JCN-GMM-cGAN__Mitigating_data_scarcity_and_label_noise_for_robust_encrypted__Fig__2__d9cf0a8e3c5f763a.jpg",
+          "dest_rel": "images/2026-JCN-GMM-cGAN__Mitigating_data_scarcity_and_label_noise_for_robust_encrypted__Fig__2__d9cf0a8e3c5f763a.jpg"
+        }
+      ]
+    },
+    "2026-JCN-Plug-in_enhancement_framework__Breaking_through_performance_bottleneck_of_pre-trained_models_for_encrypted_traffic_classification": {
+      "processed_at": "2026-06-15T15:29:33.739220",
+      "figures": [
+        {
+          "img_path": "images/7d8ea5a56a8c38248b8e0cb027cfc630e41a306b8476485e696041e962e49cbc.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Overall architecture:1) Process raw traffic data and extract statistical feature vectors. 2) Employ the Statistical Feature Semantic Extraction Module to map the statistical feature vector into semantic space, yielding the statistical feature semantic vector ([SFSV]). 3) Utilise the multi-head self-attention gating mechanism (GATING) and Feature Fusion Module (FFM) to fuse the [CLS] with [SFSV], producing the Dynamic Weighted Interaction Vector ([DWIV]). This is then subjected to classification prediction via a classification head. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-JCN-Plug-in_enhancement_framework__Breaking_through_performance_bottleneck___Fig__3__7d8ea5a56a8c3824.jpg",
+          "dest_rel": "images/2026-JCN-Plug-in_enhancement_framework__Breaking_through_performance_bottleneck___Fig__3__7d8ea5a56a8c3824.jpg"
+        },
+        {
+          "img_path": "images/a113007efb9813c1643e5ab706e3018f5083b9c303d32c69e5c19219d20c3027.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(b)FFMstructure ",
+            "Fig. 5. Dynamic fusion network architecture. "
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2026-JCN-Plug-in_enhancement_framework__Breaking_through_performance_bottleneck___Figure__a113007efb9813c1.jpg",
+          "dest_rel": "images/2026-JCN-Plug-in_enhancement_framework__Breaking_through_performance_bottleneck___Figure__a113007efb9813c1.jpg"
+        }
+      ]
+    },
+    "2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification": {
+      "processed_at": "2026-06-15T15:29:33.740553",
+      "figures": [
+        {
+          "img_path": "images/79cbd22b43e3b56494641d16c99b8176b9fe94593b62ec5d294d81495de9df89.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. The proposed BP-RGAT architecture. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_enco__Fig__3__79cbd22b43e3b564.jpg",
+          "dest_rel": "images/2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_enco__Fig__3__79cbd22b43e3b564.jpg"
+        }
+      ]
+    },
+    "2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.742069",
+      "figures": [
+        {
+          "img_path": "images/54236b635d76617acafaf510aa80fc7a6728d73ae696c93555defe486b2bc399.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The structure of Generic Representation Encoder (GRE), Test-Time Adapter (TTA), and Lightweight Classifier. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Enc__Fig__2__54236b635d76617a.jpg",
+          "dest_rel": "images/2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Enc__Fig__2__54236b635d76617a.jpg"
+        },
+        {
+          "img_path": "images/084f2adad6c93b369c448e0f2fd5f42e50835ca3bfff70e7a3bc0a1c28a43054.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The structure of the Hierarchical Feature Encoder (HFE). "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Enc__Fig__1__084f2adad6c93b36.jpg",
+          "dest_rel": "images/2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Enc__Fig__1__084f2adad6c93b36.jpg"
+        }
+      ]
+    },
+    "2026-JKSU-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_encrypted_traffic_classification": {
+      "processed_at": "2026-06-15T15:29:33.743581",
+      "figures": [
+        {
+          "img_path": "images/34663eb07292a9976b589dbda5269a36a668e351893cf2af80090047b999a17c.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Architecture of the DA-layer. The DA-layer in the packet-level features learning module contains two sub-layers: the position attention layer (PAL) and the channel attention layer (CAL). "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-JKSU-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_e__Fig__4__34663eb07292a997.jpg",
+          "dest_rel": "images/2026-JKSU-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_e__Fig__4__34663eb07292a997.jpg"
+        },
+        {
+          "img_path": "images/0183e92e2e78ad27b9fd5740244c63d3e22ef8af95bce3f7f00905af85d7a015.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Overview of CLET Framework. The proposed model consists of three stages: (1) data preprocessing, (2) dual-level feature learning, and (3) cross-level classification. In the data preprocessing stage, encrypted traffic is filtered to exclude DNS and other unreliable flows. Two attribute sets are then extracted: an 87-dimensional session-level holistic attribute set from each session and a 13-dimensional packet-level Temporal-Spatial-State-Related attribute set from each of the first N packets (N = 16) of each session. In the dual-level feature learning stage, the session-level features learning module employs an autoencoder to generate 87-dimensional global representations, while the packet-level features learning module utilizes a hybrid CNN-Transformer architecture to obtain 16-dimensional local representations. These features are fused into a 103-dimensional cross-level representation. Finally, in the cross-level classification stage, various classifiers are applied to identify traffic applications. This design enables CLET to overcome the limitations of single-level approaches and achieve a comprehensive understanding of encrypted traffic. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-JKSU-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_e__Fig__1__0183e92e2e78ad27.jpg",
+          "dest_rel": "images/2026-JKSU-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_e__Fig__1__0183e92e2e78ad27.jpg"
+        }
+      ]
+    },
+    "2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for_encrypted_traffic_classification": {
+      "processed_at": "2026-06-15T15:29:33.745099",
+      "figures": [
+        {
+          "img_path": "images/34663eb07292a9976b589dbda5269a36a668e351893cf2af80090047b999a17c.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Architecture of the DA-layer. The DA-layer in the packet-level features learning module contains two sub-layers: the position attention layer (PAL) and the channel attention layer (CAL). "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for___Fig__4__34663eb07292a997.jpg",
+          "dest_rel": "images/2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for___Fig__4__34663eb07292a997.jpg"
+        },
+        {
+          "img_path": "images/0183e92e2e78ad27b9fd5740244c63d3e22ef8af95bce3f7f00905af85d7a015.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Overview of CLET Framework. The proposed model consists of three stages: (1) data preprocessing, (2) dual-level feature learning, and (3) cross-level classification. In the data preprocessing stage, encrypted traffic is filtered to exclude DNS and other unreliable flows. Two attribute sets are then extracted: an 87-dimensional session-level holistic attribute set from each session and a 13-dimensional packet-level Temporal-Spatial-State-Related attribute set from each of the first N packets (N = 16) of each session. In the dual-level feature learning stage, the session-level features learning module employs an autoencoder to generate 87-dimensional global representations, while the packet-level features learning module utilizes a hybrid CNN-Transformer architecture to obtain 16-dimensional local representations. These features are fused into a 103-dimensional cross-level representation. Finally, in the cross-level classification stage, various classifiers are applied to identify traffic applications. This design enables CLET to overcome the limitations of single-level approaches and achieve a comprehensive understanding of encrypted traffic. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for___Fig__1__0183e92e2e78ad27.jpg",
+          "dest_rel": "images/2026-JKing-Bridging_packet_and_session__Cross-level_dual-attention_networks_for___Fig__1__0183e92e2e78ad27.jpg"
+        }
+      ]
+    },
+    "2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs": {
+      "processed_at": "2026-06-15T15:29:33.746536",
+      "figures": [
+        {
+          "img_path": "images/ba2888ad27cd79f4f161bf97b99297e28f171a817ff5b91119f767e689f306e7.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1 Overview of the FGFR-Net "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification__Fig__1__ba2888ad27cd79f4.jpg",
+          "dest_rel": "images/2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification__Fig__1__ba2888ad27cd79f4.jpg"
+        },
+        {
+          "img_path": "images/9c7ef0479f8bd519f3300190219cfdcbf95c49e0fd9273910ae00f6a177fd867.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3 Improved residual network classifier "
+          ],
+          "sub_type": "flowchart",
+          "score": 9,
+          "dest_name": "2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification__Fig__3__9c7ef0479f8bd519.jpg",
+          "dest_rel": "images/2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification__Fig__3__9c7ef0479f8bd519.jpg"
+        }
+      ]
+    },
+    "2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classification__A_Traffic-Explainer_Framework": {
+      "processed_at": "2026-06-15T15:29:33.747945",
+      "figures": [
+        {
+          "img_path": "images/bb7c2bc59e18c39195ba0783504cdf8bf67bd73b82afe59a7ba8fc1843ffb34c.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: (a) Given a traffic sequence $X ^ { i } = \\{ X _ { j } ^ { i } \\} _ { j = 1 } ^ { | \\chi ^ { i } | }$ consisting of $| \\chi ^ { i } |$ feature units, an MLP or Transformer-based traffic classifier first predicts the corresponding traffic label. To provide interpretability, our proposed Traffic-Explainer identifies the Top-K most influential input units that drive the model prediction by optimizing input masks via mutual information maximization. (b) In application classification and traffic localization, Traffic-Explainer produces explanations in the form of individual bytes in the traffic packet sequence that are most critical for the model’s decision.(c) In the network cartography, Traffic-Explainer highlights the specific RTT-hop in a traceroute sequence that corresponds to the physical submarine cable being traversed, enabling transparent mapping between logical observations and physical infrastructure. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classifi__Figure_2__bb7c2bc59e18c391.jpg",
+          "dest_rel": "images/2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classifi__Figure_2__bb7c2bc59e18c391.jpg"
+        },
+        {
+          "img_path": "images/881d717adc5e7779a6c98f3f6ad9055ef61c3356807d1d0a81f8e1f38336748f.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: (a) Untransparent scenario: DL solutions that solely present predictions with no explanation lose the trust of network operators. (b) Transparent scenario: DL solutions that offer explanations for their decision-making gain by highlighting the critical unit driving the prediction of the traffic input sequence, earning the trust of network operators. "
+          ],
+          "sub_type": "flowchart",
+          "score": 7,
+          "dest_name": "2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classifi__Figure_1__881d717adc5e7779.jpg",
+          "dest_rel": "images/2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classifi__Figure_1__881d717adc5e7779.jpg"
+        }
+      ]
+    },
+    "2026-NDSS-A_Hard-Label_Black-Box_Evasion_Attack_against_ML-based_Malicious_Traffic_Detection_Systems": {
+      "processed_at": "2026-06-15T15:29:33.749535",
+      "figures": [
+        {
+          "img_path": "images/0619f7095852293736e1bd82f547d456da36d793a7663ddb1642c50d6d896e27.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "Benign Traffic Pattern Mimicking ",
+            "Fig. 2. High-Level Design of NetMasquerade. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-NDSS-A_Hard-Label_Black-Box_Evasion_Attack_against_ML-based_Malicious_Traff__Figure__0619f70958522937.jpg",
+          "dest_rel": "images/2026-NDSS-A_Hard-Label_Black-Box_Evasion_Attack_against_ML-based_Malicious_Traff__Figure__0619f70958522937.jpg"
+        },
+        {
+          "img_path": "images/3a5dba71ab985c95315af2694a14855bcde3682f27087237a786e93ccc3d2e80.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. Core design of Traffic-BERT. "
+          ],
+          "sub_type": "flowchart",
+          "score": 11,
+          "dest_name": "2026-NDSS-A_Hard-Label_Black-Box_Evasion_Attack_against_ML-based_Malicious_Traff__Fig__5__3a5dba71ab985c95.jpg",
+          "dest_rel": "images/2026-NDSS-A_Hard-Label_Black-Box_Evasion_Attack_against_ML-based_Malicious_Traff__Fig__5__3a5dba71ab985c95.jpg"
+        }
+      ]
+    },
+    "2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.751215",
+      "figures": [
+        {
+          "img_path": "images/5161f7a5694b452cccc9a429054c96824c008b0d6c979a03fc6411abcf4699d4.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Overall structure of FEC-OSL. The model is trained in an end-to-end manner using a combination of cross-entropy loss, energy-based boundary regularization loss and clustering loss. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypte__Fig__2__5161f7a5694b452c.jpg",
+          "dest_rel": "images/2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypte__Fig__2__5161f7a5694b452c.jpg"
+        },
+        {
+          "img_path": "images/0695e33bae1813365165e736c4b644e86311b842d4c65191a7236a97affa2e73.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Schematic of an open-world fine-grained classification task for known and unknown encrypted traffic, including the distinction between known and unknown traffic, classification of known classes, and clustering of unknown classes. "
+          ],
+          "sub_type": "flowchart",
+          "score": 11,
+          "dest_name": "2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypte__Fig__1__0695e33bae181336.jpg",
+          "dest_rel": "images/2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypte__Fig__1__0695e33bae181336.jpg"
+        }
+      ]
+    },
+    "2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embedding_and_Graph_Contrastive_Learning": {
+      "processed_at": "2026-06-15T15:29:33.752606",
+      "figures": [
+        {
+          "img_path": "images/6ea5b7c14412c5c7f6072133833d990d7859b089c949b563eac791d985826870.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. MT-DEGCL model architecture. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embeddi__Fig__1__6ea5b7c14412c5c7.jpg",
+          "dest_rel": "images/2026-TIFS-MT-DEGCL_Multi-Task_Encrypted_Traffic_Classification_With_Dual_Embeddi__Fig__1__6ea5b7c14412c5c7.jpg"
+        }
+      ]
+    },
+    "2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Classification_in_IoT": {
+      "processed_at": "2026-06-15T15:29:33.754579",
+      "figures": [
+        {
+          "img_path": "images/1ca1ef3f21387317e6be8e78fe10e1c02dad2a49a84047c0dc4af4cb0469de81.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Overview of our encrypted traffic classification method, TrafficAudio. TrafficAudio takes raw traffic as input and outputs fine-grained classification results. It consists of audio representation generation, audio feature extraction, and encrypted traffic classification. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Cl__Fig__2__1ca1ef3f21387317.jpg",
+          "dest_rel": "images/2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Cl__Fig__2__1ca1ef3f21387317.jpg"
+        },
+        {
+          "img_path": "images/b64b48fb42b32f0c7f3f54296de16450a3111261da58b1ac82ba9a856e6067bd.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. Workflow of classification model in TrafficAudio. The model mainly consists of CNN, Bi-GRU and classification layers. "
+          ],
+          "sub_type": "flowchart",
+          "score": 11,
+          "dest_name": "2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Cl__Fig__5__b64b48fb42b32f0c.jpg",
+          "dest_rel": "images/2026-TNSM-TrafficAudio_Audio_Representation_for_Lightweight_Encrypted_Traffic_Cl__Fig__5__b64b48fb42b32f0c.jpg"
+        }
+      ]
+    },
+    "2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis": {
+      "processed_at": "2026-06-15T15:29:33.756366",
+      "figures": [
+        {
+          "img_path": "images/64ab4321936d133410c2e01e7eed8bada9b977b470f552129483d8b1359fc508.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1: Overview of Criss-Cross Traffic Transformer for Encrypted Traffic Analysis. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis__Fig__1__64ab4321936d1334.jpg",
+          "dest_rel": "images/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis__Fig__1__64ab4321936d1334.jpg"
+        },
+        {
+          "img_path": "images/53c7f23e2a6f6194ed10918fb91602eb402a9d6ac7b297afe1ae5a8a95966129.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Diagram of CTT architecture. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis__Fig__2__53c7f23e2a6f6194.jpg",
+          "dest_rel": "images/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis__Fig__2__53c7f23e2a6f6194.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-Bias_in_the_Shadows__Explore_Shortcuts_in_Encrypted_Network_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.757328",
+      "figures": [
+        {
+          "img_path": "images/e3f33ac0a7e3671942c48d8153287dce94e9b1214f68458506734d11c6316e1d.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1: Workflow of the Feature Analysis Process"
+          ],
+          "sub_type": "flowchart",
+          "score": 11,
+          "dest_name": "2026-arXiv-Bias_in_the_Shadows__Explore_Shortcuts_in_Encrypted_Network_Traffic_C__Fig__1__e3f33ac0a7e36719.jpg",
+          "dest_rel": "images/2026-arXiv-Bias_in_the_Shadows__Explore_Shortcuts_in_Encrypted_Network_Traffic_C__Fig__1__e3f33ac0a7e36719.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.758426",
+      "figures": [
+        {
+          "img_path": "images/ecb99465c32957d272e3b36d3ea15f66cc06665324720c3706f770b8a6c26778.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1: Overview of NetMamba+ Framework. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-arXiv-NetMamba___A_Framework_of_Pre-trained_Models_for_Efficient_and_Accura__Fig__1__ecb99465c32957d2.jpg",
+          "dest_rel": "images/2026-arXiv-NetMamba___A_Framework_of_Pre-trained_Models_for_Efficient_and_Accura__Fig__1__ecb99465c32957d2.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Network_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.759644",
+      "figures": [
+        {
+          "img_path": "images/cc4da864624be621e84bf2e64dfc54d8283f6a34a5ad26d99c7916019e118a9c.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The framework of Nethira."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__1__cc4da864624be621.jpg",
+          "dest_rel": "images/2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__1__cc4da864624be621.jpg"
+        },
+        {
+          "img_path": "images/fdbe7c450bdd03cb4b7cb9779710590c827bb19eaf197b190bacec9333646cd8.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Comparison results of classification performance on four network traffic datasets with limited labeled data."
+          ],
+          "sub_type": null,
+          "score": 6,
+          "dest_name": "2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__2__fdbe7c450bdd03cb.jpg",
+          "dest_rel": "images/2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__2__fdbe7c450bdd03cb.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models": {
+      "processed_at": "2026-06-15T15:29:33.761046",
+      "figures": [
+        {
+          "img_path": "images/d809f82f5cc8046c6bbd7922b15beabba4f0fbec46cd543ec4b1298225172ea0.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Pre-training workflow for Transformer-based foundation models for network traffic analysis. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__2__d809f82f5cc8046c.jpg",
+          "dest_rel": "images/2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__2__d809f82f5cc8046c.jpg"
+        },
+        {
+          "img_path": "images/67e0a1fe3e86dcc54c1619b5f1301f4bb6e83401c2cbd6b8066773d4d3daa449.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3: Fine-tuning workflow for various network traffic analysis tasks. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__3__67e0a1fe3e86dcc5.jpg",
+          "dest_rel": "images/2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__3__67e0a1fe3e86dcc5.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification": {
+      "processed_at": "2026-06-15T15:29:33.762629",
+      "figures": [
+        {
+          "img_path": "images/d54ea76858ad223c017c90b690cce50ef715c29afcbfd592ba54d406f9b343fd.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Overview of the TrafficMoE framework. The dual-branch MoE architecture explicitly models heterogeneous traffic components, i.e., the Header and Payload branches, which can capture intra-modality patterns, respectively. The uncertaintyaware filter suppresses unreliable tokens, i.e., noisy traffic components, and the conditional aggregation module fuses the final purified features across two modalities (header vs. payload) in a routing-guided manner for encrypted traffic classification. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traf__Fig__2__d54ea76858ad223c.jpg",
+          "dest_rel": "images/2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traf__Fig__2__d54ea76858ad223c.jpg"
+        },
+        {
+          "img_path": "images/d1c8c50e7acaf4c9b7374ded8bc4b4b0023a65a15e40956e331d41ad52800221.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5: Training pipeline of the proposed framework. In the pre-training stage, masked language modeling (MLM) is used to learn contextual representations from header and payload sequences without supervision. In the fine-tuning stage, the pretrained encoders are fine-tuned end-to-end on labeled traffic data through a standard cross-entropy classification objective. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traf__Fig__5__d1c8c50e7acaf4c9.jpg",
+          "dest_rel": "images/2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traf__Fig__5__d1c8c50e7acaf4c9.jpg"
+        }
+      ]
+    }
+  }
+}

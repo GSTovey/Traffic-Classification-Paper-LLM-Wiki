@@ -22,6 +22,14 @@ wheels/
 # Internal logs
 99-logs/
 
+# 10-outputs/ 包含草稿、报告、项目申报等个人工作文件，不上传到 GitHub
+# 但 key-figures/ 子目录需要上传（自动提取的关键框架图）
+10-outputs/*
+!10-outputs/key-figures/
+
+# 11-my-papers/ 个人论文区，不上传到 GitHub
+11-my-papers/
+
 # MinerU raw API output (381MB, regenerable via scripts/)
 01-mineru-output/
 

@@ -13,6 +13,8 @@ An Obsidian-based knowledge base for systematic literature review in **network t
 - **35 knowledge pages**: 9 concepts, 8 methods, 8 tasks, 5 surveys, 5 comparison tables, 2 claim indexes
 - **30 confirmed open-source methods** with GitHub/GitLab repositories
 - **Research map** linking papers by topic, method, and venue
+- **Personal research tracking** with isolated paper notes and research trajectory page (strictly separated from main KB)
+- **Key figure gallery** with 148 auto-extracted framework/architecture figures from all 93 papers (see `10-outputs/key-figures/`)
 
 ## Directory Structure
 
@@ -29,7 +31,12 @@ Traffic_Papers/
 ├── 07-surveys/             # Survey pages (5 files) ★
 ├── 08-comparisons/         # Comparison tables (5 files, incl. open-source registry) ★
 ├── 09-claims/              # Claims & contradictions (2 files) ★
-├── 10-outputs/             # Drafts, reports, reproduction notes
+├── 10-outputs/             # Drafts, reports, reproduction notes (gitignored)
+│   └── key-figures/        # Auto-extracted framework figures (148 images)
+├── 11-my-papers/           # Personal papers (isolated from main KB)
+│   ├── notes/              # Individual paper notes
+│   ├── my-research-thread.md  # Research trajectory
+│   └── my-paper-registry.md   # Personal paper registry
 ├── 00-dashboard/           # Reading queue, research map, open questions
 ├── scripts/                # MinerU batch parsing script
 └── templates/              # Note templates
@@ -79,6 +86,23 @@ This is an **Obsidian vault**. To use:
 - **PDF Parsing**: [MinerU](https://github.com/opendatalab/MinerU) API for converting PDFs to structured Markdown
 - **Note Generation**: Claude Code (AI-assisted structured note generation)
 - **Knowledge Management**: Obsidian with Dataview plugin
+- **Automated Workflow**: One-command paper ingestion pipeline (dedup → parse → note → knowledge layer update → README/AGENTS sync)
+- **Dedup Method**: Five-round joint matching (filename + title + abstract + DOI + author/year/venue)
+
+## Workflow
+
+When a new paper PDF is added to the vault, the system automatically:
+
+1. Checks for duplicates against existing 92 papers (filename + title + abstract + DOI + author/venue)
+2. Parses PDF via MinerU if not already parsed
+3. Generates a structured paper note with bilingual frontmatter
+4. Updates all related knowledge pages (concepts, methods, tasks, surveys, comparisons, claims)
+5. Updates global indexes (paper-registry, reading-queue, dashboard)
+6. Syncs README.md and AGENTS.md statistics
+
+Git commits are made **only on explicit request**. The `10-outputs/` directory (drafts, reports, proposals) is excluded from version control, except for `10-outputs/key-figures/` which contains auto-extracted framework figures. Personal papers in `11-my-papers/` are also excluded.
+
+Personal papers (author's own work) are managed separately in `11-my-papers/` with strict isolation from the main knowledge base. They can read from the main KB (linking to concepts, methods, and existing papers) but never trigger automatic updates to it. When a paper is published or its quality is confirmed, it can be promoted to the main KB with full deep analysis while the personal note remains in `11-my-papers/` as a research trajectory reference.
 
 ## License
 
