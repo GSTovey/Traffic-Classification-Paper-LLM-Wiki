@@ -9,7 +9,7 @@ tags:
   - deep-learning
   - network-security
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-06-15"
 ---
 
 # Traffic Classification
@@ -100,6 +100,8 @@ updated: "2026-06-10"
 | TrafficGPT: Breaking the Token Barrier for Efficient Long Traffic Analysis and Generation | 2024 | 线性注意力 GPT + 可逆 Tokenization | CrossPlatform, ISCX-VPN, USTC-TFC, ISCX-Tor, CICIoT | 突破 512 token 限制至 12K，分类平均 F1 提升 2%，同时支持 pcap 生成 — `[[2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation]]` |
 | NetMamba: Efficient Network Traffic Classification via Pre-training Unidirectional Mamba | 2024 | 单向 Mamba + MAE 预训练 + Stride-based 表示 | CrossPlatform, ISCXTor, ISCXVPN, CICIoT, USTC-TFC | 首个将 Mamba 应用于流量分类，2.2M 参数，推理速度比 Transformer 快 60 倍，6 数据集准确率均超 90% — `[[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]` |
 | TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification | 2026 | DFA 范式（解耦-过滤-聚合）+ 稀疏 MoE + 不确定性感知过滤 | CSTNET-TLS1.3, ISCX-Tor, CIC-IoT, USTC-TFC, ISCX-VPN | 首个在加密流量分类中引入异质性感知 MoE，6 数据集一致超越 baseline，ISCX-Tor 上 F1=97.65%（+6.49%） — `[[2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification]]` |
+| High-Precision and Efficient Anonymous Traffic Classification (SequOcc) | 2025 | SequOcc 预处理（Stream Merging + Pixelization）+ CNN | ISCX-Tor, Cross-Platform, 骨干网数据集 | 首个真实骨干网匿名流量数据集；预处理速度提升 54.55%；数据量减少 27.4%；满足实时部署需求 — `[[2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World]]` |
+| Learning Flow Semantics via Contrastive Pre-training for Encrypted Traffic Analysis | 2026 | 包级+流级对比预训练 + 流量特定数据增强 + 后训练策略 | USTC-TFC2016, ISCX-VPN, ISCX-Tor, CSTNET-TLS1.3, CIC-IDS2017 | 双层对比预训练全面超越 ET-BERT 等方法，性能提升 >50%；四种流量特定数据增强策略有效；后训练策略解决预训练-微调兼容性 — `[[2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach]]` |
 
 ## 7. 工程落地问题
 

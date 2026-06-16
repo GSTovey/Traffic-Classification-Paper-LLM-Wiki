@@ -426,3 +426,78 @@ Next steps:
   - 2 批并行处理（6 篇深度分析 + 5 篇知识层更新），总耗时约 15 分钟
   - 新增跨论文关联链：SSM 演进线、MoE 架构线、评估批判三角、流量生成线
   - 关键发现：TrafficMoE 去预训练 F1 下降 24.4%，进一步支持预训练必要性
+
+---
+
+## [2026-06-11] structure | 新增个人论文隔离区 `11-my-papers/`
+
+- Added:
+  - `11-my-papers/notes/` — 个人论文笔记目录
+  - `11-my-papers/my-research-thread.md` — 研究轨迹总览页
+  - `11-my-papers/my-paper-registry.md` — 个人论文注册表
+  - `templates/my-paper-note-template.md` — 个人论文笔记模板（轻量 + 深度分析双模式）
+  - `templates/claudian-prompts/08-ingest-my-paper.md` — 个人论文入库管道（含晋升机制）
+- Updated:
+  - `AGENTS.md` — 新增 §2.4 个人论文区、§3.5 命名规范、§5.2 入库流程、§7 链接规则第 7 条、§8 禁止事项第 11-12 条、§9 推荐处理顺序
+  - `README.md` — 目录结构、Highlights、Workflow 新增个人论文说明
+  - `00-dashboard/index.md` — 知识区表格新增 `11-my-papers/` 条目
+- Notes:
+  - 设计原则：受控渗透隔离 — 个人论文可只读链接到主知识库，主知识库永不自动引用个人论文
+  - 晋升机制：已发表/已认可 + confidence ≥ medium + 用户主动要求 → 在 03-paper-notes/ 创建标准笔记 + 完整知识层更新，个人笔记保留并标注 promoted_to
+  - 个人论文不计入主知识库统计（92 篇不变）
+
+---
+
+## [2026-06-11] [my-paper] ingest | JA4T-RAC + JA4Tor + ContinualTor（3 篇个人论文入库）
+
+- Added:
+  - [[2025-TIFS-JA4T-RAC]] — JA4T 指纹 + 检索增强分类，IEEE TIFS 2025
+  - [[2026-USENIXSec-JA4Tor]] — JA4+ 多协议行为动力学，USENIX Security 2026
+  - [[2026-arXiv-ContinualTor]] — 持续学习暗网检测，在审
+- Updated:
+  - [[my-paper-registry]] — 新增 3 行
+  - [[my-research-thread]] — 更新时间线、主题图、方法演进、开放问题、统计
+  - `00-dashboard/index.md` — 11-my-papers 计数 0→3
+- Notes:
+  - 三篇论文构成完整研究体系：TLS 指纹分类 → 多协议隧道检测 → 持续学习自适应
+  - 共享 JA4/JA4+/E-JA4 指纹技术基础
+  - 2 篇已发表（TIFS + USENIX Sec），1 篇在审
+  - Confidence: high（全部三篇）
+  - 主知识库未更新（隔离规则）
+
+---
+
+## [2026-06-15] ingest | High-Precision and Efficient Anonymous Traffic Classification in the Real-World Network Environment
+
+- Added:
+  - [[2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World]]
+  - [[04-concepts/anonymous-traffic-identification]]（新概念页面）
+- Updated:
+  - [[06-tasks/traffic-classification]]
+  - [[08-comparisons/method-comparison-table]]
+  - [[00-dashboard/paper-registry]]
+  - [[00-dashboard/reading-queue]]
+- Notes:
+  - TON 2025，CCF-A 级期刊
+  - 提出 SequOcc 预处理方法（Stream Merging + Pixelization），预处理速度提升 54.55%
+  - 首个真实骨干网匿名流量数据集
+  - 标记为 L3 核心论文
+
+---
+
+## [2026-06-15] ingest | Learning Flow Semantics via Contrastive Pre-training for Encrypted Traffic Analysis
+
+- Added:
+  - [[2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach]]
+- Updated:
+  - [[05-methods/contrastive-learning]]
+  - [[06-tasks/traffic-classification]]
+  - [[08-comparisons/method-comparison-table]]
+  - [[00-dashboard/paper-registry]]
+  - [[00-dashboard/reading-queue]]
+- Notes:
+  - TDSC 2026，CCF-A 级期刊
+  - 提出包级+流级双层对比预训练框架，全面超越 ET-BERT 等方法，性能提升 >50%
+  - 四种流量特定数据增强策略（包重排、包丢失、包分割、时间抖动）
+  - 后训练策略解决预训练-微调兼容性问题
+  - 标记为 L3 核心论文

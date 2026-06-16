@@ -4,7 +4,7 @@ name: "Contrastive Learning"
 aliases: ["对比学习", "Contrastive Representation Learning"]
 tags: ["representation learning", "self-supervised learning", "few-shot learning", "robust detection", "encrypted traffic analysis"]
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-06-15"
 ---
 
 # Contrastive Learning
@@ -75,6 +75,7 @@ Contrastive Learning（对比学习）是一种表示学习范式，其核心思
 | A Semi-Supervised Learning Framework for Encrypted Traffic Classification Based on Supervised Contrastive Learning and Masked Sequence Prediction Tasks (CoMask) | 2025 | 监督对比学习 + 掩码序列预测交替训练 | 首次整合 SCL 与 MSQ 用于加密流量分类，通过交替训练策略协同利用标注和未标注数据，平均 F1 提升 3.3% |
 | MT-DEGCL: Multi-Task Encrypted Traffic Classification With Dual Embedding and Graph Contrastive Learning | 2026 | 图对比学习 + 多任务学习 | 在流量交互图上应用图对比学习（节点/边丢弃增强），联合流级和包级分类，ISCX-Tor 流级 F1 达 98.63%，包级 F1 达 98.10% |
 | STAR: Semantic-Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting (arXiv 2025) | 2025 | 跨模态对比学习（InfoNCE）+ 双编码器 + 结构感知增强 | 首次将零样本网站指纹建模为跨模态检索问题；双编码器分别处理流量模态和逻辑模态，通过 InfoNCE 对比学习在共享空间中对齐；发现三个跨模态对齐锚点（请求锚点、响应锚点、协议锚点）；在 1,600 个未见网站上零样本 top-1 准确率 87.9%，开放世界 AUC 达 0.963 |
+| Learning Flow Semantics via Contrastive Pre-training for Encrypted Traffic Analysis | 2026 | 包级+流级对比预训练 + 流量特定数据增强 + 后训练策略 | 提出双层对比预训练框架：包级预训练学习字节级语义，流级预训练学习包间关系语义；设计四种流量特定数据增强策略（包重排、包丢失、包分割、时间抖动）；提出后训练策略（FT-S）解决预训练-微调兼容性问题；在加密流量分类、恶意流量检测、流量相似度和异常检测四个任务上全面超越 ET-BERT 等方法，性能提升 >50% — `[[2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach]]` |
 
 ## 9. 与其他方法的比较
 

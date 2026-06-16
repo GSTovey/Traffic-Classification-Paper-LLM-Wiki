@@ -2,7 +2,7 @@
 type: dashboard
 purpose: paper-dedup-registry
 created: "2026-05-29"
-updated: "2026-06-01"
+updated: "2026-06-15"
 ---
 
 # Paper Registry
@@ -116,15 +116,17 @@ updated: "2026-06-01"
 | 90 | 10.1109/JIOT.2025.3577245 | a detection method for malware communication traffic via encrypted traffic analysis | 2025 | JIoT | Chen | 2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis | [[2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis]] |
 | 91 | unknown | multi-arcl multimodal adaptive relay-based distributed continual learning for encrypted traffic classification | 2025 | JPDC | Li | 2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification | [[2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification]] |
 | 92 | 10.1109/TIFS.2025.3529316 | bottom aggregating top separating an aggregator and separator network for encrypted traffic understanding | 2025 | TIFS | Peng | 2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding | [[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]] |
+| 93 | 10.1109/TNET.2025.3582301 | high-precision and efficient anonymous traffic classification in the real-world network environment | 2025 | TON | Xie | 2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World | [[2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World]] |
+| 94 | 10.1109/TDSC.2025.3596462 | learning flow semantics via contrastive pre-training for encrypted traffic analysis | 2026 | TDSC | Liu | 2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach | [[2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach]] |
 
 ---
 
 ## 统计
 
-- **总论文数**：92
-- **有 DOI**：35 篇
+- **总论文数**：94
+- **有 DOI**：37 篇
 - **DOI unknown**：57 篇
-- **年份分布**：2008 (1), 2018 (3), 2019 (2), 2020 (1), 2021 (2), 2022 (7), 2023 (5), 2024 (10), 2025 (33), 2026 (28)
+- **年份分布**：2008 (1), 2018 (3), 2019 (2), 2020 (1), 2021 (2), 2022 (7), 2023 (5), 2024 (10), 2025 (34), 2026 (29)
 
 ---
 

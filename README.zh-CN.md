@@ -29,7 +29,7 @@ Traffic_Papers/
 ├── 07-surveys/             # 综述页（5 个）★
 ├── 08-comparisons/         # 对比表（5 个，含开源注册表）★
 ├── 09-claims/              # 观点与矛盾记录（2 个）★
-├── 10-outputs/             # 草稿、报告、复现笔记
+├── 10-outputs/             # 草稿、报告、复现笔记（已 gitignore）
 ├── 00-dashboard/           # 阅读队列、研究地图、开放问题
 ├── scripts/                # MinerU 批量解析脚本
 └── templates/              # 笔记模板
@@ -79,6 +79,21 @@ Traffic_Papers/
 - **PDF 解析**：[MinerU](https://github.com/opendatalab/MinerU) API 将 PDF 转为结构化 Markdown
 - **笔记生成**：Claude Code（AI 辅助结构化笔记生成）
 - **知识管理**：Obsidian + Dataview 插件
+- **自动化工作流**：一键入库管道（去重 → 解析 → 笔记生成 → 知识层全量更新 → README/AGENTS 同步）
+- **去重方法**：五轮联合匹配（文件名 + 标题 + 摘要 + DOI + 作者/年份/venue）
+
+## 工作流程
+
+当新论文 PDF 加入知识库时，系统自动执行：
+
+1. 与已有 92 篇论文进行去重检查（文件名 + 标题 + 摘要 + DOI + 作者/venue）
+2. 通过 MinerU 解析 PDF（如尚未解析）
+3. 生成包含中英双语 frontmatter 的结构化论文笔记
+4. 更新所有相关知识页面（概念、方法、任务、综述、对比表、观点索引）
+5. 更新全局索引（论文注册表、阅读队列、仪表盘）
+6. 同步更新 README.md 和 AGENTS.md 统计数据
+
+Git 提交**仅在用户明确要求时执行**。`10-outputs/` 目录（草稿、报告、项目申报）不参与版本控制。
 
 ## 许可说明
 
