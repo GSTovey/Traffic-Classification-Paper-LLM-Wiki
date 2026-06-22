@@ -10,8 +10,11 @@ An Obsidian-based knowledge base for systematic literature review in **network t
 
 - **147 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
 - **74 deep-analyzed papers** (CCF A/B tier) with formula derivations, ablation studies, and cross-paper connections
-- **36 knowledge pages**: 10 concepts, 8 methods, 8 tasks, 5 surveys, 5 comparison tables, 2 claim indexes
+- **39 knowledge pages**: 11 concepts, 8 methods, 8 tasks, 5 surveys, 5 comparison tables, 2 claim indexes
+- **6 active research fronts** tracking convergent/divergent research questions with evidence chains and Auto Research guidance
+- **Consensus weight system** with venue-tier × time-decay × citation-impact scoring for all claims
 - **30 confirmed open-source methods** with GitHub/GitLab repositories
+- **Bibliography** with 147 structured BibTeX entries (`bibliography.json` + `bibliography.bib`) sourced from CrossRef, OpenAlex, and Semantic Scholar
 - **Research map** linking papers by topic, method, and venue
 - **Personal research tracking** with isolated paper notes and research trajectory page (strictly separated from main KB)
 - **Key figure gallery** with 148 auto-extracted framework/architecture figures from all 147 papers (see `10-outputs/key-figures/`)
@@ -25,7 +28,7 @@ Traffic_Papers/
 ├── 01-mineru-output/       # MinerU raw API output (gitignored, regenerable)
 ├── 02-parsed-markdown/     # MinerU-parsed markdown (147 files)
 ├── 03-paper-notes/         # Structured paper notes (147 files) ★
-├── 04-concepts/            # Concept pages (10 files) ★
+├── 04-concepts/            # Concept pages (11 files) ★
 ├── 05-methods/             # Method pages (8 files) ★
 ├── 06-tasks/               # Task pages (8 files) ★
 ├── 07-surveys/             # Survey pages (5 files) ★
@@ -37,8 +40,11 @@ Traffic_Papers/
 │   ├── notes/              # Individual paper notes
 │   ├── my-research-thread.md  # Research trajectory
 │   └── my-paper-registry.md   # Personal paper registry
+├── 12-research-fronts/     # Research front tracking (6 fronts + index + template) ★
 ├── 00-dashboard/           # Reading queue, research map, open questions
-├── scripts/                # MinerU batch parsing script
+├── bibliography.json       # Structured BibTeX metadata (147 entries)
+├── bibliography.bib        # LaTeX-ready BibTeX file (ready to copy)
+├── scripts/                # MinerU batch parsing + bibliography generation
 └── templates/              # Note templates
 ```
 
@@ -93,7 +99,8 @@ This is an **Obsidian vault**. To use:
 - **PDF Parsing**: [MinerU](https://github.com/opendatalab/MinerU) API for converting PDFs to structured Markdown
 - **Note Generation**: Claude Code (AI-assisted structured note generation)
 - **Knowledge Management**: Obsidian with Dataview plugin
-- **Automated Workflow**: One-command paper ingestion pipeline (dedup → parse → note → knowledge layer update → README/AGENTS sync)
+- **Bibliography**: `bibliography.json` + `bibliography.bib` — 147 structured BibTeX entries from CrossRef/OpenAlex/Semantic Scholar (86% with DOI)
+- **Automated Workflow**: One-command paper ingestion pipeline (dedup → parse → note → knowledge layer update → bibliography → README/AGENTS sync)
 - **Dedup Method**: Five-round joint matching (filename + title + abstract + DOI + author/year/venue)
 
 ## Workflow
@@ -101,11 +108,14 @@ This is an **Obsidian vault**. To use:
 When a new paper PDF is added to the vault, the system automatically:
 
 1. Checks for duplicates against existing 147 papers (filename + title + abstract + DOI + author/venue)
-2. Parses PDF via MinerU if not already parsed
-3. Generates a structured paper note with bilingual frontmatter
-4. Updates all related knowledge pages (concepts, methods, tasks, surveys, comparisons, claims)
-5. Updates global indexes (paper-registry, reading-queue, dashboard)
-6. Syncs README.md and AGENTS.md statistics
+2. Parses PDF via MinerU API (pauses to request API token if `MINERU_API_TOKEN` not set)
+3. Extracts key framework/architecture figures via `extract_key_figures.py`
+4. Generates a structured paper note with bilingual frontmaterial
+5. Updates all related knowledge pages (concepts, methods, tasks, surveys, comparisons, claims)
+6. Updates research front evidence chains if the paper is relevant to an active front
+7. Updates global indexes (paper-registry, reading-queue, dashboard)
+8. Updates `bibliography.json` and regenerates `bibliography.bib`
+9. Syncs README.md and AGENTS.md statistics
 
 Git commits are made **only on explicit request**. The `10-outputs/` directory (drafts, reports, proposals) is excluded from version control, except for `10-outputs/key-figures/` which contains auto-extracted framework figures. Personal papers in `11-my-papers/` are also excluded.
 

@@ -208,3 +208,11 @@ updated: "2026-06-10"
 - PACKETCLIP
 - Flow-MAE
 - CoMask
+
+---
+
+## 相关研究前沿
+
+- [[pretraining-necessity]] — 预训练必要性边界
+- [[multimodal-fusion-strategy]] — 多模态融合策略
+- [[tokenization-optimal]] — tokenization 最优方案

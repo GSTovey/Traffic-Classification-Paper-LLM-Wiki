@@ -334,3 +334,12 @@ TrafficMoE (2026) 提出了解耦-过滤-聚合（DFA）范式，首次将稀疏
 - 概念漂移（concept drift）检测与适应方法
 - Multi-ARCL：多模态持续学习中的静默应用遗忘问题
 - OpenVPN 指纹识别（被动过滤 + 主动探测两阶段框架）
+
+---
+
+## 相关研究前沿
+
+- [[payload-learnability]] — 加密 payload 的可学习性
+- [[representation-vs-shallow]] — 表征学习 vs 浅层模型
+- [[pretraining-necessity]] — 预训练必要性
+- [[tokenization-optimal]] — tokenization 策略

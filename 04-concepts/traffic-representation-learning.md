@@ -125,3 +125,10 @@ Traffic Representation Learning 是指将原始网络流量数据（字节序列
 - 在跨时间（temporal shift）、跨网络环境（domain shift）的场景下，如何保证流量表示的泛化能力？
 - 能否将 LLM 的大规模预训练经验（如 scaling law）迁移到流量表示学习中？
 - 多实例表示（Multi-instance Representation）作为介于 packet-level 和 flow-level 之间的新范式，能否在更多任务和数据集上验证其有效性？MIETT 的 Two-Level Attention 框架是否可以与其他表示方法（如图像化、图级表示）结合？
+
+---
+
+## 相关研究前沿
+
+- [[representation-vs-shallow]] — 深度表征学习是否优于浅层模型
+- [[pretraining-necessity]] — 预训练范式的必要性边界

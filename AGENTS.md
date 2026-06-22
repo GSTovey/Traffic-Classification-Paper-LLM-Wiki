@@ -89,7 +89,23 @@ Traffic_Papers 是一个面向网络流量安全研究的本地论文知识库�
 - 开源注册表（`08-comparisons/open-source-registry.md`）用于追踪方法/模型的开源状态、代码仓库地址和高频基线的代码可用性；
 - Claims 页用于记录可引用观点及其证据来源。
 
-### 2.4 关键图表提取
+### 2.4 研究前沿追踪层
+
+包括：
+
+- `12-research-fronts/`
+
+要求：
+
+- 每个研究前沿问题对应一个独立页面；
+- 前沿页面按时间顺序追踪同一研究问题的证据链；
+- 每条证据记录论文、年份、结论方向（支持/反对/中性）和实验严格度；
+- 前沿页面包含"当前共识方向"和"研究空白"分析；
+- 前沿页面包含"Auto Research 指引"，为后续自动化研究提供选题和方案设计支撑；
+- 前沿页面有 `status` 字段：`converging`（共识收敛）、`diverging`（观点分歧）、`stale`（长期无新进展）；
+- 新论文入库时，自动判断是否与某个 research-front 相关并更新证据链。
+
+### 2.5 关键图表提取
 
 - `10-outputs/key-figures/all-key-figures.md` — 汇总 Markdown，嵌入每篇论文的核心框架图
 - `10-outputs/key-figures/images/` — 拷贝过来的关键图片（148 张）
@@ -103,7 +119,7 @@ Traffic_Papers 是一个面向网络流量安全研究的本地论文知识库�
 - 再次运行时只处理新增论文，已处理论文跳过
 - 位于 `10-outputs/` 下，不参与版本控制
 
-### 2.5 个人论文区（隔离）
+### 2.6 个人论文区（隔离）
 
 包括：
 
@@ -119,6 +135,20 @@ Traffic_Papers 是一个面向网络流量安全研究的本地论文知识库�
 - 主知识库页面不得自动添加指向个人论文的链接；
 - 如需将已发表或已认可的论文提升至主知识库，必须由用户明确要求并执行完整入库流程（详见 `templates/claudian-prompts/08-ingest-my-paper.md` 的晋升机制）；
 - 晋升后个人论文笔记保留在 `11-my-papers/notes/`，通过 `promoted_to` 字段关联到 `03-paper-notes/` 中的标准笔记。
+
+### 2.7 引用与参考文献
+
+包括：
+
+- `bibliography.json` — 全部论文的结构化 BibTeX 元数据（JSON 格式，含 citation_key、entry_type、title、authors、year、booktitle/journal、pages、volume、publisher、doi、url、abstract）
+- `bibliography.bib` — LaTeX 可用的 BibTeX 引用文件（从 bibliography.json 生成，可直接复制到 .bib 文件中使用）
+
+要求：
+
+- 数据来源必须为官方 API（CrossRef、OpenAlex、Semantic Scholar），不得编造；
+- 新论文入库时，自动更新 bibliography.json 和 bibliography.bib；
+- citation_key 格式为 `{firstauthor_lastname}{year}{first_keyword}`；
+- 每次更新后需验证 .bib 文件的花括号平衡和条目唯一性。
 
 ---
 
@@ -192,6 +222,16 @@ year-venue-shorttitle.md
 
 文件位于 `11-my-papers/notes/`，命名规范与 3.3 一致。
 
+### 3.6 研究前沿页面
+
+使用英文小写和短横线：
+
+```text
+payload-learnability.md
+representation-vs-shallow.md
+pretraining-necessity.md
+```
+
 ---
 
 ## 4. 论文处理等级
@@ -223,9 +263,10 @@ year-venue-shorttitle.md
 使用 `templates/claudian-prompts/06-ingest-pipeline.md` 执行以下全部阶段：
 
 - **阶段 0：去重检查** — 读取 `00-dashboard/paper-registry.md`，通过文件名 + 标题 + 摘要 + DOI + 作者/年份/venue 五轮联合匹配检查是否重复（详见 `templates/claudian-prompts/00-check-duplicate.md`）；
-- **阶段 1：PDF 解析** — MinerU 解析或复用已有解析结果；
+- **阶段 1：PDF 解析** — 默认使用 MinerU API 解析（如 `MINERU_API_TOKEN` 未设置则暂停向用户索要）；解析完成后自动运行 `scripts/extract_key_figures.py` 提取关键框架图；
 - **阶段 2：生成论文笔记** — 按 `templates/paper-note-template.md` 生成结构化笔记到 `03-paper-notes/`；
 - **阶段 3：自动更新知识层** — 自动判断并更新所有相关概念页、方法页、任务页、综述页、对比表、开源注册表和 Claims，**不需要用户单独询问**；
+- **阶段 3.5：共识更新与研究前沿同步** — 根据新论文内容，自动执行 Claims 共识更新（consensus_count、confidence_score）、Citation Impact 更新（citation_impact、composite_weight）和研究前沿同步（更新证据链或创建新前沿页面），详见 `templates/claudian-prompts/06-ingest-pipeline.md`；
 - **阶段 4：更新全局索引** — paper-registry、reading-queue、index、log；
 - **阶段 5：自动更新 README.md 和 AGENTS.md** — 同步更新统计数据和关键论文列表，**不需要用户提醒**；
 - **阶段 6：Git 提交（仅用户要求时）** — 仅当用户明确说"上传"、"提交"、"push"时才执行 commit，不自动 push。`10-outputs/` 目录大部分不参与版本控制，但 `10-outputs/key-figures/` 子目录可上传（自动提取的关键框架图）。
@@ -358,3 +399,35 @@ year-venue-shorttitle.md
 - Notes:
   - Marked as L3 core paper.
 ```
+
+## 11. 共识权重系统
+
+每篇论文和每条观点的可信度由三个维度共同决定：
+
+### 11.1 权重三因子
+
+| 因子 | 含义 | 计算方式 |
+|------|------|----------|
+| venue_factor | 发表场所权重 | Tier 1 (USENIX/NDSS/CCS/S&P) = 1.0；Tier 2 (SIGCOMM/AAAI/NeurIPS/ICML/WWW/KDD/TIFS/TSC/TDSC/TON/INFOCOM/IMC/COMST) = 0.85；Tier 3 (arXiv/其他) = 0.65 |
+| time_factor | 时间衰减因子 | 2025-2026 = 1.0；2024 = 0.85；2023 = 0.7；2022 = 0.6；2020-2021 = 0.45；≤2019 = 0.25 |
+| citation_impact | 知识库内部引用影响 | 12+ 篇其他论文引用 = 1.8；8-11 篇 = 1.5；4-7 篇 = 1.2；1-3 篇 = 1.0；0 篇 = 0.8 |
+
+### 11.2 计算公式
+
+```text
+composite_weight = venue_factor × time_factor × citation_impact
+confidence_score = composite_weight × consensus_count
+```
+
+### 11.3 设计理念
+
+- **时间维度**：越靠近现在的论文，其方法和结论越具参考价值
+- **共识维度**：越多独立论文支持的观点越接近事实
+- **引用影响**：被后续论文反复引用的经典工作，即使年代较早仍具高权重（如 ET-BERT 2022 被 15+ 篇引用，citation_impact = 1.8，有效弥补时间衰减）
+- 三因子共同作用避免了"唯新是论"和"唯众是论"的单一偏差
+
+### 11.4 维护规则
+
+- 每次新论文入库时自动更新被引用论文的 citation_impact
+- consensus_count 在新论文支持或挑战已有 claim 时自动更新
+- confidence_score 随上述变化自动重算

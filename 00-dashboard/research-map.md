@@ -61,12 +61,24 @@
 
 ## 3. Claims 与矛盾
 
-- [[claims-index]] — 关键观点索引（20 条核心 Claims）
-- [[contradictions]] — 论文间矛盾记录（8 组冲突）
+- [[claims-index]] — 关键观点索引（33 条核心 Claims，含共识权重评分）
+- [[contradictions]] — 论文间矛盾记录（13 组冲突，含裁决倾向）
 
 ---
 
-## 4. 待扩展方向
+## 4. 研究前沿追踪
+
+- [[12-research-fronts/index|研究前沿索引]] — 全部活跃前沿总览
+- [[payload-learnability]] — 加密 payload 的可学习性（converging ↓）
+- [[representation-vs-shallow]] — 表征学习 vs 浅层模型（diverging ↔）
+- [[pretraining-necessity]] — 预训练范式的必要性边界（diverging ↔）
+- [[wf-attack-defense-limit]] — WF 攻防的极限与新范式（diverging ↔）
+- [[multimodal-fusion-strategy]] — 多模态融合的最优策略（converging ↑）
+- [[tokenization-optimal]] — 流量 tokenization 最优方案（diverging ↔）
+
+---
+
+## 5. 待扩展方向
 
 以下方向尚无独立页面，可后续逐步创建：
 

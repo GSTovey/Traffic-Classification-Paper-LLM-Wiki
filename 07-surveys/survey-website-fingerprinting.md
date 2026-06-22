@@ -231,3 +231,9 @@ updated: "2026-06-21"
 - Walkie-Talkie (defense)
 - WTF-PAD (defense)
 - Palette/R
+
+---
+
+## 相关研究前沿
+
+- [[wf-attack-defense-limit]] — WF 攻防极限与新范式

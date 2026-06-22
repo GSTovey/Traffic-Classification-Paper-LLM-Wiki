@@ -2,16 +2,19 @@
 
 [English](./README.md)
 
-基于 Obsidian 的**网络流量分类**、**加密流量分析**和**流量基础模型**研究论文知识库。收录 92 篇来自顶级会议/期刊（CCS、S&P、USENIX、NDSS、SIGCOMM、INFOCOM、AAAI、NeurIPS、TIFS、TSC、WWW、KDD 等）的结构化论文笔记，覆盖 2008--2026 年的研究成果。
+基于 Obsidian 的**网络流量分类**、**加密流量分析**和**流量基础模型**研究论文知识库。收录 147 篇来自顶级会议/期刊（CCS、S&P、USENIX、NDSS、SIGCOMM、INFOCOM、AAAI、NeurIPS、TIFS、TSC、WWW、KDD 等）的结构化论文笔记，覆盖 2008--2026 年的研究成果。
 
 ---
 
 ## 亮点
 
-- **92 篇结构化论文笔记**，中英双语 frontmatter，含方法分析与证据追踪
-- **40 篇深度分析论文**（CCF A/B 级），含公式推导、消融实验、跨论文关联
-- **35 个知识页面**：9 概念页 + 8 方法页 + 8 任务页 + 5 综述页 + 5 对比表 + 2 索引页
+- **147 篇结构化论文笔记**，中英双语 frontmatter，含方法分析与证据追踪
+- **74 篇深度分析论文**（CCF A/B 级），含公式推导、消融实验、跨论文关联
+- **39 个知识页面**：11 概念页 + 8 方法页 + 8 任务页 + 5 综述页 + 5 对比表 + 2 索引页
+- **6 个活跃研究前沿**，追踪收敛/分歧研究问题，含证据链和 Auto Research 指引
+- **共识权重系统**：venue 等级 × 时间衰减 × 引用影响三维评分
 - **30 个已确认开源方法**，含 GitHub/GitLab 代码仓库
+- **参考文献库**：147 篇结构化 BibTeX 条目（`bibliography.json` + `bibliography.bib`），数据来自 CrossRef、OpenAlex、Semantic Scholar（86% 含 DOI）
 - **研究地图**按主题、方法和会议交叉索引
 
 ## 目录结构
@@ -19,19 +22,22 @@
 ```
 Traffic_Papers/
 ├── 00-inbox/
-│   └── PDFs/              # 92 篇论文 PDF 原文
+│   └── PDFs/              # 147 篇论文 PDF 原文
 ├── 01-mineru-output/       # MinerU 原始解析结果（已 gitignore，可重新生成）
-├── 02-parsed-markdown/     # MinerU 解析后的 Markdown（92 份）
-├── 03-paper-notes/         # 结构化论文笔记（92 篇）★
-├── 04-concepts/            # 概念页（9 个）★
+├── 02-parsed-markdown/     # MinerU 解析后的 Markdown
+├── 03-paper-notes/         # 结构化论文笔记（147 篇）★
+├── 04-concepts/            # 概念页（11 个）★
 ├── 05-methods/             # 方法页（8 个）★
 ├── 06-tasks/               # 任务页（8 个）★
 ├── 07-surveys/             # 综述页（5 个）★
 ├── 08-comparisons/         # 对比表（5 个，含开源注册表）★
 ├── 09-claims/              # 观点与矛盾记录（2 个）★
 ├── 10-outputs/             # 草稿、报告、复现笔记（已 gitignore）
+├── 12-research-fronts/     # 研究前沿追踪（6 个前沿 + 索引 + 模板）★
 ├── 00-dashboard/           # 阅读队列、研究地图、开放问题
-├── scripts/                # MinerU 批量解析脚本
+├── bibliography.json       # 结构化 BibTeX 元数据（147 条）
+├── bibliography.bib        # LaTeX 可用 BibTeX 文件（可直接复制）
+├── scripts/                # MinerU 批量解析 + 参考文献生成脚本
 └── templates/              # 笔记模板
 ```
 
@@ -79,19 +85,23 @@ Traffic_Papers/
 - **PDF 解析**：[MinerU](https://github.com/opendatalab/MinerU) API 将 PDF 转为结构化 Markdown
 - **笔记生成**：Claude Code（AI 辅助结构化笔记生成）
 - **知识管理**：Obsidian + Dataview 插件
-- **自动化工作流**：一键入库管道（去重 → 解析 → 笔记生成 → 知识层全量更新 → README/AGENTS 同步）
+- **参考文献库**：`bibliography.json` + `bibliography.bib`，147 条 BibTeX 条目（CrossRef/OpenAlex/Semantic Scholar 官方数据）
+- **自动化工作流**：一键入库管道（去重 → 解析 → 笔记生成 → 知识层全量更新 → 参考文献更新 → README/AGENTS 同步）
 - **去重方法**：五轮联合匹配（文件名 + 标题 + 摘要 + DOI + 作者/年份/venue）
 
 ## 工作流程
 
 当新论文 PDF 加入知识库时，系统自动执行：
 
-1. 与已有 92 篇论文进行去重检查（文件名 + 标题 + 摘要 + DOI + 作者/venue）
-2. 通过 MinerU 解析 PDF（如尚未解析）
-3. 生成包含中英双语 frontmatter 的结构化论文笔记
-4. 更新所有相关知识页面（概念、方法、任务、综述、对比表、观点索引）
-5. 更新全局索引（论文注册表、阅读队列、仪表盘）
-6. 同步更新 README.md 和 AGENTS.md 统计数据
+1. 与已有 147 篇论文进行去重检查（文件名 + 标题 + 摘要 + DOI + 作者/venue）
+2. 通过 MinerU API 解析 PDF（如 `MINERU_API_TOKEN` 未设置则暂停向用户索要）
+3. 自动提取关键框架图（`extract_key_figures.py`）
+4. 生成包含中英双语 frontmatter 的结构化论文笔记
+5. 更新所有相关知识页面（概念、方法、任务、综述、对比表、观点索引）
+6. 更新研究前沿证据链（如论文与活跃前沿相关）
+7. 更新全局索引（论文注册表、阅读队列、仪表盘）
+8. 更新 `bibliography.json` 并重新生成 `bibliography.bib`
+9. 同步更新 README.md 和 AGENTS.md 统计数据
 
 Git 提交**仅在用户明确要求时执行**。`10-outputs/` 目录（草稿、报告、项目申报）不参与版本控制。
 

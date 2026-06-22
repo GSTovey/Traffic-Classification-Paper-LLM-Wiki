@@ -204,3 +204,11 @@ updated: "2026-06-21"
 - 跨网络环境（domain shift）、跨时间（temporal shift）的泛化能力如何提升？持续学习/增量学习机制是否可行？
 - 联邦学习等隐私保护范式能否在加密流量分类中同时保护数据隐私和模型性能？
 
+---
+
+## 相关研究前沿
+
+- [[payload-learnability]] — 加密 payload 是否存在可学习模式
+- [[representation-vs-shallow]] — 表征学习 vs 浅层模型的真实价值
+- [[tokenization-optimal]] — 流量 tokenization 最优方案
+

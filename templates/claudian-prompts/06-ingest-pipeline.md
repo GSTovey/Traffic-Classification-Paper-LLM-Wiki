@@ -27,17 +27,34 @@
    - **疑似重复** → 列出候选表格，**暂停等待用户确认**
    - **确定重复** → 报告已有笔记链接，结束
 
-### 阶段 1：PDF 解析
+### 阶段 1：PDF 解析（MinerU API）
+
+**默认必须使用 MinerU API 解析**，不跳过此步骤。
 
 1. 确认 PDF 位于 `00-inbox/PDFs/`（如不在，提示用户移动或复制）
-2. 检查 `02-parsed-markdown/` 中是否已有对应的 `.md` 文件
-3. 如已有解析文件 → 跳到阶段 2
-4. 如无解析文件 → 使用 MinerU API 解析：
+2. 检查环境变量 `MINERU_API_TOKEN` 是否已设置：
+   - 如未设置 → **暂停，向用户询问 MinerU API Token**，获取后设置 `export MINERU_API_TOKEN=...`
+   - 如已设置 → 继续
+3. 使用 MinerU API 解析：
    ```bash
-   python scripts/mineru_batch_parse.py --input 00-inbox/PDFs --batch-size 1
+   python3 scripts/mineru_batch_parse.py --input 00-inbox/PDFs/新论文文件名.pdf --batch-size 1
    ```
-   或让用户手动运行解析脚本
-5. 确认解析结果位于 `02-parsed-markdown/` 目录
+4. 确认解析结果位于 `02-parsed-markdown/` 目录
+5. 检查解析质量（是否有乱码、公式错误、表格错位）
+
+#### 1a. 提取关键框架图
+
+MinerU 解析完成后，**自动运行关键图提取**：
+
+```bash
+python3 scripts/extract_key_figures.py
+```
+
+此脚本基于三层评分系统（caption 关键词、图片类型、bbox 尺寸）自动筛选每篇论文 1-2 张核心框架图，输出到 `10-outputs/key-figures/images/` 并更新 `10-outputs/key-figures/all-key-figures.md`。
+
+- 增量处理：已处理论文自动跳过
+- 用户手动删除的图片不会被重复添加（通过 manifest + Markdown 比对检测）
+- 关键图用于论文笔记中嵌入框架图和综述写作参考
 
 ### 阶段 2：生成论文笔记
 
@@ -97,14 +114,32 @@
 #### 3f. 更新 Claims（09-claims/）
 
 提取论文中值得沉淀的核心观点：
-- 如有新的可引用观点 → 添加到 `claims-index.md`
-- 如与已有论文存在矛盾 → 添加到 `contradictions.md`
+- 如有新的可引用观点 → 添加到 `claims-index.md`（填写 venue_factor、time_factor、citation_impact、composite_weight、consensus_count、confidence_score 所有权重字段）
+- 如与已有论文存在矛盾 → 添加到 `contradictions.md`（填写 current_verdict、verdict_basis、verdict_confidence）
+
+#### 3.5a. Claims 共识更新
+
+- 新论文是否支持现有 `claims-index.md` 中的观点？→ `consensus_count += 1`，更新 `last_confirmed` 年份，重新计算 `confidence_score`（公式：`venue_factor × time_factor × citation_impact × consensus_count`，详见 AGENTS.md 第 11 节）
+- 新论文是否挑战现有 claims？→ 更新 `contradictions.md` 的 `current_verdict` 和 `verdict_confidence`
+- 新论文是否提出了全新的可引用观点？→ 追加到 `claims-index.md`，填写所有权重字段
+
+#### 3.5b. Citation Impact 更新
+
+- 新论文引用了哪些已有论文？→ 对应论文的 `citation_impact` 计数 +1，重新计算 `composite_weight`
+- 在 `paper-registry.md` 的对应行中更新 `claims_supported` 和 `claims_challenged` 字段
+
+#### 3.5c. 研究前沿同步
+
+- 检查新论文是否与 `12-research-fronts/` 中某个研究前沿的核心问题相关
+- 如相关 → 更新该 research-front 页面的证据链表格（追加新行）
+- 如新论文揭示了全新的研究前沿问题 → 创建新的 research-front 页面（使用 `templates/research-front-template.md`）
+- 更新 research-front 的 `status` 字段（converging / diverging / stale）
 
 ### 阶段 4：更新全局索引
 
 #### 4a. 更新论文注册表
 
-在 `00-dashboard/paper-registry.md` 末尾追加一行，包含新论文的 doi、title_key、year、venue、first_author、filename、note 字段。
+在 `00-dashboard/paper-registry.md` 末尾追加一行，包含新论文的 doi、title_key、year、venue、first_author、filename、note、claims_supported、claims_challenged 字段。
 
 #### 4b. 更新阅读队列
 
@@ -115,7 +150,19 @@
 - `00-dashboard/index.md`：更新页面计数
 - `00-dashboard/project-overview.md`：如论文属于重点论文，更新相关章节
 
-#### 4d. 追加日志
+#### 4d. 更新参考文献
+
+在 `bibliography.json` 中追加新论文条目，包含：
+- citation_key、entry_type、title、authors、year、booktitle/journal、pages、volume、publisher、doi、url
+- 通过 CrossRef API 查询官方元数据（优先使用 DOI 查询，无 DOI 则用标题查询）
+- 如 API 不可用，从论文笔记 frontmatter 和 parsed markdown 中提取已有字段，标记 `metadata_source: "note"`
+
+更新后重新生成 `bibliography.bib`：
+```bash
+python3 scripts/generate_bibliography.py --skip-api  # 从 bibliography.json 重新生成 .bib
+```
+
+#### 4e. 追加日志
 
 在 `00-dashboard/log.md` 末尾追加：
 
@@ -206,11 +253,14 @@
 | 对比表 | method-comparison-table 新增 1 行 |
 | 开源注册表 | 新增 1 个开源方法 / 无需更新 |
 | Claims | 新增 1 条观点 / 无需更新 |
+| Research Fronts | 更新了 [[xxx-front]] / 新建了 [[xxx-front]] / 无需更新 |
 
 ### 全局更新
-- paper-registry.md：新增 1 行（#51）
+- paper-registry.md：新增 1 行（#51，claims_supported/claims_challenged 已填写）
 - reading-queue.md：新增 1 行
 - index.md：计数更新
+- bibliography.json：新增 1 条条目（citation_key: xxx）
+- bibliography.bib：已重新生成
 - log.md：已追加日志
 
 ### 文档同步

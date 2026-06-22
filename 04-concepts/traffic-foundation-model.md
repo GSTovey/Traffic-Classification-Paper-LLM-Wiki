@@ -115,3 +115,11 @@ Traffic Foundation Model（流量基础模型）是指借鉴 NLP/CV 领域的预
 - 流量基础模型的可解释性如何提升？注意力权重能否揭示有意义的流量模式？
 - 如何设计更高效的 tokenization 方案，在保留流量结构信息的同时控制序列长度？
 - 流量基础模型能否支持增量学习，适应不断变化的网络环境和新型应用/攻击？
+
+---
+
+## 相关研究前沿
+
+- [[pretraining-necessity]] — 预训练是否必要、替代路径
+- [[multimodal-fusion-strategy]] — 多模态融合最优策略
+- [[tokenization-optimal]] — 流量 tokenization 最优方案
