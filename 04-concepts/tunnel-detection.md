@@ -12,7 +12,7 @@ tags:
   - traffic-fingerprinting
   - network-security
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-06-21"
 ---
 
 # Encrypted Tunnel Detection（加密隧道检测）
@@ -90,6 +90,12 @@ updated: "2026-06-10"
 - Mixture of Experts (MoE) - 稀疏混合专家模型，TrafficMoE 用于解耦 header/payload 的异质性感知建模
 - Uncertainty-aware Filtering - 不确定性感知过滤，TrafficMoE 用于抑制隧道封装引入的加密噪声
 - Conditional Aggregation - 条件聚合，TrafficMoE 基于 MoE 路由概率的动态跨模态特征融合策略
+- Hash-based Covert Carrier Filtering - 基于 SHA-256 哈希的隐蔽载体过滤，通过密钥控制伪随机载体子集选择构建隐蔽信道
+- TCP State Inference - TCP 状态推断，LZR 用于识别非预期互联网服务的核心方法
+- Protocol Fingerprinting - 协议指纹识别，LZR 和 GFW 用于检测异常协议部署
+- Deferred Traffic Replacement - 延迟流量替换，Huma 用于实现 Web 协议隧道的行为真实性
+- Active Probing - 主动探测，审查者通过重放和随机数据探测验证服务身份
+- Popcount Entropy Detection - popcount 熵检测，GFW 用于检测全加密流量的统计规则
 
 ## 5. 相关任务
 
@@ -115,6 +121,9 @@ updated: "2026-06-10"
 | DecETT: Accurate App Fingerprinting Under Encrypted Tunnels via Dual Decouple-based Semantic Enhancement | 2025 | WWW | 引入 TLS 流量作为语义锚点，双解耦模块分离隧道特征与应用语义，5 种隧道下 F1 达 84%-94% | 需要并行 TLS-隧道流对训练；单应用假设；不涉及隧道检测 |
 | OpenVPN is Open to VPN Fingerprinting (Xue et al.) | 2022 | USENIX Security | 提出两阶段框架（Opcode+ACK 被动指纹 + 活跃探测），在百万用户 ISP 网络中以极低误报率识别超 85% OpenVPN 流量，成功识别 41 个"混淆"配置中的 34 个 | 仅针对 OpenVPN 协议；活跃探测需要网络控制能力 |
 | TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification (He et al.) | 2026 | arXiv | 提出 Disentangle-Filter-Aggregate 范式，双分支稀疏 MoE 解耦 header/payload，不确定性感知过滤抑制加密噪声，条件聚合动态融合；在 VPN/Tor 隧道流量分类上 6 个数据集一致超越 SOTA | 未专门针对隧道场景设计；MoE 路由可解释性有待提升 |
+| Covert Channels (Zou et al.) | 2026 | CS | 提出基于 SHA-256 哈希的隐蔽载体过滤策略，通过密钥控制的伪随机载体子集选择构建网络隐蔽信道，使 ML 检测器的 AUC 从 1.0 降至接近 0.5 | 仅在办公网浏览和视频监控流量上验证；隐蔽容量受限于载体可用性 |
+| LZR: Identifying Unexpected Internet Services | 2021 | USENIX | 通过对 IPv4 全网系统性测量，揭示协议部署的分散性（仅 3% HTTP 和 6% TLS 在 IANA 端口上），提出 LZR 系统以 5 次握手识别 99% 非预期服务 | 主要面向服务发现而非隧道检测；需主动扫描 |
+| Huma: Censorship Circumvention via Web Protocol Tunneling | 2026 | NDSS | 通过延迟流量替换和显式用户模拟器解决 Web 协议隧道的流量指纹和行为不真实问题，保证审查不可观测性 | 带宽受限于模拟的浏览行为；依赖内容分块策略 |
 
 ## 7. 当前共识
 

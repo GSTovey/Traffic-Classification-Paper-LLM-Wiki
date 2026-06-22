@@ -13,7 +13,7 @@ tags:
   - encrypted-traffic
   - side-channel
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-06-21"
 ---
 
 # Website Fingerprinting（网站指纹攻击）
@@ -47,6 +47,11 @@ WF 攻击的威胁模型通常假设攻击者位于客户端与 Tor Guard Node �
 | 零样本跨模态检索 | 将 WF 重新定义为跨模态检索问题，对齐加密流量与网页语义逻辑 | 无需目标网站流量，可扩展性强，天然支持 open-world | 依赖浏览器日志，单浏览器评估，数据采集成本高 | STAR |
 | 因果链解耦 | 利用 request-response 因果关系将交织的多网站流量解耦为因果链，再用 Transformer 学习上下文 | 支持多标签并发、动态标签数、网络扰动鲁棒 | 依赖 packet size 分布稳定性 | RobustWF |
 | 加密隧道下应用指纹 | 通过双解耦模块分离隧道协议特征与应用语义特征，引入 TLS 流量作为语义锚点 | 通用性强，适用于多种加密隧道 | 需要并行 TLS-隧道流对训练，单应用假设 | DecETT |
+| 状态空间模型 (SSM) | 使用 Mamba (State Space Model) 建模流量序列，通过 Windowed Traffic Counting Matrix 构建粗粒度表示，配合因果性细粒度增量预测 | 线性复杂度；对多种防御鲁棒（RegulaTor 下 F1=96.62%）；支持早期阶段和多标签攻击 | Mamba 在网络领域首次尝试，适用性需更多验证 | CountMamba |
+| RTT 感知轨迹转换 | 通过估计 RTT 将不同入口/出口观测的流量轨迹在时域上对齐，实现跨 vantage point 的数据增强 | 首次解决真实世界 WF 中入口-出口观测不一致问题，提升跨中继泛化能力 | 依赖 RTT 估计精度 | CELLSHIFT |
+| 多粒度 Patch-Based Transformer | 通过多粒度注意力机制和 Router Token 实现多标签流量的分组与识别 | 支持动态标签数，多粒度特征捕获能力强 | 预训练需求未明确，计算开销较大 | PrismWF |
+| 边界感知流量解混 | 通过重叠窗口边界保留突发边界信号完整性，多尺度并行 CNN + RoPE 增强 Transformer 实现分散片段关联 | 首次同时满足多标签解混的三个结构性要求；可即插即用增强其他方法 | 计算开销较高 | DEMUX |
+| 时频一致性少样本学习 | 通过自监督对比学习对齐时域和频域表征于潜在时频空间中 | 仅需每网站 5 条 trace 即可在预训练 6 周后流量上达 92.62%；开放世界 F1 达 87.20% | 依赖预训练数据的时效性 | WF-TFC |
 
 ### 3.2 防御技术路线
 
@@ -55,8 +60,13 @@ WF 攻击的威胁模型通常假设攻击者位于客户端与 Tor Guard Node �
 | 流量混淆 (Obfuscation) | 注入 dummy packets 或随机延迟真实包，干扰流量模式 | 实现简单，开销较低 | 无法抵抗 adversarial training，攻击者可重新训练分类器 | WTF-PAD, FRONT |
 | 流量正则化 (Regularization) | 将流量调节为预定义统一模式（如 BuFLO 家族） | 可证明安全性，能抵抗 advanced 攻击 | 开销极高（带宽 >100%，时间 >40%），影响网络性能 | BuFLO, Tamaraw, Supersequence |
 | 流量拆分 (Splitting) | 将流量分散到多条路径传输 | 降低单条路径上的信息量 | 无法防御观察完整流量的本地攻击者 | TrafficSliver, HyWF |
+| 对抗扰动防御 (Adversarial Perturbation) | 利用梯度辅助搜索最优序列编辑操作，以最小扰动破坏攻击者分类器的决策边界 | 可精确控制扰动开销，可部署于 Tor PT 和 P4 交换机 | 依赖白盒攻击者模型，对自适应攻击者鲁棒性待验证 | GAPDiS |
+| 互信息最小化 (MI Minimization) | 通过强化学习迭代注入 dummy packets 以最小化流量与网站标签之间的互信息 | 理论基础扎实（信息论），带宽控制精确，30% BWO 即可将 DF 攻击降至 2.68% | 计算开销较高，需训练 SAC 策略网络 | Cease (FRUGAL) |
 | 聚类匿名化 | 将流量模式相似的网站聚类为 anonymity set，统一调节为 super-matrix 模式 | 抵抗 adversarial training，开销适中，适应实时流量 | 依赖网站列表，参数需调优 | Palette |
-| 流量形态变换 (Morphing) | 基于 CAM 识别关键特征区域，将流量向目标类别靠拢 | 可针对性消除 informative features | 目标类别选择随机化，需进一步优化 | RF 反制措施 |
+| 聚类正则化 (Cluster-based Regularization) | 基于 k-anonymity/l-diversity 对网站流量模式聚类后进行自适应正则化 | 开销低于 Tamaraw（可证明安全性），支持 onion services | 依赖聚类质量和早期时间序列分类精度 | Lightening (Adaptive Tamaraw) |
+| GAN 流量生成 (GAN-based Trace Generation) | 利用 GAN 生成多样化的 burst sequence 作为发送模式，配合 Burst Adjustment 和 Random Response 实时调节 | 55% 带宽开销+16% 时间开销即可将 DF TPR 降低 57%；开销远低于 Tamaraw | GAN 训练需大量真实流量数据，对自适应攻击者鲁棒性需进一步验证 | Surakav |
+| RTT 感知轨迹转换 (RTT-Aware Trace Transduction) | 通过估计 RTT 将不同入口/出口观测的流量轨迹在时域上对齐，实现跨 vantage point 的数据增强 | 首次解决真实世界 WF 中入口-出口观测不一致问题，提升跨中继泛化能力 | 依赖 RTT 估计精度，对高丢包率网络效果可能下降 | CELLSHIFT |
+| 流量形态变换 (Morphing) | 基于 CAM 识别关键特征区域，将流量向目标类别靠拢 | 可针对性消除 informative features | 目标类别选择随机化，需进一步优化 | RF 反制措施, BiMorphing |
 
 ## 4. 相关方法
 
@@ -71,6 +81,20 @@ WF 攻击的威胁模型通常假设攻击者位于客户端与 Tor Guard Node �
 - WTF-PAD - 轻量级自适应填充防御
 - Walkie-Talkie - 半双工流量正则化防御
 - Tamaraw - 高开销流量正则化防御
+- TrafficSliver - 基于流量分割的多路径 WF 防御
+- FRONT - 零延迟轻量级 WF 防御（front obfuscation + trace gluing）
+- Surakav - 基于 GAN 的逼真 burst sequence 生成 WF 防御
+- CountMamba - 基于状态空间模型的通用 WF 攻击
+- GAPDiS - 基于梯度辅助序列编辑的对抗扰动 WF 防御
+- CELLSHIFT - 基于 RTT 感知轨迹转换的真实世界 WF 攻击
+- Cease (FRUGAL) - 基于互信息最小化的高效 WF 防御
+- Lightening (Adaptive Tamaraw) - 基于聚类的低开销可证明 WF 防御
+- BiMorphing - 基于双向突发变形的 WF 防御
+- TMWF - 基于 Transformer 的多标签 WF 攻击
+- Holmes - 基于时空分布分析的早期 WF 攻击
+- PrismWF - 基于多粒度 Patch-Based Transformer 的鲁棒 WF 攻击
+- DEMUX - 基于边界感知多尺度流量解混的多标签 WF 攻击
+- WF-TFC - 基于时频一致性的开放世界少样本匿名 WF 攻击
 
 ## 5. 相关任务
 
@@ -94,6 +118,23 @@ WF 攻击的威胁模型通常假设攻击者位于客户端与 Tor Guard Node �
 | STAR | 2025 | arXiv | 首次将 WF 定义为零样本跨模态检索问题，零样本 top-1 87.9%，AUC 0.963 | 仅评估 Chrome，单页面场景，数据采集成本高 |
 | DecETT | 2025 | WWW | 双解耦语义增强，在 5 种加密隧道下实现精准应用指纹识别（F1 最高 94.2%） | 需要并行 TLS-隧道流对训练，单应用假设 |
 | Exploring Uncharted Waters of Website Fingerprinting | 2023 | TIFS | 提出两种基于 GNN 的 WF 技术（GFNC 节点分类 + GFGC 图分类，后者结合 CTDNE 时间信息），首次将 WF 扩展到 DApp 指纹识别和 reload 流量场景；收集 5 个新数据集 | 数据集未公开；仅评估 GNN 方法 |
+| TrafficSliver | 2020 | CCS | 提出流量分割防御，将 Tor 流量通过多条路径传输以降低单路径信息量；设计 batched-weighted-random 和 HTTP Range Option 两种分割策略 | 无法防御观察完整流量的本地攻击者；需多路径路由支持 |
+| FRONT (Zero-delay Lightweight Defenses) | 2020 | USENIX | 提出 front obfuscation + trace gluing 的零延迟轻量防御，带宽开销低且不引入额外延迟 | 对深度学习攻击鲁棒性有限；SoK 2023 评估显示其安全性低于预期 |
+| Surakav | 2022 | S&P | 利用 GAN (WGAN-div) 生成逼真 burst sequence，配合 Burst Adjustment 和 Random Response 实时调节，在 55% 带宽+16% 时间开销下将 DF TPR 降至 57% | GAN 训练需大量真实数据；对自适应攻击者鲁棒性需验证 |
+| SoK: WF Defenses | 2023 | S&P | 系统性评估 9 种高效 WF 防御，发现多项防御实际安全性远低于原始论文报告；识别 TrafficSliver、Interspace 和 FRONT 为 Pareto 前沿 | 仅评估有限防御方案 |
+| Online Website Fingerprinting | 2022 | USENIX | 首次在真实 Tor 出口中继上进行在线 WF 攻击评估，提出 Triplet Fingerprinting 和 N-shot 学习范式 | 出于安全考虑销毁了所有模型和数据 |
+| TMWF | 2023 | CCS | 基于 Transformer 的多标签 WF 攻击模型，通过 tab queries 和 set prediction 实现动态标签数的多标签识别 | Transformer 对长序列计算开销大 |
+| Realistic WF (NetAugment/NetCLR) | 2023 | CCS | 提出 NetAugment 数据增强和 NetCLR/NetFM 自监督/半监督学习，解决 WF 攻击在时间漂移下的泛化问题 | 数据增强效果依赖于增强策略与真实漂移的匹配度 |
+| CountMamba | 2025 | S&P | 首次将 Mamba (State Space Model) 引入 WF 攻击，通过 WTCM 粗粒度表示 + SSO 细粒度预测实现鲁棒/早期/多标签攻击全面 SOTA | Mamba 在网络领域首次尝试 |
+| GAPDiS | 2025 | CCS | 提出梯度辅助序列编辑扰动设计，通过余弦相似度奖励和禁忌搜索优化最小扰动序列，可部署于 Tor PT 和 P4 交换机 | 依赖白盒攻击者模型假设 |
+| CELLSHIFT | 2026 | NDSS | 提出 RTT 感知轨迹转换，通过估计 RTT 将不同入口/出口观测的流量轨迹对齐，解决真实世界 WF 的跨 vantage point 泛化问题 | 依赖 RTT 估计精度 |
+| Cease (FRUGAL) | 2026 | NDSS | 首次将互信息最小化作为 WF 防御目标，通过 SAC 强化学习迭代注入 dummy packets，30% BWO 下将 DF 攻击降至 2.68% | 计算开销较高 |
+| Lightening (Adaptive Tamaraw) | 2026 | NDSS | 基于聚类的低开销可证明 WF 防御框架，通过 k-anonymity/l-diversity 和自适应正则化降低 Tamaraw 开销 | 依赖聚类质量 |
+| Holmes | 2024 | CCS | 基于时空分布分析和监督对比学习的早期 WF 攻击，页面加载仅 21.71% 时即可准确识别，F1 平均提升 169.18% | 早期阶段信息有限 |
+| PrismWF | 2026 | arXiv | 基于多粒度 Patch-Based Transformer 的鲁棒多标签 WF 攻击，通过 Router Token 实现流量分组 | 未开源；preprint |
+| DEMUX | 2026 | arXiv | 提出边界感知多尺度流量解混框架，通过重叠窗口边界保留和 RoPE 增强 Transformer 实现多标签 WF，5-tab P@5 达 0.943 | 未开源；preprint |
+| WF-TFC | 2025 | TIFS | 基于时频一致性的开放世界少样本匿名 WF 攻击，自监督对比学习对齐时域和频域表征，每网站仅需 5 条 trace | 依赖预训练数据时效性 |
+| BiMorphing | 2021 | TDSC | 基于双向突发变形的 WF 防御，通过双采样（bi-burst + IAT）和凸优化在零延迟传输下将攻击准确率从 84.97% 降至 16.05% | 带宽开销 56.40% |
 
 ## 7. 当前共识
 

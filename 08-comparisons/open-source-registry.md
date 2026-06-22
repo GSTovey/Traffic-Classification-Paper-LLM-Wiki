@@ -2,7 +2,7 @@
 type: comparison
 name: open-source-registry
 created: "2026-05-29"
-updated: "2026-06-10"
+updated: "2026-06-21"
 ---
 
 # 开源模型/方法注册表
@@ -49,6 +49,22 @@ updated: "2026-06-10"
 | 28 | NetMamba | 2024 | 加密流量分类 | [GitHub](https://github.com/UniBuc/NetMamba) | 代码 | Python | [[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]（注：与 NetMamba+ 共用同一仓库） |
 | 29 | Multi-ARCL | 2025 | 加密流量分类（持续学习） | [GitHub](https://github.com/sailorlee97/What-changes-you) | 代码 | Python | [[2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification]] |
 | 30 | ASNet | 2025 | 加密流量分类 | [GitHub](https://github.com/pengwei-iie/ASNET) | 代码 | Python | [[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]] |
+| 31 | TrafficSliver | 2020 | 网站指纹防御 | [GitHub](https://github.com/TrafficSliver) | 代码 + Tor Pluggable Transport | Python | [[2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting]] |
+| 32 | FRONT (Zero-delay Defenses) | 2020 | 网站指纹防御 | [GitHub](https://github.com/websitefingerprinting/WebsiteFingerprinting/) | 代码 + 防御实现 | Python | [[2020-USENIX-Zero-delay_Lightweight_Defenses_against_Website_Fingerprinting]] |
+| 33 | Surakav | 2022 | 网站指纹防御 | [GitHub](https://github.com/websitefingerprinting/surakav-imp) | 代码 + GAN 训练 + WFDefProxy | Python | [[2022-S&P-Surakav__Generating_Realistic_Traces_for_a_Strong_Website_Fingerprinting_Defense]] |
+| 34 | CountMamba | 2025 | 网站指纹攻击 | [GitHub](https://github.com/SJTUdxw/CountMamba-WF) | 代码 | Python | [[2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction]] |
+| 35 | GAPDiS | 2025 | 网站指纹防御 | [GitHub](https://github.com/ByskyXie/GAPDiS) | 代码 | Python | [[2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for_Website_Fingerprinting_Defense]] |
+| 36 | CELLSHIFT | 2026 | 网站指纹攻击（数据增强） | [GitHub](https://github.com/robgjansen/cellshift) | 代码 | Python | [[2026-NDSS-CELLSHIFT__RTT-Aware_Trace_Transduction_for_Real-World_Website_Fingerprinting]] |
+| 37 | Cease (FRUGAL) | 2026 | 网站指纹防御 | [GitHub](https://github.com/Junowww/FRUGAL-ndss) | 代码 | Python | [[2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization]] |
+| 38 | Lightening (Adaptive Tamaraw) | 2026 | 网站指纹防御 | [GitHub](https://github.com/khashayarkhaj/Adaptive-Tamaraw) | 代码 | Python | [[2026-NDSS-Lightening_the_Load__A_Cluster-Based_Framework_or_A_Lower-Overhead__Provable_Website_Fingerprinting_Defense]] |
+| 39 | Holmes | 2024 | 网站指纹攻击（早期阶段） | [GitHub](https://github.com/HolmesWF/Holmes) | 代码 | Python | [[2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis]] |
+| 40 | TMWF | 2023 | 网站指纹攻击（多标签） | [GitHub](https://github.com/jzx-bupt/TMWF) | 代码 | Python | [[2023-CCS-Transformer-based_Model_for_Multi-tab_Website_Fingerprinting_Attack]] |
+| 41 | Realistic WF (NetAugment) | 2023 | 网站指纹攻击（数据增强） | [GitHub](https://github.com/SPIN-UMass/Realistic-Website-Fingerprinting-By-Augmenting-Network-Traces) | 代码 | Python | [[2023-CCS-Realistic_Website_Fingerprinting_by_Augmenting_Network_Traces]] |
+| 42 | UPGen | 2025 | 审查规避（协议生成） | [GitHub](https://github.com/unblockable/upgen) | 代码 + Proteus + 流量生成器 | Python | [[2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation]] |
+| 43 | Huma | 2026 | 审查规避（Web 隧道） | [Zenodo](https://doi.org/10.5281/zenodo.17790334) | 代码 + 实现 | Python | [[2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement]] |
+| 44 | Censored Planet | 2020 | 审查测量 | [GitHub](https://github.com/censoredplanet) | 代码 + 测量框架 | Python | [[2020-CCS-Censored_Planet__An_Internet-wide__Longitudinal_Censorship_Observatory]] |
+| 45 | GFW (USENIX 2023) | 2023 | 审查检测分析 | [GitHub](https://gfw.report/publications/usenixsecurity23/en) | 测量数据 + 分析工具 | Python | [[2023-USENIX-How_the_Great_Firewall_of_China_Detects_and_Blocks_Fully_Encrypted_Traffic]] |
+| 46 | LZR | 2021 | 服务发现/隧道检测 | [GitHub](https://github.com/stanford-esrg/lzr) | 代码 | Go | [[2021-USENIX-LZR__Identifying_Unexpected_Internet_Services]] |
 
 ---
 
@@ -158,7 +174,7 @@ updated: "2026-06-10"
 
 | 类别 | 数量 |
 |---|---:|
-| 已确认开源（本知识库论文） | 30 |
+| 已确认开源（本知识库论文） | 46 |
 | 计划开源 / 待确认 | 3 |
 | 高频对比基线无开源地址 | 20+ |
 | CLET 论文确认有实现但缺地址 | 6 |
@@ -169,11 +185,13 @@ updated: "2026-06-10"
 | 领域 | 已开源数量 | 代表方法 |
 |---|---:|---|
 | 加密流量分类 | 12 | ET-BERT, YaTC, LEXNet, CTT, NetMamba+, FGFR-Net, SweetDanger, TFusion, NetMamba, Multi-ARCL, ASNet, TrafficMoE |
-| 网站指纹（攻击+防御） | 6 | DF, RF, Palette, RobustWF, STAR, Swallow（待确认） |
+| 网站指纹（攻击+防御） | 18 | DF, RF, Palette, RobustWF, STAR, Swallow（待确认）, TrafficSliver, FRONT, Surakav, CountMamba, GAPDiS, CELLSHIFT, Cease, Lightening, Holmes, TMWF, Realistic WF |
 | 恶意流量检测 | 4 | Whisper, TFusion, MET-LLM, JA4 |
 | 应用/匿名流量分类 | 3 | Flowprint, AN-Net, DecETT |
+| 审查规避/测量 | 4 | UPGen, Huma, Censored Planet, GFW |
 | 流量关联/匿名攻击 | 1 | SUMo |
 | 评估/基准 | 2 | SoK Decoding, SweetDanger |
+| 服务发现/隧道检测 | 1 | LZR |
 | 可解释性 | 1 | Traffic-Explainer |
 | 预训练模型增强 | 1 | Plug-in Enhancement Framework |
 

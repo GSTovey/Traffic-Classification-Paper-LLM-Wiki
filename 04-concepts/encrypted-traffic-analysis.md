@@ -15,7 +15,7 @@ tags:
   - VPN
   - Tor
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-06-21"
 ---
 
 # Encrypted Traffic Analysis（加密流量分析）
@@ -112,6 +112,10 @@ updated: "2026-06-10"
 | **TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification** (He et al., arXiv) | 2026 | 提出 Disentangle-Filter-Aggregate (DFA) 范式：双分支稀疏 MoE 解耦 header/payload，不确定性感知过滤抑制加密噪声，条件聚合动态融合跨模态特征；6 个数据集上一致超越 SOTA | MoE 路由可解释性有待提升；极低资源场景部署可行性需验证 |
 | **STAR: Semantic-Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting** (Cheng et al., arXiv) | 2025 | 首次将 WF 定义为零样本跨模态检索问题，双编码器架构对齐加密流量与网页语义逻辑；1,600 个未见网站 top-1 准确率 87.9%，AUC 0.963；揭示语义泄漏是加密 HTTPS 流量的主要隐私风险 | 仅评估 Chrome 浏览器；依赖浏览器日志采集逻辑模态 |
 | **Bias in the Shadows: Explore Shortcuts in Encrypted Network Traffic Classification / BiasSeeker** (Wang et al., arXiv) | 2026 | 提出首个模型无关、数据驱动的捷径学习检测框架 BiasSeeker；通过统计互信息分析在原始二进制流量上检测数据集特定的捷径特征；在 19 个公开数据集上验证有效性；提出捷径特征分类体系和类别特定验证策略 | 仅提供检测和缓解框架，未直接提升分类器性能 |
+| **GGFAST: Automating Generation of Flexible Network Traffic Classifiers** (Piet et al., SIGCOMM) | 2023 | 提出全自动流量分类框架，在报文长度序列中发现可解释的 snippet 特征模式，结合朴素贝叶斯分类器；可通过密码套件长度变换公式将明文分类器自动迁移到加密场景 | 仅在 snippet 模式可区分的协议上有效；对复杂应用级分类能力有限 |
+| **MPAF: Multi-Phase Attribute Fingerprint** (Chen et al., TIFS) | 2024 | 利用 TLS 加密通信三阶段（域名查询、握手元数据、消息序列）分别提取属性，通过嵌入机制和叶节点掩码树分类器实现分级分类，准确率 96.33%-99.42%，比 AWT 提升最高 77.53 倍 | 依赖 TLS 三阶段特征的可用性；对非 TLS 协议不适用 |
+| **Censorship Evasion with Unidentified Protocol Generation (UPGen)** (Wails et al., USENIX) | 2025 | 通过概率采样从 27 种真实加密协议共性中自动生成 4.2 x 10^22 种结构化加密协议，使审查者封锁时必然造成大规模附带损害，性能优于 Obfs4 | 协议生成器本身需保密；对主动探测仍需额外防御 |
+| **Hiding the Trees in the Forest: Covert Channels** (Zou et al., CS) | 2026 | 提出基于 SHA-256 哈希的隐蔽载体过滤策略，通过密钥控制的伪随机载体子集选择构建网络隐蔽信道，使 ML 检测器 AUC 从 1.0 降至接近 0.5 | 仅在办公网浏览和视频监控流量上验证；隐蔽容量受限 |
 | **NetMamba: Efficient Network Traffic Classification via Pre-training Unidirectional Mamba** (Wang et al., arXiv) | 2024 | 首个将 Mamba（State Space Model）引入网络流量分类的工作；MAE 预训练 + stride-based 流量表示；推理速度比 Transformer 快 60 倍；6 个数据集上 accuracy 超 90% | 单向建模可能遗漏部分信息；预训练验证尚不充分 |
 | **NetMamba+: A Framework of Pre-trained Models for Efficient and Accurate Network Traffic Classification** (Wang et al., ICNP/arXiv) | 2026 | 在 NetMamba 基础上引入 Mamba+Flash Attention 双骨干、多模态流量表示和标签分布感知微调（LDA）；F1 最高提升 6.44%，推理吞吐量比最佳 baseline 高 1.7 倍；4 个 OOD 任务 AUROC 超 94% | 分布偏移敏感（时序划分准确率下降 8.47%）；预训练需 4 块 A100 |
 | **TrafficGPT: Breaking the Token Barrier for Efficient Long Traffic Analysis and Generation** (Qu et al., arXiv) | 2024 | 通过线性注意力机制将 token 长度从 512 扩展到 12,032；可逆 token 表示方法实现 pcap 文件双向映射；首个同时支持流量分类和生成的预训练模型；分类达 SOTA，生成接近真实流量 | 自回归建模对双向上下文利用不充分 |

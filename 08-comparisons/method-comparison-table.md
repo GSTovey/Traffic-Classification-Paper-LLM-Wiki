@@ -2,7 +2,7 @@
 type: comparison
 name: method-comparison-table
 created: "2026-05-27"
-updated: "2026-06-15"
+updated: "2026-06-21"
 ---
 
 # Method Comparison Table
@@ -53,3 +53,20 @@ updated: "2026-06-15"
 | BiasSeeker (Bias in the Shadows) | 2026 | 加密流量分类（鲁棒性分析） | AMI + 统计相关性 + 特征遮蔽 | 提出首个模型无关、数据驱动的半自动框架 BiasSeeker，通过互信息 (AMI) 统计相关性分析直接在原始二进制流量上检测数据集特定的 shortcut 特征，引入系统化分类和类别特定验证策略 | 首个模型无关的 shortcut 检测框架；跨 19 个公开数据集、3 个 NTC 任务验证；揭示预训练模型依赖 TCP Timestamp 等虚假相关性的问题；为数据集质量评估提供新视角 | 分析框架而非分类方法，不直接提升分类性能；shortcut 检测依赖统计阈值选择；对动态网络环境的适应性未验证 | 数据集质量诊断与 benchmark 可靠性评估；模型训练前的特征选择；加密流量分类鲁棒性研究 | N/A | N/A（分析方法，非分类模型） |
 | SequOcc | 2025 | 匿名流量分类 | 图像化 CNN + 预处理优化 | 提出 SequOcc 预处理方法（Stream Merging + Pixelization），通过流合并和像素化压缩将匿名流量转化为图像表示，实现预处理速度提升 54.55%，首次提出真实骨干网匿名流量数据集 | 首个真实骨干网匿名流量数据集；预处理效率显著提升（54.55%）；数据量减少 27.4%；满足实时部署需求 | 分类精度略有下降（F1 降低 0.7-1.24%）；压缩系数敏感；骨干网数据集不可公开；CNN 架构未创新 | 骨干网实时匿名流量检测；资源受限环境下的匿名流量分类 | ❌ | 暂未找到 |
 | Contrastive Pre-training (Flow Semantics) | 2026 | 加密流量分类 | 包级+流级对比预训练 | 提出双层对比预训练框架：包级预训练学习字节级语义，流级预训练学习包间关系语义；设计四种流量特定数据增强策略（包重排、包丢失、包分割、时间抖动）；提出后训练策略（FT-S）解决预训练-微调兼容性 | 全面超越 ET-BERT 等方法（性能提升 >50%）；双层语义学习更完整；流量特定数据增强有效；后训练策略解决兼容性问题 | 预训练数据量较小（~100MB）；流长截断可能丢失信息；代码未开源 | 加密流量分类、恶意流量检测、流量相似度分析 | ❌ | 暂未找到 |
+| FRONT (Zero-delay Lightweight Defenses) | 2020 | 网站指纹防御 | Front Obfuscation + Trace Gluing | 提出零延迟轻量级防御：front obfuscation 通过 Rayleigh 分布填充混淆流量前端，trace gluing 将多个访问合并为统一模式 | 零延迟开销；带宽开销低；SoK 2023 识别为 Pareto 前沿防御之一 | 对深度学习攻击鲁棒性有限；SoK 评估显示实际安全性低于预期 | Tor 流量保护；低延迟要求的 WF 防御 | ✅ | [GitHub](https://github.com/websitefingerprinting/WebsiteFingerprinting/) |
+| TrafficSliver | 2020 | 网站指纹防御 | 多路径流量分割 | 提出 batched-weighted-random 和 HTTP Range Option 两种流量分割策略，将 Tor 流量分散到多条路径传输 | 降低单条路径上的信息量；SoK 2023 识别为 Pareto 前沿防御之一 | 无法防御观察完整流量的本地攻击者；需多路径路由支持 | Tor 多路径流量保护 | ✅ | [GitHub](https://github.com/TrafficSliver) |
+| Surakav | 2022 | 网站指纹防御 | GAN 流量生成 | 利用 GAN (WGAN-div) 生成多样化的逼真 burst sequence，配合 Burst Adjustment 和 Random Response 机制实时调节数据包发送 | 55% 带宽+16% 时间开销将 DF TPR 降低 57%；比 Tamaraw 少 50% 开销 | GAN 训练需大量真实数据；对自适应攻击者鲁棒性需验证 | Tor 流量保护；低开销 WF 防御 | ✅ | [GitHub](https://github.com/websitefingerprinting/surakav-imp) |
+| CountMamba | 2025 | 网站指纹攻击 | 状态空间模型 (Mamba) + WTCM | 首次将 Mamba 引入 WF 攻击，通过 Windowed Traffic Counting Matrix 构建粗粒度表示，SSO 分类器实现因果性增量预测 | RegulaTor 下 F1=96.62%（比 RF 提升 28.89%）；支持早期/多标签攻击全面 SOTA | Mamba 在网络领域首次尝试 | Tor WF 攻击研究；鲁棒性评估基准 | ✅ | [GitHub](https://github.com/SJTUdxw/CountMamba-WF) |
+| GAPDiS | 2025 | 网站指纹防御 | 梯度辅助序列编辑 | 利用梯度辅助搜索最优序列编辑操作，通过余弦相似度奖励和禁忌搜索以最小扰动破坏攻击者决策边界 | 可精确控制扰动开销；可部署于 Tor PT 和 P4 交换机 | 依赖白盒攻击者模型假设 | Tor PT 部署；P4 可编程交换机部署 | ✅ | [GitHub](https://github.com/ByskyXie/GAPDiS) |
+| CELLSHIFT | 2026 | 网站指纹攻击（数据增强） | RTT 感知轨迹转换 | 通过估计 RTT 将不同入口/出口观测的流量轨迹在时域上对齐，实现跨 vantage point 的数据增强 | 首次解决真实世界 WF 的入口-出口观测不一致问题；提升跨中继泛化能力 | 依赖 RTT 估计精度；对高丢包率网络效果可能下降 | 真实世界 Tor WF 攻击研究 | ✅ | [GitHub](https://github.com/robgjansen/cellshift) |
+| BiMorphing | 2021 | 网站指纹防御 | 双向突发变形 + 凸优化 | 通过双向突发（bi-burst）计数采样与 IAT 采样的双采样机制，配合凸优化降低带宽开销 | 零延迟传输；攻击准确率从 84.97% 降至 16.05%（闭世界） | 带宽开销 56.40% | Tor 流量保护 | ❌ | 暂未找到 |
+| Cease (FRUGAL) | 2026 | 网站指纹防御 | 互信息最小化 + RL (SAC) | 首次将互信息最小化作为 WF 防御目标，通过 SAC 强化学习迭代注入 dummy packets | 30% BWO 下将 DF 攻击降至 2.68%；带宽控制精确 | 计算开销较高，需训练 SAC 策略网络 | Tor 流量保护；理论研究 | ✅ | [GitHub](https://github.com/Junowww/FRUGAL-ndss) |
+| Lightening (Adaptive Tamaraw) | 2026 | 网站指纹防御 | 聚类正则化 + k-anonymity | 基于 k-anonymity/l-diversity 对网站流量模式聚类后进行自适应正则化 | 开销低于 Tamaraw；可证明安全性；支持 onion services | 依赖聚类质量和早期时间序列分类精度 | Tor 流量保护；onion services 保护 | ✅ | [GitHub](https://github.com/khashayarkhaj/Adaptive-Tamaraw) |
+| Holmes | 2024 | 网站指纹攻击（早期阶段） | 时空分布分析 + 监督对比学习 | 基于时空分布分析和监督对比学习的早期 WF 攻击，页面加载仅 21.71% 时即可准确识别 | F1 平均提升 169.18%；多种防御下保持鲁棒性 | 早期阶段信息有限 | 早期 Tor WF 攻击；实时监控场景 | ✅ | [GitHub](https://github.com/HolmesWF/Holmes) |
+| PrismWF | 2026 | 网站指纹攻击（多标签） | 多粒度 Patch-Based Transformer | 通过多粒度注意力机制和 Router Token 实现多标签流量的分组与识别 | 支持动态标签数；多粒度特征捕获能力强 | 未开源；preprint 阶段 | 多标签 Tor WF 攻击 | ❌ | 暂未找到 |
+| DEMUX | 2026 | 网站指纹攻击（多标签解混） | 边界感知多尺度 CNN + RoPE Transformer | 重叠窗口边界保留突发边界信号完整性，多尺度并行 CNN + RoPE 增强 Transformer 实现分散片段关联 | 5-tab P@5 达 0.943、MAP@5 达 0.961；即插即用预处理器 | 未开源；preprint 阶段 | 多标签 Tor WF 攻击 | ❌ | 暂未找到 |
+| WF-TFC | 2025 | 网站指纹攻击（少样本） | 自监督对比学习 + 时频一致性 | 通过自监督对比学习对齐时域和频域表征于潜在时频空间中 | 仅需每网站 5 条 trace；预训练 6 周后仍有效；开放世界 F1 达 87.20% | 依赖预训练数据时效性 | 少样本 Tor WF 攻击 | ❌ | 暂未找到 |
+| MPAF | 2024 | 加密流量分类 | 多阶段属性指纹 + 嵌入 + 叶节点掩码树 | 利用 TLS 加密通信三阶段（域名查询、握手元数据、消息序列）分别提取属性，通过嵌入机制和叶节点掩码树分类器实现分级分类 | 准确率 96.33%-99.42%；比 AWT 提升最高 77.53 倍；跨平台适用 | 依赖 TLS 三阶段特征可用性；对非 TLS 协议不适用 | TLS 加密流量分类；移动应用识别 | ❌ | 暂未找到 |
+| GGFAST | 2023 | 加密流量分类 | Snippet 特征 + Naive Bayes | 在报文长度序列中发现可解释的 snippet 特征模式，结合朴素贝叶斯分类器；可通过密码套件长度变换将明文分类器迁移到加密场景 | 全自动特征工程；可解释性强；明文分类器自动迁移到加密场景 | 仅在 snippet 模式可区分的协议上有效 | L7 协议识别；加密隧道分类 | ❌ | 暂未找到 |
+| UPGen | 2025 | 审查规避（协议生成） | 协议参数采样 + 附带损害最大化 | 从 27 种真实加密协议共性中自动生成 4.2 x 10^22 种结构化加密协议 | 附带损害保证（OOD FPR 接近 100%）；性能优于 Obfs4 | 协议生成器需保密；对主动探测需额外防御 | 审查规避工具设计 | ✅ | [GitHub](https://github.com/unblockable/upgen) |
+| Huma | 2026 | 审查规避（Web 隧道） | 延迟流量替换 + 用户模拟 | 通过延迟流量替换和显式用户模拟器实现行为真实的 Web 协议隧道 | 审查不可观测性；对 Sybil 代理的原生隐私保护 | 带宽受限于模拟的浏览行为 | 审查规避；Web 协议隧道 | ✅ | [Zenodo](https://doi.org/10.5281/zenodo.17790334) |

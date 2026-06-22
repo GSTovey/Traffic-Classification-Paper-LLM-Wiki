@@ -448,19 +448,19 @@ Next steps:
 
 ---
 
-## [2026-06-11] [my-paper] ingest | JA4T-RAC + JA4Tor + ContinualTor（3 篇个人论文入库）
+## [2026-06-11] [research-material] ingest | JA4T-RAC + JA4Tor + ContinualTor（3 篇个人研究材料入库，2026-06-17 已更正角色口径）
 
 - Added:
   - [[2025-TIFS-JA4T-RAC]] — JA4T 指纹 + 检索增强分类，IEEE TIFS 2025
   - [[2026-USENIXSec-JA4Tor]] — JA4+ 多协议行为动力学，USENIX Security 2026
   - [[2026-arXiv-ContinualTor]] — 持续学习暗网检测，在审
 - Updated:
-  - [[my-paper-registry]] — 新增 3 行
+  - [[my-paper-registry]] — 新增 3 行（2026-06-17 更正为 1 篇个人研究 + 2 篇背景引用）
   - [[my-research-thread]] — 更新时间线、主题图、方法演进、开放问题、统计
   - `00-dashboard/index.md` — 11-my-papers 计数 0→3
 - Notes:
-  - 三篇论文构成完整研究体系：TLS 指纹分类 → 多协议隧道检测 → 持续学习自适应
-  - 共享 JA4/JA4+/E-JA4 指纹技术基础
+  - 角色口径已于 2026-06-17 更正：只有 JA4Tor 计入个人研究主线；JA4T-RAC 和 ContinualTor 仅作为背景引用和技术上下文
+  - 三篇材料共享 JA4/JA4+/E-JA4 指纹技术基础，但不共同构成个人研究主线
   - 2 篇已发表（TIFS + USENIX Sec），1 篇在审
   - Confidence: high（全部三篇）
   - 主知识库未更新（隔离规则）
@@ -501,3 +501,132 @@ Next steps:
   - 四种流量特定数据增强策略（包重排、包丢失、包分割、时间抖动）
   - 后训练策略解决预训练-微调兼容性问题
   - 标记为 L3 核心论文
+
+---
+
+## [2026-06-16] review | Tor-over-Proxy-Tunnel research directions v4
+
+- Added:
+  - [[10-outputs/reports/Tor-over-Proxy-Tunnel-研究问题挖掘-v4-深度审阅]]
+- Updated:
+  - [[00-dashboard/log]]
+- Notes:
+  - 使用 academic-research-suite-traffic 与 idea-evaluator 对 v3 前三个研究方向进行多角色深度审阅。
+  - 新增通俗解释、审稿人质疑、多轮回应、实验协议、novelty 重塑和 integrity gate。
+  - 未更新主知识沉淀层，遵守个人论文区隔离规则。
+
+---
+
+## [2026-06-16] plan | Tor-over-Proxy-Tunnel direction proposals
+
+- Added:
+  - [[10-outputs/reports/Tor-over-Proxy-Tunnel-方向1-协议指纹鲁棒性研究方案]]
+  - [[10-outputs/reports/Tor-over-Proxy-Tunnel-方向2-活动语义泄漏研究方案]]
+  - [[10-outputs/reports/Tor-over-Proxy-Tunnel-方向3-网站指纹泄漏研究方案]]
+- Updated:
+  - [[00-dashboard/log]]
+- Notes:
+  - 分别为三个研究方向新增独立研究方案文档。
+  - 每份文档包含研究问题、研究价值、科学假设、验证方法、主实验流程、模型模块和对比基线。
+
+---
+
+## [2026-06-16] revise | Tor-over-Proxy-Tunnel comparison baselines
+
+- Updated:
+  - [[10-outputs/reports/Tor-over-Proxy-Tunnel-方向1-协议指纹鲁棒性研究方案]]
+  - [[10-outputs/reports/Tor-over-Proxy-Tunnel-方向2-活动语义泄漏研究方案]]
+  - [[10-outputs/reports/Tor-over-Proxy-Tunnel-方向3-网站指纹泄漏研究方案]]
+  - [[00-dashboard/log]]
+- Notes:
+  - 将对比方法从简单架构列表改为带标注的论文级对比表。
+  - 区分近期论文级、适配论文级、经典任务基线、通用架构基线和本文消融。
+
+---
+
+## [2026-06-17] analysis | Tor-over-Proxy-Tunnel direction 1 fingerprint robustness
+
+- Added:
+  - [[10-outputs/reports/Tor-over-Proxy-Tunnel-方向1-协议指纹鲁棒性深度分析]]
+- Updated:
+  - [[00-dashboard/log]]
+- Notes:
+  - 单独分析方向 1 的研究定位、baseline 选择、SOTA 对比方法和开源状态。
+  - 明确该方向更偏网络指纹攻防/检测可靠性审计，而非普通流量多分类。
+  - 补充从 pcap 输入到功能保持攻击、防御和部署评估的完整 pipeline。
+
+---
+
+## [2026-06-17] maintenance | JA4Tor personal-research role correction
+
+- Updated:
+  - [[11-my-papers/my-research-thread]]
+  - [[11-my-papers/my-paper-registry]]
+  - [[2026-USENIXSec-JA4Tor]]
+  - [[2025-TIFS-JA4T-RAC]]
+  - [[2026-arXiv-ContinualTor]]
+  - [[00-dashboard/index]]
+  - [[10-outputs/reports/Tor-over-Proxy-Tunnel-研究问题挖掘-v3]]
+  - [[10-outputs/reports/Tor-over-Proxy-Tunnel-研究问题挖掘-v4-深度审阅]]
+- Notes:
+  - 更正个人研究口径：JA4Tor 是唯一计入个人研究主线的论文。
+  - JA4T-RAC 和 ContinualTor 改为背景引用 / 技术上下文，不计入个人研究点。
+  - 未删除文件，未更新主知识沉淀层。
+
+---
+
+## [2026-06-17] bibliography | Tor-over-Proxy fingerprint attack-defense gap
+
+- Added:
+  - [[10-outputs/reports/20260617-WF-指纹攻防补充文献清单]]
+- Updated:
+  - [[00-dashboard/log]]
+- Notes:
+  - 基于 `10-outputs/reports/20260617-1.md` 的最新定位，判断当前方向已偏向 WF / fingerprint attack-defense 和 proxy fingerprinting。
+  - 从本库强相关论文及其 references 中整理 2020 年以后 CCF A/B 优先下载清单。
+  - 未下载论文，未执行入库，未更新主知识沉淀层。
+
+---
+
+## [2026-06-17] bibliography | external Scholar/WoS-style fingerprint attack-defense search
+
+- Added:
+  - [[10-outputs/reports/20260617-GoogleScholar-WoS-指纹攻防新增文献清单]]
+- Updated:
+  - [[00-dashboard/log]]
+- Notes:
+  - 按 Google Scholar / Web of Science 风格检索式，在公开 Scholar 页面、会议官网、出版社页面、DBLP、Semantic Scholar 和作者主页交叉验证。
+  - 新增上一份清单未覆盖的 2024-2026 年 proxy fingerprinting、WF attack/defense、DPI fingerprinting、encrypted proxy WF 和 censorship evasion 文献候选。
+  - Web of Science 订阅界面不可直接访问，因此未声称完成机构库内检索；未下载论文，未执行入库。
+
+---
+
+## [2026-06-17] bibliography | journal and 2026 arXiv traffic fingerprinting search
+
+- Added:
+  - [[10-outputs/reports/20260617-期刊与2026arXiv-流量指纹文献清单]]
+- Updated:
+  - [[00-dashboard/log]]
+- Notes:
+  - 补充 TIFS、ToN、TDSC、Cybersecurity 中与 website fingerprinting、proxy fingerprinting、encrypted traffic analysis 相关的期刊论文。
+  - 使用 arXiv API 检索 2026-01-01 至 2026-06-17 的流量分析 / 指纹相关预印本，并按相关性筛选。
+  - 未下载论文，未执行入库，未更新主知识沉淀层。
+  - 后续修订：补充 arXiv 与正式会议/期刊版本的去重规则，已正式录用的工作按正式 venue 记录，避免重复计数。
+
+---
+
+## [2026-06-21] batch-ingest | 53 papers (WF/censorship/traffic analysis)
+
+- Added:
+  - 53 new paper notes to 03-paper-notes/
+  - 53 new MinerU parsed markdowns to 02-parsed-markdown/
+  - 53 new PDFs to 00-inbox/PDFs/
+- Updated:
+  - [[paper-registry]] (53 new entries)
+  - [[reading-queue]] (53 new entries)
+  - Knowledge layer pages (concepts, methods, tasks, surveys, comparisons)
+- Notes:
+  - 34 papers from USENIX/NDSS/CCS/S&P with L3 deep analysis
+  - 19 papers from other venues with L2 standard analysis
+  - Main topics: website fingerprinting (attack + defense), censorship circumvention, encrypted traffic analysis, tunnel detection
+  - MinerU API batch parsing: 53/53 success, 0 failures

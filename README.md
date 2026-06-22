@@ -2,29 +2,29 @@
 
 [中文说明](./README.zh-CN.md)
 
-An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 94 structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, KDD, etc.), covering 2008--2026.
+An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 147 structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, KDD, etc.), covering 2008--2026.
 
 ---
 
 ## Highlights
 
-- **94 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
-- **40 deep-analyzed papers** (CCF A/B tier) with formula derivations, ablation studies, and cross-paper connections
+- **147 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
+- **74 deep-analyzed papers** (CCF A/B tier) with formula derivations, ablation studies, and cross-paper connections
 - **36 knowledge pages**: 10 concepts, 8 methods, 8 tasks, 5 surveys, 5 comparison tables, 2 claim indexes
 - **30 confirmed open-source methods** with GitHub/GitLab repositories
 - **Research map** linking papers by topic, method, and venue
 - **Personal research tracking** with isolated paper notes and research trajectory page (strictly separated from main KB)
-- **Key figure gallery** with 148 auto-extracted framework/architecture figures from all 93 papers (see `10-outputs/key-figures/`)
+- **Key figure gallery** with 148 auto-extracted framework/architecture figures from all 147 papers (see `10-outputs/key-figures/`)
 
 ## Directory Structure
 
 ```
 Traffic_Papers/
 ├── 00-inbox/
-│   └── PDFs/              # 94 paper PDFs (source files)
+│   └── PDFs/              # 147 paper PDFs (source files)
 ├── 01-mineru-output/       # MinerU raw API output (gitignored, regenerable)
-├── 02-parsed-markdown/     # MinerU-parsed markdown (92 files)
-├── 03-paper-notes/         # Structured paper notes (94 files) ★
+├── 02-parsed-markdown/     # MinerU-parsed markdown (147 files)
+├── 03-paper-notes/         # Structured paper notes (147 files) ★
 ├── 04-concepts/            # Concept pages (10 files) ★
 ├── 05-methods/             # Method pages (8 files) ★
 ├── 06-tasks/               # Task pages (8 files) ★
@@ -70,6 +70,13 @@ Traffic_Papers/
 | RF | USENIX 2023 | Subverting WF defenses |
 | Proxy Fingerprinting | USENIX 2024 | Encapsulated TLS handshake fingerprinting |
 | FEC-OSL | TIFS 2026 | Open-set semi-supervised classification |
+| SoK: WF Defenses | S&P 2023 | Critical evaluation of website fingerprinting defenses |
+| Countmamba | S&P 2025 | Generalized website fingerprinting attack |
+| GAPDiS | CCS 2025 | Adversarial website fingerprinting defense |
+| Great Firewall | USENIX 2023 | GFW encrypted traffic detection |
+| Censored Planet | CCS 2020 | Internet censorship observatory |
+| Censorship Evasion | USENIX 2025 | Unidentified protocol generation for censorship evasion |
+| GGFAST | SIGCOMM 2023 | Automated traffic classifiers |
 
 ## Usage
 
@@ -93,7 +100,7 @@ This is an **Obsidian vault**. To use:
 
 When a new paper PDF is added to the vault, the system automatically:
 
-1. Checks for duplicates against existing 92 papers (filename + title + abstract + DOI + author/venue)
+1. Checks for duplicates against existing 147 papers (filename + title + abstract + DOI + author/venue)
 2. Parses PDF via MinerU if not already parsed
 3. Generates a structured paper note with bilingual frontmatter
 4. Updates all related knowledge pages (concepts, methods, tasks, surveys, comparisons, claims)
