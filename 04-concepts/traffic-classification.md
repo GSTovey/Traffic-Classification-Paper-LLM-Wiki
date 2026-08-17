@@ -11,7 +11,7 @@ tags:
   - deep-learning
   - network-security
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-08-17"
 ---
 
 # Traffic Classification
@@ -49,7 +49,7 @@ Traffic Classification（流量分类）是指将网络流量按照应用类型�
 | **GPT 式自回归线性注意力** | 使用线性注意力机制的 GPT 式自回归预训练，支持超长 token 序列（12K+）处理 | 突破 token 长度限制；同时支持分类和生成任务 | 自回归建模对双向上下文利用不如 BERT 类充分 | TrafficGPT (Qu et al., arXiv 2024) |
 | **持续学习** | 通过自适应中继式持续学习和多模态特征融合，解决类别变化（新增/静默应用）下的模型更新问题 | 支持类增量学习；解决静默应用导致的稳定性衰减 | 分布式训练开销较大；对数据分布变化敏感 | Multi-ARCL (Li et al., JPDC 2025) |
 | **稀疏 MoE + 异质性感知建模** | 将 header 和 payload 解耦为双分支稀疏 MoE，通过不确定性感知过滤抑制加密噪声，条件聚合动态融合跨模态特征 | 从静态同质建模转向异质性感知动态建模；自适应利用不同流量段判别特征 | MoE 路由可解释性有待提升 | TrafficMoE (He et al., arXiv 2026) |
-| **零样本跨模态检索分类** | 将流量分类重新定义为跨模态检索问题，对齐加密流量与语义逻辑表示，支持未见过类别的零样本识别 | 无需目标类别流量数据即可识别新类别；天然支持 open-world | 依赖辅助模态数据采集；数据采集成本较高 | STAR (Cheng et al., arXiv 2025) |
+| **零样本跨模态检索分类** | 将流量分类重新定义为跨模态检索问题，对齐加密流量与语义逻辑表示，支持未见过类别的零样本识别 | 无需目标类别流量数据即可识别新类别；天然支持 open-world | 依赖辅助模态数据采集；数据采集成本较高 | STAR (Cheng et al., INFOCOM 2026) |
 
 ## 4. 相关方法
 
@@ -100,6 +100,12 @@ Traffic Classification（流量分类）是指将网络流量按照应用类型�
 | TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification (arXiv) | 2026 | 提出 Disentangle-Filter-Aggregate 范式，双分支稀疏 MoE 解耦 header/payload，不确定性感知过滤抑制加密噪声，条件聚合动态融合；6 个数据集一致超越 SOTA | MoE 路由可解释性有待提升；极低资源场景部署可行性需验证 |
 | STAR: Semantic-Traffic Alignment and Retrieval for Zero-Shot HTTPS Website Fingerprinting (arXiv) | 2025 | 首次将网站指纹定义为零样本跨模态检索问题，双编码器对齐加密流量与网页语义逻辑；1,600 个未见网站 top-1 准确率 87.9%，AUC 0.963 | 仅评估 Chrome；依赖浏览器日志采集逻辑模态 |
 | Bias in the Shadows / BiasSeeker: Explore Shortcuts in Encrypted Network Traffic Classification (arXiv) | 2026 | 提出首个模型无关、数据驱动的捷径学习检测框架；通过统计互信息分析检测数据集特定的捷径特征；19 个数据集上验证有效性；提出捷径特征分类体系 | 仅提供检测和缓解框架，未直接提升分类器性能 |
+| MH-Net: A Multi-View Heterogeneous Graph Model (AAAI) | 2025 | 多视图异构图表征学习：PMI 图构建 + 多视图特征融合 + 对比学习 + 多任务学习，在流级与包级加密流量分类任务上取得高精度 | 图构建与多视图融合计算开销较高 |
+| SuperFE: A Scalable and Flexible Feature Extractor for ML-based Traffic Analysis Applications (EuroSys) | 2025 | 可扩展灵活的特征提取器：Grouped Packet Vector (GPV/MGPV) + 流式算法（Welford、HyperLogLog）+ ILP 内存放置，面向可编程交换机/SmartNIC 上的 ML 流量分析应用提供通用特征提取 | 数据平面资源约束限制特征复杂度 |
+| M-En: A simulation-based unified framework for real-time malicious traffic detection (JCN) | 2026 | 基于客户端-服务器仿真的统一分类框架（PLS 交叉分解 + ETC 特征选择 + RNN-LSTM 迁移），多网络环境下实时识别恶意流量 | 仿真流量与真实流量分布存在差异 |
+| FlowXpert: Context-Aware Flow Embedding for Enhanced Traffic Detection in IoT Network (TMC) | 2026 | 上下文感知流嵌入增强 IoT 流量的检测与分类 | 依赖上下文信息可获取性 |
+| HOLMES&WATSON: HTTPS Website Fingerprinting through HTTP Version Parallelism (WWW) | 2025 | 利用 HTTP 版本并行性实现 HTTPS 网站级流量分类，轻量 H123 指纹 + k-NN 惰性学习无需深度网络 | 需目标网站同时支持两个 HTTP 版本 |
+| Application of Tabular Transformer Architectures for Operating System Fingerprinting (Cybersecurity) | 2026 | 将操作系统指纹识别建模为表格化 Transformer 分类任务，在 IPFIX/自采多服务器/Nmap 合成流量上实现 OS 指纹识别 | 依赖特征表格构建质量 |
 
 ## 7. 当前共识
 

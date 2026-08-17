@@ -35,20 +35,20 @@ updated: "2026-06-21"
 
 ## 0. 论文基础信息
 
-| 项目 | 内容 |
-|---|---|
-| 原文标题 | How the Great Firewall of China Detects and Blocks Fully Encrypted Traffic |
-| 中文标题 | 中国防火长城如何检测和阻断全加密流量 |
-| 作者 | Mingshi Wu (GFW Report), Jackson Sippe (CU Boulder), Danesh Sivakumar (UMD), Jack Burg (UMD), Peter Anderson (Independent), Xiaokang Wang (V2Ray), Kevin Bock (UMD), Amir Houmansadr (UMass Amherst), Dave Levin (UMD), Eric Wustrow (CU Boulder) |
-| 年份 | 2023 |
-| 会议/期刊 | USENIX Security 2023 (第32届USENIX安全研讨会) |
-| 研究方向 | [[censorship-circumvention]], [[encrypted-traffic-analysis]], [[tunnel-detection]] |
-| 任务类型 | 审查机制逆向分析、全加密流量检测规则推断、规避策略设计 |
-| 方法关键词 | popcount熵检测、可打印ASCII豁免、协议指纹豁免、概率性阻断、残余审查 |
-| 数据集 | CU Boulder 40Gbps网络Tap (17亿连接)、10% IPv4互联网扫描 (550万IP)、中国腾讯云/阿里云VPS |
-| 是否开源 | 是 — https://gfw.report/publications/usenixsecurity23/en |
-| PDF | — |
-| MinerU Markdown | 02-parsed-markdown/2023-USENIX-How_the_Great_Firewall_of_China_Detects_and_Blocks_Fully_Encrypted_Traffic.md |
+| 项目              | 内容                                                                                                                                                                                                                                                |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 原文标题            | How the Great Firewall of China Detects and Blocks Fully Encrypted Traffic                                                                                                                                                                        |
+| 中文标题            | 中国防火长城如何检测和阻断全加密流量                                                                                                                                                                                                                                |
+| 作者              | Mingshi Wu (GFW Report), Jackson Sippe (CU Boulder), Danesh Sivakumar (UMD), Jack Burg (UMD), Peter Anderson (Independent), Xiaokang Wang (V2Ray), Kevin Bock (UMD), Amir Houmansadr (UMass Amherst), Dave Levin (UMD), Eric Wustrow (CU Boulder) |
+| 年份              | 2023                                                                                                                                                                                                                                              |
+| 会议/期刊           | USENIX Security 2023 (第32届USENIX安全研讨会)                                                                                                                                                                                                            |
+| 研究方向            | [[censorship-circumvention]], [[encrypted-traffic-analysis]], [[tunnel-detection]]                                                                                                                                                                |
+| 任务类型            | 审查机制逆向分析、全加密流量检测规则推断、规避策略设计                                                                                                                                                                                                                       |
+| 方法关键词           | popcount熵检测、可打印ASCII豁免、协议指纹豁免、概率性阻断、残余审查                                                                                                                                                                                                          |
+| 数据集             | CU Boulder 40Gbps网络Tap (17亿连接)、10% IPv4互联网扫描 (550万IP)、中国腾讯云/阿里云VPS                                                                                                                                                                                |
+| 是否开源            | 是 — https://gfw.report/publications/usenixsecurity23/en                                                                                                                                                                                           |
+| PDF             | —                                                                                                                                                                                                                                                 |
+| MinerU Markdown | 02-parsed-markdown/2023-USENIX-How_the_Great_Firewall_of_China_Detects_and_Blocks_Fully_Encrypted_Traffic.md                                                                                                                                      |
 
 ---
 
@@ -86,11 +86,11 @@ Our understanding of the GFW's new censorship mechanism helps us derive several 
 
 ### 3.2 现有方法的痛点和不足
 
-| 痛点 | 描述 | 位置 |
-|---|---|---|
-| 全加密协议的"不可检测"假设被打破 | 业界认为全加密流量无指纹可言，但GFW找到了替代检测路径 | §1 |
-| 主动探测防御失效 | Shadowsocks等已部署抗探测设计（自2020年9月起有效），但新封锁完全基于被动分析 | §2.2 |
-| 对GFW检测机制一无所知 | 反审查社区无法设计有效的规避策略，因为不了解检测规则 | §1 |
+| 痛点                | 描述                                                          | 位置   |
+| ----------------- | ----------------------------------------------------------- | ---- |
+| 全加密协议的"不可检测"假设被打破 | 业界认为全加密流量无指纹可言，但GFW找到了替代检测路径                                | §1   |
+| 主动探测防御失效          | Shadowsocks等已部署抗探测设计（自2020年9月起有效），但新封锁完全基于被动分析              | §2.2 |
+| 对GFW检测机制一无所知      | 反审查社区无法设计有效的规避策略，因为不了解检测规则                                  | §1   |
 | 已有的被动分析研究停留在PoC阶段 | Wang et al. (2015)、Zhixin Wang (2017)等仅提出概念验证，未分析GFW实际部署的系统 | §2.1 |
 
 ### 3.3 论文的研究假设或核心直觉
@@ -99,20 +99,20 @@ GFW并非直接识别"全加密流量"（这在计算上很困难），而是采
 
 ### 3.4 问题发现路径
 
-| 阶段 | 内容 | 证据来源 |
-|---|---|---|
-| 现象观察 | 2021年11月6日起，中国用户报告Shadowsocks/VMess服务器被封锁；11月8日Outline使用量骤降 | §1, [10], [69] |
-| 痛点提炼 | 这是首次纯被动检测全加密流量，此前的主动探测防御措施完全失效 | §1, §2.2 |
-| 问题转化 | 从"为什么被封"的工程问题转化为"GFW如何在被动模式下区分全加密流量与正常流量"的科学问题 | §1 |
-| 文献定位 | 已有被动分析研究（Wang 2015, Zhixin Wang 2017, Alice et al. 2020）仅关注概念验证或单一协议，未系统逆向GFW实际部署的检测规则 | §2.1 |
+| 阶段   | 内容                                                                                     | 证据来源           |
+| ---- | -------------------------------------------------------------------------------------- | -------------- |
+| 现象观察 | 2021年11月6日起，中国用户报告Shadowsocks/VMess服务器被封锁；11月8日Outline使用量骤降                            | §1, [10], [69] |
+| 痛点提炼 | 这是首次纯被动检测全加密流量，此前的主动探测防御措施完全失效                                                         | §1, §2.2       |
+| 问题转化 | 从"为什么被封"的工程问题转化为"GFW如何在被动模式下区分全加密流量与正常流量"的科学问题                                         | §1             |
+| 文献定位 | 已有被动分析研究（Wang 2015, Zhixin Wang 2017, Alice et al. 2020）仅关注概念验证或单一协议，未系统逆向GFW实际部署的检测规则 | §2.1           |
 
 ### 3.5 科学假设形成
 
-| 假设 | 具体内容 | 推导依据 | 验证方式 |
-|---|---|---|---|
-| 核心假设 | GFW使用基于排除法的启发式规则而非机器学习模型来检测全加密流量 | 全加密流量"看起来像随机"的特性可用简单统计量（比特比例、ASCII比例）区分 | 构造满足/违反各规则的探测载荷，观察GFW反应 |
-| 辅助假设1 | GFW仅分析TCP连接的第一个数据包 | 全加密流量从第一个字节即加密，无需重组多包 | 分两包发送测试数据（第一包低熵+第二包高熵），观察是否阻断 |
-| 辅助假设2 | GFW采用概率性阻断而非确定性阻断 | 可能为降低误报的附带损害和减少计算开销 | 对同一载荷重复25次连接，统计阻断概率 |
+| 假设    | 具体内容                             | 推导依据                                    | 验证方式                          |
+| ----- | -------------------------------- | --------------------------------------- | ----------------------------- |
+| 核心假设  | GFW使用基于排除法的启发式规则而非机器学习模型来检测全加密流量 | 全加密流量"看起来像随机"的特性可用简单统计量（比特比例、ASCII比例）区分 | 构造满足/违反各规则的探测载荷，观察GFW反应       |
+| 辅助假设1 | GFW仅分析TCP连接的第一个数据包               | 全加密流量从第一个字节即加密，无需重组多包                   | 分两包发送测试数据（第一包低熵+第二包高熵），观察是否阻断 |
+| 辅助假设2 | GFW采用概率性阻断而非确定性阻断                | 可能为降低误报的附带损害和减少计算开销                     | 对同一载荷重复25次连接，统计阻断概率           |
 
 **假设验证结果**：
 
@@ -471,11 +471,11 @@ GFW对从中国发出的TCP连接的第一个数据包(pkt)应用以下规则，
 
 ### 13.5 写作风格与可迁移写法
 
-| 维度 | 本文做法 | 可迁移的写作模式 |
-|---|---|---|
-| 开篇方式 | 从具体突发事件切入（2021年11月封锁），制造研究紧迫性 | "事件驱动"型开篇，适用于安全/审查领域 |
-| Gap 提出方式 | "The anti-censorship community to ask how detection was possible" — 社区困惑即Gap | 将社区未解之谜直接转化为研究问题 |
-| 方法论证逻辑 | 黑盒逆向：构造探测 -> 观察反应 -> 归纳规则 -> 大规模验证 | "侦探式"论证，适用于逆向分析类研究 |
-| 实验组织逻辑 | 每条规则独立验证 + 规则间交叉验证 + 真实流量总验证 | 逐条推断+整体验证的两层结构 |
-| 局限性讨论方式 | 坦诚承认规则完备性不确定，但用Tap验证间接证明覆盖率 | "无法完全证明，但提供强证据"的务实态度 |
-| 最值得借鉴的一句话/一段结构 | "instead of directly defining what fully encrypted traffic is, the censor applies crude but efficient heuristics to exempt traffic" — 一句话概括核心洞察 | 用"反向定义"的修辞手法突出方法论创新 |
+| 维度             | 本文做法                                                                                                                                            | 可迁移的写作模式             |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| 开篇方式           | 从具体突发事件切入（2021年11月封锁），制造研究紧迫性                                                                                                                   | "事件驱动"型开篇，适用于安全/审查领域 |
+| Gap 提出方式       | "The anti-censorship community to ask how detection was possible" — 社区困惑即Gap                                                                    | 将社区未解之谜直接转化为研究问题     |
+| 方法论证逻辑         | 黑盒逆向：构造探测 -> 观察反应 -> 归纳规则 -> 大规模验证                                                                                                              | "侦探式"论证，适用于逆向分析类研究   |
+| 实验组织逻辑         | 每条规则独立验证 + 规则间交叉验证 + 真实流量总验证                                                                                                                    | 逐条推断+整体验证的两层结构       |
+| 局限性讨论方式        | 坦诚承认规则完备性不确定，但用Tap验证间接证明覆盖率                                                                                                                     | "无法完全证明，但提供强证据"的务实态度 |
+| 最值得借鉴的一句话/一段结构 | "instead of directly defining what fully encrypted traffic is, the censor applies crude but efficient heuristics to exempt traffic" — 一句话概括核心洞察 | 用"反向定义"的修辞手法突出方法论创新  |

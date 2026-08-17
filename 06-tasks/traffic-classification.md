@@ -9,7 +9,7 @@ tags:
   - deep-learning
   - network-security
 created: "2026-05-27"
-updated: "2026-06-15"
+updated: "2026-08-17"
 ---
 
 # Traffic Classification
@@ -98,10 +98,16 @@ updated: "2026-06-15"
 | TraGe: A Generic Packet Representation for Traffic Classification Based on Header-Payload Differences | 2025 | Field-level Masking (header) + Random Masking (payload) + Dynamic Masking | ISCX-VPN, USTC-TFC, CIC-IoT | 根据 header/payload 字节分布差异进行差异化预训练，应用分类 F1 超越 SOTA 6.97% — `[[2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences]]` |
 | ASNet: Bottom Aggregating, Top Separating | 2025 | WSA 无参数词义聚合 + CSS 类别约束语义分离 + Task-aware Prompts | ISCXVPN, USTC-TFC, CICIoT, ISCXTor, CHNAPP | 无需预训练即在 5 数据集 7 任务上达 SOTA，WSA 使类间高频词重叠降低 36% — `[[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]]` |
 | TrafficGPT: Breaking the Token Barrier for Efficient Long Traffic Analysis and Generation | 2024 | 线性注意力 GPT + 可逆 Tokenization | CrossPlatform, ISCX-VPN, USTC-TFC, ISCX-Tor, CICIoT | 突破 512 token 限制至 12K，分类平均 F1 提升 2%，同时支持 pcap 生成 — `[[2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation]]` |
-| NetMamba: Efficient Network Traffic Classification via Pre-training Unidirectional Mamba | 2024 | 单向 Mamba + MAE 预训练 + Stride-based 表示 | CrossPlatform, ISCXTor, ISCXVPN, CICIoT, USTC-TFC | 首个将 Mamba 应用于流量分类，2.2M 参数，推理速度比 Transformer 快 60 倍，6 数据集准确率均超 90% — `[[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]` |
+| NetMamba: Efficient Network Traffic Classification via Pre-training Unidirectional Mamba | 2024 | 单向 Mamba + MAE 预训练 + Stride-based 表示 | CrossPlatform, ISCXTor, ISCXVPN, CICIoT, USTC-TFC | 首个将 Mamba 应用于流量分类，2.2M 参数，推理速度比 Transformer 快 60 倍，6 数据集准确率均超 90% — `[[2024-ICNP-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]` |
 | TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification | 2026 | DFA 范式（解耦-过滤-聚合）+ 稀疏 MoE + 不确定性感知过滤 | CSTNET-TLS1.3, ISCX-Tor, CIC-IoT, USTC-TFC, ISCX-VPN | 首个在加密流量分类中引入异质性感知 MoE，6 数据集一致超越 baseline，ISCX-Tor 上 F1=97.65%（+6.49%） — `[[2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification]]` |
 | High-Precision and Efficient Anonymous Traffic Classification (SequOcc) | 2025 | SequOcc 预处理（Stream Merging + Pixelization）+ CNN | ISCX-Tor, Cross-Platform, 骨干网数据集 | 首个真实骨干网匿名流量数据集；预处理速度提升 54.55%；数据量减少 27.4%；满足实时部署需求 — `[[2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World]]` |
 | Learning Flow Semantics via Contrastive Pre-training for Encrypted Traffic Analysis | 2026 | 包级+流级对比预训练 + 流量特定数据增强 + 后训练策略 | USTC-TFC2016, ISCX-VPN, ISCX-Tor, CSTNET-TLS1.3, CIC-IDS2017 | 双层对比预训练全面超越 ET-BERT 等方法，性能提升 >50%；四种流量特定数据增强策略有效；后训练策略解决预训练-微调兼容性 — `[[2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach]]` |
+| [[2025-AAAI-Revolutionizing_Encrypted_Traffic_Classification_with_MH-Net__A_Multi-View_Heterogeneous_Graph_Model]] | 2025 | 多视图异构图 + 对比学习 + 多任务学习 | CIC-IoT, ISCX-VPN, ISCX-NonVPN, ISCX-Tor, ISCX-NonTor | 流级与包级加密流量分类的高精度多视图异构图表征 |
+| [[2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Traffic_Analysis_Applications]] | 2025 | 数据平面通用特征提取（GPV/MGPV + 流式算法 + ILP 放置） | MAWI-IXP, ENTERPRISE, CAMPUS, Kitsune/N-BaIoT traces | 可编程交换机/SmartNIC 上为 ML 流量分析应用提供灵活特征提取 |
+| [[2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane]] | 2025 | sketch 特征提取（Count-Min sketch + 幻影解码 + 量化）+ 1-D CNN | CAIDA, Facet CSC, CIC-DDoS, ISCX botnet, CTC | 数据平面上以极低开销生成高质量每流特征 |
+| [[2026-Cybersecurity-Application_of_tabular_transformer_architectures_for_operating_system_fingerprinting]] | 2026 | 表格化 Transformer（自注意力 + 表格特征） | DAT1 (IPFIX), DAT2 (自采), DAT3 (Nmap 合成) | 表格特征 + Transformer 的操作系统指纹识别 |
+| [[2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_detection_in_multi-environment_networks]] | 2026 | 仿真驱动统一框架（PLS + ETC + RNN-LSTM 迁移） | M-En (IoT23 + CICDDoS2019 融合) | 多网络环境下实时恶意流量分类 |
+| [[2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network]] | 2026 | 上下文感知流嵌入（DBSCAN + 对比学习 + 伪标签） | MAWI, CICIDS-2017, UNSW-NB15 | 上下文感知嵌入增强 IoT 流量检测 |
 
 ## 7. 工程落地问题
 

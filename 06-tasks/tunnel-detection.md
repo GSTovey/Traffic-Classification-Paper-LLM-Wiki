@@ -4,7 +4,7 @@ name: "Encrypted Tunnel Detection"
 aliases: ["加密隧道检测", "Tunnel Traffic Analysis", "VPN/SSH Tunnel Detection"]
 tags: [tunnel-detection, encrypted-tunnel, SSH, VPN, HTTPS-proxy, traffic-separation, statistical-fingerprint]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-08-17"
 ---
 
 # Encrypted Tunnel Detection（加密隧道检测）
@@ -95,6 +95,9 @@ Encrypted Tunnel Detection（加密隧道检测）是指识别网络流量中使
 - Hartl：LSTM + beam search 的加密隧道流量分离，98% 准确率 — `[[2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic]]`
 - MM4flow：多模态预训练基础模型在加密隧道任务上的强大泛化能力 — `[[2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis]]`
 - OpenVPN Fingerprinting：Opcode + ACK 双指纹 + 主动探测的两阶段 VPN 检测框架，ISP 规模下 85%+ 识别率，误报率 < 0.0039%，可应对 XOR 混淆和大多数隧道混淆 — `[[2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting]]`
+- [[2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneous_information_network]]：异构信息网络（HIN + 元路径 + HAN）建模增强混淆 HTTPS 隧道检测
+- [[2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection]]：对抗鲁棒的两层住宅代理检测，突破 RTT 特征局限
+- [[2025-TDSC-QuicCourier__Leveraging_the_Dynamics_of_QUIC-_Based_Website_Browsing_Behaviors_Through_Proxy_for_Covert_Communication]]：利用 QUIC 浏览行为动力学构建隐蔽信道，规避流量分类检测
 
 ## 7. 工程落地问题
 

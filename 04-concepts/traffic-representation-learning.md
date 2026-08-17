@@ -11,7 +11,7 @@ tags:
   - pre-training
   - traffic-classification
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-08-17"
 ---
 
 # Traffic Representation Learning（流量表示学习）
@@ -42,7 +42,7 @@ Traffic Representation Learning 是指将原始网络流量数据（字节序列
 | **Header-Payload 差异化表示** | 区分 header（连续字节序列）和 payload（非连续字节序列），分别采用 Field-level Masking 和 Random Masking 学习差异化表示 | 充分利用协议结构先验知识；Dynamic Masking 防止过拟合；通用表示可迁移到多种任务 | 依赖 header/payload 分离的准确性 | TraGe (IWQoS 2025) |
 | **无参数词义聚合表示（Word Sense Aggregation）** | 通过无参数聚合器（WSA）将 BERT 的 WordPiece 子词聚合为完整字节级词义，保持流量数据的完整语义信息 | 无需预训练；WSA 保持完整词义避免 WordPiece 破坏；配合 CSS 实现语义空间显式分离 | 仍依赖预训练 BERT 的通用语言知识作为初始化 | ASNet (TIFS 2025) |
 | **异质性感知双分支 MoE 表示** | 将 header 和 payload 解耦为双分支，各分支使用稀疏 Mixture-of-Experts 进行模态特定建模，不确定性感知过滤抑制高方差 token，条件聚合动态融合 | 显式解耦确定性协议逻辑与随机加密噪声；自适应加权不同模态贡献 | MoE 路由可解释性有限；计算开销较单分支模型高 | TrafficMoE (arXiv 2026) |
-| **跨模态语义对齐表示** | 通过双编码器架构将加密流量和网页语义逻辑映射到共享嵌入空间，使用对比学习和结构感知增强训练 | 零样本泛化能力；不依赖目标类别流量数据；天然支持 open-world | 依赖辅助模态（浏览器日志）数据采集；表示质量受逻辑模态粒度影响 | STAR (arXiv 2025) |
+| **跨模态语义对齐表示** | 通过双编码器架构将加密流量和网页语义逻辑映射到共享嵌入空间，使用对比学习和结构感知增强训练 | 零样本泛化能力；不依赖目标类别流量数据；天然支持 open-world | 依赖辅助模态（浏览器日志）数据采集；表示质量受逻辑模态粒度影响 | STAR (INFOCOM 2026) |
 | **可逆 token 自回归表示** | 开发可逆 token 表示方法实现 pcap 文件与 token 序列的双向映射，结合线性注意力机制支持 12K+ token 长度 | 天然支持生成任务（流量生成、数据增强）；突破传统 512 token 长度限制 | 自回归建模对双向上下文利用不如 BERT 类充分 | TrafficGPT (arXiv 2024) |
 
 ## 4. 相关方法
@@ -85,10 +85,15 @@ Traffic Representation Learning 是指将原始网络流量数据（字节序列
 | TraGe (IWQoS) | 2025 | 基于 header-payload 差异的通用数据包表示，Field-level Masking 和 Dynamic Masking 差异化预训练，超越 SOTA 最高 6.97% | 依赖 header/payload 分离的准确性 |
 | ASNet (TIFS) | 2025 | 无参数词义聚合器（WSA）保持完整字节级词义，配合类别约束语义分离器（CSS）显式分离不同类别语义空间，无需预训练即达 SOTA | 仍依赖预训练 BERT 作为初始化 |
 | TrafficMoE (arXiv) | 2026 | 提出 Disentangle-Filter-Aggregate 范式：双分支稀疏 MoE 解耦 header/payload 进行模态特定建模，不确定性感知过滤抑制加密噪声，条件聚合动态融合跨模态特征；6 个数据集一致超越 SOTA | MoE 路由可解释性有限 |
-| STAR (arXiv) | 2025 | 首次将 WF 定义为零样本跨模态检索问题，双编码器对齐加密流量与网页语义逻辑表示；对比学习+结构感知增强训练；1,600 个未见网站 top-1 87.9%，AUC 0.963 | 依赖浏览器日志采集逻辑模态；单浏览器评估 |
+| STAR (INFOCOM) | 2025 | 首次将 WF 定义为零样本跨模态检索问题，双编码器对齐加密流量与网页语义逻辑表示；对比学习+结构感知增强训练；1,600 个未见网站 top-1 87.9%，AUC 0.963 | 依赖浏览器日志采集逻辑模态；单浏览器评估 |
 | Bias in the Shadows / BiasSeeker (arXiv) | 2026 | 首个模型无关、数据驱动的捷径学习检测框架；通过统计互信息分析在原始二进制流量上检测数据集特定捷径特征；提出捷径特征分类体系和类别特定验证策略；19 个数据集验证 | 仅提供检测框架，未直接提升表示质量 |
 | TrafficGPT (arXiv) | 2024 | 可逆 token 表示方法实现 pcap 文件双向映射；线性注意力机制将 token 长度从 512 扩展到 12,032；首个同时支持流量分类和生成的预训练模型 | 自回归建模对双向上下文利用不充分 |
 | NetMamba+ (ICNP/arXiv) | 2026 | 在 NetMamba 基础上引入 Mamba+Flash Attention 双骨干、多模态流量表示和标签分布感知微调（LDA）；F1 最高提升 6.44%，推理吞吐量比最佳 baseline 高 1.7 倍 | 分布偏移敏感；预训练需 4 块 A100 |
+| MH-Net (AAAI) | 2025 | 多视图异构图流量表征：PMI 图构建 + 多视图融合 + 对比学习辅助 | 图构建与多视图融合计算开销较高 |
+| LitCVit (TIFS) | 2026 | 轻量级视觉 Transformer 流量表征（卷积 patchify stem + 窗口分解注意力），图像化流量输入 | 图像化表示对超长流适应性有限 |
+| FlowXpert (TMC) | 2026 | 上下文感知的流嵌入（DBSCAN 聚类 + 对比学习 + 伪标签），增强 IoT 流量表征 | 依赖上下文特征可获取性 |
+| ConMD (TIFS) | 2026 | 上下文掩码蒸馏表征，在零阳性异常检测中建模正常流量上下文 | 蒸馏训练开销较高 |
+| SketchFeature (NDSS) | 2025 | 面向安全感知数据平面的 sketch 每流特征提取（Count-Min sketch + 幻影解码 + 量化），以极低开销生成高质量流特征 | sketch 结构存在近似误差 |
 
 ## 7. 当前共识
 

@@ -9,7 +9,7 @@ tags:
   - traffic-analysis
   - pre-training
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-08-17"
 ---
 
 # Transformer
@@ -84,6 +84,11 @@ Transformer 是一种完全基于 Self-Attention 机制的序列建模架构，�
 | Session-Transformer (JIoT 2025) | 2025 | 修改 Transformer encoder 作为特征提取器 + DNN 分类器 | 针对加密恶意流量检测，将 Transformer encoder 作为 Session 级特征提取器自动学习 TLS 流量的上下文关联和时序特征，结合 DNN 分类器；DataCon2020 召回率达 98.34% |
 | TrafficGPT (arXiv 2024) | 2024 | GPT-style Decoder-only Transformer，线性注意力机制，12K token 容量 | 通过线性注意力将 token 长度从 512 扩展到 12,032，结合可逆 token 表示实现 pcap ↔ token 双向映射；使用 GPT-style 自回归预训练（next token prediction）在 189GB 流量数据上训练；同一模型同时支持分类（平均 F1 提升 2%）和流量生成（判别器 F1 接近随机猜测）；24 层、12 头、隐藏维度 512 |
 | NetMamba+ NetTrans (arXiv 2026) | 2026 | Flash Attention 2 + Pre-norm + GeGLU FFN 的高效 Transformer 变体 | 作为 NetMamba+ 框架中与 NetMamba block 并列的骨干选项；Flash Attention 2 通过 IO-aware tiling 降低内存访问；GeGLU FFN 替代标准 ReLU FFN 提升分类精度；在 Huawei-VPN 真实数据集上准确率达 94.5%，超越 ET-BERT 和 YaTC |
+| LitCVit (TIFS 2026) | 2026 | ViT + 自监督对比预训练（windowed factorized attention + 卷积 patchify stem） | 轻量级对比视觉 Transformer，图像化流量表征用于加密恶意流量检测 |
+| Tabular Transformer for OS Fingerprinting (Cybersecurity 2026) | 2026 | 表格化 Transformer（自注意力应用于表格特征） | 将操作系统指纹识别建模为表格分类任务，在 IPFIX/自采/Nmap 流量上实现 OS 指纹识别 |
+| DTPN (WSDM 2025) | 2025 | UNetFormer（Transformer 骨干）扩散模型 | 扩散净化网络从 WF 防御扰动流量中重建纯净流量表示 |
+| Beyond RTT (NDSS 2026) | 2026 | 自注意力 Transformer 流关联（CorrTransform 相关性特征） | 相关性特征提取用于住宅代理检测 |
+| DawnGuard (TIFS 2026) | 2026 | Vision Transformer 骨干 + 多流时序图特征 | 早期加密恶意流量检测 |
 
 ## 9. 与其他方法的比较
 

@@ -3,7 +3,7 @@ type: research-front
 question: "预训练范式在流量分析中是否必要？在什么条件下必要？"
 status: diverging
 created: "2026-06-21"
-last_updated: "2026-06-21"
+last_updated: "2026-08-17"
 related_concepts:
   - "[[traffic-foundation-model]]"
   - "[[traffic-representation-learning]]"
@@ -30,15 +30,24 @@ related_methods:
 | 2025 | ASNet | TIFS | 反对（有替代路径） | 不使用任何预训练，在 5 个数据集 / 7 个任务上达到 SOTA，通过 WSA+CSS 模块直接利用 BERT 已有的通用语言知识 | 高（多数据集多任务） | 反对 |
 | 2025 | MM4flow | CCS | 支持预训练 | TB 级（77.6 TB）预训练带来显著性能增益，数据多样性比模型复杂度更重要 | 中 | 支持 |
 | 2026 | TrafficMoE | arXiv | 支持预训练 | 去除预训练后 F1 下降 24.4%；MoE 路由机制在无预训练时失效 | 中 | 支持 |
+| 2025 | MH-Net | AAAI | 反对（无预训练替代路径） | 多视图异构图 + 任务内监督对比学习，无需任何预训练即在 5 数据集流级/包级 Avg. Rank 均第一；消融 w/o L_FCL 0.9896→0.9767——辅助目标仍有价值 | 中（per-flow 分层抽样，无 seed 细节） | 反对 |
+| 2026 | Where Do Flow Semantics Reside | arXiv | 支持（对齐式预训练） | 冻结编码器下模态对齐预训练（协议原生表格 51.3%）远超生成式字节级预训练（ET-BERT 4.6%）；但全量微调 83.8% 仍低于 2.85B 参数 netFound 89.7% | 高（frozen encoder + 字段级消融） | 支持（收益取决于目标-模态对齐） |
+| 2026 | Tabular Transformer for OS FP | Cybersecurity (Springer) | 反对（无预训练替代路径） | FT-Transformer 完全无预训练：DAT1 family 90.69/90.80 优于 RF 88.42/87.93；参数仅 6.6 万–49.6 万 vs TabT 6580 万–5.2 亿；推理 <0.07ms/流、T4 32,290 流/秒 | 中（DAT2/DAT3 自采或合成） | 反对 |
 
 ## 当前共识方向
 
 **主流观点支持预训练，但存在有效替代路径**：
 
-- **支持方**（4 篇，ET-BERT/NetMamba/TrafficGPT/MM4flow/TrafficMoE）：预训练带来 24-38% 的 F1 提升，且对复杂架构（MoE）的功能性至关重要。数据规模和多样性比模型复杂度更重要。
+- **支持方**（ET-BERT/NetMamba/TrafficGPT/MM4flow/TrafficMoE）：预训练带来 24-38% 的 F1 提升，且对复杂架构（MoE）的功能性至关重要。数据规模和多样性比模型复杂度更重要。
 - **替代路径**（ASNet TIFS 2025）：通过领域适配模块（WSA 词义聚合 + CSS 语义分离）复用 BERT 已有的通用语言知识，无需额外预训练即可 SOTA。但本质是 transfer learning，而非完全从零学习。
 
-**关键洞察**：预训练的必要性取决于架构复杂度——简单适配方法可能无需额外预训练，但复杂架构（MoE、大规模 Transformer）强烈依赖预训练来初始化路由机制和特征表示。
+**2026 批次演化**：替代路径再获两篇佐证，争论焦点从"要不要预训练"细化为"预训练/辅助目标的收益是否超过其成本"：
+
+1. **无预训练模型在中小任务上可竞争**：MH-Net（任务内监督对比学习，无预训练，5 数据集 Avg. Rank 均第一）与 FT-Transformer（完全无预训练，DAT1 90.69/90.80 优于 RF）——预训练不再是达到 SOTA 的必要条件
+2. **预训练价值取决于目标-模态对齐而非规模**：FlowSem 冻结评估显示模态对齐预训练（51.3%）远超生成式字节级预训练（ET-BERT 4.6%）；但全量微调 83.8% 仍低于 2.85B 参数 netFound——预训练目标与下游任务的对齐程度比数据规模更能预测收益
+3. **"预训练"与"任务内辅助目标"边界模糊**：MH-Net 去除流级对比学习（w/o L_FCL）F1 0.9896→0.9767——辅助目标带来收益，但无需独立的大规模预训练阶段
+
+**关键洞察（更新）**：预训练的必要性取决于架构复杂度、任务规模与目标对齐——简单适配/任务内辅助目标（ASNet、MH-Net、FT-Transformer）无需额外预训练即可 SOTA；复杂架构（MoE、大规模 Transformer）仍依赖预训练初始化；且预训练目标与下游模态对齐时收益最大。
 
 ## 研究空白
 

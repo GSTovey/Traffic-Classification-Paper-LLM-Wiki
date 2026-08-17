@@ -4,7 +4,7 @@ name: "Traffic Representation"
 aliases: ["流量表示", "Traffic Encoding", "Traffic Embedding"]
 tags: [traffic-representation, tokenization, pre-training, multi-level, shortcut-learning, data-leakage]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-08-17"
 ---
 
 # Traffic Representation（流量表示）
@@ -125,11 +125,15 @@ Traffic Representation（流量表示）是指将原始二进制网络流量数�
 - Sweet Danger：揭示流量表示中的 per-packet split 数据泄露和 shortcut learning 问题 — `[[2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification]]`
 - GraphDApp：TIG 图结构表示，从四个维度保留流量特征 — `[[2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks]]`
 - MM4flow：多模态表示（payload byte stream + packet length sequence），byte-level 优于 2-gram — `[[2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis]]`
-- Talk Like a Packet：系统分类流量基础模型的输入表示方案 — `[[2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models]]`
+- Talk Like a Packet：系统分类流量基础模型的输入表示方案 — `[[2026-CommMag-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models]]`
 - FlowPic：2D 直方图图像化表示，将流的包大小和到达时间转化为二维图像 — `[[2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition]]`
 - MIETT：多实例 packet 级表示，Two-Level Attention 分层建模 token/packet 关系 — `[[2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification]]`
 - TraGe：Header-Payload 差异化表示，Field-level Masking + Dynamic Masking — `[[2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences]]`
 - ASNet：词义聚合表示，WSA 无参数聚合恢复被 WordPiece 拆分的完整词义 — `[[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]]`
+- [[2025-AAAI-Revolutionizing_Encrypted_Traffic_Classification_with_MH-Net__A_Multi-View_Heterogeneous_Graph_Model]]：多视图异构图表征（PMI 图 + 多视图融合 + 对比学习）
+- [[2026-TIFS-LitCVit__A_Lightweight_Self-Supervised_Contrastive_Vision_Transformer_for_Encrypted_Malicious_Traffic_Detection]]：轻量级视觉 Transformer 图像化流量表征
+- [[2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network]]：上下文感知流嵌入（对比学习增强）
+- [[2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection]]：上下文掩码蒸馏的流量上下文表征
 
 ## 7. 工程落地问题
 

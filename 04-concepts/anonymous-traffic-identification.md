@@ -14,7 +14,7 @@ tags:
   - network-security
   - privacy
 created: "2026-06-15"
-updated: "2026-06-15"
+updated: "2026-08-17"
 ---
 
 # Anonymous Traffic Identification（匿名流量识别）
@@ -73,6 +73,11 @@ updated: "2026-06-15"
 |---|---:|---|---|
 | **AN-Net: an Anti-Noise Network for Anonymous Traffic Classification** (Xu et al., WWW) | 2024 | 提出短期表征 + 高温自注意力 + 多模态融合，针对 Tor 匿名网络的双重噪声问题（irrelevant packet noise + per-packet attribute noise），SJTU-AN21 F1 提升至 94.39% | 假设短期包更可能来自同一流；高温参数 tau 需要调优 |
 | **High-Precision and Efficient Anonymous Traffic Classification in the Real-World Network Environment** (Xie et al., TON) | 2025 | 提出 SequOcc 预处理方法（Stream Merging + Pixelization），将预处理时间降低 54.55%，首次提出真实骨干网匿名流量数据集 | 分类精度略有下降；骨干网数据集不可公开 |
+| **DTPN: A Diffusion-based Traffic Purification Network for Tor Website Fingerprinting** (WSDM 2025) | 2025 | 基于扩散模型的 Tor WF 流量净化网络，从噪声/防御扰动流量中恢复纯净模式，提升匿名网络上的流量分析效果 | 扩散模型推理开销较大 |
+| **FMWF: Beyond Single Tabs — Few-Shot Multi-Tab Website Fingerprinting** (WWW 2025) | 2025 | 少样本多标签页 WF 攻击，适应匿名网络中多标签并发浏览场景 | 多标签组合空间大，极端少样本受限 |
+| **Website Fingerprinting Techniques Over Tor Network: A Survey** (Access 2026) | 2026 | 系统综述 Tor 网络上的 WF 攻击与防御技术 | 综述性质，未提出新方法 |
+| **QuicCourier: Covert Communication via QUIC Browsing Behaviors Through Proxy** (TDSC 2025) | 2025 | 利用 QUIC 浏览行为动力学经代理构建隐蔽信道，可规避匿名/代理场景下的流量分类检测 | 隐蔽容量有限 |
+| **Defending against Traffic Analysis Attacks with Flexible In-Network Obfuscation** (Securitas, NSDI 2026) | 2026 | 网内灵活流量混淆（分包 + 虚拟包注入 + ICMP 回复 + P4 数据平面），抵御针对匿名与加密流量的流量分析攻击 | 需交换机/网元支持 |
 
 ## 7. 当前共识
 

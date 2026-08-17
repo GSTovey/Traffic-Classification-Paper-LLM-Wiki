@@ -4,7 +4,7 @@ name: "Network Anomaly Detection"
 aliases: ["网络异常检测", "Anomaly Detection", "Malicious Traffic Detection"]
 tags: ["network-security", "anomaly-detection", "encrypted-traffic", "intrusion-detection", "open-set-recognition"]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-08-17"
 ---
 
 # Network Anomaly Detection（网络异常检测）
@@ -70,6 +70,8 @@ updated: "2026-05-27"
 | UT-PAB: A Prototypical Alignment Approach to Unknown Traffic Classification Using BERT (JCN 2026) | 2026 | BERT 预训练（SLT + MixTMM）+ 原型对齐微调实现未知流量细粒度分类；H-score 比 SOTA 提升 10.63%~75.34%；去除五元组偏差 | 已知类准确率相对较低；参数量 62.6M；功能相似类别易混淆 |
 | SoK: Decoding the Enigma of Encrypted Network Traffic Classifiers (S&P 2025) | 2025 | 系统化揭示加密流量分类器的过拟合问题；348 次特征遮蔽实验验证 SII、上下文、时间三种过拟合类型；提出 CipherSpectrum 数据集和 12 条最佳实践指南 | 仅评估 2 个模型；CipherSpectrum 为自动化脚本采集 |
 | INCAS: Malicious QUIC C2 Traffic Detection based on Random Forest in Programmable Data Plane (INCAS 2025) | 2025 | 在 P4 可编程交换机上部署 Random Forest + INT 实现微秒级 QUIC C2 检测；路径编码技术将规则复杂度从 O(2^D) 降至 O(L) | 交换机端准确率 82.1%（服务器端 99.83%）；仅使用 Merlin C2 合成数据 |
+| FreeUp: Frequency-Decoupled Anomaly Detection for Encrypted Network Traffic (INFOCOM 2026) | 2026 | 频率解耦的加密流量异常检测：自动编码器 + 高斯滤波分解低频/高频分量，证据学习（NIG 分布）+ 通道-空间注意力动态融合，提升对异常模式的捕获能力与不确定性量化 | 频率分解参数敏感；计算开销较高 |
+| ConMD: Contextual Masking Distillation for Network Traffic Anomaly Detection (TIFS 2026) | 2026 | 上下文掩码蒸馏的零阳性（zero-positive）异常检测：局部-全局窗口注意力 + 上下文增强包掩码 + 多视图异常评分，仅用正常流量训练即可识别异常 | 蒸馏训练开销较高；多视图评分机制复杂 |
 
 ## 7. 当前共识
 

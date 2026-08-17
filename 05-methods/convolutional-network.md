@@ -4,7 +4,7 @@ name: "Convolutional Network"
 aliases: ["CNN", "卷积神经网络", "Convolutional Neural Network"]
 tags: [deep-learning, feature-extraction, traffic-classification, image-based]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-08-17"
 ---
 
 # Convolutional Network（卷积神经网络）
@@ -111,6 +111,8 @@ CNN 在流量分类中主要解决以下问题：
 | Shi et al., "An Efficient Feature Generation Approach Based on Deep Learning and Feature Selection Techniques for Traffic Classification" (Computer Science) | 2018 | 利用基于 DBN 的 RFGM 进行特征生成和降维，将深度学习用于特征优化而非直接分类 | 提出 EFOA 三阶段流程（symmetric uncertainty 去无关特征、DBN-based RFGM 生成鲁棒特征、WSU 去冗余特征），综合解决 feature redundancy、multi-class imbalance 和 concept drift，flow OA 0.978，flow g-mean 0.601 |
 | FlowPic (INFOCOM 2019) | 2019 | 将网络流的包大小和到达时间转化为 2D 直方图图像（FlowPic），使用 LeNet-5 风格 CNN 分类 | 首创将加密流量分类转化为图像识别问题；FlowPic 以到达时间为 X 轴、包大小为 Y 轴构建 1500×1500 二维直方图；仅使用元数据（包大小+到达时间），不依赖 payload，保护隐私；VPN 流量分类准确率 98.4%，应用识别 99.7%；在 Non-VPN 上训练后可泛化分类 VPN 流量（78.9%-99.4%） |
 | Zhang et al., "FGFR-Net: An Improved Residual Network Encrypted Traffic Classification Model Based on Byte-Level Traffic Graphs" (JNSM) | 2026 | 基于改进 ResNet-34 的分类器，结合 GIN 图编码，输入为字节级流量图的特征向量 | 首次将 ResNet-34 引入加密流量分类，引入可变形卷积（DCN）、深度可分离卷积（DSC）和通道注意力机制（CAM），ISCX-VPNnonVPN F1 99.08%，USTC-TFC F1 99.21%，跨数据集泛化 F1 96.13% |
+| HINT (JCN 2025) | 2025 | CNN-LSTM 序列建模 + 异构信息网络（HAN 图注意力） | 结合异构信息网络与 CNN/LSTM 建模混淆 HTTPS 隧道流量 |
+| SketchFeature (NDSS 2025) | 2025 | 1-D CNN 分类器 + sketch 特征（Count-Min sketch + 幻影解码） | sketch 提取的高质量流特征配合 1-D CNN，在安全感知数据平面上检测恶意流量 |
 
 ## 9. 与其他方法的比较
 

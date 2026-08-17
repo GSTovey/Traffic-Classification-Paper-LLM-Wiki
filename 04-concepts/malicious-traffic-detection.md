@@ -4,7 +4,7 @@ name: "Malicious Traffic Detection"
 aliases: ["恶意流量检测", "Malware Traffic Detection", "Malicious Network Traffic Detection"]
 tags: ["network-security", "intrusion-detection", "encrypted-traffic", "machine-learning", "deep-learning"]
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-08-17"
 ---
 
 # Malicious Traffic Detection
@@ -87,6 +87,12 @@ updated: "2026-06-10"
 | Session-Transformer: A Detection Method for Malware Communication Traffic via Encrypted Traffic Analysis (Wei et al., JIoT) | 2025 | 提出基于修改 Transformer encoder 的 Session-Transformer 特征提取 + DNN 分类器，自动提取 TLS 流量的上下文关联和时序特征；ST 特征提取可作为传统 ML 的 plug-in 模块增强性能；DataCon2020 召回率 98.34%，CIC-AndMal-2017 精确率 93.54% | CIC-AndMal-2017 存在 timestamp-high 数据泄漏问题（同一恶意样本的时间戳特征可能泄漏类别信息）；未验证跨数据集泛化 |
 | TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification (He et al., arXiv) | 2026 | 提出 Disentangle-Filter-Aggregate 范式，双分支稀疏 MoE 解耦 header/payload 进行模态特定建模，不确定性感知过滤抑制加密噪声，条件聚合动态融合；在加密流量分类（含恶意流量场景）上 6 个数据集一致超越 SOTA | MoE 路由可解释性有待提升；未专门针对恶意流量设计检测策略 |
 | NetMamba+: A Framework of Pre-trained Models for Efficient and Accurate Network Traffic Classification (Wang et al., ICNP/arXiv) | 2026 | Mamba+Flash Attention 双骨干 + 多模态流量表示 + 标签分布感知微调（LDA）；在 VPN/Tor 流量分类任务上 F1 最高提升 6.44%；4 个 OOD 任务 AUROC 超 94%，具备对未知恶意流量的泛化检测潜力；在线系统吞吐量 261.87 Mb/s | 分布偏移敏感（时序划分准确率下降 8.47%）；未专门验证恶意流量检测场景 |
+| LitCVit (TIFS 2026) | 2026 | 轻量级自监督对比 Vision Transformer（卷积 patchify stem + 窗口分解注意力），将流量转为图像表征，在极小参数量下实现加密恶意流量高精度检测 | 图像化表示对超长流的适应性有限 |
+| DawnGuard (TIFS 2026) | 2026 | 多流时序图学习（Packet Byte Matrix + Multi-Flow Graph Features + ViT），建模多流间时序交互实现加密恶意流量的早期阶段检测与未知恶意软件识别 | 图构建开销较高 |
+| TrustWI (TDSC 2026) | 2026 | 不确定性感知的多视图融合框架（证据深度学习 + Dempster-Shafer 融合），利用预测不确定性衡量各模态置信度，提升加密恶意流量检测的可信度 | 不确定性估计增加计算开销 |
+| Proteus (WWW 2026) | 2026 | 面向可编程交换机（P4）的网内恶意流量检测系统，异构子树划分决策树 + MILP 优化，实现低开销高准确率检测 | 交换机资源约束限制模型复杂度 |
+| M-En (JCN 2026) | 2026 | 基于客户端-服务器仿真的统一检测框架，PLS 交叉分解 + RNN-LSTM 迁移学习，在多网络环境下实现实时恶意流量检测 | 仿真流量与真实流量存在差异 |
+| FlowXpert (TMC 2026) | 2026 | 上下文感知的流嵌入方法（DBSCAN 聚类 + 对比学习 + 伪标签），结合流量上下文信息增强 IoT 网络恶意流量检测 | 依赖上下文特征的可获取性 |
 
 ## 7. 当前共识
 

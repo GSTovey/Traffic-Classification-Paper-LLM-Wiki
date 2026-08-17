@@ -4,7 +4,7 @@ name: "Multi-modal Fusion"
 aliases: ["多模态融合", "跨模态融合", "Cross-Modality Fusion"]
 tags: [multi-modal, feature-fusion, traffic-analysis, deep-learning]
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-08-17"
 ---
 
 # Multi-modal Fusion（多模态融合）
@@ -74,6 +74,9 @@ updated: "2026-06-10"
 | Multi-ARCL (JPDC 2025) | 2025 | SIF 加权词向量（payload 语义）+ 统计特征（packet/flow 级别） | 特征拼接 + CNN 分类器 | 首次在持续学习框架中融合 payload 加密语义（SIF weighted word vectors）和统计特征；SIF 通过词频逆权重降低高频词影响，再减去第一主成分去除共性信息；多模态 F1 0.9356 vs 单模态 F1 0.8141，提升 12.15% |
 | NetMamba+ (arXiv 2026 / ICNP 2024) | 2026 | stride 字节序列 + packet size 序列 + inter-arrival time 序列 | 早期融合（Early Fusion）：正弦编码 + segment indicator + 拼接 | 三种模态通过可插拔多模态嵌入统一：stride 使用线性投影，size 和 interval 使用正弦位置编码保留序列依赖；添加模态特定 segment indicator 区分来源后拼接；预训练时 stride 用 MAE 遮蔽重建，size 用分类重建（CE loss），interval 用回归重建（MSE loss）；消融显示三模态联合在 4/5 数据集上取得最优，CipherSpectrum F1 从 0.8783（仅字节）提升至 0.9652 |
 | TrafficMoE (arXiv 2026) | 2026 | header 字节序列 + payload 字节序列（异质双分支） | 稀疏 MoE 路由 + 不确定性感知过滤 + 条件聚合（CA） | 提出 Disentangle-Filter-Aggregate 范式：header 和 payload 解耦为独立分支，各自使用稀疏 MoE（Top-K 路由）实现模态特定专家激活；不确定性感知过滤（UF）通过跨模态交互矩阵的 Shannon 熵量化 token 可靠性，抑制高熵噪声 token；条件聚合（CA）利用 MoE 路由概率作为隐式条件信号自适应加权跨模态特征；全局 MoE 分支进一步精炼融合表示；消融显示异质 MoE（97.65%）远超同质 MoE（92.21%）和仅 header（75.65%）/仅 payload（45.12%） |
+| TrustWI (TDSC 2026) | 2026 | 多视图特征（图/序列/统计） | 不确定性感知融合（证据深度学习 + Dempster-Shafer） | 不确定性加权的多模态融合，提升加密恶意流量检测可信度 |
+| FreeUp (INFOCOM 2026) | 2026 | 低频/高频频率分量 | 频率解耦动态融合（通道-空间注意力） | 频率分解多域特征融合的加密流量异常检测 |
+| MH-Net (AAAI 2025) | 2025 | 多视图流量特征（PMI 图视图等） | 多视图融合 + 对比学习辅助 | 多视图异构图表征融合的加密流量分类 |
 
 ## 9. 与其他方法的比较
 

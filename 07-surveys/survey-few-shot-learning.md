@@ -58,7 +58,7 @@ updated: "2026-05-27"
   - 将流量和网站逻辑内容映射到同一语义空间
   - 零样本能力：无需目标网站的流量训练样本
   - Zero-shot top-1 准确率 87.9%，AUC 0.963
-  - 论文笔记：`[[2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
+  - 论文笔记：`[[2025-INFOCOM-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
 
 ### 3.5 基于开放集半监督学习的方法
 
@@ -100,7 +100,7 @@ updated: "2026-05-27"
 - tFusion (CCS 2025)：拓扑对比学习，0.1% 数据 99.82% — `[[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]]`
 - SmartDetector (TIFS 2025)：SAM + InfoNCE 对比学习 — `[[2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning]]`
 - UT-PAB (JCN 2026)：BERT 预训练 + 原型对齐，H-score 94.77 — `[[2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT]]`
-- STAR (arXiv 2025)：跨模态检索，零样本 WF — `[[2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
+- STAR (INFOCOM 2026)：跨模态检索，零样本 WF — `[[2025-INFOCOM-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
 - FEC-OSL (TIFS 2026)：开放集半监督学习，99.60% AC — `[[2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification]]`
 - Swallow (CCS 2025)：BYOL + CIF，迁移鲁棒 WF — `[[2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]]`
 - YaTC (AAAI 2023)：MAE 预训练，少样本微调 — `[[2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation]]`

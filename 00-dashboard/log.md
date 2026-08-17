@@ -630,3 +630,90 @@ Next steps:
   - 19 papers from other venues with L2 standard analysis
   - Main topics: website fingerprinting (attack + defense), censorship circumvention, encrypted traffic analysis, tunnel detection
   - MinerU API batch parsing: 53/53 success, 0 failures
+
+---
+
+## [2026-06-29] report | Tor-over-Proxy WF iterative research plan
+
+- Added:
+  - [[10-outputs/reports/20260629-Tor-over-Proxy-WF-迭代研究方案]]
+- Updated:
+  - [[00-dashboard/log]]
+- Notes:
+  - 基于最新版流量指纹综述、Tor-over-Proxy 旧方案和多 agent 只读审计结果，重新收敛研究主线。
+  - 淘汰“首次 WF over tunnel”、closed-world 网站分类主线、先复现大模型、旧公开数据集主证据、accuracy-only 等不合适部分。
+  - 新主线定位为 Tor-over-Proxy 外部观测点下的协议指纹证据可靠性、功能保持操纵与跨层一致性防御。
+
+---
+
+## [2026-06-29] figure | Tor-over-Proxy method overview Excalidraw
+
+- Added:
+  - [[10-outputs/reports/20260629-Tor-over-Proxy-MACF-method-overview.excalidraw]]
+- Updated:
+  - [[00-dashboard/log]]
+- Notes:
+  - 使用 solution-overview 范式梳理整篇工作的流程：观测点、pcap/Zeek 输入、session 构建、多视图特征、可操纵性感知表示、trust-gated cross-layer detector、输出与严格评价。
+  - 在图中显式标注 N1/N2/N3 三个方法创新点：mutability-aware representation、trust-gated detector、function-preserving consistency training。
+
+---
+
+## [2026-06-30] figure | Tor-over-Proxy reliability mainline diagram
+
+- Added:
+  - [[10-outputs/reports/2026-06-30-top-reliability-mainline-cn.excalidraw]]
+  - [[10-outputs/reports/2026-06-30-top-reliability-mainline-cn.png]]
+- Updated:
+  - [[00-dashboard/log]]
+- Notes:
+  - 根据 `/Users/tovey/Desktop/Paper#2/构思0629.md` 最新主干思路，绘制中文 Excalidraw 示意图。
+  - 图中覆盖科学问题、pcap 到多视图表征、开放世界证据审计、可信门控跨层检测器、一致性训练闭环和 ToP-Reliability Benchmark。
+
+---
+
+## [2026-08-17] ingest | Aug 批次 24 篇论文入库
+
+- Added:
+  - 24 篇新论文 PDF 位于 `00-inbox/Aug_inbox/`，MinerU 解析至 `02-parsed-markdown/`，结构化笔记至 `03-paper-notes/`（#148-171）
+  - 知识层更新：04-concepts / 05-methods / 06-tasks / 07-surveys / 08-comparisons / 09-claims
+  - `12-research-fronts/` 6 个前沿全部更新证据链（payload 5→8、representation 5→7、pretraining 6→9、wf 7→16、multimodal 4→8、tokenization 2→5）
+- Updated:
+  - [[paper-registry]]（147→171，DOI 63→86）
+  - [[reading-queue]]（+24 条，15 篇标记 important）
+  - [[claims-index]]（33→57 条；3 项共识提升：SoK TLS1.3、Sweet Danger frozen-encoder、ET-BERT pretraining）
+  - [[open-source-registry]]（46→56 已确认开源 + 4 待确认）
+  - [[00-dashboard/index]]、`bibliography.json` + `bibliography.bib`（147→171）
+- Notes:
+  - 去重：30 个 PDF 中 6 个为既有论文（WFCAT/Quadruplet/High_Precision/Countmamba/TrafficFormer/Cross-layer RTTs）
+  - 研究前沿演化：payload-learnability 收敛为"payload 字节不可学 + 元数据侧信道必然可学"双线索；wf 攻防转向部署生态；表征学习进入三范式竞争
+  - Access 综述 DOI 以论文页眉为准（10.1109/access.2026.3681766，CrossRef 记录为更正条目）
+  - [[contradictions]] 新增 1 组矛盾（13→14）：多模态融合的收益与代价（MM4flow/NetMamba+ 融合增益 vs mmTraffic 对齐税 0.9887→0.8624，verdict=undecided）
+
+---
+
+## [2026-08-17] update | 5 篇 arXiv 论文发表状态确认 + 重命名
+
+- Verified（网络检索 + 标题/作者/团队交叉验证）:
+  - NetMamba → IEEE ICNP 2024（DOI 10.1109/ICNP61940.2024.10858569）
+  - STAR → IEEE INFOCOM 2026（DOI 10.1109/INFOCOM59046.2026.11571637）
+  - Nethira → IEEE ICASSP 2026（DOI 10.1109/ICASSP55912.2026.11461760）
+  - Talk Like a Packet → IEEE Communications Magazine 2026（DOI 10.1109/MCOM.001.2500414）
+  - The Inevitability of Side-Channel Leakage → 《电子学报》54(2):837-850（DOI 10.12263/DZXB.20251034）
+  - 其余 12 篇仍为 arXiv 预印本（More Than Meets the Eye 审稿中，Treat Traffic Like Trees 期刊审稿中）
+- Fixed:
+  - TrafficMoE 误标 TNSM DOI（实为 CL-ViME）→ 移除，改回 arXiv 2603.29520
+  - NetMamba arXiv ID 2405.11419 → 2405.11449；Nethira/TalkLikePacket/TrafficMoE arXiv ID 占位符补全
+  - The Inevitability 作者 Guang Chen → Guang Cheng；venue "Open MIND" → 电子学报
+  - 5 篇论文笔记 frontmatter：venue/doi/url/arxiv/pdf/mineru_md 更新，`updated: 2026-08-17`
+- Renamed（按 YYYY-VENUE-Title 约定，全 vault 同步 PDF / MinerU / notes / 图片 / 引用）:
+  - `2024-arXiv-NetMamba` → `2024-ICNP-NetMamba`
+  - `2025-arXiv-STAR` → `2025-INFOCOM-STAR`
+  - `2026-arXiv-Nethira` → `2026-ICASSP-Nethira`
+  - `2026-arXiv-Talk_Like_a_Packet` → `2026-CommMag-Talk_Like_a_Packet`
+  - `2026-arXiv-The_Inevitability` → `2026-AES-The_Inevitability`
+- Updated:
+  - [[paper-registry]]：5 行 doi `unknown`→正式 DOI、venue arXiv→ICNP/INFOCOM/ICASSP/CommMag/电子学报、first_author 修正（STAR: Li→Cheng、TalkLikePacket: Jiang→Mayhoub、Nethira: Ye→Lin、NetMamba: Ye→Wang）
+  - `bibliography.bib`（12 处）：5 条已发表条目补 DOI/venue/note，预印本 URL 占位符补全
+  - `bibliography.json`：source_file/note_file 重命名、DOI 修正、entry_type 修正（Inevitability/TalkLikePacket → article）
+  - 20+ 个知识层 md 文件：wikilink 与 "(arXiv YYYY)" 标注 → 正式 venue（NetMamba→ICNP 2024、STAR→INFOCOM 2026、TalkLikePacket→CommMag 2026、侧信道存在性定理→电子学报 2026）
+  - `10-outputs/key-figures/manifest.json` + [[all-key-figures]]：9 张图片路径同步

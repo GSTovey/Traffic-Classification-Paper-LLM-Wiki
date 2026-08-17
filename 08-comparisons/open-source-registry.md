@@ -2,7 +2,7 @@
 type: comparison
 name: open-source-registry
 created: "2026-05-29"
-updated: "2026-06-21"
+updated: "2026-08-17"
 ---
 
 # 开源模型/方法注册表
@@ -33,7 +33,7 @@ updated: "2026-06-21"
 | 12 | JA4 Malware Analysis | 2024 | 恶意流量检测 | [GitHub](https://github.com/matousp/malware-analysis) | 代码 + 标注数据集 | Python | [[2024-CNSM-Experience__Report_Using_JA4_Fingerprints_for_Malware_Detection_in_Encrypted_Traffic]] |
 | 13 | SoK Decoding | 2025 | 加密流量分类评估 | [GitHub](https://github.com/nime-sha256/chromium-cipher-suite-customizer) | 数据集 + 评估脚本 | Python | [[2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers]] |
 | 14 | DecETT | 2025 | 加密隧道应用指纹 | [GitHub](https://github.com/DecETT/DecETT) | 代码 | Python | [[2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_Decouple__based_Semantic_Enhancement]] |
-| 15 | STAR | 2025 | 零样本网站指纹 | [GitHub](https://github.com/2654400439/STAR-Website-Fingerprinting) | 代码 + STAR-200K 数据集 | Python | [[2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]] |
+| 15 | STAR | 2025 | 零样本网站指纹 | [GitHub](https://github.com/2654400439/STAR-Website-Fingerprinting) | 代码 + STAR-200K 数据集 | Python | [[2025-INFOCOM-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]] |
 | 16 | MET-LLM | 2025 | 恶意加密流量检测 | [GitHub](https://github.com/Superagentsys/MET-LLM) | 代码 | Python | [[2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection]] |
 | 17 | TFusion | 2025 | 恶意流量检测 | [GitHub](https://github.com/fuchuanpu/TFusion) | 代码 + 附录 | Python | [[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]] |
 | 18 | SweetDanger | 2025 | 加密流量分类评估 | [GitHub](https://github.com/SweetDanger-Polito/SweetDanger) | 代码 + benchmark 数据集 + 方法论 | Python | [[2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification]] |
@@ -46,7 +46,7 @@ updated: "2026-06-21"
 | 25 | Traffic-Explainer | 2026 | 流量分类可解释性 | [4open.science](https://anonymous.4open.science/r/TrafficExplainer-5E2E/README.md) | 代码 | Python | [[2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classification__A_Traffic-Explainer_Framework]] |
 | 26 | TrafficMoE | 2026 | 加密流量分类（MoE） | [GitHub](https://github.com/Posuly/TrafficMoE) | 代码 | Python | [[2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification]] |
 | 27 | SUMo | 2024 | Tor 流量关联 | [GitHub](https://github.com/danielaLopes/sumo) | 代码 + 数据集 | Python | [[2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum]] |
-| 28 | NetMamba | 2024 | 加密流量分类 | [GitHub](https://github.com/UniBuc/NetMamba) | 代码 | Python | [[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]（注：与 NetMamba+ 共用同一仓库） |
+| 28 | NetMamba | 2024 | 加密流量分类 | [GitHub](https://github.com/UniBuc/NetMamba) | 代码 | Python | [[2024-ICNP-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]（注：与 NetMamba+ 共用同一仓库） |
 | 29 | Multi-ARCL | 2025 | 加密流量分类（持续学习） | [GitHub](https://github.com/sailorlee97/What-changes-you) | 代码 | Python | [[2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification]] |
 | 30 | ASNet | 2025 | 加密流量分类 | [GitHub](https://github.com/pengwei-iie/ASNET) | 代码 | Python | [[2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding]] |
 | 31 | TrafficSliver | 2020 | 网站指纹防御 | [GitHub](https://github.com/TrafficSliver) | 代码 + Tor Pluggable Transport | Python | [[2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting]] |
@@ -65,6 +65,16 @@ updated: "2026-06-21"
 | 44 | Censored Planet | 2020 | 审查测量 | [GitHub](https://github.com/censoredplanet) | 代码 + 测量框架 | Python | [[2020-CCS-Censored_Planet__An_Internet-wide__Longitudinal_Censorship_Observatory]] |
 | 45 | GFW (USENIX 2023) | 2023 | 审查检测分析 | [GitHub](https://gfw.report/publications/usenixsecurity23/en) | 测量数据 + 分析工具 | Python | [[2023-USENIX-How_the_Great_Firewall_of_China_Detects_and_Blocks_Fully_Encrypted_Traffic]] |
 | 46 | LZR | 2021 | 服务发现/隧道检测 | [GitHub](https://github.com/stanford-esrg/lzr) | 代码 | Go | [[2021-USENIX-LZR__Identifying_Unexpected_Internet_Services]] |
+| 47 | MH-Net | 2025 | 加密流量分类（多视图异构图） | [GitHub](https://github.com/ViktorAxelsen/MH-Net) | 代码 | Python | [[2025-AAAI-Revolutionizing_Encrypted_Traffic_Classification_with_MH-Net__A_Multi-View_Heterogeneous_Graph_Model]] |
+| 48 | FMWF | 2025 | 网站指纹攻击（多标签页少样本） | [GitHub](https://github.com/WW-Meng/FMWF) | 代码 + 数据集 | Python | [[2025-WWW-Beyond_Single_Tabs__A_Transformative_Few-Shot_Approach_to_Multi-Tab_Website_Fingerprinting_Attacks]] |
+| 49 | HOLMES & WATSON | 2025 | HTTPS 网站指纹攻击 | [GitHub](https://github.com/2654400439/H123-Website-Fingerprinting) | 代码 + 数据集（1.5TB+） | Python | [[2025-WWW-HOLMES&WATSON__A_Robust_and_Lightweight_HTTPS_Website_Fingerprinting_through_HTTP_Version_Parallelism]] |
+| 50 | TabularT-OS | 2026 | 操作系统指纹识别 | [GitHub](https://github.com/rubenpjove/tabularT-OSfingerprinting) | 代码（GNU GPL v3.0） | Python | [[2026-Cybersecurity-Application_of_tabular_transformer_architectures_for_operating_system_fingerprinting]] |
+| 51 | FreeUp | 2026 | 加密流量异常检测 | [GitHub](https://github.com/ikun0124/FreeUp) | 代码 | Python | [[2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly_Detection_for_Encrypted_Network_Traffic]] |
+| 52 | ConMD | 2026 | 流量异常检测（零正样本） | [GitHub](https://github.com/ikun0124/ConMD) | 代码 | Python | [[2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection]] |
+| 53 | ResAware | 2026 | 网站指纹攻击（跨环境） | [GitHub](https://github.com/aimafan123/ResAware) | 代码 + 特征化数据集 | Python | [[2026-arXiv-ResAware__Cross-Environment_Website_Fingerprinting_via_Resource-Privileged_Distillation]] |
+| 54 | M-En Framework | 2026 | 多环境恶意流量检测 | [GitHub](https://github.com/furqanrustam/M-En-PLS-and-RNN-LSTM-Ubuntu-Simulation)（URL 为推断值，需核实） | 代码 + 数据生成脚本 | Python | [[2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_detection_in_multi-environment_networks]] |
+| 55 | HTPA 数据集 | 2025 | 混淆 HTTPS 隧道检测 | GitHub（论文 Dataset link，HTTPS Tunneling Predictive Analysis Dataset） | 仅数据集（132 万条流；模型代码未公开） | — | [[2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneous_information_network]] |
+| 56 | Reality Check 数据集 | 2026 | 开放世界 WF 评估 | [OSF](https://osf.io/9m8ea/) | 仅数据集（80 万+ traces） | — | [[2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World]] |
 
 ---
 
@@ -77,6 +87,10 @@ updated: "2026-06-21"
 | Swallow | 2025 | 待确认 | 论文声明将发布数据集和源代码，但代码地址为 `github.com/anonymous`，具体地址待确认 | [[2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]] |
 | Gated Attention for LLM | 2025 | 计划中 | 作者计划基于 Megatron-LM 开源代码，采用 MIT License | [[2025-NIPS-Gated_Attention_for_Larg]] |
 | ByteDance | 2026 | 计划中 | 论文提到计划正式发表后在 GitHub 上共享代码和数据 | [[2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification]] |
+| TrustWI | 2026 | 待确认 | 论文声称开源（"we make the source code of TrustWI publicly available"），但正文未出现仓库 URL | [[2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion]] |
+| DawnGuard | 2026 | 待确认 | 论文声称开源（"We release the dataset and source code of DawnGuard"），但正文未出现仓库 URL | [[2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temporal_Graph_Learning]] |
+| FlowSem-MAE | 2026 | 待确认 | 论文声明将在补充材料中提供代码和模型参数，尚未确认具体链接 | [[2026-arXiv-Where_Do_Flow_Semantics_Reside__A_Protocol-Native_Tabular_Pretraining_Paradigm_for_Encrypted_Traffic_Classification]] |
+| mmTraffic (Traffic-Reasoning) | 2026 | 待确认 | 论文声称开源（项目名 Traffic-Reasoning-Project），未给出具体仓库 URL | [[2026-arXiv-Multimodal_Reasoning_with_LLM_for_Encrypted_Traffic_Interpretation__A_Benchmark]] |
 
 ---
 
@@ -128,8 +142,9 @@ updated: "2026-06-21"
 | CENTIME | 短期特征编码方法 |
 | TFE-GNN | 流量特征增强 GNN，被 5+ 篇论文对比 |
 | PEAN | 原型增强注意力网络 |
-| MH-Net | 多头注意力网络 |
 | SessionVideo | 会话级视频化流量表示 |
+
+> 注：MH-Net 已从本清单移除——已确认开源（https://github.com/ViktorAxelsen/MH-Net），见第 1 节 #47。
 
 ---
 
@@ -174,19 +189,19 @@ updated: "2026-06-21"
 
 | 类别 | 数量 |
 |---|---:|
-| 已确认开源（本知识库论文） | 46 |
-| 计划开源 / 待确认 | 3 |
+| 已确认开源（本知识库论文） | 56（含 2 项仅数据集开源） |
+| 计划开源 / 待确认 | 7 |
 | 高频对比基线无开源地址 | 20+ |
-| CLET 论文确认有实现但缺地址 | 6 |
+| CLET 论文确认有实现但缺地址 | 5 |
 | 第三方参考工具 | 16 |
 
 ### 按任务领域分布（已开源）
 
 | 领域 | 已开源数量 | 代表方法 |
 |---|---:|---|
-| 加密流量分类 | 12 | ET-BERT, YaTC, LEXNet, CTT, NetMamba+, FGFR-Net, SweetDanger, TFusion, NetMamba, Multi-ARCL, ASNet, TrafficMoE |
-| 网站指纹（攻击+防御） | 18 | DF, RF, Palette, RobustWF, STAR, Swallow（待确认）, TrafficSliver, FRONT, Surakav, CountMamba, GAPDiS, CELLSHIFT, Cease, Lightening, Holmes, TMWF, Realistic WF |
-| 恶意流量检测 | 4 | Whisper, TFusion, MET-LLM, JA4 |
+| 加密流量分类 | 13 | ET-BERT, YaTC, LEXNet, CTT, NetMamba+, FGFR-Net, SweetDanger, TFusion, NetMamba, Multi-ARCL, ASNet, TrafficMoE, MH-Net |
+| 网站指纹（攻击+防御） | 21 | DF, RF, Palette, RobustWF, STAR, Swallow（待确认）, TrafficSliver, FRONT, Surakav, CountMamba, GAPDiS, CELLSHIFT, Cease, Lightening, Holmes, TMWF, Realistic WF, FMWF, HOLMES & WATSON, ResAware |
+| 恶意流量检测/异常检测 | 7 | Whisper, TFusion, MET-LLM, JA4, FreeUp, ConMD, M-En |
 | 应用/匿名流量分类 | 3 | Flowprint, AN-Net, DecETT |
 | 审查规避/测量 | 4 | UPGen, Huma, Censored Planet, GFW |
 | 流量关联/匿名攻击 | 1 | SUMo |
@@ -194,6 +209,8 @@ updated: "2026-06-21"
 | 服务发现/隧道检测 | 1 | LZR |
 | 可解释性 | 1 | Traffic-Explainer |
 | 预训练模型增强 | 1 | Plug-in Enhancement Framework |
+| 操作系统指纹识别 | 1 | TabularT-OS |
+| 仅数据集开源 | 2 | HTPA, Reality Check |
 
 ---
 

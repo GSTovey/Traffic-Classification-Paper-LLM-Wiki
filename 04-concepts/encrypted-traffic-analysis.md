@@ -15,7 +15,7 @@ tags:
   - VPN
   - Tor
 created: "2026-05-27"
-updated: "2026-06-21"
+updated: "2026-08-17"
 ---
 
 # Encrypted Traffic Analysis（加密流量分析）
@@ -58,7 +58,7 @@ updated: "2026-06-21"
 | **多实例 Transformer + 预训练** | 将 flow 中每个 packet 视为独立实例，通过 Two-Level Attention（Packet+Flow）捕获 token 级和 packet 级关系，PRPP+FCL 预训练任务适配流量数据 | 显式建模 packet 间交互；预训练任务针对流量特性设计 | 计算开销较高；对 packet 数量敏感 | MIETT (Chen et al., AAAI 2025) |
 | **Header-Payload 差异化预训练** | 区分 header（连续字节）和 payload（非连续字节），分别采用 Field-level Masking 和 Random Masking 进行差异化预训练 | 充分利用协议结构先验知识；Dynamic Masking 防止过拟合 | 依赖 header/payload 分离的准确性 | TraGe (Lin et al., IWQoS 2025) |
 | **稀疏 MoE + 不确定性感知过滤** | 将 header 和 payload 解耦为双分支，各分支使用稀疏 Mixture-of-Experts 进行模态特定建模，通过不确定性感知过滤抑制高方差表示，条件聚合动态融合跨模态特征 | 从"一刀切"静态建模转向异质性感知动态建模；自适应利用不同流量段的判别特征 | MoE 路由的可解释性有待提升；在极低资源场景下的部署可行性需验证 | TrafficMoE (He et al., arXiv 2026) |
-| **零样本跨模态检索** | 将 WF 重新定义为零样本跨模态检索问题，通过双编码器架构对齐加密流量与网页语义逻辑表示，支持未见过网站的识别 | 无需目标网站流量数据即可识别新网站；天然支持 open-world 场景；可扩展性强 | 依赖浏览器日志采集逻辑模态；单浏览器评估；数据采集成本高 | STAR (Cheng et al., arXiv 2025) |
+| **零样本跨模态检索** | 将 WF 重新定义为零样本跨模态检索问题，通过双编码器架构对齐加密流量与网页语义逻辑表示，支持未见过网站的识别 | 无需目标网站流量数据即可识别新网站；天然支持 open-world 场景；可扩展性强 | 依赖浏览器日志采集逻辑模态；单浏览器评估；数据采集成本高 | STAR (Cheng et al., INFOCOM 2026) |
 | **捷径学习检测（模型无关 + 数据驱动）** | 通过统计互信息分析直接在原始二进制流量上检测数据集特定的捷径特征，提出捷径特征分类体系和类别特定验证策略 | 模型无关、数据驱动；不依赖特定分类器或可解释性工具；系统化分类捷径特征类型 | 仅提供检测和缓解框架，未直接提升分类器性能；依赖统计分析的假设条件 | Bias in the Shadows / BiasSeeker (Wang et al., arXiv 2026) |
 
 ## 4. 相关方法
@@ -119,6 +119,12 @@ updated: "2026-06-21"
 | **NetMamba: Efficient Network Traffic Classification via Pre-training Unidirectional Mamba** (Wang et al., arXiv) | 2024 | 首个将 Mamba（State Space Model）引入网络流量分类的工作；MAE 预训练 + stride-based 流量表示；推理速度比 Transformer 快 60 倍；6 个数据集上 accuracy 超 90% | 单向建模可能遗漏部分信息；预训练验证尚不充分 |
 | **NetMamba+: A Framework of Pre-trained Models for Efficient and Accurate Network Traffic Classification** (Wang et al., ICNP/arXiv) | 2026 | 在 NetMamba 基础上引入 Mamba+Flash Attention 双骨干、多模态流量表示和标签分布感知微调（LDA）；F1 最高提升 6.44%，推理吞吐量比最佳 baseline 高 1.7 倍；4 个 OOD 任务 AUROC 超 94% | 分布偏移敏感（时序划分准确率下降 8.47%）；预训练需 4 块 A100 |
 | **TrafficGPT: Breaking the Token Barrier for Efficient Long Traffic Analysis and Generation** (Qu et al., arXiv) | 2024 | 通过线性注意力机制将 token 长度从 512 扩展到 12,032；可逆 token 表示方法实现 pcap 文件双向映射；首个同时支持流量分类和生成的预训练模型；分类达 SOTA，生成接近真实流量 | 自回归建模对双向上下文利用不充分 |
+| **MH-Net: A Multi-View Heterogeneous Graph Model** (AAAI 2025) | 2025 | 多视图异构图 + 对比学习的加密流量分类，流级/包级任务高精度 | 图构建与多视图融合计算开销较高 |
+| **LitCVit: A Lightweight Self-Supervised Contrastive Vision Transformer** (TIFS 2026) | 2026 | 轻量级自监督对比视觉 Transformer 检测加密恶意流量 | 图像化表示对超长流适应性有限 |
+| **DawnGuard: Early-Stage Detection via Multi-Flow Temporal Graph Learning** (TIFS 2026) | 2026 | 多流时序图学习的加密恶意流量早期检测 | 图构建开销较高 |
+| **TrustWI: Uncertainty-Aware Fusion for Encrypted Malicious Traffic Detection** (TDSC 2026) | 2026 | 不确定性感知融合（证据学习 + DS 融合）的可信加密恶意流量检测 | 不确定性估计增加计算开销 |
+| **FreeUp: Frequency-Decoupled Anomaly Detection** (INFOCOM 2026) | 2026 | 频率解耦的加密流量异常检测 | 频率分解参数敏感 |
+| **ConMD: Contextual Masking Distillation** (TIFS 2026) | 2026 | 上下文掩码蒸馏的零阳性加密流量异常检测 | 蒸馏训练开销较高 |
 
 ## 7. 当前共识
 

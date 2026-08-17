@@ -25,22 +25,22 @@ updated: "2026-06-21"
 
 ## 0. 论文基础信息
 
-| 项目 | 内容 |
-|---|---|
-| 原文标题 | Toward Robust Multi-Tab Website Fingerprinting |
-| 中文标题 | 面向鲁棒多标签页网站指纹攻击 |
-| 作者 | Xinhao Deng, Xiyuan Zhao, Qilei Yin, Zhuotao Liu (Senior), Qi Li (Senior, 通讯), Mingwei Xu (Senior), Ke Xu (Fellow), Jianping Wu (Fellow) — 清华大学; Qilei Yin — 中关村实验室 |
-| 年份 | 2026 |
-| 会议/期刊 | IEEE/ACM Transactions on Networking (TON) 2026 |
-| DOI | 10.1109/TON.2026.3666721 |
-| 前序会议版 | IEEE S&P 2023 [DOI: 10.1109/SP46215.2023.10179464] |
-| 研究方向 | [[website-fingerprinting]]、[[encrypted-traffic-analysis]]、多标签页攻击 |
-| 任务类型 | [[website-fingerprinting]]、多标签分类、开放世界识别、防御对抗 |
-| 方法关键词 | ARES 框架、Trans-WF 模型、多级流量聚合（packet-level + burst-level）、CNN 局部模式提取、多头 Top-m 自注意力机制、One-vs-All 多标签分类、Droppath 正则化 |
-| 数据集 | 闭世界多标签页（230K+ 实例，Alexa Top 100）、开放世界多标签页（250K+）、四种防御数据集（Random / WTF-PAD / Front / RegulaTor，各 50K+）、动态设置（100K+）、不同重叠率（30K+） |
-| 是否开源 | 否（论文提及 1500+ 行 PyTorch 代码但未公开链接） |
-| PDF | - |
-| MinerU Markdown | `02-parsed-markdown/2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting.md` |
+| 项目              | 内容                                                                                                                                                                  |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 原文标题            | Toward Robust Multi-Tab Website Fingerprinting                                                                                                                      |
+| 中文标题            | 面向鲁棒多标签页网站指纹攻击                                                                                                                                                      |
+| 作者              | Xinhao Deng, Xiyuan Zhao, Qilei Yin, Zhuotao Liu (Senior), Qi Li (Senior, 通讯), Mingwei Xu (Senior), Ke Xu (Fellow), Jianping Wu (Fellow) — 清华大学; Qilei Yin — 中关村实验室 |
+| 年份              | 2026                                                                                                                                                                |
+| 会议/期刊           | IEEE/ACM Transactions on Networking (TON) 2026                                                                                                                      |
+| DOI             | 10.1109/TON.2026.3666721                                                                                                                                            |
+| 前序会议版           | IEEE S&P 2023 [DOI: 10.1109/SP46215.2023.10179464]                                                                                                                  |
+| 研究方向            | [[website-fingerprinting]]、[[encrypted-traffic-analysis]]、多标签页攻击                                                                                                    |
+| 任务类型            | [[website-fingerprinting]]、多标签分类、开放世界识别、防御对抗                                                                                                                        |
+| 方法关键词           | ARES 框架、Trans-WF 模型、多级流量聚合（packet-level + burst-level）、CNN 局部模式提取、多头 Top-m 自注意力机制、One-vs-All 多标签分类、Droppath 正则化                                                     |
+| 数据集             | 闭世界多标签页（230K+ 实例，Alexa Top 100）、开放世界多标签页（250K+）、四种防御数据集（Random / WTF-PAD / Front / RegulaTor，各 50K+）、动态设置（100K+）、不同重叠率（30K+）                                        |
+| 是否开源            | 否（论文提及 1500+ 行 PyTorch 代码但未公开链接）                                                                                                                                    |
+| PDF             | -                                                                                                                                                                   |
+| MinerU Markdown | `02-parsed-markdown/2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting.md`                                                                                     |
 
 ---
 

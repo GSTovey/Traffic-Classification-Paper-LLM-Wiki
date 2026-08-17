@@ -3,7 +3,7 @@ type: survey
 topic: "Website Fingerprinting"
 status: evolving
 created: "2026-05-27"
-updated: "2026-06-21"
+updated: "2026-08-17"
 ---
 
 # 网站指纹识别综述 (Survey: Website Fingerprinting)
@@ -11,6 +11,10 @@ updated: "2026-06-21"
 ## 1. 综述范围
 
 覆盖通过分析加密网络流量的 side-channel 特征（packet size、timing、direction）识别用户访问网站的方法，包括传统统计特征方法、深度学习方法、多标签场景方法、零样本方法和跨模态检索方法。重点关注 Tor/VPN/SSH 加密隧道场景下的网站指纹攻击与防御。
+
+### 1.1 领域综述列表
+
+- **Tor 上 WF 技术综述**（Murad et al., IEEE Access 2026）：系统综述 2019–2025 年 Tor 网络上的 28 篇 WF 攻击研究（其中 18 篇为此前综述未覆盖），提出按"动机 → 目标组件 → 方法论"组织的多层分类体系，梳理 ML / DL / 变换域三类攻击方法谱系，指出"真实 Tor 流量数据缺失 + 缺乏统一基准"是领域最核心的结构性问题 — `[[2026-Access-Website_Fingerprinting_Techniques_Over_Tor_Network_A_Survey]]`
 
 ## 2. 问题背景
 
@@ -64,7 +68,7 @@ updated: "2026-06-21"
   - 跨模态检索：给定流量查询，在语义库中检索最匹配的网站
   - 零样本能力：无需目标网站的流量训练样本即可识别
   - Zero-shot top-1 准确率 87.9%，AUC 0.963
-  - 论文笔记：`[[2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
+  - 论文笔记：`[[2025-INFOCOM-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
 
 ### 3.6 基于状态空间模型的攻击
 
@@ -129,6 +133,61 @@ updated: "2026-06-21"
   - 仅需每网站 5 条 trace 即可在预训练 6 周后流量上达 92.62%
   - 论文笔记：`[[2025-TIFS-WF-TFC_An_Open-World_Few-Shot_Anonymous_Website_Fingerprinting_via_Time-Frequency_Consistency]]`
 
+### 3.14 基于扩散模型流量净化的攻击
+
+- **DTPN**：扩散模型流量净化（Yang et al., WSDM 2025）
+  - 核心思想：用 UNetFormer 噪声估计器 + WF 模型倒数第二层特征条件引导，对受流量保护（NTP）的流量做"净化"，使已有 WF 分类器免重训恢复分类能力，并对未见过的防御方法有泛化性
+  - 相对对抗训练最高提升 60.8%（DF 数据集，AdvTraffic 下 10.2%→71.0%）和 50.3%（CW100）
+  - 论文笔记：`[[2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_Fingerprinting]]`
+
+### 3.15 基于 HTTP 版本并行性的攻击
+
+- **HOLMES & WATSON**：HTTP 版本并行性应用层特征（Cheng et al., WWW 2025）
+  - 核心思想：免解密提取各连接 HTTP 版本 × 资源数量的 H123 指纹（仅 HTTP/2 资源数量即泄露 4.28 bit 信息），配合 Wasserstein + LCSS 混合距离的惰性学习分类
+  - 每网站仅 1 个参考样本即在真实 HTTPS 场景下平均达 87.7% 准确率，较 SOTA 提升超 15%，对网络条件变化与概念漂移鲁棒
+  - 论文笔记：`[[2025-WWW-HOLMES&WATSON__A_Robust_and_Lightweight_HTTPS_Website_Fingerprinting_through_HTTP_Version_Parallelism]]`
+
+### 3.16 基于合成数据增强的少样本多标签攻击
+
+- **FMWF**：少样本多标签页 WF（Meng et al., WWW 2025）
+  - 核心思想：用"单标签页轨迹按三类时间间隔拼接合成多标签页轨迹"的数据增强替代大规模真实多标签页数据采集，配合轻量 CNN+MLP 的迁移学习微调，无需标签页数先验
+  - Tor 5 标签页 25-shot 下 top-k 准确率 0.910，开放世界较 ARES/TMWF/BAPM 至少提升 12.3%
+  - 论文笔记：`[[2025-WWW-Beyond_Single_Tabs__A_Transformative_Few-Shot_Approach_to_Multi-Tab_Website_Fingerprinting_Attacks]]`
+
+### 3.17 基于资源特权蒸馏的跨环境攻击
+
+- **ResAware**：资源特权蒸馏（Fan et al., arXiv 2026）
+  - 核心思想：在 training-rich/inference-poor 不对称设置下，离线用应用层资源序列（类型+大小）训练教师模型，将类间拓扑知识蒸馏到仅使用加密流量的学生模型，部署时零额外开销
+  - 150 天时间漂移下将 Var-CNN 的 F1 从 72.77% 提升至 81.49%，开放世界 TPR@1%FPR 从 22.40% 提升至 27.20%
+  - 论文笔记：`[[2026-arXiv-ResAware__Cross-Environment_Website_Fingerprinting_via_Resource-Privileged_Distillation]]`
+
+### 3.18 基于非对称对抗学习的防御
+
+- **WF-A2D**：非对称对抗防御（Huang et al., TIFS 2025）
+  - 核心思想：仅部署在客户端、无需代理节点与服务器配合的非对称架构，通过"包方向 + 包长度"两阶段级联对抗学习预生成位置化扰动向量，利用 QUIC padding 帧等协议特性在 HTTP/3 场景实现端到端隐私保护
+  - 对 7 个 SOTA 流量分析工具平均防御成功率约 97.10%，带宽开销低于 2%
+  - 论文笔记：`[[2025-TIFS-WF-A2D_Enhancing_Privacy_With_Asymmetric_Adversarial_Defense_Against_Website_Fingerprinting]]`
+
+### 3.19 基于后门学习的防御
+
+- **TrapFlow**：动态后门学习防御（Liang et al., TIFS 2026）
+  - 核心思想：在 Tor 出口节点向目标网站流量注入由假入向 cell 突发组成的触发器，通过"测试时对抗逃逸 + 训练时投毒"双重机制把攻击者模型变为可控工具
+  - RF 攻击准确率 99%→4.7%，数据开销 73.7%；真实 Tor 网络环境验证实用性
+  - 论文笔记：`[[2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Backdoor_Learning]]`
+
+### 3.20 基于网内混淆的防御
+
+- **Securitas**：学习优化的网内流量混淆（Xie et al., NSDI 2026）
+  - 核心思想：通过数据包分片、小 TTL 假包插入与隐式 ICMP 应答三种操作，在单端（用户侧网关）部署下同时混淆包大小、方向、时序等多类侧信道信息，利用 RFC 791/792 的隐式重组/丢弃机制免除对端代理配合
+  - 将攻击者 DNN 准确率最多降低 95.89%，带宽开销比最优基线（Ditto）低 42.69 倍
+  - 论文笔记：`[[2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network_Obfuscation]]`
+
+### 3.21 基于真实 Tor 流量的开放世界评估
+
+- **Reality Check**：真实 Tor 开放世界检验（Shadbeh et al., arXiv 2026）
+  - 核心思想：从 Tor Guard 节点视角，用隐私保护的"合成监控流量 + 真实未标记 Tor 非监控流量"方法论构建 80 万+ trace 的开放世界背景（跨网络设置），首次证明 WF 攻击在真实 Tor 开放世界中仍高度有效（DF π₁₀=0.956、recall=0.922），并首次系统评估 Conflux 流量分割下的 WF 可行性
+  - 论文笔记：`[[2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World]]`
+
 ### 3.7 基于图神经网络的方法
 
 - **GFNC / GFGC**：两种基于 GNN 的网站指纹识别技术（Karunanayake et al., TIFS 2023）
@@ -161,13 +220,15 @@ updated: "2026-06-21"
 | 2025 | 少样本 + 零样本 | STAR, WF-TFC | 跨模态检索零样本；时频一致性少样本 |
 | 2026 | 真实世界泛化 + 信息论防御 + 低开销防御 | CELLSHIFT, Cease, Lightening | RTT 感知轨迹转换；互信息最小化；聚类自适应正则化 |
 | 2026 | 多粒度 Transformer + 流量解混 | PrismWF, DEMUX | 多粒度 Patch-Based Transformer；边界感知多尺度解混 |
+| 2025 | 扩散净化 + 应用层特征 + 少样本多标签 | DTPN, HOLMES & WATSON, FMWF | 扩散模型流量净化免重训；HTTP 版本并行性特征；合成数据增强少样本 |
+| 2026 | 跨环境蒸馏 + 真实开放世界检验 + 后门/网内防御 | ResAware, Reality Check, TrapFlow, Securitas | 资源特权蒸馏；Guard 视角真实 Tor 开放世界评估；动态后门防御；网内混淆 |
 
 ## 5. 代表论文列表
 
 - DF (CCS 2018)：CNN-based 网站指纹识别，98.3% undefended accuracy — `[[2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning]]`
 - RobustWF (INFOCOM 2024)：因果关联 + 上下文学习的多标签 WF — `[[2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel]]`
 - Swallow (CCS 2025)：迁移鲁棒 WF，CIF + BYOL — `[[2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]]`
-- STAR (arXiv 2025)：零样本 WF，跨模态检索 — `[[2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
+- STAR (INFOCOM 2026)：零样本 WF，跨模态检索 — `[[2025-INFOCOM-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting]]`
 - FlowPrint (NDSS 2020)：半监督移动应用指纹识别，目的地时间相关性 — `[[2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic]]`
 - GFNC/GFGC (TIFS 2023)：GNN-based WF，节点分类+图分类，DApp 和 reload 场景 — `[[2023-TIFS-Exploring_Uncharted_Waters_of_Website_Fingerprinting]]`
 - TrafficSliver (CCS 2020)：流量分割 WF 防御，多路径传输降低单路径信息量 — `[[2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting]]`
@@ -187,6 +248,15 @@ updated: "2026-06-21"
 - PrismWF (arXiv 2026)：多粒度 Patch-Based Transformer 的鲁棒多标签 WF 攻击 — `[[2026-arXiv-PrismWF__A_Multi-Granularity_Patch-Based_Transformer_for_Robust_Website_Fingerprinting_Attack]]`
 - DEMUX (arXiv 2026)：边界感知多尺度流量解混的多标签 WF 攻击 — `[[2026-arXiv-DEMUX__Boundary-Aware_Multi-Scale_Traffic_Demixing_for_Multi-Tab_Website_Fingerprinting]]`
 - WF-TFC (TIFS 2025)：时频一致性的开放世界少样本匿名 WF 攻击 — `[[2025-TIFS-WF-TFC_An_Open-World_Few-Shot_Anonymous_Website_Fingerprinting_via_Time-Frequency_Consistency]]`
+- Tor WF 综述 (IEEE Access 2026)：2019–2025 年 Tor WF 攻击综述，多层分类体系 + 基准汇总 — `[[2026-Access-Website_Fingerprinting_Techniques_Over_Tor_Network_A_Survey]]`
+- DTPN (WSDM 2025)：扩散模型流量净化攻击，免重训恢复 WF 分类能力 — `[[2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_Fingerprinting]]`
+- HOLMES & WATSON (WWW 2025)：HTTP 版本并行性应用层特征的轻量 HTTPS WF 攻击 — `[[2025-WWW-HOLMES&WATSON__A_Robust_and_Lightweight_HTTPS_Website_Fingerprinting_through_HTTP_Version_Parallelism]]`
+- FMWF (WWW 2025)：合成数据增强 + 少样本微调的多标签页 WF 攻击 — `[[2025-WWW-Beyond_Single_Tabs__A_Transformative_Few-Shot_Approach_to_Multi-Tab_Website_Fingerprinting_Attacks]]`
+- ResAware (arXiv 2026)：资源特权蒸馏的跨环境 WF 攻击 — `[[2026-arXiv-ResAware__Cross-Environment_Website_Fingerprinting_via_Resource-Privileged_Distillation]]`
+- WF-A2D (TIFS 2025)：非对称对抗学习 + QUIC padding 帧的端到端 WF 防御 — `[[2025-TIFS-WF-A2D_Enhancing_Privacy_With_Asymmetric_Adversarial_Defense_Against_Website_Fingerprinting]]`
+- TrapFlow (TIFS 2026)：动态后门学习的可控 WF 防御 — `[[2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Backdoor_Learning]]`
+- Securitas (NSDI 2026)：分片 + 小 TTL 假包 + 隐式 ICMP 应答的网内混淆防御 — `[[2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network_Obfuscation]]`
+- Reality Check (arXiv 2026)：Guard 视角真实 Tor 开放世界 WF 评估与 Conflux 首测 — `[[2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World]]`
 
 ## 6. 当前趋势
 

@@ -4,7 +4,7 @@ name: "Graph Neural Network"
 aliases: ["GNN", "图神经网络"]
 tags: ["graph-model", "deep-learning", "encrypted-traffic", "topology-feature"]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-08-17"
 ---
 
 # Graph Neural Network（图神经网络）
@@ -90,6 +90,10 @@ GNN 在流量分析中的典型流程如下：
 | BP-RGAT (JCN 2026) | 2026 | HTBG 异构图 + RGAT + RBPE | 提出异构流量突发图和相对位置编码，三种边类型建模不同突发关系，ISCX-VPN F1 达 99.2% |
 | FGFR-Net (JNSM 2026) | 2026 | 字节级流量图 + GIN + ResNet-34 | 首次将图构建推进到字节级粒度，用 LLR 度量字节关联，ISCX-VPNnonVPN F1 达 99.08% |
 | Exploring Uncharted Waters (TIFS 2023) | 2023 | GNN-based 网站指纹识别，提出 GFNC（图级节点分类）和 GFGC（图级图分类 + CTDNE 时序图嵌入） | 首次将 GNN 扩展到网站指纹识别（WF）领域；GFNC 将流量 trace 表示为图中的节点，GFGC 为每个 trace 构建包序列图并使用 CTDNE 生成时序嵌入；在 reload 流量场景下 GFNC 超越 AWF 27%；同时探索 DApp 指纹识别，发现 DApp 比传统网站更难被指纹识别（精度下降 25%） |
+| MH-Net (AAAI 2025) | 2025 | 多视图异构图神经网络（PMI 图构建 + GraphSAGE + LSTM + 对比学习） | 多视图异构图表征学习，流级/包级加密流量分类高精度 |
+| HINT (JCN 2025) | 2025 | 异构信息网络（HIN）+ 异构图注意力（HAN）+ 元路径 + CNN-LSTM | HIN 建模多维隧道流量关系，增强混淆 HTTPS 隧道检测 |
+| DawnGuard (TIFS 2026) | 2026 | 多流时序图（Multi-Flow Graph Features）+ 时间图学习 + ViT | 多流时序交互建模的加密恶意流量早期检测 |
+| TrustWI (TDSC 2026) | 2026 | 图级多视图特征 + 证据深度学习 + Dempster-Shafer 融合 | 不确定性感知的图融合可信检测 |
 
 ## 9. 与其他方法的比较
 

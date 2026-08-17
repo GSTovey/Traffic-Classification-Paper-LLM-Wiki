@@ -74,7 +74,7 @@ WF 攻击在实验室 IID 设置下表现优异，但在真实部署中面临**�
 |---|---|---|
 | 更鲁棒的流量表示 | Shen et al. (USENIX Security'23), Bahramali et al. (CCS'23) | 仍在加密流量域内工作，信号不稳定源于流量之外的因素，表示层面的修复有上限 |
 | 域适应（few-shot/TTA） | Triplet Fingerprinting (CCS'19), Proteus (NDSS'26) | 需要部署后收集目标域数据，且适应后的模型仍锚定在不稳定的流量域信号上 |
-| 资源感知 WF | STAR (arXiv'25), MRCGCN (TIFS'25), HOLMES (WWW'25) | STAR/MRCGCN 在推理时需要资源信息，扩展了攻击者的在线观测需求；HOLMES 从流量推断资源结构但受限于流量能揭示的内容 |
+| 资源感知 WF | STAR (INFOCOM'26), MRCGCN (TIFS'25), HOLMES (WWW'25) | STAR/MRCGCN 在推理时需要资源信息，扩展了攻击者的在线观测需求；HOLMES 从流量推断资源结构但受限于流量能揭示的内容 |
 
 **关键差距**：所有现有方法要么仅使用流量特征（不稳定），要么在推理时需要资源特征（不实际）。没有方法在训练时利用资源级稳定性而推理时仅使用加密流量。
 

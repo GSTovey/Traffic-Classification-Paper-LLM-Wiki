@@ -4,7 +4,7 @@ name: "Network Anomaly Detection"
 aliases: ["网络异常检测", "Network Intrusion Detection", "Anomaly-based Detection"]
 tags: [anomaly-detection, network-security, intrusion-detection, open-set, few-shot, unsupervised]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-08-17"
 ---
 
 # Network Anomaly Detection（网络异常检测）
@@ -91,6 +91,8 @@ Network Anomaly Detection（网络异常检测）是指通过分析网络流量�
 - UT-PAB：BERT 预训练 + 原型对齐的未知流量分类，H-score 94.77 — `[[2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT]]`
 - tFusion：跨模态特征融合，0.1% 标注数据达 99.82% 准确率 — `[[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]]`
 - MET-LLM：大语言模型辅助的恶意加密流量检测 — `[[2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection]]`
+- [[2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly_Detection_for_Encrypted_Network_Traffic]]：频率解耦的加密流量异常检测，低频/高频分量分解 + 证据学习动态融合
+- [[2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection]]：上下文掩码蒸馏的零阳性网络流量异常检测，仅用正常流量训练
 
 ## 7. 工程落地问题
 

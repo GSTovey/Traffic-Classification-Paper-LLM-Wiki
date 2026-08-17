@@ -3,7 +3,7 @@ type: survey
 topic: "Malicious Traffic Detection"
 status: evolving
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-08-17"
 ---
 
 # 恶意流量检测综述 (Survey: Malicious Traffic Detection)
@@ -35,6 +35,11 @@ updated: "2026-05-27"
   - InfoNCE loss 学习语义级表示
   - 在对抗逃举场景（evasion attacks）下 F1 > 93%
   - 论文笔记：`[[2025-TIFS-Robust_Detection_of_Malicious_Encrypted_Traffic_via_Contrastive_Learning]]`
+
+- **LitCVit**：轻量自监督对比视觉 Transformer（Nisa et al., TIFS 2026）
+  - 卷积 patchify stem + 字节/包/流三级窗口化低秩因子化注意力（wf-Attention）+ ntXent 对比预训练，捕获跨流语义与行为模式
+  - 6 个真实数据集平均准确率 98.10%、F1 98.08%，以 0.321M 参数实现约 8.7 倍于最强自监督 baseline 的推理加速，面向边缘/IoT 部署
+  - 论文笔记：`[[2026-TIFS-LitCVit__A_Lightweight_Self-Supervised_Contrastive_Vision_Transformer_for_Encrypted_Malicious_Traffic_Detection]]`
 
 ### 3.3 基于多模态融合的方法
 
@@ -84,6 +89,60 @@ updated: "2026-05-27"
   - P/R/F1 均达 99%
   - 论文笔记：`[[2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision]]`
 
+### 3.9 基于时序图学习的早期检测
+
+- **DawnGuard**：多流时序图学习早期检测（Jia et al., TIFS 2026）
+  - 核心思想：时间包密度分析驱动的自调整数据增强聚焦高判别性的早期交互阶段，在主-服务器二分时序图上做时序图学习提取多流关联特征（MGF），ViT 检测器分类
+  - 仅用完整流量前 20%（loading ratio）即达平均 F1 95.11%（较 SOTA 高 8.7%），在 48:1 极端不平衡（F1 92.9%）和未见恶意软件（F1 91.34%）场景下保持领先
+  - 论文笔记：`[[2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temporal_Graph_Learning]]`
+
+### 3.10 基于不确定性感知融合的方法
+
+- **TrustWI**：不确定性感知多视图融合（Zhong et al., TDSC 2026）
+  - 核心思想：以长程扩散传播（View-L）、传播后结构增强（View-S）与伪视图交互（View-P）三个互补视图恢复弱信息（破碎图结构、不完整特征、稀缺标注）下的加密流量信号，证据深度学习 + Dempster-Shafer 规则做视图级与全局级不确定性感知融合
+  - 弱信息场景三数据集 AUC 93.72%/87.75%/97.37%，极端信息约束下将 SOTA AUC 从 85.45% 提升至 89.57%（DoHBrw）
+  - 论文笔记：`[[2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion]]`
+
+### 3.11 基于知识蒸馏的零正样本异常检测
+
+- **ConMD**：上下文掩码知识蒸馏（Lian et al., TIFS 2026）
+  - 核心思想：以 ImageNet 预训练 WideResNet50（经无关数据集微调）为教师、局部-全局窗口注意力学生骨干 + 上下文增强包级掩码蒸馏，摆脱重建范式的"identical shortcut"问题；推理时融合掩码/非掩码双分支多视图异常打分
+  - 仅用正常流量训练（零正样本），DataCon2020/CIC-IDS2017/USTC-TFC2016 上 AUC 86.03%/94.43%/99.97%，相对最强 baseline 分别提升 2.8%/5.1%
+  - 论文笔记：`[[2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection]]`
+
+### 3.12 基于上下文感知流嵌入的方法
+
+- **FlowXpert**：上下文感知流嵌入（Zha et al., TMC 2026）
+  - 核心思想：设计 FlowVision 特征提取工具（丢弃时间/长度类稀疏特征、补充源主机上下文特征）解决流特征稀疏阻碍收敛问题，DBSCAN 伪标签 + 对比学习在 2% 下采样数据上训练流嵌入
+  - 在 MAWI/CICIDS-2017/UNSW-NB15 上恶意流量检测优于 Kitsune/HyperVision/ETBert 等 SOTA，端到端延迟 <30µs 可实时部署
+  - 论文笔记：`[[2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network]]`
+
+### 3.13 基于网内检测的方法
+
+- **Proteus**：网内决策树恶意流量检测（Zhu et al., WWW 2026）
+  - 核心思想：利用"决策树前 60% 层即可达 >90% 精度"的边际贡献递减观察，将决策树异构切分为 1 棵关键子树 + 若干普通子树，用两阶段 MILP 优化部署到可编程交换机，并在资源变化时在线调优
+  - 12.8 Tbps 交换机测试床：分类精度从 67.8% 提升到 78.8%，资源占用最多降低 82.8%，时延最多降低 74.5%
+  - 论文笔记：`[[2026-WWW-Proteus__Towards_Accurate_and_Low-overhead_In_Network_Malicious_Traffic_Detection]]`
+
+### 3.14 基于网内特征提取的方法
+
+- **SuperFE**：可扩展灵活的特征提取器（Zhang et al., EuroSys 2025）
+  - 核心思想："可编程交换机批处理 + SmartNIC 流式计算"分工架构，配用户友好策略接口（groupby/filter/map/reduce 等）与多粒度分组包向量（MGPV）缓存，为 ML 流量分析应用提供在线特征提取服务
+  - 10 个 SOTA 流量分析应用的既有特征提取器仅用 9-101 行策略代码重写，即可从多 100Gbps 原始流量中在线提取特征，吞吐量比软件实现高近两个数量级且检测精度几乎无损
+  - 论文笔记：`[[2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Traffic_Analysis_Applications]]`
+
+- **SketchFeature**：数据平面逐流特征提取（Kim et al., NDSS 2025）
+  - 核心思想：首个在可编程交换机数据平面实现 HAF（高分辨率/全流/全范围）三阶逐流特征（IPD/PS 分布）提取的 sketch 方案，"sketch 虚拟化 + 幻影解码 + Bloom filter 成员测试"在 6 MB 内存内以线速完成全流分布测量
+  - 系统论证 FlowLens/NetWarden 类"症状检测器"方案存在数据面规避与控制面淹没两类攻击面，端到端检测性能逼近"完美测量"上界
+  - 论文笔记：`[[2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane]]`
+
+### 3.15 基于仿真的多环境统一检测框架
+
+- **M-En**：仿真驱动的多环境统一检测框架（Rustam & Jurcut, Computer Networks 2026）
+  - 核心思想：用 PLS canonical 交叉分解融合 IoT（IoT23）与传统 IP（CICDDoS2019）流量构建多环境（M-En）数据集，RNN-LSTM 迁移学习提取 32 维时序特征，客户端-服务器批量决策架构（Ubuntu + TCP + pickle）验证部署可行性
+  - Logistic Regression 以最低资源开销成为最佳部署模型（离线准确率 0.98、仿真网关评估 0.71）
+  - 论文笔记：`[[2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_detection_in_multi-environment_networks]]`
+
 ## 4. 发展脉络
 
 | 时间 | 里程碑 | 代表工作 | 核心贡献 |
@@ -96,6 +155,9 @@ updated: "2026-05-27"
 | 2025 | 对比学习 + 多模态 | SmartDetector, tFusion | 对抗鲁棒，0.1% 标注数据 |
 | 2025 | 大语言模型 | MET-LLM | LLM 适配恶意流量检测 |
 | 2026 | 开放集识别 | FEC-OSL, UT-PAB | 未知攻击类型泛化 |
+| 2025 | 网内特征提取 | SuperFE, SketchFeature | 可编程交换机/SmartNIC 在线特征提取，支撑数据平面安全应用 |
+| 2026 | 图学习 + 不确定性 + 蒸馏 + 网内检测 | DawnGuard, TrustWI, ConMD, LitCVit, Proteus | 早期时序图检测；不确定性感知融合；零正样本蒸馏；轻量对比 ViT；网内决策树部署 |
+| 2026 | 上下文嵌入 + 多环境仿真 | FlowXpert, M-En | 上下文感知流嵌入；多环境统一检测框架 |
 
 ## 5. 代表论文列表
 
@@ -109,6 +171,15 @@ updated: "2026-05-27"
 - YaTC (AAAI 2023)：MAE 预训练 + 分层注意力 — `[[2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation]]`
 - MTBD (HPCC 2022)：三维异构特征 + 投票 — `[[2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision]]`
 - Session-Transformer (JIoT 2025)：修改 Transformer + DNN 检测加密恶意流量，DataCon2020 召回率 98.34% — `[[2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis]]`
+- LitCVit (TIFS 2026)：轻量自监督对比 ViT 检测加密恶意流量，0.321M 参数 98.10% 准确率 — `[[2026-TIFS-LitCVit__A_Lightweight_Self-Supervised_Contrastive_Vision_Transformer_for_Encrypted_Malicious_Traffic_Detection]]`
+- DawnGuard (TIFS 2026)：多流时序图学习的早期加密恶意流量检测，前 20% 流量 F1 95.11% — `[[2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temporal_Graph_Learning]]`
+- TrustWI (TDSC 2026)：不确定性感知多视图融合的加密恶意流量可信检测 — `[[2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion]]`
+- ConMD (TIFS 2026)：上下文掩码蒸馏的零正样本流量异常检测 — `[[2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection]]`
+- FlowXpert (TMC 2026)：上下文感知流嵌入的 IoT 流量检测，端到端延迟 <30µs — `[[2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network]]`
+- Proteus (WWW 2026)：可编程交换机上的低开销网内恶意流量检测，精度 67.8%→78.8% — `[[2026-WWW-Proteus__Towards_Accurate_and_Low-overhead_In_Network_Malicious_Traffic_Detection]]`
+- M-En (Computer Networks 2026)：PLS 融合 + RNN-LSTM 迁移学习的多环境实时检测框架 — `[[2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_detection_in_multi-environment_networks]]`
+- SuperFE (EuroSys 2025)：可编程交换机 + SmartNIC 的在线流量特征提取框架 — `[[2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Traffic_Analysis_Applications]]`
+- SketchFeature (NDSS 2025)：数据平面 HAF 逐流特征提取 sketch — `[[2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane]]`
 
 ## 6. 当前趋势
 

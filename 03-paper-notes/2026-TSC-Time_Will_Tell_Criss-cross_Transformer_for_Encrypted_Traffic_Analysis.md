@@ -25,20 +25,20 @@ updated: "2026-05-27"
 
 ## 0. 论文基础信息
 
-| 项目 | 内容 |
-|---|---|
-| 原文标题 | Time Will Tell: Criss-cross Transformer for Encrypted Traffic Analysis |
-| 中文标题 | 时间会证明：用于加密流量分析的交叉 Transformer |
-| 作者 | Hua Ding, Lixing Chen, Bo Zhang, Shenghong Li, Hao Peng, Zhe Qu, Yang Bai |
-| 年份 | 2026 |
-| 会议/期刊 | IEEE Transactions on Service Computing (TSC) |
-| 研究方向 | 加密流量分析、网络安全、深度学习 |
-| 任务类型 | 加密流量分类（classification）和预测（forecasting） |
-| 方法关键词 | time series Transformer, criss-cross attention, patching, channel-independent processing, cross-time attention, cross-dimension attention |
-| 数据集 | ISCX-VPN2016, ISCX-Tor2016, CSTNET-TLS1.3, USTC-TFC2016, CIC-IoT2022（5个真实世界数据集） |
-| 是否开源 | 是（https://github.com/Amanda-HuaDing/Criss-cross Traffic Transformer） |
-| PDF | 00-inbox/PDFs/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.pdf |
-| MinerU Markdown | 02-parsed-markdown/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.md |
+| 项目              | 内容                                                                                                                                        |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| 原文标题            | Time Will Tell: Criss-cross Transformer for Encrypted Traffic Analysis                                                                    |
+| 中文标题            | 时间会证明：用于加密流量分析的交叉 Transformer                                                                                                             |
+| 作者              | Hua Ding, Lixing Chen, Bo Zhang, Shenghong Li, Hao Peng, Zhe Qu, Yang Bai                                                                 |
+| 年份              | 2026                                                                                                                                      |
+| 会议/期刊           | IEEE Transactions on Service Computing (TSC)                                                                                              |
+| 研究方向            | 加密流量分析、网络安全、深度学习                                                                                                                          |
+| 任务类型            | 加密流量分类（classification）和预测（forecasting）                                                                                                    |
+| 方法关键词           | time series Transformer, criss-cross attention, patching, channel-independent processing, cross-time attention, cross-dimension attention |
+| 数据集             | ISCX-VPN2016, ISCX-Tor2016, CSTNET-TLS1.3, USTC-TFC2016, CIC-IoT2022（5个真实世界数据集）                                                           |
+| 是否开源            | 是（https://github.com/Amanda-HuaDing/Criss-cross Traffic Transformer）                                                                      |
+| PDF             | 00-inbox/PDFs/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.pdf                                          |
+| MinerU Markdown | 02-parsed-markdown/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.md                                      |
 
 ## 1. 一句话总结
 

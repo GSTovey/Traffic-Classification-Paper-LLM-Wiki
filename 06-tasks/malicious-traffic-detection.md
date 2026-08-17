@@ -4,7 +4,7 @@ name: "Malicious Traffic Detection"
 aliases: ["恶意流量检测", "Malicious Traffic Identification"]
 tags: ["network-security", "intrusion-detection", "encrypted-traffic", "C2-detection", "anomaly-detection"]
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-08-17"
 ---
 
 # Malicious Traffic Detection
@@ -88,6 +88,12 @@ updated: "2026-06-10"
 | A Detection Method for Malware Communication Traffic via Encrypted Traffic Analysis (Session-Transformer) | 2025 | Modified Transformer Encoder (8 heads, 8 layers) + DNN 分类器 | DataCon2020, CIC-AndMal-2017 | Session-Transformer 自动提取加密流量上下文和时序特征，DataCon2020 召回率 98.34%，CIC-AndMal-2017 精确率 93.54%；ST 特征可作为传统 ML 插件增强 KNN 性能 7.92% — `[[2025-JIoT-A_Detection_Method_for_Malware_Communication_Traffic_via_Encrypted_Traffic_Analysis]]` |
 | TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification | 2026 | DFA 范式 + 稀疏 MoE + 不确定性感知过滤 + 条件聚合 | CSTNET-TLS1.3, ISCX-Tor, CIC-IoT2022, USTC-TFC2016, ISCX-VPN | 首个异质性感知 MoE 框架，在恶意流量检测（USTC-TFC F1=97.88%）和 IoT 攻击检测（CIC-IoT F1=92.65%）上一致超越 baseline；预训练贡献最大（去除后 F1 暴跌 24.4%） — `[[2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification]]` |
 | NetMamba+: A Framework of Pre-trained Models for Efficient and Accurate Network Traffic Classification | 2026 | Mamba + Flash Attention + 多模态表示 + LDA loss | USTC-TFC, CICIoT2022, CipherSpectrum, CSTNET-TLS1.3 等 12 个数据集 | 恶意软件分类 F1=97.65%，IoT 攻击检测 F1=97.50%；OOD 检测 AUROC 最高 0.9825（Unknown Attack），支持在线部署（261.87 Mb/s） — `[[2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification]]` |
+| [[2026-TIFS-LitCVit__A_Lightweight_Self-Supervised_Contrastive_Vision_Transformer_for_Encrypted_Malicious_Traffic_Detection]] | 2026 | 轻量级自监督对比视觉 Transformer（卷积 patchify stem + 窗口分解注意力） | USTC-TFC2016, CICIOT-2022, 5GAD-2022, MCFP, IoT-23, TII-SSRC-23 | 极小参数量下实现加密恶意流量高精度检测 |
+| [[2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temporal_Graph_Learning]] | 2026 | 多流时序图学习（Packet Byte Matrix + Multi-Flow Graph Features + ViT） | CTU-Malware, USTC-TFC2016 | 早期阶段检测加密恶意流量，支持未知恶意软件识别 |
+| [[2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion]] | 2026 | 不确定性感知多视图融合（证据深度学习 + Dempster-Shafer 融合 + 长程传播） | TONIoT, DoHBrw, CICIDS | 利用不确定性衡量各模态置信度，提升加密恶意流量检测可信度 |
+| [[2026-WWW-Proteus__Towards_Accurate_and_Low-overhead_In_Network_Malicious_Traffic_Detection]] | 2026 | 网内检测（异构子树划分决策树 + MILP + P4 + 在线调优） | UNSW-NB15, CICIDS2017, CICDDoS2019 | 可编程交换机上实现低开销高准确率的恶意流量检测 |
+| [[2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_detection_in_multi-environment_networks]] | 2026 | 仿真驱动统一框架（PLS 交叉分解 + ETC 特征选择 + RNN-LSTM 迁移） | M-En (IoT23 + CICDDoS2019 融合) | 多网络环境下实时恶意流量检测 |
+| [[2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network]] | 2026 | 上下文感知流嵌入（DBSCAN 聚类 + 对比学习 + 伪标签） | MAWI, CICIDS-2017, UNSW-NB15 | 结合流量上下文增强 IoT 网络恶意流量检测 |
 
 ## 7. 工程落地问题
 

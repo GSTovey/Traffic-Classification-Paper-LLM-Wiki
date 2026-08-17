@@ -3,7 +3,7 @@ type: research-front
 question: "加密 payload 中是否存在可学习的内在模式？"
 status: converging
 created: "2026-06-21"
-last_updated: "2026-06-21"
+last_updated: "2026-08-17"
 related_concepts:
   - "[[encrypted-traffic-analysis]]"
   - "[[traffic-representation-learning]]"
@@ -28,10 +28,18 @@ related_methods:
 | 2025 | SoK | S&P | 反对 | 348 次特征遮蔽实验：仅加密 payload 时 ET-BERT 准确率仅 0.12（接近随机），仅头部信息时 0.63（与基线一致）；TLS 1.3 下 payload 不包含可学习模式 | 高（SII 遮蔽 + CipherSpectrum 纯 TLS 1.3 数据集） | 反对 |
 | 2025 | Sweet Danger | SIGCOMM | 反对 | per-flow split + frozen encoder 下 ET-BERT TLS-120 F1 从 96.8% 暴跌至 6.7%；加密 payload 上做 MAE 预训练理论上不可行 | 高（per-flow split + frozen encoder + shortcut feature 移除） | 反对 |
 | 2026 | Bias in the Shadows | arXiv | 反对 | DL 分类器大量依赖捷径特征（IP/Timestamp/端口），遮蔽后准确率反常上升；仅头部信息足以实现高准确率分类 | 高（捷径特征遮蔽实验） | 反对 |
+| 2026 | Inevitability of Side-Channel Leakage | arXiv | 理论（侧信道必然性） | 侧信道存在性定理：I(X;Y) ≥ (1/2ln2)(ρ[Δ̄−2LφC]/2)² > 0；效率优先系统中泄漏不可避免（三难困境：增大 C 牺牲效率 / 减小 Δ̄ 破坏功能 / 减小 ρ 不可控）；追求零泄漏是错误目标 | 低（纯理论、无实验） | 支持（元数据侧信道理论必然） |
+| 2026 | Reality Check | arXiv | 支持（元数据可学） | 80 万+ traces：DF π₁₀=0.956、recall 0.922（9% 基率），证明元数据/时序侧信道在真实流量上仍高度可学 | 高（真实开放世界） | 支持 |
+| 2026 | Where Do Flow Semantics Reside | arXiv | 定位（协议原生） | 冻结编码器下字节级（ET-BERT 4.6%）与视觉级（YaTC 27.6%）几乎不可学，协议原生表格 F1 51.3%（TLS-120）/42.7%（ISCX-VPN）；随机字段过滤 −23.2%/−20.4%、FSU 特定嵌入 −26.2%/−30.0%，定位可学习信号驻留于协议头部/字段 | 高（frozen encoder + 字段级消融） | 支持（信号在协议结构而非 payload 字节） |
 
 ## 当前共识方向
 
-**共识正在收敛，方向偏负面**：三篇独立的高严格度论文（SoK S&P 2025、Sweet Danger SIGCOMM 2025、Bias in the Shadows 2026）从不同角度一致表明——在强加密（TLS 1.3）条件下，加密 payload 字节本身几乎不包含可学习的语义信息。
+**共识正在收敛，方向偏负面**：三篇独立的高严格度论文（SoK S&P 2025、Sweet Danger SIGCOMM 2025、Bias in the Shadows 2026）从不同角度一致表明——在强加密（TLS 1.3）条件下，加密 payload 字节本身几乎不包含可学习的语义信息。2026 批次将结论细化为两条并行收敛线索并新增理论支柱：
+
+- **(a) payload 字节不可学**：FlowSem-MAE 冻结评估下字节级 <47%，字段级消融给出信号驻留位置的定位证据（协议头部/字段，而非 payload）
+- **(b) 元数据/协议结构侧信道必然可学**：Inevitability 定理给出信息论下界（效率优先系统零泄漏不可能），Reality Check 给出真实数据实证（π₁₀=0.956）
+
+**"payload 字节不可学 ≠ 流量不可学"**：既然泄漏必然，问题从"能否学到"变为"学习哪一层信号、如何最小化泄漏"。
 
 ET-BERT 和 YaTC 报告的高性能主要来自：
 1. per-packet split 导致的数据泄漏（64-bit 隐式流标识符）

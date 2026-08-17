@@ -57,7 +57,7 @@ updated: "2026-06-10"
   - 参数量最少（2.2M），推理速度比 Transformer 快 60 倍
   - 6 个数据集 3 类任务上准确率均超 90%，部分超 99%
   - 与 NetMamba+ (2026) 为不同作者团队的独立工作
-  - 论文笔记：`[[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]`
+  - 论文笔记：`[[2024-ICNP-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]`
 
 - **NetMamba+**：融合多模态表示的 Mamba 流量分类框架
   - 融合多模态表示（payload + packet length）
@@ -155,9 +155,9 @@ updated: "2026-06-10"
 - YaTC (AAAI 2023)：MAE 类，分层注意力 + MFR — `[[2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation]]`
 - MM4flow (CCS 2025)：多模态类，77.6TB 预训练 — `[[2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis]]`
 - NetMamba+ (arXiv 2026)：SSM 类，Mamba + 多模态 — `[[2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification]]`
-- Talk Like a Packet (arXiv 2026)：系统分类，统一预训练-微调流水线 — `[[2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models]]`
+- Talk Like a Packet (CommMag 2026)：系统分类，统一预训练-微调流水线 — `[[2026-CommMag-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models]]`
 - Sweet Danger (SIGCOMM 2025)：揭示数据泄露和 shortcut learning — `[[2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification]]`
-- NetMamba (arXiv 2024)：SSM 类，首个 Mamba 流量分类，60x 加速 — `[[2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]`
+- NetMamba (ICNP 2024)：SSM 类，首个 Mamba 流量分类，60x 加速 — `[[2024-ICNP-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba]]`
 - TrafficGPT (arXiv 2024)：GPT 类，线性注意力 12K token，分类+生成 — `[[2024-arXiv-TrafficGPT__Breaking_the_Token_Barrier_for_Efficient_Long_Traffic_Analysis_and_Generation]]`
 - MIETT (AAAI 2025)：多实例 Transformer，Two-Level Attention + PRPP/FCL — `[[2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification]]`
 - TraGe (IWQoS 2025)：结构感知预训练，Header-Payload 差异化 Field-level Masking — `[[2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences]]`

@@ -4,7 +4,7 @@ name: "Few-shot Traffic Learning"
 aliases: ["少样本流量学习", "低资源流量学习"]
 tags: [few-shot, meta-learning, zero-shot, semi-supervised, contrastive, traffic-classification, encrypted-traffic]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-08-17"
 ---
 
 # Few-shot Traffic Learning
@@ -34,7 +34,7 @@ Few-shot Traffic Learning（少样本流量学习）是指在标注样本极少�
 |---|---|---|---|---|
 | **Meta-learning** | 从大量辅助任务中学习最优初始化参数，使模型仅需少量梯度更新即可适应新任务 | 可应对 unseen classes、cross-version、cross-domain 三种场景；推理时计算复杂度与普通方法相当 | 需要足够多样的辅助任务构建 episode；对任务分布敏感 | MetaMRE (Computer Networks 2023) |
 | **Contrastive Learning** | 通过对比正负样本对学习有区分性的特征表征，支持 supervised 和 self-supervised 两种范式 | 能在无标签或少标签条件下构建紧凑的类内表征和分离的类间表征；可与预训练模型结合 | 对正负样本对的构建策略敏感；温度系数等超参数需调优 | CoMask (ICAACE 2025), tFusion (CCS 2025) |
-| **Zero-shot / Cross-modal** | 将流量分析重新定义为跨模态检索问题，通过学习模态间的对齐关系实现对未见类别的泛化 | 完全无需目标类别的流量样本；可扩展性强，新增类别只需获取语义侧信息 | 依赖高质量的语义侧信息获取；跨模态对齐的理论基础仍在探索中 | STAR (arXiv 2025) |
+| **Zero-shot / Cross-modal** | 将流量分析重新定义为跨模态检索问题，通过学习模态间的对齐关系实现对未见类别的泛化 | 完全无需目标类别的流量样本；可扩展性强，新增类别只需获取语义侧信息 | 依赖高质量的语义侧信息获取；跨模态对齐的理论基础仍在探索中 | STAR (INFOCOM 2026) |
 | **Semi-supervised Learning** | 协同利用大量未标注数据和少量标注数据，通过掩码预测、伪标签等机制挖掘未标注数据的价值 | 充分利用真实场景中大量存在的未标注数据；可同时增强泛化能力和判别能力 | 未标注数据的质量和分布影响训练效果；交替训练策略增加流程复杂度 | CoMask (ICAACE 2025), FEC-OSL (TIFS 2026) |
 | **Prototype Learning** | 通过构建类别原型（prototype）进行最近邻分类或聚类，结合对比学习增强原型质量 | 无需显式学习决策边界，天然支持开放集识别；可对未知流量进行细粒度聚类 | 原型质量受特征表征影响大；功能相似的类别容易混淆 | UT-PAB (JCN 2026) |
 | **Multi-modal Fusion** | 将流量视为包含 packet、flow、host 等多种粒度的多模态数据，通过跨模态注意力融合不同粒度特征 | 不同粒度特征互补，融合后特征空间更稀疏、更可分；仅需极少量标注即可训练 | 多模态特征提取增加计算开销；需要设计有效的跨模态融合机制 | tFusion (CCS 2025) |
@@ -74,6 +74,8 @@ Few-shot Traffic Learning（少样本流量学习）是指在标注样本极少�
 | CoMask: A Semi-Supervised Learning Framework for Encrypted Traffic Classification Based on Supervised Contrastive Learning and Masked Sequence Prediction Tasks | 2025 | 首次整合监督对比学习与掩码序列预测的半监督框架，通过交替训练策略协同利用标注和未标注数据，平均 F1 提升 3.3% | 类别不平衡敏感；MSP 收敛慢；标注数据仅来自 8 个恶意软件类别 |
 | UT-PAB: A prototypical alignment approach to unknown traffic classification using BERT | 2026 | 结合 BERT 预训练（SLT+MixTMM）和原型对齐微调（SUP+SSCT），实现开放世界下未知流量的细粒度分类，H-score 最高提升 75.34% | 已知类准确率相对较低；62.6M 参数量较大；功能相似类别容易混淆 |
 | FEC-OSL: End-to-End Open-Set Semi-Supervised Learning for Fine-Grained Encrypted Traffic Classification | 2026 | 提出端到端开放集半监督学习框架，通过双分支特征提取（CViT+TAGCN）和能量模型边界学习，在高开放度场景下 AUC 仍达 97.5% | 仅使用前 5 个包的字节特征；辅助未知类数据需求；计算开销较大 |
+| FMWF: Beyond Single Tabs — A Transformative Few-Shot Approach to Multi-Tab Website Fingerprinting Attacks | 2025 | 面向多标签页（multi-tab）场景的少样本 WF 攻击，通过数据增强 + 迁移学习 + few-shot 微调，在少量标注 trace 下识别多标签页访问组合 | 多标签组合空间巨大，极端少样本下性能受限 |
+| LitCVit: A Lightweight Self-Supervised Contrastive Vision Transformer for Encrypted Malicious Traffic Detection | 2026 | 轻量级自监督对比 ViT，自监督预训练表征支撑低标注资源下的加密恶意流量检测 | 预训练数据需求仍存在 |
 
 ## 7. 当前共识
 

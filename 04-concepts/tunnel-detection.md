@@ -12,7 +12,7 @@ tags:
   - traffic-fingerprinting
   - network-security
 created: "2026-05-27"
-updated: "2026-06-21"
+updated: "2026-08-17"
 ---
 
 # Encrypted Tunnel Detection（加密隧道检测）
@@ -124,6 +124,9 @@ updated: "2026-06-21"
 | Covert Channels (Zou et al.) | 2026 | CS | 提出基于 SHA-256 哈希的隐蔽载体过滤策略，通过密钥控制的伪随机载体子集选择构建网络隐蔽信道，使 ML 检测器的 AUC 从 1.0 降至接近 0.5 | 仅在办公网浏览和视频监控流量上验证；隐蔽容量受限于载体可用性 |
 | LZR: Identifying Unexpected Internet Services | 2021 | USENIX | 通过对 IPv4 全网系统性测量，揭示协议部署的分散性（仅 3% HTTP 和 6% TLS 在 IANA 端口上），提出 LZR 系统以 5 次握手识别 99% 非预期服务 | 主要面向服务发现而非隧道检测；需主动扫描 |
 | Huma: Censorship Circumvention via Web Protocol Tunneling | 2026 | NDSS | 通过延迟流量替换和显式用户模拟器解决 Web 协议隧道的流量指纹和行为不真实问题，保证审查不可观测性 | 带宽受限于模拟的浏览行为；依赖内容分块策略 |
+| HINT: Enhanced detection of obfuscated HTTPS tunnel traffic using heterogeneous information network | 2025 | JCN | 构建异构信息网络（HIN + 元路径 + 异构图注意力 HAN）建模隧道流量的多维交互关系，结合 CNN-LSTM 显著增强混淆 HTTPS 隧道流量的检测能力 | HIN 构建依赖特征工程，计算开销高于统计方法 |
+| Beyond RTT: An Adversarially Robust Two-Tiered Approach for Residential Proxy Detection | 2026 | NDSS | 提出对抗鲁棒的两层（two-tiered）住宅代理检测方法，突破传统 RTT 特征在代理检测中的局限，结合工程特征 + XGBoost/Transformer 流关联 | 依赖真实住宅代理样本构建（自采 15 个月 900GB、6.3M 连接） |
+| QuicCourier: Leveraging the Dynamics of QUIC-Based Website Browsing Behaviors Through Proxy for Covert Communication | 2025 | TDSC | 利用 QUIC 网站浏览行为的动力学特征（run-length 序列生成模型 + 包填充/插入/替换）经代理封装构建隐蔽信道，绕过流量分类检测 | 隐蔽容量有限，需代理环境配合 |
 
 ## 7. 当前共识
 

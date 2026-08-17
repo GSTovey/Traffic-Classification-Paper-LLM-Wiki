@@ -2,7 +2,7 @@
 type: dashboard
 purpose: project-quick-reference
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-08-17"
 ---
 
 # Traffic_Papers 项目全景速览
@@ -13,7 +13,7 @@ updated: "2026-06-10"
 
 ## 1. 一句话定位
 
-Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知识库**，当前收录 92 篇顶级会议/期刊论文（其中 46 篇已完成深度分析），服务于综述写作、项目申报、方法比较和实验复现。
+Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知识库**，当前收录 171 篇顶级会议/期刊论文（其中 48 篇已完成深度分析），服务于综述写作、项目申报、方法比较和实验复现。
 
 ---
 
@@ -25,7 +25,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 │  概念页·方法页·任务页·综述页·对比表·Claims·输出             │
 ├─────────────────────────────────────────────────────────┤
 │  第二层：论文笔记层（03）                                  │
-│  92 篇结构化中文笔记，每篇 14–57 KB（40 篇含深度分析）     │
+│  171 篇结构化中文笔记，每篇 14–57 KB（48 篇含深度分析）    │
 ├─────────────────────────────────────────────────────────┤
 │  第一层：原始资料层（00–02）                               │
 │  PDF 原文 → MinerU API 解析 → 整理后 Markdown             │
@@ -40,16 +40,16 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 | 目录 | 内容 | 当前数量 | 快速定位场景 |
 |------|------|----------|-------------|
-| `00-inbox/PDFs/` | 论文 PDF 原文 | 92 篇 | 查原文、定位引用 |
-| `01-mineru-output/` | MinerU 原始解析（已 gitignore） | 92 份 | 调试解析问题 |
-| `02-parsed-markdown/` | 整理后的 MinerU Markdown | 92 份 | 机器可读原文 |
-| `03-paper-notes/` | **结构化论文笔记**（核心） | 92 篇（40 篇深度分析） | 论文分析、证据追踪 |
-| `04-concepts/` | 概念页 | 9 个 | 理解领域概念 |
+| `00-inbox/PDFs/` | 论文 PDF 原文 | 171 篇 | 查原文、定位引用 |
+| `01-mineru-output/` | MinerU 原始解析（已 gitignore） | 171 份 | 调试解析问题 |
+| `02-parsed-markdown/` | 整理后的 MinerU Markdown | 171 份 | 机器可读原文 |
+| `03-paper-notes/` | **结构化论文笔记**（核心） | 171 篇（48 篇深度分析） | 论文分析、证据追踪 |
+| `04-concepts/` | 概念页 | 11 个 | 理解领域概念 |
 | `05-methods/` | 方法页 | 8 个 | 方法对比、技术选型 |
 | `06-tasks/` | 任务页 | 8 个 | 任务定义、输入输出 |
 | `07-surveys/` | 综述页 | 5 个 | 综述写作素材 |
 | `08-comparisons/` | 对比表（含开源注册表） | 5 个 | 横向比较、代码追踪 |
-| `09-claims/` | 观点与矛盾 | 2 个（33 Claims + 13 矛盾） | 论证、找 research gap |
+| `09-claims/` | 观点与矛盾 | 2 个（57 Claims + 14 矛盾） | 论证、找 research gap |
 | `10-outputs/` | 草稿、报告、复现笔记 | 空 | 写作产出 |
 | `00-dashboard/` | 导航、队列、地图、日志 | 6 个文件 | 项目状态总览 |
 
@@ -69,7 +69,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 ---
 
-## 5. 46 篇深度分析论文（L3/L4 级）
+## 5. 48 篇深度分析论文（L3/L4 级，按 frontmatter reading_level 统计）
 
 这些论文已完成公式推导、消融实验、跨论文关联分析（400–800 行/篇）：
 
@@ -121,16 +121,36 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 | MT-DEGCL | TIFS 2026 | 多任务双嵌入图对比学习 |
 | LEXNet | SIGKDD 2023 | 轻量可解释 CNN 分类 |
 
-### 第三批（2026-06-10，6 篇 arXiv）
+### 第三批（2026-06-10，6 篇；其中 2 篇已正式发表）
 
 | 论文 | 年份 | 主题 |
 |------|------|------|
-| NetMamba | arXiv 2024 | 单向 Mamba 预训练流量分类 |
+| NetMamba | ICNP 2024 | 单向 Mamba 预训练流量分类 |
 | TrafficGPT | arXiv 2024 | GPT-style 自回归流量分类+生成 |
-| STAR | arXiv 2025 | 零样本 HTTPS 网站指纹 |
+| STAR | INFOCOM 2026 | 零样本 HTTPS 网站指纹 |
 | NetMamba+ | arXiv 2026 | Mamba+Flash Attention+多模态+OOD |
 | TrafficMoE | arXiv 2026 | 异质性 MoE 加密流量分类 |
 | Bias in the Shadows | arXiv 2026 | 捷径学习检测与评估批判 |
+
+### 第四批（2026-08-17，15 篇）
+
+| 论文 | 会议 | 主题 |
+|------|------|------|
+| MH-Net | AAAI 2025 | 多视图异构图加密流量分类 |
+| SuperFE | EuroSys 2025 | 可扩展灵活特征提取器 |
+| SketchFeature | NDSS 2025 | 数据平面逐流特征提取 |
+| WF-A2D | TIFS 2025 | 非对称对抗 WF 防御（开销 1.81%） |
+| DTPN | WSDM 2025 | 扩散模型净化攻击样本 |
+| FMWF (Beyond Single Tabs) | WWW 2025 | 少样本多标签页 WF 攻击 |
+| FP-Rainbow | WWW 2025 | 浏览器配置指纹识别 |
+| HOLMES & WATSON | WWW 2025 | HTTP 版本并行性 WF |
+| Browser FP First Evidence | WWW 2025 | 浏览器指纹在线追踪实证 |
+| Decompose to Understand | INFOCOM 2026 | 频域解耦异常检测 |
+| Beyond RTT | NDSS 2026 | 对抗鲁棒住宅代理检测 |
+| LitCVit | TIFS 2026 | 轻量自监督视觉 Transformer 恶意检测 |
+| TrapFlow | TIFS 2026 | 动态后门学习 WF 防御 |
+| Securitas | NSDI 2026 | 网内混淆防御（带宽开销 6.21%） |
+| Proteus | WWW 2026 | 低开销网内恶意流量检测 |
 
 **跨论文关联链**：
 - **预训练演进线**：ET-BERT → YaTC → MM4flow → TrafficFormer → MIETT → Sweet Danger → SoK
@@ -145,7 +165,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 ---
 
-## 6. 33 条核心 Claims（可直接引用）
+## 6. 57 条核心 Claims（可直接引用）
 
 > 完整列表见 [[claims-index]]。以下为最高价值的 6 条：
 
@@ -158,7 +178,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 ---
 
-## 7. 13 组关键矛盾（Research Gap 来源）
+## 7. 14 组关键矛盾（Research Gap 来源）
 
 > 完整列表见 [[contradictions]]。以下为核心冲突：
 
@@ -320,7 +340,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 5. 如需 L4 级分析，使用 `templates/claudian-prompts/04-reproduction-analysis.md`
 
 ### 场景 D：我要找 Research Gap
-1. 读 [[contradictions]] 的 9 组冲突
+1. 读 [[contradictions]] 的 14 组冲突
 2. 读 [[open-questions]] 的 16 条开放问题
 3. 交叉比对 [[claims-index]] 中互相矛盾的观点
 
@@ -375,6 +395,8 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 | 2026-06-09 | 13 篇新论文入库（papers_temp），知识库总量增至 92 篇，开源注册表增至 30 个 |
 | 2026-06-09 | 26 篇 CCF A 级论文深度分析（14→40 篇），Claims 增至 42 条，矛盾增至 9 组 |
 | 2026-06-10 | 6 篇 arXiv 论文深度分析（40→46 篇），新增 SSM/MoE/零样本 WF/捷径学习方向 |
+| 2026-06-21 | 6 篇 arXiv 论文入库（Multimodal Reasoning/PrismWF/Reality Check/ResAware/Inevitability/Treat Traffic Like Trees/Flow Semantics），知识库总量增至 147 篇，研究前沿体系建立（6 个前沿） |
+| 2026-08-17 | 24 篇新论文入库（Aug_inbox），知识库总量增至 171 篇，Claims 增至 57 条，开源注册表增至 56 个，研究前沿全部更新（wf 7→16、payload 5→8 等） |
 
 ---
 

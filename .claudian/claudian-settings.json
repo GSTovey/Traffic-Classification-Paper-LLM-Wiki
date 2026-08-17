@@ -1,9 +1,9 @@
 {
   "userName": "",
   "permissionMode": "yolo",
-  "model": "opus[1m]",
-  "thinkingBudget": "medium",
-  "effortLevel": "high",
+  "model": "haiku",
+  "thinkingBudget": "off",
+  "effortLevel": "max",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
   "titleGenerationModel": "",
@@ -40,7 +40,7 @@
       "enableOpus1M": true,
       "enableSonnet1M": true,
       "customModels": "",
-      "lastModel": "opus[1m]",
+      "lastModel": "haiku",
       "environmentVariables": "\"ANTHROPIC_AUTH_TOKEN\": \"tp-cnefxvvoe1rfph5o3eyh2mzs606hjizdb2v2403b4q0q58h6\",\n\"ANTHROPIC_BASE_URL\": \"https://token-plan-cn.xiaomimimo.com/anthropic\",\n\"ANTHROPIC_MODEL\": \"mimo-v2.5-pro\",\n\"SECURITY_GUIDANCE_DISABLE\": \"1\"",
       "environmentHash": ""
     },
@@ -73,14 +73,14 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "opus[1m]"
+    "claude": "haiku"
   },
   "savedProviderEffort": {
-    "claude": "high"
+    "claude": "max"
   },
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {
-    "claude": "medium"
+    "claude": "off"
   },
   "savedProviderPermissionMode": {
     "claude": "yolo"

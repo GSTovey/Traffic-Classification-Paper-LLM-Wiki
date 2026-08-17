@@ -4,7 +4,7 @@ name: "Encrypted Traffic Detection"
 aliases: ["加密流量检测", "Encrypted Traffic Identification"]
 tags: [encrypted-traffic, detection, TLS, deep-packet-inspection, frequency-domain, contrastive-learning]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-08-17"
 ---
 
 # Encrypted Traffic Detection（加密流量检测）
@@ -88,6 +88,12 @@ updated: "2026-05-27"
 - ET-BERT：首个加密流量 BERT 预训练模型 — `[[2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification]]`
 - YaTC：MAE 预训练 Traffic Transformer，分层注意力 — `[[2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation]]`
 - OpenVPN Fingerprinting：Opcode + ACK 双指纹 + 主动探测的两阶段 VPN 检测框架，ISP 规模下 85%+ 识别率，误报率 < 0.0039% — `[[2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting]]`
+- [[2025-AAAI-Revolutionizing_Encrypted_Traffic_Classification_with_MH-Net__A_Multi-View_Heterogeneous_Graph_Model]]：多视图异构图 + 对比学习的加密流量分类
+- [[2026-TIFS-LitCVit__A_Lightweight_Self-Supervised_Contrastive_Vision_Transformer_for_Encrypted_Malicious_Traffic_Detection]]：轻量级自监督对比视觉 Transformer 检测加密恶意流量
+- [[2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temporal_Graph_Learning]]：多流时序图学习的加密恶意流量早期检测
+- [[2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion]]：不确定性感知融合的可信加密恶意流量检测
+- [[2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly_Detection_for_Encrypted_Network_Traffic]]：频率解耦的加密流量异常检测
+- [[2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection]]：上下文掩码蒸馏的零阳性加密流量异常检测
 
 ## 7. 工程落地问题
 

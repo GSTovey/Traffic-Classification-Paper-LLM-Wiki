@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15T15:29:39.935676",
+  "generated": "2026-08-17T15:49:26.528717",
   "papers": {
     "2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries": {
       "processed_at": "2026-06-15T15:29:33.632597",
@@ -879,7 +879,7 @@
         }
       ]
     },
-    "2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba": {
+    "2024-ICNP-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba": {
       "processed_at": "2026-06-15T15:29:33.688221",
       "figures": [
         {
@@ -890,8 +890,8 @@
           ],
           "sub_type": null,
           "score": 12,
-          "dest_name": "2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__1__bb8e52d3f956e994.jpg",
-          "dest_rel": "images/2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__1__bb8e52d3f956e994.jpg"
+          "dest_name": "2024-ICNP-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__1__bb8e52d3f956e994.jpg",
+          "dest_rel": "images/2024-ICNP-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__1__bb8e52d3f956e994.jpg"
         },
         {
           "img_path": "images/1ceb8fe7e8b4f085d19a92606133aa5c0325a2c80a2171d85694b53db30bf9c1.jpg",
@@ -901,8 +901,8 @@
           ],
           "sub_type": "flowchart",
           "score": 7,
-          "dest_name": "2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__2__1ceb8fe7e8b4f085.jpg",
-          "dest_rel": "images/2024-arXiv-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__2__1ceb8fe7e8b4f085.jpg"
+          "dest_name": "2024-ICNP-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__2__1ceb8fe7e8b4f085.jpg",
+          "dest_rel": "images/2024-ICNP-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_U__Fig__2__1ceb8fe7e8b4f085.jpg"
         }
       ]
     },
@@ -1503,7 +1503,7 @@
         }
       ]
     },
-    "2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting": {
+    "2025-INFOCOM-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting": {
       "processed_at": "2026-06-15T15:29:33.728414",
       "figures": [
         {
@@ -1514,8 +1514,8 @@
           ],
           "sub_type": "flowchart",
           "score": 15,
-          "dest_name": "2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__1__23487a7f81ffa63d.jpg",
-          "dest_rel": "images/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__1__23487a7f81ffa63d.jpg"
+          "dest_name": "2025-INFOCOM-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__1__23487a7f81ffa63d.jpg",
+          "dest_rel": "images/2025-INFOCOM-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__1__23487a7f81ffa63d.jpg"
         },
         {
           "img_path": "images/0ead5cd95426d74b195f570d4e75eaa821de47750f37481b4b6e3420bb9e0518.jpg",
@@ -1525,8 +1525,8 @@
           ],
           "sub_type": "flowchart",
           "score": 14,
-          "dest_name": "2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__2__0ead5cd95426d74b.jpg",
-          "dest_rel": "images/2025-arXiv-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__2__0ead5cd95426d74b.jpg"
+          "dest_name": "2025-INFOCOM-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__2__0ead5cd95426d74b.jpg",
+          "dest_rel": "images/2025-INFOCOM-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_We__Fig__2__0ead5cd95426d74b.jpg"
         }
       ]
     },
@@ -2020,7 +2020,7 @@
         }
       ]
     },
-    "2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Network_Traffic_Classification": {
+    "2026-ICASSP-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Network_Traffic_Classification": {
       "processed_at": "2026-06-15T15:29:33.759644",
       "figures": [
         {
@@ -2031,8 +2031,8 @@
           ],
           "sub_type": "flowchart",
           "score": 15,
-          "dest_name": "2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__1__cc4da864624be621.jpg",
-          "dest_rel": "images/2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__1__cc4da864624be621.jpg"
+          "dest_name": "2026-ICASSP-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__1__cc4da864624be621.jpg",
+          "dest_rel": "images/2026-ICASSP-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__1__cc4da864624be621.jpg"
         },
         {
           "img_path": "images/fdbe7c450bdd03cb4b7cb9779710590c827bb19eaf197b190bacec9333646cd8.jpg",
@@ -2042,12 +2042,12 @@
           ],
           "sub_type": null,
           "score": 6,
-          "dest_name": "2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__2__fdbe7c450bdd03cb.jpg",
-          "dest_rel": "images/2026-arXiv-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__2__fdbe7c450bdd03cb.jpg"
+          "dest_name": "2026-ICASSP-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__2__fdbe7c450bdd03cb.jpg",
+          "dest_rel": "images/2026-ICASSP-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Net__Fig__2__fdbe7c450bdd03cb.jpg"
         }
       ]
     },
-    "2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models": {
+    "2026-CommMag-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transformer_Foundation_Models": {
       "processed_at": "2026-06-15T15:29:33.761046",
       "figures": [
         {
@@ -2058,8 +2058,8 @@
           ],
           "sub_type": "flowchart",
           "score": 12,
-          "dest_name": "2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__2__d809f82f5cc8046c.jpg",
-          "dest_rel": "images/2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__2__d809f82f5cc8046c.jpg"
+          "dest_name": "2026-CommMag-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__2__d809f82f5cc8046c.jpg",
+          "dest_rel": "images/2026-CommMag-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__2__d809f82f5cc8046c.jpg"
         },
         {
           "img_path": "images/67e0a1fe3e86dcc54c1619b5f1301f4bb6e83401c2cbd6b8066773d4d3daa449.jpg",
@@ -2069,8 +2069,8 @@
           ],
           "sub_type": "flowchart",
           "score": 12,
-          "dest_name": "2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__3__67e0a1fe3e86dcc5.jpg",
-          "dest_rel": "images/2026-arXiv-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__3__67e0a1fe3e86dcc5.jpg"
+          "dest_name": "2026-CommMag-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__3__67e0a1fe3e86dcc5.jpg",
+          "dest_rel": "images/2026-CommMag-Talk_Like_a_Packet__Rethinking_Network_Traffic_Analysis_with_Transfor__Fig__3__67e0a1fe3e86dcc5.jpg"
         }
       ]
     },
@@ -2098,6 +2098,1862 @@
           "score": 14,
           "dest_name": "2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traf__Fig__5__d1c8c50e7acaf4c9.jpg",
           "dest_rel": "images/2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traf__Fig__5__d1c8c50e7acaf4c9.jpg"
+        }
+      ]
+    },
+    "2020-CCS-Censored_Planet__An_Internet-wide__Longitudinal_Censorship_Observatory": {
+      "processed_at": "2026-08-17T15:49:26.410267",
+      "figures": [
+        {
+          "img_path": "images/0b6cadbef90ec281285237de6a3ca0d3b32e929c48ad5da4eacff646e4886f18.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: Censored Planet Design."
+          ],
+          "sub_type": "flowchart",
+          "score": 5,
+          "dest_name": "2020-CCS-Censored_Planet__An_Internet-wide__Longitudinal_Censorship_Observatory__Figure_1__0b6cadbef90ec281.jpg",
+          "dest_rel": "images/2020-CCS-Censored_Planet__An_Internet-wide__Longitudinal_Censorship_Observatory__Figure_1__0b6cadbef90ec281.jpg"
+        }
+      ]
+    },
+    "2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting": {
+      "processed_at": "2026-08-17T15:49:26.411571",
+      "figures": [
+        {
+          "img_path": "images/d4d613462b7c8039d102e4cd724ce1571bfefa7b2ab99763f83474982d381529.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: Design overview of our network-layer defense."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Spl__Figure_1__d4d613462b7c8039.jpg",
+          "dest_rel": "images/2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Spl__Figure_1__d4d613462b7c8039.jpg"
+        }
+      ]
+    },
+    "2020-IMC-How_China_Detects_and_Blocks_Shadowsocks": {
+      "processed_at": "2026-08-17T15:49:26.412989",
+      "figures": [
+        {
+          "img_path": "images/9c00f3084c1320ed0f499cb23d37ea3b747808da55c6cf148c808721f618f09f.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: How active probing works. A genuine Shadowsocks client connects to a Shadowsocks server; Once the GFW passively determines that the connection may be Shadowsocks, it directs its active probers to confirm this guess."
+          ],
+          "sub_type": "flowchart",
+          "score": 4,
+          "dest_name": "2020-IMC-How_China_Detects_and_Blocks_Shadowsocks__Figure_1__9c00f3084c1320ed.jpg",
+          "dest_rel": "images/2020-IMC-How_China_Detects_and_Blocks_Shadowsocks__Figure_1__9c00f3084c1320ed.jpg"
+        }
+      ]
+    },
+    "2020-NDSS-Detecting_Probe-resistant_Proxies": {
+      "processed_at": "2026-08-17T15:49:26.414315",
+      "figures": [
+        {
+          "img_path": "images/929383b786ed2acc65ed95237a120b79728d39f56c0126a026d12a64559c669d.jpg",
+          "figure_label": "Fig. 15",
+          "caption": [
+            "Fig. 15: Automated Decision Tree — We trained a multi-class decision tree classifier on the 25k endpoints in our Tap dataset (and 1k synthetically-generated proxy samples). Each node contains an array of the number of samples yet to be classified at that point in the tree: [not proxy, lampshade, mtproto, obfs4, ossh, shadowsocks-python]. Nodes are labeled with the current classification, and colored according to how confident a decision could be made at that point."
+          ],
+          "sub_type": "flowchart",
+          "score": 5,
+          "dest_name": "2020-NDSS-Detecting_Probe-resistant_Proxies__Fig__15__929383b786ed2acc.jpg",
+          "dest_rel": "images/2020-NDSS-Detecting_Probe-resistant_Proxies__Fig__15__929383b786ed2acc.jpg"
+        }
+      ]
+    },
+    "2020-USENIX-Zero-delay_Lightweight_Defenses_against_Website_Fingerprinting": {
+      "processed_at": "2026-08-17T15:49:26.416209",
+      "figures": [
+        {
+          "img_path": "images/55e137830c044b85d61493814e623631e7153a06ef59b1aa50c52753066336aa.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: The threat model for WF. The adversary sits between the user and the Tor network. The middle node of Tor network will be a cooperating proxy to deploy our defense."
+          ],
+          "sub_type": "flowchart",
+          "score": 7,
+          "dest_name": "2020-USENIX-Zero-delay_Lightweight_Defenses_against_Website_Fingerprinting__Figure_1__55e137830c044b85.jpg",
+          "dest_rel": "images/2020-USENIX-Zero-delay_Lightweight_Defenses_against_Website_Fingerprinting__Figure_1__55e137830c044b85.jpg"
+        },
+        {
+          "img_path": "images/03b9ef5793116b3724653fbaac348080c57f2198e920659b34f195853f8d8ead.jpg",
+          "figure_label": "Figure 8",
+          "caption": [
+            "Figure 8: Client’s state machine. Starting from Front Mode, it will switch between Glue Mode and Back Mode until dwell time becomes too long. “Glue traces” are padded in Glue Mode. The client keeps sampling inter-arrival times in both Front and Back Mode."
+          ],
+          "sub_type": "flowchart",
+          "score": 5,
+          "dest_name": "2020-USENIX-Zero-delay_Lightweight_Defenses_against_Website_Fingerprinting__Figure_8__03b9ef5793116b37.jpg",
+          "dest_rel": "images/2020-USENIX-Zero-delay_Lightweight_Defenses_against_Website_Fingerprinting__Figure_8__03b9ef5793116b37.jpg"
+        }
+      ]
+    },
+    "2021-TDSC-BiMorphing_A_Bi-Directional_Bursting_Defense_against_Website_Fingerprinting_Attacks": {
+      "processed_at": "2026-08-17T15:49:26.418119",
+      "figures": [
+        {
+          "img_path": "images/d7742f7f1f4852e956a45b55a4cdc32f399c2994852307132ee7142803187b3e.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. BIMORPHING architecture."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2021-TDSC-BiMorphing_A_Bi-Directional_Bursting_Defense_against_Website_Fingerpri__Fig__5__d7742f7f1f4852e9.jpg",
+          "dest_rel": "images/2021-TDSC-BiMorphing_A_Bi-Directional_Bursting_Defense_against_Website_Fingerpri__Fig__5__d7742f7f1f4852e9.jpg"
+        },
+        {
+          "img_path": "images/cb51bfb47aca7689ecf7c1b487937bcb9f78f4a731151504539c83197f0e99e3.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. A Tor anonymity network example showing a user connecting to the Internet via three Tor nodes. The website fingerprinting passive attack occurs between the user and the Tor entry guard."
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2021-TDSC-BiMorphing_A_Bi-Directional_Bursting_Defense_against_Website_Fingerpri__Fig__1__cb51bfb47aca7689.jpg",
+          "dest_rel": "images/2021-TDSC-BiMorphing_A_Bi-Directional_Bursting_Defense_against_Website_Fingerpri__Fig__1__cb51bfb47aca7689.jpg"
+        }
+      ]
+    },
+    "2021-USENIX-Defeating_DNN-Based_Traffic_Analysis_Systems_in_Real-Time_With_Blind_Adversarial_Perturbations": {
+      "processed_at": "2026-08-17T15:49:26.420074",
+      "figures": [
+        {
+          "img_path": "images/90a0de32888cc8bf890805b642ecf822206a817b464c54e1bbff06f6049b3745.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: Overview of our BLANKET Tor pluggable transport, which applies blind adversarial perturbations on live Tor connections (the figure only shows the client-to-bridge operations; bridge-to-client operations work similarly)."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2021-USENIX-Defeating_DNN-Based_Traffic_Analysis_Systems_in_Real-Time_With_Blind__Figure_3__90a0de32888cc8bf.jpg",
+          "dest_rel": "images/2021-USENIX-Defeating_DNN-Based_Traffic_Analysis_Systems_in_Real-Time_With_Blind__Figure_3__90a0de32888cc8bf.jpg"
+        },
+        {
+          "img_path": "images/5652d08995927732fa9258b343d029297e37cf1e208b962c59858c15ba26f00f.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: The block diagram of our blind adversarial perturbation technique"
+          ],
+          "sub_type": "flowchart",
+          "score": 9,
+          "dest_name": "2021-USENIX-Defeating_DNN-Based_Traffic_Analysis_Systems_in_Real-Time_With_Blind__Figure_2__5652d08995927732.jpg",
+          "dest_rel": "images/2021-USENIX-Defeating_DNN-Based_Traffic_Analysis_Systems_in_Real-Time_With_Blind__Figure_2__5652d08995927732.jpg"
+        }
+      ]
+    },
+    "2021-USENIX-LZR__Identifying_Unexpected_Internet_Services": {
+      "processed_at": "2026-08-17T15:49:26.421265",
+      "figures": [
+        {
+          "img_path": "images/2dd88818177e37c235942f897958bfb0e8aab2b2e759c868bc411cf7b1aa87d3.jpg",
+          "figure_label": "Figure 12",
+          "caption": [
+            "Figure 12: LZR Algorithm — LZR efficiently identifies real Internet services by sending application-layer data with the ACK of a TCP handshake to filter out non-acknowledging hosts and fingerprint the responding protocol."
+          ],
+          "sub_type": "flowchart",
+          "score": 9,
+          "dest_name": "2021-USENIX-LZR__Identifying_Unexpected_Internet_Services__Figure_12__2dd88818177e37c2.jpg",
+          "dest_rel": "images/2021-USENIX-LZR__Identifying_Unexpected_Internet_Services__Figure_12__2dd88818177e37c2.jpg"
+        }
+      ]
+    },
+    "2022-S&P-Surakav__Generating_Realistic_Traces_for_a_Strong_Website_Fingerprinting_Defense": {
+      "processed_at": "2026-08-17T15:49:26.423615",
+      "figures": [
+        {
+          "img_path": "images/3cd66deebe674c3a8fd164b6ee62a30018ae3c56c78608a28bc20a79adadd4a6.jpg",
+          "figure_label": "Fig. 11",
+          "caption": [
+            "Fig. 11: The architecture of our generator and discriminator. (FC: fully-connected layer, BN: batch normalization, c: class label, \\`: trace length, z:sampled noise vector.)"
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2022-S_P-Surakav__Generating_Realistic_Traces_for_a_Strong_Website_Fingerprintin__Fig__11__3cd66deebe674c3a.jpg",
+          "dest_rel": "images/2022-S_P-Surakav__Generating_Realistic_Traces_for_a_Strong_Website_Fingerprintin__Fig__11__3cd66deebe674c3a.jpg"
+        },
+        {
+          "img_path": "images/bb162e14dcb751eb5417d939e0820772374e2ca474e7af4a753f41c7113a1ed1.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4: The architecture of the Generator and the Discriminator. (FC: fully-connected layer, BN: batch normalization, c: class label, \\`: trace length, z: sampled noise vector.)"
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2022-S_P-Surakav__Generating_Realistic_Traces_for_a_Strong_Website_Fingerprintin__Fig__4__bb162e14dcb751eb.jpg",
+          "dest_rel": "images/2022-S_P-Surakav__Generating_Realistic_Traces_for_a_Strong_Website_Fingerprintin__Fig__4__bb162e14dcb751eb.jpg"
+        }
+      ]
+    },
+    "2022-TDSC-An_Automated_Multi-Tab_Website_Fingerprinting_Attack": {
+      "processed_at": "2026-08-17T15:49:26.425240",
+      "figures": [
+        {
+          "img_path": "images/482d1d533f94dfd1c13544d70bf64b0a0d2e92e92ee06e0e993dde6b5ce6dd27.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The overview of our multi-tab website fingerprinting attack."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2022-TDSC-An_Automated_Multi-Tab_Website_Fingerprinting_Attack__Fig__2__482d1d533f94dfd1.jpg",
+          "dest_rel": "images/2022-TDSC-An_Automated_Multi-Tab_Website_Fingerprinting_Attack__Fig__2__482d1d533f94dfd1.jpg"
+        },
+        {
+          "img_path": "images/b37e075be82565b13d2b1b2c656ef9842d3bf528a319d0b360d0cb5a9b0f041f.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The illustration of the sequential multi-tab web browsing. The grey circles are the initial chunk of network packets solely generated for the first page. Other circles are network packets generated for different pages when at least two pages are loading simultaneously."
+          ],
+          "sub_type": "flowchart",
+          "score": 10,
+          "dest_name": "2022-TDSC-An_Automated_Multi-Tab_Website_Fingerprinting_Attack__Fig__1__b37e075be82565b1.jpg",
+          "dest_rel": "images/2022-TDSC-An_Automated_Multi-Tab_Website_Fingerprinting_Attack__Fig__1__b37e075be82565b1.jpg"
+        }
+      ]
+    },
+    "2022-TIFS-Minipatch__Undermining_DNN-Based_Website_Fingerprinting_With_Adversarial_Patches": {
+      "processed_at": "2026-08-17T15:49:26.426817",
+      "figures": [
+        {
+          "img_path": "images/49d06fee68b42640b4a33e5b834873112c678848235b872eef6eac8cf516732e.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Illustration of the Minipatch perturbation and how the adversarial patches are injected into website traces."
+          ],
+          "sub_type": "flowchart",
+          "score": 11,
+          "dest_name": "2022-TIFS-Minipatch__Undermining_DNN-Based_Website_Fingerprinting_With_Adversari__Fig__3__49d06fee68b42640.jpg",
+          "dest_rel": "images/2022-TIFS-Minipatch__Undermining_DNN-Based_Website_Fingerprinting_With_Adversari__Fig__3__49d06fee68b42640.jpg"
+        },
+        {
+          "img_path": "images/c535f4ec3a7b8c883043005679bb0791ff636fb966d0e152ebebb5e1dd9283ce.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Illustration of adaptive bound tuning with $M _ { \\alpha } = 2 , M _ { \\beta } = 8$ . The process is based on the success rate (SR) and efficiency (EFF), with a success threshold $\\tau = 0 . 9$ ."
+          ],
+          "sub_type": "flowchart",
+          "score": 10,
+          "dest_name": "2022-TIFS-Minipatch__Undermining_DNN-Based_Website_Fingerprinting_With_Adversari__Fig__4__c535f4ec3a7b8c88.jpg",
+          "dest_rel": "images/2022-TIFS-Minipatch__Undermining_DNN-Based_Website_Fingerprinting_With_Adversari__Fig__4__c535f4ec3a7b8c88.jpg"
+        }
+      ]
+    },
+    "2022-USENIX-Online_Website_Fingerprinting__Evaluating_Website_Fingerprinting_Attacks_on_Tor_in_the_Real_World": {
+      "processed_at": "2026-08-17T15:49:26.428522",
+      "figures": [
+        {
+          "img_path": "images/320595425a0966cf1e6c97570f2b4fc90b06ab5928e0a92feb5a7bb7f01f7cf9.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(a) We train a feature extractor model using triplet networks to recognize the features that are best able to distinguish traffic patterns from different websites, following an approach from previous work [40]. "
+          ],
+          "sub_type": "flowchart",
+          "score": 7,
+          "dest_name": "2022-USENIX-Online_Website_Fingerprinting__Evaluating_Website_Fingerprinting_Att__Figure__320595425a0966cf.jpg",
+          "dest_rel": "images/2022-USENIX-Online_Website_Fingerprinting__Evaluating_Website_Fingerprinting_Att__Figure__320595425a0966cf.jpg"
+        },
+        {
+          "img_path": "images/5e595a30fbefdf8510d10e9b99174de1b6bc423e261c50ce2a8ce41faf77b72d.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(a) Training Phase ",
+            "(b) Deployment Phase ",
+            "Figure 1: The traditional WF adversary model. (a) The adversary uses an automated browser (e.g., Selenium [47]) to collect a series of traffic traces via the Tor network for each website in the monitored set, and uses the labeled traces to train a machine learning prediction model. (b) The adversary observes unlabeled user traffic traces and uses the trained model to predict the label (i.e., the visited website). The observations can be made at any point between the client and entry that the adversary controls (e.g., wifi or cellular access point, internet routers or exchange points, or the Tor entry relay itself). "
+          ],
+          "sub_type": "flowchart",
+          "score": 7,
+          "dest_name": "2022-USENIX-Online_Website_Fingerprinting__Evaluating_Website_Fingerprinting_Att__Figure__5e595a30fbefdf85.jpg",
+          "dest_rel": "images/2022-USENIX-Online_Website_Fingerprinting__Evaluating_Website_Fingerprinting_Att__Figure__5e595a30fbefdf85.jpg"
+        }
+      ]
+    },
+    "2023-CCS-Realistic_Website_Fingerprinting_by_Augmenting_Network_Traces": {
+      "processed_at": "2026-08-17T15:49:26.429643",
+      "figures": [
+        {
+          "img_path": "images/55cad136149ed33889fed11e960fd1210d48a450b2d746d68c36eba158824efb.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: Overview of NetAugment"
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2023-CCS-Realistic_Website_Fingerprinting_by_Augmenting_Network_Traces__Figure_2__55cad136149ed338.jpg",
+          "dest_rel": "images/2023-CCS-Realistic_Website_Fingerprinting_by_Augmenting_Network_Traces__Figure_2__55cad136149ed338.jpg"
+        }
+      ]
+    },
+    "2023-CCS-Transformer-based_Model_for_Multi-tab_Website_Fingerprinting_Attack": {
+      "processed_at": "2026-08-17T15:49:26.431167",
+      "figures": [
+        {
+          "img_path": "images/89ace8e8fa153e7adc2e6cae36628b0acb0b78d1ee93cfad1e82cefb1e679f1c.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: Workflow of TMWF configured with $N = 4 .$"
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2023-CCS-Transformer-based_Model_for_Multi-tab_Website_Fingerprinting_Attack__Figure_3__89ace8e8fa153e7a.jpg",
+          "dest_rel": "images/2023-CCS-Transformer-based_Model_for_Multi-tab_Website_Fingerprinting_Attack__Figure_3__89ace8e8fa153e7a.jpg"
+        },
+        {
+          "img_path": "images/c171b04066f186d1e5e6533191667f84cb4c37d19e6d34c9bc83a1a3eab4b8b8.jpg",
+          "figure_label": "Figure 4",
+          "caption": [
+            "Figure 4: An ideal illustration of a real multi-tab trace."
+          ],
+          "sub_type": "flowchart",
+          "score": 11,
+          "dest_name": "2023-CCS-Transformer-based_Model_for_Multi-tab_Website_Fingerprinting_Attack__Figure_4__c171b04066f186d1.jpg",
+          "dest_rel": "images/2023-CCS-Transformer-based_Model_for_Multi-tab_Website_Fingerprinting_Attack__Figure_4__c171b04066f186d1.jpg"
+        }
+      ]
+    },
+    "2023-S&P-SoK__A_Critical_Evaluation_of_Efficient_Website_Fingerprinting_Defenses": {
+      "processed_at": "2026-08-17T15:49:26.432273",
+      "figures": [
+        {
+          "img_path": "images/46ad8b44d1aaf20b78e03117d6efc620d95142a2e2e82d74dd3c18e3b0ed01e9.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "A. Attack Model",
+            "Fig. 1: Website Fingerprinting Attack Model."
+          ],
+          "sub_type": "flowchart",
+          "score": 0,
+          "dest_name": "2023-S_P-SoK__A_Critical_Evaluation_of_Efficient_Website_Fingerprinting_Defenses__Figure__46ad8b44d1aaf20b.jpg",
+          "dest_rel": "images/2023-S_P-SoK__A_Critical_Evaluation_of_Efficient_Website_Fingerprinting_Defenses__Figure__46ad8b44d1aaf20b.jpg"
+        }
+      ]
+    },
+    "2023-SIGCOMM-GGFAST__Automating_Generation_of_Flexible_Network_Traffic_Classifiers": {
+      "processed_at": "2026-08-17T15:49:26.433548",
+      "figures": [
+        {
+          "img_path": "images/4bc4d2f351e26550aebf891c496107c884c06f6272158ed6ed81e82de11c5aca.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: GGFAST framework diagram"
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2023-SIGCOMM-GGFAST__Automating_Generation_of_Flexible_Network_Traffic_Classifie__Figure_1__4bc4d2f351e26550.jpg",
+          "dest_rel": "images/2023-SIGCOMM-GGFAST__Automating_Generation_of_Flexible_Network_Traffic_Classifie__Figure_1__4bc4d2f351e26550.jpg"
+        }
+      ]
+    },
+    "2023-TON-A_Novel_Multimodal_Deep_Learning_Framework_for_Encrypted_Traffic_Classification": {
+      "processed_at": "2026-08-17T15:49:26.435239",
+      "figures": [
+        {
+          "img_path": "images/a56fa6ccbe14088f834ea08a25ce91472cb4f0cd83b4251aceee2eaf098b96f6.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The framework of the proposed multimodal end-to-end attentive network which includes five components."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2023-TON-A_Novel_Multimodal_Deep_Learning_Framework_for_Encrypted_Traffic_Classi__Fig__2__a56fa6ccbe14088f.jpg",
+          "dest_rel": "images/2023-TON-A_Novel_Multimodal_Deep_Learning_Framework_for_Encrypted_Traffic_Classi__Fig__2__a56fa6ccbe14088f.jpg"
+        },
+        {
+          "img_path": "images/9a9c31311b7d00cf586fd453fa011fd519cf34fa7ddd78259d2a56c0538950e5.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. The working principle of Packet Transfomer Encoder (PTE)."
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2023-TON-A_Novel_Multimodal_Deep_Learning_Framework_for_Encrypted_Traffic_Classi__Fig__3__9a9c31311b7d00cf.jpg",
+          "dest_rel": "images/2023-TON-A_Novel_Multimodal_Deep_Learning_Framework_for_Encrypted_Traffic_Classi__Fig__3__9a9c31311b7d00cf.jpg"
+        }
+      ]
+    },
+    "2023-TON-A_Two-Phase_Approach_to_Fast_and_Accurate_Classification_of_Encrypted_Traffic": {
+      "processed_at": "2026-08-17T15:49:26.436730",
+      "figures": [
+        {
+          "img_path": "images/ed6e6abd1a5b114218489628f7eab055ad267c921d9acf8f923fc52deadaedcd.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Architecture of TaTic. (i) Training Module and (ii) Classification Module."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2023-TON-A_Two-Phase_Approach_to_Fast_and_Accurate_Classification_of_Encrypted_T__Fig__1__ed6e6abd1a5b1142.jpg",
+          "dest_rel": "images/2023-TON-A_Two-Phase_Approach_to_Fast_and_Accurate_Classification_of_Encrypted_T__Fig__1__ed6e6abd1a5b1142.jpg"
+        },
+        {
+          "img_path": "images/f433b21d76cd0ff3ef3705b0474c391c7168aced2f5fd2724c61787ab96f0d56.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Overview of short-sequence trainer."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2023-TON-A_Two-Phase_Approach_to_Fast_and_Accurate_Classification_of_Encrypted_T__Fig__2__f433b21d76cd0ff3.jpg",
+          "dest_rel": "images/2023-TON-A_Two-Phase_Approach_to_Fast_and_Accurate_Classification_of_Encrypted_T__Fig__2__f433b21d76cd0ff3.jpg"
+        }
+      ]
+    },
+    "2023-USENIX-How_the_Great_Firewall_of_China_Detects_and_Blocks_Fully_Encrypted_Traffic": {
+      "processed_at": "2026-08-17T15:49:26.442093",
+      "figures": [
+        {
+          "img_path": "images/19a540a25f49ac0119d537601b172cfc112e45061e5153874a839148f8cc7e6f.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(e) Protocol exemption (Ex5): the GFW exempts a connection if its first few bytes match HTTP or TLS protocol.",
+            "Figure 1: Examples of GFW’s traffic exemption rules — The GFW exempts a TCP connection if the payload of its first data packet matches any of the rules above. Traffic not exempted by any of the rules will be blocked. Printable characters refer to any character in range [0x20,0x7e]. Figures 1(a) , 1(b) , and 1(c) are introduced in Section 4.2. Figure 1(e) is introduced in Section 4.3. Figure 1(d) is introduced in Section 4.1."
+          ],
+          "sub_type": "text_image",
+          "score": 0,
+          "dest_name": "2023-USENIX-How_the_Great_Firewall_of_China_Detects_and_Blocks_Fully_Encrypted_T__Figure__19a540a25f49ac01.jpg",
+          "dest_rel": "images/2023-USENIX-How_the_Great_Firewall_of_China_Detects_and_Blocks_Fully_Encrypted_T__Figure__19a540a25f49ac01.jpg"
+        }
+      ]
+    },
+    "2024-NDSS-On_Precisely_Detecting_Censorship_Circumvention_in_Real-World_Networks": {
+      "processed_at": "2026-08-17T15:49:26.443312",
+      "figures": [
+        {
+          "img_path": "images/581de321ed726a4c1d9cbb74ecf93933e6c063f93b1a9994eee0149074dc8d1b.jpg",
+          "figure_label": "Figure",
+          "caption": [],
+          "sub_type": "text_image",
+          "score": 0,
+          "dest_name": "2024-NDSS-On_Precisely_Detecting_Censorship_Circumvention_in_Real-World_Networks__Figure__581de321ed726a4c.jpg",
+          "dest_rel": "images/2024-NDSS-On_Precisely_Detecting_Censorship_Circumvention_in_Real-World_Networks__Figure__581de321ed726a4c.jpg"
+        }
+      ]
+    },
+    "2024-TIFS-Inter-Flow_Spatio-Temporal_Correlation_Analysis_Based_Website_Fingerprinting_Using_Graph_Neural_Network": {
+      "processed_at": "2026-08-17T15:49:26.445005",
+      "figures": [
+        {
+          "img_path": "images/6a2fb55b452a3c82c448930d483aca1287fec51d763cf9361a50f2e804dde674.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. System architecture of the proposed STC-WF scheme."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-TIFS-Inter-Flow_Spatio-Temporal_Correlation_Analysis_Based_Website_Fingerpr__Fig__3__6a2fb55b452a3c82.jpg",
+          "dest_rel": "images/2024-TIFS-Inter-Flow_Spatio-Temporal_Correlation_Analysis_Based_Website_Fingerpr__Fig__3__6a2fb55b452a3c82.jpg"
+        },
+        {
+          "img_path": "images/f55ce2377de2688e66beeea470a278de1e40e6b43d3c300d29b8c8d5496490cb.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(a) Attention mechanism"
+          ],
+          "sub_type": "flowchart",
+          "score": 7,
+          "dest_name": "2024-TIFS-Inter-Flow_Spatio-Temporal_Correlation_Analysis_Based_Website_Fingerpr__Figure__f55ce2377de2688e.jpg",
+          "dest_rel": "images/2024-TIFS-Inter-Flow_Spatio-Temporal_Correlation_Analysis_Based_Website_Fingerpr__Figure__f55ce2377de2688e.jpg"
+        }
+      ]
+    },
+    "2024-TIFS-MPAF_Encrypted_Traffic_Classification_With_Multi-Phase_Attribute_Fingerprint": {
+      "processed_at": "2026-08-17T15:49:26.446253",
+      "figures": [
+        {
+          "img_path": "images/aaf272e50e0c66ff3f5efbdd111cd58e9c1e1622bea1abfd03e913ee34ddcd7a.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Architecture of Multi-Phase Attribute Fingerprint (MPAF)."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-TIFS-MPAF_Encrypted_Traffic_Classification_With_Multi-Phase_Attribute_Finge__Fig__1__aaf272e50e0c66ff.jpg",
+          "dest_rel": "images/2024-TIFS-MPAF_Encrypted_Traffic_Classification_With_Multi-Phase_Attribute_Finge__Fig__1__aaf272e50e0c66ff.jpg"
+        }
+      ]
+    },
+    "2024-TIFS-Multi-Level_Resource-Coherented_Graph_Learning_for_Website_Fingerprinting_Attacks": {
+      "processed_at": "2026-08-17T15:49:26.448106",
+      "figures": [
+        {
+          "img_path": "images/2a6451ca3ae0eb0a7e5e19141c59dada25de4e8cd89cf402b8dcda9c3b392381.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(d) Graph Learning",
+            "Fig. 3. Architecture of the proposed multi-level resource-coherented graph convolutional neural network (MRCGCN). (a) Graph Construction; (b) Graph Processing; (c) Graph Clustering; (d) Graph Learning."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2024-TIFS-Multi-Level_Resource-Coherented_Graph_Learning_for_Website_Fingerprint__Figure__2a6451ca3ae0eb0a.jpg",
+          "dest_rel": "images/2024-TIFS-Multi-Level_Resource-Coherented_Graph_Learning_for_Website_Fingerprint__Figure__2a6451ca3ae0eb0a.jpg"
+        },
+        {
+          "img_path": "images/fb5332d3ab70cdd41f1c97f18559ca963685ab4f790bf634a8173aac398bceca.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Multi-level spatio-temporal representations of the website browsing traffic. (a) Traffic Representation Levels; (b) Packet Feature Sequences; (c) Temporal Representation Sequences; (d) Spatial Representation Sequences."
+          ],
+          "sub_type": "flowchart",
+          "score": 5,
+          "dest_name": "2024-TIFS-Multi-Level_Resource-Coherented_Graph_Learning_for_Website_Fingerprint__Fig__2__fb5332d3ab70cdd4.jpg",
+          "dest_rel": "images/2024-TIFS-Multi-Level_Resource-Coherented_Graph_Learning_for_Website_Fingerprint__Fig__2__fb5332d3ab70cdd4.jpg"
+        }
+      ]
+    },
+    "2024-TIFS-WFDefProxy__Real_World_Implementation_and_Evaluation_of_Website_Fingerprinting_Defenses": {
+      "processed_at": "2026-08-17T15:49:26.449153",
+      "figures": [
+        {
+          "img_path": "images/f549e9dccc16a744f603852c7b659bb4a783532bf964dba1078303ea1bb615fb.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The workflow of WFDefProxy. WFDefProxy adds another layer of encryption (denoted in red arrows) upon Tor’s encryption (denoted in purple arrows) so that the attacker cannot distinguish between real and dummy packets."
+          ],
+          "sub_type": "flowchart",
+          "score": 11,
+          "dest_name": "2024-TIFS-WFDefProxy__Real_World_Implementation_and_Evaluation_of_Website_Finger__Fig__2__f549e9dccc16a744.jpg",
+          "dest_rel": "images/2024-TIFS-WFDefProxy__Real_World_Implementation_and_Evaluation_of_Website_Finger__Fig__2__f549e9dccc16a744.jpg"
+        }
+      ]
+    },
+    "2024-TON-Website_Fingerprinting_on_Encrypted_Proxies__A_Flow-Context-Aware_Approach_and_Countermeasures": {
+      "processed_at": "2026-08-17T15:49:26.452602",
+      "figures": [
+        {
+          "img_path": "images/39220949218ee4815fb67e960be8e750b1d30314d82fcfb07be4a400c26c62d1.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Architecture of Stage 1 of the proposed system."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2024-TON-Website_Fingerprinting_on_Encrypted_Proxies__A_Flow-Context-Aware_Appro__Fig__4__39220949218ee481.jpg",
+          "dest_rel": "images/2024-TON-Website_Fingerprinting_on_Encrypted_Proxies__A_Flow-Context-Aware_Appro__Fig__4__39220949218ee481.jpg"
+        },
+        {
+          "img_path": "images/7ad71c3fa6669d0dce89afd64e5807bc5b47a4a1b0d432f4c8224dacd3f63dd1.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "Stage 2: Spatial-temporal flow correlation for website fingerprinting",
+            "Fig. 5. Architecture of Stage 2 of the proposed system."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2024-TON-Website_Fingerprinting_on_Encrypted_Proxies__A_Flow-Context-Aware_Appro__Figure__7ad71c3fa6669d0d.jpg",
+          "dest_rel": "images/2024-TON-Website_Fingerprinting_on_Encrypted_Proxies__A_Flow-Context-Aware_Appro__Figure__7ad71c3fa6669d0d.jpg"
+        }
+      ]
+    },
+    "2024-USENIX-Stop__Don’t_Click_Here_Anymore__Boosting_Website_Fingerprinting_By_Considering_Sets_of_Subpages": {
+      "processed_at": "2026-08-17T15:49:26.453899",
+      "figures": [
+        {
+          "img_path": "images/50ddf2af9ebfd88b4eb475cb77d5e5a28dbae207c119ff82514c75f554dae9d7.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: A general overview of the architecture of our MIL-based WFP attack."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2024-USENIX-Stop__Don_t_Click_Here_Anymore__Boosting_Website_Fingerprinting_By_C__Figure_1__50ddf2af9ebfd88b.jpg",
+          "dest_rel": "images/2024-USENIX-Stop__Don_t_Click_Here_Anymore__Boosting_Website_Fingerprinting_By_C__Figure_1__50ddf2af9ebfd88b.jpg"
+        }
+      ]
+    },
+    "2025-AAAI-Revolutionizing_Encrypted_Traffic_Classification_with_MH-Net__A_Multi-View_Heterogeneous_Graph_Model": {
+      "processed_at": "2026-08-17T15:49:26.454700",
+      "figures": [
+        {
+          "img_path": "images/2916086dda984937eeb8e19bde5a2317a42a05331f2309e5645a3a85bad70554.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: MH-Net Model Architecture."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2025-AAAI-Revolutionizing_Encrypted_Traffic_Classification_with_MH-Net__A_Multi-__Figure_1__2916086dda984937.jpg",
+          "dest_rel": "images/2025-AAAI-Revolutionizing_Encrypted_Traffic_Classification_with_MH-Net__A_Multi-__Figure_1__2916086dda984937.jpg"
+        }
+      ]
+    },
+    "2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities": {
+      "processed_at": "2026-08-17T15:49:26.455880",
+      "figures": [
+        {
+          "img_path": "images/96171be62e793b471d867ab7a8d8dc02aca2ff47b88b12edf5e8b5d8f3115327.jpg",
+          "figure_label": "Figure 5",
+          "caption": [
+            "Figure 5: dMAP’s Architecture. The framework sources from open measurement datasets for target (web) servers behind DPIs, sends probes that are enumerated and ranked based on differential analysis, and analyzes results to produce DPI fingerprints."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities__Figure_5__96171be62e793b47.jpg",
+          "dest_rel": "images/2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities__Figure_5__96171be62e793b47.jpg"
+        }
+      ]
+    },
+    "2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for_Website_Fingerprinting_Defense": {
+      "processed_at": "2026-08-17T15:49:26.457213",
+      "figures": [
+        {
+          "img_path": "images/7b4219e14757ce10251b82aa73d2c3d3f31df862f2d1b018af279d6d7c1efe3b.jpg",
+          "figure_label": "Figure 8",
+          "caption": [
+            "Figure 8: The process of deploying perturbation on P4. mirroring mechanism rather than the P4 Packet\\_Generator primitive to generate dummy packets, as the latter typically requires control plane intervention, introducing significant latency and overhead unsuitable for line-rate operation. In our design, the required dummy packet quantity specified by the rule is conveyed via packet metadata to the egress pipeline. The egress pipeline reads this count from the metadata and iteratively generates the required number of dummy packets, for instance, using looped mirroring, precisely inserting them into the flow to realize the rule-defined perturbation effect."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for___Figure_8__7b4219e14757ce10.jpg",
+          "dest_rel": "images/2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for___Figure_8__7b4219e14757ce10.jpg"
+        }
+      ]
+    },
+    "2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Traffic_Analysis_Applications": {
+      "processed_at": "2026-08-17T15:49:26.458413",
+      "figures": [
+        {
+          "img_path": "images/346aa149956ae07ead71719ff753576e44872313c2f9d148bde5740d04bbac6c.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1. The overall workflow and architecture of SuperFE."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Tra__Figure_1__346aa149956ae07e.jpg",
+          "dest_rel": "images/2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Tra__Figure_1__346aa149956ae07e.jpg"
+        },
+        {
+          "img_path": "images/ad14ae22d30fa6a75148ffabd0775dd76ca17549024ea2e76f4af73c66466363.jpg",
+          "figure_label": "Figure 8",
+          "caption": [
+            "Figure 8. Netronome NFP architecture."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Tra__Figure_8__ad14ae22d30fa6a7.jpg",
+          "dest_rel": "images/2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Tra__Figure_8__ad14ae22d30fa6a7.jpg"
+        }
+      ]
+    },
+    "2025-INFOCOM-Cross-Environmental_Website_Fingerprinting": {
+      "processed_at": "2026-08-17T15:49:26.459888",
+      "figures": [
+        {
+          "img_path": "images/1f6fe6a4413d23b572c8f6f8ab20d0634e753bbba52f52126e15104055166164.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: The workflow of X-EPRINT."
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2025-INFOCOM-Cross-Environmental_Website_Fingerprinting__Fig__2__1f6fe6a4413d23b5.jpg",
+          "dest_rel": "images/2025-INFOCOM-Cross-Environmental_Website_Fingerprinting__Fig__2__1f6fe6a4413d23b5.jpg"
+        }
+      ]
+    },
+    "2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneous_information_network": {
+      "processed_at": "2026-08-17T15:49:26.461016",
+      "figures": [
+        {
+          "img_path": "images/38edc7a5daef9e8d68d59f76022e9b22d237fe6942271272e352fc8192fa637e.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The overall architecture of HINT."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneo__Fig__2__38edc7a5daef9e8d.jpg",
+          "dest_rel": "images/2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneo__Fig__2__38edc7a5daef9e8d.jpg"
+        },
+        {
+          "img_path": "images/ec3457ccfc4ef5c2ca7b5ec2e43366e161c89c212f759e4c09d6d97e9afc754d.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Architecture of the CNN–LSTM model for traffic characteristics extraction."
+          ],
+          "sub_type": null,
+          "score": 10,
+          "dest_name": "2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneo__Fig__3__ec3457ccfc4ef5c2.jpg",
+          "dest_rel": "images/2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneo__Fig__3__ec3457ccfc4ef5c2.jpg"
+        }
+      ]
+    },
+    "2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane": {
+      "processed_at": "2026-08-17T15:49:26.461933",
+      "figures": [
+        {
+          "img_path": "images/fa434608d8bcc7498bcd642fef74c216d4934a40a69c11adefd9af0ee8c4ebf1.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4: SketchFeature: data structure and workflow."
+          ],
+          "sub_type": null,
+          "score": 7,
+          "dest_name": "2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Securit__Fig__4__fa434608d8bcc749.jpg",
+          "dest_rel": "images/2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Securit__Fig__4__fa434608d8bcc749.jpg"
+        }
+      ]
+    },
+    "2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_Traffic": {
+      "processed_at": "2026-08-17T15:49:26.463485",
+      "figures": [
+        {
+          "img_path": "images/b50384c128c0dde2475af1c1ae2a7360f38f7bcdb09d2376e64bc12f8c25567d.jpg",
+          "figure_label": "Fig. 12",
+          "caption": [
+            "Fig. 12: Workflow. The monitoring continues until either $\\Lambda ( Y ) \\geq \\eta$ or the connection terminates. ⋄ "
+          ],
+          "sub_type": "flowchart",
+          "score": 10,
+          "dest_name": "2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_T__Fig__12__b50384c128c0dde2.jpg",
+          "dest_rel": "images/2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_T__Fig__12__b50384c128c0dde2.jpg"
+        },
+        {
+          "img_path": "images/a8cc00e076cb65d253dceec3cc847fcfce91aefeec824178bd42e93aad86cb2a.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Protocol layerings in Direct vs. Proxied Connections. In proxied connections, transport sessions terminate at the proxy, whereas the application layer connection remains end-to-end. ⋄ "
+          ],
+          "sub_type": "flowchart",
+          "score": 10,
+          "dest_name": "2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_T__Fig__2__a8cc00e076cb65d2.jpg",
+          "dest_rel": "images/2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_T__Fig__2__a8cc00e076cb65d2.jpg"
+        }
+      ]
+    },
+    "2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction": {
+      "processed_at": "2026-08-17T15:49:26.465278",
+      "figures": [
+        {
+          "img_path": "images/a5bb22ddc8ff0905cc392f203266db71b11e62dceff03afe2d007a2f45df8d72.jpg",
+          "figure_label": "Figure 5",
+          "caption": [
+            "Figure 5. The overview of the SSO classifier. With the advantages of causality and iterative processing, the SSO classifier enables effective early-stage WF attacks, eliminating the need to recompute features or perform complete forward propagation at each step. Furthermore, fine-grained predictions allow a more detailed understanding of the sequence and frequency of user visits across multiple tabs."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-S_P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grai__Figure_5__a5bb22ddc8ff0905.jpg",
+          "dest_rel": "images/2025-S_P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grai__Figure_5__a5bb22ddc8ff0905.jpg"
+        },
+        {
+          "img_path": "images/d42eda2e294343572cd0001dbd665175a6e38c123f32cc087491892eabd92e5a.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3. Relationship between the different layers of data transport. The number of related cells can be calculated by reconstructing the TLS records from TCP/IP data."
+          ],
+          "sub_type": "flowchart",
+          "score": 7,
+          "dest_name": "2025-S_P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grai__Figure_3__d42eda2e29434357.jpg",
+          "dest_rel": "images/2025-S_P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grai__Figure_3__d42eda2e29434357.jpg"
+        }
+      ]
+    },
+    "2025-TDSC-Few-Shot_Website_Fingerprinting_With_Distribution_Calibration": {
+      "processed_at": "2026-08-17T15:49:26.467077",
+      "figures": [
+        {
+          "img_path": "images/66b04f068d2d305387becb5de935122f60780fe36d28b8cbb8126cfaf4e33b49.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Schematic overview of the proposed DCWF. Note: GT is Ground Truth and the snowflake means freezing the weights of the neural network."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-TDSC-Few-Shot_Website_Fingerprinting_With_Distribution_Calibration__Fig__4__66b04f068d2d3053.jpg",
+          "dest_rel": "images/2025-TDSC-Few-Shot_Website_Fingerprinting_With_Distribution_Calibration__Fig__4__66b04f068d2d3053.jpg"
+        },
+        {
+          "img_path": "images/4653f65303a486f7ea80c3670b1e449b0b19704ec1be2835c2a8917a8e08b641.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The example of WF practical application scenario. Attackers use already-made historical datasets to pre-train a WF model, and then collect and label a few data from the target users’ network to finetune this WF model, i.e., transfer the model from the source domain to target domain."
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2025-TDSC-Few-Shot_Website_Fingerprinting_With_Distribution_Calibration__Fig__1__4653f65303a486f7.jpg",
+          "dest_rel": "images/2025-TDSC-Few-Shot_Website_Fingerprinting_With_Distribution_Calibration__Fig__1__4653f65303a486f7.jpg"
+        }
+      ]
+    },
+    "2025-TDSC-QuicCourier__Leveraging_the_Dynamics_of_QUIC-_Based_Website_Browsing_Behaviors_Through_Proxy_for_Covert_Communication": {
+      "processed_at": "2026-08-17T15:49:26.468613",
+      "figures": [
+        {
+          "img_path": "images/e459a3838206591472f0aa4acc6eb9ba14906e1ab425ea38b954c10f39a4d47f.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. An overview of the proposed QuicCourier."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2025-TDSC-QuicCourier__Leveraging_the_Dynamics_of_QUIC-_Based_Website_Browsing_B__Fig__2__e459a38382065914.jpg",
+          "dest_rel": "images/2025-TDSC-QuicCourier__Leveraging_the_Dynamics_of_QUIC-_Based_Website_Browsing_B__Fig__2__e459a38382065914.jpg"
+        },
+        {
+          "img_path": "images/5d74e8cf6b8ea4bff1784790d483ca91d4e327f2a4912db535ad9b4980e9716b.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. General and capability-maximizing adversarial models for the proposed proxy-based covert channel framework."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2025-TDSC-QuicCourier__Leveraging_the_Dynamics_of_QUIC-_Based_Website_Browsing_B__Fig__1__5d74e8cf6b8ea4bf.jpg",
+          "dest_rel": "images/2025-TDSC-QuicCourier__Leveraging_the_Dynamics_of_QUIC-_Based_Website_Browsing_B__Fig__1__5d74e8cf6b8ea4bf.jpg"
+        }
+      ]
+    },
+    "2025-TDSC-Toward_an_Effective_Few-Shot_Website_Fingerprinting_Attack_With_Quadruplet_Networks_and_Deep_Local_Fingerprinting_Features": {
+      "processed_at": "2026-08-17T15:49:26.470291",
+      "figures": [
+        {
+          "img_path": "images/fa79313393b47f26c53f843a3cf755a656f8ac79fe0cd0a8a664450501b81d8a.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. The overall architecture of DQF, which contains the quadruplet pre-training and meta-classification stages."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-TDSC-Toward_an_Effective_Few-Shot_Website_Fingerprinting_Attack_With_Quadru__Fig__5__fa79313393b47f26.jpg",
+          "dest_rel": "images/2025-TDSC-Toward_an_Effective_Few-Shot_Website_Fingerprinting_Attack_With_Quadru__Fig__5__fa79313393b47f26.jpg"
+        },
+        {
+          "img_path": "images/39d84a98d93c2c65e80ecefb757e3a0d648a66b4f8abd820cf976d4e63e71cb8.jpg",
+          "figure_label": "Fig. 6",
+          "caption": [
+            "Fig. 6. A graphical model of the mDF baseline CNN architecture. The indices (e.g., 1×8 Conv, 32, 1, 3) in each convolutional layer signify the kernel size, the number of filters, the stride size, and the padding size. The indices (e.g., 1×8 Maxpool, 4) in each max pool layer signify the kernel size and the stride size."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2025-TDSC-Toward_an_Effective_Few-Shot_Website_Fingerprinting_Attack_With_Quadru__Fig__6__39d84a98d93c2c65.jpg",
+          "dest_rel": "images/2025-TDSC-Toward_an_Effective_Few-Shot_Website_Fingerprinting_Attack_With_Quadru__Fig__6__39d84a98d93c2c65.jpg"
+        }
+      ]
+    },
+    "2025-TIFS-Proxied_Traffic_Fingerprinting_for_Hidden_Service_De-Anonymization_With_Burst_Reshaping": {
+      "processed_at": "2026-08-17T15:49:26.471770",
+      "figures": [
+        {
+          "img_path": "images/018d9d48621eaaeffc7026c0b5e995a1d157926abe65b22f189e46a0cece8bf9.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Overview of PF, Burst Reshaping Proxied Hidden Service Traffic Fingerprint for de-anonymization HS. PF consists two steps, (1) developing Proxy HS to capture PHST and (2) utilizing Burst Reshaping to improve the performance of fingerprinting model."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-TIFS-Proxied_Traffic_Fingerprinting_for_Hidden_Service_De-Anonymization_Wit__Fig__3__018d9d48621eaaef.jpg",
+          "dest_rel": "images/2025-TIFS-Proxied_Traffic_Fingerprinting_for_Hidden_Service_De-Anonymization_Wit__Fig__3__018d9d48621eaaef.jpg"
+        },
+        {
+          "img_path": "images/69fc302979756dd3d1e262f77eb419b6d64f4db638e461a90a851814cf029917.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. The framework of Proxy HS comprises both a HS instance and a Tor client instance, enabling the adversary to capture PHST between the HS instance and its entry node."
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2025-TIFS-Proxied_Traffic_Fingerprinting_for_Hidden_Service_De-Anonymization_Wit__Fig__5__69fc302979756dd3.jpg",
+          "dest_rel": "images/2025-TIFS-Proxied_Traffic_Fingerprinting_for_Hidden_Service_De-Anonymization_Wit__Fig__5__69fc302979756dd3.jpg"
+        }
+      ]
+    },
+    "2025-TIFS-WF-A2D_Enhancing_Privacy_With_Asymmetric_Adversarial_Defense_Against_Website_Fingerprinting": {
+      "processed_at": "2026-08-17T15:49:26.473077",
+      "figures": [
+        {
+          "img_path": "images/3e43796fe0d7c504ad36e57e069b79c372fd45f77444e1deba3fa09e7fd2aba7.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. An overview of the proposed WF-A2D."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2025-TIFS-WF-A2D_Enhancing_Privacy_With_Asymmetric_Adversarial_Defense_Against_W__Fig__2__3e43796fe0d7c504.jpg",
+          "dest_rel": "images/2025-TIFS-WF-A2D_Enhancing_Privacy_With_Asymmetric_Adversarial_Defense_Against_W__Fig__2__3e43796fe0d7c504.jpg"
+        },
+        {
+          "img_path": "images/d46b091ffafdab2e0e5f9f04862f6ae957efe27fd4af22fcdd324414e467b52f.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Two architecture types in WF defenses: proxy-based symmetric WF defenses with incomplete privacy protection, and proxy-free asymmetric WF defenses with end-to-end privacy protection."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2025-TIFS-WF-A2D_Enhancing_Privacy_With_Asymmetric_Adversarial_Defense_Against_W__Fig__1__d46b091ffafdab2e.jpg",
+          "dest_rel": "images/2025-TIFS-WF-A2D_Enhancing_Privacy_With_Asymmetric_Adversarial_Defense_Against_W__Fig__1__d46b091ffafdab2e.jpg"
+        }
+      ]
+    },
+    "2025-TIFS-WF-TFC_An_Open-World_Few-Shot_Anonymous_Website_Fingerprinting_via_Time-Frequency_Consistency": {
+      "processed_at": "2026-08-17T15:49:26.474697",
+      "figures": [
+        {
+          "img_path": "images/4055b614cd1e9ba5af7a6d13d1f55513b694e5f6ef0eeb2f6eb6e782ebb2ab13.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Schematic overview of WF-TFC."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-TIFS-WF-TFC_An_Open-World_Few-Shot_Anonymous_Website_Fingerprinting_via_Tim__Fig__3__4055b614cd1e9ba5.jpg",
+          "dest_rel": "images/2025-TIFS-WF-TFC_An_Open-World_Few-Shot_Anonymous_Website_Fingerprinting_via_Tim__Fig__3__4055b614cd1e9ba5.jpg"
+        },
+        {
+          "img_path": "images/f1c5f714813675d7e0b7546b4638d9776bccf543cf21b3ccdbbc2408c62264c8.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Architecture of our task-agnostic pre-training model."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-TIFS-WF-TFC_An_Open-World_Few-Shot_Anonymous_Website_Fingerprinting_via_Tim__Fig__4__f1c5f714813675d7.jpg",
+          "dest_rel": "images/2025-TIFS-WF-TFC_An_Open-World_Few-Shot_Anonymous_Website_Fingerprinting_via_Tim__Fig__4__f1c5f714813675d7.jpg"
+        }
+      ]
+    },
+    "2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World": {
+      "processed_at": "2026-08-17T15:49:26.475777",
+      "figures": [
+        {
+          "img_path": "images/a87722be3f211c35993eff92e93d5e6ea8c666251ac66ca6433c82f656501674.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Architecture of HPETC. The Online Identification module identifies and filters Target Tor traffic, the Offline Classification module identifies specific type or website of Tor traffic, and the Enhanced Techniques enhance classifiers against base rate fallacy."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Re__Fig__2__a87722be3f211c35.jpg",
+          "dest_rel": "images/2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Re__Fig__2__a87722be3f211c35.jpg"
+        }
+      ]
+    },
+    "2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation": {
+      "processed_at": "2026-08-17T15:49:26.477583",
+      "figures": [
+        {
+          "img_path": "images/cc90d76e34e53fc2fa89d79d2d7ebd5c53e9854c92318f1b27f3810bd514c97a.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: Schematic diagram of the UPGen censorship resistance system."
+          ],
+          "sub_type": "flowchart",
+          "score": 11,
+          "dest_name": "2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation__Figure_1__cc90d76e34e53fc2.jpg",
+          "dest_rel": "images/2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation__Figure_1__cc90d76e34e53fc2.jpg"
+        }
+      ]
+    },
+    "2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_Fingerprinting": {
+      "processed_at": "2026-08-17T15:49:26.478614",
+      "figures": [
+        {
+          "img_path": "images/09dffb00e190ab5496411940e93cc4aeb1fff9a0840c4b6bcc8da80bf018d40c.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: DTPN Model Architecture. Black arrows add Gaussian noise, deep green arrows add difusion time steps and the penultimate layer’s output from the WF model.The cyan, yellow, and blue arrows represent tensor flow."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_F__Figure_1__09dffb00e190ab54.jpg",
+          "dest_rel": "images/2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_F__Figure_1__09dffb00e190ab54.jpg"
+        },
+        {
+          "img_path": "images/2d9536e45a1c9734d5101e6b1b707a22ca7f10ea6190a251f099309b35591ee0.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: The schematic illustration of UNetFormer."
+          ],
+          "sub_type": null,
+          "score": 7,
+          "dest_name": "2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_F__Figure_3__2d9536e45a1c9734.jpg",
+          "dest_rel": "images/2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_F__Figure_3__2d9536e45a1c9734.jpg"
+        }
+      ]
+    },
+    "2025-WWW-Beyond_Single_Tabs__A_Transformative_Few-Shot_Approach_to_Multi-Tab_Website_Fingerprinting_Attacks": {
+      "processed_at": "2026-08-17T15:49:26.479440",
+      "figures": [
+        {
+          "img_path": "images/d3436eac3f86adeb212498b91588bf02ac4a847a39d65e45b6a452692d3dc7c0.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: Our lightweight WF attack, FMWF, consists of two key components: a feature extractor and a classifier, both built using lightweight neural networks. These components work in tandem with a fine-tuning algorithm derived from transfer learning, enabling eficient and accurate multi-tab website fingerprinting with minimal training data."
+          ],
+          "sub_type": null,
+          "score": 6,
+          "dest_name": "2025-WWW-Beyond_Single_Tabs__A_Transformative_Few-Shot_Approach_to_Multi-Tab_Web__Figure_2__d3436eac3f86adeb.jpg",
+          "dest_rel": "images/2025-WWW-Beyond_Single_Tabs__A_Transformative_Few-Shot_Approach_to_Multi-Tab_Web__Figure_2__d3436eac3f86adeb.jpg"
+        }
+      ]
+    },
+    "2025-WWW-FP-Rainbow__Fingerprint-Based_Browser_Configuration_Identification": {
+      "processed_at": "2026-08-17T15:49:26.480229",
+      "figures": [
+        {
+          "img_path": "images/59e46049312795eb336447d7a72363867f4cd248f1946302aea2913bd6a8c86f.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "Fi<sub>g</sub>ure 1: Overview of the FP-Rainbow a<sub>pp</sub>roach"
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2025-WWW-FP-Rainbow__Fingerprint-Based_Browser_Configuration_Identification__Figure__59e46049312795eb.jpg",
+          "dest_rel": "images/2025-WWW-FP-Rainbow__Fingerprint-Based_Browser_Configuration_Identification__Figure__59e46049312795eb.jpg"
+        }
+      ]
+    },
+    "2025-WWW-HOLMES&WATSON__A_Robust_and_Lightweight_HTTPS_Website_Fingerprinting_through_HTTP_Version_Parallelism": {
+      "processed_at": "2026-08-17T15:49:26.481563",
+      "figures": [
+        {
+          "img_path": "images/5bdbb5c67fe4fc40decca493ffc064314f6dc43998b3954200bd9bd2e68b70f9.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: The overview of HOLMES & WATSON."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2025-WWW-HOLMES_WATSON__A_Robust_and_Lightweight_HTTPS_Website_Fingerprinting_th__Figure_3__5bdbb5c67fe4fc40.jpg",
+          "dest_rel": "images/2025-WWW-HOLMES_WATSON__A_Robust_and_Lightweight_HTTPS_Website_Fingerprinting_th__Figure_3__5bdbb5c67fe4fc40.jpg"
+        },
+        {
+          "img_path": "images/e3049143d01a20b802b803aac79311103ddfd2ccd1d34b3d10b9ae78c07e1e3f.jpg",
+          "figure_label": "Figure 14",
+          "caption": [
+            "Figure 14: Network Protocol Stack in HTTP Version Parallelism Scenario. HTTP/1.1 and HTTP/2 protocols can use TLS 1.2 and TLS 1.3, respectively, as their security layers; HTTP/3 can only use QUIC as its security layer."
+          ],
+          "sub_type": null,
+          "score": 6,
+          "dest_name": "2025-WWW-HOLMES_WATSON__A_Robust_and_Lightweight_HTTPS_Website_Fingerprinting_th__Figure_14__e3049143d01a20b8.jpg",
+          "dest_rel": "images/2025-WWW-HOLMES_WATSON__A_Robust_and_Lightweight_HTTPS_Website_Fingerprinting_th__Figure_14__e3049143d01a20b8.jpg"
+        }
+      ]
+    },
+    "2025-WWW-The_First_Early_Evidence_of_the_Use_of_Browser_Fingerprinting_for_Online_Tracking": {
+      "processed_at": "2026-08-17T15:49:26.482795",
+      "figures": [
+        {
+          "img_path": "images/c4a3ebf69f0c1a6fef3829c54c5d28ed714a9209a5433cb392d63ecc04fc72ab.jpg",
+          "figure_label": "Figure 5",
+          "caption": [
+            "Figure 5: High level overview ofGDPR/CCPA experiment. Step A represents the training persona, with the original fingerprint. Step B involves Opt Out or Opt In actions on websites with ads, utilizing CMPs, and employing Prebid.js, or on the central Opt Out website NAI. Step C involves the collection of HTTP data. Step D represents the data analysis."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2025-WWW-The_First_Early_Evidence_of_the_Use_of_Browser_Fingerprinting_for_Onlin__Figure_5__c4a3ebf69f0c1a6f.jpg",
+          "dest_rel": "images/2025-WWW-The_First_Early_Evidence_of_the_Use_of_Browser_Fingerprinting_for_Onlin__Figure_5__c4a3ebf69f0c1a6f.jpg"
+        },
+        {
+          "img_path": "images/cd00f67cf2f35091464e2a6ebcc5a308107ed3374f9bd44d008f4cab3f2cd8ef.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: High level overview ofmeasurement study methodology. In Step 1, We create browser persona by visiting a list of websites. This step is called “Simulating Interest Personas”. In Step 2, we first use trained persona to visit websites which display ads, then collect bids and HTTP data. This step is called “Collecting Bids and HTTP Data”. In Step 3, we extract cookies from the browser profile and compare them between diferent experiment settings. This step is called “Detecting Cookie Restoration”. In Step 4, we analyze the manual inspect extracted cookies. This step is called “Detecting Fingerprinting Related Cookie Restoration”."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2025-WWW-The_First_Early_Evidence_of_the_Use_of_Browser_Fingerprinting_for_Onlin__Figure_1__cd00f67cf2f35091.jpg",
+          "dest_rel": "images/2025-WWW-The_First_Early_Evidence_of_the_Use_of_Browser_Fingerprinting_for_Onlin__Figure_1__cd00f67cf2f35091.jpg"
+        }
+      ]
+    },
+    "2026-Access-Website_Fingerprinting_Techniques_Over_Tor_Network_A_Survey": {
+      "processed_at": "2026-08-17T15:49:26.484671",
+      "figures": [
+        {
+          "img_path": "images/0413c24347466911ee96aac4ee6b785e6a4d8459b86631b5251bf1020ce3bcd4.jpg",
+          "figure_label": "FIGURE 8",
+          "caption": [
+            "FIGURE 8. Threat model of the ARES framework for multi-tab website fingerprinting."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-Access-Website_Fingerprinting_Techniques_Over_Tor_Network_A_Survey__FIGURE_8__0413c24347466911.jpg",
+          "dest_rel": "images/2026-Access-Website_Fingerprinting_Techniques_Over_Tor_Network_A_Survey__FIGURE_8__0413c24347466911.jpg"
+        },
+        {
+          "img_path": "images/f690125fce86c7a465b1ec6770e9b3ad97cdc1619f4dd6c4d3cd767800c1b739.jpg",
+          "figure_label": "FIGURE 2",
+          "caption": [
+            "FIGURE 2. A simple schematic diagram of the Tor network. Users connect to the Internet through a sequence of onion routers, generally including an entry node, a middle node, and an exit node. Due to the open nature of the Internet, there is a potential for attackers to access specific routers within this network."
+          ],
+          "sub_type": null,
+          "score": 8,
+          "dest_name": "2026-Access-Website_Fingerprinting_Techniques_Over_Tor_Network_A_Survey__FIGURE_2__f690125fce86c7a4.jpg",
+          "dest_rel": "images/2026-Access-Website_Fingerprinting_Techniques_Over_Tor_Network_A_Survey__FIGURE_2__f690125fce86c7a4.jpg"
+        }
+      ]
+    },
+    "2026-CS-Hiding_the_Trees_in_the_Forest__Building_Network_Covert_Channels_with_Hash-Based_Covert_Carrier_Filtering": {
+      "processed_at": "2026-08-17T15:49:26.486381",
+      "figures": [
+        {
+          "img_path": "images/2ec0dcc934c49bba9e737668914147218568aaa23a68d06ea5a9452dea328c60.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Network covert channel model."
+          ],
+          "sub_type": "flowchart",
+          "score": 9,
+          "dest_name": "2026-CS-Hiding_the_Trees_in_the_Forest__Building_Network_Covert_Channels_with_Ha__Fig__3__2ec0dcc934c49bba.jpg",
+          "dest_rel": "images/2026-CS-Hiding_the_Trees_in_the_Forest__Building_Network_Covert_Channels_with_Ha__Fig__3__2ec0dcc934c49bba.jpg"
+        },
+        {
+          "img_path": "images/b78247ace1ace2eac1825669dd4e8e7b270d42aeb1b6e28739672f4759e2958e.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Hash–based covert carrier filtering process."
+          ],
+          "sub_type": "flowchart",
+          "score": 5,
+          "dest_name": "2026-CS-Hiding_the_Trees_in_the_Forest__Building_Network_Covert_Channels_with_Ha__Fig__4__b78247ace1ace2ea.jpg",
+          "dest_rel": "images/2026-CS-Hiding_the_Trees_in_the_Forest__Building_Network_Covert_Channels_with_Ha__Fig__4__b78247ace1ace2ea.jpg"
+        }
+      ]
+    },
+    "2026-Cybersecurity-Application_of_tabular_transformer_architectures_for_operating_system_fingerprinting": {
+      "processed_at": "2026-08-17T15:49:26.487683",
+      "figures": [
+        {
+          "img_path": "images/8dc7916b299a6c17f356a6d31ac342fd66712351de2614cd48a5d290c9b9c342.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3 Diagram ofTabTransformer (TabT) architecture. Source: (Wang 2024)"
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-Cybersecurity-Application_of_tabular_transformer_architectures_for_operatin__Fig__3__8dc7916b299a6c17.jpg",
+          "dest_rel": "images/2026-Cybersecurity-Application_of_tabular_transformer_architectures_for_operatin__Fig__3__8dc7916b299a6c17.jpg"
+        },
+        {
+          "img_path": "images/8084b1d8864c44fef0232b4cc8ff4466a28961668dd14cf017fcf350da34814f.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2 Transformer architecture. Source: (Vaswani et al. 2017)"
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-Cybersecurity-Application_of_tabular_transformer_architectures_for_operatin__Fig__2__8084b1d8864c44fe.jpg",
+          "dest_rel": "images/2026-Cybersecurity-Application_of_tabular_transformer_architectures_for_operatin__Fig__2__8084b1d8864c44fe.jpg"
+        }
+      ]
+    },
+    "2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly_Detection_for_Encrypted_Network_Traffic": {
+      "processed_at": "2026-08-17T15:49:26.488816",
+      "figures": [
+        {
+          "img_path": "images/9aa5d7ca352648eaaa1e0359d3258fb494cf8032fa5c6a3561b614abaab6de24.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. The overall framework of FreeUp. (1) The model first decouples the input into low- and high-frequency bands, which are reconstructed by separate networks to mitigate spectral bias. (2) An uncertainty-inspired fusion pipeline then adaptively integrates evidential uncertainty from multi-view branches."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly__Fig__3__9aa5d7ca352648ea.jpg",
+          "dest_rel": "images/2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly__Fig__3__9aa5d7ca352648ea.jpg"
+        },
+        {
+          "img_path": "images/8bc35b591a415c81ac3f007fecab5242e3fea3f995e9d410548ca349058eac46.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Illustration of the full-frequency phenomenon via frequency distribution statistics across natural and traffic images."
+          ],
+          "sub_type": null,
+          "score": 8,
+          "dest_name": "2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly__Fig__1__8bc35b591a415c81.jpg",
+          "dest_rel": "images/2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly__Fig__1__8bc35b591a415c81.jpg"
+        }
+      ]
+    },
+    "2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_detection_in_multi-environment_networks": {
+      "processed_at": "2026-08-17T15:49:26.490179",
+      "figures": [
+        {
+          "img_path": "images/7ddb75f0cad95594a8a25a5d6881189d8755f38a8c6342c0007488b3cbbfdb54.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Proposed methodology diagram for real-time simulations."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_de__Fig__2__7ddb75f0cad95594.jpg",
+          "dest_rel": "images/2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_de__Fig__2__7ddb75f0cad95594.jpg"
+        },
+        {
+          "img_path": "images/9377a7553bf1bc3f468ebe507cb5bda1aea1a461ba676dbce1bb34c5b75cb5a3.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Flowchart diagram for client-server architecture."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_de__Fig__3__9377a7553bf1bc3f.jpg",
+          "dest_rel": "images/2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_de__Fig__3__9377a7553bf1bc3f.jpg"
+        }
+      ]
+    },
+    "2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection": {
+      "processed_at": "2026-08-17T15:49:26.491278",
+      "figures": [
+        {
+          "img_path": "images/c062b706824df228bd00a00c9b89e488c5529223678219e7e98262386e800eaf.jpg",
+          "figure_label": "Fig. 9",
+          "caption": [
+            "Fig. 9: The architecture of our proposed CorrTransform model."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residentia__Fig__9__c062b706824df228.jpg",
+          "dest_rel": "images/2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residentia__Fig__9__c062b706824df228.jpg"
+        },
+        {
+          "img_path": "images/d79e2e4e17b139d958d7704646f7cc4f1dd943ed34ba0fa341a1b390b57af448.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1: RESIP architecture"
+          ],
+          "sub_type": null,
+          "score": 10,
+          "dest_name": "2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residentia__Fig__1__d79e2e4e17b139d9.jpg",
+          "dest_rel": "images/2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residentia__Fig__1__d79e2e4e17b139d9.jpg"
+        }
+      ]
+    },
+    "2026-NDSS-CELLSHIFT__RTT-Aware_Trace_Transduction_for_Real-World_Website_Fingerprinting": {
+      "processed_at": "2026-08-17T15:49:26.492332",
+      "figures": [
+        {
+          "img_path": "images/829509953b883491a3942bf6b59c6d007469e557a5c4f1725bbf290e7a6afc99.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: Our real-world WF adversary model. In phase 1, the adversary runs an exit relay to collect labeled traces and trains a WF classifier. In phase 2, the classifier is deployed to predict a website from unlabeled entry-side traces."
+          ],
+          "sub_type": "flowchart",
+          "score": 2,
+          "dest_name": "2026-NDSS-CELLSHIFT__RTT-Aware_Trace_Transduction_for_Real-World_Website_Fingerp__Figure_1__829509953b883491.jpg",
+          "dest_rel": "images/2026-NDSS-CELLSHIFT__RTT-Aware_Trace_Transduction_for_Real-World_Website_Fingerp__Figure_1__829509953b883491.jpg"
+        }
+      ]
+    },
+    "2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization": {
+      "processed_at": "2026-08-17T15:49:26.493999",
+      "figures": [
+        {
+          "img_path": "images/3af231f6efd0eb776f1c8148187d65c1dd603571bbc4814ad575f36797c6a6c0.jpg",
+          "figure_label": "Fig. 6",
+          "caption": [
+            "Fig. 6. Overview of FRUGAL-online. $\\mathrm { W e }$ use “website $k ^ { \\prime \\prime }$ as an example to illustrate how FRUGAL-online works, where the blue arrows labeled (1) Query, (2) Parameterization, and (3) Position Generation indicate the runtime workflow. TABLE I"
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinti__Fig__6__3af231f6efd0eb77.jpg",
+          "dest_rel": "images/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinti__Fig__6__3af231f6efd0eb77.jpg"
+        },
+        {
+          "img_path": "images/fe0b146fb99af4a3b1cd85ff3fb45f39dccef16be1a5ae551de9473e991cdaee.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(a) Interaction between Agent and Environment.",
+            "(b) Process of Reward Function Updating.",
+            "Fig. 2. Overview of FRUGAL"
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinti__Figure__fe0b146fb99af4a3.jpg",
+          "dest_rel": "images/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinti__Figure__fe0b146fb99af4a3.jpg"
+        }
+      ]
+    },
+    "2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift": {
+      "processed_at": "2026-08-17T15:49:26.495495",
+      "figures": [
+        {
+          "img_path": "images/86402ab64501e198feac82c45c7ad48d28ad17dc1c1f9781dd0ba7ad2ed9abd4.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: The overview of Proteus. Proteus can be integrated with existing DL-based WF attacks to enhance WF attacks against traffic drift."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift__Fig__2__86402ab64501e198.jpg",
+          "dest_rel": "images/2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift__Fig__2__86402ab64501e198.jpg"
+        },
+        {
+          "img_path": "images/b0e71e1206ab8cc9f5f261d0fd23c91212b886e35d9196bad108f9840f5e17af.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3: The entropy distribution of prediction scores from the WF model on real-world drifted traffic from 102 monitored websites. As the degree of traffic drift increases over time, the entropy of the model’s prediction scores gradually increases, indicating a decrease in model confidence."
+          ],
+          "sub_type": null,
+          "score": 5,
+          "dest_name": "2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift__Fig__3__b0e71e1206ab8cc9.jpg",
+          "dest_rel": "images/2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift__Fig__3__b0e71e1206ab8cc9.jpg"
+        }
+      ]
+    },
+    "2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement": {
+      "processed_at": "2026-08-17T15:49:26.496934",
+      "figures": [
+        {
+          "img_path": "images/bf35539097919b7cd838053bc60b91ab8f3a9cca08a8aa7f71ac265ffedef25a.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Overview of Huma’s architecture and high-level workflow."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferre__Fig__1__bf35539097919b7c.jpg",
+          "dest_rel": "images/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferre__Fig__1__bf35539097919b7c.jpg"
+        },
+        {
+          "img_path": "images/92756d4385b077514757a6c6422defd5113c93a030692d54be7581f62f24c379.jpg",
+          "figure_label": "Fig. 9",
+          "caption": [
+            "Fig. 9. Huma’ OUS (personalized mode) training pipeline."
+          ],
+          "sub_type": "text_image",
+          "score": 6,
+          "dest_name": "2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferre__Fig__9__92756d4385b07751.jpg",
+          "dest_rel": "images/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferre__Fig__9__92756d4385b07751.jpg"
+        }
+      ]
+    },
+    "2026-NDSS-Lightening_the_Load__A_Cluster-Based_Framework_or_A_Lower-Overhead__Provable_Website_Fingerprinting_Defense": {
+      "processed_at": "2026-08-17T15:49:26.498991",
+      "figures": [
+        {
+          "img_path": "images/afc641902df11384676689ce0be518576a3cc944c3dbf0fb9bf882a8f36cb93d.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Illustration of early anonymity set prediction and parameter switching. An incoming trace is initially regularized using the global parameters $( p _ { \\mathrm { i n } } ^ { g } \\bar { = }$ $0 . 0 1 2 , p _ { \\mathrm { o u t } } ^ { g } \\dot { = } 0 . 0 4 )$ classifier attempts to assign the trace to one of the candidate anonymity sets. In the first attempt, the classifier predicts $S _ { 1 }$ , but no switch occurs because $S _ { 1 }$ is not valid at that timestamp. At the second safe timestamp, the trace is matched with $S _ { 2 } .$ , which is an acceptable set at that point. This triggers a transition to $S _ { 2 } ' \\mathrm { s }$ per-set lighter parameters $( p _ { \\mathrm { i n } } ^ { S _ { 2 } } = \\dot { 0 . } 0 6 , p _ { \\mathrm { o u t } } ^ { S _ { 2 } } = \\dot { 0 . } \\dot { 0 } 8 )$ 2 = 0.06, pS2out , which are applied for the rest of the connection. Each anonymity set is tied to a unique safe timestamp, so switching can occur at most once."
+          ],
+          "sub_type": "flowchart",
+          "score": 11,
+          "dest_name": "2026-NDSS-Lightening_the_Load__A_Cluster-Based_Framework_or_A_Lower-Overhead__Pr__Fig__4__afc641902df11384.jpg",
+          "dest_rel": "images/2026-NDSS-Lightening_the_Load__A_Cluster-Based_Framework_or_A_Lower-Overhead__Pr__Fig__4__afc641902df11384.jpg"
+        },
+        {
+          "img_path": "images/47576f1dd6b68f0a0126e4298f9cd099dd780d06399e003c9480113b076501be.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. High–level workflow of the first two phases of our defense. 1. Pattern extraction. For each webpage in the training dataset, we group its traces into a small number of stable, recurring traffic patterns (dashed boxes), reflecting variability due to CDNs, localization, and user behavior. 2. Anonymity set construction. The extracted patterns are then clustered across different webpages to form anonymity sets. In this example, each set contains at least $k = 3$ distinct patterns originating from at least $l = 2$ different webpages, thereby satisfying k-anonymity and l-diversity. A lightweight, cluster-specific regularization schedule is precomputed for each set."
+          ],
+          "sub_type": "flowchart",
+          "score": 10,
+          "dest_name": "2026-NDSS-Lightening_the_Load__A_Cluster-Based_Framework_or_A_Lower-Overhead__Pr__Fig__3__47576f1dd6b68f0a.jpg",
+          "dest_rel": "images/2026-NDSS-Lightening_the_Load__A_Cluster-Based_Framework_or_A_Lower-Overhead__Pr__Fig__3__47576f1dd6b68f0a.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach": {
+      "processed_at": "2026-08-17T15:49:26.500515",
+      "figures": [
+        {
+          "img_path": "images/c47b874f42f2fda0fa49614b8b2bffe7da0ee005ff819719ef1f527b09f41384.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The overview of TACO."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_P__Fig__1__c47b874f42f2fda0.jpg",
+          "dest_rel": "images/2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_P__Fig__1__c47b874f42f2fda0.jpg"
+        },
+        {
+          "img_path": "images/d767eb5d7bbeee6203ec758060d1b36ed70dd9b27579864941ac6ec5d0acea6d.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The schematic illustration of traffic data augmentation."
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_P__Fig__2__d767eb5d7bbeee62.jpg",
+          "dest_rel": "images/2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_P__Fig__2__d767eb5d7bbeee62.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion": {
+      "processed_at": "2026-08-17T15:49:26.501377",
+      "figures": [
+        {
+          "img_path": "images/f0723ba65d49499c14c946148656fd646127c66bfe0cddf9e81fbf27f1e27e71.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Illustration of our TrustWI. (a) Learning the long-range propagation view (View-L) and structural augmentation view (View-S), then generating View-P based on them. (b) Learning the evidence uncertainty across three views. The Dirichlet distributions derived from these views are dynamically aggregated to capture view-specific uncertainties, yielding a fused Dirichlet distribution (View-F). (c) The proposed evidential learning loss guides model optimization through backpropagation."
+          ],
+          "sub_type": null,
+          "score": 9,
+          "dest_name": "2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious___Fig__2__f0723ba65d49499c.jpg",
+          "dest_rel": "images/2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious___Fig__2__f0723ba65d49499c.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-WFCAT__Augmenting_Website_Fingerprinting_With_Channel-Wise_Attention_on_Timing_Features": {
+      "processed_at": "2026-08-17T15:49:26.502964",
+      "figures": [
+        {
+          "img_path": "images/2a29584a3543acc1eaf369b10002421e101062cdd8074cb91637d95efc89d102.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. WFCAT model’s architecture. \\*The first Conv2d and all Conv1d blocks are our proposed new blocks."
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2026-TDSC-WFCAT__Augmenting_Website_Fingerprinting_With_Channel-Wise_Attention_o__Fig__5__2a29584a3543acc1.jpg",
+          "dest_rel": "images/2026-TDSC-WFCAT__Augmenting_Website_Fingerprinting_With_Channel-Wise_Attention_o__Fig__5__2a29584a3543acc1.jpg"
+        },
+        {
+          "img_path": "images/4183609e5061f0185700ee15f91de811b3ea22b168581e3bbfb347045c251cc7.jpg",
+          "figure_label": "Fig. 6",
+          "caption": [
+            "Fig. 6. Illustration of the first Conv2d block: utilizing multiple kernels for feature extraction at various scales via an Inception block, followed by fusion of features across different channels with learned weights in the SEBlock."
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-TDSC-WFCAT__Augmenting_Website_Fingerprinting_With_Channel-Wise_Attention_o__Fig__6__4183609e5061f018.jpg",
+          "dest_rel": "images/2026-TDSC-WFCAT__Augmenting_Website_Fingerprinting_With_Channel-Wise_Attention_o__Fig__6__4183609e5061f018.jpg"
+        }
+      ]
+    },
+    "2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection": {
+      "processed_at": "2026-08-17T15:49:26.504210",
+      "figures": [
+        {
+          "img_path": "images/8aee23350fdf9951a25b326b200b1e152f287b5fa159d557eefe0cc3f03c000c.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Overall framework of ConMD. (a) Contextual Masking Distillation Training Process: the teacher network extracts discriminative representations to guide a more diferentiated modeling pipeline. The student backbone, equipped with context-aware local-global window attention mechanisms, leverages the context-enhanced masking strategy to capture intra-packet and inter-packet dependencies. (b) Anomaly Detection Pipeline: during inference, ConMD performs multi-view anomaly scoring by fusing packet-level/masked and flow-level/non-masked branch representations. (c) Motivation for Multi-view Anomaly Scoring: fusion-level features combine the strengths of both views to amplify anomalous deviations."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection__Fig__3__8aee23350fdf9951.jpg",
+          "dest_rel": "images/2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection__Fig__3__8aee23350fdf9951.jpg"
+        },
+        {
+          "img_path": "images/884e0d5753641ea6e70d3b515a02a07dd13848e9332961db5f549bc74e07ad6a.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Paradigm discrepancy between reconstruction- and distillation-based methods. Reconstruction-based anomaly scores rely on a “Confused-to-Confused” pipeline, whereas distillation-based methods use a pre-trained teacher to extract representations, confirming diferentiated anomaly detection."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection__Fig__2__884e0d5753641ea6.jpg",
+          "dest_rel": "images/2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection__Fig__2__884e0d5753641ea6.jpg"
+        }
+      ]
+    },
+    "2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temporal_Graph_Learning": {
+      "processed_at": "2026-08-17T15:49:26.505397",
+      "figures": [
+        {
+          "img_path": "images/d21b9f9d4499852cec99d817a7c1732bb518a3113ca89a1a245ff56ab574baed.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. The system overview of DawnGuard."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temp__Fig__3__d21b9f9d4499852c.jpg",
+          "dest_rel": "images/2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temp__Fig__3__d21b9f9d4499852c.jpg"
+        },
+        {
+          "img_path": "images/b8cd1ab55a5fff65604ee35b50c7e499d24a43a0d386a6fe7d8a7635b81ae5ba.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Illustration of observable unencrypted metadata (e.g., Extensions) within the payload bytes of encrypted trafic."
+          ],
+          "sub_type": null,
+          "score": 7,
+          "dest_name": "2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temp__Fig__4__b8cd1ab55a5fff65.jpg",
+          "dest_rel": "images/2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temp__Fig__4__b8cd1ab55a5fff65.jpg"
+        }
+      ]
+    },
+    "2026-TIFS-LitCVit__A_Lightweight_Self-Supervised_Contrastive_Vision_Transformer_for_Encrypted_Malicious_Traffic_Detection": {
+      "processed_at": "2026-08-17T15:49:26.506688",
+      "figures": [
+        {
+          "img_path": "images/dcb609eddf40f7beb719762d76a873d645164bcdd8d4d0051d54e9f3e1d05fda.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The proposed framework for encrypted malicious trafic detection."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TIFS-LitCVit__A_Lightweight_Self-Supervised_Contrastive_Vision_Transformer___Fig__1__dcb609eddf40f7be.jpg",
+          "dest_rel": "images/2026-TIFS-LitCVit__A_Lightweight_Self-Supervised_Contrastive_Vision_Transformer___Fig__1__dcb609eddf40f7be.jpg"
+        },
+        {
+          "img_path": "images/1da06cf12e630c1f781b0ec1945efff0f5ac03e9778f41d305c75bbe03a015dd.jpg",
+          "figure_label": "Fig. 10",
+          "caption": [
+            "Fig. 10. UMAP embeddings of encrypted benign and malicious trafic under diferent temperature values τ of ntXent loss."
+          ],
+          "sub_type": null,
+          "score": 6,
+          "dest_name": "2026-TIFS-LitCVit__A_Lightweight_Self-Supervised_Contrastive_Vision_Transformer___Fig__10__1da06cf12e630c1f.jpg",
+          "dest_rel": "images/2026-TIFS-LitCVit__A_Lightweight_Self-Supervised_Contrastive_Vision_Transformer___Fig__10__1da06cf12e630c1f.jpg"
+        }
+      ]
+    },
+    "2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Backdoor_Learning": {
+      "processed_at": "2026-08-17T15:49:26.507986",
+      "figures": [
+        {
+          "img_path": "images/2ac130a85ccf729419e2ad8353d462488c489d45d5c6a6db3f26ba051f38f6bc.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The Overall Framework of TrapFlow. (a) Trigger Optimization: TrapFlow optimizes trigger patterns by maximizing a Fast Levenshtein-like distance, using heuristic or LSTM-based methods to insert incoming cells. (b) Poisoning Attacker: The defender injects triggers into selected web page trafic, contaminating the attacker’s model through label-consistent poisoning. (c) Controllable Defense: In inference, clean models are fooled by the trigger’s adversarial nature, while retrained attacker models are backdoored to classify all triggered trafic as the target label, enabling consistent misclassification regardless of the attacker’s strategy."
+          ],
+          "sub_type": null,
+          "score": 10,
+          "dest_name": "2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Back__Fig__2__2ac130a85ccf7294.jpg",
+          "dest_rel": "images/2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Back__Fig__2__2ac130a85ccf7294.jpg"
+        },
+        {
+          "img_path": "images/a881f5ee4794f091691bc38732f38a95110a95791b3880ff6a3edc917f868696.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Based on the backdoor learning framework, TrapFlow injects a specific trigger pattern (TrapFlow Trigger) into the exit node to induce the attacker to misclassify the model and even control its parameters and predictions."
+          ],
+          "sub_type": null,
+          "score": 10,
+          "dest_name": "2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Back__Fig__1__a881f5ee4794f091.jpg",
+          "dest_rel": "images/2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Back__Fig__1__a881f5ee4794f091.jpg"
+        }
+      ]
+    },
+    "2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network": {
+      "processed_at": "2026-08-17T15:49:26.509350",
+      "figures": [
+        {
+          "img_path": "images/21c147a006bb395ea7f53624241bec0388b48e6e05b046e725a727c3538269c9.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The framework of FlowXpert."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection___Fig__2__21c147a006bb395e.jpg",
+          "dest_rel": "images/2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection___Fig__2__21c147a006bb395e.jpg"
+        },
+        {
+          "img_path": "images/b35da00c573e14fce54754334c17dbed0cff03f8f2c205f7ddc3630a242390e3.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. The data structure of FlowVision."
+          ],
+          "sub_type": null,
+          "score": 8,
+          "dest_name": "2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection___Fig__3__b35da00c573e14fc.jpg",
+          "dest_rel": "images/2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection___Fig__3__b35da00c573e14fc.jpg"
+        }
+      ]
+    },
+    "2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting": {
+      "processed_at": "2026-08-17T15:49:26.511519",
+      "figures": [
+        {
+          "img_path": "images/2f456543a88ac519eccdb5dd0b6bcacc874b79477395451d5419fb638cd415ad.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The overview of ARES."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting__Fig__2__2f456543a88ac519.jpg",
+          "dest_rel": "images/2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting__Fig__2__2f456543a88ac519.jpg"
+        },
+        {
+          "img_path": "images/82131b73a6d76385ca9708bb6db7194e7debb233438dd659387994156eb9c09c.jpg",
+          "figure_label": "Fig. 6",
+          "caption": [
+            "Fig. 6. The multi-head top-m attention method correlates local traffic patterns for website fingerprinting even in the presence of noise interference. Different from the full connection of the original Transformer, Trans-WF keeps only the top-m attention."
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting__Fig__6__82131b73a6d76385.jpg",
+          "dest_rel": "images/2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting__Fig__6__82131b73a6d76385.jpg"
+        }
+      ]
+    },
+    "2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network_Obfuscation": {
+      "processed_at": "2026-08-17T15:49:26.512824",
+      "figures": [
+        {
+          "img_path": "images/007839ecdceca0fdb371dac64c27097314e18b6a33f08ce4e3f811161d42c315.jpg",
+          "figure_label": "Figure 15",
+          "caption": [
+            "Figure 15: Securitas on the standard Portable Switch Architecture (PSA) of P4."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network___Figure_15__007839ecdceca0fd.jpg",
+          "dest_rel": "images/2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network___Figure_15__007839ecdceca0fd.jpg"
+        },
+        {
+          "img_path": "images/f523c8a205e45de9a3480261d955eb1d8feee26fb24a309cacd1f7af6f595b2e.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: The widely adopted traffic obfuscation framework (ObfA and ObfB are two instances from the same scheme)."
+          ],
+          "sub_type": null,
+          "score": 10,
+          "dest_name": "2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network___Figure_1__f523c8a205e45de9.jpg",
+          "dest_rel": "images/2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network___Figure_1__f523c8a205e45de9.jpg"
+        }
+      ]
+    },
+    "2026-WWW-Proteus__Towards_Accurate_and_Low-overhead_In_Network_Malicious_Traffic_Detection": {
+      "processed_at": "2026-08-17T15:49:26.513833",
+      "figures": [
+        {
+          "img_path": "images/ee0446ee1631938a7c22976999d5a7e1090f3204faf262535d6278897b5bb453.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: Proteus overview."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-WWW-Proteus__Towards_Accurate_and_Low-overhead_In_Network_Malicious_Traffic__Figure_3__ee0446ee1631938a.jpg",
+          "dest_rel": "images/2026-WWW-Proteus__Towards_Accurate_and_Low-overhead_In_Network_Malicious_Traffic__Figure_3__ee0446ee1631938a.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-DEMUX__Boundary-Aware_Multi-Scale_Traffic_Demixing_for_Multi-Tab_Website_Fingerprinting": {
+      "processed_at": "2026-08-17T15:49:26.515265",
+      "figures": [
+        {
+          "img_path": "images/c8574d050ccc0fdc735988fc019d5386c8beeed4073439918d287f5c9b730f1d.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The DEMUX framework diagram includes the Boundary Preserving Aggregation Module, Multi-Granularity Local Analysis, and Global Association modules. It also provides detailed visualizations of the convolutional blocks (with kernel size = n) and the Transformer encoder, which incorporates a Multi-Headed Self-Attention mechanism enhanced with Rotary Positional Embedding (RoPE). "
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-arXiv-DEMUX__Boundary-Aware_Multi-Scale_Traffic_Demixing_for_Multi-Tab_Webs__Fig__2__c8574d050ccc0fdc.jpg",
+          "dest_rel": "images/2026-arXiv-DEMUX__Boundary-Aware_Multi-Scale_Traffic_Demixing_for_Multi-Tab_Webs__Fig__2__c8574d050ccc0fdc.jpg"
+        },
+        {
+          "img_path": "images/faf97fdbc82c2386699417205d6d65ff719a3d0e1542f0934ecb900b44ded8c7.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Cross-configuration generalization (AUC) on the closed-world dataset. Each subplot trains on one tab count and evaluates on all four. ",
+            "Fig. 5. Effectiveness of the Boundary Preserving Aggregation Module as a plug-and-play component in the open-world 5-tab setting. Light bars denote baseline models; dark bars denote variants with BM integrated (DEMUX-Dir vs. full DEMUX). "
+          ],
+          "sub_type": null,
+          "score": 6,
+          "dest_name": "2026-arXiv-DEMUX__Boundary-Aware_Multi-Scale_Traffic_Demixing_for_Multi-Tab_Webs__Fig__4__faf97fdbc82c2386.jpg",
+          "dest_rel": "images/2026-arXiv-DEMUX__Boundary-Aware_Multi-Scale_Traffic_Demixing_for_Multi-Tab_Webs__Fig__4__faf97fdbc82c2386.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-More_Than_Meets_the_Eye__A_Semantics-Aware_Traffic_Augmentation_Framework_for_Generalizable_Website_Fingerprinting": {
+      "processed_at": "2026-08-17T15:49:26.516849",
+      "figures": [
+        {
+          "img_path": "images/07528b9146baa6228880406d0bd732f8897be62833a6b7b8e106260ae90d5a3e.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Overview of a WF attack scenario and its two major generalization challenges. Blue dashed lines denote the attacker’s workflow, and red dashed regions indicate the challenges faced by the attacker. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2026-arXiv-More_Than_Meets_the_Eye__A_Semantics-Aware_Traffic_Augmentation_Frame__Fig__1__07528b9146baa622.jpg",
+          "dest_rel": "images/2026-arXiv-More_Than_Meets_the_Eye__A_Semantics-Aware_Traffic_Augmentation_Frame__Fig__1__07528b9146baa622.jpg"
+        },
+        {
+          "img_path": "images/5ce35fe77d6f55712c3306e53518d9b67df55fa1dcdfcd6406a2538c60ddf2b1.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "Phase 3: Deployment ",
+            "Fig. 6. Cross-layer feature alignment architecture. "
+          ],
+          "sub_type": "flowchart",
+          "score": 13,
+          "dest_name": "2026-arXiv-More_Than_Meets_the_Eye__A_Semantics-Aware_Traffic_Augmentation_Frame__Figure__5ce35fe77d6f5571.jpg",
+          "dest_rel": "images/2026-arXiv-More_Than_Meets_the_Eye__A_Semantics-Aware_Traffic_Augmentation_Frame__Figure__5ce35fe77d6f5571.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-Multimodal_Reasoning_with_LLM_for_Encrypted_Traffic_Interpretation__A_Benchmark": {
+      "processed_at": "2026-08-17T15:49:26.518359",
+      "figures": [
+        {
+          "img_path": "images/8b09f5796d7cc3b120b88dc726783b1f622c1a20ed7e8bbd7c1559e6ed9395e3.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Overview of the mmTraffic framework. (a) The frozen traffic encoder $T _ { \\theta }$ extracts high-dimensional features from raw traffic data. (b) The linear connector $C _ { \\omega }$ projects traffic features into the LLM token space, with the CGHF mechanism injecting a class-aware anchor token into the input sequence. (c) The LLM $G _ { \\phi }$ autoregressively generates a structured forensic report containing behavioral traits, evidence chain, and diagnostic description. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-arXiv-Multimodal_Reasoning_with_LLM_for_Encrypted_Traffic_Interpretation__A__Fig__4__8b09f5796d7cc3b1.jpg",
+          "dest_rel": "images/2026-arXiv-Multimodal_Reasoning_with_LLM_for_Encrypted_Traffic_Interpretation__A__Fig__4__8b09f5796d7cc3b1.jpg"
+        },
+        {
+          "img_path": "images/7489b0ab3b21fba35f77f89167bb935254d4cfdb41fc780976647587f7085578.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Comparison of traffic analysis paradigms. (a) Traditional classification methods that act as a “black box”, providing only a label and low-level feature weights that lack operational value. (b) Our proposed multimodal reasoning framework, composed of a Traffic Perception Encoder and a Cognitive LLM, instructed by Byte-Grounded Knowledge, generating an evidence-grounded report with human-understandable reasoning and executable insights. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2026-arXiv-Multimodal_Reasoning_with_LLM_for_Encrypted_Traffic_Interpretation__A__Fig__1__7489b0ab3b21fba3.jpg",
+          "dest_rel": "images/2026-arXiv-Multimodal_Reasoning_with_LLM_for_Encrypted_Traffic_Interpretation__A__Fig__1__7489b0ab3b21fba3.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-PrismWF__A_Multi-Granularity_Patch-Based_Transformer_for_Robust_Website_Fingerprinting_Attack": {
+      "processed_at": "2026-08-17T15:49:26.519780",
+      "figures": [
+        {
+          "img_path": "images/bf73ab6bc8fcb8ae79dabaa69ecc652854cb67b45f72f4d47d8887896d589bbc.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Overview of the PrismWF. "
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-arXiv-PrismWF__A_Multi-Granularity_Patch-Based_Transformer_for_Robust_Websi__Fig__3__bf73ab6bc8fcb8ae.jpg",
+          "dest_rel": "images/2026-arXiv-PrismWF__A_Multi-Granularity_Patch-Based_Transformer_for_Robust_Websi__Fig__3__bf73ab6bc8fcb8ae.jpg"
+        },
+        {
+          "img_path": "images/fd5c942a3fdb9b1a4510933da2d9621110bf02c257470d9a5c4c6a6c71a0133a.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Illustration of Traffic Mixing Caused by Concurrent Multi-Tab Browsing. "
+          ],
+          "sub_type": "flowchart",
+          "score": 10,
+          "dest_name": "2026-arXiv-PrismWF__A_Multi-Granularity_Patch-Based_Transformer_for_Robust_Websi__Fig__1__fd5c942a3fdb9b1a.jpg",
+          "dest_rel": "images/2026-arXiv-PrismWF__A_Multi-Granularity_Patch-Based_Transformer_for_Robust_Websi__Fig__1__fd5c942a3fdb9b1a.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World": {
+      "processed_at": "2026-08-17T15:49:26.521421",
+      "figures": [
+        {
+          "img_path": "images/f38fb6493aac545254efbf24c982dcae26e1b17267c486a3b4d126357d5bb8ce.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(b) Tor Under Conflux ",
+            "Figure 1: Overview of Tor traffic routing architectures. (a) In a standard Tor configuration, traffic flows sequentially through three intermediate nodes: (i) the guard node, which knows the client’s IP address but not the destination; (ii) the middle node, which merely forwards the encrypted traffic; and (iii) the exit node, which connects to the destination server but remains oblivious to the client’s original IP address. (b) Under Conflux, traffic between the client and the exit node is dynamically split across multiple linked legs. Each Conflux leg routes traffic similar to a standard Tor circuit. Both legs share the same exit node but use different guard and middle nodes. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World__Figure__f38fb6493aac5452.jpg",
+          "dest_rel": "images/2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World__Figure__f38fb6493aac5452.jpg"
+        },
+        {
+          "img_path": "images/a32883a95e0c00b0bd79bcb86c7705bedd66ba330e75cfb5d7a4b5fe7c146fea.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: An attacker can place themselves in different points of entry in a Tor network to train their classifiers for WF attacks. Traditionally, the attacker is assumed to be an eavesdropper who is observing the traffic to/from clients (Attacker A). For this, traces are commonly gathered through the Tor client itself to train the classifiers. Our approach is to gather both training and testing data from a Tor guard node (Attacker B). Cherubin et al. [6] gather the training data through a Tor exit node (Attacker C). "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World__Figure_2__a32883a95e0c00b0.jpg",
+          "dest_rel": "images/2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World__Figure_2__a32883a95e0c00b0.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-ResAware__Cross-Environment_Website_Fingerprinting_via_Resource-Privileged_Distillation": {
+      "processed_at": "2026-08-17T15:49:26.523008",
+      "figures": [
+        {
+          "img_path": "images/6efaaea27af39a8066ffa7c320b49c604769df5c99ffa857451ae555c82ce91d.jpg",
+          "figure_label": "Figure 4",
+          "caption": [
+            "Figure 4: Overview of the ResAware framework. Offline training first trains a resource-only teacher, then distills its knowledge into a traffic-only student; all resource-side components are discarded before online deployment."
+          ],
+          "sub_type": "flowchart",
+          "score": 15,
+          "dest_name": "2026-arXiv-ResAware__Cross-Environment_Website_Fingerprinting_via_Resource-Privi__Figure_4__6efaaea27af39a80.jpg",
+          "dest_rel": "images/2026-arXiv-ResAware__Cross-Environment_Website_Fingerprinting_via_Resource-Privi__Figure_4__6efaaea27af39a80.jpg"
+        },
+        {
+          "img_path": "images/7203671480121cf7e9bcc30e28d6e32bd10ebee81bfd5dac1ffe2811eb198b98.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: A website’s identity is reflected in its architecture and resource loading patterns. A browsing instance can be viewed as a sequence of resource deliveries, which, after being shaped by environmental noise, appears as the observable network traffic."
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2026-arXiv-ResAware__Cross-Environment_Website_Fingerprinting_via_Resource-Privi__Figure_1__7203671480121cf7.jpg",
+          "dest_rel": "images/2026-arXiv-ResAware__Cross-Environment_Website_Fingerprinting_via_Resource-Privi__Figure_1__7203671480121cf7.jpg"
+        }
+      ]
+    },
+    "2026-AES-The_Inevitability_of_Side-Channel_Leakage_in_Encrypted_Traffic": {
+      "processed_at": "2026-08-17T15:49:26.524190",
+      "figures": [
+        {
+          "img_path": "images/d8e4d4705bcdbae6e9bddd11cd38047fe0982f61b37895882df0fd9bd84e80b1.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: Complete causal chain from semantics to observed features"
+          ],
+          "sub_type": "flowchart",
+          "score": 5,
+          "dest_name": "2026-AES-The_Inevitability_of_Side-Channel_Leakage_in_Encrypted_Traffic__Figure_1__d8e4d4705bcdbae6.jpg",
+          "dest_rel": "images/2026-AES-The_Inevitability_of_Side-Channel_Leakage_in_Encrypted_Traffic__Figure_1__d8e4d4705bcdbae6.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-Treat_Traffic_Like_Trees__A_Semantic-Preserving_Hierarchical_Graph-Based_Expert_Framework_for_Encrypted_Traffic_Analysis": {
+      "processed_at": "2026-08-17T15:49:26.526005",
+      "figures": [
+        {
+          "img_path": "images/c19b7236b3a1fea031a939bad1523447e9fd2dae17bbb36f604bc52e90cd7593.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Overview of the PTGAMoE workflow. "
+          ],
+          "sub_type": "flowchart",
+          "score": 14,
+          "dest_name": "2026-arXiv-Treat_Traffic_Like_Trees__A_Semantic-Preserving_Hierarchical_Graph-Ba__Fig__2__c19b7236b3a1fea0.jpg",
+          "dest_rel": "images/2026-arXiv-Treat_Traffic_Like_Trees__A_Semantic-Preserving_Hierarchical_Graph-Ba__Fig__2__c19b7236b3a1fea0.jpg"
+        },
+        {
+          "img_path": "images/276c6371b6b63f17794a86abb24114899dfd71f12e3ffcd0e591c808ffe957a8.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5: The model design of PTGAMoE. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-arXiv-Treat_Traffic_Like_Trees__A_Semantic-Preserving_Hierarchical_Graph-Ba__Fig__5__276c6371b6b63f17.jpg",
+          "dest_rel": "images/2026-arXiv-Treat_Traffic_Like_Trees__A_Semantic-Preserving_Hierarchical_Graph-Ba__Fig__5__276c6371b6b63f17.jpg"
+        }
+      ]
+    },
+    "2026-arXiv-Where_Do_Flow_Semantics_Reside__A_Protocol-Native_Tabular_Pretraining_Paradigm_for_Encrypted_Traffic_Classification": {
+      "processed_at": "2026-08-17T15:49:26.527590",
+      "figures": [
+        {
+          "img_path": "images/21fe822c9619b272dc944d7821e9129779ce4f6a0e60539d20a935eea1b76e9b.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2. Workflow of FlowSem-MAE. Noisy FSUs refer to the union of random and non-generalizable fields. "
+          ],
+          "sub_type": "flowchart",
+          "score": 12,
+          "dest_name": "2026-arXiv-Where_Do_Flow_Semantics_Reside__A_Protocol-Native_Tabular_Pretraining__Figure_2__21fe822c9619b272.jpg",
+          "dest_rel": "images/2026-arXiv-Where_Do_Flow_Semantics_Reside__A_Protocol-Native_Tabular_Pretraining__Figure_2__21fe822c9619b272.jpg"
+        },
+        {
+          "img_path": "images/a62bf63a5000008d926788ea1a0aa047ef812d800b903db95d85c59c1125b8d8.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1. Protocol fields (left) are flattened into raw bytes (middle) and embedded (right), illustrating inductive bias mismatch at three levels: (P1) Field-level unpredictability: Random fields (pink) are treated as learnable despite being unpredictable by protocol design (e.g., ip.id and checksum). (P2) Cross-field-level embedding confusion: Field distinctions are lost through crossfield embedding (grey), where adjacent bytes span multiple fields (e.g. ip.flags and ip.frag offset), and unified embedding function, where semantically different values receive identical vectors (e.g., Total Len=1500 and Win Size=1500). (P3) Flow-level metadata loss:Temporal metadata (hatched) essential for flow-level behavior analysis exists outside packet bytes and is entirely discarded. "
+          ],
+          "sub_type": "flowchart",
+          "score": 8,
+          "dest_name": "2026-arXiv-Where_Do_Flow_Semantics_Reside__A_Protocol-Native_Tabular_Pretraining__Figure_1__a62bf63a5000008d.jpg",
+          "dest_rel": "images/2026-arXiv-Where_Do_Flow_Semantics_Reside__A_Protocol-Native_Tabular_Pretraining__Figure_1__a62bf63a5000008d.jpg"
         }
       ]
     }
