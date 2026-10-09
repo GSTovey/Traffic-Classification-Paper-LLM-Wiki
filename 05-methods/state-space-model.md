@@ -4,7 +4,7 @@ name: "State Space Model / Mamba"
 aliases: ["状态空间模型", "SSM", "Mamba"]
 tags: [state-space-model, mamba, sequence-modeling, linear-complexity, traffic-classification, pre-training]
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-09-19"
 ---
 
 # State Space Model / Mamba（状态空间模型）
@@ -106,6 +106,10 @@ NetMamba+ 在 NetMamba 的 stride 嵌入基础上引入了可插拔的多模态�
 | NetMamba (Wang et al., ICNP 2024) | 2024 | 首个将 Mamba/SSM 应用于网络流量分类的原始工作 | 提出单向 Mamba 架构 + MAE 预训练 + stride-based 流量表示方案；保留头部+载荷综合信息；推理速度比 Transformer 快 60 倍（batch=5），参数量仅 2.2M；在 6 个数据集上实现 SOTA（CrossPlatform/ISCXTor2016/ISCXVPN2016/CICIoT2022/USTC-TFC2016）。**注意**：此为 NetMamba 原始版本，与后续 NetMamba+ (ICNP 2024 / arXiv 2026) 为不同论文 |
 | NetMamba+ (Wang et al.) | 2026 (arXiv, ICNP 2024) | 在 NetMamba 基础上引入 Flash Attention 和多模态融合 | 提出融合 Mamba + Flash Attention 的高效架构（NetMamba block + NetTrans block）；设计多模态流量表示方案（stride + size + interval），通过正弦编码和 segment indicator 实现早期融合；引入 LDA loss 处理长尾分布（结合 CB loss 重加权和 LDAM 大间隔策略）；在 4 类分类任务（加密应用、攻击、恶意软件、VPN）上 F1 最高提升 6.44%；实现在线分类系统吞吐量 261.87 Mb/s |
 | Mamba: Linear-Time Sequence Modeling with Selective State Spaces (Gu & Dao) | 2023 | 原始 Mamba 架构 | 提出 Selective Scan 机制，将 SSM 参数设计为输入的函数；实现硬件感知的并行 scan 算法；在语言建模上匹配 Transformer 性能 |
+| MambaTIG (Jia et al., TDSC 2026) | 2026 | 把 Mamba 作为图编码器的一部分：3 层 GINConv 中第 3 层用门控 SSM（Mamba）更新节点表示，替代图卷积中的 MLP | 良性-only 掩码图自监督 + LSH kNN 异常检测在四数据集取得 98.84%/99.39%/99.49%/99.61% F1（均 best-or-tied）；GIN+Mamba 消融同时提升精度并降低时延，GPU 推理时延较其余方法平均降低 66.7%，跨分布迁移平均相对 F1 +56.29% |
+| UTFormer (Wen et al., TIFS 2026) | 2026 | 以 NetMamba+（SSM）为最强轻量对照基线，系统对比 Transformer / 轻量 CNN / SSM 三类骨干的体积、算力与吞吐 | 注意力首行 Top-K 动态 payload 蒸馏（砍 90%–95% 字节）+ 可微架构搜索，最小 106 KB 的模型在线达 10 Gbps；体积比 NetMamba+ 小 2.11×–254.7×、算力低 5.65×–4448.7×，但在线延迟 0.11 ms 略高于 NetMamba+ 的 0.08 ms |
+| HyTMTC (Huang et al., TNSM 2026) | 2026 | 3 层 Mamba + 1 层 Transformer 的轻量混合骨干：Mamba 扫描负责长程序列建模，单层注意力做一次全局精炼，配 Mamba-MoE 与参数共享 | 混合骨干显著优于任一单骨干（5 数据集均值 0.9499 vs 纯 Mamba 0.8777 / 纯 Transformer 0.8701）；参数共享把参数从 14.49M 降至 8.20M 同时 F1 92.68%→94.99%；7 个公开数据集平均 F1 95.03% |
+| TDDM-Melatt (Chen et al., arXiv 2026) | 2026 | 以 NetMamba 为 SOTA 预训练基线之一，并将其作为扩散增强的迁移对象，检验增强收益与骨干预处理范式的耦合 | 揭示扩散增强的可迁移性取决于骨干预处理范式：TDDM 叠加 ET-BERT 得 F1 +1.90%/+14.12%，叠加 NetMamba 反而 −3.46%/−1.26%；Melatt+XGBoost 延迟 <12 ms 优于 NetMamba 的 >15 ms，TLS-120class F1 0.681 |
 
 ## 9. 与其他方法的比较
 

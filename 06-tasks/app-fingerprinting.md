@@ -4,7 +4,7 @@ name: "App Fingerprinting"
 aliases: ["应用指纹识别", "App Recognition", "Mobile App Fingerprinting"]
 tags: [app-fingerprinting, encrypted-traffic, mobile-app, graph-neural-network, semi-supervised, destination-correlation]
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-09-19"
 ---
 
 # App Fingerprinting（应用指纹识别）
@@ -72,6 +72,15 @@ App Fingerprinting（应用指纹识别）是指通过分析加密网络流量�
 
 - FlowPrint：基于目的地时间相关性的半监督移动应用指纹识别，Cross Platform F1 89.2%，支持未见应用检测 — `[[2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic]]`
 - GraphDApp：TIG + GNN 的 DApp 指纹识别，闭世界 89.22%，开世界 AUC 0.9973 — `[[2021-TIFS-Accurate_Decentralized_Application_Identification_via_Encrypted_Traffic_Analysis_Using_Graph_Neural_Networks]]`
+- ECHO：TPE 贝叶斯优化搜非均匀包大小/到达时间 binning + 置信度门限级联的早分类，加密流量分类时延降低最高 90%、精度不降反升 — `[[2025-ICNP-Non-uniformity_is_All_You_Need__Efficient_and_Timely_Encrypted_Traffic_Classification_With_ECHO]]`
+- Odysseus：锚点流 + 前后各两流的短窗口上下文编码为三通道网格（Len/Time/Dire）+ 包级/流级双掩码 MAE 预训练 + 上下文到单流分层注意力蒸馏，OOD 加密流量分类 F1 最高提升 15.70% — `[[2026-IWQoS-Odysseus__A_Context-Level_Pre-training_Framework_for_Out-of-Distribution_Encrypted_Traffic_Classification]]`
+- BPF-DAG：包头字节经 Transformer 得时序表示并动态写回为全局 IP 有向图边属性，与 DiESAGE 有向边嵌入线性插值融合，免预训练在六评测设定取 SOTA，参数量/FLOPs 比 YaTC 低 28%/11% — `[[2026-TIFS-BPF-DAG__Byte-Packet-Flow_Features_Fusion_via_Dynamic_Attributed_Graph_for_Reliable_Encrypted_Traffic_Classification]]`
+- DQSA：任务门控注意力路由（TGAR）+ 码本软量化注意力（SQ-SAH）+ 单调多速度位置编码（M2RoPE）改造 Transformer 做多任务加密流量分类，ISCX VPN-NonVPN 92.85% 准确率且注意力图即内在可解释性（AOPC-R 优于 DEEPSHAP） — `[[2026-TIFS-DQSA_Dynamic_Quantized_Self-Attention_for_Multi-Task_Encrypted_Network_Traffic_Classification]]`
+- GCLC：流量交互图（包大小/方向/IAT）+ 监督对比与中心感知双损失聚类 + Mahalanobis 距离新类发现，闭世界 AC 96.84%、开放世界新类识别 ACC 95.02% — `[[2026-TIFS-Graph-Based_Contrastive_Learning_and_Clustering_for_Open-World_Encrypted_Traffic_Classification]]`
+- HW-NAS：参数/峰值张量/FLOPs 三重硬约束的进化式硬件感知 NAS，搜出 88.26K 参数 1D-CNN（精度 96.60%），相对 SOTA 压缩最多 444×/312×，可 INT8 量化部署于 Cortex-M4/M7 — `[[2026-TNSM-Hardware-Aware_Neural_Architecture_Search_for_Encrypted_Traffic_Classification_on_Resource-Constrained_Devices]]`
+- HyTMTC：字节/包长/方向拼进同一多模态 token 序列 + 3 层 Mamba + 1 层 Transformer 混合骨干 MLM 预训练 + 自注意力融合微调，7 个公开数据集平均 F1 95.03% — `[[2026-TNSM-HyTMTC__A_Pre-Training_Method_for_Multi-Scenario_Network_Traffic_Classification_With_Hybrid_Transformer-Mamba]]`
+- SoK（标签溯源）：审计 14 个公开加密流量基准的标签构造证据来源，给出无需训练的平衡准确率上界：继承式基准 ≤0.7589、对齐式 ≥0.8956 — `[[2026-arXiv-SoK__Where_Do_Flow_Labels_Come_From__Auditing_Label_Provenance_in_Encrypted_Traffic_Benchmarks]]`
+- TDDM-Melatt：外部记忆库 + 竞争门控 LSTM 在匿名化特征上做无捷径预训练，再用类别级扩散模型补长尾，TLS-120class F1 0.681、延迟 <12 ms — `[[2026-arXiv-TDDM-Melatt__A_Decoupled_Memory_and_Diffusion_Framework_for_Generalizable_Encrypted_Traffic_Classification]]`
 
 ## 7. 工程落地问题
 

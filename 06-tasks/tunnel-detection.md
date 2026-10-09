@@ -4,7 +4,7 @@ name: "Encrypted Tunnel Detection"
 aliases: ["加密隧道检测", "Tunnel Traffic Analysis", "VPN/SSH Tunnel Detection"]
 tags: [tunnel-detection, encrypted-tunnel, SSH, VPN, HTTPS-proxy, traffic-separation, statistical-fingerprint]
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Encrypted Tunnel Detection（加密隧道检测）
@@ -98,6 +98,14 @@ Encrypted Tunnel Detection（加密隧道检测）是指识别网络流量中使
 - [[2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneous_information_network]]：异构信息网络（HIN + 元路径 + HAN）建模增强混淆 HTTPS 隧道检测
 - [[2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection]]：对抗鲁棒的两层住宅代理检测，突破 RTT 特征局限
 - [[2025-TDSC-QuicCourier__Leveraging_the_Dynamics_of_QUIC-_Based_Website_Browsing_Behaviors_Through_Proxy_for_Covert_Communication]]：利用 QUIC 浏览行为动力学构建隐蔽信道，规避流量分类检测
+- ECHO：TPE 贝叶斯优化非均匀包大小 binning + 置信度门限级联早分类，加密流量分类时延降低最高 90%、精度不降反升，面向 Gb/s 级部署约束 — `[[2025-ICNP-Non-uniformity_is_All_You_Need__Efficient_and_Timely_Encrypted_Traffic_Classification_With_ECHO]]`
+- AdaDoHTool：TLS 应用数据记录长度序列 → Word2Vec 词向量 → TextCNN + KNN-aware loss 预训练，再用特征-标签记忆库在线更新 + KNN 投票做测试时自适应，未知 resolver 上 0% 标注平均 0.7125、10% 标注平均 0.8463 — `[[2026-JCN-AdaDoHTool_A_test-time_adaptive_framework_for_identifying_DoH_tunneling_tools_with_unknown_resolvers]]`
+- STUN 隐蔽信道：把以太网帧封装进 RFC 5389 规定必须静默忽略的 STUN comprehension-optional 属性（轮询解决服务器不能主动发包），构造可绕过 Snort 3/Suricata/FortiGate/Palo Alto 的全双工 L2 隧道；用属性值 Shannon 熵（4.5 bits）实现零误报 100% 检出 — `[[2026-JCS-STUN_comprehension-optional_attributes_as_a_covert_channel__Design_implementation_and_detection]]`
+- MVPNalyzer：三阶段（采集/处理/分析）移动 VPN 冷启动审计框架，无人工交互审计 281 个 Google Play 应用（22 亿+ 安装），揭示明文流量、DNS/用户流量泄漏、弱混淆、追踪器与 OpenVPN 配置不安全五类问题 — `[[2026-NDSS-MVPNalyzer__An_Investigative_Framework_for_Auditing_the_Security_&_Privacy_of_Mobile_VPNs]]`
+- Iris：把多任务流量分析编译化（Rust subscription 定义数据类型/过滤器/回调，编译器融合去重为单条 match-action 流水线），12 核并发跑数百订阅达 100 Gbps 零丢包，OpenVPN 指纹等用例仅需约 194 行 — `[[2026-NSDI-Iris__Expressive_Traffic_Analysis_for_the_Modern_Internet]]`
+- DQSA：任务门控注意力路由 + 码本软量化注意力 + 单调多速度位置编码的多任务加密流量分类，ISCX VPN-NonVPN 三任务 92.85% 准确率，含 Encapsulation 任务且注意力图自带可解释性 — `[[2026-TIFS-DQSA_Dynamic_Quantized_Self-Attention_for_Multi-Task_Encrypted_Network_Traffic_Classification]]`
+- MIRAGE-DoH：CMA + TMN + MCS + CCE + SGI 五模块可变形 DoH 检测与自适应防御框架，摘要声称 97.8% 平均检测准确率、0.41% FPR、62 µs 推理，但正文与各实验表数值互相矛盾、实验验证不可复现（工具链为自造命令，无法核对） — `[[2026-TNSM-MIRAGE-DoH__Metamorphic_Intelligence_and_Resilient_AI_Grid_for_Autonomous_Governance_of_Encrypted_DNS]]`
+- SoK（标签溯源）：审计 14 个公开加密流量基准的标签证据来源（十字段记录），揭示粗粒度继承与过严过滤两种标签侧策略的相反失效；继承式基准准确率上界仅 ≤0.7589 — `[[2026-arXiv-SoK__Where_Do_Flow_Labels_Come_From__Auditing_Label_Provenance_in_Encrypted_Traffic_Benchmarks]]`
 
 ## 7. 工程落地问题
 
@@ -122,3 +130,6 @@ Encrypted Tunnel Detection（加密隧道检测）是指识别网络流量中使
 - 能否利用 TLS 握手阶段的 JA3/JA4 指纹辅助隧道类型识别？
 - 如何在保护用户隐私的前提下进行隧道流量分析？
 - Tor 隧道的多跳特性对检测方法提出了哪些额外挑战？
+
+
+新增论文联动（2026-09-29）：TunnelEye 针对恶意 DoH，使用方向/采样稳定特征和 DoH-Sketch；OPC UA 工作关注控制面变化导致的异常检测可靠性。

@@ -3,7 +3,7 @@ type: research-front
 question: "流量数据的最佳 tokenization 策略是什么？"
 status: diverging
 created: "2026-06-21"
-last_updated: "2026-08-17"
+last_updated: "2026-09-19"
 related_concepts:
   - "[[traffic-foundation-model]]"
   - "[[encrypted-traffic-analysis]]"
@@ -27,6 +27,9 @@ related_methods:
 | 2025 | MET-LLM | ESWA | 强调领域专用 | 领域专用 tokenization 是 LLM 应用于流量分析的关键：去除后 F1 下降 6.53%，通用 NLP tokenizer 效果远差于领域 BPE tokenizer | 高（消融实验） | 支持领域专用 |
 | 2026 | mmTraffic | arXiv | 包截断（工程约束） | BGTD 基准将每个会话转为 10 × 160 的 NPY 数组（优先级采样最多 10 包、每包截断至 160 字节），作为多模态对齐的固定输入格式 | 中 | 中性（输入长度约束） |
 | 2026 | Where Do Flow Semantics Reside | arXiv | 支持协议感知 tokenization | FSU 字段级 token（协议字段 → 特征单元）：FSU 特定嵌入消融 −26.2%/−30.0%、随机字段过滤 −23.2%/−20.4%（TLS-120/ISCX-VPN）——可学习信号驻留于协议字段，协议结构感知的分词获得首个严格证据 | 高（frozen encoder + 字段级消融） | 支持 |
+| 2025 | BTRFormer | ICNP | 扩展（加密块对齐分词单元） | §III-A：把表征单元从 YaTC 的通用 patch 改为与 AES 16 字节块对齐的 4×4 单元，最优 mask ratio 0.75 | 低（未说明 split 粒度） | 扩展 |
+| 2025 | ECHO | ICNP | 扩展（bin 边界可优化） | §7.1：非均匀 binning 在所有任务与所有表示大小上优于均匀分桶——"表示单元"的划分粒度与形状本身是性能杠杆而非固定预处理 | 低（未说明划分口径） | 扩展 |
+| 2026 | CipherSight | arXiv | 扩展（记录级 tokenization） | Representation and Hierarchical Encoding 节：提出 TLS 记录级 tokenization（类别 embedding + 对数分桶 embedding 联合编码记录方向/长度/content type/时序），并在预训练阶段直接优化 tokenizer，把 token 粒度从包推进到协议数据单元 | 中（冻结骨干 + LoRA，跨时间/地理留出评测） | 扩展 |
 
 ## 当前共识方向
 
@@ -39,6 +42,8 @@ related_methods:
 - **包截断是工程现实约束**（mmTraffic 2026）：BGTD 以 10 × 160 固定数组承载会话，输入长度截断策略直接影响信息保留
 
 **但缺乏系统性对比**：直接讨论 tokenization 策略的论文仍少（ET-BERT/MM4flow/MET-LLM/FlowSem/mmTraffic），且评估任务和数据集不同，无法直接比较。
+
+（2026-09 批次补充：本批新增 3 篇证据（BTRFormer、ECHO、CipherSight），全部为"扩展"方向：分别把 token 单元改为与 AES 16 字节块对齐的 4×4 单元、把 bin 边界作为可优化超参、提出 TLS 记录级 tokenization 并在预训练中优化 tokenizer。新增证据均未与既有方案做同条件对比，方案谱系扩展但系统性对比仍缺。）
 
 ## 研究空白
 

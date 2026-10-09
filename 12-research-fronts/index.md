@@ -1,7 +1,7 @@
 ---
 type: research-front-index
 created: "2026-06-21"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Research Fronts Index
@@ -12,12 +12,12 @@ updated: "2026-08-17"
 
 | 前沿问题 | 状态 | 核心争论 | 最新证据年份 | 相关论文数 |
 |----------|------|----------|------------|-----------|
-| [[payload-learnability]] | converging ↓ | 加密 payload 是否存在可学习模式 | 2026 | 8 |
-| [[representation-vs-shallow]] | diverging ↔ | 表征学习 vs 浅层模型的真实价值 | 2026 | 7 |
-| [[pretraining-necessity]] | diverging ↔ | 预训练范式的必要性边界 | 2026 | 9 |
-| [[wf-attack-defense-limit]] | diverging ↔ | WF 攻防的极限与新范式 | 2026 | 16 |
-| [[multimodal-fusion-strategy]] | converging ↑ | 多模态融合的最优策略 | 2026 | 8 |
-| [[tokenization-optimal]] | diverging ↔ | 流量领域的 tokenization 最优方案 | 2026 | 5 |
+| [[payload-learnability]] | converging ↓ | 加密 payload 是否存在可学习模式 | 2026 | 22 |
+| [[representation-vs-shallow]] | diverging ↔ | 表征学习 vs 浅层模型的真实价值 | 2026 | 23 |
+| [[pretraining-necessity]] | diverging ↔ | 预训练范式的必要性边界 | 2026 | 25 |
+| [[wf-attack-defense-limit]] | diverging ↔ | WF 攻防的极限与新范式 | 2026 | 25 |
+| [[multimodal-fusion-strategy]] | converging ↑ | 多模态融合的最优策略 | 2026 | 15 |
+| [[tokenization-optimal]] | diverging ↔ | 流量领域的 tokenization 最优方案 | 2026 | 8 |
 
 ## 状态说明
 

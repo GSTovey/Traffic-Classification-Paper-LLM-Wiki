@@ -3,7 +3,7 @@ type: research-front
 question: "网站指纹攻防是否存在终极平衡？新攻击范式能否持续攻破新防御？"
 status: diverging
 created: "2026-06-21"
-last_updated: "2026-08-17"
+last_updated: "2026-09-19"
 related_concepts:
   - "[[website-fingerprinting]]"
   - "[[encrypted-traffic-analysis]]"
@@ -39,6 +39,15 @@ related_methods:
 | 2026 | PrismWF | arXiv | 支持攻击方 | 多标签页 Patch Transformer：2-tab MAP@2 93.10%、5-tab MAP@5 91.63%（ARES 88.38%）；RegulaTor 下 P@5 53.49% vs CountMamba 5.69%（CountMamba 近乎崩溃） | 中（仅 ARES 数据集、未开源） | 攻击方 |
 | 2026 | Reality Check | arXiv | 支持攻击方（真实场景） | 80 万+ traces：DF π₁₀=0.956、recall 0.922（9% 基率）；时序无关分类器跨网络更鲁棒（RF/Holmes 跨网络崩溃 π₁₀ 0.089/0.176）；6 个月概念漂移 F₁ 降 0.2-0.4 | 高（真实开放世界 + 跨网络 + 长时间漂移） | 攻击方 |
 | 2026 | ResAware | arXiv | 支持攻击方 | LUPI 资源特权蒸馏：150 天漂移 Var-CNN F1 72.77%→81.49%（+8.72%）；开放世界 TPR@1%FPR 22.40%→27.20%；160K+ 配对样本、5 个月、6 全球节点、100 监控网站；零推理开销 | 高（大规模跨环境长期评估） | 攻击方 |
+| 2026 | GTT23 | PAM | 支持（真实场景重估） | §4.2/§5：8 台 Tor 出口中继 13 周被动测量得 1390 万条电路、114 万域名的真实踪迹集，对照 28 个合成 WF 数据集揭示四类系统性失真；真实设置下 WF 准确率远低于合成数据的暗示 | 高（真实出口中继 13 周测量） | 支持 |
+| 2026 | AirMask | TDSC | 扩展（IoT 无线指纹跨域） | §V-D/Table I：空口注入伪装帧把 5 种 IWF 攻击 precision/recall 从 0.81–0.90 压到 0.09–0.31、行为识别 F1 从 0.872 降到 0.221，代价 <1% 带宽与约 2 ms 时延 | 中（真实空口试验床 + 重训练对抗评估） | 扩展（防御方） |
+| 2026 | UDA-WF | TIFS | 支持（防御仍压缩攻击） | §VI/Table VI：防御场景下 TrafficSliver 20-shot 71.83%、FRONT 5-shot 37.05%/20-shot 63.93%，防御仍大幅压缩攻击可用性，但相比 NetCLR 的 12.31%/15.63% 已被显著突破 | 中（三套跨域数据集 + 漂移/防御鲁棒性评测） | 支持 |
+| 2026 | Stinger | TIFS | 支持（低成本强防御） | §VI-B/Table III–IV：以 12.38%/6.74% 带宽开销把 DF/AWF 攻击平均成功率压低 81.83%/83.32%；§VII-C 表明自适应攻击与秘密泄露可显著削弱该上限 | 中（含自适应攻击与秘密泄露评估） | 支持（防御方） |
+| 2026 | MMF | USENIX | 扩展（防御下攻击仍部分有效） | §5.6 Fig.9：WTF-PAD 与 Front 下所有方法显著退化、ARES Novel P@k < 0.25，MMF 仍保持相对更高且更稳的精度（正文未给具体数值，避免引用未核实数字） | 中（新采真实多标签页数据 + WTF-PAD/Front 防御下评测） | 扩展（攻击方） |
+| 2026 | Chameleon | arXiv | 扩展（防御优势区间） | §V-C Table IV/§V-E Table VII：既有强防御（Palette/Adaptive Tamaraw）可被 DAAE 恢复攻击重新攻破，many-to-many 随机变形把 DAAE 后最强 RF 攻击限制在 35.19% F1（K=20 随机化感知训练 ≤31.06%） | 中-高（GTT23 真实数据 + DAAE 自适应攻击） | 扩展（防御方） |
+| 2026 | Conformal Prediction | arXiv | 扩展（评估边界） | §4.1：首次系统把共形预测用于攻击侧，提出用预测集大小监控概念漂移、空集处理开放世界（DF Tor 数据集案例），未给出真实部署结论 | 低（立场型工作，仅两案例初步验证） | 扩展 |
+| 2026 | PA3 | arXiv | 扩展（代理协议生态） | §V-B/§V-C：model-agnostic 输入对齐在未见协议上平均 +0.12 F1（相对约 27%、最高 +0.411、最好 0.966），仅需 5 个网站探针且无需访问测试协议流量 | 中（6 个 WF 模型跨未见协议评测） | 扩展（攻击方） |
+| 2026 | BBQ | arXiv | 扩展（应用层防御能力边界） | §5.3.5/§5.4.3/§6：照搬 Tor 防御在明文 HTTP/2 下强依赖数据集（HTTPOS 0.86–0.99、LLaMA 超过 0.80、CL-TAM 0.24–0.88）；DNS/SNI 泄漏超出应用层防御范围，新防御可把 K* 提升至 13.2–94.7 | 中（5 数据集 × 5 攻击者 + 信息论泄漏估计） | 扩展（防御方） |
 
 ## 当前共识方向
 
@@ -58,6 +67,8 @@ related_methods:
 2. **防御方以极低开销实现强防御并抗再训练**：Securitas（带宽 6.21%、−95.89% 攻击准确率、单端部署）、WF-A2D（DSR 97.10%、开销 1.81%）、TrapFlow（后门防御，RF 99%→4.7%）——但 TrapFlow 暴露"干净微调即可瓦解后门"的漏洞，提示防御的可持续性存疑
 3. **对抗焦点从单点特征转向部署生态**：攻击方转向"真实部署评估 + 跨环境适应"（Reality Check/ResAware/PrismWF），防御方转向"网内透明部署 + 后门/对抗式防御"（Securitas/TrapFlow/WF-A2D）
 4. **既有结论需在统一协议下重测**：PrismWF 打崩 CountMamba（RegulaTor 下 P@5 5.69% vs 53.49%）、Securitas 以 42.69× 带宽优势超越 Ditto——防御有效性结论须含自适应攻击与真实部署验证
+
+（2026-09 批次补充：本批新增 9 篇证据——3 篇支持（GTT23 真实踪迹测量、UDA-WF 与 Stinger 说明防御仍大幅压缩攻击可用性），6 篇为扩展（AirMask 跨到 IoT 无线指纹、MMF 与 PA3 在攻击方、Chameleon 在防御方、Conformal Prediction 与 BBQ 在评估/能力边界）。其中 AirMask、UDA-WF、Stinger、Chameleon 4 篇给出防御下攻击成功率下降的定量结果，攻防代际升级与"用自适应攻击/真实部署重测既有结论"的格局延续。）
 
 ## 研究空白
 
@@ -91,3 +102,11 @@ related_methods:
 - [[website-fingerprinting]]
 - [[claims-index]] — 相关 claims: #10, #14
 - [[contradictions]] — 相关矛盾: "WF 攻击是否已攻破现有防御"、"WF 防御的鲁棒性与可迁移攻击"
+
+### 2026-09-29 新增证据链
+- RAMAD：以MADRL/Dec-POMDP建模攻击者—防御者适配，报告攻击准确率下降超过80%（摘要级，待核验）。
+- Forge：盲源分离处理未知数量多标签混合流，摘要报告多标签开放世界mAP较SOTA平均提升78.6%。
+- HiFi-WF：层次多标签联合网站与子页面识别，扩展攻击粒度。
+- RoFiRe：以增强与归一化应对真实Tor流量。
+- TraVerse：LLM无标签预训练表示应对动态内容和时间漂移。
+- 当前判断：WF攻防边界正从静态单首页评估转向混合标签、细粒度页面、真实流量和持续适配；跨论文仍缺统一协议，status=diverging。

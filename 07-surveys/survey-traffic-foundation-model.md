@@ -3,7 +3,7 @@ type: survey
 topic: "Traffic Foundation Model"
 status: evolving
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-09-19"
 ---
 
 # 流量基础模型综述 (Survey: Traffic Foundation Model)
@@ -162,6 +162,19 @@ updated: "2026-06-10"
 - MIETT (AAAI 2025)：多实例 Transformer，Two-Level Attention + PRPP/FCL — `[[2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification]]`
 - TraGe (IWQoS 2025)：结构感知预训练，Header-Payload 差异化 Field-level Masking — `[[2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences]]`
 - TrafficMoE (arXiv 2026)：异质性 MoE，DFA 范式（解耦-过滤-聚合），稀疏 MoE 预训练 — `[[2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification]]`
+- BTRFormer (ICNP 2025)：MAE 类，AES 16 字节块式表征（BTR）+ 三层注意力预训练，6 数据集超 YaTC/ET-BERT，ISCXTor2016 F1 100% — `[[2025-ICNP-BTRFormer__Hierarchical_Learning_of_Encrypted_Traffic_Using_a_Masked_Autoencoder_with_Block-Based_Traffic_Representation]]`
+- Odysseus (IWQoS 2026)：上下文级预训练，5 流短窗口三通道网格 + 包级/流级双重掩码 MAE + 上下文到单流蒸馏，OOD F1 最高提升 15.70%，1.87M 参数胜过 131.6M 的 LLM 基线 — `[[2026-IWQoS-Odysseus__A_Context-Level_Pre-training_Framework_for_Out-of-Distribution_Encrypted_Traffic_Classification]]`
+- TARL (JCN 2026)：多任务预训练，MFM + 服务类型预测预训练 NT-BERT，共享 memory bank + 任务门控 adapter，四任务 F1 0.840–0.998、仅 13.1M 参数 — `[[2026-JCN-TARL__Multi-task_adaptive_representation_learning_for_secure_encrypted_traffic_analysis]]`
+- CascadeNet (NSDI 2026)：生成式流量合成，flow 聚合时间序列 + 三层级联 GAN，时间模式保真度提升 41%~76%、训练/生成快 7.3×~25× / 9.2×~62× — `[[2026-NSDI-CascadeNet__Generating_Network_Traffic_with_High-Fidelity_Temporal_Patterns]]`
+- MambaTIG (TDSC 2026)：SSM + 图自监督，良性-only 掩码图预训练 + 层内 Mamba 门控 + LSH 近邻检测，四数据集 F1 98.84–99.61%、GPU 时延降 66.7% — `[[2026-TDSC-MambaTIG__Fast_and_Robust_Encrypted_Traffic_Detection_Leveraging_Selective_State-Space_Masking]]`
+- DQSA (TIFS 2026)：轻量 Transformer 多任务，任务门控路由 + 码本软量化注意力（O(L²)→O(LS)），免预训练即超预训练基线，ISCX 三任务 92.85/82.49/80.35 Acc — `[[2026-TIFS-DQSA_Dynamic_Quantized_Self-Attention_for_Multi-Task_Encrypted_Network_Traffic_Classification]]`
+- UTFormer (TIFS 2026)：超轻量 Transformer，注意力 Top-K 动态 payload 蒸馏砍 90%–95% 字节 + 可微架构搜索，最小 106 KB、在线 10 Gbps、延迟 0.11 ms — `[[2026-TIFS-UTFormer__An_Ultra-Lightweight_Transformer_for_Traffic_Classification]]`
+- HyTMTC (TNSM 2026)：混合骨干预训练，字节/包长/方向统一 token 序列 + 3 层 Mamba + 1 层 Transformer MLM，参数共享下 8.20M 参数 F1 94.99%，7 数据集平均 F1 95.03% — `[[2026-TNSM-HyTMTC__A_Pre-Training_Method_for_Multi-Scenario_Network_Traffic_Classification_With_Hybrid_Transformer-Mamba]]`
+- PERO (arXiv 2026)：高效鲁棒后训练，轻量代理估损失 + CVaR 尾部选样，ET-BERT 的 F1_0.9 从 75.73% 提升到 87.63%、显存 −55.1% — `[[2026-arXiv-PERO__Efficient_Robust_Post-Training_Foundation_Models_for_Encrypted_Traffic_Classification]]`
+- Pruned Traffic Trees (arXiv 2026)：协议结构化压缩模型族，以协议树图（PTG）为压缩单元，0.186M 参数保 Macro-F1 0.93、有效 GFLOPs 降 98.85% — `[[2026-arXiv-Pruned_Traffic_Trees__Native_Semantic_Compression_with_a_Protocol-Structured_Model_Family_for_Encrypted_Traffic_Classification]]`
+- SoK Label Provenance (arXiv 2026)：标签溯源审计，14 个公开基准的标签证据记录 + 免训练准确率上界（继承式 ≤0.7589 vs 对齐式 ≥0.8956） — `[[2026-arXiv-SoK__Where_Do_Flow_Labels_Come_From__Auditing_Label_Provenance_in_Encrypted_Traffic_Benchmarks]]`
+- TDDM-Melatt (arXiv 2026)：记忆库 + 扩散增强，类条件扩散补长尾（TLS-120class F1 0.681，+9.98%），唯一取得统计显著增益的生成方法 — `[[2026-arXiv-TDDM-Melatt__A_Decoupled_Memory_and_Diffusion_Framework_for_Generalizable_Encrypted_Traffic_Classification]]`
+- The Colossus with Feet of Clay (arXiv 2026)：PQC 评测，TLS 1.3 混合后量子密钥建立不消灭可学习性但摧毁跨密码域可靠性（YaTC 1.0000→0.3582） — `[[2026-arXiv-The_Colossus_with_Feet_of_Clay__Debunking_Encrypted_Traffic_Classifiers_under_PQC_Evolution]]`
 
 ## 6. 当前趋势
 
@@ -171,6 +184,9 @@ updated: "2026-06-10"
 4. **Fine-tuning 策略精细化**：两阶段微调、标签分布感知损失（LDA loss）、原型对齐等策略被广泛采用
 5. **数据泄露和 shortcut learning 被重视**：Sweet Danger 论文揭示了 per-packet split 数据泄露问题，促使社区重新审视评估方法
 6. **异质性 MoE 架构兴起**：TrafficMoE 将稀疏混合专家引入流量分类，通过解耦头部/载荷的异质性建模、不确定性感知过滤和条件聚合，在 6 个数据集上一致超越现有方法，展示了 MoE 在流量基础模型中的潜力
+7. **预训练输入的组织方式成为主要增益来源**：Odysseus 把预训练单元从单流扩展到"锚点流 + 邻近流"的 5 流上下文（双重掩码 MAE + 上下文到单流蒸馏，OOD F1 最高提升 15.70%），HyTMTC 把字节/包长/方向拼进同一条统一 token 序列并以 Mamba-Transformer 混合骨干预训练（7 数据集平均 F1 95.03%），BTRFormer 用 AES 块式表征 + 三层注意力 MAE 在 6 数据集超越 YaTC/ET-BERT。
+8. **"预训练 → 部署"之间出现独立的高效化环节**：PERO 用轻量代理 + CVaR 尾部选样替代全量后训练（ET-BERT F1_0.9 75.73%→87.63%、显存 −55.1%），Pruned Traffic Trees 把压缩单元从权重换成协议树图（0.186M 参数保 Macro-F1 0.93、有效 GFLOPs 降 98.85%），与 UTFormer（106 KB、在线 10 Gbps）共同把后训练与压缩推向独立的研究环节。
+9. **预训练必要性与跨域可靠性的条件化**：TARL 在严格流级划分下仍测得 3–5 点 F1 增益并约 200k 步饱和，DQSA 的未预训练量化注意力却在多任务上全面领先预训练基线；The Colossus with Feet of Clay 进一步显示预训练模型（YaTC）在 PQC 跨域迁移中退化最剧（1.0000→0.3582），SoK 的标签溯源审计给出免训练准确率上界，三者共同把"预训练是否必要、何时必要"推向条件化结论。
 
 ## 7. 关键争议
 

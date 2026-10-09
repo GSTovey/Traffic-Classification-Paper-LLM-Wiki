@@ -9,7 +9,7 @@ tags:
   - traffic-analysis
   - pre-training
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Transformer
@@ -89,6 +89,25 @@ Transformer 是一种完全基于 Self-Attention 机制的序列建模架构，�
 | DTPN (WSDM 2025) | 2025 | UNetFormer（Transformer 骨干）扩散模型 | 扩散净化网络从 WF 防御扰动流量中重建纯净流量表示 |
 | Beyond RTT (NDSS 2026) | 2026 | 自注意力 Transformer 流关联（CorrTransform 相关性特征） | 相关性特征提取用于住宅代理检测 |
 | DawnGuard (TIFS 2026) | 2026 | Vision Transformer 骨干 + 多流时序图特征 | 早期加密恶意流量检测 |
+| BTRFormer (ICNP 2025) | 2025 | 块式流量表征（BTR）：AES 16 字节块构成 4×4 单元，intra-block / inter-block / inter-packet 三层注意力做 MAE 预训练与微调 | 以 AES 字节块为表征单元，ISCXTor2016 F1 达 100.00%；改用原始前 1024 字节的 32×32 图像后 F1 跌至 28.26%，说明表征单元的物理对齐比模型规模更关键；最优掩码率 0.75 |
+| CDWF (IWQoS 2026) | 2026 | 混合 CNN-Transformer 编码器承担流量增强自监督预训练，后续接对抗域适配与少样本目标适配 | 三阶段跨域多标签页 WF 框架在 5-tab 闭世界 N=10 时 P@5 达 75.80（ARES 63.35），并发 tab 数未知时 Precision 72.37%（超最佳基线 32.94 个百分点）；编码器换成纯 CNN 时 Precision 崩至 0.3480、F1 0.0750 |
+| Multi-View Flow Representation (IWQoS 2026) | 2026 | 流内三视图之一：包序列视图经 Transformer 编码，与自编码器统计视图、明文协议文本视图融合为流嵌入 | 会话级流关系图（并发/顺序双类边 + GATv2）配合三视图融合，CIC-IDS-2017 上 Acc 99.64% / F1 99.57%，流关系图单独贡献 3.15 个百分点且 GNN 开销可忽略；移除文本视图后攻击类型 Macro F1 反从 79.40% 升至 91.74% |
+| Odysseus (IWQoS 2026) | 2026 | 锚点流 + 前后各两流编码为 3×40×40 三通道网格（Len/Time/Dire），ViT 式 MAE 做包级 + 流级双重掩码预训练，再经分层注意力蒸馏出可独立部署的单流分支 | 6 个 OOD 场景中 5 个 rank 1，Cross-Version / Cross-Time F1 85.38 / 90.05（比单流预训练基线 YaTC 高 12.30 / 15.70 个百分点）；1.87M 参数、0.69 ms 延迟即胜过 131.6M 参数的 LLM 指令微调基线 ETooL |
+| TARL (JCN 2026) | 2026 | 76 维流统计特征 16-bit 分词喂入 BERT，MFM + 服务类型预测双自监督预训练，memory bank cross-attention + 每任务 adapter 条件门控做多任务微调 | 四个异构加密流量任务 F1 0.840–0.998 一致超越 8 个单任务与多任务基线（p<0.01），参数量仅 13.1M；消融显示任务特定融合贡献大于共享记忆库（0.909 vs 0.889 vs 完整 0.936） |
+| TIPSO-GAN (NDSS 2026) | 2026 | 判别器 DeePred 用 CNN + 4 头 MHSA + 时间衰减（0.95）做注意力增强的判别 | 仅用正常流量训练 PSO 优化的 PSOGAN 并迁移为判别器，三数据集 F1 98.7–98.9，在正常样本仅 0.93% 的极端不平衡下不退化；同分布 98.9 与跨数据集 79–83 的落差量化了分布漂移代价 |
+| CascadeNet (NSDI 2026) | 2026 | 作为生成路线的对照：明确舍弃 Transformer/Diffusion 生成器（计算与数据需求过大）改用三层级联 GAN，并把 Transformer 类生成器 REaLTabFormer 列为记忆性对照基线 | 把 flow 聚合为定长时间序列使时间模式保真度提升 41%~76%、训练/生成速度比 NetShare 快 7.3×~25× / 9.2×~62×；揭示 Transformer/LLM 类生成器合成记录与训练集完全相同的占比达 1.7%~56.5%，高保真可能来自记忆 |
+| BPF-DAG (TIFS 2026) | 2026 | 包头字节序列经 Transformer 得时序表示，并在每轮训练中动态写回为全局 IP 有向图的边属性，再与 DiESAGE 有向边嵌入线性插值融合 | 免预训练条件下于四个数据集六个评测设定取得最优（ISCX-VPN 0.9912/0.9879、ISCX-Tor 0.9797/0.9749），参数量与 FLOPs 比 YaTC 低 28%/11%；线性插值融合优于 Concat（0.9912 vs 0.9742）与 Average（0.9587） |
+| DQSA (TIFS 2026) | 2026 | 用任务门控注意力路由（TGAR）+ 码本软量化注意力（SQ-SAH）+ 单调多速度位置编码（M2RoPE）改造自注意力 | ISCX 三任务 Acc 92.85/82.49/80.35，未预训练即领先预训练基线（应用任务 F1 领先 Distiller 4.36）；复杂度由 O(L²) 降至 O(LS)，注意力图可直接作内在可解释性输出（AOPC-R 优于事后方法 DEEPSHAP） |
+| Argus (TIFS 2026) | 2026 | 行为特征分支 EACLearner 用 Transformer 建模包长度序列，与统计分支 SACLearner 做 bagging 集成 | 极端概念漂移下保持 F1 88.22%（FS-Net / ACID 崩至 31.55% / 24.92%）；漂移样本恶意性由特征空间聚类 ∩ 宿主交互图双空间一致性无标注判定，识别准确率 >97% |
+| UTFormer (TIFS 2026) | 2026 | 首层 MHSA 后按 class token 置信度做 Top-K 动态 payload 蒸馏（保留率 γ 下界 0.05），配合层深/头数/隐维/保留率的可微架构搜索 | 砍掉 90%–95% 输入字节仍保持精度，最小模型 106 KB、在线 10 Gbps 线速（最小延迟 0.11 ms），算力较 Transformer 类基线降 9.0×–36398.5×；注意力热力图显示关键字节聚集在 token 1–6 与约 800/960 字节尾部 |
+| HyTMTC (TNSM 2026) | 2026 | 字节/包长/方向拼成统一 token 序列，3 层 Mamba + 1 层 Transformer 混合骨干做 MLM 预训练，微调阶段用自注意力融合并参数共享 | 7 个公开数据集平均 F1 95.03%；混合骨干优于任一单骨干（5 数据集均值 0.9499 vs Mamba 0.8777 / Transformer 0.8701），参数共享后参数 14.49M→8.20M 且 F1 92.68%→94.99% |
+| MMF (USENIX Security 2026) | 2026 | DF 风格 1D CNN trace 编码器 + Top-m self-attention 与 cross-class attention（各 2 层）精炼混合 trace 特征，support 引导通道重加权 | 把多标签页 WF 从单标签分类重构为 support 引导的逐类存在性检测，5-shot/5-tab 与 10-shot/5-tab 下 Novel P@k 提升超 300%、20-shot 接近 0.8；仅用 3-tab 微调在 2–5 tab 混合测试集 AUC 0.9612 |
+| Tracegram (USENIX Security 2026) | 2026 | 线性注意力（O(L)）flow 编码器配局部注意力 + 可逆网络 + token shift，聚合端用 Bi-LSTM + attention 做时间感知聚合 | 以 trace 为 MIL bag、flow 为 instance，IDI/ISD F1 达 1.000、UAV 0.9751；推理时延与峰值显存仅为 ET-BERT 的 1/4.17 与 19.6%，并可由注意力权重给出 key-flow 弱监督归因（top 10% flows 覆盖 >95% 攻击行为） |
+| CipherSight (arXiv 2026) | 2026 | TLS 记录级 tokenization + L1 流内 block-diagonal 注意力 + L2 流间全注意力（[PCLS]），MRM 掩码记录建模预训练后以 LoRA 微调 | 2,008 类闭世界 95.41%（超 VarCNN 3.25 pp）、16 天时移 92.99%（H&W 79.96%）、同日跨洲地理漂移 91.09%/90.59%，开世界 AUROC 97.64%；收益集中于第一选择判别而非候选召回（top-5 仅高 0.44 pp） |
+| PERO (arXiv 2026) | 2026 | 面向已预训练加密流量基础模型的尾部鲁棒后训练：轻量 MLP 代理（770/385/385）估样本损失，再只用 CVaR 式 top-B（B=32）高风险样本更新骨干 | 把 ET-BERT 在 USTC-TFC 的 F1_0.9 从 MC-CVaR 的 75.73% 提到 87.63%（ERM 仅 31.29%），GPU 显存 26.18→11.75 GB（−55.1%）、每轮 1.568→0.826 s；风险代理只需中等保真度（Pearson/Spearman 约 0.5–0.6）即可支撑筛选 |
+| SoK: Flow Label Provenance (arXiv 2026) | 2026 | 以 ET-BERT 等预训练流量分类器的评估为审计对象，用表示阶梯 R1→R5-256 与免训练的平衡准确率上界诊断回检已发表评估 | 审计 14 个公开基准的标签溯源：继承式基准上界 ≤0.7589、对齐式 ≥0.8956；表示阶梯使边界占比共降 94.32 pp，其中身份承载信道（地址/端口/payload）贡献 91.92 pp（97.5%），时序/头部精化仅 2.40 pp |
+| TDDM-Melatt (arXiv 2026) | 2026 | 把类条件扩散增强（TDDM）作为后训练/增强模块，叠加到 ET-BERT、YaTC、NetMamba 等骨干上检验可迁移性 | 类条件扩散是全部生成式增强中唯一取得统计显著增益者（TLS-120class F1 +9.98%、VPN-6class +5.56%）；但迁移性取决于骨干的预处理范式——叠加 ET-BERT 增益 +1.90%/+14.12%，叠加 YaTC 反降 7.29%/6.61% |
+| The Colossus with Feet of Clay (arXiv 2026) | 2026 | 在受控配对基准上评测 YaTC/ET-BERT 等 Transformer 分类器在 TLS 1.3 混合后量子密钥建立（X25519MLKEM768）下的跨密码域迁移 | PQC 漂移不消灭网站可学习性，却系统性摧毁跨域可靠性（YaTC 1.0000→0.3582、ET-BERT 0.9316→0.6255、CUMUL 0.7731→0.1919），迁移方向非对称；说明匹配域精度无法预测部署可靠性 |
 
 ## 9. 与其他方法的比较
 
@@ -118,3 +137,41 @@ Transformer 是一种完全基于 Self-Attention 机制的序列建模架构，�
 - Transformer 在跨时间（temporal shift）和跨网络环境（domain shift）下的泛化能力如何？是否需要持续学习或增量学习机制？
 - 12 层 Transformer 的推理延迟能否通过知识蒸馏（如 DistilBERT）、模型剪枝或量化等技术降低到满足实际高速网络监控的实时性要求？
 - 如何将 Transformer 与其他模态信息（如流量图结构、网络拓扑信息、时间特征）更好地融合，实现真正的统一多模态流量分析框架？
+
+- [[2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models]]（2026 批量深度分析；证据需正文复核）
+
+- [[2025-WWW-Facing_Anomalies_Head-On__Network_Traffic_Anomaly_Detection_via_Uncertainty_Inspired_Inter-Sample_Differences]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-IMC-Quantifying_the_Privacy_Implications_of_High-Fidelity_Synthetic_Network_Traffic]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-IMC-Replicability__Challenging_the_Myth_of_Randomness_Patterns_in_Encrypted_Traffic]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-NSDI-FENIX__Enabling_In-Network_DNN_Inference_with_FPGA-Enhanced_Programmable_Switches]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-NSDI-Supercharging_Packet-level_Network_Simulation_of_Large_Model_Training_via_Memoization_and_Fast-Forwarding]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-TDSC-Ultimate_Encrypted_Traffic_Feature_Engineering_HTTPS_Encrypted_Traffic_Classification_Using_Restored_Application_Data_Unit_Length]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-Forge__A_Robust_Multi-tab_Website_Fingerprinting_Attack_Via_Blind_Source_Separation]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-HiFi-WF__Toward_Realistic_Website_Fingerprinting_with_Multi-tab_and_Subpage_Recognition]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-Less_is_More__Simplifying_Network_Traffic_Classification_Leveraging_RFCs]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-RoFiRe__Robust_Website_Fingerprinting_on_Real-World_Tor_Traffic_via_Improved_Augmentation_and_Normalization]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-Zero-Shot_Forecasting_of_Network_Dynamics_through_Weight_Flow_Matching]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-A_Priority-Aware_Dual-Channel_Feature_Fusion_Method_for_Urban_Rail_Service_Traffic_Classification]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Secrets_in_Radio_Waves__Towards_Practical_and_Protocol-Agnostic_PHY_Information_Hiding]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Unknown-Traffic_Detection_Calibration_and_Shortcut_Reliance_in_Distilled_Encrypted-Traffic_Classifiers_over_One_Year]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams]]（2026 批量深度分析；证据需正文复核）

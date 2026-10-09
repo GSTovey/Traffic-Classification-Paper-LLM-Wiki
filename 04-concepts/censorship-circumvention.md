@@ -15,7 +15,7 @@ tags:
   - traffic-analysis
   - tunnel-detection
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-09-19"
 ---
 
 # Censorship Circumvention（审查规避）
@@ -96,6 +96,11 @@ Censorship Circumvention（审查规避）是指绕过国家级互联网审查�
 | Censorship Circumvention Detection | 2024 | NDSS | 首次在真实大学校园网络（6000 万流）中精确检测审查规避流量，提出带拒绝选项的分类框架 | 对新工具泛化能力有限 |
 | Censorship Evasion (UPGen) | 2025 | USENIX | 自动从 27 种真实协议共性中生成 4.2 x 10^22 种结构化加密协议，使封锁必然造成大规模附带损害 | 协议生成器本身需保密 |
 | Huma | 2026 | NDSS | 通过延迟流量替换和显式用户模拟器解决 Web 协议隧道的流量指纹和行为不真实问题，保证审查不可观测性 | 带宽受限于模拟的浏览行为 |
+| Pathfinder: Exploring Path Diversity for Assessing Internet Censorship Inconsistency | 2025 | ACSAC | 把探测流量指向不同地理/云平台的服务器即可制造路径多样性：60 周、120 国、144,418 个住宅代理 vantage point 测得 91.7%（110/120）国家存在审查不一致，且云商 peering 决定审查暴露（韩国 AWS 98.93% vs GCP 32.21%），低审查路径可被规避利用 | 既有审查测量在国家层面聚合结论，忽略 ISP 层部署差异；VP 分布偏斜（瑞士/苏丹/赞比亚不足 200 个）且 VPN/住宅代理网络位置偏差，无法控制探测包实际经过的 transit |
+| MVPNalyzer: An Investigative Framework for Auditing the Security & Privacy of Mobile VPNs | 2026 | NDSS | 提出三阶段（采集/处理/分析）移动 VPN 冷启动审计框架，无人工交互自动化测量 281 个 Google Play 应用（22 亿+ 安装），揭示 61 个应用产生 10,552 条未加密流、29 个应用存在 DNS/SNI 泄漏、143/281 可被端口/字符串/nDPI 启发式识别、108 个内嵌 OpenVPN 配置仅 1 个合规 | 依赖人工交互脚本而非全自动探索（不使用 Monkey），应用覆盖可能受交互路径限制；可封锁性结论受三种启发式检测能力限制 |
+| Iris: Expressive Traffic Analysis for the Modern Internet | 2026 | NSDI | 把多任务流量分析编译化：用户在 Rust 中定义 subscription，编译器跨订阅融合过滤前缀、去重计算、删冗余状态为单条 match-action 流水线，128 个 IP 子网订阅仅 8.2% 吞吐损失、12 核 100 Gbps 零丢包；复刻审查/安全实践测量用例仅 227 行 Rust | 依赖 DPDK 与特定 NIC（Mellanox ConnectX-5），未评估其他硬件；编译时间随订阅规模增长；未在运营商级（400 Gbps）环境验证 |
+| Revelio: A Global Study of VoIP Blocking | 2026 | USENIX | 用 STUN 感知扫描（Zstun）+ P1/P2/P3 差分探测远程判定 VoIP 封锁，在 71 国/11 个应用中定位 19 国的 4 类 6 型 STUN 中盒；封锁规则针对协议字段而非流量统计特征（P3 后 WhatsApp 响应 409→275 回升）；阿联酋约 1.5M 个对 vanilla STUN 无响应的 IP 在 P2 下返回伪造 ICMP 不可达 | 无法检出所有 STUN 过滤形态（如仅针对 egress，沙特疑似封 WhatsApp 通话未检出）；远程测量无 ground truth，依赖 P3 反证与境内观测作外部支撑；过滤可观测比例偏低会低估审查强度 |
+| PA3: Mitigating Proxy-Induced Traffic Drift in Website Fingerprinting via Model-Agnostic Traffic Tailoring | 2026 | arXiv | 把代理协议差异导致的 WF 特征漂移归因于代理层为加密与协议通信插入的额外字节，用少量可解密探针流量提取三类协议结构指纹（BIH 流大小模式/代理握手序列/BSM 斜率比）并编译成只依赖加密后可观测元数据的裁剪规则，6 个 WF 模型在未见协议上平均 +0.12 F1（相对约 27%，最大单点 +0.411） | 依赖可解密探针流量（受控环境 + 商业代理服务），纯被动场景不适用；仅覆盖 VMess/Shadowsocks/Trojan，未评测 VLess/hy2/ShadowsocksR；假定目标协议已知，对词典外新协议的回退未讨论 |
 
 ## 7. 当前共识
 

@@ -3,7 +3,7 @@ type: research-front
 question: "流量分析中多模态融合的最优策略是什么？"
 status: converging
 created: "2026-06-21"
-last_updated: "2026-08-17"
+last_updated: "2026-09-19"
 related_concepts:
   - "[[traffic-foundation-model]]"
   - "[[traffic-representation-learning]]"
@@ -32,6 +32,13 @@ related_methods:
 | 2025 | MH-Net | AAAI | 支持多视图（有边界） | 多粒度视图（4-bit/8-bit）+ h-h/h-p/p-p 异质边：去除 8-bit 视图 ISCX-VPN 流级 F1 0.9941→0.1702；但 2&8、6&8 组合反而变差——视图互补性与干扰性并存 | 中（5 数据集） | 支持 |
 | 2026 | mmTraffic | arXiv | 支持多模态（有对齐代价） | 联合优化多模态对齐管线：解冻流量编码器出现拐点（0.7092→0.8674）；全量对齐存在"对齐税"（0.8624 vs 未对齐 0.9887）——模态对齐收益与单模态性能损失需权衡 | 中（6 数据集） | 支持（但揭示对齐代价） |
 | 2026 | TrustWI | TDSC | 支持不确定性感知融合 | 证据深度学习 + D-S 规则融合：<2% 极端标注下 SOTA AUC 85.45%→89.57%；50% 标签噪声仅降 12.6（GCN/GAT 降约 28）——融合须感知视图不确定性 | 高（3 数据集 + 噪声/边注入鲁棒性） | 支持 |
+| 2026 | Multi-View Flow | IWQoS | 支持多模态 | §VII-E/Table III、Table V：三视图均必要且互补（包序列视图贡献最大），融合方式为拼接 + Linear；完整多视图表示 CIC-IDS-2017 F1 99.57% | 低（划分单元未说明，存在同会话跨集泄漏可能） | 支持 |
+| 2026 | Odysseus | IWQoS | 扩展（上下文维度） | §IV-B：融合轴线是"流内侧信道 + 流间组织关系"而非 payload 内容模态 + 包长行为模态，把多视图融合从模态维度扩展到时间邻域上下文维度 | 高（切分先于窗口构建 + 源域验证集选型） | 扩展 |
+| 2026 | BPF-DAG | TIFS | 支持（融合方式即变量） | §V-D/Table VIII：时序 + 结构双分支不可省，且线性插值融合 > Concat > Average | 低（先切长流再 7:1:2 划分，存在同源泄漏风险） | 支持 |
+| 2026 | DQSA | TIFS | 支持（间接证据） | §III-A/§IV-B：PAY 载荷 + HDI 包级信息双模态并联输入，三任务最优；论文未做模态消融，属间接证据 | 中（3 次随机重复取均值±标准差） | 支持 |
+| 2026 | BPF-GNN | TNSM | 支持多模态 | §IV-B.3 header/payload 双分支建图 + GMU 门控融合；§V-D 四数据集（VPN/nonVPN、Tor/nonTor、正常/恶意、移动 App）全面领先单模态/单层方法 | 低（未说明划分协议） | 支持 |
+| 2026 | HyTMTC | TNSM | 扩展（统一序列融合） | §IV-B2/Table V：字节/包长/方向拼进同一 token 序列的统一多模态融合优于 MM4flow 式 late fusion，平均 F1 0.9089→0.9456 | 高（五元组/设备组级隔离 + 双重去重） | 扩展 |
+| 2026 | Pruned Traffic Trees | arXiv | 扩展（按协议结构切分专家） | §4.3/§5.2 Table I：把多专家融合的切分维度从 header/payload 等内容模态推广到按协议结构划分的五个专家（IP、TCP-core、TCP-option、TLS-record-header、TLS-record-payload） | 高（flow-disjoint + SII 掩蔽，基线同协议重训） | 扩展 |
 
 ## 当前共识方向
 
@@ -48,6 +55,8 @@ related_methods:
 1. **视图互补性有边界**：MH-Net 证实多粒度视图互补（去除 8-bit 视图 F1 0.9941→0.1702），但 2&8、6&8 组合反而变差——视图选择存在互补性与干扰性权衡，非越多越好
 2. **融合有代价**：mmTraffic 揭示"对齐税"——全量模态对齐提升跨模态推理（0.7092→0.8674）但损失单模态分类精度（0.8624 vs 0.9887）；解冻编码器时机是关键超参数
 3. **不确定性感知融合是新维度**：TrustWI 以证据深度学习 + D-S 规则做视图级不确定性加权融合，50% 标签噪声下仅降 12.6（GCN/GAT 降约 28）——融合策略须显式建模各视图的不可靠程度
+
+（2026-09 批次补充：本批新增 7 篇证据——4 篇支持多模态融合（Multi-View Flow、BPF-DAG、DQSA、BPF-GNN），3 篇为扩展方向且均落在"融合什么"上：Odysseus 扩展到流间时间邻域上下文、HyTMTC 改为统一 token 序列融合、Pruned Traffic Trees 按协议结构切分专家。新增证据一致支持多模态融合有效，并延续"融合维度与融合方式本身是性能变量"的判断。）
 
 ## 研究空白
 

@@ -3,7 +3,7 @@ type: research-front
 question: "加密 payload 中是否存在可学习的内在模式？"
 status: converging
 created: "2026-06-21"
-last_updated: "2026-08-17"
+last_updated: "2026-09-19"
 related_concepts:
   - "[[encrypted-traffic-analysis]]"
   - "[[traffic-representation-learning]]"
@@ -31,6 +31,20 @@ related_methods:
 | 2026 | Inevitability of Side-Channel Leakage | arXiv | 理论（侧信道必然性） | 侧信道存在性定理：I(X;Y) ≥ (1/2ln2)(ρ[Δ̄−2LφC]/2)² > 0；效率优先系统中泄漏不可避免（三难困境：增大 C 牺牲效率 / 减小 Δ̄ 破坏功能 / 减小 ρ 不可控）；追求零泄漏是错误目标 | 低（纯理论、无实验） | 支持（元数据侧信道理论必然） |
 | 2026 | Reality Check | arXiv | 支持（元数据可学） | 80 万+ traces：DF π₁₀=0.956、recall 0.922（9% 基率），证明元数据/时序侧信道在真实流量上仍高度可学 | 高（真实开放世界） | 支持 |
 | 2026 | Where Do Flow Semantics Reside | arXiv | 定位（协议原生） | 冻结编码器下字节级（ET-BERT 4.6%）与视觉级（YaTC 27.6%）几乎不可学，协议原生表格 F1 51.3%（TLS-120）/42.7%（ISCX-VPN）；随机字段过滤 −23.2%/−20.4%、FSU 特定嵌入 −26.2%/−30.0%，定位可学习信号驻留于协议头部/字段 | 高（frozen encoder + 字段级消融） | 支持（信号在协议结构而非 payload 字节） |
+| 2025 | BTRFormer | ICNP | 支持可学习（AES 块对齐表征） | §III-A/§IV-D：以 AES 16 字节块为单元构造 BTR 表征并引用 Matrix Rank 检验主张密文非完美随机；ISCXTor2016 100.00%、ISCX-VPN 仅用前 4 包达 94.13% | 低（未说明 split 粒度） | 支持 |
+| 2026 | TKG-ETA | IWQoS | 支持（元数据可学） | §III-A/§V-A：免 payload 检查，仅流级统计特征构建时序知识图谱即完成恶意检测，三数据集平均 Accuracy 95.73%、Macro F1 89.88% | — | 支持 |
+| 2026 | POC-FPC | IWQoS | 反对 | §III-D1：断言加密 payload 仍含判别性局部结构并做字节级编码，K=6 扰动下保持 0.95+ 精度；属弱证据（缺 payload/header 隔离消融） | 高（按原始流 9:1 切分） | 反对 |
+| 2026 | Multi-View Flow | IWQoS | 支持（信号在协议元数据） | §IV-B/§V：TLS 1.3 握手字段不可见置 None，转向明文 DNS/TLS 元数据与侧信道序列，CIC-IDS-2017 F1 99.57% | 低（划分单元未说明，存在同会话跨集泄漏可能） | 支持 |
+| 2026 | Odysseus | IWQoS | 支持（元数据可学） | §III-A/§IV-B：全文不触碰 payload，仅编码 Len/Time/Dire 三通道，仍在 5 个 OOD 场景 rank 1（OOD F1 最高提升 15.70%） | 高（切分先于窗口构建 + 源域验证集选型） | 支持 |
+| 2026 | AdaDoHTool | JCN | 支持（协议结构可学） | §4.2.1/§5.2：完全不解析 payload，仅用 TLS 应用数据记录长度序列区分 5 类 DoH 流量，未知 resolver 下 0% 标注平均 0.7125 | 中（冻结骨干 + leave-one-resolver-out 域划分） | 支持 |
+| 2026 | HALO | JCN | 支持 | §2.1.2：引 Sweet Danger 说明 payload 型方法依赖捷径信号与泄漏性头部字段而非 payload 语义，并据此把实验限定为流级模型 | — | 支持 |
+| 2026 | GCLC | TIFS | 支持（元数据可学） | §IV-A/§V-B：全篇不访问 payload，仅用包大小/方向/IAT 即达闭世界 AC 96.84%、开放世界新类识别 ACC 95.02% | 中（per-flow split，缺同协议基线对比） | 支持 |
+| 2026 | UTFormer | TIFS | 支持（信息高度集中） | §V-D.4/§V-C.1：掩码 IP/端口后仅靠 payload 字节达 87.79%–99.99%，关键字节集中于 token 1–6 与 800/960 字节尾部热点，砍 90%–95% 字节不降精度 | 中（per-flow 70/10/20 切分，未做泄漏审计） | 支持 |
+| 2026 | PACMO | USENIX | 支持（明文场景） | §3.1–§3.2/§5：正弦注入黑盒定位明文 UDP 中的运动字节并重建头手 6-DoF 运动，用户识别最高 96.2%；场景 payload 未加密，须与 TLS 1.3 证据区分 | — | 支持 |
+| 2026 | Tracegram | USENIX | 支持（以正确微调为前提） | §5.4 Table 5：微调后移除 payload 使 UAV F1 0.9751→0.8190、KWS 0.9539→0.6270（ISD 不受影响）；未微调时移除 payload 反而提升 KWS（0.3952→0.7940） | — | 支持 |
+| 2026 | PA3 | arXiv | 支持（协议结构可学） | §IV-C：攻击期完全不做 payload 检查，仅用流大小/包位置/方向包大小即可识别代理协议（flow-level ≤0.587%）并对齐跨协议流量 | 中（6 个 WF 模型跨未见协议评测） | 支持 |
+| 2026 | TDDM-Melatt | arXiv | 反对 | §5.4 Table 4：Pcap-Encoder 去 payload 后 F1 仅 0.637→0.630、再去 IP/端口崩至 0.130；本文方法全程只用 76 维包头特征、不访问加密 payload | 高（严格流级 7:1:2 划分 + 冻结编码器 + 去捷径匿名化） | 反对 |
+| 2026 | Colossus | arXiv | 支持（字节通道仍可学） | §V-C Table IV：字节级预训练模型（YaTC 0.9991、ET-BERT 0.9332）显著高于仅用 L/D/T 侧信道的最佳组合（DL 0.8026）；结论限于封闭世界 195 类 | 高（per-visit split 防泄漏） | 支持 |
 
 ## 当前共识方向
 
@@ -47,6 +61,8 @@ ET-BERT 和 YaTC 报告的高性能主要来自：
 3. 数据集含大量未加密流量
 
 **但需注意**：在弱加密场景（RC4、3DES）下，payload 确实包含可学习模式。两方结论在各自条件下均成立，泛化性不同。
+
+（2026-09 批次补充：本批新增 14 篇证据——12 篇支持"信号驻留协议结构/元数据、payload 字节非必需"一侧，2 篇（POC-FPC、TDDM-Melatt）持相反方向；其中 4 篇（POC-FPC、Odysseus、TDDM-Melatt、Colossus）在防泄漏划分协议下评测，方向仍两端分化。新增证据未改变"payload 字节不可学、信号驻留协议结构与侧信道"的收敛方向。）
 
 ## 研究空白
 
@@ -79,3 +95,7 @@ ET-BERT 和 YaTC 报告的高性能主要来自：
 - [[traffic-representation-learning]]
 - [[claims-index]] — 相关 claims: #1, #3, #7
 - [[contradictions]] — 相关矛盾: "加密 payload 是否可学习"、"流量表示中信息来源的本质"
+
+## 2026-09-29 新证据
+- **Feedback Coding / Despite Instructions / Your Model Is Leaking**：分别从文本反馈编码、无代码本交互和残差流载荷证明隐蔽信息可在不同载体中学习或注入。结论方向：支持“载体统计冗余决定可学习性”，但实验前提差异大，不能合并为统一部署风险。
+- **证据缺口**：缺乏跨模型、跨载体统一检测基准；闭源模型和真实监控链路仍未覆盖。

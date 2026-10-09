@@ -12,7 +12,7 @@ tags:
   - traffic-fingerprinting
   - network-security
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Encrypted Tunnel Detection（加密隧道检测）
@@ -127,6 +127,12 @@ updated: "2026-08-17"
 | HINT: Enhanced detection of obfuscated HTTPS tunnel traffic using heterogeneous information network | 2025 | JCN | 构建异构信息网络（HIN + 元路径 + 异构图注意力 HAN）建模隧道流量的多维交互关系，结合 CNN-LSTM 显著增强混淆 HTTPS 隧道流量的检测能力 | HIN 构建依赖特征工程，计算开销高于统计方法 |
 | Beyond RTT: An Adversarially Robust Two-Tiered Approach for Residential Proxy Detection | 2026 | NDSS | 提出对抗鲁棒的两层（two-tiered）住宅代理检测方法，突破传统 RTT 特征在代理检测中的局限，结合工程特征 + XGBoost/Transformer 流关联 | 依赖真实住宅代理样本构建（自采 15 个月 900GB、6.3M 连接） |
 | QuicCourier: Leveraging the Dynamics of QUIC-Based Website Browsing Behaviors Through Proxy for Covert Communication | 2025 | TDSC | 利用 QUIC 网站浏览行为的动力学特征（run-length 序列生成模型 + 包填充/插入/替换）经代理封装构建隐蔽信道，绕过流量分类检测 | 隐蔽容量有限，需代理环境配合 |
+| AdaDoHTool: A test-time adaptive framework for identifying DoH tunneling tools with unknown resolvers | 2026 | JCN | 把 DoH 隧道工具识别重构为跨 resolver 域的测试时自适应问题：TLS 应用数据记录长度序列 → Word2Vec 词向量 → TextCNN + KNN-aware loss 预训练 → 特征-标签记忆库在线更新 + KNN 投票，未知 resolver 上 0% 标注平均 0.7125、10% 标注 0.8463，移除记忆库在线更新后跌至 0.5886 | 训练期未见的 resolver 使输入分布偏移、离线模型泛化不足；记忆库在线更新与 KNN 邻居数 k 需按标注量调参（0% 标注 k=25 更优、10%/20% 标注 k=200 更优） |
+| STUN comprehension-optional attributes as a covert channel: Design, implementation, and detection | 2026 | CS | 把任意以太网帧塞进 RFC 5389 规定"必须静默忽略"的 STUN 可选属性，用轮询解决服务器不能主动发包的非对称性，构建可绕过 Snort 3（47,143 条规则 0 告警）/Suricata 8/FortiGate/Palo Alto 的全双工 L2 隧道；再用属性值 Shannon 熵（4.5 bits）实现属性级 3646/3646 检出、0/1358 误报 | 检测精度受解析粒度制约：消息级检测器（Suricata 8 entropy 关键字，无 STUN 解析器）在 4.5 bits 下精度仅 41.2%，需升至 5.75 bits 才零误报但召回跌至 56.2%；合法流量中 42.6% STUN 消息本身带可选属性，使"含可选属性"类启发式失效 |
+| MVPNalyzer: An Investigative Framework for Auditing the Security & Privacy of Mobile VPNs | 2026 | NDSS | 三阶段（采集/处理/分析）移动 VPN 冷启动审计框架，无人工交互测量 281 个 Google Play 应用（22 亿+ 安装）：61 个应用产生 10,552 条未加密流、29 个存在 DNS/SNI 泄漏、246 个应用联系 3,714 个追踪 URL；143/281 可被端口/字符串/nDPI 至少一种启发式识别，而 38 个应用显式宣称不可封锁 | 依赖人工交互脚本而非全自动探索（不使用 Monkey），应用覆盖可能受交互路径限制；可封锁性结论受三种启发式检测能力限制 |
+| Iris: Expressive Traffic Analysis for the Modern Internet | 2026 | NSDI | 把多任务流量分析编译化：用户在 Rust 中定义 subscription，编译器将多个订阅融合去重为单条 match-action 流水线，128 个 IP 子网订阅仅 8.2% 吞吐损失、12 核 100 Gbps 零丢包；复刻 OpenVPN 指纹仅 194 行、视频分辨率估计 161 行（原固定功能工具为 5,708 行 Go） | 依赖 DPDK 与特定 NIC（Mellanox ConnectX-5），未评估其他硬件；编译时间随订阅规模增长；未在运营商级（400 Gbps）环境验证 |
+| MIRAGE-DoH: Metamorphic Intelligence and Resilient AI Grid for Autonomous Governance of Encrypted DNS | 2026 | TNSM | 用"认知元代理 + 拓扑记忆 + 可变形密码 + 因果反事实 + 谱博弈"五个模块搭建自适应 DoH 防御框架，摘要声称平均检测准确率 97.8%、FPR 0.41%、推理 62 µs、密码形态切换 3.7 ms | 数据与实验不可复现（无数据集细节、划分协议、超参搜索与方差）；正文与各表数值互相矛盾，验证命令行为文中未定义的工具，"统一认知安全定理"无证明，实验证据可靠性存疑 |
+| PA3: Mitigating Proxy-Induced Traffic Drift in Website Fingerprinting via Model-Agnostic Traffic Tailoring | 2026 | arXiv | 把代理协议差异导致的 WF 特征漂移归因于代理层插入的额外字节，用少量可解密探针流量提取 BIH 流大小模式/代理握手序列/BSM 斜率比三类结构指纹，编译成 payload-agnostic 裁剪规则；6 个 WF 模型在 6 个未见协议对上 F1 平均 +0.12（最大单点 NetCLR VMess→Shadowsocks 0.332→0.743） | 依赖可解密探针流量（受控环境 + 商业代理服务），纯被动场景不适用；仅覆盖 VMess/Shadowsocks/Trojan；假定目标协议已知，对词典外新协议的回退未讨论；未报告裁剪的运行时开销 |
 
 ## 7. 当前共识
 

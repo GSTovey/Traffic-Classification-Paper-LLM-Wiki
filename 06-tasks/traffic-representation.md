@@ -4,7 +4,7 @@ name: "Traffic Representation"
 aliases: ["流量表示", "Traffic Encoding", "Traffic Embedding"]
 tags: [traffic-representation, tokenization, pre-training, multi-level, shortcut-learning, data-leakage]
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Traffic Representation（流量表示）
@@ -134,6 +134,8 @@ Traffic Representation（流量表示）是指将原始二进制网络流量数�
 - [[2026-TIFS-LitCVit__A_Lightweight_Self-Supervised_Contrastive_Vision_Transformer_for_Encrypted_Malicious_Traffic_Detection]]：轻量级视觉 Transformer 图像化流量表征
 - [[2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network]]：上下文感知流嵌入（对比学习增强）
 - [[2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection]]：上下文掩码蒸馏的流量上下文表征
+- CascadeNet：把每条 flow 聚合为定长时间序列（建议 ≤200 步）的 "trace 即 flow 集合" 表示 + 三层级联 GAN（CascadeGAN）生成 IP 5 元组/聚合时间序列/记录字段，时间模式保真度提升 41%~76% — `[[2026-NSDI-CascadeNet__Generating_Network_Traffic_with_High-Fidelity_Temporal_Patterns]]`
+- Tracegram：trace 作 bag、flow 作 instance 的多示例学习表示（线性注意力 flow 编码器 + Bi-LSTM/attention 时间感知聚合），在 Orthogonality Criterion 下证明与端到端目标等价，兼得分类与弱监督 key-flow 归因 — `[[2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning]]`
 
 ## 7. 工程落地问题
 

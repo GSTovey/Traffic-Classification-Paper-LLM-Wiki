@@ -717,3 +717,470 @@ Next steps:
   - `bibliography.json`：source_file/note_file 重命名、DOI 修正、entry_type 修正（Inevitability/TalkLikePacket → article）
   - 20+ 个知识层 md 文件：wikilink 与 "(arXiv YYYY)" 标注 → 正式 venue（NetMamba→ICNP 2024、STAR→INFOCOM 2026、TalkLikePacket→CommMag 2026、侧信道存在性定理→电子学报 2026）
   - `10-outputs/key-figures/manifest.json` + [[all-key-figures]]：9 张图片路径同步
+
+---
+
+## [2026-09-19] ingest | incoming_papers 批次 89 篇新论文入库（知识库 171→260 篇）
+
+- Added:
+  - 89 篇新论文 PDF 复制至 `00-inbox/PDFs/`，MinerU 解析至 `02-parsed-markdown/`，结构化笔记至 `03-paper-notes/`（分层 L1/L2/L3，其中 L3 深度分析 12 篇）
+  - 关键框架图 137 张至 `10-outputs/key-figures/`（总计 261 篇 / 417 张）
+  - 参考文献：`bibliography.json` 171→259 条、`bibliography.bib` 173→261 条（89 条新条目 + 保留 2 条补充前人文献条目）
+- Updated:
+  - [[paper-registry]]（171→260，其中 137 条含 DOI）
+  - [[reading-queue]]（同步 89 篇，现覆盖全部 260 篇）
+  - 知识层：04-concepts / 05-methods / 06-tasks / 07-surveys / 08-comparisons / 09-claims（Claims 57→101 条，[[contradictions]] 14→17 组）
+  - [[open-source-registry]]（56→91 已确认开源）
+  - `12-research-fronts/` 6 个前沿证据链更新（payload 22、representation 23、pretraining 25、wf-attack-defense 25、multimodal 15、tokenization 8）
+  - [[00-dashboard/index]]、[[00-dashboard/project-overview]]（§5 第五批 12 篇 L3 + 3 条跨论文关联链，§6/§7/§7.5/§13/§15）、README.md / README.zh-CN.md 统计同步
+- Notes:
+  - 五轮联合去重：1 篇重复跳过（PrismWF）；6 组候选被排除；AVP-Inspect PDF 自 arXiv 重新获取
+  - venue 修正：1 篇会议信息修正为 CCS
+  - 参考文献全量 CrossRef 重跑（260 篇笔记）：205/261 条含 DOI，5 篇 arXiv 预印本未命中 CrossRef，按预印本条目形式收录（journal/publisher = arXiv）
+  - TrafficSliver 遗留重复笔记（单连字符命名变体，frontmatter DOI 实为 Ligero++ 的 10.1145/3372297.3417893）：已加注说明、保留存档、未注册；bibliography 中对应损坏条目已移除，registry #96 双下划线版本为唯一注册版本
+  - Traffic Drift（registry #134）笔记 frontmatter 缺 `type` 字段 → 不参与 bibliography 生成（json 259 = registry 260 − 1）；如需收录需先补充 frontmatter
+  - 既有文件保留：Hummingbird / DeepGBM 非笔记文件及其补充引用（nakandala2020tensor / ke2019deepgbm）保留于 `bibliography.bib`
+  - bib↔json 作者字段 QC：修复 2 条旧条目语法畸形（pan2026prismwf、qiu2025gated 双重翻转）；另发现 18 条旧条目存在数据性差异（缩写/姓名版本/作者数），待逐篇核验
+  - 入库暂存材料保留于 `10-outputs/ingest-batch-2026-09-18/`（不删除，遵循知识库规则）
+
+## [2026-09-26] citation-metadata | DIDarknet
+- Added: bibliography.json and bibliography.bib record lashkari2020didarknet.
+- Sources: Crossref DOI 10.1145/3442520.3442521 and UNB CIC-Darknet2020 official citation.
+- Scope: metadata registration for the authorized Paper#2 citation correction; no full-paper ingestion or method/claim expansion.
+
+## [2026-09-29] ingest | AdvTG: An Adversarial Trafic Generation Framework to Deceive DL-Based Malicious Trafic Detection Models
+- Added:
+  - [[2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Do Not Trust What They Tell: Exposing Malicious Accomplices in Tor via Anomalous Circuit Detection
+- Added:
+  - [[2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Facing Anomalies Head-On: Network Trafic Anomaly Detection via Uncertainty-Inspired Inter-Sample Diferences
+- Added:
+  - [[2025-WWW-Facing_Anomalies_Head-On__Network_Traffic_Anomaly_Detection_via_Uncertainty_Inspired_Inter-Sample_Differences]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Helios: Learning and Adaptation of Matching Rules for Continual In-Network Malicious Trafic Detection
+- Added:
+  - [[2025-WWW-Helios__Learning_and_Adaptation_of_Matching_Rules_for_Continual_In_Network_Malicious_Traffic_Detection]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | ODNS Clustering: Unveiling Client-Side Dependency in Open DNS Infrastructure
+- Added:
+  - [[2025-WWW-ODNS_Clustering__Unveiling_Client-Side_Dependency_in_Open_DNS_Infrastructure]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Mind the Gap: Policy vs Reality in Post-Quantum TLS Deployment
+- Added:
+  - [[2026-IMC-Mind_the_Gap__Policy_vs_Reality_in_Post-Quantum_TLS_Deployment]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Quantifying the Privacy Implications of High-Fidelity Synthetic Network Trafic
+- Added:
+  - [[2026-IMC-Quantifying_the_Privacy_Implications_of_High-Fidelity_Synthetic_Network_Traffic]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Replicability: Challenging the Myth of Randomness Paterns in Encrypted Trafic
+- Added:
+  - [[2026-IMC-Replicability__Challenging_the_Myth_of_Randomness_Patterns_in_Encrypted_Traffic]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | SaGNN: Encrypted traffic classification with semantic-aware heterogeneous graph neural network
+- Added:
+  - [[2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Towards adaptive and robust website fingerprinting defense with multi-agent deep reinforcement learning
+- Added:
+  - [[2026-JCN-Towards_adaptive_and_robust_website_fingerprinting_defense_with_multi-agent_deep_reinforcement_learning]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | GAN-based Tor obfuscated traffic identification on imbalanced datasets
+- Added:
+  - [[2026-JCS-GAN-based_Tor_obfuscated_traffic_identification_on_imbalanced_datasets]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | PacketPatch: Practical generation and deployment of adversarial packets for byte-feature-based encrypted traffic classification
+- Added:
+  - [[2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Uncovering robot joint-level controller actions from encrypted network traffic: Empirical attacks and information-theoretic bounds
+- Added:
+  - [[2026-JCS-Uncovering_robot_joint-level_controller_actions_from_encrypted_network _traffic__Empirical_attacks_and_information-theoretic_bounds]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | THE ADVANCED COMPUTING SYSTEMS ASSOCIATION
+- Added:
+  - [[2026-NSDI-FENIX__Enabling_In-Network_DNN_Inference_with_FPGA-Enhanced_Programmable_Switches]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Ultimate Encrypted Traffic Feature Engineering: HTTPS Encrypted Traffic Classification Using Restored Application Data Unit Length
+- Added:
+  - [[2026-TDSC-Ultimate_Encrypted_Traffic_Feature_Engineering_HTTPS_Encrypted_Traffic_Classification_Using_Restored_Application_Data_Unit_Length]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Robust and Invisible Flow Watermarking With Invertible Neural Network for Traffic Tracking
+- Added:
+  - [[2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | TunnelEye: An Explainable Framework for Real-Time Detection of Malicious DoH Traffic in High-Speed Backbone Networks
+- Added:
+  - [[2026-TNSM-TunnelEye_An_Explainable_Framework_for_Real-Time_Detection_of_Malicious_DoH_Traffic_in_High-Speed_Backbone_Networks]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Cardinality is Not Enough: Super Host Detection via Segmented Cardinality Estimation
+- Added:
+  - [[2026-WWW-Cardinality_is_Not_Enough__Super_Host_Detection_via_Segmented_Cardinality_Estimation]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Eclipse Atacks on Ethereum’s Peer-to-Peer Network
+- Added:
+  - [[2026-WWW-Eclipse_Attacks_on_Ethereum’s_Peer-to-Peer_Network]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Forge: A Robust Multi-tab Website Fingerprinting Atack Via Blind Source Separation
+- Added:
+  - [[2026-WWW-Forge__A_Robust_Multi-tab_Website_Fingerprinting_Attack_Via_Blind_Source_Separation]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | HiFi-WF: Toward Realistic Website Fingerprinting with Multi-tab and Subpage Recognition
+- Added:
+  - [[2026-WWW-HiFi-WF__Toward_Realistic_Website_Fingerprinting_with_Multi-tab_and_Subpage_Recognition]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | JitterSketch: Finding Jittery Flows in Network Streams
+- Added:
+  - [[2026-WWW-JitterSketch__Finding_Jittery_Flows_in_Network_Streams]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Less is More: Simplifying Network Trafic Classification Leveraging RFCs
+- Added:
+  - [[2026-WWW-Less_is_More__Simplifying_Network_Traffic_Classification_Leveraging_RFCs]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | RoFiRe: Robust Website Fingerprinting on Real-World Tor Trafic via Improved Augmentation and Normalization
+- Added:
+  - [[2026-WWW-RoFiRe__Robust_Website_Fingerprinting_on_Real-World_Tor_Traffic_via_Improved_Augmentation_and_Normalization]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Robust LLM-Based Website Fingerprinting under Dynamic Real-World Conditions
+- Added:
+  - [[2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | SemFuzz: A Semantics-Aware Fuzzing Framework for Network Protocol Implementations
+- Added:
+  - [[2026-WWW-SemFuzz__A_Semantics-Aware_Fuzzing_Framework_for_Network_Protocol_Implementations]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Tracking the Stray Sheep: Understanding DNS Response Manipulation in the Wild
+- Added:
+  - [[2026-WWW-Tracking_the_Stray_Sheep__Understanding_DNS_Response_Manipulation_in_the_Wild]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Unveiling the Underground Phishing Ecosystem: A 12-Year Longitudinal Study of Deep and Dark Web Forums
+- Added:
+  - [[2026-WWW-Unveiling_the_Underground_Phishing_Ecosystem__A_12-Year_Longitudinal_Study_of_Deep_and_Dark_Web_Forums]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Zero-Shot Forecasting of Network Dynamics through Weight Flow Matching
+- Added:
+  - [[2026-WWW-Zero-Shot_Forecasting_of_Network_Dynamics_through_Weight_Flow_Matching]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | A Priority-Aware Dual-Channel Feature Fusion Method for Urban Rail Service Trafic Classification
+- Added:
+  - [[2026-arXiv-A_Priority-Aware_Dual-Channel_Feature_Fusion_Method_for_Urban_Rail_Service_Traffic_Classification]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | DESPITE INSTRUCTIONS: FRONTIER AGENTS IMPROVISE COVERT CHANNELS AT TEST TIME
+- Added:
+  - [[2026-arXiv-Despite_Instructions__Frontier_Agents_Improvise_Covert_Channels_at_Test_Time]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Exact Second-Order Asymptotics for Covert Communication over DMCs with Variational Distance Constraints
+- Added:
+  - [[2026-arXiv-Exact_Second-Order_Asymptotics_in_Covert_Communication_Over_Discrete_Memoryless_Channels]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Feedback Coding Enables Inference-Time Covert Agentic Communication
+- Added:
+  - [[2026-arXiv-Feedback_Coding_Enables_Inference-Time_Covert_Agentic_Communication]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | IMPROVING THE RELIABILITY OF ANOMALY DETECTION FOR ENCRYPTED OPC UA TRAFFIC OVER PRIVATE 5G
+- Added:
+  - [[2026-arXiv-Improving_the_Reliability_of_Anomaly_Detection_for_Encrypted_OPC_UA_Traffic_over_Private_5G]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Multiplexing approaches to thermoradiative signatureless communications
+- Added:
+  - [[2026-arXiv-Multiplexing_approaches_to_thermoradiative_signatureless_communications]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Robust Transceiver Design for SIM-Assisted Integrated Sensing and Covert Communications
+- Added:
+  - [[2026-arXiv-Robust_Transceiver_Design_for_SIM-Assisted_Integrated_Sensing_and_Covert_Communications]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Secrets in Radio Waves: Towards Practical and Protocol-Agnostic PHY Information Hiding
+- Added:
+  - [[2026-arXiv-Secrets_in_Radio_Waves__Towards_Practical_and_Protocol-Agnostic_PHY_Information_Hiding]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Unknown-Traffic Detection, Calibration and Shortcut Reliance in Distilled Encrypted-Traffic Classifiers over One Year
+- Added:
+  - [[2026-arXiv-Unknown-Traffic_Detection_Calibration_and_Shortcut_Reliance_in_Distilled_Encrypted-Traffic_Classifiers_over_One_Year]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] ingest | Your Model Is Leaking: Covert Information Transfer through LLM Residual Streams
+- Added:
+  - [[2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams]]
+- Updated:
+  - [[paper-registry]]
+  - [[reading-queue]]
+  - [[key-figures]]
+- Notes:
+  - Reading level: L2; MinerU parsed successfully; metadata and detailed claims require verification.
+
+## [2026-09-29] audit | 批量新论文横向分析
+- Added:
+  - [[overall-knowledge-analysis-2026-09-29]]
+- Updated:
+  - [[README]]
+- Notes:
+  - 47 篇论文完成查重后入库；未发现文件名/标题级确定重复。
+
+## [2026-09-29] deep-analysis | 47 new papers
+- Updated:
+  - [[03-paper-notes]]
+  - [[04-concepts]]
+  - [[05-methods]]
+  - [[07-surveys]]
+- Notes:
+  - Added evidence-extracted method, experiment, limitation, and reproducibility sections to each new-paper note.
+  - Cross-links were appended only where keyword evidence was present; unsupported claims remain marked for verification.
+
+## [2026-09-29] deep-analysis | parallel batch group encrypted traffic
+- Changed:
+  - Appended evidence-bounded method/experiment/limitation/reproduction analyses to 15 paper notes.
+- Updated:
+  - Related concept, method, task, survey, comparison, and claims pages with cross-paper links and claims.
+- Notes:
+  - No files deleted or overwritten; no git commit. Numeric tables, code, and exact dataset splits remain pending source-level verification.
+
+## [2026-09-29] deep-analysis | WF-DNS-Tor security batch
+- Changed:
+  - 追加14篇论文的L3深度分析段落，记录机制、输入输出与证据缺口。
+- Updated:
+  - website-fingerprinting、encrypted-traffic-analysis、anomaly-detection概念/综述页；method/dataset comparison；WF研究前沿。
+- Notes:
+  - 仅追加，不删除或覆盖；未执行git commit。
+
+## [2026-09-29] quality-check | 完成批量入库闭环
+- Updated:
+  - [[bibliography.json]]
+  - [[bibliography.bib]]
+  - [[weight-audit-2026-09-29]]
+  - [[README]]
+  - [[README.zh-CN]]
+  - [[AGENTS]]
+  - [[index]]
+- Notes:
+  - 统一 307 条 bibliography 条目，BibTeX 花括号平衡且 citation key 唯一。
+  - 新增论文来源权重已按 venue/year 计算；citation impact 保留待核验标记。

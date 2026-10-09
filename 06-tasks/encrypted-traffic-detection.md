@@ -4,7 +4,7 @@ name: "Encrypted Traffic Detection"
 aliases: ["加密流量检测", "Encrypted Traffic Identification"]
 tags: [encrypted-traffic, detection, TLS, deep-packet-inspection, frequency-domain, contrastive-learning]
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Encrypted Traffic Detection（加密流量检测）
@@ -94,6 +94,17 @@ updated: "2026-08-17"
 - [[2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion]]：不确定性感知融合的可信加密恶意流量检测
 - [[2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly_Detection_for_Encrypted_Network_Traffic]]：频率解耦的加密流量异常检测
 - [[2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection]]：上下文掩码蒸馏的零阳性加密流量异常检测
+- BTRFormer：按 AES 16 字节块构造块式流量表征（BTR）矩阵 + 块内/块间/包间三层注意力 MAE 预训练，6 个公开数据集超 YaTC/ET-BERT/PERT（ISCXTor2016 F1 100%） — `[[2025-ICNP-BTRFormer__Hierarchical_Learning_of_Encrypted_Traffic_Using_a_Masked_Autoencoder_with_Block-Based_Traffic_Representation]]`
+- D-TKG：常数内存自适应 sketch 提取无 payload 流级统计特征 + 流式时序知识图谱（四元组 + 时间编码）+ 时间感知消息传递与自监督时序对比学习，三数据集平均准确率 95.73%、平均 Macro F1 89.88% — `[[2026-IWQoS-Dynamic_Malicious_Encrypted_Traffic_Detection_via_Temporal_Knowledge_Graph_in_Cloud-Edge_Networks]]`
+- Few-Packet：把丢包/乱序下同一流的多份不完整观测视为多视图，只在可对齐重叠包上做表示与预测两层一致性学习（重叠门控，顺序无关集合聚合），K=6 扰动下保持 0.95+ 精度 — `[[2026-IWQoS-Few-Packet_Traffic_Classification_under_Dynamic_Network_Conditions]]`
+- Multi-View Flow：统计/包序列/明文协议文本三视图编码融合为流嵌入 + 会话窗口内 burst 聚类建流关系图（并发/顺序双类边 + GATv2）做分层入侵检测，CIC-IDS-2017 F1 99.57% — `[[2026-IWQoS-Multi-View_Flow_Representation_and_Relation_Graph_Modeling_for_Network_Traffic_Classification]]`
+- Odysseus：锚点流 + 前后各两流的短窗口上下文编码为三通道网格 + 包级/流级双掩码 MAE 预训练 + 上下文到单流蒸馏，6 个 OOD 场景中 5 个 rank 1，OOD F1 最高提升 15.70% — `[[2026-IWQoS-Odysseus__A_Context-Level_Pre-training_Framework_for_Out-of-Distribution_Encrypted_Traffic_Classification]]`
+- Iris：把多任务流量分析编译化（用户在 Rust 定义 subscription，编译器跨订阅融合去重为单条 match-action 流水线），12 核并发跑数百订阅达 100 Gbps 零丢包，复刻测量任务仅需 <250 LOC — `[[2026-NSDI-Iris__Expressive_Traffic_Analysis_for_the_Modern_Internet]]`
+- MambaTIG：良性-only TIGPageRank 重要性驱动的课程掩码图预训练 + 图卷积层内 Mamba 门控状态空间 + LSH 最近邻异常检测，四数据集 F1 98.84%/99.39%/99.49%/99.61%，GPU 时延较其余方法平均降 66.7% — `[[2026-TDSC-MambaTIG__Fast_and_Robust_Encrypted_Traffic_Detection_Leveraging_Selective_State-Space_Masking]]`
+- UTFormer：注意力首行 class-token 置信度做 Top-K 动态 payload 蒸馏（砍 90%–95% 输入字节）+ 可微架构搜索（层深/头数/隐维/保留率联合优化），最小 106 KB 模型在线 10 Gbps 线速、延迟 <0.2 ms — `[[2026-TIFS-UTFormer__An_Ultra-Lightweight_Transformer_for_Traffic_Classification]]`
+- HW-NAS：参数/峰值张量/FLOPs 三重硬约束的进化式硬件感知 NAS，搜出 88.26K 参数 1D-CNN（精度 96.60%），相对 SOTA 压缩最多 444×/312×/15×，可 INT8 部署于 Cortex-M4/M7 — `[[2026-TNSM-Hardware-Aware_Neural_Architecture_Search_for_Encrypted_Traffic_Classification_on_Resource-Constrained_Devices]]`
+- HyTMTC：字节/包长/方向统一多模态 token 序列 + 3 层 Mamba + 1 层 Transformer 混合骨干 MLM 预训练，7 个公开数据集平均 F1 95.03%（参数共享后 8.20M 参数、F1 94.99%） — `[[2026-TNSM-HyTMTC__A_Pre-Training_Method_for_Multi-Scenario_Network_Traffic_Classification_With_Hybrid_Transformer-Mamba]]`
+- Pruned Traffic Trees：把协议树图本身当作压缩单元（字段显著性筛选 + TopK+k 闭包补回协议路径）构造三级模型族，0.186M 参数保 Macro-F1 0.9325、有效 GFLOPs 降 98.85%、CPU 延迟加速 8.75× — `[[2026-arXiv-Pruned_Traffic_Trees__Native_Semantic_Compression_with_a_Protocol-Structured_Model_Family_for_Encrypted_Traffic_Classification]]`
 
 ## 7. 工程落地问题
 

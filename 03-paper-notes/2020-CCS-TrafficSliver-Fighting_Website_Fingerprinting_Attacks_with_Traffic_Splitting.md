@@ -42,6 +42,8 @@ updated: "2026-06-14"
 
 # TrafficSliver: Fighting Website Fingerprinting Attacks with Traffic Splitting
 
+> **【遗留重复文件 · 非注册版本】** 本笔记为早期入库（2026-06-14）的命名变体（单连字符），未在 paper-registry 注册。经 CrossRef 核验，其 frontmatter 中 `doi: 10.1145/3372297.3417893` 实为另一篇论文（Ligero++: A New Optimized Sublinear IOP，CCS '20）的 DOI，属错误记录。知识库注册版本为 [[2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting]]（registry #96；正确 DOI 10.1145/3372297.3423351），引用与去重以注册版本为准。本文件按知识库「不删除文件」原则保留存档（2026-09-19 盘点时加注）。
+
 ## 0. 论文基础信息
 
 | 项目 | 内容 |

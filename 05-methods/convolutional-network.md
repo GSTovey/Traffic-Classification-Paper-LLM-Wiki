@@ -4,7 +4,7 @@ name: "Convolutional Network"
 aliases: ["CNN", "卷积神经网络", "Convolutional Neural Network"]
 tags: [deep-learning, feature-extraction, traffic-classification, image-based]
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Convolutional Network（卷积神经网络）
@@ -113,6 +113,21 @@ CNN 在流量分类中主要解决以下问题：
 | Zhang et al., "FGFR-Net: An Improved Residual Network Encrypted Traffic Classification Model Based on Byte-Level Traffic Graphs" (JNSM) | 2026 | 基于改进 ResNet-34 的分类器，结合 GIN 图编码，输入为字节级流量图的特征向量 | 首次将 ResNet-34 引入加密流量分类，引入可变形卷积（DCN）、深度可分离卷积（DSC）和通道注意力机制（CAM），ISCX-VPNnonVPN F1 99.08%，USTC-TFC F1 99.21%，跨数据集泛化 F1 96.13% |
 | HINT (JCN 2025) | 2025 | CNN-LSTM 序列建模 + 异构信息网络（HAN 图注意力） | 结合异构信息网络与 CNN/LSTM 建模混淆 HTTPS 隧道流量 |
 | SketchFeature (NDSS 2025) | 2025 | 1-D CNN 分类器 + sketch 特征（Count-Min sketch + 幻影解码） | sketch 提取的高质量流特征配合 1-D CNN，在安全感知数据平面上检测恶意流量 |
+| ECHO (ICNP 2025) | 2025 | 用 TPE 贝叶斯优化搜索非均匀包大小/到达时间 binning 生成紧凑表示，主实验分类器为 LR，附录对比 1D/2D-CNN（DEEP）并配合置信度门限级联早分类 | 非均匀 bin 在全部任务与全部表示大小上优于均匀/统计/特征选择 binning（VPN Services 5-bin 达 98%，其他方式 <90%）；置信度级联把采集时间降约 80%（论文口径最高 −95%）、精度最高 +10% |
+| CDWF (IWQoS 2026) | 2026 | 三阶段跨域框架中共享的混合 CNN-Transformer 特征提取器（4 CNN 块 + 4 Transformer 块，注意力调度 [full, full, top-32, top-16]） | 跨域多标签页 WF 在极少目标域标注下领先：5-tab 闭世界 N=10 时 P@5 75.80（ARES 63.35）、并发 tab 数未知时 Precision 72.37%，超最佳基线 32.94 个百分点；换成纯 CNN 后 Precision 崩至 0.3480 |
+| Few-Packet Traffic Classification under Dynamic Network Conditions (IWQoS 2026) | 2026 | header/payload 分路 1D-CNN 包编码器（字节嵌入 + 位置嵌入 → 1D-CNN → masked mean pool → MLP 融合），再接顺序无关集合聚合与重叠门控一致性 | 把丢包/乱序下的不完整观测建模为多视图，K=6 扰动下保持 ISCX-VPN 95.57%、ISCX-Tor 94.73%、CIC-IoT 96.60%，而前缀依赖的 FS-Net 跌至约 53.8% |
+| AdaDoHTool (JCN 2026) | 2026 | TLS 记录长度序列经 Word2Vec 词向量后输入 TextCNN（窗口 3/4/5、各 32 滤波器）作骨干，用 KNN-aware loss 预训练后冻结，配合特征-标签记忆库在线更新与 KNN 投票 | 把 DoH 隧道工具识别重构为跨 resolver 的测试时自适应：未知 resolver 上 0% 标注平均 0.7125、10% 标注 0.8463；移除记忆库在线更新后跌至 0.5886（−17.39%，全部消融项中降幅最大） |
+| HALO (JCN 2026) | 2026 | 以 FS-CNN（1D-CNN）为受害骨干训练干净参考分类器，用于后门防御评测与分层原型对齐攻击 | 先把 SCAn/Beatrix/TED 适配为流量兼容后门防御基准（service 任务 DR 97.62–100%），再以自回归触发器 + 分层原型对齐/边界排斥把 SCAn 检出率压到 0%、TED TPR 4.65–22.57%，而 ASR 仍达 99.33–99.89%、带宽开销 <1% |
+| Classification by Retrieval (JCN 2026) | 2026 | 训练 CNN 骨干（4 个空洞残差块，宽度 3→32→64→128→128）输出 L2 归一化嵌入，冻结后入 HNSW 近邻索引完成检索式分类 | 检索式分类精度与 Random Forest 持平（macro F1 0.923 vs 0.925），新类适应快 2–3 个数量级、索引内存 171 MB vs 1350 MB；单一全局距离阈值同时完成分类与 OOD（跨数据集恶意家族 AUROC 0.996） |
+| UDA-WF (TIFS 2026) | 2026 | 复用 DFnet 结构（4 个 block，每 block 2×1D-CNN + BN + MaxPool + Dropout）为特征提取器骨架，接入"预训练 → 伪标签无监督域适配 → 少样本微调"三阶段 | 跨域 WF 的辅助数据需求压掉约 95%（仅 2500 条即超 SOTA）、预训练启动时间降约 99%；WF 数据集 20-shot 97.37%，漂移集上相对 NetCLR 的精度下降由 39.60% 收窄到 17.75% |
+| Stinger (TIFS 2026) | 2026 | 以 DF（1D-CNN）等 WF 分类器为代理受害模型与 MLP 生成器联合训练投毒序列 P；AWF/Var-CNN 等 CNN 攻击纳入评测 | 投毒式防御以 12.38%/6.74% 带宽开销取得 81.83/83.32 平均 SDR（效率比 Tamaraw 高约一个数量级）；用户私密 secret 输出打乱使跨模型 SDR 平均仅降 6.56%/8.68% |
+| BPF-GNN (TNSM 2026) | 2026 | 以 LeNet-5 式 2D-CNN（前 784 字节转灰度图）为对比基线，论证字节/包/流三层图相对欧氏空间 CNN 的增益 | 四数据集 ACC 0.86–0.9978；ISCX-nonVPN 比 CNN 基线高 15.7 个百分点、USTC-TFC2016 高 1.38 个百分点；消融显示字节级 PMI 共现图贡献最大（移除后 ISCX-VPN F1 −12.79 点） |
+| Hardware-Aware NAS (TNSM 2026) | 2026 | 以 1D-CNN 为搜索基元（kernel 3–7、filters 16–140、stride 1–6 等），在参数/峰值张量/FLOPs 三重硬约束下用进化算法搜索，再做 INT8 量化部署 Cortex-M4/M7 | 搜出 88.26K 参数、10.08M FLOPs 的会话级 1D-CNN，精度 96.60%，参数/算力/最大张量相对 SOTA 最多压缩 444×/312×/15×；会话长度 784 B→196 B 使 FLOPs 降 4.5 倍而多数预处理配置仅掉 1–2% |
+| MMF (USENIX Security 2026) | 2026 | DF 风格 1D CNN trace encoder 分别编码 query 与 support 分支（2 通道：direction、mask），再由 support 生成类条件通道重加权向量 | 把多标签页 WF 重构为 support 引导的逐类存在性检测，5-shot/5-tab 与 10-shot/5-tab 下 Novel P@k 提升超 300%；去掉 Trace Encoding 后 4-tab 准确率由 0.9591 崩至 0.3134 |
+| Chameleon (arXiv 2026) | 2026 | 以 DF、Var-CNN 等 1D-CNN 系 WF 攻击为评测对象，并用 DAAE 配对 trace 攻击做防御感知评测 | 揭示"对对抗训练鲁棒 ≠ 对防御感知攻击鲁棒"；many-to-many 随机变形把 DAAE 复原后的 DF/RF 限制在 23.86%/35.19% F1（Palette 83.67%/70.30%），开销 130.60% 带宽 / 14.51% 时间 |
+| TDDM-Melatt (arXiv 2026) | 2026 | 以 1D-CNN / 2D-CNN 作为 6 个基础分类基线之一（与 MLP、LSTM、GRU、Transformer 并列），对照预训练表示模型与生成式增强 | Melatt 以 76 维头部手工特征 + XGBoost 在 TLS-120class 达 F1 0.681、延迟 <12 ms；类条件扩散增强（TDDM）是唯一统计显著的生成方法（F1 +9.98%/+5.56%），且分布距离指标更好不等于下游增益 |
+| The Colossus with Feet of Clay (arXiv 2026) | 2026 | 以 DF（1D-CNN）为受控骨架（固定架构仅换输入）做特征归因，并与 YaTC/CUMUL/ET-BERT 等组成五分类器跨密码域评测 | PQC 混合密钥建立（X25519MLKEM768）不消灭网站可学习性却摧毁跨密码域可靠性（YaTC 1.0000→0.3582、CUMUL 0.7731→0.1919）；包长仍是最强单侧信道，但漂移使其对方向的领先从 0.2089 收窄到 0.0582 |
+| HTTP/2 WF Defense (BBQ) (arXiv 2026) | 2026 | 复用 DF/VarCNN/Holmes/RobustFP-CNN 四种 CNN 攻击者（并为明文场景补上包长通道）作为统一评测对象，构建 BBQ 评测蓝图 | H2PC 在五个数据集保持攻击者 Macro-F1 ≤ 0.70 且 K* ≥ 7.3，延迟开销比最强照搬防御低 55–98%；服务端 H2PS 仅 1st-party 部署即达 K* ≥ 13.2，防御有效性取决于泄漏是否集中于单一连接 |
 
 ## 9. 与其他方法的比较
 

@@ -11,7 +11,7 @@ tags:
   - deep-learning
   - network-security
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Traffic Classification
@@ -106,6 +106,30 @@ Traffic Classification（流量分类）是指将网络流量按照应用类型�
 | FlowXpert: Context-Aware Flow Embedding for Enhanced Traffic Detection in IoT Network (TMC) | 2026 | 上下文感知流嵌入增强 IoT 流量的检测与分类 | 依赖上下文信息可获取性 |
 | HOLMES&WATSON: HTTPS Website Fingerprinting through HTTP Version Parallelism (WWW) | 2025 | 利用 HTTP 版本并行性实现 HTTPS 网站级流量分类，轻量 H123 指纹 + k-NN 惰性学习无需深度网络 | 需目标网站同时支持两个 HTTP 版本 |
 | Application of Tabular Transformer Architectures for Operating System Fingerprinting (Cybersecurity) | 2026 | 将操作系统指纹识别建模为表格化 Transformer 分类任务，在 IPFIX/自采多服务器/Nmap 合成流量上实现 OS 指纹识别 | 依赖特征表格构建质量 |
+| BTRFormer: Hierarchical Learning of Encrypted Traffic Using a Masked Autoencoder with Block-Based Traffic Representation (ICNP) | 2025 | 按 AES 16 字节块把加密 payload 切成 4×4 单元、4 包拼成 32×32 的块式表征 BTR，配 intra-block/inter-block/inter-packet 三层注意力做 MAE 预训练-微调；6 个公开数据集超越 YaTC/ET-BERT/PERT（ISCXTor2016 F1 100.00%），去掉该表征后 F1 跌至 28.26% | 以分组密码为前提，ChaCha20 类非分组算法未验证；ISCXVPN2016 上 CHAT/VOIP 系统性混淆；训练/测试划分粒度未说明，存在流量级泄漏质疑；未报告参数量与显存 |
+| ECHO: Non-uniformity is All You Need for Efficient and Timely Encrypted Traffic Classification (ICNP) | 2025 | 用 TPE 贝叶斯优化学习非均匀的包大小/到达时间 binning，并把多个置信度门限分类器按对数时间级联成早分类；不增内存前提下采集时间降约 80%（最高 95%）且精度不降反升（VPN Services 5-bin 98%，基线 <90%） | 用"前几个包"做早分类并非对所有任务成立、会降低精度；EC 的精度增益结论来自单任务示例、缺跨 6 任务显著性检验；数据集随机欠采样破坏自然基率 |
+| LotBoNC: Novel Botnet Traffic Classification under Long-tailed Distributions (AsiaCCS) | 2026 | 面向"已标注数据平衡、未标注流量长尾"的开世界僵尸网络场景，用自监督预训练 + 熵正则化最优传输伪标签 + EM 式原型/先验精化同时分类已知类与发现新家族；γ=10 时新类发现准确率 60.01%/57.55%/60.15%，最高超最强开集基线 RoNeTC 19.4 个百分点 | γ=1 时 Unlabelled-Agnostic 指标未超 RoNeTC；消融数值内部不一致（§5.7.2 与 Table 5、Table 4/5/6 与 Table 2 口径不符）；排除加密 payload 的表述与 payload bigram 分词矛盾 |
+| Few-Packet Traffic Classification under Dynamic Network Conditions (IWQoS) | 2026 | 把丢包/乱序下同一流的多份不完整观测视为多视图，仅在可对齐的重叠包集合上做表示与预测两层一致性学习（重叠门控），并用顺序无关的集合聚合替代序列建模；K=6 扰动下保持 ISCX-VPN 95.57%/ISCX-Tor 94.73%/CIC-IoT 96.60%，前缀依赖的 FS-Net 跌至约 54% | 未覆盖 3<K<6 的包预算；未做 header/payload 分离消融；摘要"最高提升 41.76%/25.6%"缺计算基准；无开源、仅单张 RTX 3080 实验、未验证在线部署 |
+| Odysseus: A Context-Level Pre-training Framework for Out-of-Distribution Encrypted Traffic Classification (IWQoS) | 2026 | 把锚点流+前后各两条邻近流的 5 流短窗口上下文编码为三通道网格矩阵（Len/Time/Dire），用包级+流级双重掩码 MAE 预训练再经分层注意力蒸馏迁移到单流分支，实现无目标域标注的 OOD 分类；6 个 OOD 场景中 5 个 rank 1，Cross-Time F1 90.05（超 YaTC 15.70），且 1.87M 参数胜过 131.6M 的 LLM 微调基线 | Cross-Type-8 上不敌 LLM 指令微调基线 ETooL；部署用的蒸馏单流分支 Cross-* F1 比上下文分支低 6–35 个点；预训练语料含私有数据、增强算子超参无敏感性实验 |
+| AdaDoHTool: A Test-Time Adaptive Framework for Identifying DoH Tunneling Tools with Unknown Resolvers (JCN) | 2026 | 把 DoH 隧道工具识别重构为跨 resolver 域的测试时自适应：TLS 记录长度序列 Word2Vec + TextCNN（KNN-aware loss）预训练，冻结骨干并用特征-标签记忆库在线更新 + KNN 投票；未知 resolver 上 0% 标注平均 0.7125、10% 标注 0.8463 | 分布漂移最强时（Qihoo-360，0% 标注）反低于 WEDoHTool；20% 标注不总优于 10%（收益饱和甚至反向）；数据未公开；摘要提升幅度与正文表格口径不一致 |
+| HALO: Revealing the Inadequacy of Backdoor Defenses in Encrypted Traffic Classification (JCN) | 2026 | 先建立流量兼容的后门防御评测框架（把 SCAn/Beatrix/TED 适配到离散包序列），再提出 HALO——自回归触发器生成 + 分层原型对齐/边界排斥，使触发流逃过三类检测器（SCAn 检出率 0.00%、TED TPR 4.65–22.57%）而 ASR 仍达 99.33–99.89%、带宽开销 <1% | 动作空间仅限填充且需在加密前插入、未做实网验证；源流包已贴近 MTU 时显著退化（整体 ACC 74.75%、低容量 bin 57.58%）；λ 权重与代码未提供 |
+| TARL: Multi-task Adaptive Representation Learning for Secure Encrypted Traffic Analysis (JCN) | 2026 | 用 PCA 选 76 维流统计特征做 16-bit 分词，以 MFM + 服务类型预测双自监督目标预训练 NT-BERT，再用共享 memory bank（cross-attention）+ 每任务 adapter 条件门控融合做多任务微调；VPN 识别/应用分类/加密网页分类/入侵检测四任务 F1 0.998/0.953/0.840/0.954 全面领先，参数量仅 13.1M | EWTC（加密网页分类）因 TLS 会话相似度高仍是难点，作者建议引入 TLS 指纹等侧信道特征；当前为离线评测，实时推理与持续学习留作未来工作 |
+| Ultra Fast Encrypted Network Traffic Classification Based on Classification by Retrieval Powered by Out-of-Distribution (JCN) | 2026 | 把加密流量分类改为"检索"问题：固定长度向量入 HNSW 近邻索引、取最近邻标签完成分类，并用单一全局距离阈值在同一步检出 OOD；CESNET-TLS22 上 macro F1 0.923 与 Random Forest 持平（0.925），新类适应快 2–3 个数量级、索引内存 171 MB（RF 1350 MB），仅用良性流量建库对未见恶意家族 OOD AUROC 0.996 | HC-CBR 在包预算增大时退化明显（MTA 上 N 从 5→30 时 0.961→0.826）；单流延迟高于 RF（0.147/0.289 ms vs 0.052 ms）且未论证在线可接受性；RADCOM 为专有数据不可复现；源码"accepted 后公开" |
+| TIPSO-GAN: Malicious Network Traffic Detection Using a Novel Optimized Generative Adversarial Network (NDSS) | 2026 | 两阶段框架：先用只在正常流量上训练的 PSO 优化生成器 PSOGAN 生成合成正常样本，再以 DeePred（CNN + 4 头 MHSA + 时间衰减）为判别器在正常流量上无监督微调；三个 CIC 数据集 F1 98.7–98.9，在 CIC-DDoS2019 正常样本仅 0.93% 的极端不平衡下不退化 | 跨数据集泛化仅 F1 79–83、明显低于同分布结果（对分布漂移敏感）；论文内部数字多处不一致（正文 99.1% vs Table VII 98.7%、硬件描述与延迟数据冲突），引用前需核对原文 |
+| CascadeNet: Generating Network Traffic with High-Fidelity Temporal Patterns (NSDI) | 2026 | 提出"trace 即 flow 集合、flow 即聚合时间序列"的表示与三层级联 GAN，按粗细粒度生成 IP 5 元组、聚合时间序列与记录字段；合成流量时间模式保真度提升 41%~76%，训练/生成速度比 NetShare 快 7.3×~25×/9.2×~62×，且 99.9%~100% 为全新记录（对照 REaLTabFormer 的 1.7%~56.5% 记忆率） | 时间序列长度以 ≤200 为宜、不生成 payload、难覆盖 inter-flow 交互、DP 训练有 100× 速度损失（作者自述）；部分基线在大数据集缺测，跨数据集绝对数值不可比 |
+| Iris: Expressive Traffic Analysis for the Modern Internet (NSDI) | 2026 | 把流量分析应用编译化：用户在 Rust 中定义 subscription，Iris 编译器将多个订阅融合去重为单条 match-action 流水线；128 个 IP 子网订阅仅 8.2% 吞吐损失（77 Gbps vs 朴素改造 Retina 5.41 Gbps），12 核 100 Gbps、<1% 丢包，四个生产级测量用例开发成本仅 161–227 行 | 依赖 DPDK 与特定 NIC（Mellanox ConnectX-5），未评估其他硬件；编译时间随订阅规模增长；未在运营商级 400 Gbps 环境验证（实验受镜像流量上限 95–120 Gbps 限制） |
+| BPF-DAG: Byte-Packet-Flow Features Fusion via Dynamic Attributed Graph for Reliable Encrypted Traffic Classification (TIFS) | 2026 | 把包头字节经 Transformer 得到的时序表示在每轮训练中动态写回为全局 IP 有向图的边属性，再用 DiESAGE 学有向边嵌入并线性插值融合；免预训练即在六个评测设定取得最优（ISCX-VPN 0.9912/0.9879、ISCX-Tor 0.9797/0.9749、MIRAGE-2019 0.9083、MIRAGE-2024 0.8247），参数量/FLOPs 较 YaTC 低 28%/11% | 参数量口径矛盾（Table III 1.19M vs Table IX 13M）；长流先切分再划分存在同源泄漏风险；MIRAGE 无包头只能改用密文 payload，与"仅用包头明文"的设计冲突；仅单卡 RTX 4060、每流前 10 包 |
+| DQSA: Dynamic Quantized Self-Attention for Multi-Task Encrypted Network Traffic Classification (TIFS) | 2026 | 用任务门控注意力路由（TGAR）+ 码本软量化注意力（SQ-SAH）+ 单调多速度位置编码（M2RoPE）改造 Transformer 做多任务分类：ISCX 三任务 92.85/82.49/80.35 Acc、物理层 DCI-LTE 96.19/93.17 全面领先（含预训练基线），且注意力图可直接作为内在可解释性输出（AOPC-R 优于 DEEPSHAP） | 位置编码增益小（ISCX 最多 +0.76）；剪枝并非对所有任务安全（应用任务保留约 30% 头时受损）；严重分布漂移与全新类别未解决；物理层实验依赖自采 LTE 数据、代码未开源 |
+| GCLC: Graph-Based Contrastive Learning and Clustering for Open-World Encrypted Traffic Classification (TIFS) | 2026 | 把加密流建成"包大小+方向+到达间隔"的流量交互图，用 GraphSN + 监督对比 + 中心感知损失学出紧致类别簇，再用 Mahalanobis 距离 + eigengap 谱聚类发现新类；自采 21 类 TLS 上闭世界 AC 96.84%、开放世界新类识别 ACC 95.02%（次优 Velatin 83.67%）、聚类 ACC 93.42% | 未与 ET-BERT/NetMamba 类近期强表征方法对比（最新深度基线为 2023 年 YaTC）；VNAT 上 PR/F1 略低于 FG-Net；自采数据集公开性与代码未说明；分位数阈值可迁移假设仅在本文模型族内验证 |
+| UTFormer: An Ultra-Lightweight Transformer for Traffic Classification (TIFS) | 2026 | 用注意力首行 class-token 置信度做 Top-K 动态 payload 蒸馏（单层架构下砍掉 90%–95% 输入字节）+ SGD 可微架构搜索（层深/头数/隐维/保留率），得到最小 106 KB 的模型；在线实测 10 Gbps 线速、最低延迟 0.11 ms，算力较 Transformer 类基线降 9.0×–36398.5× | 精度并非处处第一（ISCX-VPN 低 TrafficFormer 1.54 个百分点、android F1 低于 NetMamba+）；在线延迟高于 NetMamba+；架构搜索算力代价未核算；基线与本方法训练预算不对等；未在 per-flow 泄漏审计下复核精度 |
+| Hardware-Aware Neural Architecture Search for Encrypted Traffic Classification on Resource-Constrained Devices (TNSM) | 2026 | 用带参数/峰值张量/FLOPs 三重硬约束的进化式 HW-NAS 在 ISCX VPN-nonVPN 上搜出仅 88.26K 参数、10.08M FLOPs、20.12K 最大张量的 1D-CNN，精度 96.60%（F1 96.63%），三项相对 SOTA 最多压缩 444×/312×/15×，是所比会话级模型中唯一同时满足 STM32F7 与 F401RE 约束者，INT8 量化后可实时运行 | 主任务精度低于重型 SOTA（>99%），App-ID 94.18% 明显落后 CBS 的 99.67%；量化搜索仅在 NVIDIA 2080 Ti 上进行、搜索算力开销未讨论；未覆盖联邦学习、入侵检测扩展与对抗鲁棒性（作者列为未来工作） |
+| HyTMTC: A Pre-Training Method for Multi-Scenario Network Traffic Classification with Hybrid Transformer-Mamba (TNSM) | 2026 | 把字节、包长、方向三种模态拼进同一条 L=192 的统一 token 序列，用 3 层 Mamba + 1 层 Transformer 的混合骨干做 MLM 预训练再加自注意力融合微调；7 个公开数据集平均 F1 95.03%，统一序列优于 late fusion（0.9089→0.9456），参数共享把参数从 14.49M 降至 8.20M 同时 F1 反升 | 无预训练时 USTC-TFC 仍达 0.9598，说明该数据集过易、不能作为表征质量的区分证据；MM4flow 在 MedBIoT 上未报告结果；6 与 7 数据集平均口径不同，横向引用需注意 |
+| Generative AI for Encrypted Traffic Analysis: Synthetic Dataset Generation and Classifier Evaluation (arXiv) | 2026 | 用 Isolation Forest 伪标签 + 类内 K-means 聚类采样 + 相关性感知调整合成加密流量数据：CICIDS2017+darknet 合并集上生成 734,550 条记录，相关系数矩阵最大差异仅 0.016、多数特征 KS 检验 p>0.05、综合质量分 88.2%；合成数据训练的 XGBoost 在真实数据上保留约 93%（93.1% vs Real→Real 99.8%） | 异常类合成是瓶颈（class 1 精度下降、PR 曲线高召回端退化）；仅二分类、未做多类攻击分类；未报告切分比例/种子/超参；未与 GAN/VAE 做生成质量对比；跨数据集迁移未验证 |
+| PERO: Efficient Robust Post-Training Foundation Models for Encrypted Traffic Classification (arXiv) | 2026 | 用轻量 MLP 代理模型预评估样本风险、只对 CVaR 式高损失尾部样本（top-B=32）做后训练，把 ET-BERT 在 USTC-TFC 的 F1_0.9 从 MC-CVaR 的 75.73% 提升到 87.63%（ERM 仅 31.29%），同时 GPU 显存 26.18→11.75 GB、每轮 1.568→0.826 s | 风险代理保真度中等（相关系数约 0.5–0.6），存在高风险样本漏选的理论风险且无最坏情况分析；效率优势依赖"小模型替代大模型反向"，未做 backbone 规模扫描；α 取值敏感性未系统分析 |
+| Pruned Traffic Trees: Native Semantic Compression with a Protocol-Structured Model Family for Encrypted Traffic Classification (arXiv) | 2026 | 把压缩单元从权重/通道换成协议树图（PTG）本身——用字段显著性选关键字段、再以 TopK+k 闭包补回完整协议路径，构造可蒸馏的三级模型族；CSTNET-TLS1.3/CipherSpectrum 上以 0.186M/0.481M 参数（较 Full 减 80.3%/61.3%）保留 Macro-F1 0.9325/0.9136，有效 GFLOPs 降 98.85%/98.78%、CPU 延迟加速 8.75×/8.46× | 仅限 TLS 1.3 两个数据集、协议泛化性未验证；依赖协议解析器（私有协议/畸形流量未讨论）；Top-K 字段选择对随机种子敏感但只给 Jaccard 稳定性；PTT-Full 绝对延迟仍偏高；KD 在 CipherSpectrum 上收益微弱甚至为负 |
+| SoK: Where Do Flow Labels Come From? Auditing Label Provenance in Encrypted Traffic Benchmarks (arXiv) | 2026 | 把"标签证据从哪来"做成可审计的十字段记录，审计 14 个公开基准的标签溯源：固定 CipherSpectrum 语料/密钥/特征管线、仅把标签构造从 access-level 继承改为 per-connection 证据，非第一方会话归一化冲突率即从 0.4197 降到 0.0169；并给出无需训练即可算的平衡准确率上界（继承式基准 ≤0.7589 vs 对齐式 ≥0.8956）与表示阶梯诊断（R1→R5-256 边界占比降 94.32 pp） | 过滤侧结论来自单一自建语料（单浏览器/单观测点/固定站点清单），作者自称"确立机制而非普适常数"；上界依赖可重建主键、非性能预测器；bin 宽按各数据集自身四分位距校准、跨行不可比；判决受行集不匹配限制 |
+| TDDM-Melatt: A Decoupled Memory and Diffusion Framework for Generalizable Encrypted Traffic Classification (arXiv) | 2026 | 用外部记忆库 + 竞争门控 LSTM 在匿名化特征上做无捷径预训练，再用类别级扩散模型补长尾；类条件扩散是唯一在 TLS-120class/VPN-6class 上取得统计显著增益的生成方法（F1 +9.98%/+5.56%），且分布距离指标（MMD/APD）好并不等价于下游增益 | 增强增益高度任务相关（VPN-16class/USTC-20class 上无增益甚至退化）；叠加到 NetMamba（−3.46%）/YaTC（−7.29%）反而退化、与 Melatt 预处理强耦合；记忆模块带来 50%–110% 额外开销；逐类扩散训练成本线性增长；代码与超参未提供 |
+| The Colossus with Feet of Clay: Debunking Encrypted Traffic Classifiers under PQC Evolution (arXiv) | 2026 | 在受控配对基准上证明 TLS 1.3 混合后量子密钥建立（X25519MLKEM768）不消灭网站可学习性（匹配域 N-N/P-P 接近），却系统性摧毁跨密码域可靠性（YaTC 1.0000→0.3582、CUMUL 0.7731→0.1919、ET-BERT 0.9316→0.6255）且迁移方向非对称，说明匹配域精度无法预测部署可靠性 | 封闭世界 195 类、单观测点单客户端，不含开放世界与隧道场景；仅覆盖 Hybrid-PQC 密钥建立一种协议变化；未做攻击者重采集重训练的自适应闭环，"漂移可被重训抹平"仅为推断 |
 
 ## 7. 当前共识
 
@@ -145,3 +169,27 @@ Traffic Classification（流量分类）是指将网络流量按照应用类型�
 - 在线部署场景下如何实现亚秒级延迟的实时分类？
 - 对抗性攻击（如流量混淆、虚拟包注入）下模型的鲁棒性如何保证？
 - 如何自动确定不同协议的有效字节数和最优包数量，减少对先验知识的依赖？
+
+- [[2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCN-Towards_adaptive_and_robust_website_fingerprinting_defense_with_multi-agent_deep_reinforcement_learning]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCS-GAN-based_Tor_obfuscated_traffic_identification_on_imbalanced_datasets]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCS-Uncovering_robot_joint-level_controller_actions_from_encrypted_network _traffic__Empirical_attacks_and_information-theoretic_bounds]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-NSDI-FENIX__Enabling_In-Network_DNN_Inference_with_FPGA-Enhanced_Programmable_Switches]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-NSDI-SPLIDT__Partitioned_Decision_Trees_for_Scalable_Stateful_Inference_at_Line_Rate]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-TDSC-Ultimate_Encrypted_Traffic_Feature_Engineering_HTTPS_Encrypted_Traffic_Classification_Using_Restored_Application_Data_Unit_Length]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-A_Priority-Aware_Dual-Channel_Feature_Fusion_Method_for_Urban_Rail_Service_Traffic_Classification]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Improving_the_Reliability_of_Anomaly_Detection_for_Encrypted_OPC_UA_Traffic_over_Private_5G]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Unknown-Traffic_Detection_Calibration_and_Shortcut_Reliance_in_Distilled_Encrypted-Traffic_Classifiers_over_One_Year]]（2026 批量深度分析；证据需正文复核）

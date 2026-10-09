@@ -4,7 +4,7 @@ name: "Multi-modal Fusion"
 aliases: ["多模态融合", "跨模态融合", "Cross-Modality Fusion"]
 tags: [multi-modal, feature-fusion, traffic-analysis, deep-learning]
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Multi-modal Fusion（多模态融合）
@@ -77,6 +77,11 @@ updated: "2026-08-17"
 | TrustWI (TDSC 2026) | 2026 | 多视图特征（图/序列/统计） | 不确定性感知融合（证据深度学习 + Dempster-Shafer） | 不确定性加权的多模态融合，提升加密恶意流量检测可信度 |
 | FreeUp (INFOCOM 2026) | 2026 | 低频/高频频率分量 | 频率解耦动态融合（通道-空间注意力） | 频率分解多域特征融合的加密流量异常检测 |
 | MH-Net (AAAI 2025) | 2025 | 多视图流量特征（PMI 图视图等） | 多视图融合 + 对比学习辅助 | 多视图异构图表征融合的加密流量分类 |
+| Few-Packet Traffic Classification under Dynamic Network Conditions (IWQoS 2026) | 2026 | 同一流的多份不完整观测（丢包/乱序生成的多视图；header/payload 分路字节表示） | 重叠门控一致性：只在可对齐的重叠包集合上做表示级 + 预测级两层一致性（w(r)=I(r≥τ)·r^γ，τ=0.2、γ=1.2），并以顺序无关集合聚合替代序列建模 | 免预训练且轻量；K=6 扰动下保持 ISCX-VPN 95.57%、ISCX-Tor 94.73%、CIC-IoT 96.60%（前缀依赖的 FS-Net 跌至约 53.8%），无重叠限制的全局一致性反而更差（Agreement 0.9210→0.8803） |
+| Multi-View Flow Representation and Relation Graph Modeling (IWQoS 2026) | 2026 | 统计特征 + 包序列 + 明文协议文本（TLS 握手字段/SNI/reverse DNS）三视图 | 三视图分别用 AE / Transformer+AttnPool / BERT 编码后拼接 + Linear 融合为流嵌入，再作为会话级流关系图顶点交给 GATv2 | CIC-IDS-2017 Acc 99.64%/F1 99.57%，流关系图单独贡献 3.15 个百分点；但明文协议文本对细粒度攻击类型分类有害（移除后该任务 Macro F1 从 79.40% 反升至 91.74%） |
+| BPF-DAG (TIFS 2026) | 2026 | 包头字节序列（时序模态）+ 全局 IP 有向图（拓扑模态） | Transformer 时序表示与 DiESAGE 有向边嵌入做线性插值 Z_fusion=(1−μ)Z_temporal+μZ_topological（最优 μ 随数据集在 0.4–0.9 间变化，ISCX-VPN 0.9、ISCX-Tor 0.8） | 免预训练下六评测设定刷新 SOTA，参数量/FLOPs 反而比 YaTC 低 28%/11%；融合方式影响显著：线性插值 0.9912 优于 Concat 0.9742 与 Average 0.9587 |
+| HyTMTC (TNSM 2026) | 2026 | 字节 + 包长 + 方向三种模态 | 早期融合：三模态嵌入拼接为同一条 L=192 统一 token 序列（正弦编码 + 模态 segment indicator）做 MLM 预训练，微调阶段再以自注意力融合 | 统一多模态序列优于 late fusion（6 个可比数据集 5 个更高，平均 F1 0.9089→0.9456）；Mamba-Transformer 混合骨干亦优于任一单骨干（均值 0.9499 vs Mamba 0.8777 / Transformer 0.8701），7 数据集平均 F1 95.03% |
+| Pruned Traffic Trees (PTT) (arXiv 2026) | 2026 | 协议字段与层级结构（按协议组件划分 5 个专家：IP、TCP-core、TCP-option、TLS-record-header、TLS-record-payload） | 稀疏 MoE 按协议存在性只激活必要专家（gather–execute–scatter），多专家融合 + 结构对齐投影与流级 logits 蒸馏实现"按协议结构而非按参数"的压缩 | 把多模态融合粒度交由 PTG 结构决定：PTT-Lite 以 0.186M/0.481M 参数保留 Macro-F1 0.9325/0.9136、有效 GFLOPs 降 98.85%/98.78%，超 GAT 0.0663/0.0821 |
 
 ## 9. 与其他方法的比较
 
@@ -113,3 +118,6 @@ updated: "2026-08-17"
 ## 相关研究前沿
 
 - [[multimodal-fusion-strategy]] — 多模态融合的最优策略
+
+
+新增论文联动（2026-09-29）：A Priority-Aware 使用原始字节与统计特征双通道图像融合；具体优先级目标和融合消融待核验。

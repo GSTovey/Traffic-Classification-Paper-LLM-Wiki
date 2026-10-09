@@ -3,7 +3,7 @@ type: survey
 topic: "Website Fingerprinting"
 status: evolving
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # 网站指纹识别综述 (Survey: Website Fingerprinting)
@@ -257,6 +257,18 @@ updated: "2026-08-17"
 - TrapFlow (TIFS 2026)：动态后门学习的可控 WF 防御 — `[[2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Backdoor_Learning]]`
 - Securitas (NSDI 2026)：分片 + 小 TTL 假包 + 隐式 ICMP 应答的网内混淆防御 — `[[2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network_Obfuscation]]`
 - Reality Check (arXiv 2026)：Guard 视角真实 Tor 开放世界 WF 评估与 Conflux 首测 — `[[2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World]]`
+- CDWF (IWQoS 2026)：增强自监督预训练 + 对抗域适配 + 少样本适配三阶段的跨域多标签页 WF，5-tab 闭世界 P@5 相对超 SOTA 19.65% — `[[2026-IWQoS-CDWF__Few-Shot_Learning_for_Cross-Domain_Multi-Tab_Website_Fingerprinting]]`
+- GTT23 (PAM 2026)：8 台 Tor 出口中继 13 周被动测量构建首个真实 Tor 踪迹数据集（1390 万条电路 / 114 万域名），揭示合成 WF 数据集四类系统性失真 — `[[2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting]]`
+- UDA-WF (TIFS 2026)：预训练 + softmatch 无监督域适配 + 少样本微调的跨域 WF，20-shot 97.37%，辅助数据减少 87–95%、预训练启动时间减少约 99% — `[[2026-TIFS-Data-Efficient_Cross-Domain_Few-Shot_Website_Fingerprinting_With_Unsupervised_Domain_Adaptation]]`
+- Stinger (TIFS 2026)：投毒式 WF 防御，MLP 生成 P 序列诱导攻击模型过拟合，DF 上 12.38% 带宽开销获平均 SDR 81.83% — `[[2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences]]`
+- MMF (USENIX 2026)：把多标签页少样本 WF 重构为 support 引导的逐类存在性检测，5-shot Novel P@k 最高提升 300% 且推理无需标签页数先验 — `[[2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting]]`
+- Chameleon (arXiv 2026)：揭示"抗对抗训练 ≠ 抗防御感知自编码器（DAAE）"，many-to-many 随机流量变形把 DAAE 复原后的 RF 攻击限制在 35.19% F1 — `[[2026-arXiv-Chameleon__Robust_Defense_Against_Tor_Website_Fingerprinting_via_Many-to-Many_Traffic_Morphing]]`
+- CipherSight (arXiv 2026)：TLS 记录级表示 + 流内/流间分层注意力 + 记录-资源语义特权监督，2008 类闭世界 95.41%、16 天时移 92.99% — `[[2026-arXiv-CipherSight__Robust_Website_Fingerprinting_via_Record-Resource_Semantic_Supervision_under_Distribution_Shifts]]`
+- Conformal Prediction (arXiv 2026)：首次系统把共形预测用于攻击侧，DF CNN + split CP 以"空预测集"判别未监控站点，无需显式训练 unmonitored 类 — `[[2026-arXiv-Conformal_Prediction_for_Offensive_Security]]`
+- PA3 (arXiv 2026)：model-agnostic 流量裁剪，用探针流量提取协议结构指纹缓解代理诱导漂移，6 个 WF 模型在未见协议上 F1 平均 +0.12 — `[[2026-arXiv-Mitigating_Proxy-Induced_Traffic_Drift_in_Website_Fingerprinting_via_Model-Agnostic_Traffic_Tailoring]]`
+- SoK Flow Labels (arXiv 2026)：审计 14 个公开加密流量基准的标签溯源，给出无需训练的准确率上界（继承式基准 ≤0.7589、对齐式 ≥0.8956） — `[[2026-arXiv-SoK__Where_Do_Flow_Labels_Come_From__Auditing_Label_Provenance_in_Encrypted_Traffic_Benchmarks]]`
+- Colossus (arXiv 2026)：受控配对基准证明 PQC 混合密钥建立不消灭 WF 可学习性，却系统性摧毁跨密码域迁移可靠性（YaTC 1.0000→0.3582） — `[[2026-arXiv-The_Colossus_with_Feet_of_Clay__Debunking_Encrypted_Traffic_Classifiers_under_PQC_Evolution]]`
+- BBQ (arXiv 2026)：统一 WF 防御评测蓝图，据此设计的 H2PC/H2PS 以更低开销实现 HTTP/2 子页面隐私，H2PS 单服务器部署即让 K* ≥ 13.2 — `[[2026-arXiv-Understanding_the_Privacy-Preserving_Potential_of_HTTP_2_Against_Webpage_Fingerprinting]]`
 
 ## 6. 当前趋势
 
@@ -265,6 +277,9 @@ updated: "2026-08-17"
 3. **鲁棒性成为核心指标**：研究者不仅关注准确率，更关注在动态网络条件和流量防御下的鲁棒性
 4. **跨模态方法兴起**：将流量与网站逻辑内容对齐，实现零样本识别
 5. **因果关系和一致性特征**：从因果推断和一致性学习角度提取更稳定的指纹特征
+6. **评测可信度与标签溯源成为前置议题**：SoK Flow Labels 在不训练模型的前提下给出继承式基准的准确率上界 ≤0.7589，Colossus 则证明 PQC 协议演进会摧毁跨密码域迁移可靠性（YaTC 1.0000→0.3582）——两者都把"基准是否可信"推到评估的前置条件位置
+7. **真实 Tor 数据与部署生态成为新的数据基础**：GTT23 用 8 台出口中继 13 周被动测量给出首个真实 Tor 踪迹画像，并揭示 28 个合成 WF 数据集在电路长度上限与域名出现频率上的系统性失真；PA3 进一步指出代理协议层引入的特征漂移可在 model-agnostic 输入侧对齐下缓解（6 个模型在未见协议上 F1 平均 +0.12）
+8. **跨域少样本攻击与低开销防御同步推进**：CDWF/UDA-WF/MMF 把跨域多标签页 WF 的标注需求压到每类几个样本（CDWF 5-tab P@5 相对超 SOTA 19.65%、UDA-WF 辅助数据减少 87–95%、MMF 5-shot Novel P@k 最高提升 300%）；防御侧 Stinger 以 12.38% 带宽开销投毒攻击者模型获 81.83% 平均 SDR，BBQ 的 H2PC/H2PS 则以更低开销实现 HTTP/2 子页面隐私
 
 ## 7. 关键争议
 
@@ -307,3 +322,42 @@ updated: "2026-08-17"
 ## 相关研究前沿
 
 - [[wf-attack-defense-limit]] — WF 攻防极限与新范式
+
+- [[2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-IMC-Quantifying_the_Privacy_Implications_of_High-Fidelity_Synthetic_Network_Traffic]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-IMC-Replicability__Challenging_the_Myth_of_Randomness_Patterns_in_Encrypted_Traffic]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCN-Towards_adaptive_and_robust_website_fingerprinting_defense_with_multi-agent_deep_reinforcement_learning]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCS-GAN-based_Tor_obfuscated_traffic_identification_on_imbalanced_datasets]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCS-Uncovering_robot_joint-level_controller_actions_from_encrypted_network _traffic__Empirical_attacks_and_information-theoretic_bounds]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-NSDI-FENIX__Enabling_In-Network_DNN_Inference_with_FPGA-Enhanced_Programmable_Switches]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-TDSC-Ultimate_Encrypted_Traffic_Feature_Engineering_HTTPS_Encrypted_Traffic_Classification_Using_Restored_Application_Data_Unit_Length]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-Forge__A_Robust_Multi-tab_Website_Fingerprinting_Attack_Via_Blind_Source_Separation]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-HiFi-WF__Toward_Realistic_Website_Fingerprinting_with_Multi-tab_and_Subpage_Recognition]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-RoFiRe__Robust_Website_Fingerprinting_on_Real-World_Tor_Traffic_via_Improved_Augmentation_and_Normalization]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Unknown-Traffic_Detection_Calibration_and_Shortcut_Reliance_in_Distilled_Encrypted-Traffic_Classifiers_over_One_Year]]（2026 批量深度分析；证据需正文复核）
+
+### 2026-09-29 新增证据
+- Forge：BSS处理未知标签数的多标签混合流量。
+- HiFi-WF：层次多标签联合网站与子页面识别。
+- RoFiRe：真实Tor流量上的增强与归一化。
+- TraVerse：LLM表示应对动态真实世界条件。
+- RAMAD：MADRL攻防与多目标防御。
+- 横向判断：当前研究前沿从单标签高精度转向混合流、细粒度页面、时间漂移和自适应攻防；跨论文结果尚未统一到同一开放世界协议。
+

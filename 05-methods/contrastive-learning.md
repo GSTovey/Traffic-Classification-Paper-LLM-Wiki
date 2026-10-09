@@ -4,7 +4,7 @@ name: "Contrastive Learning"
 aliases: ["对比学习", "Contrastive Representation Learning"]
 tags: ["representation learning", "self-supervised learning", "few-shot learning", "robust detection", "encrypted traffic analysis"]
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Contrastive Learning
@@ -79,6 +79,18 @@ Contrastive Learning（对比学习）是一种表示学习范式，其核心思
 | MH-Net (AAAI 2025) | 2025 | 多视图异构图 + 对比学习辅助任务 | 多视图对比表征增强加密流量分类，流级/包级任务高精度 |
 | LitCVit (TIFS 2026) | 2026 | 自监督对比预训练（ntXent loss）+ ViT | 轻量级对比学习表征，低标注资源下的加密恶意流量检测 |
 | FlowXpert (TMC 2026) | 2026 | 对比学习 + DBSCAN 聚类 + 伪标签学习 | 上下文感知流嵌入，增强 IoT 网络流量检测 |
+| LotBoNC (AsiaCCS 2026) | 2026 | 自监督对比预训练打底（encoder dropout p=0.10 的增强方式是长尾场景的生死线），再接熵正则化最优传输伪标签与 EM 式原型/先验精化 | 长尾开世界（γ=10）下新类发现准确率保持 60.01%/57.55%/60.15%（最强开集基线 RoNeTC 降至 45.30%/38.14%/42.91%），最高领先 19.4 个百分点；无增强（p=0）时整体准确率骤降至 58.2% |
+| CDWF (IWQoS 2026) | 2026 | 第一阶段用 SimSiam 式自监督对比预训练（stop-gradient 负余弦相似度 + 包级插入/删除/交换/翻转增强）学通用特征提取器，再依次做对抗域适配与少样本目标适配 | 三阶段均不可省：去自监督预训练 Precision 0.8615→0.7868、去域适配 →0.8113；5-tab 闭世界 N=10 时 P@5 75.80，相对超 SOTA 19.65% |
+| TKG-ETA (IWQoS 2026) | 2026 | 在流式时序知识图谱上做时间感知消息传递 + 自监督时序对比学习，以正常流量演化轨迹的偏差判定恶意 | 完全无标注下 UNSW-NB15/ToN-IoT/CIC-IoT2023 的 Macro F1 达 88.51/89.95/91.17；CIC-IoT2023 比静态图自监督基线 Anomal-E（53.28）高 37.89 个百分点 |
+| Odysseus (IWQoS 2026) | 2026 | 微调阶段集成流量感知增强 + 加权对比学习（TACL，温度 0.1、半正样本权重 0.5），与包级/流级双重掩码 MAE 预训练、分层注意力蒸馏协同 | 5 流短窗口上下文 + 双重掩码预训练使 6 个 OOD 场景中 5 个 rank 1（Cross-Time F1 90.05，比 YaTC 高 15.70 点）；消融中去预训练损失最大（90.05→81.40），其次为去 Intra-Flow Attn（−6.85）与去 AFP（−2.65） |
+| Classification by Retrieval (JCN 2026) | 2026 | CNN/MLP 骨干用监督对比损失 + 交叉熵联合损失训练（均衡批 32 类 × 4 样本），冻结后的嵌入直接建立 HNSW 检索索引 | 检索式分类精度与 Random Forest 持平（macro F1 0.923 vs 0.925）而新类注入为秒级（快 2–3 个数量级）；训练 133 s vs 1270 s，索引内存 171 MB vs 1350 MB |
+| MambaTIG (TDSC 2026) | 2026 | 良性-only 掩码图自监督预训练，损失为边级对比重构 L_con + 度回归 L_deg，掩码节点由 TIGPageRank 重要性课程调度 | 四个数据集 F1 98.84%/99.39%/99.49%/99.61% 均为 best-or-tied，说明恶意标签并非必要条件；跨分布迁移平均相对 F1 +56.29%、GPU 推理时延较其余方法平均降低 66.7% |
+| GCLC (TIFS 2026) | 2026 | 流量交互图上用 GraphSN 编码 + 监督对比损失与中心感知损失联合训练（L = L_supcon + η·L_center），再以 Mahalanobis 距离 + eigengap 谱聚类发现新类 | 闭世界 AC 96.84%（次优 FG-Net 93.67%），开放世界移除 3 类后新类识别 ACC 95.02%（Velatin 83.67%）；损失消融 SupCon-only 90.41 → 双损失合用 93.42 |
+| Argus (TIFS 2026) | 2026 | 对比学习自编码器（L = λr·Lr + λc·Lc，拉近同源、推远异源并保留 margin，CICIDD 上 λc=10/λr=0.01）学紧凑表征，其类条件重建损失分布用于细粒度漂移检测 | 极端概念漂移下 F1 保持 88.22%（监督式 FS-Net/ACID 崩至 31.55%/24.92%），跨子集波动仅 9.24%；"特征空间聚类 ∩ 物理空间宿主交互图"双空间一致性使漂移样本恶意性识别准确率 >97% |
+| Chameleon (arXiv 2026) | 2026 | —（方法本体为 many-to-many 随机流量变形，未使用对比学习；评测侧纳入 Holmes 早期阶段攻击与 DAAE 配对 trace 恢复攻击） | 揭示"对对抗训练鲁棒 ≠ 对防御感知自编码器鲁棒"：DAAE 复原后 Palette/Adaptive Tamaraw 的攻击 F1 从 7.76%/13.58% 回升到 83.67%/86.44%，而 Chameleon 把 DF/RF 限制在 23.86%/35.19% |
+| PERO (arXiv 2026) | 2026 | —（方法为 CVaR 式尾部样本选择性后训练，不含对比学习损失；以预训练骨干 ET-BERT/YaTC 为对象） | 轻量代理筛选 top-B 高损失样本后，USTC-TFC 上 F1_0.9 达 87.63%（MC-CVaR 75.73%、ERM 31.29%），GPU 显存 26.18→11.75 GB（−55.1%）、每轮 1.568→0.826 s |
+| Pruned Traffic Trees (PTT) (arXiv 2026) | 2026 | 流级自监督对比（NT-Xent）：同流的两视图为正对、宏批次内其他流为负对，同流内不同包永不互为负样本 | 把压缩单元从权重换成协议树图：PTT-Lite 以 0.186M/0.481M 参数保留 Macro-F1 0.9325/0.9136，有效 GFLOPs 降 98.85%/98.78%、CPU 加速 8.75×/8.46×，超 GAT 0.0663/0.0821 |
+| Understanding the Privacy-Preserving Potential of HTTP/2 (arXiv 2026) | 2026 | —（防御本体为 HTTP/2 协议原语；评测攻击者之一 Holmes 的早期阶段采用对比学习） | 提出统一评测蓝图 BBQ：照搬 Tor 防御在 HTTP/2 上效果强依赖数据集；新防御 H2PC 在五个数据集保持攻击者 Macro-F1 ≤ 0.70 且 K* ≥ 7.3，延迟开销比 CL-Tamaraw 低 55–98%，H2PS 仅 1st-party 部署即达 K* ≥ 13.2 |
 
 ## 9. 与其他方法的比较
 

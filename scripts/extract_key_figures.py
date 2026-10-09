@@ -96,6 +96,23 @@ def find_content_list(paper_dir: Path) -> Path | None:
     return None
 
 
+def normalize_entry(item: dict) -> dict | None:
+    """Normalize an image/chart entry to a common shape.
+
+    MinerU emits figures either as type "image" (with sub_type + image_caption)
+    or as type "chart" (chart-side parses: caption in chart_caption, no sub_type).
+    Both carry img_path and bbox, so charts are folded into the same pipeline.
+    """
+    t = item.get("type")
+    if t == "image":
+        return item
+    if t == "chart":
+        item = dict(item)
+        item.setdefault("image_caption", item.get("chart_caption", []))
+        return item
+    return None
+
+
 def bbox_area(bbox: list[float]) -> float:
     """Compute area from [x1, y1, x2, y2]."""
     if len(bbox) != 4:
@@ -188,8 +205,8 @@ def process_paper(paper_dir: Path) -> list[dict]:
     with open(content_list_path, encoding="utf-8") as f:
         data = json.load(f)
 
-    # Filter to image entries only
-    images = [item for item in data if item.get("type") == "image"]
+    # Filter to figure-bearing entries (images + pipeline-backend charts)
+    images = [n for item in data if (n := normalize_entry(item)) is not None]
     if not images:
         return []
 

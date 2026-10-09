@@ -2,32 +2,32 @@
 
 [中文说明](./README.zh-CN.md)
 
-An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 171 structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, KDD, etc.), covering 2008--2026.
+An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 307 structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, KDD, etc.), covering 2008--2026.
 
 ---
 
 ## Highlights
 
-- **171 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
-- **48 deep-analyzed papers** (L3/L4 level) with formula derivations, ablation studies, and cross-paper connections
+- **307 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
+- **60 deep-analyzed papers** (L3/L4 level) with formula derivations, ablation studies, and cross-paper connections
 - **39 knowledge pages**: 11 concepts, 8 methods, 8 tasks, 5 surveys, 5 comparison tables, 2 claim indexes
 - **6 active research fronts** tracking convergent/divergent research questions with evidence chains and Auto Research guidance
 - **Consensus weight system** with venue-tier × time-decay × citation-impact scoring for all claims
-- **56 confirmed open-source methods** with GitHub/GitLab repositories
-- **Bibliography** with 171 structured BibTeX entries (`bibliography.json` + `bibliography.bib`) sourced from CrossRef, OpenAlex, and Semantic Scholar
+- **91 confirmed open-source methods** with GitHub/GitLab repositories
+- **Bibliography** with 259 structured BibTeX entries (`bibliography.json` + `bibliography.bib`) sourced from CrossRef, OpenAlex, and Semantic Scholar
 - **Research map** linking papers by topic, method, and venue
 - **Personal research tracking** with isolated paper notes and research trajectory page (strictly separated from main KB)
-- **Key figure gallery** with 344 auto-extracted framework/architecture figures covering all papers (see `10-outputs/key-figures/`)
+- **Key figure gallery** with 482 auto-extracted framework/architecture figures covering all papers (see `10-outputs/key-figures/`)
 
 ## Directory Structure
 
 ```
 Traffic_Papers/
 ├── 00-inbox/
-│   └── PDFs/              # 171 paper PDFs (source files)
+│   └── PDFs/              # 307 paper PDFs (source files)
 ├── 01-mineru-output/       # MinerU raw API output (gitignored, regenerable)
-├── 02-parsed-markdown/     # MinerU-parsed markdown (171 files)
-├── 03-paper-notes/         # Structured paper notes (171 files) ★
+├── 02-parsed-markdown/     # MinerU-parsed markdown (260 files)
+├── 03-paper-notes/         # Structured paper notes (307 files) ★
 ├── 04-concepts/            # Concept pages (11 files) ★
 ├── 05-methods/             # Method pages (8 files) ★
 ├── 06-tasks/               # Task pages (8 files) ★
@@ -35,14 +35,14 @@ Traffic_Papers/
 ├── 08-comparisons/         # Comparison tables (5 files, incl. open-source registry) ★
 ├── 09-claims/              # Claims & contradictions (2 files) ★
 ├── 10-outputs/             # Drafts, reports, reproduction notes (gitignored)
-│   └── key-figures/        # Auto-extracted framework figures (344 images)
+│   └── key-figures/        # Auto-extracted framework figures (417 images)
 ├── 11-my-papers/           # Personal papers (isolated from main KB)
 │   ├── notes/              # Individual paper notes
 │   ├── my-research-thread.md  # Research trajectory
 │   └── my-paper-registry.md   # Personal paper registry
 ├── 12-research-fronts/     # Research front tracking (6 fronts + index + template) ★
 ├── 00-dashboard/           # Reading queue, research map, open questions
-├── bibliography.json       # Structured BibTeX metadata (171 entries)
+├── bibliography.json       # Structured BibTeX metadata (259 entries)
 ├── bibliography.bib        # LaTeX-ready BibTeX file (ready to copy)
 ├── scripts/                # MinerU batch parsing + bibliography generation
 └── templates/              # Note templates
@@ -99,7 +99,7 @@ This is an **Obsidian vault**. To use:
 - **PDF Parsing**: [MinerU](https://github.com/opendatalab/MinerU) API for converting PDFs to structured Markdown
 - **Note Generation**: Claude Code (AI-assisted structured note generation)
 - **Knowledge Management**: Obsidian with Dataview plugin
-- **Bibliography**: `bibliography.json` + `bibliography.bib` — 171 structured BibTeX entries from CrossRef/OpenAlex/Semantic Scholar (86% with DOI)
+- **Bibliography**: `bibliography.json` + `bibliography.bib` — 259 structured BibTeX entries from CrossRef/OpenAlex/Semantic Scholar (79% with DOI)
 - **Automated Workflow**: One-command paper ingestion pipeline (dedup → parse → note → knowledge layer update → bibliography → README/AGENTS sync)
 - **Dedup Method**: Five-round joint matching (filename + title + abstract + DOI + author/year/venue)
 
@@ -107,7 +107,7 @@ This is an **Obsidian vault**. To use:
 
 When a new paper PDF is added to the vault, the system automatically:
 
-1. Checks for duplicates against existing 171 papers (filename + title + abstract + DOI + author/venue)
+1. Checks for duplicates against existing 307 papers (filename + title + abstract + DOI + author/venue)
 2. Parses PDF via MinerU API (pauses to request API token if `MINERU_API_TOKEN` not set)
 3. Extracts key framework/architecture figures via `extract_key_figures.py`
 4. Generates a structured paper note with bilingual frontmaterial

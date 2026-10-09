@@ -4,7 +4,7 @@ name: "Graph Neural Network"
 aliases: ["GNN", "图神经网络"]
 tags: ["graph-model", "deep-learning", "encrypted-traffic", "topology-feature"]
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Graph Neural Network（图神经网络）
@@ -94,6 +94,13 @@ GNN 在流量分析中的典型流程如下：
 | HINT (JCN 2025) | 2025 | 异构信息网络（HIN）+ 异构图注意力（HAN）+ 元路径 + CNN-LSTM | HIN 建模多维隧道流量关系，增强混淆 HTTPS 隧道检测 |
 | DawnGuard (TIFS 2026) | 2026 | 多流时序图（Multi-Flow Graph Features）+ 时间图学习 + ViT | 多流时序交互建模的加密恶意流量早期检测 |
 | TrustWI (TDSC 2026) | 2026 | 图级多视图特征 + 证据深度学习 + Dempster-Shafer 融合 | 不确定性感知的图融合可信检测 |
+| TKG-ETA (IWQoS 2026) | 2026 | 用自适应 sketch 把海量加密流压成无 payload 流级特征，实时构建流式时序知识图谱（四元组 (u,p,v,τ)），在图上做时间感知消息传递 + 自监督时序对比学习 | 把恶意检测转为"正常演化轨迹偏差"；三数据集平均准确率 95.73%、平均 Macro F1 89.88%，CIC-IoT2023 上 Macro F1 91.17 远超静态图自监督基线 Anomal-E（53.28，后者甚至低于孤立流统计的 Kitsune 87.37） |
+| Multi-View Flow Representation and Relation Graph Modeling (IWQoS 2026) | 2026 | 会话窗口内按 burst 聚类建流关系图（顶点=流的统计/包序列/文本三视图融合嵌入；同 burst 连并发边、相邻 burst 首尾流连顺序边），3 层 GATv2 消息传递 + 均值池化 | CIC-IDS-2017 会话级 Acc 99.64%/F1 99.57%（最强单流序列基线 TrafficFormer 为 95.49/96.48）；流关系图单独贡献 3.15 个百分点，而 GNN 模块开销可忽略（9.23M vs 9.36M 参数） |
+| MambaTIG (TDSC 2026) | 2026 | TIG 交互图（burst 建边）上做 TIGPageRank 课程结构化掩码 + 3 层 GIN 编码（第 3 层 MLP 换为 Mamba 门控 SSM），再用 LSH kNN 做异常检测 | 良性-only 掩码图自监督无需恶意标签即在四数据集取得 best-or-tied-best F1（98.84–99.61%）；跨分布迁移平均相对 F1 +56.29%，GPU 推理时延较其余方法平均降低 66.7% |
+| BPF-DAG (TIFS 2026) | 2026 | 把流建模为全局 IP 有向图的边（源/目的 IP:端口为节点），自研 DiESAGE 沿出边聚合学有向边嵌入，边属性由包头字节的 Transformer 表示逐 epoch 动态刷新 | 免预训练在六个评测设定刷新 SOTA（ISCX-VPN 0.9912/0.9879、ISCX-Tor 0.9797/0.9749、MIRAGE-2019 0.9083、MIRAGE-2024 0.8247），且参数量/FLOPs 比 YaTC 低 28%/11%；时序-拓扑线性插值融合显著优于 Concat（0.9912 vs 0.9742）与 Average（0.9587） |
+| GCLC (TIFS 2026) | 2026 | 以包大小/方向/IAT 构建流量交互图（分层 + 带权，弱包属性转结构化表征），GraphSN 可学习邻接多层传播 + 图增强，配 Mahalanobis 距离新类检测与 eigengap 谱聚类 | 自采 21 类 TLS 流量上闭世界 AC 96.84%（次优 FG-Net 93.67%），开放世界移除 3 类后新类识别 ACC 95.02%（Velatin 83.67%、FlowPrint 57.43%）；零泄漏阈值可由 15 拟合类/3 留出类标定后迁移 |
+| BPF-GNN (TNSM 2026) | 2026 | 三层图逐级建模：字节级 PMI 共现图（4 层 GraphSAGE + JKN）、包级 TIG 交互图（burst 建边）、流级 Top-k 相似流图，各层用 GraphSAGE 聚合 | 四个加密流量数据集 ACC 0.86–0.9978；消融显示字节级 PMI 图贡献最大（移除后 ISCX-VPN F1 −12.79 点，远大于包级 −2.60 点与流级 −0.65 点），且包级交互图与加密无关、存在信息饱和点（n>200 反降） |
+| Pruned Traffic Trees (PTT) (arXiv 2026) | 2026 | 以协议树图 PTG 为结构骨架（字段与父子关系对齐为持久节点/边），按协议组件划分 5 个专家编码器 + 稀疏调度器按协议存在性激活专家 | 把压缩单元换成协议树图后，PTT-Lite 以 0.186M/0.481M 参数保留 Macro-F1 0.9325/0.9136（较 Full 减 80.3%/61.3%），有效 GFLOPs 降 98.85%/98.78%、CPU 加速 8.75×/8.46×，比 GAT 高 0.0663/0.0821；TopK+k 闭包保留完整父子路径优于语义优先采样 |
 
 ## 9. 与其他方法的比较
 
@@ -124,3 +131,22 @@ GNN 在流量分析中的典型流程如下：
 - 面对更高级的对抗攻击（如流量整形模仿、自适应 padding），GNN 方法的鲁棒性如何进一步提升？
 - 如何在缺乏包级标注的情况下，利用半监督或弱监督方法扩展 GNN 在多任务场景中的应用？
 - GNN 在跨平台（如不同区块链、不同加密协议）和跨域（如从实验室到生产网络）场景下的迁移学习能力如何？
+
+- [[2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-NSDI-FENIX__Enabling_In-Network_DNN_Inference_with_FPGA-Enhanced_Programmable_Switches]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-NSDI-Supercharging_Packet-level_Network_Simulation_of_Large_Model_Training_via_Memoization_and_Fast-Forwarding]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-TDSC-Ultimate_Encrypted_Traffic_Feature_Engineering_HTTPS_Encrypted_Traffic_Classification_Using_Restored_Application_Data_Unit_Length]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-USENIX-Generating_Precise_Format_Specification_for_Network_Protocols_Through_Adversarial_LLM_Interactions]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-Less_is_More__Simplifying_Network_Traffic_Classification_Leveraging_RFCs]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-A_Priority-Aware_Dual-Channel_Feature_Fusion_Method_for_Urban_Rail_Service_Traffic_Classification]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Improving_the_Reliability_of_Anomaly_Detection_for_Encrypted_OPC_UA_Traffic_over_Private_5G]]（2026 批量深度分析；证据需正文复核）
+
+
+新增论文联动（2026-09-29）：SaGNN 引入语义感知异构图；其数据与指标尚待原文表格核验。

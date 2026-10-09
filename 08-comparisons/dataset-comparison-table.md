@@ -2,7 +2,7 @@
 type: comparison
 name: dataset-comparison-table
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Dataset Comparison Table
@@ -67,6 +67,14 @@ updated: "2026-08-17"
 | HomeMole | IoT 设备指纹识别 | 流量包（PCAP） | HomeMole 数据集（7 类 IoT 设备） | IoT 设备指纹公开数据集；支持流量混淆防御评估 | 类别较少（7 类）；设备种类有限 | [[2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network_Obfuscation]] |
 | CW100 | Tor 网站指纹攻击（闭世界） | 流量方向序列 | 100 网站（DTPN 中每类 2,425 条流） | WF 领域常用 100 网站数据集；支持防御与攻击评估 | 规模较 DF95 小；采集环境特定 | [[2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_Fingerprinting]]；[[2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network_Obfuscation]] |
 | QuicCourier 自采 QUIC 数据集 | QUIC 隐蔽信道检测（对抗评估） | 流量包（PCAP，QUIC 包游程序列） | 5 网站（ACM/CGsociety/Facebook/Pinterest/Xhs）各约 6,000 条流（共约 3 万）+ 11,000 条 Alexa Top 背景 QUIC 样本 | 真实 QUIC 网页浏览数据；面向隐蔽信道检测的对抗评估 | 网站数量少（5 个）；数据集未公开 | [[2025-TDSC-QuicCourier__Leveraging_the_Dynamics_of_QUIC-_Based_Website_Browsing_Behaviors_Through_Proxy_for_Covert_Communication]] |
+| GTT23 | 网站指纹攻击（真实 Tor 踪迹测量） | Tor 流量轨迹（8 台出口中继被动测量） | 13,900,621 条电路 / 1,142,115 个域名 / 68 个端口（2023 年 13 周测量；受控发布，验证过的研究者按需申请） | 首个真实 Tor 出口侧踪迹数据集，规模达千万级电路；可用于揭示合成 WF 数据集的系统性失真；受控发布兼顾研究伦理 | 受控发布需按需申请而非直接下载；仅出口侧被动观测，无客户端侧信息；使用受 Tor 研究伦理约束 | GTT23 (PAM 2026)；[[2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting]]；[[2026-arXiv-Chameleon__Robust_Defense_Against_Tor_Website_Fingerprinting_via_Many-to-Many_Traffic_Morphing]] |
+| DoE measurement dataset (resolver feature/latency records + webpage-load metrics) | 加密 DNS（DoQ vs DoH/3）大规模对比测量 | 测量记录（resolver 特征/时延记录 + 网页加载指标） | 3,000+ DoE resolvers / 70+ 国家；每协议探测 719,281 个网站；1,869,105 次成功页面加载；46,440 域名最终对比集 | 覆盖 DoQ 与 DoH/3 两协议的全球 resolver 与网页加载对照；跨 70+ 国家、百万级网站实验；公开于 Zenodo（10.5281/zenodo.17860118） | 仅覆盖两种加密 DNS 协议，未含 DoT；resolver 国家分布偏斜未说明；需自行按 Zenodo 记录重建分析管线 | DNS Privacy (PAM 2026)；[[2026-PAM-The_Future_of_DNS_Privacy__A_Comparison_of_DNS_over_QUIC_and_DNS_over_HTTP3]] |
+| IoTrace | IoT 无线流量指纹防御评估 | 流量包（PCAP，WiFi 空口） | 22 台设备的 2 个月空闲流量 + 53 类行为流量（自建 WiFi testbed，随源码一同发布） | 同时覆盖长时间空闲画像与 53 类细粒度行为；随 AirMask 源码一同公开；支持无线指纹攻击/防御评估 | 设备仅 22 台，种类覆盖有限；自建 testbed 环境特定；仅 WiFi 场景，不含其他无线制式 | AirMask (TDSC 2026)；[[2026-TDSC-AirMask__Enabling_Air-to-Air_Masking_of_Wireless_Traffic_Fingerprints_in_WiFi-Based_IoT_Environments]] |
+| 自采集真实多标签页 WF 数据集（Tor） | 多标签页网站指纹攻击（少样本） | Tor 流量轨迹（多标签页混合流量） | 50 网站 × {3,4,5} tab × 20,000 组合 × 3 次访问 + 每站 30 次单标签页访问；扩展 25 网站 × 25 组合 × 20 次访问；约 2 个月、新加坡节点 | 首个含"对齐单标签页访问"的真实多标签页 WF 数据集，支持 support 引导的少样本评测；含约 2 个月窗口的时间漂移；论文声明随 artifact 一并发布 | 采集地为单一节点（新加坡），地理泛化受限；标签页组合为枚举式而非自然浏览行为；真实网络条件下所有方法 P@k 下降超 20% | MMF (USENIX Security 2026)；[[2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting]] |
+| Synthetic encrypted-traffic dataset (CICIDS2017 + darknet based) | 加密流量分类（合成数据生成） | 合成流量（流量级特征记录） | 734,550 条合成流记录（由 367,275 条真实记录生成）；7 个流级特征；正常/异常类别平衡；正常 5 簇 / 异常 3 簇结构 | 用 Isolation Forest 伪标签 + K-means 类内聚类 + 相关性感知采样生成，质量分 88.2%；类别平衡且簇结构明确；随论文 GitHub 仓库公开 | 为流量级特征记录而非原始 PCAP，不能用于字节级/包序列表示方法；来源限于 CICIDS2017 + darknet，协议与年代覆盖有限；合成数据训练的增益需独立验证 | Generative AI for Encrypted Traffic Analysis (arXiv 2026)；[[2026-arXiv-Generative_AI_for_Encrypted_Traffic_Analysis__Synthetic_Dataset_Generation_and_Classifier_Evaluation]] |
+| PA3 proxied website traffic dataset | 网站指纹攻击（代理诱导漂移） | 流量包（PCAP，含密钥材料） | 约 1 TB；80 网站 × 4 协议（NoProxy/VMess/Shadowsocks/Trojan）；商业代理服务采集，3 台客户端（中国高校校园网 ×2、美国商业云 VM ×1） | 首个覆盖多代理协议的 WF 漂移数据集，含加密前后配对所需的密钥材料；规模达 TB 级；随 PA3 仓库公开 | 仅 80 个网站，类别数有限；客户端地理集中（主要中国校园网 + 1 台美国 VM）；代理服务器分布仅日本/新加坡/美国；覆盖协议仅 3 种代理 | PA3 (arXiv 2026)；[[2026-arXiv-Mitigating_Proxy-Induced_Traffic_Drift_in_Website_Fingerprinting_via_Model-Agnostic_Traffic_Tailoring]] |
+| Firefox 132-141 BIH dataset | 代理协议流大小（BIH）稳定性纵向分析 | 流量包（PCAP，代理协议流量） | Firefox 132（2024-10 发布）至 141（2025-07 发布）共 10 个版本逐版本采集 | 唯一逐浏览器版本采集的代理协议流量集合，支持 BIH 流大小随版本稳定性的纵向分析；随 PA3 仓库发布 | 仅覆盖 Firefox 单浏览器；仅服务于 BIH 稳定性分析这一特定用途；未覆盖其他客户端平台 | PA3 (arXiv 2026)；[[2026-arXiv-Mitigating_Proxy-Induced_Traffic_Drift_in_Website_Fingerprinting_via_Model-Agnostic_Traffic_Tailoring]] |
+| Paired corpus（配对语料，同一次浏览同时记录带/不带 SNI 的连接） | 流量标签溯源审计（SNI 信息量诊断） | 流量包（PCAP，配对连接） | 888 次 Chromium 运行 / 31 个目标 / 85,732 条连接；其中 21,387（24.95%）自带 SNI | 同一次浏览同时记录带/不带 SNI 的连接，可直接量化 SNI 侧信道的信息量与过滤代价；支撑可证伪的标签溯源诊断 | 单一浏览器（Chromium）、单一网络观测点、固定站点清单，作者明确称只确立机制而非普适常数；目标数有限（31 个） | SoK Flow Labels (arXiv 2026)；[[2026-arXiv-SoK__Where_Do_Flow_Labels_Come_From__Auditing_Label_Provenance_in_Encrypted_Traffic_Benchmarks]] |
 
 ## 数据集使用频率统计
 
@@ -92,3 +100,6 @@ updated: "2026-08-17"
 3. **领域碎片化**：不同研究方向（WF、恶意软件检测、应用分类、入侵检测）使用不同数据集，缺乏统一的跨任务基准。
 
 4. **数据集规模趋势**：从 GB 级（ISCX 系列）到 TB 级（MM4flow 预训练数据），预训练范式推动了数据规模的大幅增长。
+
+### 2026-09-29 增量证据
+- Forge、HiFi-WF、RoFiRe、TraVerse均指向多标签、子页面、真实Tor或动态条件；当前笔记仅记录论文声明，未将数据规模和切分规则写入可比数值列。

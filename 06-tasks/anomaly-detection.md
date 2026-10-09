@@ -4,7 +4,7 @@ name: "Network Anomaly Detection"
 aliases: ["网络异常检测", "Network Intrusion Detection", "Anomaly-based Detection"]
 tags: [anomaly-detection, network-security, intrusion-detection, open-set, few-shot, unsupervised]
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Network Anomaly Detection（网络异常检测）
@@ -93,6 +93,14 @@ Network Anomaly Detection（网络异常检测）是指通过分析网络流量�
 - MET-LLM：大语言模型辅助的恶意加密流量检测 — `[[2025-ESA-MET-LLM__Enhancing_Large_Language_Models_for_Malicious_Encrypted_Traffic_Detection]]`
 - [[2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly_Detection_for_Encrypted_Network_Traffic]]：频率解耦的加密流量异常检测，低频/高频分量分解 + 证据学习动态融合
 - [[2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection]]：上下文掩码蒸馏的零阳性网络流量异常检测，仅用正常流量训练
+- [[2025-ACSAC-TempoNet__Learning_Realistic_Communication_and_Timing_Patterns_for_Network_Traffic_Simulation]]：多标记时序点过程一次性生成 7–8 个混合类型字段的流量轨迹；用合成良性背景训练异常检测器（Isolation Forest/LSTM-AE）的各项指标与真实背景差距 ≤0.03，而 GReaT 背景使 LSTM-AE Attack-F1 从 0.84 降至 0.50，说明合成数据需报告下游任务忠实性
+- [[2026-IWQoS-Dynamic_Malicious_Encrypted_Traffic_Detection_via_Temporal_Knowledge_Graph_in_Cloud-Edge_Networks]]：常数内存 sketch 提取无 payload 流级特征 + 流式时序知识图谱 + 自监督时序对比学习，把偏离正常演化轨迹的事件判为恶意；完全无标注下三数据集平均准确率 95.73%、平均 Macro F1 89.88%，CIC-IoT2023 上比静态图基线 Anomal-E 高 37.89 点
+- [[2026-JCN-Ultra_fast_encrypted_network_traffic_classification_based_on_classification_by_retrieval_powered_by_out-of-distribution]]：HNSW 近邻检索式分类 + 单一全局距离阈值 OOD，分类与拒识共享同一步；良性-only 检索库（CESNET-TLS22，184 类无恶意样本）对跨数据集恶意流量（MTA，7 家族）OOD AUROC 0.996，新类仅需插入向量
+- [[2026-JCS-STUN_comprehension-optional_attributes_as_a_covert_channel__Design_implementation_and_detection]]：把以太网帧塞进 RFC 5389 规定必须静默忽略的 STUN 可选属性做出全双工 L2 隐蔽隧道，Snort 3/Suricata/FortiGate/Palo Alto 全部漏报；用属性值 Shannon 熵（4.5 bits 阈值）实现零误报 100% 检出，但消息级检测器（Suricata entropy 关键字）精度仅 41.2%
+- [[2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network]]：仅用正常流量训练 PSO 优化的 PSOGAN，再迁移生成器为判别器（DeePred）做无监督微调；三数据集 F1 98.7–98.9，在 CIC-DDoS2019 正常样本仅 0.93% 的极端不平衡下不退化，跨数据集 F1 79–83、留一族 LOFO 平均 F1 92.3
+- [[2026-NSDI-CascadeNet__Generating_Network_Traffic_with_High-Fidelity_Temporal_Patterns]]：把 flow 聚合为定长时间序列（≤200 步）并用三级级联 GAN 生成合成 trace，时间距离指标提升 41%~76%、训练/生成速度比 NetShare 快 7.3×~25× / 9.2×~62×；可为异常检测提供高保真合成背景流量，但须报告"记忆 vs 生成"（基线 REaLTabFormer 重复率高达 1.7%~56.5%）
+- [[2026-TDSC-MambaTIG__Fast_and_Robust_Encrypted_Traffic_Detection_Leveraging_Selective_State-Space_Masking]]：仅用良性流量做 TIGPageRank 课程掩码图自监督预训练 + Mamba 门控状态空间编码 + LSH 最近邻异常检测；四数据集 F1 98.84–99.61%（均 best 或 tied-best），时序对抗 reshaping 下仍达 F1 92.21%（DeepPacket/ET-Bert/Net-Mamba 仅 9.96%/19.20%/21.78%）
+- [[2026-arXiv-Generative_AI_for_Encrypted_Traffic_Analysis__Synthetic_Dataset_Generation_and_Classifier_Evaluation]]：Isolation Forest 伪标签 + K-means 类内聚类 + 相关性感知采样合成加密流量（综合质量分 88.2%，相关矩阵最大差异 0.016），缓解异常类严重不足；合成数据训练的分类器在真实数据上达 93.1%（XGBoost），但保真瓶颈集中在异常类
 
 ## 7. 工程落地问题
 

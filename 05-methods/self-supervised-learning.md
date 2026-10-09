@@ -8,7 +8,7 @@ tags:
   - traffic-classification
   - representation-learning
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Self-Supervised Learning（自监督学习）
@@ -89,6 +89,21 @@ updated: "2026-08-17"
 | MH-Net (AAAI 2025) | 2025 | 对比学习辅助自监督任务 + 多视图异构图 | 多视图异构图表征增强加密流量分类 |
 | FlowXpert (TMC 2026) | 2026 | 自监督对比预训练 + DBSCAN 聚类 + 伪标签学习 | 上下文感知流嵌入，IoT 流量检测 |
 | ConMD (TIFS 2026) | 2026 | 上下文掩码蒸馏（自监督）+ 知识蒸馏 | 掩码蒸馏表征的零阳性网络流量异常检测 |
+| BTRFormer (ICNP 2025) | 2025 | AES 16 字节块 BTR 表征 + 三层注意力的 MAE 掩码重建自监督（默认掩码率 0.9，0.75 最优） | ISCXTor2016 F1 达 100.00%；去掉 BTR 表征改用原始前 1024 字节的 32×32 图像后 F1 跌至 28.26%；掩码率 0.95 过高致重建过难、性能明显下降 |
+| LotBoNC (AsiaCCS 2026) | 2026 | 自监督预训练 + 对比学习（encoder dropout 作增强）+ 熵正则化最优传输伪标签与 EM 式原型精化 | 长尾开世界新类发现准确率 60.01%/57.55%/60.15%，最高超基线 19.4 个百分点；对比增强是生死线——p=0 时整体准确率从 89.9/91.3/92.9 骤降至 58.2/61.3/63.5，p=0.50 回落至 70.1/71.5/72.3 |
+| CDWF (IWQoS 2026) | 2026 | 流量增强自监督预训练（混合 CNN-Transformer 编码器）作为三阶段框架第一级 | 自监督预训练 + 对抗域适配 + 少样本适配使跨域多标签页 WF 的 5-tab 闭世界 P@5 达 75.80、超最佳基线 32.94 个百分点（tab 数未知时 Precision 72.37%）；去掉预训练侧数据增强 Precision 0.8615→0.7868 |
+| Temporal Knowledge Graph Detection (IWQoS 2026) | 2026 | 在流式时序知识图谱（四元组 + 时间编码消息传递）上做自监督时序对比学习，按正常演化轨迹偏差判恶意 | 完全无标注条件下 UNSW-NB15/ToN-IoT/CIC-IoT2023 Macro F1 88.51/89.95/91.17；CIC-IoT2023 上比静态图自监督基线 Anomal-E（53.28）高 37.89 个百分点，后者甚至低于孤立流统计的 Kitsune（87.37） |
+| Few-Packet POC (IWQoS 2026) | 2026 | 免预训练：把丢包/乱序下的不完整观测视为多视图，用重叠门控的表示级 + 预测级一致性正则（EMA teacher）提供自监督信号，推理只用单视图 | K=6 扰动下保持 ISCX-VPN 95.57%/ISCX-Tor 94.73%/CIC-IoT 96.60%，前缀依赖的 FS-Net 跌至 53.81%/53.82%/56.03%；不做重叠限制的全局一致性更差（Agreement 0.9210→0.8803），干净训练掉 8.28 个百分点 |
+| Odysseus (IWQoS 2026) | 2026 | 包级 + 流级双重掩码 MAE 自监督预训练（400 patch，包级 r=0.9 与流级掩 2 条流二选一） | 无标注上下文预训练 + 上下文到单流蒸馏使 6 个 OOD 场景中 5 个 rank 1；消融中去掉自监督损失跌幅最大（Cross-Time Multi-F1 90.05→81.40），超过去掉流内注意力（−6.85）与 AFP（−2.65） |
+| TARL (JCN 2026) | 2026 | MFM（掩码特征建模）+ 服务类型预测（STP）双自监督目标预训练，配共享 memory bank + 任务门控 adapter 多任务微调 | 自监督预训练初始化在流级严格划分下仍带来 3–5 个 F1 点增益（约 200k 步饱和）；四任务 F1 0.840–0.998，消融显示共享记忆库贡献 0.889 vs 完整 0.936 |
+| MambaTIG (TDSC 2026) | 2026 | 良性-only 的课程掩码图自监督预训练（TIGPageRank 重要性驱动遮蔽），下游用 LSH kNN 异常检测 | 证明恶意标签并非必要条件：无任何恶意样本即在四数据集取得 98.84%/99.39%/99.49%/99.61% F1；时序对抗 reshaping 下 F1 92.21%，远超依赖原始包或局部序列的 ET-BERT 19.20% 与 Net-Mamba 21.78% |
+| Argus (TIFS 2026) | 2026 | 无监督对比学习自编码器 ACLearner 学紧凑表征 + 类别条件重建损失分布 + 双空间一致性判据 | 极端概念漂移下保持 F1 88.22%（监督基线 FS-Net/ACID 崩至 31.55%/24.92%）；漂移样本恶意性由特征空间 DBSCAN 聚类 ∩ 宿主交互图无标注判定，准确率 >97%（去掉任一空间降至 31.97%/28.76%） |
+| UTFormer (TIFS 2026) | 2026 | **反例**：不做任何自监督预训练，从零训练超轻量 Transformer（注意力 Top-K 动态字节蒸馏 + 可微架构搜索） | 106 KB 起的最小模型在砍掉 90%–95% 输入字节下保持精度、在线 10 Gbps 线速，算力较 Transformer 类基线降 9.0×–36398.5×；但论文中 Transformer 基线冻结骨干、UTFormer 从零训练，对比预算不对等 |
+| HyTMTC (TNSM 2026) | 2026 | 统一多模态 token 序列 + 混合 Mamba-Transformer 骨干做 MLM 掩码预训练 | 7 个公开数据集平均 F1 95.03%；统一多模态序列优于 late fusion（平均 F1 0.9089→0.9456），混合骨干优于单骨干（0.9499 vs 0.8777/0.8701），参数共享后参数 14.49M→8.20M 且 F1 反升 |
+| CipherSight (arXiv 2026) | 2026 | 记录-资源特权监督（P1，LUPI 范式）+ MRM 掩码记录建模预训练，微调期用特权语义教师 P2 做特征/逻辑蒸馏（仅训练期可见） | 特权监督收益随漂移类型而变：时移下增益几乎全部来自预训练阶段 P1（92.69→92.99 饱和），地理漂移下需两阶段 + 语义蒸馏（+1.37/+1.55 pp，约为地理漂移总体退化量的 31%）；推理仅需密文可观测元数据 |
+| Pruned Traffic Trees (arXiv 2026) | 2026 | PTT-Full 预训练用流级 NT-Xent 自监督（同流两视图为正对、宏批次其他流为负对，同流内不同包永不互为负样本） | 自监督预训练同时产出字段显著性来源并驱动三级压缩链，0.186M 参数保留 Macro-F1 0.9325、有效 GFLOPs 降 98.85%；CSTNET-TLS1.3 上 ET-BERT 在 SII 掩蔽下 F1 仅 0.7759 |
+| TDDM-Melatt (arXiv 2026) | 2026 | 外部记忆库 + 竞争门控 LSTM 在匿名化特征上做"无捷径"预训练，抑制伪特征相关性，再以类条件扩散补长尾 | 记忆-扩散框架在严格流级划分下 TLS-120class F1 0.681、延迟 <12 ms；类条件扩散是唯一统计显著的生成式增强（F1 +9.98%/+5.56%），可迁移性取决于骨干（ET-BERT +14.12% vs YaTC −6.61%） |
+| The Colossus with Feet of Clay (arXiv 2026) | 2026 | **反例**：检验自监督/预训练字节级表征（ET-BERT/YaTC）在 PQC 协议漂移下的跨域可靠性 | 预训练表征并非天然更鲁棒：Non-PQC→Hybrid-PQC 全部退化（YaTC 1.0000→0.3582、ET-BERT 0.9316→0.6255），且方向+长度+时序的融合在任何设置下都不优于方向+长度，说明增加特征模态换不来跨域鲁棒性 |
 
 ## 9. 与其他方法的比较
 
@@ -118,3 +133,53 @@ updated: "2026-08-17"
 - 多模态自监督学习（融合字节级、包级、流级、时间序列等多粒度信息）的最优策略是什么？
 - 自监督预训练模型的安全性：如何防御预训练数据中毒攻击？
 - 不同 SSL 范式（MLM、MAE、对比学习）在流量分析中的适用边界和最优组合方式尚需系统研究
+
+- [[2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models]]（2026 批量深度分析；证据需正文复核）
+
+- [[2025-WWW-Facing_Anomalies_Head-On__Network_Traffic_Anomaly_Detection_via_Uncertainty_Inspired_Inter-Sample_Differences]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-IMC-Mind_the_Gap__Policy_vs_Reality_in_Post-Quantum_TLS_Deployment]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-IMC-Quantifying_the_Privacy_Implications_of_High-Fidelity_Synthetic_Network_Traffic]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-IMC-Replicability__Challenging_the_Myth_of_Randomness_Patterns_in_Encrypted_Traffic]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCN-Towards_adaptive_and_robust_website_fingerprinting_defense_with_multi-agent_deep_reinforcement_learning]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCS-GAN-based_Tor_obfuscated_traffic_identification_on_imbalanced_datasets]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCS-Uncovering_robot_joint-level_controller_actions_from_encrypted_network _traffic__Empirical_attacks_and_information-theoretic_bounds]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-NSDI-SPLIDT__Partitioned_Decision_Trees_for_Scalable_Stateful_Inference_at_Line_Rate]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-TNSM-TunnelEye_An_Explainable_Framework_for_Real-Time_Detection_of_Malicious_DoH_Traffic_in_High-Speed_Backbone_Networks]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-USENIX-DNS_Cache_Poisoning_Like_it’s_2006]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-USENIX-DaLens__Charting_DNS_Self-Amplification_Threats_at_Large]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-USENIX-Generating_Precise_Format_Specification_for_Network_Protocols_Through_Adversarial_LLM_Interactions]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-Cardinality_is_Not_Enough__Super_Host_Detection_via_Segmented_Cardinality_Estimation]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-Eclipse_Attacks_on_Ethereum’s_Peer-to-Peer_Network]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-Forge__A_Robust_Multi-tab_Website_Fingerprinting_Attack_Via_Blind_Source_Separation]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Despite_Instructions__Frontier_Agents_Improvise_Covert_Channels_at_Test_Time]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Exact_Second-Order_Asymptotics_in_Covert_Communication_Over_Discrete_Memoryless_Channels]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Feedback_Coding_Enables_Inference-Time_Covert_Agentic_Communication]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Improving_the_Reliability_of_Anomaly_Detection_for_Encrypted_OPC_UA_Traffic_over_Private_5G]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Secrets_in_Radio_Waves__Towards_Practical_and_Protocol-Agnostic_PHY_Information_Hiding]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams]]（2026 批量深度分析；证据需正文复核）

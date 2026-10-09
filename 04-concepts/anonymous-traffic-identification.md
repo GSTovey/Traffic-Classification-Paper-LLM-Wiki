@@ -14,7 +14,7 @@ tags:
   - network-security
   - privacy
 created: "2026-06-15"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Anonymous Traffic Identification（匿名流量识别）
@@ -78,6 +78,11 @@ updated: "2026-08-17"
 | **Website Fingerprinting Techniques Over Tor Network: A Survey** (Access 2026) | 2026 | 系统综述 Tor 网络上的 WF 攻击与防御技术 | 综述性质，未提出新方法 |
 | **QuicCourier: Covert Communication via QUIC Browsing Behaviors Through Proxy** (TDSC 2025) | 2025 | 利用 QUIC 浏览行为动力学经代理构建隐蔽信道，可规避匿名/代理场景下的流量分类检测 | 隐蔽容量有限 |
 | **Defending against Traffic Analysis Attacks with Flexible In-Network Obfuscation** (Securitas, NSDI 2026) | 2026 | 网内灵活流量混淆（分包 + 虚拟包注入 + ICMP 回复 + P4 数据平面），抵御针对匿名与加密流量的流量分析攻击 | 需交换机/网元支持 |
+| **BTRFormer: Hierarchical Learning of Encrypted Traffic Using a Masked Autoencoder with Block-Based Traffic Representation** (Yin et al., ICNP) | 2025 | 按 AES 16 字节块构造 4×4 单元的块式流量表征（BTR）矩阵，配合 intra-block/inter-block/inter-packet 三层注意力与 MAE 预训练-微调，在 6 个公开数据集上超越 YaTC/ET-BERT/PERT（ISCXTor2016 F1 100.00%） | 以块密码为前提，ChaCha20 等非分组算法未验证；ISCXVPN2016 上 CHAT 与 VOIP 系统性混淆；训练/测试划分粒度未说明，100.00% 精度缺误差棒说明 |
+| **MVPNalyzer: An Investigative Framework for Auditing the Security & Privacy of Mobile VPNs** (Wang et al., NDSS) | 2026 | 三阶段（采集/处理/分析）移动 VPN 审计框架，无人工交互测量 281 个应用（22 亿+ 安装），揭示 61 个应用产生 10,552 条未加密流、29 个应用存在 DNS/SNI 泄漏、143/281 可被启发式识别且 108 个内嵌 OpenVPN 配置仅 1 个合规 | 依赖人工交互脚本而非全自动探索；可封锁性结论受三种启发式检测能力限制 |
+| **A Measurement of Genuine Tor Traces for Realistic Website Fingerprinting** (Jansen et al., PAM) | 2026 | 用 8 台 Tor 出口中继做 13 周被动测量构建首个真实 Tor 踪迹数据集 GTT23（1390 万条电路、114 万域名），并对照 28 个合成 WF 数据集揭示其系统性失真（GoodEnough 约 70% 域名中位电路长度顶到 5,000 cell 采集上限，GTT23 仅 32%） | 标签经不可逆哈希，无法与带真实域名标签的数据集直接合成；出口侧视角与客户端侧攻击者不同；无绝对时间戳且采样稀疏（80% 域名仅 1 条电路），限制时序漂移研究 |
+| **Motion in the Clear: Reconstructing VR User Behavior from Network Traffic** (Lee et al., USENIX) | 2026 | 通过受控正弦波形注入对未知编码的明文 UDP 载荷做一次性黑盒轮廓分析（PACMO），即可从被动抓包重建 VR 头手 6-DoF 运动，实现 91.4–96.2% 跨会话用户识别与 69.4% 虚拟键盘 PIN 推断；生态测量发现 75 款 VR 应用中 63 款多人上行链路使用明文 UDP | 仅适用明文载波，DTLS/QUIC 加密后 Phase I/II 直接失效；打字推断只针对应用内虚拟键盘；背景流量建模仅覆盖网页浏览与视频流两类 |
+| **Chameleon: Robust Defense Against Tor Website Fingerprinting via Many-to-Many Traffic Morphing** (Cui et al., arXiv) | 2026 | 揭示"对对抗训练（AT）鲁棒 ≠ 对防御感知自编码器（DAAE）鲁棒"这一被忽视的防御盲区，提出 many-to-many 随机流量变形消除防御引入的可学习映射，DF 数据集以 130.60% 带宽/14.51% 时间开销把四类 AT 攻击压到 27% 以下，GTT23 上 DAAE 复原后最强 RF 攻击仅 35.19% F1 | 带宽开销仍重（Heavy 配置达 260.46%），ρ 增大线性抬高开销；攻击面覆盖有限，未评测基于流量生成的自适应攻击；代码未发布，复现缺实现细节 |
 
 ## 7. 当前共识
 

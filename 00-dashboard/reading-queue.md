@@ -1,6 +1,6 @@
 # Reading Queue
 
-本页面用于管理知识库中全部 171 篇论文的阅读状态。
+本页面用于管理知识库中全部 260 篇论文的阅读状态。
 
 ---
 
@@ -41,6 +41,17 @@
 | important | TrapFlow: Controllable Website Fingerprinting Defense via Dynamic Backdoor Learning | 2026 | 网站指纹 | [[2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Backdoor_Learning]] | [[2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Backdoor_Learning]] |
 | important | Defending against Traffic Analysis Attacks with Flexible In-Network Obfuscation | 2026 | 网站指纹 | [[2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network_Obfuscation]] | [[2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network_Obfuscation]] |
 | important | Proteus: Towards Accurate and Low-overhead In-Network Malicious Traffic Detection | 2026 | 恶意检测 | [[2026-WWW-Proteus__Towards_Accurate_and_Low-overhead_In_Network_Malicious_Traffic_Detection]] | [[2026-WWW-Proteus__Towards_Accurate_and_Low-overhead_In_Network_Malicious_Traffic_Detection]] |
+| important | Non-uniformity is All You Need: Efficient and Timely Encrypted Traffic Classification With ECHO | 2025 | 流量分类 | [[2025-ICNP-Non-uniformity_is_All_You_Need__Efficient_and_Timely_Encrypted_Traffic_Classification_With_ECHO]] | [[2025-ICNP-Non-uniformity_is_All_You_Need__Efficient_and_Timely_Encrypted_Traffic_Classification_With_ECHO]] |
+| important | CDWF: Few-Shot Learning for Cross-Domain Multi-Tab Website Fingerprinting | 2026 | 网站指纹 | [[2026-IWQoS-CDWF__Few-Shot_Learning_for_Cross-Domain_Multi-Tab_Website_Fingerprinting]] | [[2026-IWQoS-CDWF__Few-Shot_Learning_for_Cross-Domain_Multi-Tab_Website_Fingerprinting]] |
+| important | A Measurement of Genuine Tor Traces for Realistic Website Fingerprinting | 2026 | 网站指纹 | [[2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting]] | [[2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting]] |
+| important | MambaTIG: Fast and Robust Encrypted Traffic Detection Leveraging Selective State-Space Masking | 2026 | 恶意检测 | [[2026-TDSC-MambaTIG__Fast_and_Robust_Encrypted_Traffic_Detection_Leveraging_Selective_State-Space_Masking]] | [[2026-TDSC-MambaTIG__Fast_and_Robust_Encrypted_Traffic_Detection_Leveraging_Selective_State-Space_Masking]] |
+| important | BPF-DAG: Byte-Packet-Flow Features Fusion via Dynamic Attributed Graph for Reliable Encrypted Traffic Classification | 2026 | 流量分类 | [[2026-TIFS-BPF-DAG__Byte-Packet-Flow_Features_Fusion_via_Dynamic_Attributed_Graph_for_Reliable_Encrypted_Traffic_Classification]] | [[2026-TIFS-BPF-DAG__Byte-Packet-Flow_Features_Fusion_via_Dynamic_Attributed_Graph_for_Reliable_Encrypted_Traffic_Classification]] |
+| important | Data-Efficient Cross-Domain Few-Shot Website Fingerprinting With Unsupervised Domain Adaptation | 2026 | 网站指纹 | [[2026-TIFS-Data-Efficient_Cross-Domain_Few-Shot_Website_Fingerprinting_With_Unsupervised_Domain_Adaptation]] | [[2026-TIFS-Data-Efficient_Cross-Domain_Few-Shot_Website_Fingerprinting_With_Unsupervised_Domain_Adaptation]] |
+| important | Graph-Based Contrastive Learning and Clustering for Open-World Encrypted Traffic Classification | 2026 | 流量分类 | [[2026-TIFS-Graph-Based_Contrastive_Learning_and_Clustering_for_Open-World_Encrypted_Traffic_Classification]] | [[2026-TIFS-Graph-Based_Contrastive_Learning_and_Clustering_for_Open-World_Encrypted_Traffic_Classification]] |
+| important | Stinger: A Light-Weight Website Fingerprinting Defense Through Poisoning Packet Sequences | 2026 | 网站指纹 | [[2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences]] | [[2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences]] |
+| important | HyTMTC: A Pre-Training Method for Multi-Scenario Network Traffic Classification With Hybrid Transformer-Mamba | 2026 | 流量分类 | [[2026-TNSM-HyTMTC__A_Pre-Training_Method_for_Multi-Scenario_Network_Traffic_Classification_With_Hybrid_Transformer-Mamba]] | [[2026-TNSM-HyTMTC__A_Pre-Training_Method_for_Multi-Scenario_Network_Traffic_Classification_With_Hybrid_Transformer-Mamba]] |
+| important | Towards Practical Few-shot Multi-tab Website Fingerprinting | 2026 | 网站指纹 | [[2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting]] | [[2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting]] |
+| important | Tracegram: Framing Trace-Level Traffic Analysis with Temporally-Aware Multiple Instance Learning | 2026 | 流量分类 | [[2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning]] | [[2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning]] |
 
 ---
 
@@ -204,6 +215,95 @@
 | processed | Contextual Masking Distillation for Network Traffic Anomaly Detection | 2026 | 异常检测 | [[2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection]] | [[2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection]] |
 | processed | Early-Stage Detection of Encrypted Malware Traffic via Multi-Flow Temporal Graph Learning | 2026 | 恶意检测 | [[2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temporal_Graph_Learning]] | [[2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temporal_Graph_Learning]] |
 | processed | FlowXpert: Context-Aware Flow Embedding for Enhanced Traffic Detection in IoT Network | 2026 | 恶意检测 | [[2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network]] | [[2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network]] |
+| processed | Pathfinder: Exploring Path Diversity for Assessing Internet Censorship Inconsistency | 2025 | 审查对抗 | [[2025-ACSAC-Pathfinder__Exploring_Path_Diversity_for_Assessing_Internet_Censorship_Inconsistency]] | [[2025-ACSAC-Pathfinder__Exploring_Path_Diversity_for_Assessing_Internet_Censorship_Inconsistency]] |
+| processed | TempoNet: Learning Realistic Communication and Timing Patterns for Network Traffic Simulation | 2025 | 流量生成 | [[2025-ACSAC-TempoNet__Learning_Realistic_Communication_and_Timing_Patterns_for_Network_Traffic_Simulation]] | [[2025-ACSAC-TempoNet__Learning_Realistic_Communication_and_Timing_Patterns_for_Network_Traffic_Simulation]] |
+| processed | BTRFormer: Hierarchical Learning of Encrypted Traffic Using a Masked Autoencoder with Block-Based Traffic Representation | 2025 | 流量分类 | [[2025-ICNP-BTRFormer__Hierarchical_Learning_of_Encrypted_Traffic_Using_a_Masked_Autoencoder_with_Block-Based_Traffic_Representation]] | [[2025-ICNP-BTRFormer__Hierarchical_Learning_of_Encrypted_Traffic_Using_a_Masked_Autoencoder_with_Block-Based_Traffic_Representation]] |
+| processed | Carrera: Enabling High-Performance eBPF-based Sketches in Network Measurement | 2025 | 网络测量 | [[2025-ICNP-Carrera__Enabling_High-Performance_eBPF-based_Sketches_in_Network_Measurement]] | [[2025-ICNP-Carrera__Enabling_High-Performance_eBPF-based_Sketches_in_Network_Measurement]] |
+| processed | EffiMatch: Enabling Fast and Accurate Learning-based Packet Classification | 2025 | 包分类 | [[2025-ICNP-EffiMatch__Enabling_Fast_and_Accurate_Learning-based_Packet_Classification]] | [[2025-ICNP-EffiMatch__Enabling_Fast_and_Accurate_Learning-based_Packet_Classification]] |
+| important | Non-uniformity is All You Need: Efficient and Timely Encrypted Traffic Classification With ECHO | 2025 | 流量分类 | [[2025-ICNP-Non-uniformity_is_All_You_Need__Efficient_and_Timely_Encrypted_Traffic_Classification_With_ECHO]] | [[2025-ICNP-Non-uniformity_is_All_You_Need__Efficient_and_Timely_Encrypted_Traffic_Classification_With_ECHO]] |
+| processed | Undermining Delay-based QUIC Congestion Control: A Receiver-driven Attack via Crafted Host Delays | 2025 | 协议安全 | [[2025-ICNP-Undermining_Delay-based_QUIC_Congestion_Control__A_Receiver-driven_Attack_via_Crafted_Host_Delays]] | [[2025-ICNP-Undermining_Delay-based_QUIC_Congestion_Control__A_Receiver-driven_Attack_via_Crafted_Host_Delays]] |
+| processed | PipHeap: Approximate Heap in the Pipeline Empowering Network Measurement | 2025 | 网络测量 | [[2025-IMC-PipHeap__Approximate_Heap_in_the_Pipeline_Empowering_Network_Measurement]] | [[2025-IMC-PipHeap__Approximate_Heap_in_the_Pipeline_Empowering_Network_Measurement]] |
+| processed | LotBoNC: Novel Botnet Traffic Classification under Long-tailed Distributions | 2026 | 恶意检测 | [[2026-AsiaCCS-LotBoNC__Novel_Botnet_Traffic_Classification_under_Long-tailed_Distributions]] | [[2026-AsiaCCS-LotBoNC__Novel_Botnet_Traffic_Classification_under_Long-tailed_Distributions]] |
+| processed | Q3Fuzz: Multi-Layered Stateful Fuzzing for the QUIC-HTTP/3 Protocol Stack | 2026 | 协议安全 | [[2026-DSN-Q3Fuzz__Multi-Layered_Stateful_Fuzzing_for_the_QUIC-HTTP_3_Protocol_Stack]] | [[2026-DSN-Q3Fuzz__Multi-Layered_Stateful_Fuzzing_for_the_QUIC-HTTP_3_Protocol_Stack]] |
+| processed | Breaking the Accuracy-Latency Trade-Off in Sketch Compression for Network Measurement | 2026 | 网络测量 | [[2026-IWQoS-Breaking_the_Accuracy-Latency_Trade-Off_in_Sketch_Compression_for_Network_Measurement]] | [[2026-IWQoS-Breaking_the_Accuracy-Latency_Trade-Off_in_Sketch_Compression_for_Network_Measurement]] |
+| important | CDWF: Few-Shot Learning for Cross-Domain Multi-Tab Website Fingerprinting | 2026 | 网站指纹 | [[2026-IWQoS-CDWF__Few-Shot_Learning_for_Cross-Domain_Multi-Tab_Website_Fingerprinting]] | [[2026-IWQoS-CDWF__Few-Shot_Learning_for_Cross-Domain_Multi-Tab_Website_Fingerprinting]] |
+| processed | Dynamic Malicious Encrypted Traffic Detection via Temporal Knowledge Graph in Cloud-Edge Networks | 2026 | 恶意检测 | [[2026-IWQoS-Dynamic_Malicious_Encrypted_Traffic_Detection_via_Temporal_Knowledge_Graph_in_Cloud-Edge_Networks]] | [[2026-IWQoS-Dynamic_Malicious_Encrypted_Traffic_Detection_via_Temporal_Knowledge_Graph_in_Cloud-Edge_Networks]] |
+| processed | Few-Packet Traffic Classification under Dynamic Network Conditions | 2026 | 流量分类 | [[2026-IWQoS-Few-Packet_Traffic_Classification_under_Dynamic_Network_Conditions]] | [[2026-IWQoS-Few-Packet_Traffic_Classification_under_Dynamic_Network_Conditions]] |
+| processed | Multi-View Flow Representation and Relation Graph Modeling for Network Traffic Classification | 2026 | 恶意检测 | [[2026-IWQoS-Multi-View_Flow_Representation_and_Relation_Graph_Modeling_for_Network_Traffic_Classification]] | [[2026-IWQoS-Multi-View_Flow_Representation_and_Relation_Graph_Modeling_for_Network_Traffic_Classification]] |
+| processed | Odysseus: A Context-Level Pre-training Framework for Out-of-Distribution Encrypted Traffic Classification | 2026 | 流量分类 | [[2026-IWQoS-Odysseus__A_Context-Level_Pre-training_Framework_for_Out-of-Distribution_Encrypted_Traffic_Classification]] | [[2026-IWQoS-Odysseus__A_Context-Level_Pre-training_Framework_for_Out-of-Distribution_Encrypted_Traffic_Classification]] |
+| processed | PSM: Timely and Resource-Efficient Sketch Migration in Network Measurement | 2026 | 网络测量 | [[2026-IWQoS-PSM__Timely_and_Resource-Efficient_Sketch_Migration_in_Network_Measurement]] | [[2026-IWQoS-PSM__Timely_and_Resource-Efficient_Sketch_Migration_in_Network_Measurement]] |
+| processed | AdaDoHTool: A test-time adaptive framework for identifying DoH tunneling tools with unknown resolvers | 2026 | 隧道检测 | [[2026-JCN-AdaDoHTool_A_test-time_adaptive_framework_for_identifying_DoH_tunneling_tools_with_unknown_resolvers]] | [[2026-JCN-AdaDoHTool_A_test-time_adaptive_framework_for_identifying_DoH_tunneling_tools_with_unknown_resolvers]] |
+| processed | HALO: Revealing the inadequacy of backdoor defenses in encrypted traffic classification | 2026 | 对抗鲁棒 | [[2026-JCN-HALO__Revealing_the_inadequacy_of_backdoor_defenses_in_encrypted_traffic_classification]] | [[2026-JCN-HALO__Revealing_the_inadequacy_of_backdoor_defenses_in_encrypted_traffic_classification]] |
+| processed | TARL: Multi-task adaptive representation learning for secure encrypted traffic analysis | 2026 | 流量分类 | [[2026-JCN-TARL__Multi-task_adaptive_representation_learning_for_secure_encrypted_traffic_analysis]] | [[2026-JCN-TARL__Multi-task_adaptive_representation_learning_for_secure_encrypted_traffic_analysis]] |
+| processed | Ultra fast encrypted network traffic classification based on classification by retrieval powered by out-of-distribution | 2026 | 流量分类 | [[2026-JCN-Ultra_fast_encrypted_network_traffic_classification_based_on_classification_by_retrieval_powered_by_out-of-distribution]] | [[2026-JCN-Ultra_fast_encrypted_network_traffic_classification_based_on_classification_by_retrieval_powered_by_out-of-distribution]] |
+| processed | STUN comprehension-optional attributes as a covert channel: Design, implementation, and detection | 2026 | 隐蔽通道 | [[2026-JCS-STUN_comprehension-optional_attributes_as_a_covert_channel__Design_implementation_and_detection]] | [[2026-JCS-STUN_comprehension-optional_attributes_as_a_covert_channel__Design_implementation_and_detection]] |
+| processed | Breaking the Generative Steganography Trilemma: ANStega for Optimal Capacity, Efficiency, and Security | 2026 | 隐写 | [[2026-NDSS-Breaking_the_Generative_Steganography_Trilemma__ANStega_for_Optimal_Capacity__Efficiency__and_Security]] | [[2026-NDSS-Breaking_the_Generative_Steganography_Trilemma__ANStega_for_Optimal_Capacity__Efficiency__and_Security]] |
+| processed | Continuous User Behavior Monitoring using DNS Cache Timing Attacks | 2026 | 侧信道 | [[2026-NDSS-Continuous_User_Behavior_Monitoring_using_DNS_Cache_Timing_Attacks]] | [[2026-NDSS-Continuous_User_Behavior_Monitoring_using_DNS_Cache_Timing_Attacks]] |
+| processed | Identifying Logical Vulnerabilities in QUIC Implementations | 2026 | 协议安全 | [[2026-NDSS-Identifying_Logical_Vulnerabilities_in_QUIC_Implementations]] | [[2026-NDSS-Identifying_Logical_Vulnerabilities_in_QUIC_Implementations]] |
+| processed | Looma: A Low-Latency PQTLS Authentication Architecture for Cloud Applications | 2026 | 协议安全 | [[2026-NDSS-Looma__A_Low-Latency_PQTLS_Authentication_Architecture_for_Cloud_Applications]] | [[2026-NDSS-Looma__A_Low-Latency_PQTLS_Authentication_Architecture_for_Cloud_Applications]] |
+| processed | MVPNalyzer: An Investigative Framework for Auditing the Security & Privacy of Mobile VPNs | 2026 | 隐私审计 | [[2026-NDSS-MVPNalyzer__An_Investigative_Framework_for_Auditing_the_Security_&_Privacy_of_Mobile_VPNs]] | [[2026-NDSS-MVPNalyzer__An_Investigative_Framework_for_Auditing_the_Security_&_Privacy_of_Mobile_VPNs]] |
+| processed | TIPSO-GAN: Malicious Network Traffic Detection Using a Novel Optimized Generative Adversarial Network | 2026 | 恶意检测 | [[2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network]] | [[2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network]] |
+| processed | CascadeNet: Generating Network Traffic with High-Fidelity Temporal Patterns | 2026 | 流量生成 | [[2026-NSDI-CascadeNet__Generating_Network_Traffic_with_High-Fidelity_Temporal_Patterns]] | [[2026-NSDI-CascadeNet__Generating_Network_Traffic_with_High-Fidelity_Temporal_Patterns]] |
+| processed | Iris: Expressive Traffic Analysis for the Modern Internet | 2026 | 流量分析 | [[2026-NSDI-Iris__Expressive_Traffic_Analysis_for_the_Modern_Internet]] | [[2026-NSDI-Iris__Expressive_Traffic_Analysis_for_the_Modern_Internet]] |
+| processed | SketchPipe: Toward Accurate Sketch-based Network Measurement on Multi-Pipeline Switches with Splitless Sketch Placement | 2026 | 网络测量 | [[2026-NSDI-SketchPipe__Toward_Accurate_Sketch-based_Network_Measurement_on_Multi-Pipeline_Switches_with_Splitless_Sketch_Placement]] | [[2026-NSDI-SketchPipe__Toward_Accurate_Sketch-based_Network_Measurement_on_Multi-Pipeline_Switches_with_Splitless_Sketch_Placement]] |
+| important | A Measurement of Genuine Tor Traces for Realistic Website Fingerprinting | 2026 | 网站指纹 | [[2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting]] | [[2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting]] |
+| processed | The Future of DNS Privacy: A Comparison of DNS over QUIC and DNS over HTTP/3 | 2026 | 网络测量 | [[2026-PAM-The_Future_of_DNS_Privacy__A_Comparison_of_DNS_over_QUIC_and_DNS_over_HTTP3]] | [[2026-PAM-The_Future_of_DNS_Privacy__A_Comparison_of_DNS_over_QUIC_and_DNS_over_HTTP3]] |
+| processed | Unpacking Internet Ossification: A Large-Scale Study of Path-Impairing Middleboxes Across IPv4 and IPv6 | 2026 | 网络测量 | [[2026-PAM-Unpacking_Internet_Ossification__A_Large-Scale_Study_of_Path-Impairing_Middleboxes_Across_IPv4_and_IPv6]] | [[2026-PAM-Unpacking_Internet_Ossification__A_Large-Scale_Study_of_Path-Impairing_Middleboxes_Across_IPv4_and_IPv6]] |
+| processed | Practical Covert Channel across Isolated Browser Instances via GPU Command Queue Contention | 2026 | 隐蔽通道 | [[2026-S&P-Practical_Covert_Channel_Across_Isolated_Browser_Instances_via_GPU_Command_Queue_Contention]] | [[2026-S&P-Practical_Covert_Channel_Across_Isolated_Browser_Instances_via_GPU_Command_Queue_Contention]] |
+| processed | AirMask: Enabling Air-to-Air Masking of Wireless Traffic Fingerprints in WiFi-Based IoT Environments | 2026 | 无线安全 | [[2026-TDSC-AirMask__Enabling_Air-to-Air_Masking_of_Wireless_Traffic_Fingerprints_in_WiFi-Based_IoT_Environments]] | [[2026-TDSC-AirMask__Enabling_Air-to-Air_Masking_of_Wireless_Traffic_Fingerprints_in_WiFi-Based_IoT_Environments]] |
+| important | MambaTIG: Fast and Robust Encrypted Traffic Detection Leveraging Selective State-Space Masking | 2026 | 恶意检测 | [[2026-TDSC-MambaTIG__Fast_and_Robust_Encrypted_Traffic_Detection_Leveraging_Selective_State-Space_Masking]] | [[2026-TDSC-MambaTIG__Fast_and_Robust_Encrypted_Traffic_Detection_Leveraging_Selective_State-Space_Masking]] |
+| important | BPF-DAG: Byte-Packet-Flow Features Fusion via Dynamic Attributed Graph for Reliable Encrypted Traffic Classification | 2026 | 流量分类 | [[2026-TIFS-BPF-DAG__Byte-Packet-Flow_Features_Fusion_via_Dynamic_Attributed_Graph_for_Reliable_Encrypted_Traffic_Classification]] | [[2026-TIFS-BPF-DAG__Byte-Packet-Flow_Features_Fusion_via_Dynamic_Attributed_Graph_for_Reliable_Encrypted_Traffic_Classification]] |
+| processed | DQSA: Dynamic Quantized Self-Attention for Multi-Task Encrypted Network Traffic Classification | 2026 | 流量分类 | [[2026-TIFS-DQSA_Dynamic_Quantized_Self-Attention_for_Multi-Task_Encrypted_Network_Traffic_Classification]] | [[2026-TIFS-DQSA_Dynamic_Quantized_Self-Attention_for_Multi-Task_Encrypted_Network_Traffic_Classification]] |
+| important | Data-Efficient Cross-Domain Few-Shot Website Fingerprinting With Unsupervised Domain Adaptation | 2026 | 网站指纹 | [[2026-TIFS-Data-Efficient_Cross-Domain_Few-Shot_Website_Fingerprinting_With_Unsupervised_Domain_Adaptation]] | [[2026-TIFS-Data-Efficient_Cross-Domain_Few-Shot_Website_Fingerprinting_With_Unsupervised_Domain_Adaptation]] |
+| important | Graph-Based Contrastive Learning and Clustering for Open-World Encrypted Traffic Classification | 2026 | 流量分类 | [[2026-TIFS-Graph-Based_Contrastive_Learning_and_Clustering_for_Open-World_Encrypted_Traffic_Classification]] | [[2026-TIFS-Graph-Based_Contrastive_Learning_and_Clustering_for_Open-World_Encrypted_Traffic_Classification]] |
+| processed | HookSteg: A Truly Lossless Steganography Based on Process Hooking for Lossy Network Channels | 2026 | 隐写 | [[2026-TIFS-HookSteg__A_Truly_Lossless_Steganography_Based_on_Process_Hooking_for_Lossy_Network_Channels]] | [[2026-TIFS-HookSteg__A_Truly_Lossless_Steganography_Based_on_Process_Hooking_for_Lossy_Network_Channels]] |
+| processed | Robust Malicious Network Traffic Detection Framework With Automated Drift Detection, Identification, and Adaptation | 2026 | 恶意检测 | [[2026-TIFS-Robust_Malicious_Network_Traffic_Detection_Framework_With_Automated_Drift_Detection_Identification_and_Adaptation]] | [[2026-TIFS-Robust_Malicious_Network_Traffic_Detection_Framework_With_Automated_Drift_Detection_Identification_and_Adaptation]] |
+| important | Stinger: A Light-Weight Website Fingerprinting Defense Through Poisoning Packet Sequences | 2026 | 网站指纹 | [[2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences]] | [[2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences]] |
+| processed | Time-Hopping Covert Communication With Random Slots and Dispersed Energy | 2026 | 隐蔽通信 | [[2026-TIFS-Time-Hopping_Covert_Communication_With_Random_Slots_and_Dispersed_Energy]] | [[2026-TIFS-Time-Hopping_Covert_Communication_With_Random_Slots_and_Dispersed_Energy]] |
+| processed | UTFormer: An Ultra-Lightweight Transformer for Traffic Classification | 2026 | 流量分类 | [[2026-TIFS-UTFormer__An_Ultra-Lightweight_Transformer_for_Traffic_Classification]] | [[2026-TIFS-UTFormer__An_Ultra-Lightweight_Transformer_for_Traffic_Classification]] |
+| processed | Characterization and Prediction of Cell-Level Mobile Network Traffic: A Reinforced Meta-Learning-Based Framework | 2026 | 流量预测 | [[2026-TMC-Characterization_and_Prediction_of_Cell-Level_Mobile_Network_Traffic__A_Reinforced_Meta-Learning-Based_Framework]] | [[2026-TMC-Characterization_and_Prediction_of_Cell-Level_Mobile_Network_Traffic__A_Reinforced_Meta-Learning-Based_Framework]] |
+| processed | When Steganography Meets Semantic Communication: An Authorizable Data Transmission Paradigm | 2026 | 隐写 | [[2026-TMC-When_Steganography_Meets_Semantic_Communication__An_Authorizable_Data_Transmission_Paradigm]] | [[2026-TMC-When_Steganography_Meets_Semantic_Communication__An_Authorizable_Data_Transmission_Paradigm]] |
+| processed | BPF-GNN: A Multi-Granularity Feature Extraction Model Using Graph Neural Networks for Encrypted Traffic Classification | 2026 | 流量分类 | [[2026-TNSM-BPF-GNN__A_Multi-Granularity_Feature_Extraction_Model_Using_Graph_Neural_Networks_for_Encrypted_Traffic_Classification]] | [[2026-TNSM-BPF-GNN__A_Multi-Granularity_Feature_Extraction_Model_Using_Graph_Neural_Networks_for_Encrypted_Traffic_Classification]] |
+| processed | Comparative Analysis of Deep Learning Models for Real-World ISP Network Traffic Forecasting | 2026 | 流量预测 | [[2026-TNSM-Comparative_Analysis_of_Deep_Learning_Models_for_Real-World_ISP_Network_Traffic_Forecasting]] | [[2026-TNSM-Comparative_Analysis_of_Deep_Learning_Models_for_Real-World_ISP_Network_Traffic_Forecasting]] |
+| processed | Hardware-Aware Neural Architecture Search for Encrypted Traffic Classification on Resource-Constrained Devices | 2026 | 流量分类 | [[2026-TNSM-Hardware-Aware_Neural_Architecture_Search_for_Encrypted_Traffic_Classification_on_Resource-Constrained_Devices]] | [[2026-TNSM-Hardware-Aware_Neural_Architecture_Search_for_Encrypted_Traffic_Classification_on_Resource-Constrained_Devices]] |
+| important | HyTMTC: A Pre-Training Method for Multi-Scenario Network Traffic Classification With Hybrid Transformer-Mamba | 2026 | 流量分类 | [[2026-TNSM-HyTMTC__A_Pre-Training_Method_for_Multi-Scenario_Network_Traffic_Classification_With_Hybrid_Transformer-Mamba]] | [[2026-TNSM-HyTMTC__A_Pre-Training_Method_for_Multi-Scenario_Network_Traffic_Classification_With_Hybrid_Transformer-Mamba]] |
+| processed | MIRAGE-DoH: Metamorphic Intelligence and Resilient AI Grid for Autonomous Governance of Encrypted DNS | 2026 | 隧道检测 | [[2026-TNSM-MIRAGE-DoH__Metamorphic_Intelligence_and_Resilient_AI_Grid_for_Autonomous_Governance_of_Encrypted_DNS]] | [[2026-TNSM-MIRAGE-DoH__Metamorphic_Intelligence_and_Resilient_AI_Grid_for_Autonomous_Governance_of_Encrypted_DNS]] |
+| processed | RISK-4-AUTO: Residually Interconnected and Superimposed Kolmogorov-Arnold Networks for Automotive Network Traffic Classification | 2026 | 车载网络 | [[2026-TNSM-RISK-4-Auto__Residually_Interconnected_and_Superimposed_Kolmogorov-Arnold_Networks_for_Automotive_Network_Traffic_Classification]] | [[2026-TNSM-RISK-4-Auto__Residually_Interconnected_and_Superimposed_Kolmogorov-Arnold_Networks_for_Automotive_Network_Traffic_Classification]] |
+| processed | Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP | 2026 | 协议安全 | [[2026-USENIX-Analyzing_the_WebRTC_Ecosystem_and_Breaking_Authentication_in_DTLS-SRTP]] | [[2026-USENIX-Analyzing_the_WebRTC_Ecosystem_and_Breaking_Authentication_in_DTLS-SRTP]] |
+| processed | Breaking the Boundaries: Analyzing QUIC Frame-Packet Interactions With QUIC-Attacker | 2026 | 协议安全 | [[2026-USENIX-Breaking_the_Boundaries__Analyzing_QUIC_Frame-Packet_Interactions_With_QUIC-Attacker]] | [[2026-USENIX-Breaking_the_Boundaries__Analyzing_QUIC_Frame-Packet_Interactions_With_QUIC-Attacker]] |
+| processed | Crypto Wars in Secure Messaging: Covert Channels in Signal Despite Leaked Keys | 2026 | 隐蔽通道 | [[2026-USENIX-Crypto_Wars_in_Secure_Messaging__Covert_Channels_in_Signal_Despite_Leaked_Keys]] | [[2026-USENIX-Crypto_Wars_in_Secure_Messaging__Covert_Channels_in_Signal_Despite_Leaked_Keys]] |
+| processed | From Symmetry toward Weak Asymmetry: Secure Steganography under the Receiver's Partial Channel Knowledge | 2026 | 隐写 | [[2026-USENIX-From_Symmetry_toward_Weak_Asymmetry__Secure_Steganography_under_the_Receiver's_Partial_Channel_Knowledge]] | [[2026-USENIX-From_Symmetry_toward_Weak_Asymmetry__Secure_Steganography_under_the_Receiver's_Partial_Channel_Knowledge]] |
+| processed | Hop: A Modern Transport and Remote Access Protocol | 2026 | 协议安全 | [[2026-USENIX-Hop__A_Modern_Transport_and_Remote_Access_Protocol]] | [[2026-USENIX-Hop__A_Modern_Transport_and_Remote_Access_Protocol]] |
+| processed | InSPECtor: Improving SLEIGH Processor Specification Veracity via Proxy | 2026 | 逆向工程 | [[2026-USENIX-InSPECtor__Improving_SLEIGH_Specification_Veracity_via_Proxy]] | [[2026-USENIX-InSPECtor__Improving_SLEIGH_Specification_Veracity_via_Proxy]] |
+| deep-analyzed | Motion in the Clear: Reconstructing VR User Behavior from Network Traffic | 2026 | 流量分类 | [[2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic]] | [[2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic]] |
+| processed | Opossum Attack: Application-Layer Desynchronization using Opportunistic TLS | 2026 | 协议安全 | [[2026-USENIX-Opossum_Attack__Application_Layer_Desynchronization_using_Opportunistic_TLS]] | [[2026-USENIX-Opossum_Attack__Application_Layer_Desynchronization_using_Opportunistic_TLS]] |
+| processed | Provable Secure Steganography Based on Adaptive Dynamic Sampling | 2026 | 隐写 | [[2026-USENIX-Provable_Secure_Steganography_Based_on_Adaptive_Dynamic_Sampling]] | [[2026-USENIX-Provable_Secure_Steganography_Based_on_Adaptive_Dynamic_Sampling]] |
+| processed | Remise: Authorized Anonymous Communication Systems | 2026 | 匿名通信 | [[2026-USENIX-Remise__Authorized_Anonymous_Communication_Systems]] | [[2026-USENIX-Remise__Authorized_Anonymous_Communication_Systems]] |
+| processed | Revelio: A Global Study of VoIP Blocking | 2026 | 审查对抗 | [[2026-USENIX-Revelio__A_Global_Study_of_VoIP_Blocking]] | [[2026-USENIX-Revelio__A_Global_Study_of_VoIP_Blocking]] |
+| important | Towards Practical Few-shot Multi-tab Website Fingerprinting | 2026 | 网站指纹 | [[2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting]] | [[2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting]] |
+| important | Tracegram: Framing Trace-Level Traffic Analysis with Temporally-Aware Multiple Instance Learning | 2026 | 流量分类 | [[2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning]] | [[2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning]] |
+| processed | TrojPix: Electromagnetic Covert Channels via Imperceptible Pixel Modulation | 2026 | 隐蔽通道 | [[2026-USENIX-TrojPix__Electromagnetic_Covert_Channels_via_Imperceptible_Pixel_Modulation]] | [[2026-USENIX-TrojPix__Electromagnetic_Covert_Channels_via_Imperceptible_Pixel_Modulation]] |
+| processed | AVP-Inspect: Coordinated Cyber-Physical Testing for Privacy Analysis of COTS Apple Vision Pro Applications | 2026 | 隐私审计 | [[2026-arXiv-AVP-Inspect__Coordinated_Cyber-Physical_Testing_for_Privacy_Analysis_of_COTS_Apple_Vision_Pro_Applications]] | [[2026-arXiv-AVP-Inspect__Coordinated_Cyber-Physical_Testing_for_Privacy_Analysis_of_COTS_Apple_Vision_Pro_Applications]] |
+| processed | Arbitrary Cipher Attacks Against Large Language Models Do Not Require Fine-Tuning | 2026 | LLM安全 | [[2026-arXiv-Arbitrary_Cipher_Attacks_Against_Large_Language_Models_Do_Not_Require_Fine-Tuning]] | [[2026-arXiv-Arbitrary_Cipher_Attacks_Against_Large_Language_Models_Do_Not_Require_Fine-Tuning]] |
+| processed | Chameleon: Robust Defense Against Tor Website Fingerprinting via Many-to-Many Traffic Morphing | 2026 | 网站指纹 | [[2026-arXiv-Chameleon__Robust_Defense_Against_Tor_Website_Fingerprinting_via_Many-to-Many_Traffic_Morphing]] | [[2026-arXiv-Chameleon__Robust_Defense_Against_Tor_Website_Fingerprinting_via_Many-to-Many_Traffic_Morphing]] |
+| processed | CipherSight: Robust Website Fingerprinting via Record-Resource Semantic Supervision under Distribution Shifts | 2026 | 网站指纹 | [[2026-arXiv-CipherSight__Robust_Website_Fingerprinting_via_Record-Resource_Semantic_Supervision_under_Distribution_Shifts]] | [[2026-arXiv-CipherSight__Robust_Website_Fingerprinting_via_Record-Resource_Semantic_Supervision_under_Distribution_Shifts]] |
+| processed | Conformal Prediction for Offensive Security | 2026 | 对抗鲁棒 | [[2026-arXiv-Conformal_Prediction_for_Offensive_Security]] | [[2026-arXiv-Conformal_Prediction_for_Offensive_Security]] |
+| processed | Covert Communication with Spatially Heterogeneous User Cooperation Against a Geometry-Aware Warden | 2026 | 隐蔽通信 | [[2026-arXiv-Covert_Communication_with_Spatially_Heterogeneous_User_Cooperation_Against_a_Geometry-Aware_Warden]] | [[2026-arXiv-Covert_Communication_with_Spatially_Heterogeneous_User_Cooperation_Against_a_Geometry-Aware_Warden]] |
+| processed | Generative AI for Encrypted Traffic Analysis: Synthetic Dataset Generation and Classifier Evaluation | 2026 | 流量分类 | [[2026-arXiv-Generative_AI_for_Encrypted_Traffic_Analysis__Synthetic_Dataset_Generation_and_Classifier_Evaluation]] | [[2026-arXiv-Generative_AI_for_Encrypted_Traffic_Analysis__Synthetic_Dataset_Generation_and_Classifier_Evaluation]] |
+| processed | Hidden Threat in Synthetic Data: Covert Targeted Bias Injection through Benign Text | 2026 | LLM安全 | [[2026-arXiv-Hidden_Threat_in_Synthetic_Data__Covert_Targeted_Bias_Injection_through_Benign_Text]] | [[2026-arXiv-Hidden_Threat_in_Synthetic_Data__Covert_Targeted_Bias_Injection_through_Benign_Text]] |
+| processed | Mitigating Proxy-Induced Traffic Drift in Website Fingerprinting via Model-Agnostic Traffic Tailoring | 2026 | 网站指纹 | [[2026-arXiv-Mitigating_Proxy-Induced_Traffic_Drift_in_Website_Fingerprinting_via_Model-Agnostic_Traffic_Tailoring]] | [[2026-arXiv-Mitigating_Proxy-Induced_Traffic_Drift_in_Website_Fingerprinting_via_Model-Agnostic_Traffic_Tailoring]] |
+| processed | PERO: Efficient Robust Post-Training Foundation Models for Encrypted Traffic Classification | 2026 | 流量分类 | [[2026-arXiv-PERO__Efficient_Robust_Post-Training_Foundation_Models_for_Encrypted_Traffic_Classification]] | [[2026-arXiv-PERO__Efficient_Robust_Post-Training_Foundation_Models_for_Encrypted_Traffic_Classification]] |
+| processed | PQLN: Post-Quantum Security for the Bitcoin Lightning Network's Off-Chain Surfaces | 2026 | 协议安全 | [[2026-arXiv-PQLN__Post-Quantum_Security_for_the_Bitcoin_Lightning_Network's_Off-Chain_Surfaces]] | [[2026-arXiv-PQLN__Post-Quantum_Security_for_the_Bitcoin_Lightning_Network's_Off-Chain_Surfaces]] |
+| processed | Practice Makes (Im)Perfect: A Look Back at Benchmarking Practices for Microarchitectural Side-Channel Attacks | 2026 | 侧信道 | [[2026-arXiv-Practice_Makes_(Im)Perfect__A_Look_Back_at_Benchmarking_Practices_for_Microarchitectural_Side-Channel_Attacks]] | [[2026-arXiv-Practice_Makes_(Im)Perfect__A_Look_Back_at_Benchmarking_Practices_for_Microarchitectural_Side-Channel_Attacks]] |
+| processed | Pruned Traffic Trees: Native Semantic Compression with a Protocol-Structured Model Family for Encrypted Traffic Classification | 2026 | 流量分类 | [[2026-arXiv-Pruned_Traffic_Trees__Native_Semantic_Compression_with_a_Protocol-Structured_Model_Family_for_Encrypted_Traffic_Classification]] | [[2026-arXiv-Pruned_Traffic_Trees__Native_Semantic_Compression_with_a_Protocol-Structured_Model_Family_for_Encrypted_Traffic_Classification]] |
+| processed | Robust Coverless Linguistic Steganography via Sentence Embedding Space with Global Resynchronization | 2026 | 隐写 | [[2026-arXiv-Robust_Coverless_Linguistic_Steganography_via_Sentence_Embedding_Space_with_Global_Resynchronization]] | [[2026-arXiv-Robust_Coverless_Linguistic_Steganography_via_Sentence_Embedding_Space_with_Global_Resynchronization]] |
+| processed | SLAC: Access-Driven CPU-to-GPU Side-channel Attacks via System-Level Cache on Apple Silicon | 2026 | 侧信道 | [[2026-arXiv-SLAC__Access-Driven_CPU-to-GPU_Side-channel_Attacks_via_System-Level_Cache_on_Apple_Silicon]] | [[2026-arXiv-SLAC__Access-Driven_CPU-to-GPU_Side-channel_Attacks_via_System-Level_Cache_on_Apple_Silicon]] |
+| processed | SkillWatermark: An Embedded Skill Watermark of Progressive Privacy Inference via Benign Prompts | 2026 | 隐私推断 | [[2026-arXiv-SkillWatermark__An_Embedded_Skill_Watermark_of_Progressive_Privacy_Inference_via_Benign_Prompts]] | [[2026-arXiv-SkillWatermark__An_Embedded_Skill_Watermark_of_Progressive_Privacy_Inference_via_Benign_Prompts]] |
+| processed | SoK: Where Do Flow Labels Come From? Auditing Label Provenance in Encrypted Traffic Benchmarks | 2026 | 流量分类 | [[2026-arXiv-SoK__Where_Do_Flow_Labels_Come_From__Auditing_Label_Provenance_in_Encrypted_Traffic_Benchmarks]] | [[2026-arXiv-SoK__Where_Do_Flow_Labels_Come_From__Auditing_Label_Provenance_in_Encrypted_Traffic_Benchmarks]] |
+| processed | TDDM-Melatt: A Decoupled Memory and Diffusion Framework for Generalizable Encrypted Traffic Classification | 2026 | 流量分类 | [[2026-arXiv-TDDM-Melatt__A_Decoupled_Memory_and_Diffusion_Framework_for_Generalizable_Encrypted_Traffic_Classification]] | [[2026-arXiv-TDDM-Melatt__A_Decoupled_Memory_and_Diffusion_Framework_for_Generalizable_Encrypted_Traffic_Classification]] |
+| processed | The Colossus with Feet of Clay: Debunking Encrypted Traffic Classifiers under PQC Evolution | 2026 | 网站指纹 | [[2026-arXiv-The_Colossus_with_Feet_of_Clay__Debunking_Encrypted_Traffic_Classifiers_under_PQC_Evolution]] | [[2026-arXiv-The_Colossus_with_Feet_of_Clay__Debunking_Encrypted_Traffic_Classifiers_under_PQC_Evolution]] |
+| processed | The Hidden Life of Public Safety Communications Signals: A Comparative Security Analysis of TETRA, TETRAPOL, and P25 | 2026 | 无线安全 | [[2026-arXiv-The_Hidden_Life_of_Public_Safety_Communications_Signals__A_Comparative_Security_Analysis_of_TETRA__TETRAPOL__and_P25]] | [[2026-arXiv-The_Hidden_Life_of_Public_Safety_Communications_Signals__A_Comparative_Security_Analysis_of_TETRA__TETRAPOL__and_P25]] |
+| processed | Understanding the Privacy-Preserving Potential of HTTP/2 Against Webpage Fingerprinting | 2026 | 网站指纹 | [[2026-arXiv-Understanding_the_Privacy-Preserving_Potential_of_HTTP_2_Against_Webpage_Fingerprinting]] | [[2026-arXiv-Understanding_the_Privacy-Preserving_Potential_of_HTTP_2_Against_Webpage_Fingerprinting]] |
 
 ---
 
@@ -215,4 +315,83 @@
 | reading | 正在阅读 |
 | processed | 已完成结构化笔记 |
 | important | 核心论文，值得深读或复现 |
+| deep-analyzed | 已深度分析（L3 级论文） |
 | skipped | 暂不处理 |
+
+| 2025 | WWW | [[2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models]] | processed | medium |
+
+| 2025 | WWW | [[2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection]] | processed | medium |
+
+| 2025 | WWW | [[2025-WWW-Facing_Anomalies_Head-On__Network_Traffic_Anomaly_Detection_via_Uncertainty_Inspired_Inter-Sample_Differences]] | processed | medium |
+
+| 2025 | WWW | [[2025-WWW-Helios__Learning_and_Adaptation_of_Matching_Rules_for_Continual_In_Network_Malicious_Traffic_Detection]] | processed | medium |
+
+| 2025 | WWW | [[2025-WWW-ODNS_Clustering__Unveiling_Client-Side_Dependency_in_Open_DNS_Infrastructure]] | processed | medium |
+
+| 2026 | IMC | [[2026-IMC-Mind_the_Gap__Policy_vs_Reality_in_Post-Quantum_TLS_Deployment]] | processed | medium |
+
+| 2026 | IMC | [[2026-IMC-Quantifying_the_Privacy_Implications_of_High-Fidelity_Synthetic_Network_Traffic]] | processed | medium |
+
+| 2026 | IMC | [[2026-IMC-Replicability__Challenging_the_Myth_of_Randomness_Patterns_in_Encrypted_Traffic]] | processed | medium |
+
+| 2026 | JCN | [[2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network]] | processed | medium |
+
+| 2026 | JCN | [[2026-JCN-Towards_adaptive_and_robust_website_fingerprinting_defense_with_multi-agent_deep_reinforcement_learning]] | processed | medium |
+
+| 2026 | JCS | [[2026-JCS-GAN-based_Tor_obfuscated_traffic_identification_on_imbalanced_datasets]] | processed | medium |
+
+| 2026 | JCS | [[2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification]] | processed | medium |
+
+| 2026 | JCS | [[2026-JCS-Uncovering_robot_joint-level_controller_actions_from_encrypted_network _traffic__Empirical_attacks_and_information-theoretic_bounds]] | processed | medium |
+
+| 2026 | NSDI | [[2026-NSDI-FENIX__Enabling_In-Network_DNN_Inference_with_FPGA-Enhanced_Programmable_Switches]] | processed | medium |
+
+| 2026 | TDSC | [[2026-TDSC-Ultimate_Encrypted_Traffic_Feature_Engineering_HTTPS_Encrypted_Traffic_Classification_Using_Restored_Application_Data_Unit_Length]] | processed | medium |
+
+| 2026 | TNSM | [[2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking]] | processed | medium |
+
+| 2026 | TNSM | [[2026-TNSM-TunnelEye_An_Explainable_Framework_for_Real-Time_Detection_of_Malicious_DoH_Traffic_in_High-Speed_Backbone_Networks]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-Cardinality_is_Not_Enough__Super_Host_Detection_via_Segmented_Cardinality_Estimation]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-Eclipse_Attacks_on_Ethereum’s_Peer-to-Peer_Network]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-Forge__A_Robust_Multi-tab_Website_Fingerprinting_Attack_Via_Blind_Source_Separation]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-HiFi-WF__Toward_Realistic_Website_Fingerprinting_with_Multi-tab_and_Subpage_Recognition]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-JitterSketch__Finding_Jittery_Flows_in_Network_Streams]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-Less_is_More__Simplifying_Network_Traffic_Classification_Leveraging_RFCs]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-RoFiRe__Robust_Website_Fingerprinting_on_Real-World_Tor_Traffic_via_Improved_Augmentation_and_Normalization]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-SemFuzz__A_Semantics-Aware_Fuzzing_Framework_for_Network_Protocol_Implementations]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-Tracking_the_Stray_Sheep__Understanding_DNS_Response_Manipulation_in_the_Wild]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-Unveiling_the_Underground_Phishing_Ecosystem__A_12-Year_Longitudinal_Study_of_Deep_and_Dark_Web_Forums]] | processed | medium |
+
+| 2026 | WWW | [[2026-WWW-Zero-Shot_Forecasting_of_Network_Dynamics_through_Weight_Flow_Matching]] | processed | medium |
+
+| 2026 | arXiv | [[2026-arXiv-A_Priority-Aware_Dual-Channel_Feature_Fusion_Method_for_Urban_Rail_Service_Traffic_Classification]] | processed | medium |
+
+| 2026 | arXiv | [[2026-arXiv-Despite_Instructions__Frontier_Agents_Improvise_Covert_Channels_at_Test_Time]] | processed | medium |
+
+| 2026 | arXiv | [[2026-arXiv-Exact_Second-Order_Asymptotics_in_Covert_Communication_Over_Discrete_Memoryless_Channels]] | processed | medium |
+
+| 2026 | arXiv | [[2026-arXiv-Feedback_Coding_Enables_Inference-Time_Covert_Agentic_Communication]] | processed | medium |
+
+| 2026 | arXiv | [[2026-arXiv-Improving_the_Reliability_of_Anomaly_Detection_for_Encrypted_OPC_UA_Traffic_over_Private_5G]] | processed | medium |
+
+| 2026 | arXiv | [[2026-arXiv-Multiplexing_approaches_to_thermoradiative_signatureless_communications]] | processed | medium |
+
+| 2026 | arXiv | [[2026-arXiv-Robust_Transceiver_Design_for_SIM-Assisted_Integrated_Sensing_and_Covert_Communications]] | processed | medium |
+
+| 2026 | arXiv | [[2026-arXiv-Secrets_in_Radio_Waves__Towards_Practical_and_Protocol-Agnostic_PHY_Information_Hiding]] | processed | medium |
+
+| 2026 | arXiv | [[2026-arXiv-Unknown-Traffic_Detection_Calibration_and_Shortcut_Reliance_in_Distilled_Encrypted-Traffic_Classifiers_over_One_Year]] | processed | medium |
+
+| 2026 | arXiv | [[2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams]] | processed | medium |

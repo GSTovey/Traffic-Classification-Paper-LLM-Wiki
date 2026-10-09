@@ -2,7 +2,7 @@
 type: comparison
 name: open-source-registry
 created: "2026-05-29"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # 开源模型/方法注册表
@@ -75,6 +75,41 @@ updated: "2026-08-17"
 | 54 | M-En Framework | 2026 | 多环境恶意流量检测 | [GitHub](https://github.com/furqanrustam/M-En-PLS-and-RNN-LSTM-Ubuntu-Simulation)（URL 为推断值，需核实） | 代码 + 数据生成脚本 | Python | [[2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_detection_in_multi-environment_networks]] |
 | 55 | HTPA 数据集 | 2025 | 混淆 HTTPS 隧道检测 | GitHub（论文 Dataset link，HTTPS Tunneling Predictive Analysis Dataset） | 仅数据集（132 万条流；模型代码未公开） | — | [[2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneous_information_network]] |
 | 56 | Reality Check 数据集 | 2026 | 开放世界 WF 评估 | [OSF](https://osf.io/9m8ea/) | 仅数据集（80 万+ traces） | — | [[2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World]] |
+| 57 | BTRFormer | 2025 | 加密流量分类；恶意流量检测 | [GitHub](https://github.com/yyyjn/BTRFormer) | 部分开源（论文称"Part of code is available"） | PyTorch 1.13.1 + Python 3.9 | [[2025-ICNP-BTRFormer__Hierarchical_Learning_of_Encrypted_Traffic_Using_a_Masked_Autoencoder_with_Block-Based_Traffic_Representation]] |
+| 58 | PipHeap | 2025 | 异常检测（网络测量） | [GitHub](https://github.com/PipHeap/PipHeap) | 代码（P4 + C++ 实现） | P4 + C++ | [[2025-IMC-PipHeap__Approximate_Heap_in_the_Pipeline_Empowering_Network_Measurement]] |
+| 59 | LotBoNC | 2026 | 恶意流量检测；僵尸网络分类 | [GitHub](https://github.com/watsonhuhpi/LotBoNC) | 代码 | — | [[2026-AsiaCCS-LotBoNC__Novel_Botnet_Traffic_Classification_under_Long-tailed_Distributions]] |
+| 60 | PSM | 2026 | — | GitHub（解析稿 URL 含空格，需核实：`https://github.com/zxzx2002/Sketch Migration.git`） | 代码 | — | [[2026-IWQoS-PSM__Timely_and_Resource-Efficient_Sketch_Migration_in_Network_Measurement]] |
+| 61 | Mercuriuzz (QUIC 逻辑漏洞挖掘) | 2026 | — | [Zenodo](https://doi.org/10.5281/zenodo.17015304) | artifact 归档（主程序在 GitHub 仓库 Mercuriuzz，解析稿未保留完整 URL） | — | [[2026-NDSS-Identifying_Logical_Vulnerabilities_in_QUIC_Implementations]] |
+| 62 | Looma | 2026 | — | [GitHub](https://github.com/uoenoplab/looma) | 实现与基准工具 | — | [[2026-NDSS-Looma__A_Low-Latency_PQTLS_Authentication_Architecture_for_Cloud_Applications]] |
+| 63 | TIPSO-GAN | 2026 | 恶意流量检测；异常检测 | [Zenodo](https://doi.org/10.5281/zenodo.17759516) | artifact / 代码归档（未给出 GitHub 仓库） | Python 3.10 + TensorFlow 2.15.0 | [[2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network]] |
+| 64 | CascadeNet | 2026 | 流量表征生成；异常检测 | [GitHub](https://github.com/lurw2000/CascadeNet) | 代码（4000+ 行） | PyTorch 2.1.0 | [[2026-NSDI-CascadeNet__Generating_Network_Traffic_with_High-Fidelity_Temporal_Patterns]] |
+| 65 | Iris | 2026 | 隧道检测；加密流量检测 | [GitHub](https://github.com/stanford-esrg/iris) | 代码（Apache 2.0） | Rust | [[2026-NSDI-Iris__Expressive_Traffic_Analysis_for_the_Modern_Internet]] |
+| 66 | GTT23 | 2026 | 网站指纹攻击 | [Zenodo](https://doi.org/10.5281/zenodo.10620520) | 仅数据集（真实 Tor 踪迹；受控发布，需申请） | — | [[2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting]] |
+| 67 | DNS Privacy Dataset (DoQ vs DoH/3) | 2026 | — | [Zenodo](https://doi.org/10.5281/zenodo.17860118) | 仅数据集（resolver 特征/时延记录 + 网页加载指标） | — | [[2026-PAM-The_Future_of_DNS_Privacy__A_Comparison_of_DNS_over_QUIC_and_DNS_over_HTTP3]] |
+| 68 | C3F (GPU Covert Channel) | 2026 | — | [GitHub](https://github.com/HugoLeoLJH/C3F) | 代码 + 在线 demo | JavaScript + Python | [[2026-S&P-Practical_Covert_Channel_Across_Isolated_Browser_Instances_via_GPU_Command_Queue_Contention]] |
+| 69 | AirMask | 2026 | — | [GitHub](https://github.com/smith0818/AirMask) | 代码 + 数据集 | — | [[2026-TDSC-AirMask__Enabling_Air-to-Air_Masking_of_Wireless_Traffic_Fingerprints_in_WiFi-Based_IoT_Environments]] |
+| 70 | Stinger | 2026 | 网站指纹防御 | [GitHub](https://github.com/sxy888/Stinger-prototype) | 代码（原型系统）+ 实验细节 | — | [[2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences]] |
+| 71 | UTFormer | 2026 | 加密流量分类 | [GitHub](https://github.com/utformer/UTFormer) | 代码 | PyTorch 1.13.1 | [[2026-TIFS-UTFormer__An_Ultra-Lightweight_Transformer_for_Traffic_Classification]] |
+| 72 | ISP Forecasting Benchmark | 2026 | 异常检测（ISP 流量预测） | [GitHub](https://github.com/koumajos/isp-forecasting-benchmark) | 代码 + 实验配置 | — | [[2026-TNSM-Comparative_Analysis_of_Deep_Learning_Models_for_Real-World_ISP_Network_Traffic_Forecasting]] |
+| 73 | ProtectIT | 2026 | 加密流量分类；应用指纹 | [GitHub](https://github.com/SEAlab-unige/ProtectIT) | 代码 | Keras/TensorFlow | [[2026-TNSM-Hardware-Aware_Neural_Architecture_Search_for_Encrypted_Traffic_Classification_on_Resource-Constrained_Devices]] |
+| 74 | HyTMTC | 2026 | 多场景流量分类 | [GitHub](https://github.com/PolinaH/HyTMTC) | 代码（论文称发表后开源） | — | [[2026-TNSM-HyTMTC__A_Pre-Training_Method_for_Multi-Scenario_Network_Traffic_Classification_With_Hybrid_Transformer-Mamba]] |
+| 75 | RISK-4-Auto | 2026 | 车载网络流量分类；恶意流量检测 | [GitHub](https://github.com/Anurag-Dutta/RISK-4-Auto) | 代码 + 部分 2D 直方图数据 | — | [[2026-TNSM-RISK-4-Auto__Residually_Interconnected_and_Superimposed_Kolmogorov-Arnold_Networks_for_Automotive_Network_Traffic_Classification]] |
+| 76 | WebRTC DTLS-SRTP Artifact (DMS) | 2026 | — | [Zenodo](https://doi.org/10.5281/zenodo.17880120) | artifact（DMS 框架、pcaps、报告、Chromium 补丁、漏洞录像） | — | [[2026-USENIX-Analyzing_the_WebRTC_Ecosystem_and_Breaking_Authentication_in_DTLS-SRTP]] |
+| 77 | QUIC-Attacker | 2026 | — | [GitHub](https://github.com/tls-attacker/TLS-Attacker)；[GitHub](https://github.com/tls-attacker/QUIC-Docker-Library) | 代码（QUIC-Attacker 为 TLS-Attacker 套件一部分）+ 15 个 QUIC 实现的 Docker 镜像 | — | [[2026-USENIX-Breaking_the_Boundaries__Analyzing_QUIC_Frame-Packet_Interactions_With_QUIC-Attacker]] |
+| 78 | Hop | 2026 | — | [Zenodo](https://doi.org/10.5281/zenodo.17953397) | 源码 + Mininet 脚本 + 测量与绘图脚本 + 文档 | — | [[2026-USENIX-Hop__A_Modern_Transport_and_Remote_Access_Protocol]] |
+| 79 | Motion in the Clear (PACMO) | 2026 | 流量分类（VR 行为重建） | [Zenodo](https://doi.org/10.5281/zenodo.20343460) | PACMO Python 实现 + VCR profiling 脚本（原始抓包与运动数据不公开） | Python | [[2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic]] |
+| 80 | Opossum Attack | 2026 | — | [Zenodo](https://doi.org/10.5281/zenodo.17855525) | artifact 归档 | — | [[2026-USENIX-Opossum_Attack__Application_Layer_Desynchronization_using_Opportunistic_TLS]] |
+| 81 | Remise | 2026 | — | [Zenodo](https://zenodo.org/records/20438384) | artifact 归档 | — | [[2026-USENIX-Remise__Authorized_Anonymous_Communication_Systems]] |
+| 82 | Revelio | 2026 | 应用指纹（VoIP 封锁测量） | [Zenodo](https://doi.org/10.5281/zenodo.20362017) | 代码 / 测量数据 | — | [[2026-USENIX-Revelio__A_Global_Study_of_VoIP_Blocking]] |
+| 83 | Tracegram | 2026 | Trace 级流量分析；恶意流量检测 | [GitHub](https://github.com/YuchenZhang-Academic/Tracegram) | 代码（实现与合成示例另见 Zenodo 10.5281/zenodo.17978903；原始数据集受许可限制不重分发） | — | [[2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning]] |
+| 84 | AVP-Inspect | 2026 | — | [GitHub](https://github.com/SECSAT-LAB-GMU/AVP-Inspect) | 代码 | — | [[2026-arXiv-AVP-Inspect__Coordinated_Cyber-Physical_Testing_for_Privacy_Analysis_of_COTS_Apple_Vision_Pro_Applications]] |
+| 85 | Synthetic Traffic Generator | 2026 | 加密流量分类；异常检测 | [GitHub](https://github.com/harshilpatel22/Synthetic-Traffic-Generator) | 代码 + 合成数据集 | — | [[2026-arXiv-Generative_AI_for_Encrypted_Traffic_Analysis__Synthetic_Dataset_Generation_and_Classifier_Evaluation]] |
+| 86 | PA3 | 2026 | 网站指纹攻击（代理漂移） | [GitHub](https://github.com/wesly2000/PA3) | 源码 + 全部数据集（约 1 TB） | — | [[2026-arXiv-Mitigating_Proxy-Induced_Traffic_Drift_in_Website_Fingerprinting_via_Model-Agnostic_Traffic_Tailoring]] |
+| 87 | PERO | 2026 | 加密流量分类；恶意流量检测 | [4open.science](https://anonymous.4open.science/r/PERO-D0A7) | 代码（匿名仓库，称录用后发布完整实现） | PyTorch | [[2026-arXiv-PERO__Efficient_Robust_Post-Training_Foundation_Models_for_Encrypted_Traffic_Classification]] |
+| 88 | Pruned Traffic Trees | 2026 | 加密流量分类 | [4open.science](https://anonymous.4open.science/r/pruned_traffic_trees-D08C) | 代码（匿名仓库） | — | [[2026-arXiv-Pruned_Traffic_Trees__Native_Semantic_Compression_with_a_Protocol-Structured_Model_Family_for_Encrypted_Traffic_Classification]] |
+| 89 | SoK Flow Labels | 2026 | 流量分类；网站指纹；基准审计 | [4open.science](https://anonymous.4open.science/r/traffic_dataset_audit_script-440B/) | 审计脚本 + 配对语料 | — | [[2026-arXiv-SoK__Where_Do_Flow_Labels_Come_From__Auditing_Label_Provenance_in_Encrypted_Traffic_Benchmarks]] |
+| 90 | Colossus (PQ-WF-Eval) | 2026 | 网站指纹攻击；加密流量分类 | [4open.science](http://anonymous.4open.science/r/PQ-WF-Eval) | 代码（匿名仓库） | — | [[2026-arXiv-The_Colossus_with_Feet_of_Clay__Debunking_Encrypted_Traffic_Classifiers_under_PQC_Evolution]] |
+| 91 | BBQ (HTTP/2 WF) | 2026 | 网站指纹攻击/防御评测 | [GitHub](https://github.com/bcebere/Understanding-the-Privacy-Preserving-Potential-of-HTTP2-Against-Webpage-Fingerprinting) | 代码（含 wfaudit 工具、采集/重放管线、基准代码） | — | [[2026-arXiv-Understanding_the_Privacy-Preserving_Potential_of_HTTP_2_Against_Webpage_Fingerprinting]] |
 
 ---
 
@@ -91,6 +126,8 @@ updated: "2026-08-17"
 | DawnGuard | 2026 | 待确认 | 论文声称开源（"We release the dataset and source code of DawnGuard"），但正文未出现仓库 URL | [[2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temporal_Graph_Learning]] |
 | FlowSem-MAE | 2026 | 待确认 | 论文声明将在补充材料中提供代码和模型参数，尚未确认具体链接 | [[2026-arXiv-Where_Do_Flow_Semantics_Reside__A_Protocol-Native_Tabular_Pretraining_Paradigm_for_Encrypted_Traffic_Classification]] |
 | mmTraffic (Traffic-Reasoning) | 2026 | 待确认 | 论文声称开源（项目名 Traffic-Reasoning-Project），未给出具体仓库 URL | [[2026-arXiv-Multimodal_Reasoning_with_LLM_for_Encrypted_Traffic_Interpretation__A_Benchmark]] |
+| Q3Fuzz | 2026 | 待确认 | 论文摘要称 Q3Fuzz 已公开（脚注 1），但解析稿未保留该 URL | [[2026-DSN-Q3Fuzz__Multi-Layered_Stateful_Fuzzing_for_the_QUIC-HTTP_3_Protocol_Stack]] |
+| MVPNalyzer | 2026 | 待确认 | 论文承诺开源；项目页 https://censoredplanet.org/#/research/securing-pets，解析稿未给出代码仓库 URL | [[2026-NDSS-MVPNalyzer__An_Investigative_Framework_for_Auditing_the_Security_&_Privacy_of_Mobile_VPNs]] |
 
 ---
 
@@ -189,28 +226,36 @@ updated: "2026-08-17"
 
 | 类别 | 数量 |
 |---|---:|
-| 已确认开源（本知识库论文） | 56（含 2 项仅数据集开源） |
-| 计划开源 / 待确认 | 7 |
+| 已确认开源（本知识库论文） | 91（含 4 项仅数据集开源） |
+| 计划开源 / 待确认 | 9 |
 | 高频对比基线无开源地址 | 20+ |
 | CLET 论文确认有实现但缺地址 | 5 |
 | 第三方参考工具 | 16 |
 
 ### 按任务领域分布（已开源）
 
+> 按主要任务域归类（每项记 1 次），合计 91；2026-09-19 批次重新核算。
+
 | 领域 | 已开源数量 | 代表方法 |
 |---|---:|---|
-| 加密流量分类 | 13 | ET-BERT, YaTC, LEXNet, CTT, NetMamba+, FGFR-Net, SweetDanger, TFusion, NetMamba, Multi-ARCL, ASNet, TrafficMoE, MH-Net |
-| 网站指纹（攻击+防御） | 21 | DF, RF, Palette, RobustWF, STAR, Swallow（待确认）, TrafficSliver, FRONT, Surakav, CountMamba, GAPDiS, CELLSHIFT, Cease, Lightening, Holmes, TMWF, Realistic WF, FMWF, HOLMES & WATSON, ResAware |
-| 恶意流量检测/异常检测 | 7 | Whisper, TFusion, MET-LLM, JA4, FreeUp, ConMD, M-En |
-| 应用/匿名流量分类 | 3 | Flowprint, AN-Net, DecETT |
-| 审查规避/测量 | 4 | UPGen, Huma, Censored Planet, GFW |
+| 加密流量分类 | 19 | ET-BERT, YaTC, NetMamba+, TrafficMoE, MH-Net, BTRFormer, UTFormer, PERO, Pruned Traffic Trees |
+| 网站指纹（攻击+防御） | 23 | DF, RF, Palette, STAR, CountMamba, CELLSHIFT, Cease, FMWF, Stinger, PA3, BBQ |
+| 恶意流量检测/异常检测 | 10 | Whisper, TFusion, MET-LLM, FreeUp, ConMD, LotBoNC, TIPSO-GAN, Tracegram |
+| 应用/匿名流量分类 | 4 | Flowprint, AN-Net, DecETT, Motion in the Clear |
+| 审查规避/测量 | 5 | UPGen, Huma, Censored Planet, GFW, Revelio |
 | 流量关联/匿名攻击 | 1 | SUMo |
-| 评估/基准 | 2 | SoK Decoding, SweetDanger |
-| 服务发现/隧道检测 | 1 | LZR |
+| 评估/基准 | 3 | SoK Decoding, SweetDanger, SoK Flow Labels |
+| 服务发现/隧道检测 | 3 | Separating Flows, LZR, Iris |
 | 可解释性 | 1 | Traffic-Explainer |
 | 预训练模型增强 | 1 | Plug-in Enhancement Framework |
 | 操作系统指纹识别 | 1 | TabularT-OS |
-| 仅数据集开源 | 2 | HTPA, Reality Check |
+| 仅数据集开源 | 4 | HTPA, Reality Check, GTT23, DNS Privacy Dataset |
+| 网络测量 | 3 | PipHeap, PSM, ISP Forecasting Benchmark |
+| 协议安全/设计 | 7 | Mercuriuzz, Looma, WebRTC DTLS-SRTP, QUIC-Attacker, Hop, Opossum, Remise |
+| 流量生成/合成 | 2 | CascadeNet, Synthetic Traffic Generator |
+| 隐蔽信道 | 1 | C3F |
+| 隐私审计 | 1 | AVP-Inspect |
+| IoT/车载流量 | 2 | AirMask, RISK-4-Auto |
 
 ---
 

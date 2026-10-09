@@ -3,7 +3,7 @@ type: survey
 topic: "Malicious Traffic Detection"
 status: evolving
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # 恶意流量检测综述 (Survey: Malicious Traffic Detection)
@@ -180,6 +180,17 @@ updated: "2026-08-17"
 - M-En (Computer Networks 2026)：PLS 融合 + RNN-LSTM 迁移学习的多环境实时检测框架 — `[[2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_detection_in_multi-environment_networks]]`
 - SuperFE (EuroSys 2025)：可编程交换机 + SmartNIC 的在线流量特征提取框架 — `[[2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Traffic_Analysis_Applications]]`
 - SketchFeature (NDSS 2025)：数据平面 HAF 逐流特征提取 sketch — `[[2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane]]`
+- LotBoNC (AsiaCCS 2026)：长尾开世界僵尸网络分类，自监督预训练 + 熵正则最优传输伪标签 + EM 原型精化，新类发现准确率最高领先 19.4 个百分点 — `[[2026-AsiaCCS-LotBoNC__Novel_Botnet_Traffic_Classification_under_Long-tailed_Distributions]]`
+- TKG-ETA (IWQoS 2026)：自适应 sketch 常数内存特征 + 流式时序知识图谱 + 自监督对比学习，按正常轨迹偏差检测恶意加密流量，三数据集平均 Macro F1 89.88% — `[[2026-IWQoS-Dynamic_Malicious_Encrypted_Traffic_Detection_via_Temporal_Knowledge_Graph_in_Cloud-Edge_Networks]]`
+- MV-FlowGraph (IWQoS 2026)：统计/包序列/协议文本三视图融合 + 会话级流关系图（GATv2），CIC-IDS-2017 上 F1 99.57% — `[[2026-IWQoS-Multi-View_Flow_Representation_and_Relation_Graph_Modeling_for_Network_Traffic_Classification]]`
+- STUN Covert Channel (Computers & Security 2026)：以太网帧封装进 STUN comprehension-optional 属性的全双工 L2 隧道，绕过 Snort 3/Suricata/FortiGate/Palo Alto；属性值 Shannon 熵 4.5 bits 零误报 100% 检出 — `[[2026-JCS-STUN_comprehension-optional_attributes_as_a_covert_channel__Design_implementation_and_detection]]`
+- TIPSO-GAN (NDSS 2026)：仅用正常流量训练 PSO 优化 GAN 并迁移为无监督判别器，三个 CIC 数据集 F1 98.7–98.9 — `[[2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network]]`
+- MambaTIG (TDSC 2026)：良性-only 掩码图自监督 + 图 Mamba 门控状态空间 + LSH 近邻异常检测，四数据集 F1 98.84–99.61%、GPU 推理时延平均降 66.7% — `[[2026-TDSC-MambaTIG__Fast_and_Robust_Encrypted_Traffic_Detection_Leveraging_Selective_State-Space_Masking]]`
+- Argus (TIFS 2026)：类条件重建损失测漂移 + 双空间一致性认恶意 + 距离约束自适应，极端漂移下 F1 88.22%（FS-Net/ACID 崩至 31.55%/24.92%） — `[[2026-TIFS-Robust_Malicious_Network_Traffic_Detection_Framework_With_Automated_Drift_Detection_Identification_and_Adaptation]]`
+- MIRAGE-DoH (TNSM 2026)：五模块可变形 DoH 防御框架，摘要称 97.8% 准确率 / 0.41% FPR，但正文数值自相矛盾、实验可复现性存疑 — `[[2026-TNSM-MIRAGE-DoH__Metamorphic_Intelligence_and_Resilient_AI_Grid_for_Autonomous_Governance_of_Encrypted_DNS]]`
+- Tracegram (USENIX 2026)：trace 作 bag、flow 作 instance 的时间感知多示例学习，SOTA 级 F1 兼得弱监督 key-flow 归因 — `[[2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning]]`
+- Synthetic Traffic Generator (arXiv 2026)：Isolation Forest + K-means + 相关性感知采样合成加密流量，质量分 88.2%、合成训练 XGBoost 在真实数据上 93.1% — `[[2026-arXiv-Generative_AI_for_Encrypted_Traffic_Analysis__Synthetic_Dataset_Generation_and_Classifier_Evaluation]]`
+- TDDM-Melatt (arXiv 2026)：外部记忆库 + 竞争门控 LSTM 无捷径预训练，类条件扩散补长尾，TLS-120class F1 0.681 — `[[2026-arXiv-TDDM-Melatt__A_Decoupled_Memory_and_Diffusion_Framework_for_Generalizable_Encrypted_Traffic_Classification]]`
 
 ## 6. 当前趋势
 
@@ -189,6 +200,9 @@ updated: "2026-08-17"
 4. **大语言模型引入**：MET-LLM 探索将 LLM 的通用知识适配到流量分析领域
 5. **开放集识别**：FEC-OSL 和 UT-PAB 关注对未知攻击类型的泛化能力
 6. **实时性优化**：Whisper 的频域方法实现 13.22 Gbps 吞吐量，满足高速网络需求
+7. **免恶意标注 / 良性-only 检测成型**：MambaTIG 仅用良性流量做掩码图自监督即达 98.84–99.61% F1，TIPSO-GAN 只用正常流量训练 GAN 判别器取得 98.7–98.9 F1，Argus 则在无人工标注下自动判定漂移样本的恶意性——恶意标签正从"必要条件"变为"可选增强"
+8. **时序图与漂移自适应成为对抗概念漂移的主力**：TKG-ETA 用时序知识图谱把静态图自监督基线 Anomal-E 在 CIC-IoT2023 上的 Macro F1 从 53.28 提到 91.17；Argus 在极端概念漂移下保持 F1 88.22%（同设定下 FS-Net/ACID 崩至 31.55%/24.92%）
+9. **多流/trace 级上下文建模兴起**：Tracegram 以 trace 为 bag、flow 为 instance 的多示例学习兼得分类与 key-flow 归因（时延与显存仅为 ET-BERT 的 1/4.17 与 19.6%），MV-FlowGraph 以会话级流关系图在 CIC-IDS-2017 达 F1 99.57%——建模单元从单流提升到 trace/会话层
 
 ## 7. 关键争议
 
@@ -224,3 +238,15 @@ updated: "2026-08-17"
 - Var-CNN
 - DeepPacket
 - 2D-CNN / 3D-CNN baselines
+
+- [[2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-NSDI-FENIX__Enabling_In-Network_DNN_Inference_with_FPGA-Enhanced_Programmable_Switches]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-NSDI-SPLIDT__Partitioned_Decision_Trees_for_Scalable_Stateful_Inference_at_Line_Rate]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking]]（2026 批量深度分析；证据需正文复核）
+
+- [[2026-TNSM-TunnelEye_An_Explainable_Framework_for_Real-Time_Detection_of_Malicious_DoH_Traffic_in_High-Speed_Backbone_Networks]]（2026 批量深度分析；证据需正文复核）

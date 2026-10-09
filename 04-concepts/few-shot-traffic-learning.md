@@ -4,7 +4,7 @@ name: "Few-shot Traffic Learning"
 aliases: ["少样本流量学习", "低资源流量学习"]
 tags: [few-shot, meta-learning, zero-shot, semi-supervised, contrastive, traffic-classification, encrypted-traffic]
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Few-shot Traffic Learning
@@ -76,6 +76,11 @@ Few-shot Traffic Learning（少样本流量学习）是指在标注样本极少�
 | FEC-OSL: End-to-End Open-Set Semi-Supervised Learning for Fine-Grained Encrypted Traffic Classification | 2026 | 提出端到端开放集半监督学习框架，通过双分支特征提取（CViT+TAGCN）和能量模型边界学习，在高开放度场景下 AUC 仍达 97.5% | 仅使用前 5 个包的字节特征；辅助未知类数据需求；计算开销较大 |
 | FMWF: Beyond Single Tabs — A Transformative Few-Shot Approach to Multi-Tab Website Fingerprinting Attacks | 2025 | 面向多标签页（multi-tab）场景的少样本 WF 攻击，通过数据增强 + 迁移学习 + few-shot 微调，在少量标注 trace 下识别多标签页访问组合 | 多标签组合空间巨大，极端少样本下性能受限 |
 | LitCVit: A Lightweight Self-Supervised Contrastive Vision Transformer for Encrypted Malicious Traffic Detection | 2026 | 轻量级自监督对比 ViT，自监督预训练表征支撑低标注资源下的加密恶意流量检测 | 预训练数据需求仍存在 |
+| CDWF: Few-Shot Learning for Cross-Domain Multi-Tab Website Fingerprinting | 2026 | 用"流量增强自监督预训练 + 对抗域适配 + 少样本目标适配"三阶段框架，把多标签页 WF 攻击从"需要海量目标域标注"降到"每类仅几个标注样本"，5-tab 闭世界 N=10 时 P@5 达 75.80（ARES 63.35），并发 tab 数未知时 Precision 72.37% | 三阶段缺一不可（去数据增强 Precision 0.8615→0.7868、去域适配→0.8113，换纯 CNN 崩至 0.3480）；少样本适配的增强比例须限制在 5%–15% |
+| Ultra fast encrypted network traffic classification based on classification by retrieval powered by out-of-distribution | 2026 | 把加密流量分类改为检索问题：固定长度向量入 HNSW 近邻索引，取最近邻标签完成分类，并用单一全局距离阈值在同一步检出 OOD；CESNET-TLS22 macro F1 0.923 与 Random Forest（0.925）持平，新类适应快 2–3 个数量级、索引常驻内存 171 MB vs 1350 MB，跨数据集恶意流量 OOD AUROC 0.996 | 检索式分类的单流延迟从 0.052 ms 升至 0.147/0.289 ms；手写表示随包预算增大退化明显（N 从 5→30 时 0.961→0.826） |
+| Data-Efficient Cross-Domain Few-Shot Website Fingerprinting With Unsupervised Domain Adaptation | 2026 | 用"少辅助数据预训练 + softmatch 无监督域适配 + 少样本微调"三阶段，把跨域 WF 的辅助数据需求压到 2500 条（相对 TF/WFBDC/DCWF 减少 87.09%、相对 NetCLR 减少 95%）、预训练启动时间压掉约 99%，WF 数据集 20-shot 精度 97.37±0.07%，WFdrift84/97 上 60.23%/58.17% 显著优于 NetCLR | 论文自述方法适用于 5-shot 以上，1-shot 与多标签页场景未覆盖；alignment-based 域适配需同时访问双域数据 |
+| HyTMTC: A Pre-Training Method for Multi-Scenario Network Traffic Classification With Hybrid Transformer-Mamba | 2026 | 把字节、包长、方向三种模态拼进同一条 L=192 统一 token 序列，用 3 层 Mamba + 1 层 Transformer 的轻量混合骨干做 MLM 预训练再自注意力融合微调，7 个公开数据集平均 F1 95.03%；统一序列优于 late fusion（平均 F1 0.9089→0.9456），参数共享把参数从 14.49M 降至 8.20M 同时 F1 92.68%→94.99% | 定位为早期探索：统一多模态序列 + 混合骨干在流量领域研究不足，ERF 可视化此前未用于流量模型可解释对比；多粒度表征、少样本与跨场景适应未被统一解决 |
+| Towards Practical Few-shot Multi-tab Website Fingerprinting | 2026 | 把多标签页 WF 从"单标签分类"重构为"support 引导的逐类存在性检测"，用单标签页 support trace 生成类条件通道重加权向量调制混合 query 特征，5-shot/5-tab Novel P@k 相对 prior 提升超 300%，20-shot 时接近 0.8；仅用 3-tab 微调的模型在 2–5 tab 上 AUC 0.9612，推理时无需知道标签页数量 | 重加权模块计算量随监控集增长；受监控集从 5 扩到 35 个新类时 Novel P@k 稳定约 0.75（baseline 崩至 0.1–0.2），新类扩张仍是边界 |
 
 ## 7. 当前共识
 

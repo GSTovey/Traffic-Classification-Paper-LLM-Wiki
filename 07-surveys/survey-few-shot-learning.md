@@ -3,7 +3,7 @@ type: survey
 topic: "Few-shot Traffic Learning"
 status: evolving
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-09-19"
 ---
 
 # 少样本流量学习综述 (Survey: Few-shot Traffic Learning)
@@ -104,6 +104,12 @@ updated: "2026-05-27"
 - FEC-OSL (TIFS 2026)：开放集半监督学习，99.60% AC — `[[2026-TIFS-End-to-End_Open-Set_Semi-Supervised_Learning_for_Fine-Grained_Encrypted_Traffic_Classification]]`
 - Swallow (CCS 2025)：BYOL + CIF，迁移鲁棒 WF — `[[2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]]`
 - YaTC (AAAI 2023)：MAE 预训练，少样本微调 — `[[2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation]]`
+- CDWF (IWQoS 2026)：三阶段跨域少样本多标签页 WF（增强自监督预训练 + 对抗域适配 + 少样本适配），5-tab 闭世界 P@5 相对超 SOTA 19.65% — `[[2026-IWQoS-CDWF__Few-Shot_Learning_for_Cross-Domain_Multi-Tab_Website_Fingerprinting]]`
+- CBR (JCN 2026)：检索式加密流量分类（HNSW 最近邻 + 单一全局距离阈值检 OOD），macro F1 0.923 与 RF 持平而增类快 2–3 个数量级 — `[[2026-JCN-Ultra_fast_encrypted_network_traffic_classification_based_on_classification_by_retrieval_powered_by_out-of-distribution]]`
+- BPF-DAG (TIFS 2026)：包头字节 Transformer 表示动态写为 IP 有向图边属性 + DiESAGE 有向边嵌入插值融合，免预训练达成六设定 SOTA — `[[2026-TIFS-BPF-DAG__Byte-Packet-Flow_Features_Fusion_via_Dynamic_Attributed_Graph_for_Reliable_Encrypted_Traffic_Classification]]`
+- UDA-WF (TIFS 2026)：预训练 + softmatch 无监督域适配 + 少样本微调的跨域 WF，20-shot 97.37%、辅助数据相对 NetCLR 减少 95% — `[[2026-TIFS-Data-Efficient_Cross-Domain_Few-Shot_Website_Fingerprinting_With_Unsupervised_Domain_Adaptation]]`
+- HyTMTC (TNSM 2026)：字节/包长/方向统一多模态 token 序列 + 3 层 Mamba + 1 层 Transformer 混合骨干 MLM 预训练，7 数据集平均 F1 95.03% — `[[2026-TNSM-HyTMTC__A_Pre-Training_Method_for_Multi-Scenario_Network_Traffic_Classification_With_Hybrid_Transformer-Mamba]]`
+- MMF (USENIX 2026)：support 引导逐类存在性检测的少样本多标签页 WF，5-shot Novel P@k 最高提升 300%、推理无需标签页数先验 — `[[2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting]]`
 
 ## 6. 当前趋势
 
@@ -112,6 +118,9 @@ updated: "2026-05-27"
 3. **零样本能力成为新目标**：STAR 通过跨模态语义对齐实现零样本网站指纹识别，开辟了新的研究方向
 4. **开放集识别受到重视**：真实场景中未知类比例远高于实验设置，FEC-OSL 和 UT-PAB 关注已知/未知类的统一建模
 5. **多粒度特征融合**：从单一 flow-level 特征向 packet/flow/host 多粒度融合演进，tFusion 的三模态方案效果显著
+6. **跨域少样本从单标签页扩展到多标签页**：CDWF 以三阶段框架（增强自监督预训练 + 对抗域适配 + 少样本适配）在 5-tab 闭世界把 P@5 相对超 SOTA 19.65%，MMF 把任务重构为 support 引导的逐类存在性检测后 5-shot Novel P@k 最高提升 300%，且推理时无需知道标签页数量
+7. **数据效率推进到"零梯度增类"**：UDA-WF 用无监督域适配把辅助数据压到 2500 条（相对 NetCLR 减少 95%、预训练启动时间减少约 99%）；CBR 把分类改写为 HNSW 近邻检索，新类只需插入向量（秒级，比 RF 快 2–3 个数量级）且 macro F1 0.923 与 RF 的 0.925 持平
+8. **免预训练与轻量预训练成为并行路线**：BPF-DAG 以"包头字节 Transformer + 动态属性图"的字节-包-流融合、免预训练即刷新六设定 SOTA；HyTMTC 用 3 层 Mamba + 1 层 Transformer 的统一多模态 token 序列预训练取得 7 数据集平均 F1 95.03%
 
 ## 7. 关键争议
 

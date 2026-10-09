@@ -4,7 +4,7 @@ name: "Website Fingerprinting"
 aliases: ["WF", "网站指纹", "网站指纹攻击"]
 tags: ["traffic-analysis", "privacy", "anonymity", "Tor", "encrypted-traffic"]
 created: "2026-05-27"
-updated: "2026-08-17"
+updated: "2026-09-19"
 ---
 
 # Website Fingerprinting
@@ -93,6 +93,19 @@ WF 的主要应用场景为 Tor 匿名网络，但也可扩展至 VPN、HTTPS �
 | [[2025-TIFS-WF-A2D_Enhancing_Privacy_With_Asymmetric_Adversarial_Defense_Against_Website_Fingerprinting]] | 2025 | 防御 | 非对称对抗训练（两阶段级联学习 + 包插入/填充/拆分） | FPD, SCD, MCD (QUIC 数据集) | 非对称对抗训练框架，攻击者模型规模受限时保持防御效果 |
 | [[2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Backdoor_Learning]] | 2026 | 防御 | 动态后门学习（标签一致投毒 + 触发模式优化 + LSTM 触发生成器） | Sirinam, Rimmer, DS-19, 自采 Tor 数据 | 通过后门触发实现可控的按需流量混淆防御 |
 | [[2026-Access-Website_Fingerprinting_Techniques_Over_Tor_Network_A_Survey]] | 2026 | 综述 | 系统综述 | — | 系统梳理 Tor 上的 WF 攻击与防御技术、数据集与评估框架 |
+| [[2026-IWQoS-CDWF__Few-Shot_Learning_for_Cross-Domain_Multi-Tab_Website_Fingerprinting]] | 2026 | 攻击 | CDWF 三阶段框架：流量增强自监督预训练 + 对抗域适配 + 少样本目标适配（混合 CNN-Transformer 骨干） | Meng Dataset, Deng Dataset, Defense Enhanced Dataset | 跨域多标签页少样本 WF：5-tab 闭世界 N=10 时 P@5 75.80（ARES 63.35），相对超 SOTA 19.65%；并发 tab 数未知时 Precision 72.37%（超最佳基线 32.94 个百分点），三阶段逐项消融均不可省 |
+| [[2026-JCN-TARL__Multi-task_adaptive_representation_learning_for_secure_encrypted_traffic_analysis]] | 2026 | 攻击 | TARL：PCA 76 维流统计特征 16-bit 分词 → MFM + 服务类型预测预训练 NT-BERT → 共享 memory bank（cross-attention）+ 每任务 adapter 条件门控融合的多任务微调 | ISCXVPN2016, CICIDS2017, MAWI, JDWP | 四个加密流量任务一致超 8 个单任务/多任务基线（EWTC F1 0.840、NTID F1 0.954），参数量仅 13.1M；流级划分下预训练初始化仍带来 3–5 个 F1 点增益 |
+| [[2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting]] | 2026 | 测量 | 8 台 Tor 出口中继 13 周被动测量（利用首流 DNS 获真实标签），构建真实踪迹数据集 GTT23 并与 28 个合成 WF 数据集对照 | GTT23, BigEnough, GoodEnough | 首个真实 Tor 踪迹数据集：13,900,621 条电路 / 1,142,115 个域名，80% 域名只有 1 条电路；合成 WF 数据集存在四类系统性失真（约 70% 域名顶到 5,000 cell 采集上限、域名出现频率高 1–2 个数量级） |
+| [[2026-TIFS-Data-Efficient_Cross-Domain_Few-Shot_Website_Fingerprinting_With_Unsupervised_Domain_Adaptation]] | 2026 | 攻击 | 三阶段无监督域适配：少辅助数据预训练 + softmatch 伪标签域适配 + 少样本微调 | AWF, DF, WFdrift84, WFdrift97 | 仅需 2500 条辅助样本即超 SOTA（WF 数据集 20-shot 97.37±0.07%），辅助数据需求减少约 95%、预训练启动时间压掉约 99%；伪标签域适配主要缓解时间漂移（WFdrift84/97 精度下降由 39.60% 收窄至 17.75%） |
+| [[2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences]] | 2026 | 防御 | Stinger 投毒式防御：MLP 生成器 + 代理 DF 分类器联合训练 P 序列诱导攻击模型过拟合，再用用户私密 secret 打乱输出映射 | DF Dataset, AWF Dataset, DF 开放世界子集 | DF/AWF 上仅 12.38%/6.74% 带宽开销即获 81.83/83.32 平均 SDR（开放世界 92.14%），效率比伪装式防御高一个量级；秘密泄露（Stinger-S）下防御基本失效 |
+| [[2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting]] | 2026 | 攻击 | 把多标签页 WF 重构为 support 引导的逐类存在性检测：单标签页 support trace 生成类条件通道重加权向量调制混合 query 特征 | 自采多标签页数据集（50+25 网站）, WFlib 合成多标签页数据集, WTF-PAD, Front | 5-shot/5-tab 与 10-shot/5-tab 下 Novel P@k 相对 prior 方法提升超 300%；推理无需知道标签页数量（3-tab 微调模型在 2–5 tab 混合测试集 AUC 0.9612） |
+| [[2026-arXiv-Chameleon__Robust_Defense_Against_Tor_Website_Fingerprinting_via_Many-to-Many_Traffic_Morphing]] | 2026 | 防御 | Chameleon many-to-many 随机流量变形，消除防御引入的可学习网页 trace 映射 | DF, DS-19, GTT23, Tranco | 揭示"抗对抗训练 ≠ 抗防御感知自编码器（DAAE）"盲区：DAAE 恢复后 Palette/Adaptive Tamaraw 上攻击 F1 回升至 83.67%/86.44%，而 Chameleon 把 DAAE 后 DF/RF 限制在 23.86%/35.19% F1（DF 数据集 130.60% 带宽 / 14.51% 时间开销） |
+| [[2026-arXiv-CipherSight__Robust_Website_Fingerprinting_via_Record-Resource_Semantic_Supervision_under_Distribution_Shifts]] | 2026 | 攻击 | CipherSight：TLS 记录级表示 + 流内/流间分层注意力 + 训练期资源语义特权监督（P1/P2）与 LoRA 适配 | us0304, us0320, us0409, fr0409, sg0409 | 2,008 类闭世界 95.41%（超 VarCNN 3.25 pp）、16 天时移 92.99%、同日跨洲地理漂移 91.09%/90.59%、开世界 AUROC 97.64%；构建特权监督需 SSL key log，推理仍为 ciphertext-only |
+| [[2026-arXiv-Conformal_Prediction_for_Offensive_Security]] | 2026 | 攻击 | 首次把共形预测系统性用于攻击侧：DF CNN + split CP 包装 WF 攻击（空预测集判非监控站点），CQR 用于 PPML 记录重建 | Adult, DF Tor dataset | CP 使 WF 攻击只需在监控站点上训练即可处理开放世界（α>0.015 时非监控流量预测集为空）；PPML 记录重建 α=0.1 下逐特征 coverage 0.91–1.00，DP ε=5 使攻击完全失效 |
+| [[2026-arXiv-Mitigating_Proxy-Induced_Traffic_Drift_in_Website_Fingerprinting_via_Model-Agnostic_Traffic_Tailoring]] | 2026 | 攻击 | PA3 model-agnostic 流量裁剪：少量可解密探针流量提取 BIH 流大小模式 / 代理握手 n-gram / BSM 斜率比三类协议指纹并编译为 payload-agnostic 裁剪规则 | PA3 proxied website traffic dataset, Firefox 132-141 BIH dataset | 不改模型、不重训即可缓解代理诱导漂移：6 个 WF 模型在 6 个未见协议对上 F1 平均 +0.12（相对约 27%），最大单点增益 NetCLR VMess→Shadowsocks +0.411；通用数据增强不足以缓解代理层漂移 |
+| [[2026-arXiv-SoK__Where_Do_Flow_Labels_Come_From__Auditing_Label_Provenance_in_Encrypted_Traffic_Benchmarks]] | 2026 | 综述 | SoK：十字段标签溯源审计框架 + 无需训练的平衡准确率上界与边界占比诊断量 | ISCXVPN2016, USTC-TFC2016, MIRAGE-2019, CSTNET-TLS1.3 | 审计 14 个公开基准：仅把标签构造从 access-level 继承改为 per-connection 证据，非第一方会话冲突率即从 0.4197 降至 0.0169；继承式基准准确率上界仅 ≤0.7589，对齐式 ≥0.8956 |
+| [[2026-arXiv-The_Colossus_with_Feet_of_Clay__Debunking_Encrypted_Traffic_Classifiers_under_PQC_Evolution]] | 2026 | 攻击 | 受控配对基准对比 TLS 1.3 混合 PQC（X25519MLKEM768）与经典密钥建立，并用固定 DF 架构做包长/方向/时序特征归因 | Non-PQC Website Dataset, PQC Website Dataset, Tranco | PQC 漂移不消灭网站可学习性但系统性摧毁跨密码域可靠性：五分类器 Non-PQC→Hybrid-PQC 全部退化（YaTC 1.0000→0.3582、ET-BERT 0.9316→0.6255）且迁移方向非对称；包长是最强单侧信道但漂移侵蚀其优势 |
+| [[2026-arXiv-Understanding_the_Privacy-Preserving_Potential_of_HTTP_2_Against_Webpage_Fingerprinting]] | 2026 | 防御 | BBQ 统一评测蓝图 + 基于 HTTP/2 原语的低开销防御 H2PC/H2PS（每流流控、多路复用、PING、103 Early Hints） | Amazon, BBC, Reddit, Udemy, Wikipedia | 已有 Tor 防御可在明文 HTTP/2 上近似复现但效果强依赖数据集；H2PS 仅在 1st-party 服务器部署即让 K* ≥ 13.2，4/5 数据集下行开销比最泄漏单服务器基线低 54–80%，无需 CDN 配合 |
 
 ## 7. 工程落地问题
 
