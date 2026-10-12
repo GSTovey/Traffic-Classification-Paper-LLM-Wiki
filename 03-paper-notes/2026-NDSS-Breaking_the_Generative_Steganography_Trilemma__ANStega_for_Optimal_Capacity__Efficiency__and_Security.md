@@ -9,16 +9,16 @@ doi: "10.14722/ndss.2026.240605"
 url: "https://doi.org/10.14722/ndss.2026.240605"
 pdf: "00-inbox/PDFs/2026-NDSS-Breaking_the_Generative_Steganography_Trilemma__ANStega_for_Optimal_Capacity__Efficiency__and_Security.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-Breaking_the_Generative_Steganography_Trilemma__ANStega_for_Optimal_Capacity__Efficiency__and_Security.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: [censorship-circumvention]
-task: []
-method: [transformer]
-dataset: [IMDB]
+task: ["generative steganography", "covert communication"]
+method: ["rANS state-machine inversion", "streaming renormalization", "CSPRNG masking"]
+dataset: ["IMDB movie reviews", "DDPM image carrier example"]
 code: "unknown（解析稿未给出代码仓库 URL;artifact 归档版本见 https://doi.org/10.5281/zenodo.17943483,该 DOI 非论文 DOI）"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # Breaking the Generative Steganography Trilemma: ANStega for Optimal Capacity, Efficiency, and Security
@@ -340,3 +340,59 @@ Huffman 编码、算术编码(AC)、SA-ANS(ANS 并发工作);安全侧对比 AC/
 - 主动攻击下(篡改隐写文本)的失败模式与可检测性未评估;
 - 论文以 Zenodo artifact 归档但未声明代码仓库,复现需从 artifact 包内自建;
 - 与 KB 主题(加密流量分析)的交叉点仅在"抗检测通信"层面,聚合时不宜计入 traffic-* 主题统计。
+
+---
+
+## 13. 写作叙事与故事线分析
+
+> 本文为 NDSS 2026（CCF A）论文，补充方法论与叙事分析。
+
+### 13.1 论文主线故事线
+
+论文先用容量、效率、安全三项指标之间的冲突定义生成式隐写的三难困境，再把 Huffman、算术编码和可证安全方法放进同一比较框架。转折点是把 ANS 状态机的解码方向反用于嵌入、编码方向用于提取，并针对长消息、浮点精度和随机性补上流式重归一化、直接概率更新与 CSPRNG 掩码。理论归约先给出安全边界，随后用容量、开销、KL、NIST 和隐写分析器实验逐层验证，结尾再明确被动威胁模型、同步和密钥分发限制。
+
+### 13.2 章节叙事功能
+
+| 章节 | 叙事功能 | 承担的角色 | 关键转折点 |
+|---|---|---|---|
+| Abstract | 三难困境、ANS 思路与三类结果的压缩预告 | 先给出问题和可验证目标 | 从“无法三者兼得”转到“状态机反用” |
+| Introduction | 解释隐蔽通信需求并比较 HC/AC/可证安全路线 | 建立统一评价轴 | Table I 把三个目标显式化 |
+| Related Work | 按熵编码、可证安全和图像隐写分组定位空白 | 说明现有妥协点 | SA-ANS 成为最近但仍不完整的参照 |
+| Method | 状态反向映射→有界流式状态→浮点更新→掩码 | 逐项解除三难约束 | Eq. 11 将安全性归约到 PRNG |
+| Experiments | 容量、效率、安全三组实验对应三项目标 | 完成三角验证 | KL=0、SITR=0.01 与检测器约 50% 同时出现 |
+| Limitations / Conclusion | 收回主动攻击、同步和跨模态边界 | 控制主张范围 | 把“最优”限定在给定被动模型与实现假设内 |
+
+### 13.3 Gap 展开方式
+
+| Gap 类型 | 具体内容 | 论证方式 | 位置 |
+|---|---|---|---|
+| 性能权衡 | HC、AC、可证安全方案分别牺牲效率、安全或容量 | 三目标对比矩阵 | §I, Table I |
+| 算法缺口 | 朴素 ANS 移植不支持长消息、常数时间和严格分布安全 | 机制失败分析 | §I, §II |
+| 安全缺口 | SA-ANS 缺少密码学掩码，状态相关采样可能留下统计痕迹 | 安全假设对照 | §II, §III |
+
+### 13.4 实验叙事方式
+
+| 实验环节 | 叙事功能 | 与主线的关系 |
+|---|---|---|
+| 容量实验 | 对比 UR、ES、GS 与熵上限 | 回答“是否保持 AC 级容量” |
+| 效率实验 | 用 SITR 和吞吐比较采样额外开销 | 回答“是否达到常数级效率” |
+| 安全实验 | KL、NIST STS 和四个隐写分析器交叉验证 | 回答“分布和可检测性是否安全” |
+| 图像载体示例 | 用 DDPM 载荷展示编码层可迁移性 | 支撑模态无关性，但不替代完整跨模态评测 |
+| 限制讨论 | 主动篡改、密钥交换和模型同步 | 明确理论安全边界 |
+
+### 13.5 写作风格与可迁移写法
+
+| 维度 | 本文做法 | 可迁移的写作模式 |
+|---|---|---|
+| 开篇方式 | 先给出三项互相牵制的指标，再列出现有方法的代价 | 用统一坐标系组织复杂相关工作 |
+| Gap 提出方式 | 将“无法同时最优”转为三个可测目标 | 把抽象困境直接映射到实验指标 |
+| 方法论证逻辑 | 每个机制对应一个失败原因：状态、精度、随机性、吞吐 | 采用“缺陷—机制—验证”一一对应 |
+| 实验组织逻辑 | 容量→效率→安全，顺序与标题三项目标一致 | 用标题中的并列目标作为实验目录 |
+| 局限性讨论方式 | 将被动模型和同步前提放到安全结论之后明确收束 | 在强结果后紧跟适用边界 |
+| 最值得借鉴的结构 | “解码做嵌入、编码做提取”一句话交代反向映射 | 用一句可复述的操作对概括核心机制 |
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 本次补充依据对应 MinerU Markdown 的 §§I–VII、Table I/III–VIII、Eq. 6–11 与 Artifact Appendix；现有笔记已记录算法 KL、SITR、容量和检测器结果，未将图像示例当作完整跨模态验证。
+- 可向 `04-concepts/censorship-circumvention.md` 或相关隐蔽通信综述增加“生成式隐写中的 ANS 状态机反用”条目；该工作不应计入 traffic-* 分类器方法统计。
+- 当前未修改共享概念、方法、综述和对比表页面；上述联动仅作为后续总审计建议。

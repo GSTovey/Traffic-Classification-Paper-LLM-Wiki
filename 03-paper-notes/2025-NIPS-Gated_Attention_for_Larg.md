@@ -9,8 +9,8 @@ doi: unknown
 url: unknown
 pdf: "00-inbox/PDFs/2025-NIPS-Gated_Attention_for_Larg.pdf"
 mineru_md: "02-parsed-markdown/2025-NIPS-Gated_Attention_for_Larg.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["large language models", "attention mechanisms", "model architecture"]
 task: ["attention mechanism design", "training stability", "long-context extrapolation"]
 method: ["sigmoid gating", "SDPA output gating", "elementwise gating", "head-specific gating", "sparse gating"]
@@ -18,7 +18,7 @@ dataset: ["4T high-quality tokens (multilingual, math, general knowledge)"]
 code: unknown
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-10-10"
 ---
 
 # Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free
@@ -459,3 +459,84 @@ SDPA 输出 sigmoid 门控引入非线性和稀疏性，消除 attention sink。
 6. **与其他门控位置的联合使用**：G_1 和 G_2 的联合使用是否能进一步提升效果？
 7. **跨模态迁移**：门控机制在 Vision Transformer、多模态模型中的效果如何？
 8. **门控与量化的关系**：消除 massive activation 后，模型的量化友好性是否显著提升？
+
+## 深度方法分析（2026-10-09）
+
+> 依据本地 MinerU 原文摘要、§2–§6、表 1–5 和附录 A.1–A.7 追加。该论文是架构消融与大规模预训练实验，不是流量分析方法；本节只补充其可迁移的机制和证据边界。
+
+### 1. 方法动机与核心假设
+
+论文要分离“门控本身”的作用与 MoE 路由、稀疏注意力等其他因素。作者系统比较注意力层中 5 个门控位置、逐元素/逐头粒度、逐头独立/跨头共享、乘法/加法以及 sigmoid/SiLU 激活。核心假设有两层：一是标准注意力中 $W_V$ 与 $W_O$ 两个线性映射可合并为低秩线性映射，门控在两者之间加入输入相关非线性可增加表达能力；二是 SDPA 输出上的 query-dependent、head-specific sigmoid 会把不相关的上下文压小，形成输入依赖稀疏，从而减少 massive activation 和 attention sink。
+
+### 2. 方法设计
+
+标准多头注意力先计算 $Q=XW_Q$、$K=XW_K$、$V=XW_V$，再得到
+
+$$\mathrm{SDPA}(Q,K,V)=\mathrm{softmax}(QK^T/\sqrt{d_k})V.$$
+
+通用门控写为
+
+$$Y'=Y\odot\sigma(XW_\theta),$$
+
+其中 $Y$ 是被调制的值，$X$ 是产生门控分数的 query/hidden state。主推配置是 **SDPA output elementwise sigmoid gate $G_1$**：对每个 token、每个 query head、每个 head dimension 生成独立分数，再与 SDPA 输出逐元素相乘。门控参数量很小，作者报告其 wall-time 延迟增加低于 2%。
+
+五个位置是：value 输出 $G_2$、key $G_3$、query $G_4$、SDPA 输出 $G_1$ 和最终 dense 输出 $G_5$。实验比较两类粒度：headwise 为每个头一个标量，elementwise 为每个头每个维度一个向量；以及 head-specific 与 head-shared。默认使用 head-specific、multiplicative、sigmoid。
+
+为什么 $G_1/G_2$ 有效：每个头的输出可写为 $\sum_j S^k_{ij}X_j(W_V^kW_O^k)$，$W_V^kW_O^k$ 是低秩线性映射。$G_2$ 在 value 映射后、$G_1$ 在加权和后插入非线性，使该低秩组合不再是单一线性变换；$G_5$ 位于 $W_O$ 之后，不能解决低秩瓶颈。$G_1$ 进一步让门控分数依赖当前 query，能够按当前 token 过滤上下文。
+
+### 3. 实验与关键结果
+
+- 模型：15A2B MoE（总参数约 15B、激活参数 2.54B、128 experts、top-8 路由、GQA）和 1.7B dense；序列长度 4096；训练数据来自约 4T 高质量多语、数学和通用知识 token 的子集。
+- MoE 对比：在 400B token、global batch 1024、最大 LR $2\times10^{-3}$、100k steps 设置下，baseline PPL 6.026；SDPA elementwise $G_1$ PPL 5.761，HellaSwag 74.64、MMLU 60.82、GSM8K 55.27、C-eval 62.20；baseline 对应 73.07/58.79/52.92/60.26。SDPA output gate 的增益超过增加 query/KV heads 或 experts 的参数扩展。
+- 逐头与稀疏：head-shared SDPA PPL 5.801，弱于 head-specific 5.761；NS-sigmoid（把分数限制到 [0.5,1]、去除稀疏）PPL 5.900；输入无关 gate PPL 5.917。说明逐头独立、query-dependent 和接近 0 的分数共同作用。
+- 稳定性：1.7B dense 在 400B token、最大 LR $4\times10^{-3}$ 时，baseline PPL 7.499、SDPA elementwise 7.404；3.5T token、LR $4.5\times10^{-3}$ 时，baseline 6.180、SDPA 6.130。48 层模型 LR $8\times10^{-3}$ 时 baseline 发散，而 SDPA elementwise 仍收敛（PPL 7.325 或 7.078，取决于训练 token 量）。
+- 机制证据：表 4 中 baseline 最大激活 1053、首 token 平均注意力 0.467；SDPA elementwise gate 降为 94 和 0.048，平均 gate score 0.116。value gate 也降低最大激活，但首 token 注意力仍为 0.297，说明 massive activation 不是 attention sink 的充分条件。
+- 长上下文：在 3.5T token 模型上把 RoPE base 从 10k 调到 1M，继续用 32k 序列训练 80B token，再用 YaRN 延伸到 128k。RULER 在 128k 从 baseline 31.65 提升到 SDPA gate 58.82；32k 内分别为 37.94 与 72.88（YaRN 变体）。
+
+### 4. 与其他方案的差异和限制
+
+| 方案 | 主要机制 | 能否解释本论文观察 |
+|---|---|---|
+| 增加 query/KV heads 或 experts | 增参数/容量 | 改善较小，不能解释 gate 的稀疏和 sink 消除 |
+| Value gate $G_2$ | 对 value 映射后门控 | 引入非线性并降低 massive activation，但 query 依赖弱，sink 仍在 |
+| SDPA gate $G_1$ | 对注意力聚合输出做 query-dependent sigmoid | 同时引入低秩映射非线性和输入依赖稀疏，整体最佳 |
+| Dense output gate $G_5$ | 在 $W_O$ 之后门控 | 不位于 $W_V/W_O$ 低秩组合之间，收益有限 |
+| Sandwich norm / clipping | 归一化或裁剪残差 | 可稳定部分训练，但在 LR $8\times10^{-3}$ 下 clipping 仍可能不收敛 |
+
+论文限制是经验性解释尚未形成理论，未解释 attention sink 与长上下文泛化的因果关系；大规模预训练未报告多随机种子误差条；继续训练已存在模型再加入 gate 几乎无效，说明收益主要来自从头训练的动态；70B+ 模型、不同 tokenizer/数据分布、视觉或多模态 Transformer 的外推仍未验证。
+
+### 5. 学习与复现
+
+1. 以标准 causal multi-head SDPA 为基线，保持参数预算不变，在 $G_1$、$G_2$、$G_3$、$G_4$、$G_5$ 分别插入 gate。
+2. 先复现 MoE 15A2B：128 experts/top-8、GQA、head-specific elementwise sigmoid；记录 gate 参数量与 wall-time。
+3. 复现 dense 1.7B 的 28 层/48 层设置，逐步提高学习率和 batch，比较 loss spike、最终 PPL 和下游 few-shot。
+4. 统计 gate score 分布、hidden-state 最大激活和首 token attention；用 NS-sigmoid、head-shared、input-independent 和 value gate 做机制消融。
+5. 对从 4k 到 128k 的长上下文设置分别报告 RULER，区分原始训练长度和 YaRN 外推长度。
+
+关键配置已给出：MoE 400B token 最大 LR $2e{-3}$、batch 1024、100k steps；dense 400B/3.5T token 最大 LR $4e{-3}/4.5e{-3}$，batch 1024/2048；48 层高 LR 对照 $8e{-3}$。作者在附录中表示提供 PyTorch 实现、计划开源 1.7B dense 模型和相关模型，但当前本地资料未核验最终仓库与 checkpoint；代码状态应暂记为待核验。
+
+### 6. 总结
+
+**核心思想：在注意力输出加稀疏门控。**
+
+速记版 pipeline：
+
+1. 计算标准 QKV 和 SDPA 输出。
+2. 用当前 query 生成逐头逐元素 sigmoid gate。
+3. 将 gate 与 SDPA 输出相乘，增加非线性和输入依赖稀疏。
+4. 从头预训练并测 PPL、下游任务、稳定性与长上下文外推。
+
+### 7. 知识层联动建议（不改共享表）
+
+- 在 `05-methods/` 增加“SDPA 输出门控”方法条目，明确区分 value gate、SDPA gate、head-specific、query-dependent 和 sigmoid 稀疏。
+- 在 `07-surveys/survey-traffic-foundation-model.md` 的基础模型架构部分，可把该论文作为注意力稳定性/长上下文方向代表，但不把其 LLM 结果直接外推到网络流量。
+- 在 `09-claims/` 记录“门控有益来自非线性与稀疏的联合证据”，同时注明理论机制仍为经验解释；本次不修改共享页。
+
+### 8. 证据范围
+
+直接证据为 `02-parsed-markdown/2025-NIPS-Gated_Attention_for_Larg.md` 的摘要、§2–§6、表 1–5 和附录 A.1–A.7；对应 PDF 位于 `00-inbox/PDFs/2025-NIPS-Gated_Attention_for_Larg.pdf`。本次未修改 PDF、MinerU 原文或共享对比表。
+
+## 历史自动入库段落说明
+
+- 本笔记前部的自动入库、摘要级或待核验段落是入库时的历史快照，按规范保留以避免删除原始记录。
+- 本次新增的深度分析段落、证据记录和局限说明优先；历史段落中的“待深读/待核验”状态不代表当前分析尚未完成。

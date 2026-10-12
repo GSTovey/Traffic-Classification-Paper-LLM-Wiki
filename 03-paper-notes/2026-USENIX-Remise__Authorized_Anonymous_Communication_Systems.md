@@ -9,16 +9,16 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/ravi-rohan"
 pdf: "00-inbox/PDFs/2026-USENIX-Remise__Authorized_Anonymous_Communication_Systems.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Remise__Authorized_Anonymous_Communication_Systems.md"
-status: processed
-reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["anonymous communication", "private information retrieval", "DORAM"]
+task: ["authorized anonymous bulletin board", "anonymous communication channel"]
+method: ["two-server DORAM", "secret-shared authorization tokens", "oblivious access control"]
+dataset: ["2^26-entry database prototype", "PACL comparison"]
 code: "https://zenodo.org/records/20438384(artifact 归档,非论文 DOI)"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # Remise: Authorized Anonymous Communication Systems
@@ -404,3 +404,14 @@ Spectrum (PACL) 与 Express (PACL),均来自 PACL 代码库;PACL 为 IEEE S&P 20
 8. **注册碰撞与匿名性的交互**:超配(Riposte 式)以空间换注册成功率,而更宽的注册窗口/更多掩护参与者会改变匿名集大小;二者的联合优化未在文中讨论。
 9. **与 Myco 的实验对比缺失**:Myco 是 ORAM 路线的近邻工作(同为 ORAM,但不做服务端强制访问控制),仅有定性对比;若做"ORAM 路线 vs DPF 路线"的横向评测,Remise 缺一个同族基线。
 10. **可迁移性验证**:把"秘密共享令牌库"套用到其他两服务端秘密共享存储时,性能特征(尤其 $O(\lg n)$ 轮预处理)是否会因工作负载不同而改变交叉点位置,尚不清楚。
+
+---
+
+## 13. 写作叙事与故事线分析
+
+Remise 先把 DPF 世系的两项痛点拆成审计与授权，再提出“发送者匿名信道”这一新 RUS 子类作为需求牵引。DORAM 负责免审计匿名访问，秘密共享 token 负责可遗忘授权，公告板与保密信道两个实例随后分别验证功能。最后以 PACL 对比在线服务端时间、客户端/服务端共谋和授权更新隐私收束安全主张。
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 现有笔记已包含 DORAM 读写、RemiseBB/RemiseCC、授权 token、PACL 对比和安全模型；性能数值、数据库规模和 artifact 需以原文表格核验。
+- 可向匿名通信/隐私系统专题记录 Remise；不计入 traffic-* 方法统计。本次未修改共享页面。

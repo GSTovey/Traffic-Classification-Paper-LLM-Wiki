@@ -9,19 +9,21 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/liao"
 pdf: "00-inbox/PDFs/2026-USENIX-From_Symmetry_toward_Weak_Asymmetry__Secure_Steganography_under_the_Receiver's_Partial_Channel_Knowledge.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-From_Symmetry_toward_Weak_Asymmetry__Secure_Steganography_under_the_Receiver's_Partial_Channel_Knowledge.md"
-status: processed
-reading_level: L2
-research_area: [censorship-circumvention]
-task: []
-method: [transformer]
-dataset: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["censorship-circumvention", "provable steganography", "language-model communication"]
+task: ["weakly asymmetric covert communication", "distribution-mismatch robustness"]
+method: ["threshold knowledge", "rank-based ParitySplit", "stateful PRG sampling", "computational indistinguishability"]
+dataset: ["Meta-Llama-3-8B-Instruct", "Qwen2.5-7B-Instruct", "float32-to-float16 mismatch benchmark"]
 code: "https://doi.org/10.5281/zenodo.20428322"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 ## 0. 论文基础信息
+
+> **L3 深度分析笔记**：基于正文 §1–§5、Definitions/Theorems、Algorithms 1–12、Tables 1–2 与 Open Science 章节交叉核对。论文研究的是密码学隐写，不是流量分类；容量、利用率、token/response 正确率与分布失配结果必须分开引用。
 
 | 项目 | 内容 |
 |---|---|
@@ -63,6 +65,15 @@ updated: "2026-09-19"
 3. **对称方案的脆弱性**：对称方案的解码正确性依赖"逐步重建同一条件分布"的脆弱一致性要求，实现细节或数值精度的微小差异即可改变诱导分布，导致解码失败。
 4. **非对称方案的容量瓶颈**：非对称方案虽然解码鲁棒、无需同步信道历史，但每符号互信息极小，容量显著受限，不适用于有吞吐需求的隐蔽通信。
 5. **核心理论问题**：给定某种部分信道知识，是否存在**非平凡**（即真正利用该知识、而非退化为忽略它的非对称方案）的可证明安全方案？既有工作未给出任何肯定证据。
+
+### 3.5 科学假设形成
+
+| 假设 | 具体内容 | 验证方式 | 结果 |
+|---|---|---|---|
+| H1 | 接收方掌握阈值或排序等非退化知识时，可以在不共享完整分布的条件下获得非零隐写容量 | Threshold 1_θ 与 Rank/PRank 构造、容量定理 | 支持：Llama Rank Full 111.223 bit/resp、Top2 49.855；Qwen Rank Full 170.589、Top2 63.302 |
+| H2 | ParitySplit 只依赖概率排序就能构造可逆的安全采样，而无需接收方知道概率值 | 奇偶递归、容量式与正确性证明 | 支持：1−p_max ≤ C_rank ≤ H(D)，实验 Correctness=100% |
+| H3 | 粗粒度排序知识比精确分布知识更能抵抗发送方/接收方数值精度失配 | float32 发送方→float16 接收方实验 | 支持但容量有权衡：Rank token accuracy 全部 >99%，Top2 response accuracy 最高 50.6%；对称方案 response accuracy 0.0–1.8% |
+| H4 | 部分知识方案不是把无知识非对称方案换名，而是能在安全性和容量之间形成独立工作点 | 与 Undetectable Steganography t=2 对比 | 支持：Top2 容量约为非对称基线 20 倍，仍保持 100% 正常分布场景正确率 |
 
 ## 4. 方法设计
 
@@ -236,3 +247,57 @@ updated: "2026-09-19"
 3. 部分 rank 知识只覆盖"子集内相对次序已知"这一形式；若接收方的排序是**含噪**的（如 top-k 边界附近的次序可能翻转），方案是否仍可证明安全、容量如何退化？
 4. 论文提到 rank 知识可"由重复采样与统计检验推断"，但未量化推断所需样本量与错误率对容量的影响。
 5. 固定预算 PRG 同步规则是实验性工程手段（§5.2），其安全性影响（是否引入可检测偏差）未在正文中形式化分析。
+
+## 13. 写作叙事与故事线分析
+
+### 13.1 论文主线故事线
+
+论文先把可证明安全隐写的接收方能力写成一条连续谱：对称方案知道完整分布，无知识方案只能做低容量统计恢复，而现实 API、算力和数值精度往往处在两者之间。作者把这个“中间地带”正式命名为弱非对称隐写，并用知识函数 f 把“部分知道什么”从实现细节提升为可研究对象。第一条转折是二元阈值知识的可逆构造，第二条转折是把它推广到任意字母表的概率排序，通过 ParitySplit 在只知道 rank 的情况下递归分配比特。实验随后不只报容量，还把精度失配作为现实压力测试：排序知识牺牲部分容量，却显著提高 token 和 response 级稳定性。论文最终把贡献定位为一种可证明的安全—容量—知识三方折中，而不是单纯的 LLM 隐写实现。
+
+### 13.2 章节叙事功能
+
+| 章节 | 叙事功能 | 承担的角色 | 关键转折点 |
+|---|---|---|---|
+| Abstract/Introduction | 建立对称/无知识两端与现实中间态 | 问题提出 | 接收方能力不是二元变量 |
+| Related Work/Model | 定义知识函数、正确性与 chosen-hiddentext 安全 | 理论锚定 | “部分知识”成为协议参数 |
+| Threshold construction | 在二元情形证明最小容量和可逆规则 | 低维原型 | 中间区间不解码、容量受 min(D_min,θ,1−θ) 限制 |
+| Rank construction | 用 ParitySplit 递归推广到一般字母表与 Top-k | 核心方法 | 从概率值转为排序结构 |
+| Experiments | 先测容量，再测 float32/float16 失配 | 实用性兑现 | top-k 越少，鲁棒性越强但容量降低 |
+| Discussion/Conclusion | 讨论排序推断、噪声 rank、PRG 同步与实际部署 | 边界管理 | 方案仍依赖部分知识的可靠获得 |
+
+### 13.3 Gap 展开方式
+
+| Gap 类型 | 具体内容 | 论证方式 | 位置 |
+|---|---|---|---|
+| 设定缺口 | 既有隐写只讨论完整知识或无知识 | 定义弱非对称知识函数 f | §1, §3 |
+| 构造缺口 | 需要利用粗粒度信息而不重新获取概率 | 阈值方案 + ParitySplit rank 方案 | §4.2–4.3 |
+| 工程缺口 | 同一模型不同精度会使逐概率解码崩溃 | float32→float16 mismatch 实验 | §5.2, Table 2 |
+| 指标缺口 | 容量与鲁棒性并非同一个指标 | 同时报告 bit/resp、utilization、token/response accuracy、ED | §5.1–5.2 |
+
+### 13.4 实验叙事方式
+
+| 实验环节 | 叙事功能 | 与主线的关系 |
+|---|---|---|
+| Rank Full/Top-k 容量 | 展示知识量与容量的连续折中 | 证明弱非对称不是退化方案 |
+| Undetectable baseline | 提供无知识低容量参照 | 量化部分知识的增益 |
+| float mismatch | 模拟真实部署的模型精度差异 | 检验排序知识的鲁棒性 |
+| 对称方案对照 | 展示精确概率方法的高容量但低容错 | 明确安全—容量—同步权衡 |
+| 计算时间/长度 | 检查自然度与模型开销 | 排除以异常文本长度换容量的解释 |
+
+### 13.5 写作风格与可迁移写法
+
+| 维度 | 本文做法 | 可迁移的写作模式 |
+|---|---|---|
+| 设定命名 | 先命名连续谱中的“弱非对称”再给形式化定义 | 对被忽略的中间能力建立稳定术语 |
+| 理论—工程衔接 | 用闭式容量界连接算法，再用精度失配连接部署 | 每个定理配一个现实扰动实验 |
+| 对照选择 | 同时放完整知识、Top-k、无知识和对称方法 | 比较能力等级，而不是只比较单个模型 |
+| 结果表达 | 将“利用率高”与“原始容量高”明确分开 | 避免把单一指标写成全面领先 |
+
+## 14. 证据边界与复现清单
+
+1. **安全定义边界**：论文的计算不可区分性以发送方拥有完整 D、接收方拥有固定 f(D)、共享 PRG/密钥和 chosen-hiddentext 安全游戏为前提；不能泛化为接收方 rank 含噪、知识随时间漂移或服务端随机性不独立的情形。
+2. **容量口径**：Rank Full/Top-k 的 bit/response、utilization、token accuracy、response accuracy 和 ED 衡量不同属性；尤其失配实验中 token accuracy >99% 不等于整段 response 一定成功解码。
+3. **实验边界**：仅测 Llama-3-8B-Instruct、Qwen2.5-7B-Instruct、固定 prompt 和 1,000 条响应/配置；不代表其他 LLM、提示、采样温度或长上下文。
+4. **分布失配边界**：float32→float16 是单一精度场景；论文未测跨模型 rank、top-k 边界翻转、网络 API 非确定性或 rank 推断的样本成本。
+5. **复现依赖**：HMAC-DRBG 52-bit 精度、token 级同步、模型版本、top-k 集合和固定 prompt 必须完全记录；Zenodo 10.5281/zenodo.20428322 是 rank 方案与实验 artifact，不是论文 DOI。
+6. **知识库边界**：本文不更新流量分类主知识层；其对加密流量研究的关联仅限于“分布失配下粗粒度表示更稳定”的方法类比。

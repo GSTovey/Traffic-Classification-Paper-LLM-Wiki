@@ -9,16 +9,16 @@ doi: "10.14722/ndss.2026.242287"
 url: "https://doi.org/10.14722/ndss.2026.242287"
 pdf: "00-inbox/PDFs/2026-NDSS-Continuous_User_Behavior_Monitoring_using_DNS_Cache_Timing_Attacks.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-Continuous_User_Behavior_Monitoring_using_DNS_Cache_Timing_Attacks.md"
-status: processed
-reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["DNS cache side channel", "privacy leakage", "network security"]
+task: ["continuous user behavior monitoring", "timing side-channel measurement"]
+method: ["Evict+Reload", "DNS cache eviction", "scriptless browser timing"]
+dataset: ["103-domain open-world list", "10-domain browser evaluation"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # Continuous User Behavior Monitoring using DNS Cache Timing Attacks
@@ -352,3 +352,61 @@ DMT 循环 = **驱逐 → 测量 → 判决**:攻击者周期性用驱逐原语�
 - "每分钟 3 次探测"与"5 分钟盲区 ≤4.92%"之间的推导关系(单次迭代耗时分布)未在解析稿中展开;
 - 与 KB 主题的关系:本文不属 WF/流量分类,但为 WF 综述的"威胁模型"小节提供了新类别,聚合时建议按"相邻威胁模型"处理而非计入 WF 攻击;
 - 若后续要复现,需先确认目标环境 systemd 版本(<256 才有错误回退原语)。
+
+---
+
+## 13. 写作叙事与故事线分析
+
+> 本文为 NDSS 2026（CCF A）论文，补充方法论与叙事分析。
+
+### 13.1 论文主线故事线
+
+论文先从 DNS 缓存命中与未命中之间稳定的时延差出发，指出已有工作只能做破坏性、低时间分辨率的单次判断。关键转折是把“无法驱逐”转化为一个可工程化的系统问题，并设计覆盖原生代码、跨 VM、JavaScript 与无脚本浏览器的四类驱逐原语。随后，测量微基准先证明缓存状态可分离，跨 VM 与浏览器端到端实验再证明持续监控可行。最后，论文把 DNSSEC、DoT、VPN、浏览器缓存和不同解析器行为纳入讨论，收束到“传输层加密不等于本地缓存隐私”的结论。
+
+### 13.2 章节叙事功能
+
+| 章节 | 叙事功能 | 承担的角色 | 关键转折点 |
+|---|---|---|---|
+| Abstract | 问题、四类原语与端到端数字结果的压缩预告 | 让读者先看到威胁可行性与量级 | “continuous monitoring”与 103 域 F1 结果同时出现 |
+| Introduction | 从 DNS 普及和缓存侧信道引出持续监控缺口 | 定义“读缓存会破坏缓存”这一核心矛盾 | 将一次性 timing test 提升为 Evict+Reload 循环 |
+| Concurrent Work / Background | 区分本地系统缓存、路由器转发器和 WF | 划定攻击对象与相关工作边界 | 明确 DMT 不依赖网站内容，不能直接归为 WF |
+| Threat Model / Overview | 把攻击者能力、目标缓存和测量循环具体化 | 使问题可验证、可复现 | “驱逐→测量→判决”成为全文统一抽象 |
+| Measurement | 先验证命中/未命中时延差，再处理 JS、无脚本和网络噪声 | 建立侧信道存在性与可分性证据 | DNSSEC 增大时延差，反而提高可测性 |
+| Eviction | 系统化比较四种驱逐原语及其环境依赖 | 回答“如何持续测量”这一方法核心 | 大响应与错误回退把无特权场景纳入 |
+| End-to-end | 用开放世界跨 VM 与浏览器实验验证实用性 | 从微基准过渡到真实行为监控 | F1、盲区和每轮耗时共同量化部署价值 |
+| Discussion / Conclusion | 讨论解析器版本、浏览器分区和防御代价 | 收回威胁边界并给出缓解方向 | 关闭缓存有效但会牺牲性能与上游信任 |
+
+### 13.3 Gap 展开方式
+
+| Gap 类型 | 具体内容 | 论证方式 | 位置 |
+|---|---|---|---|
+| 能力缺口 | 既有 DNS cache timing 只能判断“最近是否访问”，缺少可靠驱逐，无法持续监控 | 机制缺陷 + 时间分辨率后果 | §I, §IV-B |
+| 执行环境缺口 | 既有方案依赖原生代码、Java 或 JavaScript，沙箱和禁脚本环境覆盖不足 | 场景缺失 + 攻击面比较 | §I, §IV-C |
+| 防护边界缺口 | DoT、DNSSEC 与 VPN 保护传输或上游路径，却不覆盖本地系统缓存 | 防护对象错位 | §II-C, §VIII, §IX |
+
+### 13.4 实验叙事方式
+
+| 实验环节 | 叙事功能 | 与主线的关系 |
+|---|---|---|
+| 时延测量微基准 | 先建立 cached/uncached 可分离性，并量化网络噪声 | 证明侧信道存在且可观测 |
+| 驱逐原语比较 | 对比速度、适用上下文与解析器依赖 | 证明持续测量的工程支点 |
+| 跨 VM 开放世界主实验 | 103 域、F1、测量时间和盲区联合报告 | 直接回答“能否持续监控” |
+| JS / 无脚本 / DNSSEC 泛化实验 | 改变执行权限、脚本能力与传输配置 | 证明结论不局限于单一环境 |
+| 限制与负面结果 | 报告 systemd ≥256、Windows、macOS 和浏览器分区限制 | 把适用边界写进主线，而不是只报告最佳数字 |
+
+### 13.5 写作风格与可迁移写法
+
+| 维度 | 本文做法 | 可迁移的写作模式 |
+|---|---|---|
+| 开篇方式 | 用日常基础设施（DNS）和隐私后果快速落到一个可观测时延差 | “普遍组件→具体侧信道→可验证缺口”三步收窄问题 |
+| Gap 提出方式 | 把“读取会破坏状态”写成持续监控无法成立的因果瓶颈 | 用一个机制级矛盾承载研究空白，避免只罗列相关工作 |
+| 方法论证逻辑 | 先建立测量基线，再逐个解释驱逐原语的环境与代价 | 每个系统组件先回答“为什么需要”，再说明“怎样实现” |
+| 实验组织逻辑 | 微基准→驱逐比较→端到端→跨环境鲁棒性 | 从可分性、可执行性到可部署性逐级推进 |
+| 局限性讨论方式 | 明确列出失效系统版本、浏览器缓存和噪声来源 | 把环境依赖与负面结果写成可复现的边界条件 |
+| 最值得借鉴的结构 | “测量是破坏性的，因此需要驱逐；驱逐后才能提高时间分辨率” | 用一条短因果链把动机、机制和指标串成闭环 |
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 本次深度分析直接依据 `02-parsed-markdown/2026-NDSS-Continuous_User_Behavior_Monitoring_using_DNS_Cache_Timing_Attacks.md` 的 §§I–X、Tables I–V 和 Appendix；原始 PDF 与解析稿均已保留。结论段的 JS F1 数值与 Abstract/Table V 不一致，笔记以 Table V 为主，并保留该冲突供 PDF 复核。
+- 可向 `07-surveys/survey-website-fingerprinting.md` 提交一条“本地 DNS 缓存侧信道”相邻威胁模型记录，但应标注为非 WF、非流量分类方法，不计入 WF 攻击方法统计。
+- 当前未修改 `04-concepts/`、`05-methods/`、`06-tasks/`、`07-surveys/` 或 `08-comparisons/` 共享页面；上述联动仅作为后续总审计建议。

@@ -9,16 +9,16 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/merget"
 pdf: "00-inbox/PDFs/2026-USENIX-Opossum_Attack__Application_Layer_Desynchronization_using_Opportunistic_TLS.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Opossum_Attack__Application_Layer_Desynchronization_using_Opportunistic_TLS.md"
-status: processed
-reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["TLS protocol security", "application-layer desynchronization"]
+task: ["opportunistic TLS audit", "MitM message manipulation"]
+method: ["implicit/opportunistic state-machine analysis", "IPv4-wide scanning", "HTTP exploit construction"]
+dataset: ["IPv4-wide protocol scans", "HTTP/FTP/POP3/SMTP endpoint measurements"]
 code: "artifact 归档 https://doi.org/10.5281/zenodo.17855525(Zenodo artifact DOI,非论文 DOI)"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # Opossum Attack: Application-Layer Desynchronization using Opportunistic TLS
@@ -324,3 +324,14 @@ Table 3 的脚注标明各协议扫描的端口对:FTP = 990 与 21、POP3 = 995
 3. IMAP 被列为"技术上受影响但非同步可利用"(does not affect synchronously),其具体限制条件解析稿未展开。
 4. 2,556(6.9%)SSH banner 的分母在解析稿中未显式给出(按 36,788 个 101 响应推算为 6.95%),引用时注意。
 5. **聚合提示**:本文与 KB 主题无交集,聚合时请勿计入 traffic-* 主题统计(处理方式与同批 QUIC fuzzing 类论文一致)。
+
+---
+
+## 13. 写作叙事与故事线分析
+
+论文以隐式 TLS 与机会式 TLS 共存造成状态机分歧为单一矛盾，先给出方向相反的首包条件，再用 HTTP 四类利用和全网扫描把协议缺陷连接到部署风险。可迁移写法是把“协议状态—攻击前缀—应用后果—互联网测量”按同一判定条件串联。
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 现有笔记已包含 I2O/O2I 条件、HTTP 利用链、扫描数字和缓解边界；全网扫描结果与 exploit 细节应以原文表格/制品核对。
+- 可向协议安全/STARTTLS 审计专题记录；不计入 traffic-* 方法统计。本次未修改共享页面。

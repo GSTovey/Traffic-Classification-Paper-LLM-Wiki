@@ -9,16 +9,16 @@ doi: "unknown"
 url: "unknown"
 pdf: "00-inbox/PDFs/2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: [malicious-traffic-detection, anomaly-detection]
 task: [malicious-traffic-detection, anomaly-detection]
-method: [transformer]
+method: ["WGAN-GP", "PSO optimization", "MHSA time-decay CNN"]
 dataset: [CIC-IDS2018, CIC-DDoS2019, CICAPT-IIoT2024]
 code: "artifact/代码归档 DOI（非论文 DOI）：https://doi.org/10.5281/zenodo.17759516"
 relevance: high
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # TIPSO-GAN: Malicious Network Traffic Detection Using a Novel Optimized Generative Adversarial Network
@@ -358,3 +358,13 @@ Adam β1=0.5；学习率 2e-4；batch 256；每 G 步 5 次 D 更新；WGAN-GP �
 - Table VII 的 CIC-DDoS2019 区块重复数字是否意味着该行结果缺失？
 - 跨数据集 F1 79–83 的下降中，特征空间差异与分布漂移各占多少？（解析稿未做归因）
 - 与库内 [[2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification]] 的浅层模型结论如何对齐？本文未与随机森林/梯度提升在**同口径**下做不平衡场景对比。
+
+---
+## 13. 写作叙事与故事线分析
+
+TIPSO-GAN 以恶意标签稀缺和极端不平衡定义问题，先用 PSO 稳定“正常分布生成”，再把生成器迁移为 DeePred 判别器，最后用三数据集、合成质量、消融和鲁棒性构成证据链。引用时需保留正文 99.1 与 Table VII 98.7 的数值冲突。
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 当前笔记已记录正常流量训练、WGAN-GP/PSO/MHSA、三数据集、指标和解析数值冲突；具体 F1/PR-AUC 应以 PDF 表格为准。
+- 可向 malicious-traffic-detection 与 anomaly-detection 方法页提交建议，但本次未修改共享页面。

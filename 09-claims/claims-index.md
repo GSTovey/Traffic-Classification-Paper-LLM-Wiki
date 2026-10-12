@@ -123,3 +123,13 @@ updated: "2026-09-19"
 - Wormhole：记忆化/快进可显著加速 LLM 训练包级仿真且 FCT 误差约≤1%；需核对 workload 与并行配置边界。
 - 高保真合成流量存在可量化隐私泄露风险；攻击适用性依赖生成模型是否保留标识符与完整流。
 - LLM 残差流隐蔽信道在受控开放权重部署中可规避多种检测器；不应外推到闭源 API。
+
+## 2026-10-09 CCF-A 深度分析新增待审证据
+
+以下条目已完成本地 PDF/raw 的方法与实验核对，但暂不改变既有 `consensus_count` 或 `confidence_score`：
+
+- [[2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models]]：LLM+RL 可生成保持功能字段的对抗流量；跨模型 ASR、奖励和字段选择以笔记证据表为准。
+- [[2025-WWW-Facing_Anomalies_Head-On__Network_Traffic_Anomaly_Detection_via_Uncertainty_Inspired_Inter-Sample_Differences]]：NIG 证据不确定性可作为 anomaly drift 的跨样本分数；需与同域重构式异常检测分开统计。
+- [[2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection]]：Tor 电路异常可用于识别恶意协作者；该结论不等同于网站指纹攻击成功率。
+- [[2026-NDSS-MVPNalyzer__An_Investigative_Framework_for_Auditing_the_Security_&_Privacy_of_Mobile_VPNs]]：移动 VPN 的可识别性和配置合规性应作为独立审计维度。
+- [[2026-NDSS-Identifying_Logical_Vulnerabilities_in_QUIC_Implementations]]：QUIC 逻辑漏洞证据来自实现覆盖与双检测器结果，不能外推为所有 QUIC 实现的普遍缺陷。

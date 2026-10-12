@@ -9,8 +9,8 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/gupta"
 pdf: "00-inbox/PDFs/2026-USENIX-Revelio__A_Global_Study_of_VoIP_Blocking.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Revelio__A_Global_Study_of_VoIP_Blocking.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["censorship-circumvention"]
 task: ["app-fingerprinting"]
 method: []
@@ -18,7 +18,7 @@ dataset: []
 code: "https://doi.org/10.5281/zenodo.20362017"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # Revelio: A Global Study of VoIP Blocking
@@ -353,3 +353,14 @@ Revelio 分两个核心组件（`§1`, `§4`）：**scanner 模块**（构造探
 - 本方法对"仅针对 egress 的审查"失效，是否有不依赖境内 vantage point 的替代方案？
 - 中盒 M4-C 的等差丢包（1/11/22/34…回绕）暗示了什么样的实现（计数器 + 定时器重置）？能否作为中盒实现指纹用于同源判定？
 - 与 KB 内审查测量论文（Censored Planet、Shadowsocks）相比，STUN 层审查测量的数据共享困境（IP 敏感）如何在不危及用户的前提下缓解？
+
+---
+
+## 13. 写作叙事与故事线分析
+
+Revelio 从“VoIP 审查被 Web 测量忽视且难以远程观测”出发，把 STUN 指纹差分、无响应空间触发和 StunTrace 路径定位组合成可扩展测量管线。结果按国家覆盖、应用差异、中盒类型、状态性和域级交叉验证递进，避免把单次丢包直接写成封锁结论。可迁移写法是为每个审查结论配一个主动探针和一个反事实探针。
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 现有笔记已覆盖 Zstun/P1-P3、71 国扫描、19 国复现、StunTrace 和 Hyperquack 交叉验证；国家/应用数字与中盒分类需以正文表格核对。
+- 可向 12-research-fronts/censorship-measurement 或 04-concepts/censorship-circumvention.md 提交相邻证据；本次未修改共享页面。

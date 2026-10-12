@@ -418,6 +418,29 @@ TrafficMoE (2026) 提出了解耦-过滤-聚合（DFA）范式，首次将稀疏
 
 新增论文联动（2026-09-29）：本批次形成“结构先验—图语义—ADU 重建—可靠性校准—复制性质疑”的横向证据链；各文具体数值仍需表格级复核。
 
+### 2026-10-09 CCF-A 深度分析同步
+
+- [[2025-WWW-ODNS_Clustering__Unveiling_Client-Side_Dependency_in_Open_DNS_Infrastructure]]：补充开放 DNS 中客户端依赖关系的聚类测量证据。
+- [[2026-NDSS-MVPNalyzer__An_Investigative_Framework_for_Auditing_the_Security_&_Privacy_of_Mobile_VPNs]]：补充移动 VPN 的可识别性、配置合规性与隐私审计证据。
+- [[2026-NDSS-Identifying_Logical_Vulnerabilities_in_QUIC_Implementations]]：补充 QUIC 实现级逻辑漏洞的状态、检测器和实现覆盖边界。
+- [[2026-USENIX-Analyzing_the_WebRTC_Ecosystem_and_Breaking_Authentication_in_DTLS-SRTP]]：补充 WebRTC/DTLS-SRTP 认证生态的测量和 PoC 证据。
+- [[2026-WWW-Cardinality_is_Not_Enough__Super_Host_Detection_via_Segmented_Cardinality_Estimation]]：补充分段基数估计和线速网内检测的工程证据。
+
+这些条目用于扩展证据链；不把单篇论文的摘要级结论直接提升为领域共识。
+
+### 2026-10-09 深度证据复核补充
+
+- [[2026-NSDI-FENIX__Enabling_In-Network_DNN_Inference_with_FPGA-Enhanced_Programmable_Switches]]：补充 FPGA 模型引擎、交换机特征和线速延迟的实证边界。
+- [[2026-NSDI-SPLIDT__Partitioned_Decision_Trees_for_Scalable_Stateful_Inference_at_Line_Rate]]：补充分区决策树、状态回流和 Pareto 资源约束，和纯离线分类结果分开记录。
+- [[2026-USENIX-Breaking_the_Boundaries__Analyzing_QUIC_Frame-Packet_Interactions_With_QUIC-Attacker]]：补充 QUIC frame/packet 交互的实现测试与漏洞覆盖证据。
+- [[2026-USENIX-Hop__A_Modern_Transport_and_Remote_Access_Protocol]]：补充现代传输与远程访问协议的构造、形式化和实测边界。
+- [[2026-S&P-Practical_Covert_Channel_Across_Isolated_Browser_Instances_via_GPU_Command_Queue_Contention]]：补充浏览器隔离实例间 GPU 命令队列争用侧信道的完成率、准确率和带宽约束。
+
+### CCF-A 补漏核对（2026-10-10）
+
+- [[2026-arXiv-AVP-Inspect__Coordinated_Cyber-Physical_Testing_for_Privacy_Analysis_of_COTS_Apple_Vision_Pro_Applications]]：原始论文首页明确 CCS 2026；本次只补齐会议元数据与深度状态，正文已有完整分析。
+- [[2026-arXiv-Practice_Makes_(Im)Perfect__A_Look_Back_at_Benchmarking_Practices_for_Microarchitectural_Side-Channel_Attacks]]：本地 note 标为 CCS 2026，但 raw 首页未给出 CCS 会议归属；暂不纳入 CCF-A full-paper 覆盖统计，保留为待核验项。
+
 ### 2026-09-29 新增证据
 - GAN-based Tor obfuscated traffic identification 聚焦类别不平衡下的生成增强；具体增益暂不纳入定量共识，因正文证据尚未完成核验。
 

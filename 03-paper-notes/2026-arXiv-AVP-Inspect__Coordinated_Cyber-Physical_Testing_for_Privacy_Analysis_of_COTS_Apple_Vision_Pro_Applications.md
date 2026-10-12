@@ -9,8 +9,8 @@ doi: "10.1145/3830454.3846586"
 url: "https://arxiv.org/abs/2609.08103"
 pdf: "00-inbox/PDFs/2026-arXiv-AVP-Inspect__Coordinated_Cyber-Physical_Testing_for_Privacy_Analysis_of_COTS_Apple_Vision_Pro_Applications.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-AVP-Inspect__Coordinated_Cyber-Physical_Testing_for_Privacy_Analysis_of_COTS_Apple_Vision_Pro_Applications.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: []
 task: []
 method: []
@@ -18,7 +18,7 @@ dataset: ["self-collected AVP app dataset: 374 apps（324 大规模分析 + 50 �
 code: "https://github.com/SECSAT-LAB-GMU/AVP-Inspect"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # AVP-Inspect: Coordinated Cyber-Physical Testing for Privacy Analysis of COTS Apple Vision Pro Applications

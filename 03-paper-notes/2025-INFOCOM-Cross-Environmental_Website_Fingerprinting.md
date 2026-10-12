@@ -5,12 +5,12 @@ title_cn: "跨环境网站指纹攻击"
 authors: ["Jianfeng Li", "Dongliang Wang", "Yixuan Liu", "Yifei Gao", "Xiaorong Zhang", "Zheng Lin", "Xiaobo Ma", "Xiapu Luo", "Xiaohong Guan"]
 year: 2025
 venue: "IEEE INFOCOM 2025"
-doi: unknown
+doi: "10.1109/INFOCOM55648.2025.11044569"
 url: unknown
-pdf: ""
+pdf: "00-inbox/PDFs/2025-INFOCOM-Cross-Environmental_Website_Fingerprinting.pdf"
 mineru_md: "02-parsed-markdown/2025-INFOCOM-Cross-Environmental_Website_Fingerprinting.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["website fingerprinting", "encrypted traffic analysis", "cross-domain transfer"]
 task: ["website fingerprinting", "zero-shot recognition", "few-shot learning", "cross-environmental transfer"]
 method: ["invariant feature generation", "Thompson sampling", "potential-aware resampling", "bilevel recognition", "inter-flow data augmentation"]
@@ -18,7 +18,7 @@ dataset: ["CE-450x6 (self-collected)"]
 code: "https://github.com/cry4tal1/xeprint"
 relevance: medium
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-10-10"
 ---
 
 # Cross-Environmental Website Fingerprinting
@@ -31,13 +31,13 @@ updated: "2026-06-21"
 | 中文标题 | 跨环境网站指纹攻击 |
 | 作者 | Jianfeng Li, Dongliang Wang, Yixuan Liu, Yifei Gao, Xiaorong Zhang, Zheng Lin (西安交通大学); Xiaobo Ma (西安交通大学, 通讯); Xiapu Luo (香港理工大学); Xiaohong Guan (西安交通大学) |
 | 年份 | 2025 |
-| 会议/期刊 | IEEE INFOCOM 2025 |
+| 会议/期刊 | IEEE INFOCOM 2025（CCF-A） |
 | 研究方向 | [[website-fingerprinting]]、[[encrypted-traffic-analysis]]、跨域迁移学习 |
 | 任务类型 | [[website-fingerprinting]]、零样本跨环境识别、少样本环境适应 |
 | 方法关键词 | 不变特征生成（bilevel combinatorial optimization）、自适应 Thompson sampling、感知潜力的流量重采样（potential-aware resampling）、双层识别模型、流间数据增强 |
 | 数据集 | CE-450x6（自建，450 网站 x 6 环境，50 样本/网站/环境） |
 | 是否开源 | 是（代码 + 数据） |
-| PDF | - |
+| PDF | [[2025-INFOCOM-Cross-Environmental_Website_Fingerprinting.pdf]] |
 | MinerU Markdown | `02-parsed-markdown/2025-INFOCOM-Cross-Environmental_Website_Fingerprinting.md` |
 
 ---

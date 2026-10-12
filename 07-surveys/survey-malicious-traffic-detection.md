@@ -239,6 +239,22 @@ updated: "2026-09-19"
 - DeepPacket
 - 2D-CNN / 3D-CNN baselines
 
+### 2026-10-09 CCF-A 深度分析同步
+
+- [[2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models]]：LLM 与强化学习生成协议合规的对抗流量，重点补充 payload 场景的攻击面；精确 ASR、字段选择和奖励配置以论文证据段为准。
+- [[2025-WWW-Helios__Learning_and_Adaptation_of_Matching_Rules_for_Continual_In_Network_Malicious_Traffic_Detection]]：面向持续变化的网内恶意流量检测，新增规则学习与在线适配证据。
+- [[2025-WWW-Facing_Anomalies_Head-On__Network_Traffic_Anomaly_Detection_via_Uncertainty_Inspired_Inter-Sample_Differences]]：把异常分数从样本内重构误差转向证据不确定性，单独记录 anomaly drift 的跨数据集评估边界。
+- [[2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network]]：已完成深度分析，保留其数据集、切分和生成增强的证据边界。
+- [[2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classification__A_Traffic-Explainer_Framework]]：流量分类可解释性框架的实验和解释可靠性作为独立证据线索。
+
+本批仅追加论文链接和证据定位，不据此重算既有共识权重；跨论文数值仍以各笔记的证据记录为准。
+
+### 2026-10-09 部署证据补充
+
+- [[2026-NSDI-FENIX__Enabling_In-Network_DNN_Inference_with_FPGA-Enhanced_Programmable_Switches]] 与 [[2026-NSDI-SPLIDT__Partitioned_Decision_Trees_for_Scalable_Stateful_Inference_at_Line_Rate]]：将恶意/安全流量推理的比较维度扩展到线速、状态回流和硬件资源。
+- [[2026-NSDI-HybridMesh__A_Hardware-software_Hybrid_Approach_for_Accelerating_Service_Mesh_Ingress]]：记录 SmartNIC/eBPF 服务网格入口加速的系统证据，避免与检测模型精度混用。
+- [[2026-NSDI-Iceberg__Automated_Verification_of_DNS_Authoritative_Engines_via_Just-in-Time_Summarization]]：记录 DNS 引擎验证中 JIT 摘要、符号区域和可复现漏洞覆盖。
+
 - [[2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network]]（2026 批量深度分析；证据需正文复核）
 
 - [[2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification]]（2026 批量深度分析；证据需正文复核）

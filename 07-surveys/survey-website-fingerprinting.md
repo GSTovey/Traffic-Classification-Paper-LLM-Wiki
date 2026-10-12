@@ -361,3 +361,15 @@ updated: "2026-09-19"
 - RAMAD：MADRL攻防与多目标防御。
 - 横向判断：当前研究前沿从单标签高精度转向混合流、细粒度页面、时间漂移和自适应攻防；跨论文结果尚未统一到同一开放世界协议。
 
+### 2026-10-09 CCF-A 深度分析同步
+
+- [[2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection]]：补充 Tor 电路异常检测与恶意协作者识别的证据链，和 WF 指纹攻击分开记录。
+- [[2026-NDSS-Continuous_User_Behavior_Monitoring_using_DNS_Cache_Timing_Attacks]]：补充 DNS cache timing 侧信道对连续用户行为监测的影响，并保留域划分与阈值边界。
+- [[2026-WWW-Cardinality_is_Not_Enough__Super_Host_Detection_via_Segmented_Cardinality_Estimation]]：该论文主要属于主机检测，链接仅用于跨任务比较，不并入 WF 攻防性能排序。
+
+本次同步强调任务边界：Tor 电路异常、DNS 缓存时序和网站指纹攻击不能合并为同一指标。
+
+### CCF-A 补漏核对（2026-10-10）
+
+- [[2025-INFOCOM-Cross-Environmental_Website_Fingerprinting]]：该 INFOCOM 2025 论文已有完整深度结构，本次只补齐 CCF-A/DOI 元数据并纳入覆盖核对；不重复分析。
+

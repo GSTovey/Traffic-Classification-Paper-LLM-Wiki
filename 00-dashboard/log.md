@@ -1184,3 +1184,22 @@ Next steps:
 - Notes:
   - 统一 307 条 bibliography 条目，BibTeX 花括号平衡且 citation key 唯一。
   - 新增论文来源权重已按 venue/year 计算；citation impact 保留待核验标记。
+
+## [2026-10-10] deep-analysis | 2025-2026 CCF-A conference coverage
+- Changed:
+  - 46 篇待完整深度分析的论文主笔记（2025 年 6 篇、2026 年 40 篇）补齐方法动机、输入—处理—输出、实验、局限、复现、叙事和证据边界，并统一为 `status: deep-analyzed`、`reading_level: L3`。
+  - 2025 INFOCOM Cross-Environmental WF 与 2026 CCS AVP-Inspect 已有完整深度结构，仅补齐 CCF-A/DOI/元数据，不重复分析。
+- Updated:
+  - [[survey-malicious-traffic-detection]]
+  - [[survey-encrypted-traffic-analysis]]
+  - [[survey-website-fingerprinting]]
+  - [[survey-traffic-foundation-model]]
+  - [[method-comparison-table]]
+  - [[claims-index]]
+  - [[payload-learnability]]
+  - [[representation-vs-shallow]]
+- Notes:
+  - INFOCOM、NSDI、EuroSys 按 CCF A 目录纳入核对；AsiaCCS 不计入本次 CCF-A 目标。
+  - WWW 2025 `Less is More` 为 Short Paper Track，保留为补充分析但不计入 CCF-A full-paper 覆盖统计。
+  - `Practice Makes (Im)Perfect` 的本地 raw 未给出 CCS 会议归属，暂不升级为 CCF-A 目标；未删除任何历史自动入库段落，仅追加历史快照说明。
+  - 未执行 git commit 或 push。

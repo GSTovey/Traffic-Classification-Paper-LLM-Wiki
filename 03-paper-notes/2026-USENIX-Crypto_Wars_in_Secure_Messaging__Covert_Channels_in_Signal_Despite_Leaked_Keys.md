@@ -9,19 +9,21 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/giustolisi"
 pdf: "00-inbox/PDFs/2026-USENIX-Crypto_Wars_in_Secure_Messaging__Covert_Channels_in_Signal_Despite_Leaked_Keys.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Crypto_Wars_in_Secure_Messaging__Covert_Channels_in_Signal_Despite_Leaked_Keys.md"
-status: processed
-reading_level: L2
-research_area: [censorship-circumvention]
-task: []
-method: []
-dataset: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["censorship-circumvention", "secure messaging", "anamorphic encryption"]
+task: ["covert-channel construction", "key-disclosure resilience", "protocol performance evaluation"]
+method: ["DH-ratchet embedding", "MAC-tag embedding", "transcript indistinguishability", "transcript binding"]
+dataset: ["Signal-Android implementation", "libSignal Rust/Java/Kotlin implementation", "Android 14 device and emulator benchmarks"]
 code: "https://doi.org/10.5281/zenodo.20425141"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 ## 0. 论文基础信息
+
+> **L3 深度分析笔记**：基于正文 §1–§7、Table 1、Table 3、算法 1–10、Ethical Considerations 与 Open Science 章节交叉核对。安全结论是条件性的：每条信道只在对应的密钥披露模式、double key 假设和密码学安全假设下成立。
 
 | 项目 | 内容 |
 |---|---|
@@ -62,6 +64,15 @@ updated: "2026-09-19"
 3. **既有理论未落地**：anamorphic encryption 理论已有大量工作，但此前**没有任何实现在广泛部署的消息协议内部落地**。
 4. **Signal 带来的协议特定挑战**：Signal 不是一次加密调用——Double Ratchet 随时间演化状态、混合非对称与对称步骤、且在丢包与乱序下仍须正确；协议消息同时携带 DH 公钥、密文、认证标签等多种密码值，隐蔽信道必须融入**整个转录**而非单个原语。此外不同监控机制揭示的密钥材料子集不同，需要匹配不同披露模式的构造。
 
+### 3.5 科学假设形成
+
+| 假设 | 具体内容 | 验证方式 | 结果 |
+|---|---|---|---|
+| H1 | Double Ratchet 中的 DH 公钥可以承载隐蔽消息，同时对掌握普通解密所需状态但没有 double key 的敌手保持标准分布 | fakeKeygen/aDec 构造、PRF 混合证明与 Signal 实现 | 支持：DH-based Sym-DH/Asym-DH 在 full-state disclosure 下实现转录不可区分；前提是 double key 未泄露 |
+| H2 | MAC key 由 root key 与 DH 输出共同派生，因此只泄露其中一侧时，MAC 标签可承载隐蔽消息且无需预共享密钥 | Sym-MAC 的部分披露模型、MAC 伪随机性证明 | 支持：root key 或 DH 私钥二选一泄露时可保持隐蔽；同时泄露或泄露 mac key 即失效 |
+| H3 | transcript binding 可把被动不可区分性提升到面对注入/重放/修改的 CCA-style 保证 | 额外 carrier + 第 ℓ+1 个 PRF transcript tag 的构造与安全论证 | 条件支持：依赖 PRF/MAC 安全和未泄露的下一步 mac key；完整形式化证明在 full version |
+| H4 | 这些构造可在官方 Signal 客户端中以可接受开销运行 | Signal-Android/libSignal 实现、真实设备/模拟器 Table 3 | 支持但有权衡：Sym-MAC 接近基线；优化 DH 约 7× 解密开销；基础 DH 16-bit 需数百毫秒 |
+
 ## 4. 方法设计
 
 ### 4.1 威胁模型：两类密钥披露（§1.2, §3）
@@ -93,6 +104,13 @@ updated: "2026-09-19"
 - **查找表优化**：用"一次群运算 + 一次查表"替代在线穷举搜索，使 32-bit 隐蔽消息/ratchet 步进变得实用。查表在 Intel Xeon Gold 6248R（3 GHz、96 核、800 GB RAM）上离线生成：16-bit 表几秒生成、占 2.3 MB；32-bit 表约 50 分钟生成、占 144 GB。表只需算一次，且实现支持**远程查表服务**，客户端可不本地存储。
 - **实现**：以 Rust、Java、Kotlin 在官方 Signal 应用与 libSignal（官方客户端使用的平台无关库，主要为 Rust）中实现原型；PRF 在 Sym-DH 与 Asym-DH 中用 HMAC-SHA256 实例化。
 - **时序侧信道**：论文额外测量接收方 round-trip 延迟（从收到消息到发出投递回执），因该延迟可能向服务器泄露"消息是否 anamorphic"；缓解手段包括固定延迟发送回执，以及发送方以长于最坏情况 RTT 的间隔发送（真实设备约 1600 ms、模拟器约 1000 ms）。
+
+### 4.4 证据分层与安全边界
+
+- **形式化层**：论文给出 anamorphic security 定义，把 anamorphic target component 与 standard target component 的区分优势限制为可忽略量；DH target 是 ratchet public key，MAC target 是认证标签。transcript-binding 变体提供 CCA-style 目标，但全文证明细节在 ePrint full version。
+- **构造层**：DH 信道的前提是双 key 未被同一访问机制获取；Sym-DH 需 out-of-band PSK，Asym-DH 把接收方 double public key 公开。MAC 信道无需 double key，但只容忍 root key 或 DH 私钥一侧泄露。
+- **实现层**：官方 Signal-Android 和 libSignal 只验证功能和性能，不等于真实 Signal 服务部署或所有平台实现均已具备安全 API。
+- **观测层**：论文测量加密/解密/回执时延，不能由此证明在所有网络条件下统计不可检测，也不能推出隐蔽信道提供元数据保护或前向保密。
 
 ## 5. 与其他方法对比
 
@@ -139,6 +157,15 @@ updated: "2026-09-19"
 - **解密耗时取决于构造**：优化后的 (A)Sym-DH 避免在线穷举离散对数搜索，**仅约 7× 解密开销**，且用户可见的 round-trip 时间接近基线；基础 (A)Sym-DH 因需多次标量乘法搜索至多 16 bit，显著慢于原版，仅适合无法维护查找表的场景。
 - **Sym-MAC 最高效**（加解密与 round-trip 均接近基线）但支持的威胁模型最弱；优化 (A)Sym-DH 支持的威胁模型最强，性能与原始 Signal 同数量级。
 - 论文自述这是**anamorphic encryption 在已部署 E2EE 协议中的首个实用实例**（"the first practical instantiation of anamorphic encryption within a deployed E2EE protocol"）。
+
+### 6.4 实验设置、指标与局限
+
+- **实现**：Rust、Java、Kotlin 改造官方 Signal-Android 与平台无关的 libSignal；PRF 在 Sym-DH/Asym-DH 中用 HMAC-SHA256。
+- **设备**：Android 14、Snapdragon 888、8 GB RAM；Android Studio 模拟器（2023 MacBook Pro M2 Pro、16 GB RAM）；查表在 Xeon Gold 6248R（96 核、800 GB RAM）生成。
+- **变量**：构造类型（Original/Base/Optimized (A)Sym-DH/Sym-MAC）、隐蔽长度（16/32/64 bit）、Signal-Android 与 libSignal、真实设备与模拟器。
+- **指标**：加密平均耗时、解密平均/最坏耗时、Signal-Android round-trip 平均/最坏耗时、查表构建时间/空间；论文没有用户研究、真实 Signal 服务器测试或跨硬件统计置信区间。
+- **性能边界**：32-bit 查表约 144 GB；基础 DH 的在线离散对数搜索在真实设备约 822.8 ms 平均、1,622.2 ms 最坏；优化 DH 在模拟器 32-bit 平均 7.22 ms 但最坏 65.10 ms。Sym-MAC 只在部分披露模型下安全。
+- **安全边界**：双 key 暴露后可用 transcript 重算过去隐蔽内容；不保护通信关系、时序、频率；不处理主动 MITM 破坏端点认证；基础构造的主动安全需 transcript binding 版本。
 
 ## 7. 学习与应用
 
@@ -212,3 +239,57 @@ updated: "2026-09-19"
 3. 隐蔽信道不提供前向保密；论文提到可用 KDF 链派生 per-message double key，但未实现或评估该方向的成本。
 4. 时序侧信道仅通过固定延迟缓解；在延迟抖动较大的移动网络下，该缓解是否足以抵抗统计判别？
 5. 若成为现实检测目标：流量分析方能否通过 round-trip 时序特征区分启用 anamorphic 信道的会话？这是本库（加密流量分析）与本文最直接的交汇点。
+
+## 13. 写作叙事与故事线分析
+
+### 13.1 论文主线故事线
+
+论文从“解密能力是否等于通信可控”这一政策问题出发：如果监管者或服务器拿到了足以解密普通 Signal 消息的密钥，用户是否仍能传递不被发现的信息？作者先指出外部封面隐写在净化和审查下不稳，再把 anamorphic encryption 的不可区分性嵌入 Signal Double Ratchet 的两个密码值。转折点是按披露状态拆构造：full-state 下用额外 double key 伪装 DH 公钥，partial-state 下利用 root key 与 DH 输出的派生分离承载 MAC 标签。证明负责回答“看不见”，transcript binding 负责回答“主动篡改也不能伪造”，实现和性能实验则回答“能否运行”。最后作者明确把低带宽、无前向保密、元数据暴露和查表成本写成部署边界。
+
+### 13.2 章节叙事功能
+
+| 章节 | 叙事功能 | 承担的角色 | 关键转折点 |
+|---|---|---|---|
+| Abstract/Introduction | 将合法访问与用户隐蔽通信的冲突具体化 | 问题与意义 | “可解密”不等于“可检测” |
+| Background/Related Work | 解释 Double Ratchet 与 anamorphic encryption 的接口 | 技术语境 | 从外部封面转向协议内部载体 |
+| System Model | 按 full/partial disclosure 分配构造 | 威胁模型锚定 | 同一信道不能覆盖所有泄露模式 |
+| DH Construction | 用 PRF+DH 公钥承载消息，随后加入 transcript binding | 强威胁模型方案 | Asym-DH 取消发送方预协调 |
+| MAC Construction | 利用 MAC key 的派生分离，无需 PSK | 低成本方案 | 安全性换取部分泄露模型 |
+| Performance | 将群运算/离散对数搜索转成实际设备时延 | 工程可行性 | 查表把 16/32-bit 降到约 7 ms 量级 |
+| Discussion/Conclusion | 明确前向保密、元数据和 ARE 方向 | 边界收束 | 协议内隐蔽性是条件性质而非普遍保证 |
+
+### 13.3 Gap 展开方式
+
+| Gap 类型 | 具体内容 | 论证方式 | 位置 |
+|---|---|---|---|
+| 应用缺口 | anamorphic encryption 理论多，已部署 E2EE 落地少 | 选择 Signal Double Ratchet 作为真实协议承载 | §1, Related Work |
+| 威胁缺口 | 密钥泄露不是单一模型，full 与 partial 暴露能力不同 | Table 1 对构造和泄露材料逐格区分 | §3.3 |
+| 密码值缺口 | 公开 DH key 与认证标签都可能承载隐蔽内容，但安全条件不同 | DH/ MAC 两条独立证明路线 | §4–5 |
+| 工程缺口 | 理论构造可能需要大规模离散对数搜索 | 查表优化、远程查询与时序测量 | §4.4, §6 |
+
+### 13.4 实验叙事方式
+
+| 实验环节 | 叙事功能 | 与主线的关系 |
+|---|---|---|
+| 真实设备基线 | 给出普通 Signal 加解密与 round-trip 参照 | 让开销结论可比较 |
+| Base DH | 展示在线离散对数搜索的实际代价 | 证明朴素构造不适合部署 |
+| Optimized DH | 展示查表对 16/32-bit 的加速 | 支撑强威胁模型下的可行性 |
+| Sym-MAC | 验证 64-bit 隐蔽标签接近基线 | 支撑弱泄露模型的低成本方案 |
+| 时序讨论 | 将解密开销转化为可能的检测侧信道 | 提醒“不可区分”需要实现和调度边界 |
+
+### 13.5 写作风格与可迁移写法
+
+| 维度 | 本文做法 | 可迁移的写作模式 |
+|---|---|---|
+| 问题入口 | 用政策场景而非单一算法缺陷提出问题 | 先明确敌手新增能力，再问安全性是否仍有残余 |
+| 构造组织 | 同一协议内按威胁模型拆成两条构造 | 将不同泄露边界写成独立设计选择 |
+| 证明与实现 | 先给不可区分性，再给查表、设备和时延数据 | 把“安全成立”和“可运行”分别证成 |
+| 局限表达 | 主动写明 double key 暴露、元数据、带宽和前向保密 | 对隐蔽通信结论同时给出可检测侧信道边界 |
+
+## 14. 证据边界与复现清单
+
+1. **安全证明边界**：DH/MAC 的不可区分性在给定 key-disclosure、PRF/MAC 假设和 double key 条件下成立；不要把它表述为任意密钥泄露或任意主动 MITM 下的普遍安全。
+2. **主动安全边界**：基础构造针对被动敌手；transcript-binding 版本需要额外 carrier 和最后一个 PRF tag，完整游戏证明在 ePrint full version。
+3. **工程证据**：官方客户端和 libSignal 的实验只说明测量设备/版本上的功能与开销；144 GB 查表、远程查表服务和固定回执策略会引入部署依赖。
+4. **检测边界**：论文没有对大样本统计检测器、流量侧分类器或真实监管部署做评估；“转录不可区分”不能替代对时序、元数据和实现泄漏的实测。
+5. **可复现材料**：Zenodo 10.5281/zenodo.20425141 与 Signal/libSignal 版本、Table 3 硬件、查表参数和构造 bit-rate 必须一起记录；论文 artifact 是复现实验用代码，不应当表述为面向终端用户的 drop-in covert messenger。

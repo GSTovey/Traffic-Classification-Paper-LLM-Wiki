@@ -9,8 +9,8 @@ doi: unknown
 url: "https://www.usenix.org/conference/nsdi26/presentation/chen-xiang"
 pdf: "00-inbox/PDFs/2026-NSDI-SketchPipe__Toward_Accurate_Sketch-based_Network_Measurement_on_Multi-Pipeline_Switches_with_Splitless_Sketch_Placement.pdf"
 mineru_md: "02-parsed-markdown/2026-NSDI-SketchPipe__Toward_Accurate_Sketch-based_Network_Measurement_on_Multi-Pipeline_Switches_with_Splitless_Sketch_Placement.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["anomaly-detection", "malicious-traffic-detection", "network measurement on programmable switches"]
 task: ["anomaly-detection", "malicious-traffic-detection"]
 method: ["sketch", "ILP-based sketch placement", "synthetic state packets", "packet recirculation"]
@@ -18,7 +18,7 @@ dataset: ["CAIDA 2018", "CAIDA 2019", "MAWI 2022", "MAWI 2024", "IMC Data Center
 code: unknown
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # SketchPipe: Toward Accurate Sketch-based Network Measurement on Multi-Pipeline Switches with Splitless Sketch Placement
@@ -345,3 +345,31 @@ Precision = tp/(tp+fp)、Recall = tp/(tp+fn)、F1 = 2tp/(2tp+fp+fn)；熵估计�
 - 非倾斜/对抗负载下的采样增强方案只在 Appendix 2 提及为未来工作，缺实验数据。
 - 与加密流量分析的可结合点：能否把"跨流水线异步补测"用于加密流特征（如包长序列统计）的数据平面提取，尚待探索。
 - 论文的 1Pipe 参照为模拟结果，真实单流水线交换机上的对照数据未给出（受硬件形态限制）。
+
+
+## 深度分析（L3 证据审计补充，2026-10-09）
+
+### 方法—实验闭环核对
+
+现有主体分析已覆盖 SketchPipe 的完整闭环：P4 sketch 转 IR → ILP 求解每个数组的单流水线布局 → 普通报文按流键写入 cache → packet generator 生成状态包并经内部 recirculation 补测未访问数组 → epoch 结束后由控制面汇总。该闭环与原始 Markdown §3–§4、Appendix 1–2 的描述一致；它解决的是多流水线数组切分造成的冗余计数和负载失衡，属于数据平面部署/测量精度问题，不是新的 sketch 估计器。
+
+实验对照应保持三层参照分离：`1Pipe` 是理想单流水线精度上界（模拟），`ASP` 是数组切分布局，`PipeCache` 是已有多流水线缓存方案。原文在 Fig. 5/10、Exp#1–4/8 中支持“精度逼近 1Pipe、相对 ASP 最多提升约 81%、误差最多下降两个数量级”的结论；Table 4–5 和 Exp#11–14 支持“状态包带来约 175 ns 额外时延、流水线/缓冲/内部带宽开销较小”。这些结果不应重写为跨交换机型号或任意非倾斜流量的部署保证。
+
+### 需要保留的证据限制
+
+- 缓存碰撞与 evict-on-collision 在非倾斜、对抗性 DDoS 负载下的泛化没有完整实验；Appendix 2 只提出采样等后续方向。
+- 论文依赖 Tofino/Tofino2、SDE 9.12.0、Gurobi、packet generator 和内部 recirculation 端口；换用其他 ASIC 需重新验证能力、资源和时延。
+- 1Pipe 与 128 pipeline 扩展主要是模拟/组合实验；没有真实单流水线交换机作为独立上界设备。
+- 原文没有给出可直接获取的 SketchPipe repository；`code` 继续保持 unknown，不能把 PipeCache 的开源实现当作本文代码。
+
+### 本地证据索引
+
+| 结论 | 位置 |
+|---|---|
+| ASP 的冗余和失衡来源 | raw Markdown §2.2，Fig. 2 |
+| ILP 约束与无切片放置 | raw Markdown §4.1，Eq. (1)–(3) |
+| cache/state packet/recirculation | raw Markdown §4.2–§4.3 |
+| 真实 traces 与 testbed | raw Markdown §5.1 |
+| 精度、资源、时延和碰撞实验 | raw Markdown §5.2–§5.3，Fig. 5–12，Table 2–7 |
+
+本次只更新本论文笔记的 L3 标记和证据审计，不自动修改 04–09 层共享表。

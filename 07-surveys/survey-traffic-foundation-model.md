@@ -225,6 +225,13 @@ updated: "2026-09-19"
 - Flow-MAE
 - CoMask
 
+### 2026-10-09 CCF-A 深度分析同步
+
+- [[2025-NIPS-Gated_Attention_for_Larg]]：补充门控注意力、稀疏性和 attention sink-free 设计的机制证据；它是通用模型结构论文，不能直接当作流量任务结果。
+- [[2026-NSDI-CascadeNet__Generating_Network_Traffic_with_High-Fidelity_Temporal_Patterns]]：补充高保真流量生成中的时间模式、多样性和“记忆 vs 生成”评估边界。
+
+本节只记录可迁移的基础模型/生成模型机制，不把非流量任务的指标转写成流量分类结论。
+
 ---
 
 ## 相关研究前沿

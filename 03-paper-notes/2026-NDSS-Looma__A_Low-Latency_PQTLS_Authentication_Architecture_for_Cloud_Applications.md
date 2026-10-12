@@ -9,16 +9,16 @@ doi: "10.14722/ndss.2026.240074"
 url: "https://doi.org/10.14722/ndss.2026.240074"
 pdf: "00-inbox/PDFs/2026-NDSS-Looma__A_Low-Latency_PQTLS_Authentication_Architecture_for_Cloud_Applications.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-Looma__A_Low-Latency_PQTLS_Authentication_Architecture_for_Cloud_Applications.md"
-status: processed
-reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["post-quantum TLS", "cloud security", "authentication"]
+task: ["PQTLS handshake acceleration", "mutual TLS authentication"]
+method: ["online/offline signature", "WOTS+", "Merkle key distribution", "Bloom-filter cache"]
+dataset: ["10,000 handshakes", "100,000 signature/verifications"]
 code: "https://github.com/uoenoplab/looma"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # Looma: A Low-Latency PQTLS Authentication Architecture for Cloud Applications
@@ -377,3 +377,13 @@ Dilithium-2、Falcon-512、SPHINCS+-SHA2-128f-simple(NIST PQ 方案)与 RSA-2048
 - 评测未覆盖证书吊销(以短命证书规避),真实部署下的 CRL/OCSP 影响未知;
 - I2 测试床的多数结果置于附录(Table IX–XI、Fig. 12–13),本笔记仅引用正文给出的 I2 相对趋势;
 - 与 KB 主题无交集,聚合时不应计入 traffic-* 主题正文统计。
+
+---
+## 13. 写作叙事与故事线分析
+
+Looma 从 PQTLS 在 mTLS 云握手中“签名慢、验证相对快”的不对称性切入，把在线/离线签名、WOTS+ 包装 Dilithium-2、Merkle/KeyDist 和缓存组织成关键路径优化。实验按时延、吞吐、并发容量和缓存 miss 递进，结论明确限定在数据中心对端集合较窄的部署假设下。
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 现有笔记已覆盖 EGM、安全归约、mTLS/sTLS 结果和开源仓库；P50、吞吐和缓存口径需按 Table VI–VIII 复核。
+- 可向后量子协议专题记录 Looma；不计入 traffic-* 方法统计。本次未修改共享页面。

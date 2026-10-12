@@ -9,16 +9,16 @@ doi: "10.14722/ndss.2026.231573"
 url: "https://doi.org/10.14722/ndss.2026.231573"
 pdf: "00-inbox/PDFs/2026-NDSS-MVPNalyzer__An_Investigative_Framework_for_Auditing_the_Security_&_Privacy_of_Mobile_VPNs.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-MVPNalyzer__An_Investigative_Framework_for_Auditing_the_Security_&_Privacy_of_Mobile_VPNs.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: [censorship-circumvention, tunnel-detection]
 task: [tunnel-detection]
-method: []
-dataset: []
+method: ["LD_PRELOAD TLS key export", "runtime traffic collection", "heuristic protocol fingerprinting"]
+dataset: ["281 Google Play mobile VPN applications", "runtime traffic and configuration corpus"]
 code: "unknown（论文承诺开源；项目页 https://censoredplanet.org/#/research/securing-pets，解析稿未给出代码仓库 URL）"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # MVPNalyzer: An Investigative Framework for Auditing the Security & Privacy of Mobile VPNs
@@ -335,3 +335,60 @@ MVPNalyzer 分为三个模块：**Collection（采集）**、**Processing（处�
 - 三轮可封锁性启发式各自的精确率/召回率是否有评估？（解析稿未给出）
 - 数据集与代码是否会归档发布？若发布可用于哪些后续研究？
 - 与库内 [[2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting]] 的指纹方法结合，能否把"配置合规"与"网络可识别"做联合分析？
+
+---
+
+## 13. 写作叙事与故事线分析
+
+> 本文为 NDSS 2026（CCF A）论文，补充方法论与叙事分析。
+
+### 13.1 论文主线故事线
+
+论文从移动 VPN 被当作“隐私保护工具”与实际缺少系统审计之间的张力切入，先把安全、隐私和可封锁性拆成可观测问题。转折点是 MVPNalyzer 不依赖单一静态 APK 检查，而是用运行时采集、协议解析和跨应用分析组成闭环。281 个应用的明文、DNS/SNI 泄漏、追踪器、可封锁性和 OpenVPN 配置结果把框架从方法介绍推进到生态测量。结尾通过未覆盖路径、脚本与配置差异以及解析数字冲突限定结论范围。
+
+### 13.2 章节叙事功能
+
+| 章节 | 叙事功能 | 承担的角色 | 关键转折点 |
+|---|---|---|---|
+| Abstract | 以移动 VPN 的普及与审计缺口提出框架 | 预告测量规模和发现类型 | 将“宣称隐私”转为可验证运行时行为 |
+| Introduction / Related Work | 说明静态分析、网络侧测量和单点测试的不足 | 定位综合审计空白 | 引出端到端、应用内与网络外联合视角 |
+| Framework | Collection→Processing→Analysis 三模块 | 解释数据如何从设备流向结论 | LD_PRELOAD 导出 TLS 密钥替代 MITM |
+| Evaluation | 按泄漏、可封锁、追踪器、配置合规分问题组织 | 将框架映射到审计问题 | 同一应用同时出现多类风险 |
+| Discussion / Limitations | 讨论覆盖率、自动化脚本和数据解释边界 | 防止把测量结果外推为所有 VPN | 明确“宣称不可封锁”与实际可识别需分开 |
+| Conclusion | 回收框架与生态发现 | 提出持续审计需求 | 从单个应用缺陷升到移动 VPN 供应链问题 |
+
+### 13.3 Gap 展开方式
+
+| Gap 类型 | 具体内容 | 论证方式 | 位置 |
+|---|---|---|---|
+| 场景缺失 | 仅做静态 APK 或单点流量分析无法观察运行时明文和密钥行为 | 场景缺失 + 框架对照 | §I–III |
+| 证据碎片化 | 泄漏、可封锁性、追踪器和配置合规通常分开检查 | 任务拆分后再统一采集 | §III, Fig. 2 |
+| 生态规模缺口 | 单应用案例不足以说明移动 VPN 市场风险分布 | 大规模应用测量 | §V |
+
+### 13.4 实验叙事方式
+
+| 实验环节 | 叙事功能 | 与主线的关系 |
+|---|---|---|
+| 采集验证 | 证明 hook、TLS 解密和配置解析可以在移动应用上运行 | 建立数据可得性 |
+| 明文/DNS/SNI 泄漏 | 量化内容与元数据泄漏 | 回应“VPN 是否真的保护流量” |
+| 可封锁性启发式 | 检查协议/握手是否容易被识别 | 回应“能否绕过封锁” |
+| 追踪器分析 | 将 VPN 应用本身作为隐私主体审计 | 扩展到应用供应链风险 |
+| OpenVPN 配置合规 | 检查加密和认证参数 | 将运行时发现与配置层原因连接 |
+| 数字冲突与未覆盖路径 | 保留不确定性与测量盲区 | 防止把框架结果写成绝对结论 |
+
+### 13.5 写作风格与可迁移写法
+
+| 维度 | 本文做法 | 可迁移的写作模式 |
+|---|---|---|
+| 开篇方式 | 从用户信任的安全工具切入，再拆成可测量风险 | “产品承诺→可观察行为→审计问题” |
+| Gap 提出方式 | 把静态、网络侧和运行时证据的断裂作为缺口 | 用证据链缺口而不是单一性能指标定义问题 |
+| 方法论证逻辑 | 采集、处理、分析三模块与五类审计一一对应 | 让系统模块直接对应审计问题 |
+| 实验组织逻辑 | 先证明能采集，再按风险类别横向统计 | “可得性→分类→规模化发现”三步展开 |
+| 局限性讨论方式 | 同时列出脚本覆盖、配置差异和文本/表格冲突 | 对测量型论文明确覆盖边界与数据一致性 |
+| 最值得借鉴的结构 | 将“应用宣称”与“运行时证据”放在同一表格中比较 | 用可复核行为检验产品标签 |
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 本次补充依据对应 MinerU Markdown 的 §§III–VI、Fig. 2、Tables II/V/VI；现有笔记已保留 281 应用、明文/DNS/SNI、可封锁性、追踪器和 OpenVPN 配置数字，以及正文与表格冲突。
+- 可向 `06-tasks/tunnel-detection.md` 与 `08-comparisons/open-source-registry.md` 提交“移动 VPN 运行时审计”和工具/数据可用性记录，但应把“VPN 应用审计”与流量分类模型分开统计。
+- 当前未修改共享任务页、对比表或注册表；上述联动仅作为后续总审计建议。

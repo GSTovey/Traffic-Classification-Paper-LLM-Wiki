@@ -9,16 +9,16 @@ doi: "10.1109/sp63933.2026.00254"
 url: "https://doi.org/10.1109/sp63933.2026.00254"
 pdf: "00-inbox/PDFs/2026-S&P-Practical_Covert_Channel_Across_Isolated_Browser_Instances_via_GPU_Command_Queue_Contention.pdf"
 mineru_md: "02-parsed-markdown/2026-S&P-Practical_Covert_Channel_Across_Isolated_Browser_Instances_via_GPU_Command_Queue_Contention.md"
-status: processed
-reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["browser side channel", "covert communication", "web privacy"]
+task: ["cross-browser covert channel", "cross-mode covert channel"]
+method: ["GPU command-queue contention", "adaptive threshold handshake", "CRC retransmission"]
+dataset: ["AMT 1,524 experiments", "local 380 experiments"]
 code: "https://github.com/HugoLeoLJH/C3F"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # Practical Covert Channel across Isolated Browser Instances via GPU Command Queue Contention
@@ -334,3 +334,14 @@ C3F 是一个四层框架（Fig. 5）：**Raw Channel Layer** 直接与 GPU 命�
 - 论文把 GPU 资源分区列为可能的防御，但因"静态分配低效、动态分配难预测"未做实验；分区后信道是否真正失效仍是开问题（§7）。
 - 若把该信道用于跨隔离 cookie 同步，其端到端追踪收益（与 Storage Access API、隐私沙盒等对照）论文未量化。
 - 论文摘要与 §7 Ethics 对已回应的厂商集合描述不一致（Safari 是否确认），引用时需谨慎。
+
+---
+
+## 13. 写作叙事与故事线分析
+
+论文先指出 cookie、无痕模式和跨浏览器隔离在现实中仍缺少跨实例通信防护，继而把既有信道“高占用、不跨浏览器、噪声下不可靠”的缺口转为 GPU 命令队列竞争。C3F 以 raw timing channel 为底层，用自适应握手协商速率、帧结构/CRC/ACK/重传吸收噪声，最后用 AMT 众包证明完成率和完成后准确率。可迁移写法是把硬件侧信道、协议纠错和真实用户实验写成一条可用性证据链。
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 当前笔记已包含 GPU 竞争机制、C3F 协议、AMT/本地实验和跨平台结果；完成率与带宽应按论文表格区分有效/失败实验口径。
+- 可向隐蔽通信专题记录该相邻威胁模型，不计入 traffic-* 分类器统计；本次未修改共享页面。

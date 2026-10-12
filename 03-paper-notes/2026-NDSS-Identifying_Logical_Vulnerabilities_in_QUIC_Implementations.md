@@ -9,16 +9,16 @@ doi: "10.14722/ndss.2026.231777"
 url: "https://doi.org/10.14722/ndss.2026.231777"
 pdf: "00-inbox/PDFs/2026-NDSS-Identifying_Logical_Vulnerabilities_in_QUIC_Implementations.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-Identifying_Logical_Vulnerabilities_in_QUIC_Implementations.md"
-status: processed
-reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["QUIC protocol security", "fuzzing", "logic vulnerability discovery"]
+task: ["stateful protocol testing", "differential testing", "resource-exhaustion detection"]
+method: ["segmental mutation", "semantic differential testing", "public-resource detector", "Nyx snapshot reset"]
+dataset: ["16 actively maintained QUIC implementations", "compressed corpus from real QUIC traffic"]
 code: "GitHub 仓库 Mercuriuzz(解析稿未保留完整 URL);artifact 归档 https://doi.org/10.5281/zenodo.17015304(artifact DOI,非论文 DOI)"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # Identifying Logical Vulnerabilities in QUIC Implementations
@@ -349,3 +349,62 @@ BooFuzz(自实现 cloudflare-quiche 中间件以支持 QUIC)、DPIFuzz(QUIC 差�
 - 误报率 18.75%(3/16)的统计口径只覆盖 aioquic 单实现,其它实现的误报率未给出;
 - 消融实验中 DSM 覆盖曲线与完整版的差距在解析稿中仅以图呈现(Fig. 4),无具体数值;
 - 与 KB 主题无交集,聚合时不应计入 traffic-* 主题正文统计(与 Q3Fuzz 处理方式一致)。
+
+---
+
+## 13. 写作叙事与故事线分析
+
+> 本文为 NDSS 2026（CCF A）论文，补充方法论与叙事分析。
+
+### 13.1 论文主线故事线
+
+论文从 QUIC 快速部署与逻辑漏洞的实际危害出发，指出现有 QUIC 测试工具主要围绕崩溃、溢出和字段级随机变异，难以触达状态机与资源管理缺陷。转折点是把挑战拆成“如何生成有状态序列、如何观察非崩溃异常、如何低成本复位”三个问题，并分别引入分段变异、语义一致性/公有资源双检测器和 Nyx 快照。随后，16 个实现上的对比、消融和漏洞案例逐层证明三项设计的必要性，最后以 14 个漏洞、6 类根因及 RFC 限制建议收束到工程缓解。
+
+### 13.2 章节叙事功能
+
+| 章节 | 叙事功能 | 承担的角色 | 关键转折点 |
+|---|---|---|---|
+| Abstract | 以逻辑漏洞缺口、MerCuriuzz 和 14 个漏洞结果建立冲击力 | 预告问题、方法和验证规模 | 将“依赖人工审计”转为可自动化测试目标 |
+| Introduction | 说明 QUIC 部署规模与逻辑漏洞的安全后果 | 提出变异、检测、复位三重挑战 | 从“传统 fuzzer 看不到”转向“需要新观测信号” |
+| Related Work | 按传统 fuzzer、差分测试与 QUIC 工具定位能力空白 | 形成对比基线 | 明确内容级、序列级和交互级变异的缺层 |
+| Method | 逐一展开 Compressed Corpus、三级变异、双检测器和快照管理 | 让每个模块对应一个挑战 | 语义与资源两类信号形成互补闭环 |
+| Evaluation | 先给总体漏洞发现，再给覆盖率、消融、效率和误报分析 | 按证据强度递进验证 | 6 类漏洞案例把抽象检测能力落到攻击后果 |
+| Discussion | 提出资源上限、持续 fuzzing 和协议移植建议 | 将发现转成工程行动 | 把漏洞根因连接到高层语言可变长容器和 RFC 缺失上限 |
+| Conclusion | 回收框架组件、实现覆盖和披露结果 | 收束贡献与社区意义 | 从单一工具提升到 QUIC 生态的持续测试倡议 |
+
+### 13.3 Gap 展开方式
+
+| Gap 类型 | 具体内容 | 论证方式 | 位置 |
+|---|---|---|---|
+| 方法缺陷 | 传统工具多为内容级随机变异，难以覆盖跨帧状态关系和交互行为 | 能力矩阵 + 状态空间示例 | §III-B, §IV-B |
+| 观测缺陷 | 逻辑漏洞常不崩溃，单看进程状态会漏掉资源耗尽与语义异常 | 理论挑战 + 反例 | §III-B, §IV-C |
+| 效率缺陷 | 有状态 QUIC 每轮握手和重启成本高，限制长时间测试 | 工程瓶颈 + 复位对照 | §III-B, §IV-D |
+| 评估缺陷 | 既有工具缺少跨实现语义差分和公有资源异常的统一验证 | 对比不足 | §V-D, Table II |
+
+### 13.4 实验叙事方式
+
+| 实验环节 | 叙事功能 | 与主线的关系 |
+|---|---|---|
+| 16 实现主实验 | 先给 10M 用例、14 个漏洞和厂商披露结果 | 证明方法能发现真实逻辑漏洞 |
+| 覆盖率与能力对比 | 将三级变异与双检测器放到 BooFuzz/DPIFuzz/Bleem 的同一矩阵 | 证明能力差异来自设计层，而非仅来自运行时间 |
+| 分段变异消融 | 关闭序列/交互变异后只发现 7/14 | 归因于交互行为对深层状态漏洞的必要性 |
+| 双检测器消融 | DSCD 9/14、DPCD 8/14、默认检测器只剩崩溃类 | 证明语义信号与资源信号互补 |
+| 快照消融 | 与重启复位比较，最高提速 350%、平均 225% | 回答有状态复位成本是否值得专门设计 |
+| 漏洞案例与误报分析 | 展示隐性 DoS、资源增长、崩溃和协议语义冲突 | 把数字结果连接到真实影响与边界 |
+
+### 13.5 写作风格与可迁移写法
+
+| 维度 | 本文做法 | 可迁移的写作模式 |
+|---|---|---|
+| 开篇方式 | 先用协议部署与真实漏洞说明重要性，再明确传统检测信号失效 | “现实规模/危害→现有判据失效→新问题定义” |
+| Gap 提出方式 | 将问题拆成变异、检测、复位三项可验证挑战 | 用挑战分解把系统贡献与实验指标一一对齐 |
+| 方法论证逻辑 | 每个模块都对应一个挑战，并用约束、观测或快照说明设计理由 | 让“挑战—机制—证据”保持一对一映射 |
+| 实验组织逻辑 | 总体发现→能力对比→模块消融→效率→误报与案例 | 先证明有用，再证明为什么有用，最后交代边界 |
+| 局限性讨论方式 | 明确 fuzzing 不完备、误报需人工确认、协议移植有条件 | 直接给出剩余人工成本与适用协议范围 |
+| 最值得借鉴的结构 | “逻辑漏洞不一定崩溃，因此同时看语义差异和公有资源” | 用互补观测信号把不可见故障转化为可测指标 |
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 本次深度分析直接依据 `02-parsed-markdown/2026-NDSS-Identifying_Logical_Vulnerabilities_in_QUIC_Implementations.md` 的 §§I–VIII、Tables I–III、Fig. 3–5 与 Artifact Appendix；14 个漏洞、6 类漏洞、16 个实现和消融比例均来自论文实验段。原始 PDF 与解析稿均已保留。
+- 解析稿对 Table I 的符号列（如 CVE 分配状态）和 GitHub 仓库 URL 不完整，笔记保留了该不确定性；引用具体漏洞编号、CVE 或仓库地址时应回看 PDF/Artifact 页面。
+- 当前没有与现有 `04-concepts/`、`05-methods/`、`06-tasks/`、`07-surveys/` 流量分析白名单页面直接对应的知识层条目，因此本次不修改共享页面；若后续建立 QUIC 协议安全/模糊测试专题页，可将本笔记作为首条证据。

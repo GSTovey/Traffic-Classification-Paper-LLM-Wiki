@@ -142,6 +142,23 @@ updated: "2026-09-19"
 
 新增论文联动（2026-09-29）：AdvTG；UnDif；Helios；SaGNN；PacketPatch；Ultimate；TunnelEye；Cardinality；JitterSketch；Less-is-More。统一比较字段暂仅记录方法机制，数据集、指标、代码状态待核验。
 
+### 2026-10-09 CCF-A 深度分析新增条目
+
+| 论文 | 年份 | 任务 | 方法类别 | 核心思路 | 优点 | 局限 | 适用场景 | 开源 | 代码地址 |
+|---|---:|---|---|---|---|---|---|---|---|
+| [[2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models]] | 2025 | 恶意流量逃逸 | LLM + 强化学习 | 固定功能字段、生成非功能字段，并用 RL 选择更稳健的攻击字段 | 覆盖 payload/统计/序列检测器 | 依赖协议提示和目标字段定义 | payload 型检测器的黑盒鲁棒性评估 | unknown | 见论文笔记 |
+| [[2025-WWW-Helios__Learning_and_Adaptation_of_Matching_Rules_for_Continual_In_Network_Malicious_Traffic_Detection]] | 2025 | 持续网内恶意检测 | 规则学习与在线适配 | 从匹配规则中学习并随流量变化更新规则 | 面向持续变化的部署条件 | 长期漂移和规则污染风险需单独评估 | 可编程数据平面持续检测 | unknown | 见论文笔记 |
+| [[2025-WWW-Facing_Anomalies_Head-On__Network_Traffic_Anomaly_Detection_via_Uncertainty_Inspired_Inter-Sample_Differences]] | 2025 | 零正样本异常检测 | 证据不确定性 | 用 NIG 证据头和跨样本不确定性识别 anomaly drift | 异常分数与重构误差解耦 | 依赖正常分布稳定和 NIG 假设 | 跨数据集漂移异常检测 | 待核验 | 见论文笔记 |
+| [[2025-WWW-ODNS_Clustering__Unveiling_Client-Side_Dependency_in_Open_DNS_Infrastructure]] | 2025 | 开放 DNS 测量 | 依赖关系聚类 | 以客户端依赖关系聚类揭示开放 DNS 结构 | 关注客户端侧依赖而非单点统计 | 受测量范围和聚类参数约束 | DNS 基础设施测量 | unknown | 见论文笔记 |
+| [[2026-NDSS-Breaking_the_Generative_Steganography_Trilemma__ANStega_for_Optimal_Capacity__Efficiency__and_Security]] | 2026 | 生成式隐写 | 反向状态机与流式重归一化 | 在生成过程中联合控制容量、效率和安全 | 将隐写约束嵌入生成过程 | 依赖分析器和容量假设 | 生成式隐写协议设计 | unknown | 见论文笔记 |
+| [[2026-NSDI-CascadeNet__Generating_Network_Traffic_with_High-Fidelity_Temporal_Patterns]] | 2026 | 网络流量生成 | GAN/WGAN-GP | 级联生成器建模高保真时间模式并检查新颖性 | 联合报告时间、多样性和效率 | 必须排除训练集记忆 | 流量仿真和数据增强 | unknown | 见论文笔记 |
+| [[2026-WWW-Cardinality_is_Not_Enough__Super_Host_Detection_via_Segmented_Cardinality_Estimation]] | 2026 | 超级主机检测 | 分段基数估计 | 分段哈希、Linear Counting 与替换概率降低流水线误差 | 给出线速和 P4 资源证据 | 阈值迁移和硬件资源受限 | 高速网内主机检测 | unknown | 见论文笔记 |
+
+| [[2026-USENIX-Opossum_Attack__Application_Layer_Desynchronization_using_Opportunistic_TLS]] | 2026 | TLS 协议安全 | 状态机失步扫描 | 利用 Opportunistic TLS 的应用层状态机不同步构造四类利用 | 覆盖真实协议实现和大规模扫描 | 受协议实现、端口和扫描口径约束 | 应用层协议安全审计 | unknown | 见论文笔记 |
+| [[2026-USENIX-Remise__Authorized_Anonymous_Communication_Systems]] | 2026 | 匿名通信 | DORAM/秘密共享授权 | 将授权、匿名访问和可撤销性组合到通信系统 | 明确共谋与授权更新边界 | 依赖密码学假设和系统参数 | 受控匿名访问系统 | unknown | 见论文笔记 |
+| [[2026-USENIX-Revelio__A_Global_Study_of_VoIP_Blocking]] | 2026 | VoIP 封锁测量 | STUN 属性指纹 | 对比混淆前后 STUN 属性以定位应用专属封锁规则 | 71 国测量与 19 国复现 | 结论受协议属性和观测点约束 | 全球 VoIP 阻断测量 | unknown | 见论文笔记 |
+| [[2026-USENIX-TrojPix__Electromagnetic_Covert_Channels_via_Imperceptible_Pixel_Modulation]] | 2026 | 电磁隐蔽信道 | 像素调制与自适应解码 | 通过显示器像素微扰调制电磁辐射并在远端解码 | 给出多厂商、多线缆和距离边界 | 依赖显示器/线缆/工具链，伦理边界需单独审查 | 气隙环境侧信道研究 | unknown | 见论文笔记 |
+
 ## 2026-09-29 并行深度分析追加
 - **语义协议模糊测试**：SemFuzz 将 RFC 语义规则显式化并用预期响应作 oracle；摘要证据为 16 个潜在、10 个确认、5 个未知、4 个 CVE。
 - **可编程数据面推理**：FENIX（交换机特征+FPGA DNN）与 SPLIDT（分区决策树）均展示线速状态推理，但前者偏神经模型吞吐，后者偏资源约束下的多目标树搜索。
@@ -156,3 +173,63 @@ updated: "2026-09-19"
 | RoFiRe | 真实Tor WF | 增强 + 归一化 | 数据与数值待核验 |
 | TraVerse | 动态WF | LLM表示 + 无标签微调 | 评估与开销待核验 |
 | RAMAD | WF防御 | MADRL/MAPPO攻防 | 摘要：攻击准确率下降>80%，待核验 |
+
+## 2026-10-10 CCF-A 深度分析覆盖索引
+
+本节只作覆盖索引，不重算论文权重或共识分数。完整方法、实验、局限和证据范围见各论文主笔记。
+
+### 2025
+- [[2025-INFOCOM-Cross-Environmental_Website_Fingerprinting]]
+- [[2025-NIPS-Gated_Attention_for_Larg]]
+- [[2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models]]
+- [[2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection]]
+- [[2025-WWW-Facing_Anomalies_Head-On__Network_Traffic_Anomaly_Detection_via_Uncertainty_Inspired_Inter-Sample_Differences]]
+- [[2025-WWW-Helios__Learning_and_Adaptation_of_Matching_Rules_for_Continual_In_Network_Malicious_Traffic_Detection]]
+- [[2025-WWW-ODNS_Clustering__Unveiling_Client-Side_Dependency_in_Open_DNS_Infrastructure]]
+
+### 2026
+- [[2026-NDSS-Breaking_the_Generative_Steganography_Trilemma__ANStega_for_Optimal_Capacity__Efficiency__and_Security]]
+- [[2026-NDSS-Continuous_User_Behavior_Monitoring_using_DNS_Cache_Timing_Attacks]]
+- [[2026-NDSS-Identifying_Logical_Vulnerabilities_in_QUIC_Implementations]]
+- [[2026-NDSS-Looma__A_Low-Latency_PQTLS_Authentication_Architecture_for_Cloud_Applications]]
+- [[2026-NDSS-MVPNalyzer__An_Investigative_Framework_for_Auditing_the_Security_&_Privacy_of_Mobile_VPNs]]
+- [[2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network]]
+- [[2026-NSDI-CascadeNet__Generating_Network_Traffic_with_High-Fidelity_Temporal_Patterns]]
+- [[2026-NSDI-FENIX__Enabling_In-Network_DNN_Inference_with_FPGA-Enhanced_Programmable_Switches]]
+- [[2026-NSDI-HybridMesh__A_Hardware-software_Hybrid_Approach_for_Accelerating_Service_Mesh_Ingress]]
+- [[2026-NSDI-Iceberg__Automated_Verification_of_DNS_Authoritative_Engines_via_Just-in-Time_Summarization]]
+- [[2026-NSDI-Iris__Expressive_Traffic_Analysis_for_the_Modern_Internet]]
+- [[2026-NSDI-OpenOptics__Enabling_Open_Research_and_Implementation_of_Optical_Data_Center_Networks]]
+- [[2026-NSDI-SPLIDT__Partitioned_Decision_Trees_for_Scalable_Stateful_Inference_at_Line_Rate]]
+- [[2026-NSDI-SketchPipe__Toward_Accurate_Sketch-based_Network_Measurement_on_Multi-Pipeline_Switches_with_Splitless_Sketch_Placement]]
+- [[2026-NSDI-Supercharging_Packet-level_Network_Simulation_of_Large_Model_Training_via_Memoization_and_Fast-Forwarding]]
+- [[2026-S&P-Practical_Covert_Channel_Across_Isolated_Browser_Instances_via_GPU_Command_Queue_Contention]]
+- [[2026-USENIX-Analyzing_the_WebRTC_Ecosystem_and_Breaking_Authentication_in_DTLS-SRTP]]
+- [[2026-USENIX-Breaking_the_Boundaries__Analyzing_QUIC_Frame-Packet_Interactions_With_QUIC-Attacker]]
+- [[2026-USENIX-Crypto_Wars_in_Secure_Messaging__Covert_Channels_in_Signal_Despite_Leaked_Keys]]
+- [[2026-USENIX-DNS_Cache_Poisoning_Like_it’s_2006]]
+- [[2026-USENIX-DaLens__Charting_DNS_Self-Amplification_Threats_at_Large]]
+- [[2026-USENIX-From_Symmetry_toward_Weak_Asymmetry__Secure_Steganography_under_the_Receiver's_Partial_Channel_Knowledge]]
+- [[2026-USENIX-Generating_Precise_Format_Specification_for_Network_Protocols_Through_Adversarial_LLM_Interactions]]
+- [[2026-USENIX-Hop__A_Modern_Transport_and_Remote_Access_Protocol]]
+- [[2026-USENIX-InSPECtor__Improving_SLEIGH_Specification_Veracity_via_Proxy]]
+- [[2026-USENIX-Opossum_Attack__Application_Layer_Desynchronization_using_Opportunistic_TLS]]
+- [[2026-USENIX-Provable_Secure_Steganography_Based_on_Adaptive_Dynamic_Sampling]]
+- [[2026-USENIX-Remise__Authorized_Anonymous_Communication_Systems]]
+- [[2026-USENIX-Revelio__A_Global_Study_of_VoIP_Blocking]]
+- [[2026-USENIX-TrojPix__Electromagnetic_Covert_Channels_via_Imperceptible_Pixel_Modulation]]
+- [[2026-WWW-Cardinality_is_Not_Enough__Super_Host_Detection_via_Segmented_Cardinality_Estimation]]
+- [[2026-WWW-Eclipse_Attacks_on_Ethereum’s_Peer-to-Peer_Network]]
+- [[2026-WWW-Forge__A_Robust_Multi-tab_Website_Fingerprinting_Attack_Via_Blind_Source_Separation]]
+- [[2026-WWW-HiFi-WF__Toward_Realistic_Website_Fingerprinting_with_Multi-tab_and_Subpage_Recognition]]
+- [[2026-WWW-JitterSketch__Finding_Jittery_Flows_in_Network_Streams]]
+- [[2026-WWW-Less_is_More__Simplifying_Network_Traffic_Classification_Leveraging_RFCs]]
+- [[2026-WWW-RoFiRe__Robust_Website_Fingerprinting_on_Real-World_Tor_Traffic_via_Improved_Augmentation_and_Normalization]]
+- [[2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions]]
+- [[2026-WWW-SemFuzz__A_Semantics-Aware_Fuzzing_Framework_for_Network_Protocol_Implementations]]
+- [[2026-WWW-Tracking_the_Stray_Sheep__Understanding_DNS_Response_Manipulation_in_the_Wild]]
+- [[2026-WWW-Unveiling_the_Underground_Phishing_Ecosystem__A_12-Year_Longitudinal_Study_of_Deep_and_Dark_Web_Forums]]
+- [[2026-WWW-Zero-Shot_Forecasting_of_Network_Dynamics_through_Weight_Flow_Matching]]
+- [[2026-arXiv-AVP-Inspect__Coordinated_Cyber-Physical_Testing_for_Privacy_Analysis_of_COTS_Apple_Vision_Pro_Applications]]
+
+- `2026-arXiv-Practice_Makes_(Im)Perfect...` 未列入：本地 raw 未提供 CCS 会议归属证据，保留为待核验项。

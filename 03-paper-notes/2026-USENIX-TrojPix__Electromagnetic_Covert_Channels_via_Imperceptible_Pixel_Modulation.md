@@ -9,16 +9,16 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-guoming"
 pdf: "00-inbox/PDFs/2026-USENIX-TrojPix__Electromagnetic_Covert_Channels_via_Imperceptible_Pixel_Modulation.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-TrojPix__Electromagnetic_Covert_Channels_via_Imperceptible_Pixel_Modulation.md"
-status: processed
-reading_level: L2
-research_area: []
-task: []
-method: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["electromagnetic side channel", "air-gapped network security", "covert communication"]
+task: ["physical-layer data exfiltration", "EM covert channel"]
+method: ["pixel-to-sample mapping", "OOK/differential modulation", "CRRC interleaving", "adaptive decoding"]
 dataset: ["enwik8 (Mahoney dataset)"]
 code: "https://zenodo.org/records/17905407"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # TrojPix: Electromagnetic Covert Channels via Imperceptible Pixel Modulation
@@ -357,3 +357,14 @@ TrojPix 分三大模块（`§5`, Figure 6）：**发射端设计**（分析 TMDS
 - 防御建议中"随机化 TMDS 发送顺序"需要硬件/架构重构，是否存在纯软件（驱动层）可行的替代缓解？
 - 该信道能否与流量侧信道组合（例如同时通过网络侧与 EM 侧外泄）？组合后的检测难度如何？
 - 论文在 §11 声明不公开工具链、§12 声明公开代码与数据，实际 Zenodo 记录中究竟包含哪些内容，值得核实。
+
+---
+
+## 13. 写作叙事与故事线分析
+
+TrojPix 以气隙网络中“高吞吐、远距离、视觉不可感知”难以同时满足的三难困境开篇，先用 TMDS 可控发射证明像素微调确实产生 EM 信号，再用 P2S-Map、行间差分、CRRC 和自适应解码逐层解决速率、突发错误和同步问题。最后通过九家显示器、十五根线缆、穿墙和志愿者视觉实验把物理可行性推进到现实威胁评估。
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 现有笔记已包含调制/接收流程、BCR、吞吐、距离、视觉不可感知和屏蔽边界；artifact 虽公开代码与数据，伦理声明仍排除端到端可部署工具链。
+- 可向隐蔽通信/气隙安全专题记录 TrojPix；不计入 traffic-* 方法统计。本次未修改共享页面。

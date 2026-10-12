@@ -9,8 +9,8 @@ doi: unknown
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/bach"
 pdf: "00-inbox/PDFs/2026-USENIX-Analyzing_the_WebRTC_Ecosystem_and_Breaking_Authentication_in_DTLS-SRTP.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Analyzing_the_WebRTC_Ecosystem_and_Breaking_Authentication_in_DTLS-SRTP.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["protocol security analysis (WebRTC/DTLS-SRTP)", "real-time communication ecosystem measurement"]
 task: ["authentication bypass testing", "ecosystem/crypto deployment measurement"]
 method: ["black-box MitM system testing", "TLS-Attacker WorkflowTrace", "JA3/JA3S fingerprinting"]
@@ -18,10 +18,12 @@ dataset: ["33 个媒体服务器实现（24 个服务商）", "5 个浏览器（
 code: "artifact: https://doi.org/10.5281/zenodo.17880120（DMS 测试框架开源）"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP
+
+> **L3 深度分析笔记**：基于论文正文、Table 1–3、Open Science 与 Ethical Considerations 章节，以及 MinerU 原始解析稿的交叉核对。本文的核心结论只覆盖作者实际建立的 UDP/非 TURN-channel 黑盒测试范围；未利用不等于不可利用。
 
 ## 0. 论文基础信息
 
@@ -369,3 +371,53 @@ DMS 建立在四个组件之上（§1）：TLS-Attacker（协议流生成与改�
 3. 测试时间线跨度较长（Discord 2022 与 2024 两次、Webex 2024 与终版），Table 1/Table 2 中的版本状态可能不完全同步，引用具体厂商结论时需注明时间点。
 4. 论文 §7 称 Firefox 允许 e=3，但未给出该配置下实际伪造签名的端到端演示，属理论风险提示。
 5. 该论文与库内流量分类主线正交，聚合时建议归入"协议/系统安全测量"类目，而非 payload 可学性等研究前沿。
+
+## 13. 写作叙事与故事线分析
+
+### 13.1 论文主线故事线
+
+论文先把 WebRTC 描述为由 HTTP、TLS、SDP、ICE、STUN/TURN、DTLS、SRTP/SCTP 等组件拼接而成的复杂系统，再指出现有研究要么停留在信令面，要么只看常规 DTLS 实现，因而没有回答真实媒体服务器是否按 WebRTC 的指纹绑定要求完成认证。转折点是把问题从“某个服务是否有漏洞”提升为可复用的黑盒测量问题：DMS 在真实 ICE 会话的 MitM 位置改写握手消息，并用 19 项测试区分配置错误、认证绕过和实际媒体泄露。实验先给出生态属性，再给出 19/33 的 DTLS 层失败与 9 个可利用结果，最后以 Webex 音频窃听 PoC 把协议层结论落到用户影响。讨论部分回到系统设计，提出客户端 required-authentication 防线和简化 WebRTC 密钥交换的方向。
+
+### 13.2 章节叙事功能
+
+| 章节 | 叙事功能 | 承担的角色 | 关键转折点 |
+|---|---|---|---|
+| Abstract | 先交代生态重要性、黑盒工具和影响规模 | 结论前置 | “19 个实现绕过，9 个可取媒体” |
+| Introduction | 用 WebRTC 组件复杂性与真实部署缺口建立研究必要性 | 问题框定 | 从信令安全转向 DTLS-SRTP 认证 |
+| Background / Related Work | 说明 WebRTC 的自签证书、SDP 指纹与 DTLS 角色语义 | 术语和威胁模型锚定 | 解释为什么常规互联网 DTLS 扫描不适用 |
+| DMS（§3–4） | 将真实会话启动、流量过滤、探针执行、端点指纹和报告串成可复用管线 | 方法主体 | Booter/Probe 把应用差异隔离在框架外 |
+| Results（§5） | 先回答生态配置，再回答认证安全性 | 证据递进 | 从算法/版本分布转向绕过与可利用性 |
+| Exploit（§6） | 展示空证书、攻击者公钥、应用层 Multistream 请求和 SRTP 解密 | 严重性兑现 | 握手完成不再只是抽象漏洞，而是可听到会议音频 |
+| Browser/API（§7） | 测量浏览器作为最后一道防线的宽松度 | 边界补充 | 所有浏览器接受 512-bit RSA，但自身认证测试通过 |
+| Discussion / Conclusion（§8–10） | 给出加固建议并限定结论范围 | 解释与收束 | 服务器实现与浏览器实现出现安全能力落差 |
+
+### 13.3 Gap 展开方式
+
+| Gap 类型 | 具体内容 | 论证方式 | 位置 |
+|---|---|---|---|
+| 覆盖对象缺口 | 固定端点的互联网 DTLS 扫描无法触达依赖 ICE candidate pair 的媒体服务器 | 说明 DTLS-SRTP 的部署条件与常规 DTLS 不同 | §1, §2, §9 |
+| 自动化缺口 | 既有状态机 fuzzing/符号执行难以在真实信令与媒体链路中复现 | 提出只需 MitM 的 Booter + Probe 架构 | §3, §4 |
+| 认证语义缺口 | RFC/库的 optional authentication 与 WebRTC 的双方认证要求存在落差 | 设计空证书、身份指纹、信任库、签名和乱序消息测试 | §4.2 |
+| 证据分级缺口 | DTLS 握手被接受不一定能获取媒体 | 用改版浏览器补发正确应用数据，单列 delayed/application-layer authentication | §4.3, §5.2 |
+
+### 13.4 实验叙事方式
+
+| 实验环节 | 叙事功能 | 与主线的关系 |
+|---|---|---|
+| 基本属性扫描 | 给出版本、密码套件、SRTP profile、证书与端点差异 | 回答 RQ1，证明生态不是单一实现 |
+| 19 项认证测试 | 把 WebRTC 的隐式要求转化为可执行判定 | 回答 RQ2 的协议层部分 |
+| 可利用性二次验证 | 排除延迟认证、应用状态信号和应用层 token 造成的假阳性 | 将“握手绕过”升级为“媒体可泄露” |
+| Webex PoC | 以攻击者公钥、空证书和 Multistream 请求完成端到端窃听 | 将统计结果转化为直观影响 |
+| 浏览器 API 矩阵 | 测量 generateCertificate 参数与弱证书接受度 | 说明客户端防线的强弱与配置风险 |
+| 责任披露/工件 | 给出 CVE、修补状态、PCAP、报告和补丁 | 增强可复现性与现实影响边界 |
+
+### 13.5 写作风格与可迁移写法
+
+| 维度 | 本文做法 | 可迁移的写作模式 |
+|---|---|---|
+| 问题入口 | 从真实生态组件复杂性和服务商规模切入 | 先交代部署条件，再指出测量盲区 |
+| 工具贡献 | 用四步流程和模块化 Booter/Probe 解释工具，而不是只报漏洞清单 | 将应用适配、协议变异和结果归类分层呈现 |
+| 证据分级 | 明确区分协议层失败、可利用媒体泄露、完整 PoC | 对安全结论设置“发现→验证→利用”阶梯 |
+| 负面结果 | 单独报告浏览器未被绕过、未确认可利用的服务及应用层认证 | 把未发现漏洞写成范围内的反证，而非泛化为安全保证 |
+| 影响表达 | 用 Webex 音频 PoC 与厂商修复/CVE 连接抽象缺陷和现实后果 | 让一个可复现实例承担影响说明，避免仅用用户规模夸大风险 |
+| 限制管理 | 在方法局限、伦理说明和结论中重复限定 UDP、非 TURN-channel 与自有会话范围 | 把环境边界写进方法与结论，而不是只放在末尾免责声明 |

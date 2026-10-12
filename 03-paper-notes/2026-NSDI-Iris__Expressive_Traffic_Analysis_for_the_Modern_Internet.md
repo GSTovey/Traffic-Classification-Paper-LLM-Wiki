@@ -9,16 +9,16 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/nsdi26/presentation/rossman"
 pdf: "00-inbox/PDFs/2026-NSDI-Iris__Expressive_Traffic_Analysis_for_the_Modern_Internet.pdf"
 mineru_md: "02-parsed-markdown/2026-NSDI-Iris__Expressive_Traffic_Analysis_for_the_Modern_Internet.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: [encrypted-traffic-analysis, censorship-circumvention]
 task: [tunnel-detection]
-method: []
-dataset: []
+method: ["Rust subscription compiler", "match-action pipeline", "DPDK zero-copy runtime"]
+dataset: ["Stanford campus mirror traffic", "70万标注样本"]
 code: "https://github.com/stanford-esrg/iris（Apache 2.0）"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # Iris: Expressive Traffic Analysis for the Modern Internet
@@ -359,3 +359,14 @@ ZLT（零丢包吞吐，丢包 <1% 约束下可处理的最大流量）、吞吐
 - 谓词重排的搜索策略与最坏情况开销？（§5.1 提到"尽可能重排"，未给算法细节）
 - 与库内 [[2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting]] 的原实现相比，Iris 复刻版在**指纹准确率**上是否一致？（论文只报吞吐，未报准确率对比）
 - 能否把 Iris 用于网站指纹/流量分类的**多模型并发在线评测**？（框架能力可行，论文未涉及，属推断）
+
+---
+
+## 13. 写作叙事与故事线分析
+
+Iris 从“复杂分析需要 Zeek 的表达力、生产线速需要 Retina/DPDK 性能”的张力出发，把跨任务公共逻辑提升为编译期融合问题。方法按 subscription、状态机 IR、去重 match-action 管线和零拷贝运行时递进，实验再由单订阅、并发扩展、案例和代码量证明表达力与性能可兼得。可迁移写法是先用真实部署统计证明重复造轮子，再用统一中间表示把多任务共享变成可测量收益。
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 本次将已有方法、实验、局限和案例证据正式升级为 L3；100 Gbps、订阅数、丢包率和代码量应以 PDF 原图/表核对。
+- 可向 `05-methods/` 的流量分析系统与 `06-tasks/traffic-classification.md` 增加 Iris 框架证据；本次未修改共享页面。

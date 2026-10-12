@@ -9,19 +9,21 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/pang-kaiyi"
 pdf: "00-inbox/PDFs/2026-USENIX-Provable_Secure_Steganography_Based_on_Adaptive_Dynamic_Sampling.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Provable_Secure_Steganography_Based_on_Adaptive_Dynamic_Sampling.md"
-status: processed
-reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["provable steganography", "language-model sampling", "covert communication"]
+task: ["seed-only steganographic encoding", "distribution-preserving sampling", "covertext imperceptibility"]
+method: ["adaptive dynamic sampling", "collision-set expansion", "PRG-based mapping", "game-based security proof"]
+dataset: ["WILD QA dataset", "XHS simulated Chinese social-media corpus", "MISTRAL3/QWEN2/LLAMA3 models"]
 code: "https://zenodo.org/records/18152848(artifact 归档,非论文 DOI)"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # Provable Secure Steganography Based on Adaptive Dynamic Sampling
+
+> **L3 深度分析笔记**：基于正文 §1–§7、Algorithms 1–10、Tables 1–3、Ethical/Open Science 章节与 MinerU 原始解析稿交叉核对。本文的安全结论依赖 seed-taking API 的可复现采样、PRG 安全与 i.i.d. 采样假设；容量、利用率、SR 和隐写分析 F1 不应混为单一“性能”。
 
 ## 0. 论文基础信息
 
@@ -316,3 +318,58 @@ PRG 扩张碰撞集合,在种子采样接口下安全嵌入。
 3. 解析稿给出 Table 4/Table 5 的隐写文本示例(含 gpt-3.5-turbo-1106 生成样例),可对照原 PDF 观察输出自然度。
 4. ADS 的安全性依赖两个假设(PRG 存在 + 同分布采样的 i.i.d. 性质),对采样接口的实现细节(是否真独立)的敏感性解析稿未做实验评估。
 5. **聚合提示**:本文与 KB 主题无实质交集,聚合时请勿计入 traffic-* 主题统计;笔记不建立任何 wikilink(见 §9.1)。
+
+## 13. 写作叙事与故事线分析
+
+### 13.1 论文主线故事线
+
+论文从一个部署事实切入：现实中的 LLM API 往往只提供“给 seed、返回 token”的采样接口，而主流可证明安全隐写假设客户端可以读取完整概率分布。作者把这一接口限制转化为共享随机性的来源，用 PRG 为候选消息生成采样 seed，再把碰撞集合的规模控制在有界区间内。转折点不是追求无碰撞，而是承认碰撞、把碰撞集合列为解码状态，并通过动态扩张让每一步仍有足够的可嵌入比特。G0–G3 博弈证明输出分布保持不变，随后 WILD/XHS、多个模型和 TS-CSW 把“可证明”落到 SR=1、接近随机的隐写分析 F1 和容量/利用率数据。结尾回到 API 确定性、采样开销和非语言模态边界，避免把 seed-only 方案泛化成所有闭源服务都可部署。
+
+### 13.2 章节叙事功能
+
+| 章节 | 叙事功能 | 承担的角色 | 关键转折点 |
+|---|---|---|---|
+| Abstract/Introduction | 说明显式分布访问是现有 PSS 的共同前提 | 问题建立 | seed-only API 成为新约束 |
+| Related Work | 对比 METEOR、DISCOP、SparSamp、iMEC | 缺口定位 | 复杂度与分布访问同时受限 |
+| Method | 定义 collision set、动态扩张与固定参数 N | 方法主体 | 不消除碰撞，而是显式管理碰撞 |
+| Security | G0→G1→G2→G3 游戏序列 | 理论支点 | 均匀抽样与真实模型采样分布相同 |
+| Experiments | 容量/利用率、SR、TS-CSW、时间四条线 | 证据兑现 | SR=1 和 F1≈50% 同时成立 |
+| Discussion | 解释 seed 确定性、N 和 API 模态边界 | 外推约束 | 自建/自控 API 更可靠 |
+
+### 13.3 Gap 展开方式
+
+| Gap 类型 | 具体内容 | 论证方式 | 位置 |
+|---|---|---|---|
+| 接口缺口 | 现有 PSS 需要概率/累积分布，实际 API 只给 seed 采样 | 将 seed-taking API 作为正式接口模型 | §1, §2 |
+| 碰撞缺口 | 候选消息映射到同一 token 时确定性解码失败 | 动态 collision set 记录并按预算扩张 | §3–4 |
+| 复杂度缺口 | 词表大、METEOR 窗口巨大、iMEC 优化昂贵 | O(2^N) 且与词表大小无关的构造 | §4.3 |
+| 证据缺口 | 分布保持不等于能可靠解码或难以检测 | 同时报告 SR、TS-CSW F1、容量与利用率 | §5 |
+
+### 13.4 实验叙事方式
+
+| 实验环节 | 叙事功能 | 与主线的关系 |
+|---|---|---|
+| WILD/XHS 容量 | 展示不同语言风格和模型下的 bit/token、利用率 | 回答“能嵌多少” |
+| SR 对比 | 与 iMEC 的概率解码错误率对照 | 回答“能否可靠解出” |
+| TS-CSW F1 | 对抗隐写分析器 | 回答“是否像正常采样” |
+| 时间复杂度 | 比较每 token 采样时间与基线 | 回答“seed-only 是否可运行” |
+| API/模态限制 | 讨论 seed 确定性和图像生成时间 | 限制部署外推 |
+
+### 13.5 写作风格与可迁移写法
+
+| 维度 | 本文做法 | 可迁移的写作模式 |
+|---|---|---|
+| 接口驱动 | 先锁定真实接口限制，再设计协议 | 从部署约束而非理想 API 出发 |
+| 碰撞处理 | 将失败状态显式建模成 collision set | 不回避失败事件，用状态维护吸收它 |
+| 理论—实验 | G0–G3 逐步替换，对应 SR/F1/容量实验 | 每个安全游戏步骤都有可观测实验对象 |
+| 指标拆分 | capacity、utilization、SR、F1、time 分开报告 | 避免用一个平均分掩盖工程权衡 |
+
+## 14. 证据边界与复现清单
+
+1. **安全假设**：G0–G3 依赖 PRG 伪随机性与模型采样 i.i.d.；若 seed API 不确定、服务端有额外状态或输出非独立，证明不直接适用。
+2. **接口边界**：论文主要实验使用本地/可控 7B 级模型；闭源 API 的 seed 参数通常只“尽力”保证确定性，不能把本方法写成已验证的云服务部署。
+3. **复杂度边界**：O(2^N) 与词表大小无关，但 N 增大仍指数增长；论文实验把集合上限设为 2^9，不能据此推断更高 N 的时间和隐写质量。
+4. **指标边界**：SR=1 只说明实验设置下比特解码正确，不等于输出一定无法被所有隐写分析器检测；TS-CSW F1≈50% 只覆盖该检测器、数据集和模型。
+5. **容量口径**：ADS 利用率在 6 个设置中最高，但原始 Embed bit/token 只在部分设置中最高；引用时必须同时报告二者。
+6. **数据/硬件**：WILD、XHS、MISTRAL3/QWEN2/LLAMA3、每设置 1,000 样本、top-p=1、temperature=1、最大 500 tokens、2×A5000 是结果的一部分；换模型或 prompt 需重测。
+7. **复现材料**：artifact 归档于 Zenodo records/18152848；需核对版本、seed、碰撞集合上限、PRG 状态更新和采样日志，不能只复述论文表格。

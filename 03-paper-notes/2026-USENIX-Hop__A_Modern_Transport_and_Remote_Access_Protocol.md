@@ -9,16 +9,16 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/flammarion"
 pdf: "00-inbox/PDFs/2026-USENIX-Hop__A_Modern_Transport_and_Remote_Access_Protocol.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Hop__A_Modern_Transport_and_Remote_Access_Protocol.md"
-status: processed
-reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["secure transport protocols", "remote access", "post-quantum cryptography"]
+task: ["secure remote access", "credential delegation", "roaming transport"]
+method: ["Noise handshake", "Cyclist/Keccak duplex", "ML-KEM", "single-use authorization grants"]
+dataset: ["Mininet simulations", "DigitalOcean three-region testbed"]
 code: "https://doi.org/10.5281/zenodo.17953397"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 ## 0. 论文基础信息
@@ -229,3 +229,14 @@ Hop 是对 SSH 的 clean-slate 重新设计：以 Noise 握手（Discoverable/XX
 3. Authorization Grant 的"内存映射 + 会话建立后即刻移除"在 Target 重启或进程崩溃时的行为如何？是否存在授权重放窗口？
 4. Hidden Mode 依赖 out-of-band 分发服务器静态 ML-KEM 封装密钥；在密钥轮换与多主机配置（服务器需遍历 host 匹配静态密钥）下的可扩展性如何？
 5. 论文未做形式化验证（仅称基于形式化验证过的 Noise 模式）；Hop 的握手组合（Noise + 额外 RTT + cookie）是否已由形式化工具覆盖？
+
+---
+
+## 13. 写作叙事与故事线分析
+
+Hop 从 SSH 的复杂度、TOFU 主机认证、agent forwarding 委派风险和缺少抗量子/漫游支持的现实需求出发，先列出八条设计要求，再用 Transport、Tubes、Remote Access 三层架构逐项映射。握手、证书、授权委派、拥塞控制和性能评测形成“安全目标→机制→实现→代价”的闭环。可迁移写法是先冻结设计需求和威胁模型，再让每个协议字段服务于一个明确需求。
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 现有笔记已覆盖握手、证书、授权委派、Tubes、SSH 对比与 Mininet/云实验；性能图数值和形式化安全证明应回看 PDF 原图与 artifact。
+- Hop 属协议设计与远程访问，不应并入 traffic-* 分类器统计；可作为协议安全专题的相邻证据。本次未修改共享页面。

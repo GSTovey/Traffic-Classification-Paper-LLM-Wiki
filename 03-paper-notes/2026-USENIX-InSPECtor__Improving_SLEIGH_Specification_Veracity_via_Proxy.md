@@ -9,16 +9,16 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/chesser"
 pdf: "00-inbox/PDFs/2026-USENIX-InSPECtor__Improving_SLEIGH_Specification_Veracity_via_Proxy.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-InSPECtor__Improving_SLEIGH_Specification_Veracity_via_Proxy.md"
-status: processed
-reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+status: deep-analyzed
+reading_level: L3
+research_area: ["binary analysis", "processor specification verification"]
+task: ["ISA specification differential testing", "emulator correctness"]
+method: ["symbolic constructor traversal", "SMT operand solving", "hardware proxy oracle"]
+dataset: ["x86-64", "AArch64", "ARM/Thumb", "RISC-V", "MSP430"]
 code: "https://github.com/Sleigh-InSPECtor;artifact 归档 https://doi.org/10.6084/m9.figshare.32507811.v1(figshare artifact DOI,非论文 DOI)"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-10-10"
 ---
 
 # InSPECtor: Improving SLEIGH Processor Specification Veracity via Proxy
@@ -334,3 +334,13 @@ Table 6 报告两项指标:ΔAcc(相对 GenSYS 的生成准确率下降,准确�
 2. **标题不一致**:封面页标题缺 "Processor" 一词(见 §0 提示),需以正式出版版本为准。
 3. Table 3 的 group 分类计数按表逐行相加为 589,706 / 38,919,与正文 589,713 / 38,920 各有个位差;本笔记同时列出表值与正文值,引用时建议以原文表述为准并核对原表。
 4. **聚合提示**:本文与 KB 主题无交集,聚合时请勿计入 traffic-* 主题统计(处理方式与同批 QUIC fuzzing 类论文一致)。
+
+---
+## 13. 写作叙事与故事线分析
+
+InSPECtor 从处理器规范错误会静默污染反汇编和漏洞分析出发，把“规范本身生成合法测试指令、硬件作为代理 oracle”作为转折，再用五种 ISA 的差分结果和维护者修复闭环证明实用性。
+
+## 14. 深度分析证据边界与知识层联动建议
+
+- 现有笔记已覆盖 GenSYS/JuxtaPlayer、SMT 操作数求解、五种 ISA 与差异聚合；摘要 38,900 与正文 125 unique bugs 的口径冲突必须保留并回看 PDF。
+- 可向二进制分析/处理器规范验证专题记录；不计入 traffic-* 方法统计。本次未修改共享页面。
