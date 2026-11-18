@@ -110,3 +110,10 @@ related_methods:
 - RoFiRe：以增强与归一化应对真实Tor流量。
 - TraVerse：LLM无标签预训练表示应对动态内容和时间漂移。
 - 当前判断：WF攻防边界正从静态单首页评估转向混合标签、细粒度页面、真实流量和持续适配；跨论文仍缺统一协议，status=diverging。
+
+## 2026-10-26 新入库候选证据（pending_review）
+
+| 年份 | 论文 | venue | 方向 | 条件边界 |
+|---:|---|---|---|---|
+| 2026 | Drift-Aware Adaptive Website Fingerprinting | TDSC | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+| 2026 | Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | TDSC | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |

@@ -2,7 +2,7 @@
 type: dashboard
 purpose: project-quick-reference
 created: "2026-05-27"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Traffic_Papers 项目全景速览
@@ -13,7 +13,7 @@ updated: "2026-09-19"
 
 ## 1. 一句话定位
 
-Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知识库**，当前收录 260 篇顶级会议/期刊论文（其中 60 篇已完成深度分析），服务于综述写作、项目申报、方法比较和实验复现。
+Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知识库**，当前收录 355 篇标准论文笔记（其中 142 篇标注为 L3/L4 深度分析），服务于综述写作、项目申报、方法比较和实验复现。
 
 ---
 
@@ -25,7 +25,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 │  概念页·方法页·任务页·综述页·对比表·Claims·输出             │
 ├─────────────────────────────────────────────────────────┤
 │  第二层：论文笔记层（03）                                  │
-│  260 篇结构化中文笔记，每篇 2–61 KB（60 篇含深度分析）    │
+│  355 篇结构化中文笔记（142 篇标注 L3/L4）    │
 ├─────────────────────────────────────────────────────────┤
 │  第一层：原始资料层（00–02）                               │
 │  PDF 原文 → MinerU API 解析 → 整理后 Markdown             │
@@ -40,16 +40,16 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 | 目录 | 内容 | 当前数量 | 快速定位场景 |
 |------|------|----------|-------------|
-| `00-inbox/PDFs/` | 论文 PDF 原文 | 260 篇 | 查原文、定位引用 |
-| `01-mineru-output/` | MinerU 原始解析（已 gitignore） | 260 份 | 调试解析问题 |
-| `02-parsed-markdown/` | 整理后的 MinerU Markdown | 260 份 | 机器可读原文 |
-| `03-paper-notes/` | **结构化论文笔记**（核心） | 260 篇（60 篇深度分析） | 论文分析、证据追踪 |
+| `00-inbox/PDFs/` | 论文 PDF 原文 | 355 篇 | 查原文、定位引用 |
+| `01-mineru-output/` | MinerU 原始解析（已 gitignore） | 按论文目录保存 | 调试解析问题 |
+| `02-parsed-markdown/` | 整理后的 MinerU Markdown | 355 份 | 机器可读原文 |
+| `03-paper-notes/` | **结构化论文笔记**（核心） | 355 篇（142 篇标注 L3/L4） | 论文分析、证据追踪 |
 | `04-concepts/` | 概念页 | 11 个 | 理解领域概念 |
-| `05-methods/` | 方法页 | 8 个 | 方法对比、技术选型 |
+| `05-methods/` | 方法页 | 9 个 | 方法对比、技术选型 |
 | `06-tasks/` | 任务页 | 8 个 | 任务定义、输入输出 |
 | `07-surveys/` | 综述页 | 5 个 | 综述写作素材 |
 | `08-comparisons/` | 对比表（含开源注册表） | 5 个 | 横向比较、代码追踪 |
-| `09-claims/` | 观点与矛盾 | 2 个（101 Claims + 17 矛盾） | 论证、找 research gap |
+| `09-claims/` | 观点与矛盾 | 2 个主索引（105 Claims + 18 矛盾），另有历史权重审计页 | 论证、找 research gap |
 | `10-outputs/` | 草稿、报告、复现笔记、关键图 | 7 个子目录 | 写作产出 |
 | `00-dashboard/` | 导航、队列、地图、日志 | 8 个文件 | 项目状态总览 |
 
@@ -69,7 +69,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 ---
 
-## 5. 60 篇深度分析论文（L3/L4 级，按 frontmatter reading_level 统计）
+## 5. 深度分析论文（当前 142 篇 L3/L4；以下保留历史批次清单）
 
 这些论文已完成公式推导、消融实验、跨论文关联分析（400–800 行/篇）：
 
@@ -185,7 +185,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 ---
 
-## 6. 101 条核心 Claims（可直接引用）
+## 6. 105 条表格化 Claims（使用前核对对应证据与范围）
 
 > 完整列表见 [[claims-index]]。以下为最高价值的 6 条：
 
@@ -198,7 +198,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 ---
 
-## 7. 17 组关键矛盾（Research Gap 来源）
+## 7. 18 组关键矛盾（Research Gap 来源）
 
 > 完整列表见 [[contradictions]]。以下为核心冲突：
 
@@ -222,7 +222,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 | 类别 | 数量 | 说明 |
 |------|------|------|
-| 已确认开源（本库论文） | 91 | 含 GitHub/GitLab 地址（其中 4 项仅数据集开源），覆盖主要研究方向 |
+| 已确认公开仓库（本库论文） | 99 | 含 GitHub/GitLab 地址（其中 4 项仅数据集开源），覆盖主要研究方向 |
 | 计划开源/待确认 | 9 | Swallow、ByteDance、TrustWI、DawnGuard 等 |
 | 高频基线无开源地址 | 20+ | AppScanner (10+ 篇)、TSCRNN (7+ 篇)、CUMUL (5+ 篇) 等 |
 | 第三方参考工具 | 16 | JA3、Kitsune、混淆协议等 |
@@ -360,7 +360,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 5. 如需 L4 级分析，使用 `templates/claudian-prompts/04-reproduction-analysis.md`
 
 ### 场景 D：我要找 Research Gap
-1. 读 [[contradictions]] 的 17 组冲突
+1. 读 [[contradictions]] 的 18 组冲突
 2. 读 [[open-questions]] 的 16 条开放问题
 3. 交叉比对 [[claims-index]] 中互相矛盾的观点
 
@@ -434,3 +434,16 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 - **每次操作写日志**。追加到 `00-dashboard/log.md`。
 
 **断链处理**：概念页和方法页中的 wikilinks 如指向不存在的页面，应转为纯文本（不保留 `[[]]` 语法），避免产生断裂链接。待对应页面创建后再恢复为 wikilink。详见 AGENTS.md §7。
+
+## 2026-10-21：NestTor 正式晋升
+
+[[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]]：TNSM 2026，L3；[[factorized-detection]] 方法页已加入。2,300 流确认与 23,374 流 later 分开记录。个人区保留晋升记录，另两篇背景笔记不变。
+
+## 2026-11-17　重点学术报告
+
+新增 [[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]]，报告题目为《开放环境下的暗网隐蔽通联行为识别与关联溯源》。重点追踪 DHOR 低基率识别和 DHBCorr 大规模关联。54 页提取与原文已本地保存，四项主张以 `pending_review` 登记。当前资料类型为 342 篇标准论文及 1 份学术报告。
+
+
+## 2026-11-18　批次入库（13 篇）
+
+测量与遥测从 [[network-telemetry]]、[[network-traffic-measurement]] 和 [[streaming-telemetry-sketch]] 进入。本批证据与报告的联动在 [[03-paper-notes/2026-COSINT-北邮时金桥|COSINT 汇报]] 第 14 节，登记为待审。

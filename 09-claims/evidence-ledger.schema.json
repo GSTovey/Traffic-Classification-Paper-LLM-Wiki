@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Traffic_Papers evidence ledger record",
+  "type": "object",
+  "required": [
+    "record_id",
+    "claim_id",
+    "source_note",
+    "source_locator",
+    "evidence_type",
+    "polarity",
+    "conditions",
+    "counterevidence_ids",
+    "status"
+  ],
+  "properties": {
+    "record_id": {"type": "string", "minLength": 1},
+    "claim_id": {"type": "string", "minLength": 1},
+    "source_note": {"type": "string", "minLength": 1},
+    "source_locator": {
+      "type": "object",
+      "additionalProperties": {"type": "string"}
+    },
+    "evidence_type": {
+      "enum": [
+        "author_claim",
+        "direct_experiment",
+        "ablation",
+        "independent_replication",
+        "cross_paper_synthesis"
+      ]
+    },
+    "polarity": {"enum": ["supports", "challenges", "neutral"]},
+    "conditions": {
+      "type": "object",
+      "additionalProperties": {"type": "string"}
+    },
+    "counterevidence_ids": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "status": {
+      "enum": ["auto_extracted", "pending_review", "verified", "contested", "retired"]
+    },
+    "reviewed_on": {"type": "string"},
+    "review_note": {"type": "string"}
+  },
+  "additionalProperties": false
+}

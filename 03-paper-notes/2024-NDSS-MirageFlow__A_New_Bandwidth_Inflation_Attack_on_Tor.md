@@ -36,6 +36,11 @@ code: unknown
 relevance: medium
 created: 2026-06-09
 updated: 2026-06-09
+internal_citation_count: 1
+citation_impact: 1.0
+composite_weight: 0.85
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # MirageFlow: A New Bandwidth Inflation Attack on Tor
@@ -401,3 +406,7 @@ MirageFlow 的核心创新在于利用**资源共享**将膨胀从中继级别�
 | 方法论证逻辑 | 先提出核心思想，再分两个变体详细设计 | 核心思想 + 变体对比 |
 | 实验组织逻辑 | 小规模验证 -> 概率分析 -> 理论推算 -> 防御反驳 | 逐层递进的威胁论证 |
 | 局限性讨论方式 | 在 Countermeasures 章节讨论防御和局限 | 攻防平衡的讨论框架 |
+
+## 2026-11 评估补充
+
+以固定数据、检测单位与参考真值对照误判，并按数据来源核对可迁移性。相关证据入口见 [[09-claims/claims-index]]。

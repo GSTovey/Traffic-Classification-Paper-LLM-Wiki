@@ -9,8 +9,8 @@ doi: "10.1145/3719027.3744795"
 url: "https://dl.acm.org/doi/10.1145/3719027.3744795"
 pdf: "00-inbox/PDFs/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.pdf"
 mineru_md: "02-parsed-markdown/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["network privacy", "website fingerprinting", "Tor anonymity"]
 task: ["website fingerprinting", "transfer learning", "few-shot learning", "traffic classification"]
 method: ["consistent interaction feature (CIF)", "self-supervised learning (BYOL)", "data augmentation", "ResNet18", "few-shot fine-tuning"]
@@ -18,7 +18,15 @@ dataset: ["self-collected Tor datasets (8 datasets)", "Wang100", "DF95", "DF4000
 code: "https://github.com/anonymous"  # 论文提到会开源，但具体地址待确认
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.md", "02-parsed-markdown/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+internal_citation_count: 8
+citation_impact: 1.5
+composite_weight: 0.975
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # Swallow: A Transfer-Robust Website Fingerprinting Attack via Consistent Feature Learning
@@ -728,3 +736,12 @@ CIF 动态对齐流量分布 + 自监督学习实现迁移鲁棒的网站指纹�
 6. **自适应攻击者**：如果攻击者不知道用户部署了哪种防御，Swallow 的性能如何？
 7. **更大规模的 open-world 评估**：在更接近真实场景的 open-world 设置下（更多 unmonitored 网站），Swallow 的表现如何？
 8. **CIF 的隐私启示**：CIF 对齐流量分布的能力是否可用于设计更好的防御方法？
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：论文现有 §9 链接；本次不创建空白页
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

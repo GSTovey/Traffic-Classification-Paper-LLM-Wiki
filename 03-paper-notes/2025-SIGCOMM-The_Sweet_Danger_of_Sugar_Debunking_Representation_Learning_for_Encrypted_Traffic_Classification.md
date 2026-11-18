@@ -18,7 +18,15 @@ dataset: ["ISCX-VPN", "USTC-TFC", "CSTNET-TLS1.3", "MAWI", "UNSW-NB15"]
 code: "https://github.com/SweetDanger-Polito/SweetDanger"
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-10-21"
+venue_factor: 0.85
+time_factor: 1.0
+citation_impact: 1.8
+composite_weight: 1.53
+internal_citation_count: 12
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # The Sweet Danger of Sugar: Debunking Representation Learning for Encrypted Traffic Classification

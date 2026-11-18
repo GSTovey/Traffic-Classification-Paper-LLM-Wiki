@@ -3,7 +3,7 @@ type: research-front
 question: "加密 payload 中是否存在可学习的内在模式？"
 status: converging
 created: "2026-06-21"
-last_updated: "2026-09-19"
+last_updated: "2026-10-21"
 related_concepts:
   - "[[encrypted-traffic-analysis]]"
   - "[[traffic-representation-learning]]"
@@ -45,6 +45,7 @@ related_methods:
 | 2026 | PA3 | arXiv | 支持（协议结构可学） | §IV-C：攻击期完全不做 payload 检查，仅用流大小/包位置/方向包大小即可识别代理协议（flow-level ≤0.587%）并对齐跨协议流量 | 中（6 个 WF 模型跨未见协议评测） | 支持 |
 | 2026 | TDDM-Melatt | arXiv | 反对 | §5.4 Table 4：Pcap-Encoder 去 payload 后 F1 仅 0.637→0.630、再去 IP/端口崩至 0.130；本文方法全程只用 76 维包头特征、不访问加密 payload | 高（严格流级 7:1:2 划分 + 冻结编码器 + 去捷径匿名化） | 反对 |
 | 2026 | Colossus | arXiv | 支持（字节通道仍可学） | §V-C Table IV：字节级预训练模型（YaTC 0.9991、ET-BERT 0.9332）显著高于仅用 L/D/T 侧信道的最佳组合（DL 0.8026）；结论限于封闭世界 195 类 | 高（per-visit split 防泄漏） | 支持 |
+| 2026 | [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] | TNSM | 中性（元数据可用，不检验密文语义） | 不输入 payload 内容，完整流元数据检测 ToP；确认 99.45%、later 88.50%，512B 重分段 71.45% | 高（域名/capture 隔离）；没有 payload-only 学习对照 | 不计为密码学不可学命题的新增支持 |
 
 ## 当前共识方向
 
@@ -105,3 +106,22 @@ ET-BERT 和 YaTC 报告的高性能主要来自：
 - **AdvTG (WWW 2025)** 将攻击面扩展到需要语义、合规和可运行 payload 的检测器，说明“payload 字节不可直接学习”与“payload 字段不可被生成式操控”是两个不同问题。
 - **MVPNalyzer (NDSS 2026)** 和 **WebRTC authentication measurement (USENIX Security 2026)** 说明应用协议字段、配置和认证流程仍可能成为可识别或可攻击的结构信号；不把它们合并为加密 payload 语义证据。
 - 当前判断：信号来源应按 payload 内容、协议结构、配置字段和时序侧信道分层记录，避免用单一“payload 可学习/不可学习”标签覆盖不同威胁模型。
+
+## 2026-10-21：NestTor 同步判断
+
+保持当前 `converging` 状态，新增 [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] 为中性边界证据：元数据可检测与密文语义不可学习是两个命题。本篇没有直接比较 payload-only 编码器或证明加密安全性，故不增加后一个命题的共识计数。
+
+## 2026-10-26 新入库候选证据（pending_review）
+
+| 年份 | 论文 | venue | 方向 | 条件边界 |
+|---:|---|---|---|---|
+| 2026 | HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields | INFOCOM | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+| 2026 | Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification | TDSC | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+
+
+## 2026-11-18　待审核的新增证据链
+
+| 年份 | 论文 | 方向 | 关联及适用条件 | 证据位置 | 状态 |
+| --- | --- | --- | --- | --- | --- |
+| 2026 | [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 中性 | 明文和密文混合的会话消融，未隔离加密载荷 | §V-A、图 8 | EV-20261118-CRYPTO-MODAL · pending_review |
+| 2025 | [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 中性 | 字节归因集中在局部字段，部分高分来自地址 | §IV-B、附录 A–B | EV-20261118-NEPCO-BYTE · pending_review |

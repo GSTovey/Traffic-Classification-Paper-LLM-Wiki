@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T15:32:22.872945",
+  "generated": "2026-11-18T11:10:12.788561",
   "papers": {
     "2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries": {
       "processed_at": "2026-06-15T15:29:33.632597",
@@ -6883,6 +6883,894 @@
           "score": 6,
           "dest_name": "2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residu__Fig__2__cf6f72a6f15ebb34.jpg",
           "dest_rel": "images/2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residu__Fig__2__cf6f72a6f15ebb34.jpg"
+        }
+      ]
+    },
+    "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions": {
+      "processed_at": "2026-10-21T16:13:19.914568",
+      "figures": [
+        {
+          "img_path": "images/728c238898455058af44765e08628fe3e460e1c2ee7cc660c93668477223404e.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Overview of NESTTOR. Inputs cover ToP, Pure Proxy, Ordinary, and Direct Tor flows. (A) Preprocessing converts a bidirectional TCP flow into a sequence of payload packets and removes prohibited identifiers and labels. (B) Representation extracts global flow behavior, dynamics across relative stages, and optional protocol residuals. (C) Factorized detection combines a proxy gate with a proxy-conditioned Tor detector. (D) Calibration using Pure Proxy references sets the inner threshold from the upper-tail quantile of Pure Proxy reference scores when ToP labels are unavailable, while selection based on the capture environment chooses a frozen proxy gate."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decis__Fig__3__728c238898455058.jpg",
+          "dest_rel": "images/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decis__Fig__3__728c238898455058.jpg"
+        },
+        {
+          "img_path": "images/db0a66a61910812e21f348c331f18d75da43c74d54f9f6a59c94095846dba1e5.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. Confirmatory system comparison on the same 2,300-flow evaluation set. (a) Macro-F1 under a shared proxy gate. (b) Native end-to-end macro-F1. The plotted NESTTOR result uses proxy-conditioned inner thresholds. Applying $\\tau _ { Q } = 0 . 4 8 5$ and $\\tau _ { T } = 0 . 2 2 5$ uniformly gives 99.41% macro-F1 and 0.70% Pure Proxy FPR; Table III compares both rules."
+          ],
+          "sub_type": null,
+          "score": 8,
+          "dest_name": "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decis__Fig__5__db0a66a61910812e.jpg",
+          "dest_rel": "images/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decis__Fig__5__db0a66a61910812e.jpg"
+        }
+      ]
+    },
+    "2026-INFOCOM-ARI-LLM__Autoregressive_Imputation_for_Network_Traffic_Matrix_via_Large_Language_Models": {
+      "processed_at": "2026-10-26T14:37:30.547731",
+      "figures": [
+        {
+          "img_path": "images/ba57cf9f4ab982bee39edb8c8035cd19f2c70d08de9630cc04d411c404cfe956.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The framework of ARI-LLM: the Multi-Head Attention layers of the pre-trained LLM are frozen to preserve general language modeling capabilities. The LLM Embedder is also frozen, while the Flow2Vec Embedder is fine-tuned to adapt to the traffic data. Additionally, the Normalization layers, Feed Forward layers, and MLP layer are trainable."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-INFOCOM-ARI-LLM__Autoregressive_Imputation_for_Network_Traffic_Matrix_via_L__Fig__2__ba57cf9f4ab982be.jpg",
+          "dest_rel": "images/2026-INFOCOM-ARI-LLM__Autoregressive_Imputation_for_Network_Traffic_Matrix_via_L__Fig__2__ba57cf9f4ab982be.jpg"
+        }
+      ]
+    },
+    "2026-INFOCOM-Automated_Construction_of_High-Quality_Initial_Seed_Corpus_for_Network_Protocol_Fuzzing": {
+      "processed_at": "2026-10-26T14:37:30.548733",
+      "figures": [
+        {
+          "img_path": "images/cbce111ee7bdda127c6caa6becbde949c0d0dc96d2441cd890cce11e29b33b0b.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1: Overview of AutoSeeder."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-INFOCOM-Automated_Construction_of_High-Quality_Initial_Seed_Corpus_for_Netw__Fig__1__cbce111ee7bdda12.jpg",
+          "dest_rel": "images/2026-INFOCOM-Automated_Construction_of_High-Quality_Initial_Seed_Corpus_for_Netw__Fig__1__cbce111ee7bdda12.jpg"
+        }
+      ]
+    },
+    "2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classification_Model_Based_on_Packet_Header_Fields": {
+      "processed_at": "2026-10-26T14:37:30.549678",
+      "figures": [
+        {
+          "img_path": "images/f4bba04999ba6028eda818f62abce0baa4f36cebd746bbafb39893ce2b73e51d.jpg",
+          "figure_label": "Fig. 6",
+          "caption": [
+            "Fig. 6: HF-Transformer Framework"
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classifi__Fig__6__f4bba04999ba6028.jpg",
+          "dest_rel": "images/2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classifi__Fig__6__f4bba04999ba6028.jpg"
+        }
+      ]
+    },
+    "2026-INFOCOM-MonPlan__Taming_Network_Measurement_with_Accurate_and_Resource-Efficient_Sketch-INT_Co-Design": {
+      "processed_at": "2026-10-26T14:37:30.550842",
+      "figures": [
+        {
+          "img_path": "images/c484e386a2691ca409a20a310078f3200bf9a70f1496b9d4bb3e4b4bb8c68d89.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1: MonPlan overview."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-INFOCOM-MonPlan__Taming_Network_Measurement_with_Accurate_and_Resource-Effi__Fig__1__c484e386a2691ca4.jpg",
+          "dest_rel": "images/2026-INFOCOM-MonPlan__Taming_Network_Measurement_with_Accurate_and_Resource-Effi__Fig__1__c484e386a2691ca4.jpg"
+        }
+      ]
+    },
+    "2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_Traffic": {
+      "processed_at": "2026-10-26T14:37:30.551916",
+      "figures": [
+        {
+          "img_path": "images/2086470ad725dcaf6c3549a21a5e5fc943fee5161cd399bae9f9fce1e7cca968.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: The PP-OpenNet architecture. (a) Framework overview (unrolled GRU cells share weights). (b) Multi-Scale CNN Embedder (MSCE). (c) Temporal Correlation Extractor (TCE)."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_T__Fig__2__2086470ad725dcaf.jpg",
+          "dest_rel": "images/2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_T__Fig__2__2086470ad725dcaf.jpg"
+        },
+        {
+          "img_path": "images/bcc83df5d82a30945c9231ab3d9a48119bd6c92b2d7e02e86a0e2bbd6e191617.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(c) Module variations"
+          ],
+          "sub_type": null,
+          "score": 5,
+          "dest_name": "2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_T__Figure__bcc83df5d82a3094.jpg",
+          "dest_rel": "images/2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_T__Figure__bcc83df5d82a3094.jpg"
+        }
+      ]
+    },
+    "2026-INFOCOM-PacketLoom__A_Unified_Preprocessing_Framework_for_Multi-Modal_Network_Traffic_Analysis": {
+      "processed_at": "2026-10-26T14:37:30.552677",
+      "figures": [
+        {
+          "img_path": "images/caccbbb8d715e6a41e185f3dd5f3cb15d51c0d879198f685bcbb3cbce2d60f4a.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The Architecture of PacketLoom. The system comprises three logical layers: (1) Unified ingestion layer handles physical normalization and stream filtering in a lazy manner; (2) Polymorphic representation layer generates multi-modal tensors via paradigm-specific generators; (3) Refinement & export layer performs in-memory refinement and serializes data into model-ready artifacts."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-INFOCOM-PacketLoom__A_Unified_Preprocessing_Framework_for_Multi-Modal_Netwo__Fig__2__caccbbb8d715e6a4.jpg",
+          "dest_rel": "images/2026-INFOCOM-PacketLoom__A_Unified_Preprocessing_Framework_for_Multi-Modal_Netwo__Fig__2__caccbbb8d715e6a4.jpg"
+        }
+      ]
+    },
+    "2026-INFOCOM-Practical_VPN_Fingerprinting_using_Coarse_Inference_of_Field_Specifications_in_Data_Channels": {
+      "processed_at": "2026-10-26T14:37:30.553497",
+      "figures": [
+        {
+          "img_path": "images/0b3834369d0f5786706f5711892997a11700d064be486d1c1480ffefd6709c50.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Overview of VPNSPOTTER."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-INFOCOM-Practical_VPN_Fingerprinting_using_Coarse_Inference_of_Field_Specif__Fig__2__0b3834369d0f5786.jpg",
+          "dest_rel": "images/2026-INFOCOM-Practical_VPN_Fingerprinting_using_Coarse_Inference_of_Field_Specif__Fig__2__0b3834369d0f5786.jpg"
+        }
+      ]
+    },
+    "2026-INFOCOM-Synecdoche__Efficient_and_Accurate_In-Network_Traffic_Classification_via_Direct_Packet_Sequential_Pattern_Matching": {
+      "processed_at": "2026-10-26T14:37:30.554456",
+      "figures": [
+        {
+          "img_path": "images/3cfcf8f443550f40d05c6f7f606fcde89f902f7810ab8d3eace6a2a951192fea.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: The high-level architecture of our Synecdoche framework, illustrating the two-phase pipeline from offline discovery to online matching on the programmable data plane."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-INFOCOM-Synecdoche__Efficient_and_Accurate_In-Network_Traffic_Classificatio__Fig__2__3cfcf8f443550f40.jpg",
+          "dest_rel": "images/2026-INFOCOM-Synecdoche__Efficient_and_Accurate_In-Network_Traffic_Classificatio__Fig__2__3cfcf8f443550f40.jpg"
+        }
+      ]
+    },
+    "2026-INFOCOM-Tap_Dance_on_Android_External_Storage__Covert_Channels_Built_on_File_Operations": {
+      "processed_at": "2026-10-26T14:37:30.555156",
+      "figures": []
+    },
+    "2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Network_Traffic_Anomaly_Detection": {
+      "processed_at": "2026-10-26T14:37:30.556521",
+      "figures": [
+        {
+          "img_path": "images/617b3022ab99be2cea6ea115cc97fa9e3fb486e4b2696bee4ec40359f0d444c3.jpg",
+          "figure_label": "Fig. 6",
+          "caption": [
+            "Fig. 6. The specific details of the HeteAUG framework."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Networ__Fig__6__617b3022ab99be2c.jpg",
+          "dest_rel": "images/2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Networ__Fig__6__617b3022ab99be2c.jpg"
+        },
+        {
+          "img_path": "images/ba44751f855fd0d0036eaeac5f6a8444e2ab0b81d0ef00175b0889de66593d15.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. The augmentation workflow of HeteAUG."
+          ],
+          "sub_type": null,
+          "score": 9,
+          "dest_name": "2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Networ__Fig__5__ba44751f855fd0d0.jpg",
+          "dest_rel": "images/2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Networ__Fig__5__ba44751f855fd0d0.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-Behavioral_Evidence-Based_Hierarchical_Decision_Refinement_for_Encrypted_Malicious_Traffic_Classification_in_Decentralized_Data_Circulation": {
+      "processed_at": "2026-10-26T14:37:30.557855",
+      "figures": [
+        {
+          "img_path": "images/25680286973467a374e26b78cdbe4f5a43d80f23c25049855c43c221849bd00e.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Pipeline of THEMIS. Encrypted flows are transformed into a unified behavior-oriented representation, screened by Stage-I, and then processed by Stage-II through global subtype attribution, local-expert refinement, and multi-criteria subtype release."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TDSC-Behavioral_Evidence-Based_Hierarchical_Decision_Refinement_for_Encrypt__Fig__2__25680286973467a3.jpg",
+          "dest_rel": "images/2026-TDSC-Behavioral_Evidence-Based_Hierarchical_Decision_Refinement_for_Encrypt__Fig__2__25680286973467a3.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting": {
+      "processed_at": "2026-10-26T14:37:30.558937",
+      "figures": [
+        {
+          "img_path": "images/010eca7487ac655ce17e61569bfb22b902825440c53cb4f1b07788e6bbd55725.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Overall framework of Aion. It continuously fine-tunes the deployed model during the deployment phase to adapt to traffic drift."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting__Fig__2__010eca7487ac655c.jpg",
+          "dest_rel": "images/2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting__Fig__2__010eca7487ac655c.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses": {
+      "processed_at": "2026-10-26T14:37:30.560304",
+      "figures": [
+        {
+          "img_path": "images/f1b67a2a0f632c848e2c7bc2b472230a64cfe936071ccd57efafcccc5e3aeb73.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. Overview of the TGTO Architecture for Defending Against Website Fingerprinting Attacks."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_an__Fig__5__f1b67a2a0f632c84.jpg",
+          "dest_rel": "images/2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_an__Fig__5__f1b67a2a0f632c84.jpg"
+        },
+        {
+          "img_path": "images/694fa32e3ab9c8297921c3b9a4b1f8fff7b3d351dbfaaae5e1cba5315fb168e7.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Our lightweight WF attack, FMWF, consists of two key components: a feature extractor and a classifier, both built using lightweight neural networks These components work in tandem with a fine-tuning algorithm derived from transfer learning, enabling efficient and accurate multi-tab website fingerprintin with minimal training data."
+          ],
+          "sub_type": null,
+          "score": 6,
+          "dest_name": "2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_an__Fig__2__694fa32e3ab9c829.jpg",
+          "dest_rel": "images/2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_an__Fig__2__694fa32e3ab9c829.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Classification": {
+      "processed_at": "2026-10-26T14:37:30.561424",
+      "figures": [
+        {
+          "img_path": "images/a5cd3dd55a3062e8a62bb19c1aa7ec2e022602d708c249795697dbc6ef952509.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Overview of the proposed GenETC framework. It seamlessly integrates a pre-trained BERT module with a graph neural network (DiESAGE) through a Dynamic Graph Updating strategy. During fine-tuning, flow representations extracted by BERT serve as dynamic edge attributes for the interaction graph, which are iteratively updated via a Memory Bank mechanism to resolve scalability issues. The final classification decision is derived from the fusion of the semantic view (intrinsic features) and the topological view (graph-based patterns)."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Class__Fig__2__a5cd3dd55a3062e8.jpg",
+          "dest_rel": "images/2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Class__Fig__2__a5cd3dd55a3062e8.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-Generating_Adversarial_Network_Traffic_via_Multi-Model_Guided_Adversarial_Diffusion": {
+      "processed_at": "2026-10-26T14:37:30.563790",
+      "figures": []
+    },
+    "2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Traffic_Classification": {
+      "processed_at": "2026-10-26T14:37:30.565567",
+      "figures": [
+        {
+          "img_path": "images/4c603246e73b80ab62a6f428083d1797fded897f49abee4ce04f68e194a6bf76.jpg",
+          "figure_label": "Fig. 9",
+          "caption": [
+            "Fig. 9: The framework of TraCare."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Tr__Fig__9__4c603246e73b80ab.jpg",
+          "dest_rel": "images/2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Tr__Fig__9__4c603246e73b80ab.jpg"
+        },
+        {
+          "img_path": "images/12754c81ca5349d93e4c3872bb32c37359f9c63f5b17e6b9dc5c218c055b3853.jpg",
+          "figure_label": "Fig. 11",
+          "caption": [
+            "Fig. 11: The F1-Score results of machine learning models with and without traffic filtering (TF). We represent the relative F1- Score change with traffic filtering as ↓X% and ↑X%.",
+            "(d) IoT Attack Identification",
+            "(c) Malware Classification",
+            "Fig. 12: Comparison results of ET-BERT and BERT\\*. BERT\\* is a pre-trained model implemented on our proposed traffic corpus using the model architecture of ET-BERT."
+          ],
+          "sub_type": null,
+          "score": 10,
+          "dest_name": "2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Tr__Fig__11__12754c81ca5349d9.jpg",
+          "dest_rel": "images/2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Tr__Fig__11__12754c81ca5349d9.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-QuicReflo__Exploiting_Multi-Flow_Redundancy_for_Restoration-Free_Covert_Communication_Over_QUIC": {
+      "processed_at": "2026-10-26T14:37:30.566775",
+      "figures": []
+    },
+    "2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynamic_Relationship_Awareness": {
+      "processed_at": "2026-10-26T14:37:30.568354",
+      "figures": [
+        {
+          "img_path": "images/3634aaa2d5e57768fa06d758ad76fd34d6b04a2375aa3a34df7a13930b4490e9.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Architecture overview of RearView: two-stage VAE-guided graph-based malicious traffic detection."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynam__Fig__2__3634aaa2d5e57768.jpg",
+          "dest_rel": "images/2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynam__Fig__2__3634aaa2d5e57768.jpg"
+        },
+        {
+          "img_path": "images/8e3adcc98d9cdafea1df054d08e1821d3c18009010153f039bad92dac6aba00a.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4: The VAE architecture in RearView."
+          ],
+          "sub_type": null,
+          "score": 10,
+          "dest_name": "2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynam__Fig__4__8e3adcc98d9cdafe.jpg",
+          "dest_rel": "images/2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynam__Fig__4__8e3adcc98d9cdafe.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Features": {
+      "processed_at": "2026-10-26T14:37:30.570023",
+      "figures": [
+        {
+          "img_path": "images/f6b5774873d3c402856c66999f6ab39b9a0bf0d0c0433de703ff479b58a1979b.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. The framework of TridentDNS."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Feature__Fig__2__f6b5774873d3c402.jpg",
+          "dest_rel": "images/2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Feature__Fig__2__f6b5774873d3c402.jpg"
+        },
+        {
+          "img_path": "images/b8010b312b0ae02bf7e5bd59eb9b3e858c4ef1e991a81d75b1b923295d8b7274.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Illustration of domain-relay and IP-direct DNS tunneling."
+          ],
+          "sub_type": null,
+          "score": 9,
+          "dest_name": "2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Feature__Fig__1__b8010b312b0ae02b.jpg",
+          "dest_rel": "images/2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Feature__Fig__1__b8010b312b0ae02b.jpg"
+        }
+      ]
+    },
+    "2026-TIFS-DualGuard__An_Adaptive_Detection_Framework_for_Concurrent_Malicious_and_Normality_Drifts_in_Network_Traffic": {
+      "processed_at": "2026-10-26T14:37:30.571563",
+      "figures": [
+        {
+          "img_path": "images/287e7aea04f34589e1478aec3d48a09cfebf820923fa12964495fe6726100faf.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4: The architecture of the DualGuard framework. A unified recognition core uses a Contrastive Autoencoder with Hierarchical Contrastive Learning to generate structured embeddings. A MAD-based statistical triage then gates each sample as MMD, ND, or no drift. This signal drives two tailored workflows: the Classifier workflow uses fine-grained clustering to adapt to MMD, while the Anomaly workflow performs baseline adaptation to handle ND."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TIFS-DualGuard__An_Adaptive_Detection_Framework_for_Concurrent_Malicious_an__Fig__4__287e7aea04f34589.jpg",
+          "dest_rel": "images/2026-TIFS-DualGuard__An_Adaptive_Detection_Framework_for_Concurrent_Malicious_an__Fig__4__287e7aea04f34589.jpg"
+        },
+        {
+          "img_path": "images/064b87016109498a2420cf8a8594016084778c3b72fa44a5cf743ad42a83e2ce.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3: The taxonomy of concept drift in network security addressed by this paper. It comprises MMD and ND. ND is further divided into temporal ND and spatial ND."
+          ],
+          "sub_type": null,
+          "score": 5,
+          "dest_name": "2026-TIFS-DualGuard__An_Adaptive_Detection_Framework_for_Concurrent_Malicious_an__Fig__3__064b87016109498a.jpg",
+          "dest_rel": "images/2026-TIFS-DualGuard__An_Adaptive_Detection_Framework_for_Concurrent_Malicious_an__Fig__3__064b87016109498a.jpg"
+        }
+      ]
+    },
+    "2026-TIFS-Feign_East_Strike_West_Constructing_Covert_Channel_on_TLS_1.3": {
+      "processed_at": "2026-10-26T14:37:30.572639",
+      "figures": []
+    },
+    "2026-TIFS-InvisiTunnel__Causality-Preserving_Covert_Communication_over_DoH_through_Request_Substitution": {
+      "processed_at": "2026-10-26T14:37:30.573587",
+      "figures": []
+    },
+    "2026-TIFS-Stego-Vector_Driven_Simultaneous_Covert_Channels_in_Streaming_Applications": {
+      "processed_at": "2026-10-26T14:37:30.574834",
+      "figures": []
+    },
+    "2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted_Traffic_Analysis": {
+      "processed_at": "2026-10-26T14:37:30.576049",
+      "figures": [
+        {
+          "img_path": "images/e109f9f1fe648f56f50aad3900b1044d18a6e91caabb04d9c7b6f6dae87024ec.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Overall workflow of the M2ML framework."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted___Fig__2__e109f9f1fe648f56.jpg",
+          "dest_rel": "images/2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted___Fig__2__e109f9f1fe648f56.jpg"
+        },
+        {
+          "img_path": "images/811cf01002ef7112908f546997d45f601fe53fd68653d7d9b9252744498b7134.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Overview of the M2ML paradigm."
+          ],
+          "sub_type": null,
+          "score": 10,
+          "dest_name": "2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted___Fig__1__811cf01002ef7112.jpg",
+          "dest_rel": "images/2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted___Fig__1__811cf01002ef7112.jpg"
+        }
+      ]
+    },
+    "2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Models_for_Encrypted_Traffic_Analysis": {
+      "processed_at": "2026-10-26T14:37:30.577415",
+      "figures": [
+        {
+          "img_path": "images/c6ea369c20c2ac5f0d48fdf78502933c2123a368ebd130eff64e0e536a773947.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Overview of the proposed DBCL Framework."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Mo__Fig__1__c6ea369c20c2ac5f.jpg",
+          "dest_rel": "images/2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Mo__Fig__1__c6ea369c20c2ac5f.jpg"
+        },
+        {
+          "img_path": "images/2370662c8372f70e33108f8508d8d4e3a8f403abe5c71620f48171c1b19636df.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Overview of the implementation pipeline and training setup of DBCL."
+          ],
+          "sub_type": null,
+          "score": 10,
+          "dest_name": "2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Mo__Fig__2__2370662c8372f70e.jpg",
+          "dest_rel": "images/2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Mo__Fig__2__2370662c8372f70e.jpg"
+        }
+      ]
+    },
+    "2026-TON-Avatar__Securing_Anonymous_Communication_With_Relay_Anonymity": {
+      "processed_at": "2026-10-26T14:37:30.578676",
+      "figures": [
+        {
+          "img_path": "images/a62897851f413a47a5ef6ba17ae8b4c3401bf5965aeacdbf11e4ac4e2c8266c4.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Comparison of system models. Fig. 2(a) illustrates the components of the Tor network, while Fig. 2(b) presents the architecture of Avatar. Unlike Tor, Avatar removes the DA and replaces part of its functionality by converting some RNs into GNs. GN refers to group nodes, and RN refers to relay nodes. DA refers to directory authorities. CN refers to client nodes. SN refers to server nodes. BN refers to bulletin nodes."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TON-Avatar__Securing_Anonymous_Communication_With_Relay_Anonymity__Fig__2__a62897851f413a47.jpg",
+          "dest_rel": "images/2026-TON-Avatar__Securing_Anonymous_Communication_With_Relay_Anonymity__Fig__2__a62897851f413a47.jpg"
+        },
+        {
+          "img_path": "images/8fe3b3d60801e5fb24c02131f06bbf5b9f42a4ed30dd2d906b0cb6524afccaec.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(b) Avatar system",
+            "(a) Partial structure of the system"
+          ],
+          "sub_type": null,
+          "score": 8,
+          "dest_name": "2026-TON-Avatar__Securing_Anonymous_Communication_With_Relay_Anonymity__Figure__8fe3b3d60801e5fb.jpg",
+          "dest_rel": "images/2026-TON-Avatar__Securing_Anonymous_Communication_With_Relay_Anonymity__Figure__8fe3b3d60801e5fb.jpg"
+        }
+      ]
+    },
+    "2026-TON-Enabling_Entangled_Cache_Probing_for_Remotely_Reconstructing_DNS_Query_Dynamics": {
+      "processed_at": "2026-10-26T14:37:30.580065",
+      "figures": []
+    },
+    "2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrastive_Self-Supervised_Learning": {
+      "processed_at": "2026-10-26T14:37:30.581318",
+      "figures": [
+        {
+          "img_path": "images/17c3c77343ec31acbb14fc53f9f2910cb7c174460f1d4954aaf83e51b94fa802.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(a) Pre-training stage of the proposed CSSL approach",
+            "(b) Fine-tuning stage of the proposed CSSL approach",
+            "Fig. 4. Overview of the proposed Contrastive Self-Supervised Learning (CSSL) approach."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrasti__Figure__17c3c77343ec31ac.jpg",
+          "dest_rel": "images/2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrasti__Figure__17c3c77343ec31ac.jpg"
+        },
+        {
+          "img_path": "images/fb70eee833d771d70ccee424b9190a58899e3760fc82068b5d7a0b48d2e2c3ca.jpg",
+          "figure_label": "Fig. 6",
+          "caption": [
+            "Fig. 6. Performance of GSSL approach across four datasets in terms of standard evaluation metrics. GSSL demonstrates consistent and stable performance across the three datasets (QUIC, Orange’20 and AppClassNet), with higher variability observed on the ISCX dataset due to limited and imbalanced training samples."
+          ],
+          "sub_type": null,
+          "score": 5,
+          "dest_name": "2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrasti__Fig__6__fb70eee833d771d7.jpg",
+          "dest_rel": "images/2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrasti__Fig__6__fb70eee833d771d7.jpg"
+        }
+      ]
+    },
+    "2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_Noisy_Labels_for_Robust_Traffic_Classification": {
+      "processed_at": "2026-10-26T14:37:30.582599",
+      "figures": [
+        {
+          "img_path": "images/d96db1c49ffbce8335fe81cca65ec775918f61248f31e1436800eea1b21baab4.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The overview of FLOWREFINER<sup>+</sup>. It consists of three key components: a traffic semantics-driven noise detector, a confidence-guided label correctio mechanism, and a cross-granularity robust classifier. FLOWREFINER<sup>+</sup> effectively detects, corrects, and classifies traffic with noisy labels in a uniform framework achieving high performance without relying on high-quality labeled data, which are costly and difficult to obtain in increasingly complex network environments"
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_N__Fig__1__d96db1c49ffbce83.jpg",
+          "dest_rel": "images/2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_N__Fig__1__d96db1c49ffbce83.jpg"
+        },
+        {
+          "img_path": "images/220f6829298e68554383344825b2a1978cc6d312a9f053c3f9272c7bac2d82b4.jpg",
+          "figure_label": "Fig. 10",
+          "caption": [
+            "Fig. 10. The applicability of FLOWREFINER<sup>+</sup> for enhancing the robustness of existing traffic classification architectures under label noise.",
+            "Fig. 11. Noise detection and noise correction comparison of FLOWREFINER<sup>+</sup> with the variant FlowRefiner without adaptive designs."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_N__Fig__10__220f6829298e6855.jpg",
+          "dest_rel": "images/2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_N__Fig__10__220f6829298e6855.jpg"
+        }
+      ]
+    },
+    "2026-TON-KAN-Vis__Efficient_and_Lightweight_Visual_Technique_for_Network_Traffic_Classification_Using_KolmogorovArnold_Network": {
+      "processed_at": "2026-10-26T14:37:30.583516",
+      "figures": [
+        {
+          "img_path": "images/c8195367e2a387b3a9b8263542cb0810a84d95cd6113a095358fd6247b721c0f.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. The proposed set of four deep learning model architectures under KAN-VIS."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TON-KAN-Vis__Efficient_and_Lightweight_Visual_Technique_for_Network_Traffic__Fig__3__c8195367e2a387b3.jpg",
+          "dest_rel": "images/2026-TON-KAN-Vis__Efficient_and_Lightweight_Visual_Technique_for_Network_Traffic__Fig__3__c8195367e2a387b3.jpg"
+        }
+      ]
+    },
+    "2026-TON-Making_the_Best_of_Both_Worlds__Universal_Perturbations_for_Live_Black-Box_Evasion_Against_NIDS_in_Encrypted_Traffic": {
+      "processed_at": "2026-10-26T14:37:30.584754",
+      "figures": []
+    },
+    "2026-TON-QDCR__DNSQUIC_Cross-Protocol_Traffic_Amplification_for_Denial-of-Service_Attacks": {
+      "processed_at": "2026-10-26T14:37:30.585611",
+      "figures": []
+    },
+    "2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision_Transformer": {
+      "processed_at": "2026-10-26T14:37:30.586750",
+      "figures": [
+        {
+          "img_path": "images/d5b5c3e9d057cabb5e9a5d852cf00b2bbb5c2b185d1ec0eb0803ad8b871b7086.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Overview of our method SRViT."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision__Fig__3__d5b5c3e9d057cabb.jpg",
+          "dest_rel": "images/2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision__Fig__3__d5b5c3e9d057cabb.jpg"
+        },
+        {
+          "img_path": "images/12f2ba83fe9eb2d064aebdd44e64d2a08c3450c889f290144704653c5ad7c7bc.jpg",
+          "figure_label": "Fig. 5",
+          "caption": [
+            "Fig. 5. The schematic diagram of the Incremental Update Mechanism."
+          ],
+          "sub_type": null,
+          "score": 8,
+          "dest_name": "2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision__Fig__5__12f2ba83fe9eb2d0.jpg",
+          "dest_rel": "images/2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision__Fig__5__12f2ba83fe9eb2d0.jpg"
+        }
+      ]
+    },
+    "2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection": {
+      "processed_at": "2026-10-26T14:37:30.588060",
+      "figures": [
+        {
+          "img_path": "images/8ace76d9f3270fa098742fc603c46938fd496ca9e95c547b15f7f448db9694f2.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. Overview of the whole framework."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_C__Fig__1__8ace76d9f3270fa0.jpg",
+          "dest_rel": "images/2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_C__Fig__1__8ace76d9f3270fa0.jpg"
+        },
+        {
+          "img_path": "images/5bd0ab7eecd5b94cdc211769d0a840494e8e1480aeab30a06cda1be9a6f6b8df.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Illustration of the two pre-training tasks for generic trafic feature learning."
+          ],
+          "sub_type": null,
+          "score": 8,
+          "dest_name": "2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_C__Fig__2__5bd0ab7eecd5b94c.jpg",
+          "dest_rel": "images/2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_C__Fig__2__5bd0ab7eecd5b94c.jpg"
+        }
+      ]
+    },
+    "2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection": {
+      "processed_at": "2026-11-18T11:10:12.771325",
+      "figures": [
+        {
+          "img_path": "images/79df1e7fb1a27b6821edf5bc75b342617dabb42575d237e2f8624d23638cbacc.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: Overview of GraphIDS: the model detects network intrusions by evaluating the reconstruction error of graph-based flow embeddings. Flows representing attacks (highlighted in red) typically yield higher reconstruction errors, as they deviate from normal communication patterns."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusio__Figure_1__79df1e7fb1a27b68.jpg",
+          "dest_rel": "images/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusio__Figure_1__79df1e7fb1a27b68.jpg"
+        },
+        {
+          "img_path": "images/9aa3e927e581717180119ac1b28712baaef3115c0467994080d50a0c7976381e.jpg",
+          "figure_label": "Figure 3",
+          "caption": [
+            "Figure 3: Overview of the full training pipeline. During inference, attention masking is omitted. The reconstruction errors $s _ { 1 } , s _ { 2 } , \\ldots , s _ { n }$ serve as anomaly scores for each network flow."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusio__Figure_3__9aa3e927e5817171.jpg",
+          "dest_rel": "images/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusio__Figure_3__9aa3e927e5817171.jpg"
+        }
+      ]
+    },
+    "2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC": {
+      "processed_at": "2026-11-18T11:10:12.772964",
+      "figures": [
+        {
+          "img_path": "images/f9b59b0bb36b84a5bcdd04abb2c1309431043b3fca51d3c28083c4b31ef5563d.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3: The overview of Nepco."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network___Fig__3__f9b59b0bb36b84a5.jpg",
+          "dest_rel": "images/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network___Fig__3__f9b59b0bb36b84a5.jpg"
+        },
+        {
+          "img_path": "images/3402a268dc8c10ec7615bdc514b367a753727e9fc210d6a798696870511e9305.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: Conceptual decomposition of the network traffic analysis system into three core components, i.e., traffic processing, model architecture, and analysis execution, on which existing network foundation models and hardware-offloadable models make corresponding design choices to pursue versatile analysis and efficient analysis, respectively."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network___Fig__2__3402a268dc8c10ec.jpg",
+          "dest_rel": "images/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network___Fig__2__3402a268dc8c10ec.jpg"
+        }
+      ]
+    },
+    "2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR": {
+      "processed_at": "2026-11-18T11:10:12.773745",
+      "figures": [
+        {
+          "img_path": "images/8e539f90186db1a70dceed37ff61e66e8ce43711e05ec46b46b61a19efeb0c27.jpg",
+          "figure_label": "Figure 2",
+          "caption": [
+            "Figure 2: An SCRA that computes the number of packets sent before a DNS response is used."
+          ],
+          "sub_type": null,
+          "score": 0,
+          "dest_name": "2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR__Figure_2__8e539f90186db1a7.jpg",
+          "dest_rel": "images/2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR__Figure_2__8e539f90186db1a7.jpg"
+        }
+      ]
+    },
+    "2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence": {
+      "processed_at": "2026-11-18T11:10:12.775234",
+      "figures": []
+    },
+    "2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion": {
+      "processed_at": "2026-11-18T11:10:12.776763",
+      "figures": []
+    },
+    "2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements": {
+      "processed_at": "2026-11-18T11:10:12.778173",
+      "figures": [
+        {
+          "img_path": "images/6e2bc20fa67d1ca6ff2c7414311ef42d9b5136b0d5eadb75b76e2e6b3271279f.jpg",
+          "figure_label": "Figure",
+          "caption": [
+            "(a) Current Censorship Measurement Workflow: (1) The researcher constructs a list of potential censored websites to test, such as the Tranco Top–1M, and further filters it down to the Tranco Top–1K due to limited resources; (2) The researcher orders the websites (randomly or by rank) and sends them to a remote client in a region of interest; (3) The client runs censorship measurements for all websites or until resources are exhausted; (4) The researcher collects the results; (5) The list of blocked websites is the output.",
+            "(b) CenRL Workflow: (1) The researcher provides inputs, such as the Tranco Top–1M websites, features (website categories) to construct the action space, and RL hyperparameters; CenRL initializes the workflow, such as building the action space; (2) The agent follows the RL policy to select an arm and corresponding website to test and sends it to the environment; (3) The client in the environment runs the censorship measurements for the selected website; (4) The environment returns a reward (e.g., higher rewards if the website was determined to be blocked); (5) The agent uses the reward to update the expected value of the arm; (6) CenRL repeats 2–5 for a time horizon T; (7) The list of blocked websites is the output.",
+            "Figure 1: Current Censorship Measurements vs. CenRL Workflow: Instead of selecting measurement targets using manual heuristics, CenRL leverages learning to use limited resources efficiently while optimizing censorship discovery."
+          ],
+          "sub_type": null,
+          "score": 8,
+          "dest_name": "2026-S_P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements__Figure__6e2bc20fa67d1ca6.jpg",
+          "dest_rel": "images/2026-S_P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements__Figure__6e2bc20fa67d1ca6.jpg"
+        },
+        {
+          "img_path": "images/fa330ed2bdbd21fa6b3acfeb45183befa2a41a803549ee90889686cb80f98de1.jpg",
+          "figure_label": "Figure 9",
+          "caption": [
+            "Figure 9: Real-world experiments with vanilla Hyperquack and CenRL Hyperquack: the top figure shows the overall number of blocked websites found, and the bottom figure shows the distribution of measurement time steps where blocked domains are found. We show the AS and country of the remote vantage point."
+          ],
+          "sub_type": null,
+          "score": 5,
+          "dest_name": "2026-S_P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements__Figure_9__fa330ed2bdbd21fa.jpg",
+          "dest_rel": "images/2026-S_P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements__Figure_9__fa330ed2bdbd21fa.jpg"
+        }
+      ]
+    },
+    "2026-S&P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_Descriptor_Flood": {
+      "processed_at": "2026-11-18T11:10:12.779401",
+      "figures": [
+        {
+          "img_path": "images/66ac8cf53f81156656f7a3040359d32d3f97c41f3534edb345e0a4eae17c27b4.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: Tor Onion Service Workflow"
+          ],
+          "sub_type": null,
+          "score": 7,
+          "dest_name": "2026-S_P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_D__Figure_1__66ac8cf53f811566.jpg",
+          "dest_rel": "images/2026-S_P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_D__Figure_1__66ac8cf53f811566.jpg"
+        }
+      ]
+    },
+    "2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency": {
+      "processed_at": "2026-11-18T11:10:12.780722",
+      "figures": [
+        {
+          "img_path": "images/e80dd5fb50cbe2b40ad118d04421620b60d34acbb90adc28a0e97bf8d30a011d.jpg",
+          "figure_label": "Figure 6",
+          "caption": [
+            "Figure 6: Routing architecture between a dual-homing SaTor relay with the remaining of Tor network."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-S_P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency__Figure_6__e80dd5fb50cbe2b4.jpg",
+          "dest_rel": "images/2026-S_P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency__Figure_6__e80dd5fb50cbe2b4.jpg"
+        },
+        {
+          "img_path": "images/3d10085208b215d96f7110f7fcd55d9d5c7cadc26bac82a4516d3648a3ed5c99.jpg",
+          "figure_label": "Figure 1",
+          "caption": [
+            "Figure 1: Overview of satellite communications."
+          ],
+          "sub_type": null,
+          "score": 10,
+          "dest_name": "2026-S_P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency__Figure_1__3d10085208b215d9.jpg",
+          "dest_rel": "images/2026-S_P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency__Figure_1__3d10085208b215d9.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture": {
+      "processed_at": "2026-11-18T11:10:12.782018",
+      "figures": [
+        {
+          "img_path": "images/1920a33fd13acf084c00680141bbfea8ef1284d1b0ce3dcf2c13ddffe245e2f6.jpg",
+          "figure_label": "Fig. 3",
+          "caption": [
+            "Fig. 3. Overall framework of CryptoFormer. Raw packets are segmented into sessions, tokenized via byte-level BPE, and passed through a two-stage Transformer architecture. Stage I extracts packet-level content semantics, Stage II models session-level behavioral dynamics, and an adaptive gated fusion module combines both modalities before final classification."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Tran__Fig__3__1920a33fd13acf08.jpg",
+          "dest_rel": "images/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Tran__Fig__3__1920a33fd13acf08.jpg"
+        },
+        {
+          "img_path": "images/6526ecaf14ec75017ea1058096ae8f7a431ac11707e1c562c3b5470194bbf5e5.jpg",
+          "figure_label": "Fig. 10",
+          "caption": [
+            "Fig. 10. Inference latency comparison on the test set. CryptoFormer attains the lowest latency (1.15 s/session), a 2.97× speedup over ET-BERT (3.41 s/session) and a 2.58× speedup over TrafficFormer (2.97 s/session). The lightweight tokenization and hierarchical architecture amortize computational cost across packets."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Tran__Fig__10__6526ecaf14ec7501.jpg",
+          "dest_rel": "images/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Tran__Fig__10__6526ecaf14ec7501.jpg"
+        }
+      ]
+    },
+    "2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models": {
+      "processed_at": "2026-11-18T11:10:12.783639",
+      "figures": [
+        {
+          "img_path": "images/87b177025ec2c7ce7e0f8aebfb850397f9fbf30dcfc1b8aebdd5cc7dc0896223.jpg",
+          "figure_label": "Fig. 1",
+          "caption": [
+            "Fig. 1. The MPA-LLM framework. Traffic data are processed through a sequence of varying resolutions in a coarse-to-fine manner. The Multi-Head Attention layers and Text Embedder of the pre-trained LLM are kept frozen to preserve general language modeling capabilities, while the Flow2Vec Embedder, normalization layers, feed-forward layers, and the shared MLP projection head are fine-tuned to align latent representations with diverse downstream tasks."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models__Fig__1__87b177025ec2c7ce.jpg",
+          "dest_rel": "images/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models__Fig__1__87b177025ec2c7ce.jpg"
+        },
+        {
+          "img_path": "images/0a4695b5758b269a14520c821d0379d655f67636b2dad181114f2e16e3e06ef2.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. An illustrative example of the prompt template utilized in MPA-LLM. The tags in brackets (e.g., [Database], [Instruction]) indicate the start of a specific contextual block, while dynamic data statistics and stagespecific configurations are injected iteratively at each step of the decoupled mechanism."
+          ],
+          "sub_type": null,
+          "score": 6,
+          "dest_name": "2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models__Fig__2__0a4695b5758b269a.jpg",
+          "dest_rel": "images/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models__Fig__2__0a4695b5758b269a.jpg"
+        }
+      ]
+    },
+    "2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection": {
+      "processed_at": "2026-11-18T11:10:12.784632",
+      "figures": [
+        {
+          "img_path": "images/2c985434e172f4cc7c7010206fd1a39a50336ccf4e2e500880f0a9b44af16f7f.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: The overview of HAD. HAD operates through three tightly integrated stages: (1) Feature Space Partition, which separates the feature space into manipulable and non-manipulable subspaces by quantifying the vulnerability of features; (2) Surrogate Sample Generation, which simulates adversarial behaviors through structured perturbation of network traffic features; and (3) Hierarchical Contrastive Learning, which captures the hierarchical relationships among benign (Blue), malicious (Red), and adversarial (Purple) samples by modeling their dispersion across the feature subspaces."
+          ],
+          "sub_type": null,
+          "score": 12,
+          "dest_name": "2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection__Fig__2__2c985434e172f4cc.jpg",
+          "dest_rel": "images/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection__Fig__2__2c985434e172f4cc.jpg"
+        }
+      ]
+    },
+    "2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures": {
+      "processed_at": "2026-11-18T11:10:12.785962",
+      "figures": [
+        {
+          "img_path": "images/51df0f65ea1f2417c669b0166d981c792fef122049f6ade28d1530d49a63cc19.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2. Coeficient of variation (CV%; lower is better) of the mean of the sampled counters from a CM sketch, versus sample size s, at memory budgets of 512 KB, 2 MB, and 10 MB. Data set used is CAIDA15. CV% is the standard deviation of the sampled mean, divided by the true mean of all counters. The results are calculated from 200 independent trials.",
+            "Fig. 3. Overview of the PS-ML framework. We use the statistical feature obtained from k mapped counters to capture the unique collision pattern (which is the source of background noise) for each flow, avoiding the assumption that the noise distribution for each flow is identical. In the figure, “cold flows” denote the small-flow bin ([1 τ)) and “hot flows” denote the large-flow bin ([τ ∞)), each routed to a bin-specific regressor."
+          ],
+          "sub_type": null,
+          "score": 11,
+          "dest_name": "2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_S__Fig__2__51df0f65ea1f2417.jpg",
+          "dest_rel": "images/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_S__Fig__2__51df0f65ea1f2417.jpg"
+        },
+        {
+          "img_path": "images/b414b05539de67b2ca3dc17a0d8275905851b2536b11a399411dafefd75a76f0.jpg",
+          "figure_label": "Fig. 4",
+          "caption": [
+            "Fig. 4. Normalized AAE (divided by CM baseline) for RatioSketch, PS-ML, LAA, and LegoSketch on CAIDA and MAWI across memory budgets. RatioSketch and PS-ML are query-time correction methods, whereas LAA and LegoSketch modify the online recording pipeline. The gray dotted line at 1.0 represents the CM baseline; values above 1.0 indicate higher error than the uncorrected sketch in that experimental setting. Lower is better."
+          ],
+          "sub_type": null,
+          "score": 10,
+          "dest_name": "2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_S__Fig__4__b414b05539de67b2.jpg",
+          "dest_rel": "images/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_S__Fig__4__b414b05539de67b2.jpg"
+        }
+      ]
+    },
+    "2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks": {
+      "processed_at": "2026-11-18T11:10:12.787058",
+      "figures": [
+        {
+          "img_path": "images/4ae85aec85e9385d120dd1c61b62ca5cf7cc086d044af66a9aa57a9b969d505e.jpg",
+          "figure_label": "Fig. 2",
+          "caption": [
+            "Fig. 2: SEDMS Workflow on the Edge Gateway"
+          ],
+          "sub_type": null,
+          "score": 9,
+          "dest_name": "2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry__Fig__2__4ae85aec85e9385d.jpg",
+          "dest_rel": "images/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry__Fig__2__4ae85aec85e9385d.jpg"
         }
       ]
     }

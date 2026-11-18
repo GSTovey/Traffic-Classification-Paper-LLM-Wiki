@@ -9,7 +9,7 @@ doi: "unknown"
 url: "unknown"
 pdf: "00-inbox/PDFs/2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.md"
-status: processed
+status: deep-analyzed
 reading_level: L3
 research_area: [website-fingerprinting, few-shot-traffic-learning]
 task: [website-fingerprinting]
@@ -18,7 +18,10 @@ dataset: [自采集多标签页数据集（50+25 网站）, WFlib 合成多标�
 code: "unknown"
 relevance: high
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.md", "02-parsed-markdown/2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # Towards Practical Few-shot Multi-tab Website Fingerprinting
@@ -422,3 +425,12 @@ WF 的实用化障碍被作者重新定义为"维护成本"：网站会变、监
 | 实验组织逻辑 | §5 开头列 9 个研究问题（Q1–Q9），后文逐一对应 | 用编号问题清单组织实验，读者可核对覆盖度 |
 | 局限讨论方式 | Discussion 给出可量化反例（同 tab 数下 94.93% vs 77.43%）而非泛泛而谈 | 用自家数据证明"这个限制是真的"，比引文更有说服力 |
 | 最值得借鉴的一句话/一段结构 | "Why has few-shot WF research remained confined to the single-tab setting …? We argue that the key obstacle is not simply 'harder inputs', but a shift in the learning objective from classification to detection."（§1） | 用"不是 X 而是 Y"句式把技术难点升格为范式问题，再让全文结构服务于该命题 |
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[website-fingerprinting]]、[[few-shot-traffic-learning]]、[[encrypted-traffic-analysis]]、[[convolutional-network]]、[[transformer]]、[[pre-training-finetuning]]、[[survey-website-fingerprinting]]、[[survey-few-shot-learning]]、[[method-comparison-table]]、[[dataset-comparison-table]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

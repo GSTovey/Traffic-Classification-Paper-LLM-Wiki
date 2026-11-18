@@ -4,7 +4,7 @@ name: "Encrypted Traffic Detection"
 aliases: ["加密流量检测", "Encrypted Traffic Identification"]
 tags: [encrypted-traffic, detection, TLS, deep-packet-inspection, frequency-domain, contrastive-learning]
 created: "2026-05-27"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Encrypted Traffic Detection（加密流量检测）
@@ -127,3 +127,14 @@ updated: "2026-09-19"
 - 如何在保持高精度的同时实现高速网络（10Gbps+）上的实时检测？
 - 跨网络环境（不同 ISP、不同国家）的泛化能力如何保证？
 - 能否利用加密握手阶段的信息（如 TLS fingerprint）辅助检测？
+
+## 2026-10-21：NestTor 的完整流被动筛查
+
+[[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] 在不解密、不主动探测、无代理配合条件下检测外层代理中的 Tor；模型仅使用单流行为。固定阈值 AND 在 11,131 条异质背景上产生 350 FP（3.14%），正类 TPR 99.33% 来自另行使用的确认正类参考。0.99/0.10/0.01% FPR 点由乘积分数事后扫阈值得到，属于描述性权衡，不能当作同一冻结 AND 的部署保证。依据：§III-A、Table VI。
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 用节点日志标注多币种子会话。混合明密文的总体指标须与加密子集、背景 FPR 和节点留出分别报告。 |

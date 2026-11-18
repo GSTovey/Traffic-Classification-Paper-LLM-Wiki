@@ -28,7 +28,9 @@ Traffic_Papers 是一个面向网络流量安全研究的本地论文知识库�
 - 流量领域基础模型；
 - 网站指纹识别；
 - 少样本流量学习；
-- 异常检测与隧道检测。
+- 异常检测与隧道检测；
+- 网络测量与流量矩阵补全；
+- 网络协议模糊测试、隐蔽信道与 DNS/QUIC 安全。
 
 ---
 
@@ -108,7 +110,7 @@ Traffic_Papers 是一个面向网络流量安全研究的本地论文知识库�
 ### 2.5 关键图表提取
 
 - `10-outputs/key-figures/all-key-figures.md` — 汇总 Markdown，嵌入每篇论文的核心框架图
-- `10-outputs/key-figures/images/` — 拷贝过来的关键图片（148 张）
+- `10-outputs/key-figures/images/` — 拷贝过来的关键图片（截至 2026-10-26 为 536 张）
 - `10-outputs/key-figures/manifest.json` — 增量更新追踪
 
 使用 `scripts/extract_key_figures.py` 生成，基于三层评分系统（caption 关键词、图片类型、bbox 尺寸）自动筛选每篇论文 1-2 张核心框架图。
@@ -222,6 +224,8 @@ year-venue-shorttitle.md
 
 文件位于 `11-my-papers/notes/`，命名规范与 3.3 一致。
 
+已发表并由用户明确要求晋升的个人论文可使用 `YEAR-myPaper-VENUE-Short_Title` 命名；PDF、解析稿与标准笔记使用同一文件主名。个人区保留独立、无歧义的记录名并用 `promoted_to` 指向标准笔记。不得据此自动晋升其他个人论文。
+
 ### 3.6 研究前沿页面
 
 使用英文小写和短横线：
@@ -266,7 +270,7 @@ pretraining-necessity.md
 - **阶段 1：PDF 解析** — 默认使用 MinerU API 解析（如 `MINERU_API_TOKEN` 未设置则暂停向用户索要）；解析完成后自动运行 `scripts/extract_key_figures.py` 提取关键框架图；
 - **阶段 2：生成论文笔记** — 按 `templates/paper-note-template.md` 生成结构化笔记到 `03-paper-notes/`；
 - **阶段 3：自动更新知识层** — 自动判断并更新所有相关概念页、方法页、任务页、综述页、对比表、开源注册表和 Claims，**不需要用户单独询问**；
-- **阶段 3.5：共识更新与研究前沿同步** — 根据新论文内容，自动执行 Claims 共识更新（consensus_count、confidence_score）、Citation Impact 更新（citation_impact、composite_weight）和研究前沿同步（更新证据链或创建新前沿页面），详见 `templates/claudian-prompts/06-ingest-pipeline.md`；
+- **阶段 3.5：共识更新与研究前沿同步** — 根据新论文内容生成待审核的 Claims 证据、跨论文关系和研究前沿候选更新；只有完成来源定位、条件和反证核验的 `verified` 记录，才允许更新 consensus_count、confidence_score 或研究前沿状态，详见 `templates/claudian-prompts/06-ingest-pipeline.md`；
 - **阶段 4：更新全局索引** — paper-registry、reading-queue、index、log；
 - **阶段 5：自动更新 README.md 和 AGENTS.md** — 同步更新统计数据和关键论文列表，**不需要用户提醒**；
 - **阶段 6：Git 提交（仅用户要求时）** — 仅当用户明确说"上传"、"提交"、"push"时才执行 commit，不自动 push。`10-outputs/` 目录大部分不参与版本控制，但 `10-outputs/key-figures/` 子目录可上传（自动提取的关键框架图）。
@@ -290,6 +294,19 @@ pretraining-necessity.md
 2. **不需要逐步确认**：阶段 0-5 自动执行，仅去重阶段的疑似重复需要用户确认；
 3. **追加不覆盖**：知识层更新只追加新行，不修改已有内容；
 4. **README/AGENTS 自动同步**：每次入库后自动检查并更新，不需要用户提醒。
+
+### 5.1.1 跨论文综合与创新点挖掘
+
+当论文进入核心研究方向时，使用 `templates/claudian-prompts/09-research-problem-analysis.md`，按以下顺序工作：
+
+`Research Landscape → Cross-paper Relations → Evidence-backed Gaps → Candidate Innovations → Counterevidence Check → Testable Hypotheses → Research Prioritization`
+
+- 候选创新点必须关联具体论文和原文定位；
+- 必须区分原文事实、作者声称、跨论文综合判断和个人待验证假设；
+- 必须主动检查相邻工作、替代解释、数据划分和指标差异；
+- 证据账本只登记重要主张、关键反证和候选创新点，不复制普通论文的全部实验结果；
+- `auto_extracted`、`pending_review`、`verified`、`contested` 和 `retired` 是证据状态，未经审核的记录不得升级为领域共识；
+- 使用 `python3 scripts/research_capability_audit.py audit --pilot 00-dashboard/research-capability-pilot.json --write` 生成质量报告和人工审核队列。脚本不得自动修改论文笔记、Claims、研究前沿、方法页或个人研究页。
 
 ---
 
@@ -431,3 +448,28 @@ confidence_score = composite_weight × consensus_count
 - 每次新论文入库时自动更新被引用论文的 citation_impact
 - consensus_count 在新论文支持或挑战已有 claim 时自动更新
 - confidence_score 随上述变化自动重算
+
+## 12. 当前数量快照（2026-11-03）
+
+- 标准 `type: paper` 笔记 342 篇，PDF 与解析 Markdown 各 342 份；L3/L4 标注 130 篇。
+- 核心知识页 40 个：11 概念、9 方法、8 任务、5 综述、5 对比、2 Claims 主索引；历史审计页另计。
+- 关键图 536 张，图库覆盖 342 篇；研究前沿 7 个。
+- 本次仅晋升 NestTor（TNSM 2026）；另外两份个人区材料保持原状。
+
+## 13. 学术报告资料快照（2026-11-17）
+
+- 已登记 1 份学术报告 `2026-COSINT-北邮时金桥`，主笔记位于 `03-paper-notes/`，类型为 `academic-talk`、L3、`report-only`。
+- 原文位于 `00-inbox/PDFs/`，本地逐页提取位于 `02-parsed-markdown/`，共 54 页。四项报告主张登记为 `pending_review`，标准 `type: paper` 数量为 342。
+
+
+## 14. 当前数量与方向快照（2026-11-18）
+
+- 有效标准论文 355 篇，L3/L4 共 142 篇。标准论文 PDF、MinerU Markdown 各 355 份。另有 COSINT 学术报告 1 份。
+- 355 条有效注册记录，其中补录 8 条已有论文的历史索引。遗留的 TrafficSliver 非注册版本仍保留。
+- 核心知识页 43 个，包括 12 概念、10 方法、9 任务、5 综述、5 对比、2 Claims 主索引。
+- 新增网络流式遥测方向，涵盖有限状态的特征写入、查询、测量和部署成本。关键图库共归档 559 张图。
+- 本批新增 13 篇、7 个公开产物、10 条论文证据和 3 条 COSINT 联动证据，均待审核。更新 6 个研究前沿的候选证据链。
+
+### 2026-11-18　批次深读补充
+
+- 本批 13 篇均完成 L3。新增 6 条待审核的深读证据，链接到相关概念、方法、任务、综述与对比页。

@@ -9,8 +9,8 @@ doi: unknown
 url: unknown
 pdf: "00-inbox/PDFs/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.pdf"
 mineru_md: "02-parsed-markdown/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["anonymity network", "traffic analysis", "website fingerprinting", "privacy defense"]
 task: ["WF defense", "traffic anonymization", "Tor traffic protection"]
 method: ["traffic cluster anonymization", "k-anonymity", "Traffic Aggregation Matrix (TAM)", "super-matrix refinement", "trace regularization", "anonymity set generation"]
@@ -18,7 +18,10 @@ dataset: ["public WF dataset (95 websites, 1000 traces each)", "Tranco top-100 w
 code: "https://github.com/kxdkxd/Palette"
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.md", "02-parsed-markdown/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # Real-Time Website Fingerprinting Defense via Traffic Cluster Anonymization
@@ -658,3 +661,12 @@ Palette 在 real-world 中的平均准确率 20.80%，甚至低于 Tamaraw（21.
 - **TAM 分析：** TAM 是 Palette 的核心创新，将流量模式可视化为矩阵。这种方法可以推广到其他流量分析任务——例如恶意流量检测中的行为模式矩阵、应用指纹中的流量模式矩阵。
 - **Super-matrix refinement：** shrinking + sampling 的两级精炼策略可以推广到其他需要平衡精度和开销的任务——例如差分隐私中的噪声添加策略。
 - **信息泄露分析：** Table 13 的 14-category 信息泄露分析框架可以用于评估其他隐私保护方法的有效性，不仅限于 WF 防御。
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：论文现有 §9 链接；本次不创建空白页
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

@@ -89,3 +89,8 @@
 **任务页**：（当前已覆盖主要任务方向）
 
 **综述页**：（当前已覆盖主要综述方向）
+
+
+## 2026-11-18　新方向与汇报索引
+
+流式测量和资源分解从 [[04-concepts/network-telemetry|网络流式遥测]] 进入。核心篇目为 [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection|GraphIDS]]、[[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection|HAD]]、[[03-paper-notes/2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency|SaTor]]、[[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC|Nepco]]、[[03-paper-notes/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures|PS-ML]]、[[03-paper-notes/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks|SEDMS]]、[[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture|CryptoFormer]]。低误报、RTT 条件及计算开销的对照见 [[03-paper-notes/2026-COSINT-北邮时金桥|COSINT 汇报]]。

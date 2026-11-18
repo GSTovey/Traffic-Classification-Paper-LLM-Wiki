@@ -46,3 +46,13 @@
 1.
 2.
 3.
+
+## 7. 研究能力审计门禁
+
+运行：
+
+```bash
+python3 scripts/research_capability_audit.py audit --pilot 00-dashboard/research-capability-pilot.json --write
+```
+
+问题分为阻断性错误、重要质量问题和非阻断性建议。脚本只生成审计报告和审核队列，不自动修改论文笔记、Claims、Research-front、方法页或个人研究页。

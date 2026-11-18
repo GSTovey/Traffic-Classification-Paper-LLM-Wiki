@@ -25,6 +25,11 @@ task: ["加密流量早期分类", "应用识别", "TLS/QUIC流量分类"]
 method: ["两阶段分类", "决策树/极限树集成", "TCN", "Bagging"]
 created: 2026-06-21
 updated: 2026-06-21
+internal_citation_count: 5
+citation_impact: 1.2
+composite_weight: 0.546
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # A Two-Phase Approach to Fast and Accurate Classification of Encrypted Traffic

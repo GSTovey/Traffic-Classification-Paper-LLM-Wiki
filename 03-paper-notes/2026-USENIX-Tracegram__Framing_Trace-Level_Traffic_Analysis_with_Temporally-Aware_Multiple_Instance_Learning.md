@@ -9,7 +9,7 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/qu"
 pdf: "00-inbox/PDFs/2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning.md"
-status: processed
+status: deep-analyzed
 reading_level: L3
 research_area: [encrypted-traffic-analysis, traffic-representation-learning, malicious-traffic-detection]
 task: [traffic-classification, malicious-traffic-detection, traffic-representation]
@@ -18,7 +18,10 @@ dataset: [UAV, KWS, IDI, ISD, DAPT]
 code: "https://github.com/YuchenZhang-Academic/Tracegram"
 relevance: high
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning.md", "02-parsed-markdown/2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # Tracegram: Framing Trace-Level Traffic Analysis with Temporally-Aware Multiple Instance Learning
@@ -425,3 +428,12 @@ Open Science（§Open Science）：完整实现发布于 Zenodo（脚注 1，DOI
 | 实验组织逻辑 | RQ1/RQ2/RQ3 三问对应三贡献，每问末尾有独立的 "Answer to RQx" 小结框 | 每个 RQ 末尾放一个加粗小结，方便评审与读者定位 |
 | 局限讨论方式 | 在 Discussion 里分三层（假设边界 / 对抗鲁棒性 / 归因的法律含义）而不是一段散文 | 把限制按"理论—安全—合规"分层，各给处置建议 |
 | 最值得借鉴的一句话/一段结构 | "Our model's attribution is based on correlation, not causal proof… analysts must treat these as leads requiring verification"（§6） | 在给出强解释性结果时主动降调，反而提升可采信度 |
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[encrypted-traffic-analysis]]、[[malicious-traffic-detection]]、[[traffic-representation-learning]]、[[transformer]]、[[pre-training-finetuning]]、[[traffic-classification]]、[[traffic-representation]]、[[survey-encrypted-traffic-analysis]]、[[survey-malicious-traffic-detection]]、[[method-comparison-table]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

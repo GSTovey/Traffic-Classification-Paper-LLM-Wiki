@@ -41,6 +41,11 @@ relevance: high
 created: "2026-06-14"
 updated: "2026-06-14"
 related_papers: []
+internal_citation_count: 7
+citation_impact: 1.2
+composite_weight: 0.351
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # Censored Planet: An Internet-wide, Longitudinal Censorship Observatory

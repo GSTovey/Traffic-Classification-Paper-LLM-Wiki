@@ -119,3 +119,19 @@ Contrastive Learning（对比学习）是一种表示学习范式，其核心思
 - 图对比学习中的图增强策略（节点丢弃、边丢弃）是否可以结合流量的领域知识进行更精细的设计？
 - 对比学习与大语言模型（LLM）等新型预训练范式的结合是否能进一步提升加密流量分析的表示质量？
 - 在持续学习场景下，如何利用对比学习实现增量式的模型更新，避免对旧类别知识的遗忘？
+
+## 2026-11-17　2026-COSINT-北邮时金桥 学术报告线索
+
+[[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]]（第 23、44 页）包含两类带监督相似性目标。DHOR 以类别关系和类别对计数加权约束内积。DHBCorr 以真实关联对和困难负对构造三元组目标。两项工作分别使用类别与会话对应真值。可比较其与连续度量学习的关系，复现前需补核采样策略和训练配置。
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] | 双编码器用分层对比损失塑造正常、代理和恶意三种距离分布。FAR 正常性漂移给出适用边界。 |
+
+
+### 2026-11-18　与报告的关联
+
+HAD 的训练距离、DHOR 的有监督嵌入邻域、DHBCorr 的匹配距离服务不同输出。可先测试表示对正常负类尾部的影响，再检验给定表示时判定规则的增益。来源见 [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection|HAD]] §IV-C、§VII 及 [[03-paper-notes/2026-COSINT-北邮时金桥|COSINT 汇报]] 第 23–25、44–45 页。

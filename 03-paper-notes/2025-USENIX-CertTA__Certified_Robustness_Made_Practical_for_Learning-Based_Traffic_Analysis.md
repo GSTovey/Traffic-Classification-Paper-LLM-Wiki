@@ -9,8 +9,8 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity25/presentation/yan-jinzhu"
 pdf: "00-inbox/PDFs/2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis.pdf"
 mineru_md: "02-parsed-markdown/2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["malicious-traffic-detection", "encrypted-traffic-analysis"]
 task: ["adversarial-robustness", "certified-robustness", "traffic-analysis-defense"]
 method: ["randomized-smoothing", "multi-modal-smoothing"]
@@ -18,7 +18,10 @@ dataset: ["CICDOH20"]
 code: "unknown"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis.md", "02-parsed-markdown/2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 ## §0 基础信息
@@ -597,3 +600,12 @@ CertTA与现有方法的根本区别在于：它在随机平滑过程中显式�
 - **Randomized Smoothing [2019-ICML]：** CertTA的理论基础。CertTA扩展了随机平滑框架，从处理单模态扰动到处理多模态扰动。
 - **Differential Privacy [2019-SP]：** CertTA的加性平滑机制与差分隐私的噪声添加有相似之处，但CertTA的噪声设计针对流量数据的特殊性（包长度和到达间隔时间的不同尺度）。
 - **PointNet++ [2017-NeurIPS]：** 无直接关联，但两者都展示了跨域迁移的思想（3D视觉→流量分析 vs CV认证鲁棒性→流量认证鲁棒性）。
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[malicious-traffic-detection]]、[[encrypted-traffic-analysis]]、[[anomaly-detection]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

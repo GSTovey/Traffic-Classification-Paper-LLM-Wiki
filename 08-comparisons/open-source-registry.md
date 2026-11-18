@@ -2,7 +2,7 @@
 type: comparison
 name: open-source-registry
 created: "2026-05-29"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # 开源模型/方法注册表
@@ -110,6 +110,15 @@ updated: "2026-09-19"
 | 89 | SoK Flow Labels | 2026 | 流量分类；网站指纹；基准审计 | [4open.science](https://anonymous.4open.science/r/traffic_dataset_audit_script-440B/) | 审计脚本 + 配对语料 | — | [[2026-arXiv-SoK__Where_Do_Flow_Labels_Come_From__Auditing_Label_Provenance_in_Encrypted_Traffic_Benchmarks]] |
 | 90 | Colossus (PQ-WF-Eval) | 2026 | 网站指纹攻击；加密流量分类 | [4open.science](http://anonymous.4open.science/r/PQ-WF-Eval) | 代码（匿名仓库） | — | [[2026-arXiv-The_Colossus_with_Feet_of_Clay__Debunking_Encrypted_Traffic_Classifiers_under_PQC_Evolution]] |
 | 91 | BBQ (HTTP/2 WF) | 2026 | 网站指纹攻击/防御评测 | [GitHub](https://github.com/bcebere/Understanding-the-Privacy-Preserving-Potential-of-HTTP2-Against-Webpage-Fingerprinting) | 代码（含 wfaudit 工具、采集/重放管线、基准代码） | — | [[2026-arXiv-Understanding_the_Privacy-Preserving_Potential_of_HTTP_2_Against_Webpage_Fingerprinting]] |
+| 92 | NestTor | 2026 | Tor-over-Proxy 检测 | [GitHub](https://github.com/GSTovey/NestTor) | 实现 + 框架图 + 650 流处理后格式样例；样例无 Pure Proxy，不是完整开发/确认集；仓库 license 未明确 | Python | [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] |
+| 93 | GraphIDS | 2025 | 流级异常检测 | [产物](https://github.com/lorenzo9uerra/GraphIDS) | 代码、配置与合成数据检查 | Python | [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] |
+| 94 | Nepco | 2025 | SmartNIC 流量基础模型 | [产物](https://github.com/lincgcg/Nepco) | 代码、模型和后续版本评估产物 | Python/C++ | [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] |
+| 95 | CenRL | 2026 | 互联网审查测量 | [产物](https://doi.org/10.5281/zenodo.17382167) | Zenodo v1.1，会议 artifact 清单与记录已核验 | Python | [[03-paper-notes/2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements\|CenRL]] |
+| 96 | SIR | 2026 | 网络监测查询 | [产物](https://github.com/AnthonyDario/SIR) | 中间表示编译器及参考实现 | 仓库见说明 | [[03-paper-notes/2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR\|SIR]] |
+| 97 | MPA-LLM | 2026 | 流量矩阵分析 | [产物](https://github.com/Labman-Wangjunjie/MPA-LLM) | 作者代码与实验配置 | Python | [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] |
+| 98 | HAD | 2026 | IDS 防御 | [产物](https://github.com/kalendsyang/HAD) | 作者分层防御实现 | Python | [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] |
+| 99 | SEDMS | 2026 | 流式遥测指标选择 | [产物](https://github.com/SyCode2005/SEDMS) | 作者实验实现 | 仓库见说明 | [[03-paper-notes/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks\|SEDMS]] |
+
 
 ---
 
@@ -226,7 +235,7 @@ updated: "2026-09-19"
 
 | 类别 | 数量 |
 |---|---:|
-| 已确认开源（本知识库论文） | 91（含 4 项仅数据集开源） |
+| 已确认公开仓库（本知识库论文） | 99（含 4 项仅数据集公开；具体授权与发布范围逐项核对） |
 | 计划开源 / 待确认 | 9 |
 | 高频对比基线无开源地址 | 20+ |
 | CLET 论文确认有实现但缺地址 | 5 |
@@ -234,23 +243,23 @@ updated: "2026-09-19"
 
 ### 按任务领域分布（已开源）
 
-> 按主要任务域归类（每项记 1 次），合计 91；2026-09-19 批次重新核算。
+> 按主要任务域归类（每项记 1 次），2026-11-18 新增 7 个产物，合计 99。
 
 | 领域 | 已开源数量 | 代表方法 |
 |---|---:|---|
-| 加密流量分类 | 19 | ET-BERT, YaTC, NetMamba+, TrafficMoE, MH-Net, BTRFormer, UTFormer, PERO, Pruned Traffic Trees |
+| 加密流量分类 | 20 | Nepco, ET-BERT, YaTC, NetMamba+, TrafficMoE, MH-Net, BTRFormer, UTFormer, PERO, Pruned Traffic Trees |
 | 网站指纹（攻击+防御） | 23 | DF, RF, Palette, STAR, CountMamba, CELLSHIFT, Cease, FMWF, Stinger, PA3, BBQ |
-| 恶意流量检测/异常检测 | 10 | Whisper, TFusion, MET-LLM, FreeUp, ConMD, LotBoNC, TIPSO-GAN, Tracegram |
+| 恶意流量检测/异常检测 | 12 | GraphIDS, HAD, Whisper, TFusion, MET-LLM, FreeUp, ConMD, LotBoNC, TIPSO-GAN, Tracegram |
 | 应用/匿名流量分类 | 4 | Flowprint, AN-Net, DecETT, Motion in the Clear |
-| 审查规避/测量 | 5 | UPGen, Huma, Censored Planet, GFW, Revelio |
+| 审查规避/测量 | 6 | CenRL, UPGen, Huma, Censored Planet, GFW, Revelio |
 | 流量关联/匿名攻击 | 1 | SUMo |
 | 评估/基准 | 3 | SoK Decoding, SweetDanger, SoK Flow Labels |
-| 服务发现/隧道检测 | 3 | Separating Flows, LZR, Iris |
+| 服务发现/隧道检测 | 4 | Separating Flows, LZR, Iris, NestTor |
 | 可解释性 | 1 | Traffic-Explainer |
 | 预训练模型增强 | 1 | Plug-in Enhancement Framework |
 | 操作系统指纹识别 | 1 | TabularT-OS |
 | 仅数据集开源 | 4 | HTPA, Reality Check, GTT23, DNS Privacy Dataset |
-| 网络测量 | 3 | PipHeap, PSM, ISP Forecasting Benchmark |
+| 网络测量 | 6 | SIR, MPA-LLM, SEDMS, PipHeap, PSM, ISP Forecasting Benchmark |
 | 协议安全/设计 | 7 | Mercuriuzz, Looma, WebRTC DTLS-SRTP, QUIC-Attacker, Hop, Opossum, Remise |
 | 流量生成/合成 | 2 | CascadeNet, Synthetic Traffic Generator |
 | 隐蔽信道 | 1 | C3F |
@@ -270,3 +279,35 @@ updated: "2026-09-19"
 - [ ] 如果论文声明将开源，添加到第 2 节。
 - [ ] 如果 baseline 方法被 3+ 篇论文使用且无开源地址，添加到第 3 节。
 - [ ] 如果 baseline 方法有公开实现但地址未记录，添加到第 3.4 节并标记为待补充。
+
+## 2026-10-26 新入库代码候选（待审核）
+
+仅把解析文本中出现的仓库地址列为候选，不升级为已确认开源。
+
+| 论文 | 年份 | venue | 候选代码地址 | 状态 |
+|---|---:|---|---|---|
+| ARI-LLM: Autoregressive Imputation for Network Traffic Matrix via Large Language Models | 2026 | INFOCOM | https://github.com/JKevin17/ARI-LLM | 待核验是否为论文官方仓库 |
+| MonPlan: Taming Network Measurement with Accurate and Resource-Efficient Sketch-INT Co-Design | 2026 | INFOCOM | https://github.com/p4lang/p4-applications/blob/ | 待核验是否为论文官方仓库 |
+| Practical VPN Fingerprinting using Coarse Inference of Field Specifications in Data Channels | 2026 | INFOCOM | https://github.com/ | 待核验是否为论文官方仓库 |
+| Synecdoche: Efficient and Accurate In-Network Traffic Classification via Direct Packet Sequential Pattern Matching | 2026 | INFOCOM | https://github.com/swampx/Synecdoche | 待核验是否为论文官方仓库 |
+| Drift-Aware Adaptive Website Fingerprinting | 2026 | TDSC | https://github.com/XinhaoDeng/Website-Fingerprinting-Library | 待核验是否为论文官方仓库 |
+| Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | 2026 | TDSC | https://github.com/WW-Meng/FMWF | 待核验是否为论文官方仓库 |
+| GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | 2026 | TDSC | https://github.com/SYX0817/GenETC | 待核验是否为论文官方仓库 |
+| Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification | 2026 | TDSC | https://github.com/lincgcg/TraCare-ICT | 待核验是否为论文官方仓库 |
+| QuicReflo: Exploiting Multi-Flow Redundancy for Restoration-Free Covert Communication Over QUIC | 2026 | TDSC | https://github.com/quic-go/quic-go | 待核验是否为论文官方仓库 |
+| DualGuard: An Adaptive Detection Framework for Concurrent Malicious and Normality Drifts in Network Traffic | 2026 | TIFS | https://github.com/ghostghost66/DualGuard | 待核验是否为论文官方仓库 |
+| Feign East, Strike West! Constructing Covert Channel on TLS 1.3 | 2026 | TIFS | https://github.com/Yuan-Zhang-uestc/ | 待核验是否为论文官方仓库 |
+| InvisiTunnel: Causality-Preserving Covert Communication over DoH through Request Substitution | 2026 | TIFS | https://github.com/alex-sector/ | 待核验是否为论文官方仓库 |
+| Avatar: Securing Anonymous Communication With Relay Anonymity | 2026 | TON | https://github.com/Jemtaly/pymcl | 待核验是否为论文官方仓库 |
+| Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning | 2026 | TON | https://github.com/thuml/few-shot/tree/master | 待核验是否为论文官方仓库 |
+| Fighting the Enemy Within: Traffic Semantics-Driven Framework Against Noisy Labels for Robust Traffic Classification | 2026 | TON | https://github.com/NSSL-SJTU/FlowRefinerPlus | 待核验是否为论文官方仓库 |
+| KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network | 2026 | TON | https://github.com/Anurag-Dutta/KAN-Vis | 待核验是否为论文官方仓库 |
+| QDCR: DNS–QUIC Cross-Protocol Traffic Amplification for Denial-of-Service Attacks | 2026 | TON | https://github.com/Z3Prover/z3 | 待核验是否为论文官方仓库 |
+
+
+## 2026-11-18　发布说明与待确认项
+
+| 论文 | 出版材料记载 | 待核验项 |
+| --- | --- | --- |
+| [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 作者称发布数据集 | 数据下载地址及可用性，代码 unknown |
+| [[03-paper-notes/2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence\|Threat2Traffic]] | PMLR 出版记录注明作者发布代码和捕获语料 | 语料许可和复用范围 |

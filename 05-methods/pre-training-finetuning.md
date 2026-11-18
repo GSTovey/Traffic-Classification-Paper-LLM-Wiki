@@ -157,3 +157,10 @@ Pre-training and Fine-tuning（预训练-微调范式）是一种两阶段学习
 ## 相关研究前沿
 
 - [[pretraining-necessity]] — 预训练范式在流量分析中是否必要
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 以较早且不同来源的数据做 MLM，再对各任务微调。前缀、字段遮蔽与硬件成本需与性能同报。 |

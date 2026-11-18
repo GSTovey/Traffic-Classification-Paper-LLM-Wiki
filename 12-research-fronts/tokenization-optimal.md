@@ -77,3 +77,10 @@ related_methods:
 - [[traffic-foundation-model]]
 - [[transformer]]
 - [[claims-index]] — 相关 claims: #13
+
+
+## 2026-11-18　待审核的新增证据链
+
+| 年份 | 论文 | 方向 | 关联及适用条件 | 证据位置 | 状态 |
+| --- | --- | --- | --- | --- | --- |
+| 2025 | [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 中性 | 固定短包前缀与双字节嵌入结合；算子不同，仍需固定预算比较 token 方案 | §IV-B/C、附录 B | EV-20261118-NEPCO-BYTE · pending_review |

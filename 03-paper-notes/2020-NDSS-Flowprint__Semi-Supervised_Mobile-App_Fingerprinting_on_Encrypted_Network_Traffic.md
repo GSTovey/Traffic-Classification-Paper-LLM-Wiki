@@ -33,7 +33,15 @@ dataset:
 code: "https://github.com/Thijsvanede/Flowprint"
 relevance: "Semi-supervised approach for encrypted mobile traffic fingerprinting; handles unseen apps and app updates"
 created: 2026-05-27
-updated: 2026-05-27
+updated: "2026-10-21"
+venue_factor: 1.0
+time_factor: 0.45
+citation_impact: 1.8
+composite_weight: 0.81
+internal_citation_count: 41
+citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
+citation_count_verified: "2026-10-21"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 ## 0. 论文基础信息表格

@@ -15,8 +15,8 @@ doi: ""
 url: ""
 pdf: "00-inbox/PDFs/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data.pdf"
 mineru_md: "02-parsed-markdown/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["流量表示学习", "预训练", "流量基础模型"]
 task: ["流量分类", "协议理解", "恶意软件检测", "网站指纹"]
 method: ["Transformer", "BERT", "masked burst modeling", "SODF", "RIFA", "pre-training & fine-tuning"]
@@ -30,7 +30,18 @@ dataset:
 code: ""
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data.md", "02-parsed-markdown/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+venue_factor: 1.0
+time_factor: 1.0
+citation_impact: 1.8
+composite_weight: 1.8
+internal_citation_count: 28
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # TrafficFormer: 高效的流量数据预训练模型
@@ -611,3 +622,12 @@ TrafficFormer 的核心思想是针对流量数据的特殊性（方向、顺序
 3. **少样本学习**：在极少量标记数据（如 10 个样本）下，性能如何？
 4. **实时推理**：TrafficFormer 的推理延迟是否满足实时需求？
 5. **跨域迁移**：在完全不同的网络环境（如 IoT）下，预训练模型的迁移能力如何？
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[traffic-representation-learning]]、[[traffic-foundation-model]]、[[pre-training-finetuning]]、[[transformer]]、[[traffic-classification]]、[[encrypted-traffic-analysis]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

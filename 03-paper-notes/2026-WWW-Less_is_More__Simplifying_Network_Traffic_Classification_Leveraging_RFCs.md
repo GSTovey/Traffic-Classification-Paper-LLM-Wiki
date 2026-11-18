@@ -19,6 +19,11 @@ code: unknown
 relevance: medium
 created: "2026-09-29"
 updated: "2026-10-10"
+internal_citation_count: 3
+citation_impact: 1.0
+composite_weight: 0.85
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # Less is More: Simplifying Network Traffic Classification Leveraging RFCs

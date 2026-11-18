@@ -1,7 +1,7 @@
 ---
 title: Key Framework & Architecture Figures
-generated: 2026-09-29
-paper_count: 307
+generated: 2026-11-18
+paper_count: 344
 ---
 
 # Key Framework & Architecture Figures
@@ -884,6 +884,16 @@ paper_count: 307
 
 ---
 
+## 2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection
+
+**Figure 1** — Overview of GraphIDS: the model detects network intrusions by evaluating the reconstruction error of graph-based flow embeddings. Flows representing attacks (highlighted in red) typically yield higher reconstruction errors, as they deviate from normal communication patterns.
+![2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection Figure 1](images/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusio__Figure_1__79df1e7fb1a27b68.jpg)
+
+**Figure 3** — Overview of the full training pipeline. During inference, attention masking is omitted. The reconstruction errors $s _ { 1 } , s _ { 2 } , \ldots , s _ { n }$ serve as anomaly scores for each network flow.
+![2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection Figure 3](images/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusio__Figure_3__9aa3e927e5817171.jpg)
+
+---
+
 ## 2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction
 
 **Figure 5** — Figure 5. The overview of the SSO classifier. With the advantages of causality and iterative processing, the SSO classifier enables effective early-stage WF attacks, eliminating the need to recompute features or perform complete forward propagation at each step. Furthermore, fine-grained predictions allow a more detailed understanding of the sequence and frequency of user visits across multiple tabs.
@@ -1123,6 +1133,16 @@ paper_count: 307
 
 ---
 
+## 2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC
+
+**Fig. 3** — The overview of Nepco.
+![2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC Fig. 3](images/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network___Fig__3__f9b59b0bb36b84a5.jpg)
+
+**Fig. 2** — Conceptual decomposition of the network traffic analysis system into three core components, i.e., traffic processing, model architecture, and analysis execution, on which existing network foundation models and hardware-offloadable models make corresponding design choices to pursue versatile analysis and efficient analysis, respectively.
+![2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC Fig. 2](images/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network___Fig__2__3402a268dc8c10ec.jpg)
+
+---
+
 ## 2026-AES-The_Inevitability_of_Side-Channel_Leakage_in_Encrypted_Traffic
 
 **Figure 1** — Complete causal chain from semantics to observed features
@@ -1200,6 +1220,13 @@ paper_count: 307
 
 ---
 
+## 2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR
+
+**Figure 2** — An SCRA that computes the number of packets sent before a DNS response is used.
+![2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR Figure 2](images/2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR__Figure_2__8e539f90186db1a7.jpg)
+
+---
+
 ## 2026-ICASSP-Nethira__A_Heterogeneity-aware_Hierarchical_Pre-trained_Model_for_Network_Traffic_Classification
 
 **Fig. 1** — Fig. 1. The framework of Nethira.
@@ -1214,6 +1241,13 @@ paper_count: 307
 
 **Fig. 1** — Overview of TriFusion Framework.
 ![2026-ICASSP-TriFusion_A_Self-Supervised_Learning_Enhanced_Dual-Level_Multimodal_Framework_for_Traffic_Classification Fig. 1](images/2026-ICASSP-TriFusion_A_Self-Supervised_Learning_Enhanced_Dual-Level_Multimodal___Fig__1__293a11ee9bef6e8a.jpg)
+
+---
+
+## 2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence
+
+
+本篇的定量证据、局限和原始资料见 [[03-paper-notes/2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence|Threat2Traffic]]。
 
 ---
 
@@ -1241,6 +1275,20 @@ paper_count: 307
 
 ---
 
+## 2026-INFOCOM-ARI-LLM__Autoregressive_Imputation_for_Network_Traffic_Matrix_via_Large_Language_Models
+
+**Fig. 2** — Fig. 2. The framework of ARI-LLM: the Multi-Head Attention layers of the pre-trained LLM are frozen to preserve general language modeling capabilities. The LLM Embedder is also frozen, while the Flow2Vec Embedder is fine-tuned to adapt to the traffic data. Additionally, the Normalization layers, Feed Forward layers, and MLP layer are trainable.
+![2026-INFOCOM-ARI-LLM__Autoregressive_Imputation_for_Network_Traffic_Matrix_via_Large_Language_Models Fig. 2](images/2026-INFOCOM-ARI-LLM__Autoregressive_Imputation_for_Network_Traffic_Matrix_via_L__Fig__2__ba57cf9f4ab982be.jpg)
+
+---
+
+## 2026-INFOCOM-Automated_Construction_of_High-Quality_Initial_Seed_Corpus_for_Network_Protocol_Fuzzing
+
+**Fig. 1** — Overview of AutoSeeder.
+![2026-INFOCOM-Automated_Construction_of_High-Quality_Initial_Seed_Corpus_for_Network_Protocol_Fuzzing Fig. 1](images/2026-INFOCOM-Automated_Construction_of_High-Quality_Initial_Seed_Corpus_for_Netw__Fig__1__cbce111ee7bdda12.jpg)
+
+---
+
 ## 2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly_Detection_for_Encrypted_Network_Traffic
 
 **Fig. 3** — Fig. 3. The overall framework of FreeUp. (1) The model first decouples the input into low- and high-frequency bands, which are reconstructed by separate networks to mitigate spectral bias. (2) An uncertainty-inspired fusion pipeline then adaptively integrates evidential uncertainty from multi-view branches.
@@ -1248,6 +1296,58 @@ paper_count: 307
 
 **Fig. 1** — Fig. 1. Illustration of the full-frequency phenomenon via frequency distribution statistics across natural and traffic images.
 ![2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly_Detection_for_Encrypted_Network_Traffic Fig. 1](images/2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly__Fig__1__8bc35b591a415c81.jpg)
+
+---
+
+## 2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classification_Model_Based_on_Packet_Header_Fields
+
+**Fig. 6** — HF-Transformer Framework
+![2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classification_Model_Based_on_Packet_Header_Fields Fig. 6](images/2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classifi__Fig__6__f4bba04999ba6028.jpg)
+
+---
+
+## 2026-INFOCOM-MonPlan__Taming_Network_Measurement_with_Accurate_and_Resource-Efficient_Sketch-INT_Co-Design
+
+**Fig. 1** — MonPlan overview.
+![2026-INFOCOM-MonPlan__Taming_Network_Measurement_with_Accurate_and_Resource-Efficient_Sketch-INT_Co-Design Fig. 1](images/2026-INFOCOM-MonPlan__Taming_Network_Measurement_with_Accurate_and_Resource-Effi__Fig__1__c484e386a2691ca4.jpg)
+
+---
+
+## 2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_Traffic
+
+**Fig. 2** — The PP-OpenNet architecture. (a) Framework overview (unrolled GRU cells share weights). (b) Multi-Scale CNN Embedder (MSCE). (c) Temporal Correlation Extractor (TCE).
+![2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_Traffic Fig. 2](images/2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_T__Fig__2__2086470ad725dcaf.jpg)
+
+**Figure** — (c) Module variations
+![2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_Traffic Figure](images/2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_T__Figure__bcc83df5d82a3094.jpg)
+
+---
+
+## 2026-INFOCOM-PacketLoom__A_Unified_Preprocessing_Framework_for_Multi-Modal_Network_Traffic_Analysis
+
+**Fig. 2** — Fig. 2. The Architecture of PacketLoom. The system comprises three logical layers: (1) Unified ingestion layer handles physical normalization and stream filtering in a lazy manner; (2) Polymorphic representation layer generates multi-modal tensors via paradigm-specific generators; (3) Refinement & export layer performs in-memory refinement and serializes data into model-ready artifacts.
+![2026-INFOCOM-PacketLoom__A_Unified_Preprocessing_Framework_for_Multi-Modal_Network_Traffic_Analysis Fig. 2](images/2026-INFOCOM-PacketLoom__A_Unified_Preprocessing_Framework_for_Multi-Modal_Netwo__Fig__2__caccbbb8d715e6a4.jpg)
+
+---
+
+## 2026-INFOCOM-Practical_VPN_Fingerprinting_using_Coarse_Inference_of_Field_Specifications_in_Data_Channels
+
+**Fig. 2** — Overview of VPNSPOTTER.
+![2026-INFOCOM-Practical_VPN_Fingerprinting_using_Coarse_Inference_of_Field_Specifications_in_Data_Channels Fig. 2](images/2026-INFOCOM-Practical_VPN_Fingerprinting_using_Coarse_Inference_of_Field_Specif__Fig__2__0b3834369d0f5786.jpg)
+
+---
+
+## 2026-INFOCOM-Synecdoche__Efficient_and_Accurate_In-Network_Traffic_Classification_via_Direct_Packet_Sequential_Pattern_Matching
+
+**Fig. 2** — The high-level architecture of our Synecdoche framework, illustrating the two-phase pipeline from offline discovery to online matching on the programmable data plane.
+![2026-INFOCOM-Synecdoche__Efficient_and_Accurate_In-Network_Traffic_Classification_via_Direct_Packet_Sequential_Pattern_Matching Fig. 2](images/2026-INFOCOM-Synecdoche__Efficient_and_Accurate_In-Network_Traffic_Classificatio__Fig__2__3cfcf8f443550f40.jpg)
+
+---
+
+## 2026-INFOCOM-Tap_Dance_on_Android_External_Storage__Covert_Channels_Built_on_File_Operations
+
+
+本篇的评估与出处见 [[03-paper-notes/2026-INFOCOM-Tap_Dance_on_Android_External_Storage__Covert_Channels_Built_on_File_Operations]]。
 
 ---
 
@@ -1746,6 +1846,33 @@ paper_count: 307
 
 ---
 
+## 2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion
+
+
+本篇的定量证据、局限和原始资料见 [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion|Contorter]]。
+
+---
+
+## 2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements
+
+**Figure** — (a) Current Censorship Measurement Workflow: (1) The researcher constructs a list of potential censored websites to test, such as the Tranco Top–1M, and further filters it down to the Tranco Top–1K due to limited resources; (2) The researcher orders the websites (randomly or by rank) and sends them to a remote client in a region of interest; (3) The client runs censorship measurements for all websites or until resources are exhausted; (4) The researcher collects the results; (5) The list of blocked websites is the output. (b) CenRL Workflow: (1) The researcher provides inputs, such as the Tranco Top–1M websites, features (website categories) to construct the action space, and RL hyperparameters; CenRL initializes the workflow, such as building the action space; (2) The agent follows the RL policy to select an arm and corresponding website to test and sends it to the environment; (3) The client in the environment runs the censorship measurements for the selected website; (4) The environment returns a reward (e.g., higher rewards if the website was determined to be blocked); (5) The agent uses the reward to update the expected value of the arm; (6) CenRL repeats 2–5 for a time horizon T; (7) The list of blocked websites is the output. Figure 1: Current Censorship Measurements vs. CenRL Workflow: Instead of selecting measurement targets using manual heuristics, CenRL leverages learning to use limited resources efficiently while optimizing censorship discovery.
+![2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements Figure](images/2026-S_P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements__Figure__6e2bc20fa67d1ca6.jpg)
+
+**Figure 9** — Real-world experiments with vanilla Hyperquack and CenRL Hyperquack: the top figure shows the overall number of blocked websites found, and the bottom figure shows the distribution of measurement time steps where blocked domains are found. We show the AS and country of the remote vantage point.
+![2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements Figure 9](images/2026-S_P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements__Figure_9__fa330ed2bdbd21fa.jpg)
+
+---
+
+## 2026-S&P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_Descriptor_Flood
+
+
+**Figure 1** — Tor Onion Service Workflow
+![2026-S&P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_Descriptor_Flood Figure 1](images/2026-S_P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_D__Figure_1__66ac8cf53f811566.jpg)
+
+本篇的定量证据、局限和原始资料见 [[03-paper-notes/2026-S&P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_Descriptor_Flood|Descriptors of Exposure]]。
+
+---
+
 ## 2026-S&P-Practical_Covert_Channel_Across_Isolated_Browser_Instances_via_GPU_Command_Queue_Contention
 
 **Figure 1** — An Illustration of the Command Queue Contention Channel using two Isolated Web Frames.
@@ -1756,6 +1883,26 @@ paper_count: 307
 
 ---
 
+## 2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency
+
+**Figure 6** — Routing architecture between a dual-homing SaTor relay with the remaining of Tor network.
+![2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency Figure 6](images/2026-S_P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency__Figure_6__e80dd5fb50cbe2b4.jpg)
+
+**Figure 1** — Overview of satellite communications.
+![2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency Figure 1](images/2026-S_P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency__Figure_1__3d10085208b215d9.jpg)
+
+---
+
+## 2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Network_Traffic_Anomaly_Detection
+
+**Fig. 6** — Fig. 6. The specific details of the HeteAUG framework.
+![2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Network_Traffic_Anomaly_Detection Fig. 6](images/2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Networ__Fig__6__617b3022ab99be2c.jpg)
+
+**Fig. 5** — Fig. 5. The augmentation workflow of HeteAUG.
+![2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Network_Traffic_Anomaly_Detection Fig. 5](images/2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Networ__Fig__5__ba44751f855fd0d0.jpg)
+
+---
+
 ## 2026-TDSC-AirMask__Enabling_Air-to-Air_Masking_of_Wireless_Traffic_Fingerprints_in_WiFi-Based_IoT_Environments
 
 **Figure** — (c) IoTrace testbed. Fig. 9. Illustration of (a) three deployment modes of AirMask, (b) MaskNode that connects wirelessly to AirMask and injects mask frames indistinguishable to attackers, and (c) IoTrace testbed that collects wireless traffic from IoT devices.
@@ -1763,6 +1910,65 @@ paper_count: 307
 
 **Fig. 4** — Fig. 4. AirMask’s architectural design. The four modules, i.e., Packet-Frame Prediction, Mask Frame Injection, Mask Frame Camouflage, and Fingerprint-Aware Assessment, form a predict-inject-assess loop to collaboratively mask IoT fingerprints.
 ![2026-TDSC-AirMask__Enabling_Air-to-Air_Masking_of_Wireless_Traffic_Fingerprints_in_WiFi-Based_IoT_Environments Fig. 4](images/2026-TDSC-AirMask__Enabling_Air-to-Air_Masking_of_Wireless_Traffic_Fingerprints___Fig__4__652ae8e6dc98538f.jpg)
+
+---
+
+## 2026-TDSC-Behavioral_Evidence-Based_Hierarchical_Decision_Refinement_for_Encrypted_Malicious_Traffic_Classification_in_Decentralized_Data_Circulation
+
+**Fig. 2** — Pipeline of THEMIS. Encrypted flows are transformed into a unified behavior-oriented representation, screened by Stage-I, and then processed by Stage-II through global subtype attribution, local-expert refinement, and multi-criteria subtype release.
+![2026-TDSC-Behavioral_Evidence-Based_Hierarchical_Decision_Refinement_for_Encrypted_Malicious_Traffic_Classification_in_Decentralized_Data_Circulation Fig. 2](images/2026-TDSC-Behavioral_Evidence-Based_Hierarchical_Decision_Refinement_for_Encrypt__Fig__2__25680286973467a3.jpg)
+
+---
+
+## 2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture
+
+**Fig. 3** — Fig. 3. Overall framework of CryptoFormer. Raw packets are segmented into sessions, tokenized via byte-level BPE, and passed through a two-stage Transformer architecture. Stage I extracts packet-level content semantics, Stage II models session-level behavioral dynamics, and an adaptive gated fusion module combines both modalities before final classification.
+![2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture Fig. 3](images/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Tran__Fig__3__1920a33fd13acf08.jpg)
+
+**Fig. 10** — Fig. 10. Inference latency comparison on the test set. CryptoFormer attains the lowest latency (1.15 s/session), a 2.97× speedup over ET-BERT (3.41 s/session) and a 2.58× speedup over TrafficFormer (2.97 s/session). The lightweight tokenization and hierarchical architecture amortize computational cost across packets.
+![2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture Fig. 10](images/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Tran__Fig__10__6526ecaf14ec7501.jpg)
+
+---
+
+## 2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting
+
+**Fig. 2** — Overall framework of Aion. It continuously fine-tunes the deployed model during the deployment phase to adapt to traffic drift.
+![2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting Fig. 2](images/2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting__Fig__2__010eca7487ac655c.jpg)
+
+---
+
+## 2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses
+
+**Fig. 5** — Fig. 5. Overview of the TGTO Architecture for Defending Against Website Fingerprinting Attacks.
+![2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses Fig. 5](images/2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_an__Fig__5__f1b67a2a0f632c84.jpg)
+
+**Fig. 2** — Fig. 2. Our lightweight WF attack, FMWF, consists of two key components: a feature extractor and a classifier, both built using lightweight neural networks These components work in tandem with a fine-tuning algorithm derived from transfer learning, enabling efficient and accurate multi-tab website fingerprintin with minimal training data.
+![2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses Fig. 2](images/2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_an__Fig__2__694fa32e3ab9c829.jpg)
+
+---
+
+## 2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Classification
+
+**Fig. 2** — Overview of the proposed GenETC framework. It seamlessly integrates a pre-trained BERT module with a graph neural network (DiESAGE) through a Dynamic Graph Updating strategy. During fine-tuning, flow representations extracted by BERT serve as dynamic edge attributes for the interaction graph, which are iteratively updated via a Memory Bank mechanism to resolve scalability issues. The final classification decision is derived from the fusion of the semantic view (intrinsic features) and the topological view (graph-based patterns).
+![2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Classification Fig. 2](images/2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Class__Fig__2__a5cd3dd55a3062e8.jpg)
+
+---
+
+## 2026-TDSC-Generating_Adversarial_Network_Traffic_via_Multi-Model_Guided_Adversarial_Diffusion
+
+
+
+本篇的评估与出处见 [[03-paper-notes/2026-TDSC-Generating_Adversarial_Network_Traffic_via_Multi-Model_Guided_Adversarial_Diffusion]]。
+
+---
+
+## 2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Traffic_Classification
+
+**Fig. 9** — The framework of TraCare.
+![2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Traffic_Classification Fig. 9](images/2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Tr__Fig__9__4c603246e73b80ab.jpg)
+
+**Fig. 11** — The F1-Score results of machine learning models with and without traffic filtering (TF). We represent the relative F1- Score change with traffic filtering as ↓X% and ↑X%. (d) IoT Attack Identification (c) Malware Classification Fig. 12: Comparison results of ET-BERT and BERT\*. BERT\* is a pre-trained model implemented on our proposed traffic corpus using the model architecture of ET-BERT.
+![2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Traffic_Classification Fig. 11](images/2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Tr__Fig__11__12754c81ca5349d9.jpg)
 
 ---
 
@@ -1786,10 +1992,47 @@ paper_count: 307
 
 ---
 
+## 2026-TDSC-QuicReflo__Exploiting_Multi-Flow_Redundancy_for_Restoration-Free_Covert_Communication_Over_QUIC
+
+
+本篇的评估与出处见 [[03-paper-notes/2026-TDSC-QuicReflo__Exploiting_Multi-Flow_Redundancy_for_Restoration-Free_Covert_Communication_Over_QUIC]]。
+
+---
+
+## 2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynamic_Relationship_Awareness
+
+**Fig. 2** — Architecture overview of RearView: two-stage VAE-guided graph-based malicious traffic detection.
+![2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynamic_Relationship_Awareness Fig. 2](images/2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynam__Fig__2__3634aaa2d5e57768.jpg)
+
+**Fig. 4** — The VAE architecture in RearView.
+![2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynamic_Relationship_Awareness Fig. 4](images/2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynam__Fig__4__8e3adcc98d9cdafe.jpg)
+
+---
+
 ## 2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion
 
 **Fig. 2** — Fig. 2. Illustration of our TrustWI. (a) Learning the long-range propagation view (View-L) and structural augmentation view (View-S), then generating View-P based on them. (b) Learning the evidence uncertainty across three views. The Dirichlet distributions derived from these views are dynamically aggregated to capture view-specific uncertainties, yielding a fused Dirichlet distribution (View-F). (c) The proposed evidential learning loss guides model optimization through backpropagation.
 ![2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion Fig. 2](images/2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious___Fig__2__f0723ba65d49499c.jpg)
+
+---
+
+## 2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Features
+
+**Fig. 2** — Fig. 2. The framework of TridentDNS.
+![2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Features Fig. 2](images/2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Feature__Fig__2__f6b5774873d3c402.jpg)
+
+**Fig. 1** — Fig. 1. Illustration of domain-relay and IP-direct DNS tunneling.
+![2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Features Fig. 1](images/2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Feature__Fig__1__b8010b312b0ae02b.jpg)
+
+---
+
+## 2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models
+
+**Fig. 1** — Fig. 1. The MPA-LLM framework. Traffic data are processed through a sequence of varying resolutions in a coarse-to-fine manner. The Multi-Head Attention layers and Text Embedder of the pre-trained LLM are kept frozen to preserve general language modeling capabilities, while the Flow2Vec Embedder, normalization layers, feed-forward layers, and the shared MLP projection head are fine-tuned to align latent representations with diverse downstream tasks.
+![2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models Fig. 1](images/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models__Fig__1__87b177025ec2c7ce.jpg)
+
+**Fig. 2** — Fig. 2. An illustrative example of the prompt template utilized in MPA-LLM. The tags in brackets (e.g., [Database], [Instruction]) indicate the start of a specific contextual block, while dynamic data statistics and stagespecific configurations are injected iteratively at each step of the decoupled mechanism.
+![2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models Fig. 2](images/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models__Fig__2__0a4695b5758b269a.jpg)
 
 ---
 
@@ -1853,6 +2096,16 @@ paper_count: 307
 
 ---
 
+## 2026-TIFS-DualGuard__An_Adaptive_Detection_Framework_for_Concurrent_Malicious_and_Normality_Drifts_in_Network_Traffic
+
+**Fig. 4** — The architecture of the DualGuard framework. A unified recognition core uses a Contrastive Autoencoder with Hierarchical Contrastive Learning to generate structured embeddings. A MAD-based statistical triage then gates each sample as MMD, ND, or no drift. This signal drives two tailored workflows: the Classifier workflow uses fine-grained clustering to adapt to MMD, while the Anomaly workflow performs baseline adaptation to handle ND.
+![2026-TIFS-DualGuard__An_Adaptive_Detection_Framework_for_Concurrent_Malicious_and_Normality_Drifts_in_Network_Traffic Fig. 4](images/2026-TIFS-DualGuard__An_Adaptive_Detection_Framework_for_Concurrent_Malicious_an__Fig__4__287e7aea04f34589.jpg)
+
+**Fig. 3** — The taxonomy of concept drift in network security addressed by this paper. It comprises MMD and ND. ND is further divided into temporal ND and spatial ND.
+![2026-TIFS-DualGuard__An_Adaptive_Detection_Framework_for_Concurrent_Malicious_and_Normality_Drifts_in_Network_Traffic Fig. 3](images/2026-TIFS-DualGuard__An_Adaptive_Detection_Framework_for_Concurrent_Malicious_an__Fig__3__064b87016109498a.jpg)
+
+---
+
 ## 2026-TIFS-Early-Stage_Detection_of_Encrypted_Malware_Traffic_via_Multi-Flow_Temporal_Graph_Learning
 
 **Fig. 3** — Fig. 3. The system overview of DawnGuard.
@@ -1873,6 +2126,13 @@ paper_count: 307
 
 ---
 
+## 2026-TIFS-Feign_East_Strike_West_Constructing_Covert_Channel_on_TLS_1.3
+
+
+本篇的评估与出处见 [[03-paper-notes/2026-TIFS-Feign_East_Strike_West_Constructing_Covert_Channel_on_TLS_1.3]]。
+
+---
+
 ## 2026-TIFS-Graph-Based_Contrastive_Learning_and_Clustering_for_Open-World_Encrypted_Traffic_Classification
 
 **Fig. 2** — Fig. 2. Overview of the proposed GCLC framework. During training, labeled trafic graphs are used in supervised contrastive clustering to form distinct class clusters. During execution, new flows are embedded and compared against known clusters for classification or new class detection.
@@ -1883,6 +2143,13 @@ paper_count: 307
 
 ---
 
+## 2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection
+
+**Fig. 2** — The overview of HAD. HAD operates through three tightly integrated stages: (1) Feature Space Partition, which separates the feature space into manipulable and non-manipulable subspaces by quantifying the vulnerability of features; (2) Surrogate Sample Generation, which simulates adversarial behaviors through structured perturbation of network traffic features; and (3) Hierarchical Contrastive Learning, which captures the hierarchical relationships among benign (Blue), malicious (Red), and adversarial (Purple) samples by modeling their dispersion across the feature subspaces.
+![2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection Fig. 2](images/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection__Fig__2__2c985434e172f4cc.jpg)
+
+---
+
 ## 2026-TIFS-HookSteg__A_Truly_Lossless_Steganography_Based_on_Process_Hooking_for_Lossy_Network_Channels
 
 **Fig. 4** — Fig. 4. Schematic diagram of identifying attack nodes.
@@ -1890,6 +2157,13 @@ paper_count: 307
 
 **Fig. 3** — Fig. 3. The diagram of HookSteg.
 ![2026-TIFS-HookSteg__A_Truly_Lossless_Steganography_Based_on_Process_Hooking_for_Lossy_Network_Channels Fig. 3](images/2026-TIFS-HookSteg__A_Truly_Lossless_Steganography_Based_on_Process_Hooking_for___Fig__3__de5842f888d5c471.jpg)
+
+---
+
+## 2026-TIFS-InvisiTunnel__Causality-Preserving_Covert_Communication_over_DoH_through_Request_Substitution
+
+
+本篇的评估与出处见 [[03-paper-notes/2026-TIFS-InvisiTunnel__Causality-Preserving_Covert_Communication_over_DoH_through_Request_Substitution]]。
 
 ---
 
@@ -1920,6 +2194,14 @@ paper_count: 307
 
 ---
 
+## 2026-TIFS-Stego-Vector_Driven_Simultaneous_Covert_Channels_in_Streaming_Applications
+
+
+
+本篇的评估与出处见 [[03-paper-notes/2026-TIFS-Stego-Vector_Driven_Simultaneous_Covert_Channels_in_Streaming_Applications]]。
+
+---
+
 ## 2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences
 
 **Fig. 4** — Fig. 4. Stinger overview. Outgoing packets are transmitted from Tor clients to website servers; Incoming packets are transmitted in the opposite direction.
@@ -1944,6 +2226,26 @@ paper_count: 307
 
 **Fig. 1** — Fig. 1. Based on the backdoor learning framework, TrapFlow injects a specific trigger pattern (TrapFlow Trigger) into the exit node to induce the attacker to misclassify the model and even control its parameters and predictions.
 ![2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Backdoor_Learning Fig. 1](images/2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Back__Fig__1__a881f5ee4794f091.jpg)
+
+---
+
+## 2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted_Traffic_Analysis
+
+**Fig. 2** — Fig. 2. Overall workflow of the M2ML framework.
+![2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted_Traffic_Analysis Fig. 2](images/2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted___Fig__2__e109f9f1fe648f56.jpg)
+
+**Fig. 1** — Fig. 1. Overview of the M2ML paradigm.
+![2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted_Traffic_Analysis Fig. 1](images/2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted___Fig__1__811cf01002ef7112.jpg)
+
+---
+
+## 2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Models_for_Encrypted_Traffic_Analysis
+
+**Fig. 1** — Fig. 1. Overview of the proposed DBCL Framework.
+![2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Models_for_Encrypted_Traffic_Analysis Fig. 1](images/2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Mo__Fig__1__c6ea369c20c2ac5f.jpg)
+
+**Fig. 2** — Fig. 2. Overview of the implementation pipeline and training setup of DBCL.
+![2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Models_for_Encrypted_Traffic_Analysis Fig. 2](images/2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Mo__Fig__2__2370662c8372f70e.jpg)
 
 ---
 
@@ -2065,6 +2367,93 @@ paper_count: 307
 
 ---
 
+## 2026-TON-Avatar__Securing_Anonymous_Communication_With_Relay_Anonymity
+
+**Fig. 2** — Fig. 2. Comparison of system models. Fig. 2(a) illustrates the components of the Tor network, while Fig. 2(b) presents the architecture of Avatar. Unlike Tor, Avatar removes the DA and replaces part of its functionality by converting some RNs into GNs. GN refers to group nodes, and RN refers to relay nodes. DA refers to directory authorities. CN refers to client nodes. SN refers to server nodes. BN refers to bulletin nodes.
+![2026-TON-Avatar__Securing_Anonymous_Communication_With_Relay_Anonymity Fig. 2](images/2026-TON-Avatar__Securing_Anonymous_Communication_With_Relay_Anonymity__Fig__2__a62897851f413a47.jpg)
+
+**Figure** — (b) Avatar system (a) Partial structure of the system
+![2026-TON-Avatar__Securing_Anonymous_Communication_With_Relay_Anonymity Figure](images/2026-TON-Avatar__Securing_Anonymous_Communication_With_Relay_Anonymity__Figure__8fe3b3d60801e5fb.jpg)
+
+---
+
+## 2026-TON-Enabling_Entangled_Cache_Probing_for_Remotely_Reconstructing_DNS_Query_Dynamics
+
+
+
+本篇的评估与出处见 [[03-paper-notes/2026-TON-Enabling_Entangled_Cache_Probing_for_Remotely_Reconstructing_DNS_Query_Dynamics]]。
+
+---
+
+## 2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrastive_Self-Supervised_Learning
+
+**Figure** — (a) Pre-training stage of the proposed CSSL approach (b) Fine-tuning stage of the proposed CSSL approach Fig. 4. Overview of the proposed Contrastive Self-Supervised Learning (CSSL) approach.
+![2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrastive_Self-Supervised_Learning Figure](images/2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrasti__Figure__17c3c77343ec31ac.jpg)
+
+**Fig. 6** — Fig. 6. Performance of GSSL approach across four datasets in terms of standard evaluation metrics. GSSL demonstrates consistent and stable performance across the three datasets (QUIC, Orange’20 and AppClassNet), with higher variability observed on the ISCX dataset due to limited and imbalanced training samples.
+![2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrastive_Self-Supervised_Learning Fig. 6](images/2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrasti__Fig__6__fb70eee833d771d7.jpg)
+
+---
+
+## 2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_Noisy_Labels_for_Robust_Traffic_Classification
+
+**Fig. 1** — Fig. 1. The overview of FLOWREFINER<sup>+</sup>. It consists of three key components: a traffic semantics-driven noise detector, a confidence-guided label correctio mechanism, and a cross-granularity robust classifier. FLOWREFINER<sup>+</sup> effectively detects, corrects, and classifies traffic with noisy labels in a uniform framework achieving high performance without relying on high-quality labeled data, which are costly and difficult to obtain in increasingly complex network environments
+![2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_Noisy_Labels_for_Robust_Traffic_Classification Fig. 1](images/2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_N__Fig__1__d96db1c49ffbce83.jpg)
+
+**Fig. 10** — Fig. 10. The applicability of FLOWREFINER<sup>+</sup> for enhancing the robustness of existing traffic classification architectures under label noise. Fig. 11. Noise detection and noise correction comparison of FLOWREFINER<sup>+</sup> with the variant FlowRefiner without adaptive designs.
+![2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_Noisy_Labels_for_Robust_Traffic_Classification Fig. 10](images/2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_N__Fig__10__220f6829298e6855.jpg)
+
+---
+
+## 2026-TON-KAN-Vis__Efficient_and_Lightweight_Visual_Technique_for_Network_Traffic_Classification_Using_KolmogorovArnold_Network
+
+**Fig. 3** — Fig. 3. The proposed set of four deep learning model architectures under KAN-VIS.
+![2026-TON-KAN-Vis__Efficient_and_Lightweight_Visual_Technique_for_Network_Traffic_Classification_Using_KolmogorovArnold_Network Fig. 3](images/2026-TON-KAN-Vis__Efficient_and_Lightweight_Visual_Technique_for_Network_Traffic__Fig__3__c8195367e2a387b3.jpg)
+
+---
+
+## 2026-TON-Making_the_Best_of_Both_Worlds__Universal_Perturbations_for_Live_Black-Box_Evasion_Against_NIDS_in_Encrypted_Traffic
+
+
+
+本篇的评估与出处见 [[03-paper-notes/2026-TON-Making_the_Best_of_Both_Worlds__Universal_Perturbations_for_Live_Black-Box_Evasion_Against_NIDS_in_Encrypted_Traffic]]。
+
+---
+
+## 2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures
+
+**Fig. 2** — Fig. 2. Coeficient of variation (CV%; lower is better) of the mean of the sampled counters from a CM sketch, versus sample size s, at memory budgets of 512 KB, 2 MB, and 10 MB. Data set used is CAIDA15. CV% is the standard deviation of the sampled mean, divided by the true mean of all counters. The results are calculated from 200 independent trials. Fig. 3. Overview of the PS-ML framework. We use the statistical feature obtained from k mapped counters to capture the unique collision pattern (which is the source of background noise) for each flow, avoiding the assumption that the noise distribution for each flow is identical. In the figure, “cold flows” denote the small-flow bin ([1 τ)) and “hot flows” denote the large-flow bin ([τ ∞)), each routed to a bin-specific regressor.
+![2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures Fig. 2](images/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_S__Fig__2__51df0f65ea1f2417.jpg)
+
+**Fig. 4** — Fig. 4. Normalized AAE (divided by CM baseline) for RatioSketch, PS-ML, LAA, and LegoSketch on CAIDA and MAWI across memory budgets. RatioSketch and PS-ML are query-time correction methods, whereas LAA and LegoSketch modify the online recording pipeline. The gray dotted line at 1.0 represents the CM baseline; values above 1.0 indicate higher error than the uncorrected sketch in that experimental setting. Lower is better.
+![2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures Fig. 4](images/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_S__Fig__4__b414b05539de67b2.jpg)
+
+---
+
+## 2026-TON-QDCR__DNSQUIC_Cross-Protocol_Traffic_Amplification_for_Denial-of-Service_Attacks
+
+
+本篇的评估与出处见 [[03-paper-notes/2026-TON-QDCR__DNSQUIC_Cross-Protocol_Traffic_Amplification_for_Denial-of-Service_Attacks]]。
+
+---
+
+## 2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks
+
+**Fig. 2** — SEDMS Workflow on the Edge Gateway
+![2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks Fig. 2](images/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry__Fig__2__4ae85aec85e9385d.jpg)
+
+---
+
+## 2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision_Transformer
+
+**Fig. 3** — Fig. 3. Overview of our method SRViT.
+![2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision_Transformer Fig. 3](images/2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision__Fig__3__d5b5c3e9d057cabb.jpg)
+
+**Fig. 5** — Fig. 5. The schematic diagram of the Incremental Update Mechanism.
+![2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision_Transformer Fig. 5](images/2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision__Fig__5__12f2ba83fe9eb2d0.jpg)
+
+---
+
 ## 2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting
 
 **Fig. 2** — Fig. 2. The overview of ARES.
@@ -2072,6 +2461,16 @@ paper_count: 307
 
 **Fig. 6** — Fig. 6. The multi-head top-m attention method correlates local traffic patterns for website fingerprinting even in the presence of noise interference. Different from the full connection of the original Transformer, Trans-WF keeps only the top-m attention.
 ![2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting Fig. 6](images/2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting__Fig__6__82131b73a6d76385.jpg)
+
+---
+
+## 2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection
+
+**Fig. 1** — Fig. 1. Overview of the whole framework.
+![2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection Fig. 1](images/2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_C__Fig__1__8ace76d9f3270fa0.jpg)
+
+**Fig. 2** — Fig. 2. Illustration of the two pre-training tasks for generic trafic feature learning.
+![2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection Fig. 2](images/2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_C__Fig__2__5bd0ab7eecd5b94c.jpg)
 
 ---
 
@@ -2682,5 +3081,15 @@ paper_count: 307
 
 **Fig. 2** — RESIDUALMUX: An adversary calibrates the channel with a compromised extension encodes m into the residual stream (assuming at Layer ℓ). An authorized recorder preserves the signal in artifact. The offline observer can thus recovers m after the artifact crosses the trust boundary.
 ![2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams Fig. 2](images/2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residu__Fig__2__cf6f72a6f15ebb34.jpg)
+
+---
+
+## 2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions
+
+**Fig. 3** — Fig. 3. Overview of NESTTOR. Inputs cover ToP, Pure Proxy, Ordinary, and Direct Tor flows. (A) Preprocessing converts a bidirectional TCP flow into a sequence of payload packets and removes prohibited identifiers and labels. (B) Representation extracts global flow behavior, dynamics across relative stages, and optional protocol residuals. (C) Factorized detection combines a proxy gate with a proxy-conditioned Tor detector. (D) Calibration using Pure Proxy references sets the inner threshold from the upper-tail quantile of Pure Proxy reference scores when ToP labels are unavailable, while selection based on the capture environment chooses a frozen proxy gate.
+![2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions Fig. 3](images/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decis__Fig__3__728c238898455058.jpg)
+
+**Fig. 5** — Fig. 5. Confirmatory system comparison on the same 2,300-flow evaluation set. (a) Macro-F1 under a shared proxy gate. (b) Native end-to-end macro-F1. The plotted NESTTOR result uses proxy-conditioned inner thresholds. Applying $\tau _ { Q } = 0 . 4 8 5$ and $\tau _ { T } = 0 . 2 2 5$ uniformly gives 99.41% macro-F1 and 0.70% Pure Proxy FPR; Table III compares both rules.
+![2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions Fig. 5](images/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decis__Fig__5__db0a66a61910812e.jpg)
 
 ---

@@ -9,7 +9,7 @@ doi: "10.14722/ndss.2026.242086"
 url: unknown
 pdf: "00-inbox/Aug_inbox/2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection.md"
-status: processed
+status: deep-analyzed
 reading_level: L3
 research_area: ["residential proxy detection", "traffic analysis", "network privacy"]
 task: ["proxy detection", "tunnel detection", "traffic classification", "flow correlation"]
@@ -18,7 +18,10 @@ dataset: ["self-collected Bright Data EarnApp dataset (15 months, 900GB, 6.3M co
 code: unknown
 relevance: high
 created: "2026-08-17"
-updated: "2026-08-17"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection.md", "02-parsed-markdown/2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # Beyond RTT: An Adversarially Robust Two-Tiered Approach for Residential Proxy Detection
@@ -450,3 +453,12 @@ CorrTransform 细节（§VI-B）：输入每个包投影到 128 维嵌入空间�
 | 实验组织逻辑 | 按"防御者视角"组织（ISP 设备→ISP 连接→服务器），而非按方法组织 | 实验章节按利益相关者视角编排，读者易代入 |
 | 局限性讨论方式 | 独立 Limitations 章节 + 全文处处自认局限（合成背景、单一提供商、地理局限） | 每处主张旁即时标注其证据边界 |
 | 最值得借鉴的一句话/一段结构 | "This work shifts proxy detection from vulnerable timing-based approaches to resilient architectural fingerprinting"——把贡献概括为一次"范式转移" | 结尾用一句范式级概括收束，而非罗列技术细节 |
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[tunnel-detection]]、[[traffic-classification]]、[[anonymous-traffic-identification]]、[[malicious-traffic-detection]]、[[encrypted-traffic-analysis]]、[[transformer]]、[[traffic-representation]]、[[survey-encrypted-traffic-analysis]]、[[method-comparison-table]]、[[dataset-comparison-table]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

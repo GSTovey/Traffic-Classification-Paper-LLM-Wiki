@@ -1,7 +1,53 @@
+## [2026-11-03] deep-analysis | 2024–2026 四大安全顶会对口论文
+- Changed:
+  - 28 篇标准论文（2024 年 8 篇、2025 年 12 篇、2026 年 8 篇）统一为 `status: deep-analyzed`、`reading_level: L3`。
+  - 每篇笔记追加证据边界与知识层同步说明，保留现有方法、实验、局限和证据章节。
+- Updated:
+  - 网站指纹、加密流量、恶意流量、流量表征综述页。
+  - `08-comparisons/method-comparison-table.md` 批次矩阵。
+  - `09-claims/claims-index.md` 待审核证据入口。
+  - `12-research-fronts/index.md`、Dashboard、README、AGENTS 和阅读队列。
+- Added:
+  - `10-outputs/reports/2026-11-03-four-top-security-venues-depth-analysis-coverage.md`
+- Notes:
+  - 按 frontmatter 的年份和 venue 判定；排除 AsiaCCS、NSDI、年份与文件名不一致的 2022 OpenVPN，以及 `kb_read_only: true` 隔离笔记。
+  - 未删除或覆盖原始 PDF/MinerU；未执行 git commit/push。
+
 # Knowledge Base Log
 
 本文件用于记录 Traffic_Papers 知识库的维护历史。
 原则上只追加，不删除历史记录。
+
+## [2026-10-23] capability-audit | Cross-paper innovation workflow and Tor-over-Proxy pilot
+
+- Added:
+  - `00-dashboard/research-capability-pilot.json`
+  - `00-dashboard/research-capability-audit.md`
+  - `00-dashboard/research-review-queue.md`
+  - `09-claims/evidence-ledger.schema.json`
+  - `09-claims/evidence-ledger.jsonl`
+  - `12-research-fronts/tor-over-proxy-low-fpr-detection.md`
+  - `templates/claudian-prompts/09-research-problem-analysis.md`
+  - `scripts/research_capability_audit.py`
+- Updated:
+  - `12-research-fronts/research-front-template.md`
+  - `templates/method-note-template.md`
+  - `05-methods/factorized-detection.md`
+  - `11-my-papers/my-research-thread.md`
+  - `templates/claudian-prompts/02-update-knowledge-base.md`
+  - `templates/claudian-prompts/05-quality-check.md`
+  - `templates/claudian-prompts/06-ingest-pipeline.md`
+  - `AGENTS.md`
+  - `README.md`
+  - `README.zh-CN.md`
+  - `00-dashboard/index.md`
+  - `12-research-fronts/index.md`
+  - `03-paper-notes/2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_Traffic.md`
+- Notes:
+  - 保留 11 篇论文试点，不批量重写历史笔记。
+  - Tor-over-Proxy 试点审计结果：0 个阻断性错误、0 个重要质量问题、1 个非阻断性历史建议。
+  - 证据账本仅登记 NestTor 的 4 条关键主张；未经审核的证据不会自动更新共识。
+  - 未执行实验重跑、文件删除、Git commit 或 push。
 
 ---
 
@@ -448,11 +494,11 @@ Next steps:
 
 ---
 
-## [2026-06-11] [research-material] ingest | JA4T-RAC + JA4Tor + ContinualTor（3 篇个人研究材料入库，2026-06-17 已更正角色口径）
+## [2026-06-11] [research-material] ingest | JA4T-RAC + JA4Tor + ContinualTor（历史操作记录；JA4Tor 项已于 2026-10-21 撤销）
 
 - Added:
   - [[2025-TIFS-JA4T-RAC]] — JA4T 指纹 + 检索增强分类，IEEE TIFS 2025
-  - [[2026-USENIXSec-JA4Tor]] — JA4+ 多协议行为动力学，USENIX Security 2026
+  - `2026-USENIXSec-JA4Tor` — 已于 2026-10-21 撤销的旧记录；该条的 venue、方法与数值不作为知识证据，现行记录见 [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]]。
   - [[2026-arXiv-ContinualTor]] — 持续学习暗网检测，在审
 - Updated:
   - [[my-paper-registry]] — 新增 3 行（2026-06-17 更正为 1 篇个人研究 + 2 篇背景引用）
@@ -562,14 +608,14 @@ Next steps:
 - Updated:
   - [[11-my-papers/my-research-thread]]
   - [[11-my-papers/my-paper-registry]]
-  - [[2026-USENIXSec-JA4Tor]]
+  - `2026-USENIXSec-JA4Tor`（旧记录已于 2026-10-21 由 NestTor 终版替换，不再作为有效笔记链接）
   - [[2025-TIFS-JA4T-RAC]]
   - [[2026-arXiv-ContinualTor]]
   - [[00-dashboard/index]]
   - [[10-outputs/reports/Tor-over-Proxy-Tunnel-研究问题挖掘-v3]]
   - [[10-outputs/reports/Tor-over-Proxy-Tunnel-研究问题挖掘-v4-深度审阅]]
 - Notes:
-  - 更正个人研究口径：JA4Tor 是唯一计入个人研究主线的论文。
+  - 当时更正个人研究口径：JA4Tor 计入个人研究主线；此历史口径已于 2026-10-21 由 NestTor 替换，不作为现行证据。
   - JA4T-RAC 和 ContinualTor 改为背景引用 / 技术上下文，不计入个人研究点。
   - 未删除文件，未更新主知识沉淀层。
 
@@ -1203,3 +1249,126 @@ Next steps:
   - WWW 2025 `Less is More` 为 Short Paper Track，保留为补充分析但不计入 CCF-A full-paper 覆盖统计。
   - `Practice Makes (Im)Perfect` 的本地 raw 未给出 CCS 会议归属，暂不升级为 CCF-A 目标；未删除任何历史自动入库段落，仅追加历史快照说明。
   - 未执行 git commit 或 push。
+
+## [2026-10-13] research-design | 本地研究记录
+
+该研究记录保存在本地工作区。
+
+## [2026-10-13] revise | 本地研究记录
+
+该研究记录保存在本地工作区。
+
+## [2026-10-13] reconstruct | 本地研究记录
+
+该研究记录保存在本地工作区。
+
+## [2026-10-13] audit | 本地研究记录
+
+该研究记录保存在本地工作区。
+
+## [2026-10-14] move | 本地研究记录
+
+该研究记录保存在本地工作区。
+
+## [2026-10-21] replace-and-promote | NestTor: Detecting Tor-over-Proxy Traffic with Factorized Decisions
+
+- Changed:
+  - 按用户明确授权移出旧个人 JA4Tor 笔记；已存入废纸篓，可恢复。旧日志条目标记为失效操作历史。
+  - 仅以 NestTor 终版的作者、TNSM DOI、完整双向流方法与 2,300 流确认口径建立现行知识；不继承旧个人笔记的 venue、方法或数值。
+- Added:
+  - [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] — type: paper，L3，模板 §0–13 完整。
+  - `00-inbox/PDFs/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions.pdf` 及对应 MinerU Markdown；两张关键图。
+  - [[factorized-detection]]；4 条 Claims、1 条条件化比较说明。
+- Updated:
+  - 个人注册表与研究轨迹、5 概念页、3 任务页、1 综述、5 对比页、2 研究前沿及索引。
+  - 23 篇被引主库论文的 citation_impact/composite_weight；其原有正文不变。
+  - 主注册表、阅读队列、Dashboard、项目全景、中英文 README、AGENTS。
+  - `bibliography.json` 与 `bibliography.bib` 新增 `zhou2026nesttor`；CrossRef 已核验 DOI `10.1109/TNSM.2026.3743261`。
+- Notes:
+  - 五轮去重完成；MinerU 1/1 成功；摘要、公式、图表与终版源码核对；主库链接区分标准笔记与原始解析稿。
+  - 个人区仍保留新的 NestTor 记录与 promoted_to；其他两篇个人区笔记逐字节不变。
+  - 共识不重复计同一研究；研究前沿状态保留有条件的分歧/收敛判断；引用计数采用可核验内部 References 匹配下界。
+  - 当前标准笔记 308 篇、L3/L4 标注 110 篇；主注册表 300 条。JSON 261 条、BibTeX 308 条；原有 8 篇注册覆盖差异和 47 条 BibTeX-only 记录未在单篇任务中擅自扩展修复。
+  - 执行审计：`10-outputs/ingest-nesttor/ingest-audit.md`；权威元数据与逐篇引用计数证据同目录保存。
+  - 完整性、链接、BibTeX 和算术检查通过；未重跑实验，未执行 commit/push。
+
+## [2026-10-26] ingest | incoming_papers/new-3 34篇论文
+- Added:
+  - 34份 PDF 到 `00-inbox/PDFs/`
+  - 34份 MinerU 原始解析与 Markdown
+  - 34篇 `03-paper-notes` 主笔记
+- Updated:
+  - 关键图汇总（新增34篇；图库累计536张）
+  - `paper-registry`、`reading-queue`、概念/方法/任务/综述/对比页
+  - `09-claims/evidence-ledger.jsonl`（34条 pending_review 候选证据）
+  - `12-research-fronts` 候选证据区
+- Notes:
+  - 查重：34篇均未发现 DOI 或标题高置信重复。
+  - MinerU：34/34 成功；摘要和数值已按解析文本登记，方法细节、数据划分、基线和代码状态保留人工复核项。
+  - 未执行 git commit/push。
+
+## [2026-11-04] skill-update | Traffic Research Suite 文献驱动迭代
+
+- Added:
+  - Skill 中的 `references/traffic-evidence-ledger.json`：22 篇关键论文的机制、条件、执行规则及 72 处解析稿定位，记录文件与段落 SHA-256。
+  - `ccfa-workfiles/skill-update-20261104/`：证据构建脚本和安装前文件备份。
+- Updated:
+  - `academic-research-suite-traffic` 更新为 `0.1.9-traffic.3`，并同步本机 Codex 安装。
+  - 领域指南与中文文献综合：补充过滤、教师监督、图可见性、袋级标签、因果前缀、停止策略、低基率误报和端到端成本的条件化判断。
+  - Skill 仓库的说明、版本清单及可选适配器路径；本地分支 `codex/traffic-evidence-20261104`。
+- Notes:
+  - 深度复核范围为选定论文的方法、评估与限制段落；未逐篇重新阅读全库，未重跑论文实验，未提升原知识库证据状态或共识权重。
+  - 22 个源文件与 72 处段落哈希核对通过；7 项适配器测试、5 项已安装包检查、YAML/JSON 与路径隐私检查通过。
+  - 本会话前一轮曾提交并推送初版 `aa7022e`；最终补强版仅保留本地，未再次提交或推送。
+  - 保留安装前文件；本次未删除文件或修改 PDF、原始解析稿和个人区内容。
+
+## [2026-11-05] publish | Traffic Research Suite README 与证据层
+
+- Added:
+  - skill 仓库根目录中文 README，说明入口、工作流、领域规则、证据层、运行方式、安装和验证。
+- Updated:
+  - 远程 `main` 已推送到 `407c0ee`，包含 `0.1.9-traffic.3`、22 篇文献证据层、证据账本和 README。
+- Notes:
+  - 推送前质量门、路径隐私、配置一致性和 7 项适配器测试通过。
+  - 本机 Codex 安装与远程 skill 内容一致；未删除任何文件。
+
+## [2026-11-17] ingest-talk | 2026-COSINT-北邮时金桥
+
+- Added
+  - [[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]]，重点追踪、L3、report-only。
+  - 本地 PDF、54 页提取与页图，4 项 pending_review 证据。
+- Updated
+  - 概念、方法、隧道任务、综述、方法/数据对比、Claims、低误报前沿及开放问题。
+  - 注册表、阅读队列、首页、项目概览、审核队列、README、AGENTS 和关键框架图入口。
+- Notes
+  - 复用 Downloads 中两份既有提取/分析稿，核读 PDF 表格并记录原文哈希。
+  - 学术报告单列 1 份，标准论文 342 篇。出版元数据与代码状态为 unknown。
+  - 公开版保留汇报分析及主要证据定位。
+
+
+## [2026-11-18] ingest | 13 篇新论文及 COSINT 联动
+
+- Changed:
+  - 14 份来源 PDF 查重。KAN-Vis 与现有 DOI 一致，保留在来源目录。新论文 13 份已迁入，SHA-256 与源文件一致。
+  - SIR 按 FMANO 工作坊登记，与 Crossref 容器题录区分。Nepco 笔记使用本地 arXiv v2 的数值。MPA-LLM 登记为 ARI-LLM 的扩展。
+- Added:
+  - [[reading-queue#2026-11-18　批次入库（13 篇）|13 篇标准笔记]]，7 篇 L3、6 篇 L2。同批 MinerU 解析 13/13，图集新增 23 张归档图。
+  - [[network-telemetry]]、[[streaming-telemetry-sketch]]、[[network-traffic-measurement]]，7 个已核验公开产物。
+- Updated:
+  - [[paper-registry]]、[[reading-queue]]、[[index]]、[[project-overview]]、README、AGENTS，补齐 8 条原已在库论文的历史注册行。
+  - 五类对比表、相关概念、方法、任务、综述及六个前沿的候选证据。34 篇已有论文的可核验内部引文下界已更新。
+  - [[03-paper-notes/2026-COSINT-北邮时金桥|COSINT 汇报]] 第 14 节、[[claims-index]] 和 [[research-review-queue]]。新增 10 条论文证据及 3 条联动候选证据，状态均为 pending_review。
+  - bibliography.json 增加 13 条至 355，bibliography.bib 增加 13 条至 372。新材料的题录来自 Crossref、OpenAlex/arXiv 或 PMLR。
+- Notes:
+  - SIR 两次解析仍含异常上下标与替换字符，笔记按原 PDF 核查并附逐页文本。低误报、链路条件和部署代价的结论按研究单位记录。
+  - 当前有效标准论文 355 篇，L3/L4 136 篇，COSINT 为独立报告资料。
+
+## [2026-11-18] deep-analysis | 补齐本批 13 篇 L3
+
+- Changed:
+  - Threat2Traffic、Contorter、CenRL、Descriptors of Exposure、SIR、MPA-LLM 从 L2 补到 L3。
+- Updated:
+  - 笔记内容、方法及数据对比、叙事与动机对比、相关概念/方法/任务/综述、COSINT 汇报和 ToP 前沿的观察条件。
+  - Claims 账本新增 6 条待审核证据，阅读队列及当前 L3/L4 数量更新到 142 篇。
+- Notes:
+  - CenRL 的摘要和正文实测聚合数字有差异，已按出处分开。

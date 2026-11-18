@@ -11,7 +11,7 @@ tags:
   - pre-training
   - traffic-classification
 created: "2026-05-27"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Traffic Representation Learning（流量表示学习）
@@ -164,3 +164,34 @@ Traffic Representation Learning 是指将原始网络流量数据（字节序列
 
 - [[representation-vs-shallow]] — 深度表征学习是否优于浅层模型
 - [[pretraining-necessity]] — 预训练范式的必要性边界
+
+## 2026-10-21：NestTor 的显式行为表示与结构控制
+
+[[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] 使用 99 维专家行为表示与两个 HGB；主表示不需要预训练或载荷语义。相对阶段以包索引三等分，不是协议状态或在线前缀。特征消融中 Base 为 99.15%、Base + Stage 为 99.25%，主要增益来自基础行为统计；该诊断模型与主确认 99.45% 分开。原生端到端优于五种外部模型，但共用门控时与 FS-Net 的差异置信区间跨零；应同时控制目标、判别结构与表示。依据：§IV-A、Fig. 5/7。
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields | INFOCOM | [[2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classification_Model_Based_on_Packet_Header_Fields]] | DOI: 10.1109/INFOCOM59046.2026.11571583；摘要/正文候选证据待审核 |
+| 2026 | GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | TDSC | [[2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Classification]] | DOI: 10.1109/TDSC.2026.3741875；摘要/正文候选证据待审核 |
+| 2026 | Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning | TON | [[2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrastive_Self-Supervised_Learning]] | DOI: 10.1109/TON.2026.3737411；摘要/正文候选证据待审核 |
+| 2026 | KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network | TON | [[2026-TON-KAN-Vis__Efficient_and_Lightweight_Visual_Technique_for_Network_Traffic_Classification_Using_KolmogorovArnold_Network]] | DOI: 10.1109/TON.2026.3722338；摘要/正文候选证据待审核 |
+| 2026 | SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer | TON | [[2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision_Transformer]] | DOI: 10.1109/TON.2026.3699540；摘要/正文候选证据待审核 |
+| 2026 | When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection | TON | [[2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection]] | DOI: 10.1109/TON.2026.3674624；摘要/正文候选证据待审核 |
+
+## 2026-11-17　2026-COSINT-北邮时金桥 学术报告线索
+
+[[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]]（第 21–25、41–44 页）提供任务相关二值表示案例。DHOR 用长度/方向、轻量残差结构和加权语义关系学习 256-bit 编码。DHBCorr 用 TAM、局部/全局 FFC 与面向汉明距离的三元组目标学习关联表示。码长、连续表示对照、量化代价和下游尾部误差构成后续可比较变量，跨环境稳定性属于待验证问题。
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | 局部拓扑和批内上下文由相同重构目标联合学习。图中端点必须有可复用的邻域语义。 |
+| [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 前 5 包局部卷积预训练模型部署在 BlueField-3。按新流到达率统计完成流数和平均/P99 分析时延。 |
+| [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 短会话的内容/行为融合，作者在混合明密文的多币种基准上报告 macro F1 95.02%。 |
+| [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] | 用特征分区和双编码器距离补充 IDS。严重时间漂移削弱正常参考，小量目标良性样本能在文中部分恢复。 |

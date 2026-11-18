@@ -2,47 +2,48 @@
 
 [中文说明](./README.zh-CN.md)
 
-An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 307 structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, KDD, etc.), covering 2008--2026.
+An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 355 structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, KDD, etc.), covering 2008--2026.
 
 ---
 
 ## Highlights
 
-- **307 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
-- **60 deep-analyzed papers** (L3/L4 level) with formula derivations, ablation studies, and cross-paper connections
-- **39 knowledge pages**: 11 concepts, 8 methods, 8 tasks, 5 surveys, 5 comparison tables, 2 claim indexes
-- **6 active research fronts** tracking convergent/divergent research questions with evidence chains and Auto Research guidance
+- **355 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
+- **142 deep-analyzed papers** (L3/L4 level) with formula derivations, ablation studies, and cross-paper connections
+- **43 knowledge pages**: 12 concepts, 10 methods, 9 tasks, 5 surveys, 5 comparison tables, 2 claim indexes
+- **7 active research fronts** tracking convergent/divergent research questions with evidence chains and Auto Research guidance
+- **Cross-paper innovation workflow** linking evidence, assumptions, gaps, counterevidence, testable hypotheses, and research prioritization
 - **Consensus weight system** with venue-tier × time-decay × citation-impact scoring for all claims
-- **91 confirmed open-source methods** with GitHub/GitLab repositories
-- **Bibliography** with 259 structured BibTeX entries (`bibliography.json` + `bibliography.bib`) sourced from CrossRef, OpenAlex, and Semantic Scholar
+- **99 public method or data artifacts**
+- **Bibliography**: 372 BibTeX entries and 355 structured JSON records, including the 13 new papers and 17 BibTeX-only entries
 - **Research map** linking papers by topic, method, and venue
 - **Personal research tracking** with isolated paper notes and research trajectory page (strictly separated from main KB)
-- **Key figure gallery** with 482 auto-extracted framework/architecture figures covering all papers (see `10-outputs/key-figures/`)
+- **Key figure gallery** with 559 figures archived locally and selected previews in the public repo (see `10-outputs/key-figures/`)
 
 ## Directory Structure
 
 ```
 Traffic_Papers/
 ├── 00-inbox/
-│   └── PDFs/              # 307 paper PDFs (source files)
+│   └── PDFs/              # Archive location for paper and talk sources
 ├── 01-mineru-output/       # MinerU raw API output (gitignored, regenerable)
-├── 02-parsed-markdown/     # MinerU-parsed markdown (260 files)
-├── 03-paper-notes/         # Structured paper notes (307 files) ★
-├── 04-concepts/            # Concept pages (11 files) ★
-├── 05-methods/             # Method pages (8 files) ★
-├── 06-tasks/               # Task pages (8 files) ★
+├── 02-parsed-markdown/     # MinerU text for archived sources
+├── 03-paper-notes/         # Structured paper notes (355 active records) ★
+├── 04-concepts/            # Concept pages (12 files) ★
+├── 05-methods/             # Method pages (10 files) ★
+├── 06-tasks/               # Task pages (9 files) ★
 ├── 07-surveys/             # Survey pages (5 files) ★
 ├── 08-comparisons/         # Comparison tables (5 files, incl. open-source registry) ★
 ├── 09-claims/              # Claims & contradictions (2 files) ★
 ├── 10-outputs/             # Drafts, reports, reproduction notes (gitignored)
-│   └── key-figures/        # Auto-extracted framework figures (417 images)
+│   └── key-figures/        # Selected public previews from the local figure archive
 ├── 11-my-papers/           # Personal papers (isolated from main KB)
 │   ├── notes/              # Individual paper notes
 │   ├── my-research-thread.md  # Research trajectory
 │   └── my-paper-registry.md   # Personal paper registry
-├── 12-research-fronts/     # Research front tracking (6 fronts + index + template) ★
+├── 12-research-fronts/     # Research front tracking (7 fronts + index + template) ★
 ├── 00-dashboard/           # Reading queue, research map, open questions
-├── bibliography.json       # Structured BibTeX metadata (259 entries)
+├── bibliography.json       # Structured BibTeX metadata (355 records)
 ├── bibliography.bib        # LaTeX-ready BibTeX file (ready to copy)
 ├── scripts/                # MinerU batch parsing + bibliography generation
 └── templates/              # Note templates
@@ -83,6 +84,14 @@ Traffic_Papers/
 | Censored Planet | CCS 2020 | Internet censorship observatory |
 | Censorship Evasion | USENIX 2025 | Unidentified protocol generation for censorship evasion |
 | GGFAST | SIGCOMM 2023 | Automated traffic classifiers |
+| [NestTor](03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions.md) | TNSM 2026 | Factorized Tor-over-Proxy detection with domain/capture controls |
+| [GraphIDS](03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection.md) | NeurIPS 2025 | Joint graph representation and reconstruction for intrusion detection |
+| [Nepco](03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC.md) | arXiv 2025 | Early traffic analysis on SmartNIC under new-flow load |
+| [SaTor](03-paper-notes/2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency.md) | S&P 2026 | Tor circuit latency under satellite and terrestrial routing |
+| [CryptoFormer](03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture.md) | TDSC 2026 | Packet content and session behavior for multi-currency classification |
+| [HAD](03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection.md) | TIFS 2026 | Intrusion defense with a normal reference under temporal drift |
+| [PS-ML](03-paper-notes/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures.md) | TON 2026 | Query-time correction of flow sizes across sketches |
+| [SEDMS](03-paper-notes/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks.md) | TON 2026 | Dynamic selection of streaming telemetry metrics |
 
 ## Usage
 
@@ -99,7 +108,7 @@ This is an **Obsidian vault**. To use:
 - **PDF Parsing**: [MinerU](https://github.com/opendatalab/MinerU) API for converting PDFs to structured Markdown
 - **Note Generation**: Claude Code (AI-assisted structured note generation)
 - **Knowledge Management**: Obsidian with Dataview plugin
-- **Bibliography**: `bibliography.json` + `bibliography.bib` — 259 structured BibTeX entries from CrossRef/OpenAlex/Semantic Scholar (79% with DOI)
+- **Bibliography**: `bibliography.bib` contains 372 entries, and `bibliography.json` contains 355 structured records. Existing BibTeX-only entries are preserved during incremental updates.
 - **Automated Workflow**: One-command paper ingestion pipeline (dedup → parse → note → knowledge layer update → bibliography → README/AGENTS sync)
 - **Dedup Method**: Five-round joint matching (filename + title + abstract + DOI + author/year/venue)
 
@@ -107,7 +116,7 @@ This is an **Obsidian vault**. To use:
 
 When a new paper PDF is added to the vault, the system automatically:
 
-1. Checks for duplicates against existing 307 papers (filename + title + abstract + DOI + author/venue)
+1. Checks for duplicates against registered papers (filename + title + abstract + DOI + author/venue)
 2. Parses PDF via MinerU API (pauses to request API token if `MINERU_API_TOKEN` not set)
 3. Extracts key framework/architecture figures via `extract_key_figures.py`
 4. Generates a structured paper note with bilingual frontmaterial
@@ -117,6 +126,8 @@ When a new paper PDF is added to the vault, the system automatically:
 8. Updates `bibliography.json` and regenerates `bibliography.bib`
 9. Syncs README.md and AGENTS.md statistics
 
+The public repository contains the knowledge pages and selected source material. Some source files and reports are available in the local vault.
+
 Git commits are made **only on explicit request**. The `10-outputs/` directory (drafts, reports, proposals) is excluded from version control, except for `10-outputs/key-figures/` which contains auto-extracted framework figures. Personal papers in `11-my-papers/` are also excluded.
 
 Personal papers (author's own work) are managed separately in `11-my-papers/` with strict isolation from the main knowledge base. They can read from the main KB (linking to concepts, methods, and existing papers) but never trigger automatic updates to it. When a paper is published or its quality is confirmed, it can be promoted to the main KB with full deep analysis while the personal note remains in `11-my-papers/` as a research trajectory reference.
@@ -124,3 +135,21 @@ Personal papers (author's own work) are managed separately in `11-my-papers/` wi
 ## License
 
 This repository contains academic paper notes for research purposes. All paper copyrights belong to their respective authors and publishers.
+
+
+### 2026-10-26 新增批次中的 L3 重点论文
+
+| Paper | Venue | Topic |
+|-------|-------|-------|
+| HF-Transformer | INFOCOM 2026 | 非预训练包头字段加密流量分类 |
+| PP-OpenNet | INFOCOM 2026 | 隐私保护开放集流量分类 |
+| GenETC | TDSC 2026 | 动态图增强预训练流量分类 |
+
+## Highlighted academic talk · 2026-11-17
+
+[2026-COSINT-北邮时金桥](./03-paper-notes/2026-COSINT-北邮时金桥.md) covers DHOR low-base-rate detection and DHBCorr large-scale flow correlation. The local archive includes the original PDF and all 54 pages of summaries, rendered slides, and extracted text. Marked `academic-talk`, `L3`, `high relevance`, and `report-only`. The collection now includes 342 standard paper notes and 1 academic talk.
+
+
+### 2026-11-18 literature intake
+
+The batch added 13 papers and linked the COSINT talk to literature on difficult negatives, link timing and processing cost. The new [network telemetry](04-concepts/network-telemetry.md) page covers bounded state, event-stream queries and measurement units.

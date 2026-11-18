@@ -24,6 +24,11 @@ task: ["流量分类", "应用识别", "加密方式识别"]
 method: ["CNN", "FlowPic", "LeNet-5"]
 created: 2026-06-09
 updated: 2026-06-09
+internal_citation_count: 12
+citation_impact: 1.8
+composite_weight: 0.2925
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # FlowPic: Encrypted Internet Traffic Classification is as Easy as Image Recognition

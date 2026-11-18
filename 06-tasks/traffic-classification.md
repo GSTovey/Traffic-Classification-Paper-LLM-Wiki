@@ -9,7 +9,7 @@ tags:
   - deep-learning
   - network-security
 created: "2026-05-27"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Traffic Classification
@@ -169,3 +169,37 @@ updated: "2026-09-19"
 
 
 新增论文联动（2026-09-29）：Ultimate、Less-is-More、SaGNN 和城市轨道双通道方法分别从应用数据单元、RFC 结构、异构语义图、多模态融合降低加密分类的信息损失。
+
+## 2026-10-21：NestTor 的复合目标评估
+
+[[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] 说明二分类也需要保留负类内部语义：Pure Proxy 与 Direct Tor 分别检验代理条件和内层条件。评估应分开共享代理门控的条件识别与原生端到端分类，并在同表示、同总树数下对照平面/共享/独立结构。主指标为 ToP 与 Non-ToP 的 macro-F1，同时报 ToP TPR 和逐负类 FPR。依据：§V-D/E、§VI-RQ2/RQ3。
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields | INFOCOM | [[2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classification_Model_Based_on_Packet_Header_Fields]] | DOI: 10.1109/INFOCOM59046.2026.11571583；摘要/正文候选证据待审核 |
+| 2026 | PP-OpenNet: Privacy-Preserved Open Set Classification for Network Traffic | INFOCOM | [[2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_Traffic]] | DOI: 10.1109/INFOCOM59046.2026.11571190；摘要/正文候选证据待审核 |
+| 2026 | PacketLoom: A Unified Preprocessing Framework for Multi-Modal Network Traffic Analysis | INFOCOM | [[2026-INFOCOM-PacketLoom__A_Unified_Preprocessing_Framework_for_Multi-Modal_Network_Traffic_Analysis]] | DOI: 10.1109/INFOCOM59046.2026.11571397；摘要/正文候选证据待审核 |
+| 2026 | Practical VPN Fingerprinting using Coarse Inference of Field Specifications in Data Channels | INFOCOM | [[2026-INFOCOM-Practical_VPN_Fingerprinting_using_Coarse_Inference_of_Field_Specifications_in_Data_Channels]] | DOI: 10.1109/INFOCOM59046.2026.11571535；摘要/正文候选证据待审核 |
+| 2026 | Synecdoche: Efficient and Accurate In-Network Traffic Classification via Direct Packet Sequential Pattern Matching | INFOCOM | [[2026-INFOCOM-Synecdoche__Efficient_and_Accurate_In-Network_Traffic_Classification_via_Direct_Packet_Sequential_Pattern_Matching]] | DOI: 10.1109/INFOCOM59046.2026.11571501；摘要/正文候选证据待审核 |
+| 2026 | Behavioral Evidence-Based Hierarchical Decision Refinement for Encrypted Malicious Traffic Classification in Decentralized Data Circulation | TDSC | [[2026-TDSC-Behavioral_Evidence-Based_Hierarchical_Decision_Refinement_for_Encrypted_Malicious_Traffic_Classification_in_Decentralized_Data_Circulation]] | DOI: 10.1109/TDSC.2026.3731286；摘要/正文候选证据待审核 |
+| 2026 | Drift-Aware Adaptive Website Fingerprinting | TDSC | [[2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting]] | DOI: 10.1109/TDSC.2026.3723526；摘要/正文候选证据待审核 |
+| 2026 | Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | TDSC | [[2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses]] | DOI: 10.1109/TDSC.2026.3722663；摘要/正文候选证据待审核 |
+| 2026 | GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | TDSC | [[2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Classification]] | DOI: 10.1109/TDSC.2026.3741875；摘要/正文候选证据待审核 |
+| 2026 | Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification | TDSC | [[2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Traffic_Classification]] | DOI: 10.1109/TDSC.2026.3725472；摘要/正文候选证据待审核 |
+| 2026 | Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning | TON | [[2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrastive_Self-Supervised_Learning]] | DOI: 10.1109/TON.2026.3737411；摘要/正文候选证据待审核 |
+| 2026 | Fighting the Enemy Within: Traffic Semantics-Driven Framework Against Noisy Labels for Robust Traffic Classification | TON | [[2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_Noisy_Labels_for_Robust_Traffic_Classification]] | DOI: 10.1109/TON.2026.3739909；摘要/正文候选证据待审核 |
+| 2026 | KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network | TON | [[2026-TON-KAN-Vis__Efficient_and_Lightweight_Visual_Technique_for_Network_Traffic_Classification_Using_KolmogorovArnold_Network]] | DOI: 10.1109/TON.2026.3722338；摘要/正文候选证据待审核 |
+| 2026 | SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer | TON | [[2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision_Transformer]] | DOI: 10.1109/TON.2026.3699540；摘要/正文候选证据待审核 |
+| 2026 | When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection | TON | [[2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection]] | DOI: 10.1109/TON.2026.3674624；摘要/正文候选证据待审核 |
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 前 5 包局部卷积预训练模型部署在 BlueField-3。按新流到达率统计完成流数和平均/P99 分析时延。 |
+| [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 短会话的内容/行为融合，作者在混合明密文的多币种基准上报告 macro F1 95.02%。 |

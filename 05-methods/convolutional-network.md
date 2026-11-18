@@ -159,3 +159,14 @@ CNN 在流量分类中的主要优势在于计算效率和自动特征提取能�
 - CNN 与 Transformer 的混合架构能否在保持计算效率的同时增强长距离时序建模能力？
 - 在持续学习（continual learning）框架下，CNN 模型如何高效适应新出现的应用类型而无需完全重训练？
 - CNN 的 by-design 可解释性（如原型网络）能否在不显著增加推理开销的情况下进一步提升解释质量？
+
+## 2026-11-17　2026-COSINT-北邮时金桥 学术报告线索
+
+[[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]] 的 DFLightRes（第 22 页）在 100 包长度/方向上结合轻量残差、分组卷积和通道混洗。DHBCorr 的 FFC（第 42 页）并行使用局部一维卷积与 FFT 全局分支。前者服务于分类哈希，后者服务于跨点关联哈希，原图见报告逐页提取。
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 五层局部卷积使用窗口固定打分和输入相关门控，适配 BlueField-3 的算子和设备调度。 |

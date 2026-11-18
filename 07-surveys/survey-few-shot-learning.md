@@ -157,3 +157,13 @@ updated: "2026-09-19"
 - MoCo (He et al., 2020)
 - CoMask
 - PALETTE/R
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | PP-OpenNet: Privacy-Preserved Open Set Classification for Network Traffic | INFOCOM | [[2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_Traffic]] | DOI: 10.1109/INFOCOM59046.2026.11571190；摘要/正文候选证据待审核 |
+| 2026 | Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | TDSC | [[2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses]] | DOI: 10.1109/TDSC.2026.3722663；摘要/正文候选证据待审核 |
+| 2026 | When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection | TON | [[2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection]] | DOI: 10.1109/TON.2026.3674624；摘要/正文候选证据待审核 |

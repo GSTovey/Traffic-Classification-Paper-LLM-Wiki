@@ -2,7 +2,7 @@
 type: comparison
 name: dataset-comparison-table
 created: "2026-05-27"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Dataset Comparison Table
@@ -75,6 +75,7 @@ updated: "2026-09-19"
 | PA3 proxied website traffic dataset | 网站指纹攻击（代理诱导漂移） | 流量包（PCAP，含密钥材料） | 约 1 TB；80 网站 × 4 协议（NoProxy/VMess/Shadowsocks/Trojan）；商业代理服务采集，3 台客户端（中国高校校园网 ×2、美国商业云 VM ×1） | 首个覆盖多代理协议的 WF 漂移数据集，含加密前后配对所需的密钥材料；规模达 TB 级；随 PA3 仓库公开 | 仅 80 个网站，类别数有限；客户端地理集中（主要中国校园网 + 1 台美国 VM）；代理服务器分布仅日本/新加坡/美国；覆盖协议仅 3 种代理 | PA3 (arXiv 2026)；[[2026-arXiv-Mitigating_Proxy-Induced_Traffic_Drift_in_Website_Fingerprinting_via_Model-Agnostic_Traffic_Tailoring]] |
 | Firefox 132-141 BIH dataset | 代理协议流大小（BIH）稳定性纵向分析 | 流量包（PCAP，代理协议流量） | Firefox 132（2024-10 发布）至 141（2025-07 发布）共 10 个版本逐版本采集 | 唯一逐浏览器版本采集的代理协议流量集合，支持 BIH 流大小随版本稳定性的纵向分析；随 PA3 仓库发布 | 仅覆盖 Firefox 单浏览器；仅服务于 BIH 稳定性分析这一特定用途；未覆盖其他客户端平台 | PA3 (arXiv 2026)；[[2026-arXiv-Mitigating_Proxy-Induced_Traffic_Drift_in_Website_Fingerprinting_via_Model-Agnostic_Traffic_Tailoring]] |
 | Paired corpus（配对语料，同一次浏览同时记录带/不带 SNI 的连接） | 流量标签溯源审计（SNI 信息量诊断） | 流量包（PCAP，配对连接） | 888 次 Chromium 运行 / 31 个目标 / 85,732 条连接；其中 21,387（24.95%）自带 SNI | 同一次浏览同时记录带/不带 SNI 的连接，可直接量化 SNI 侧信道的信息量与过滤代价；支撑可证伪的标签溯源诊断 | 单一浏览器（Chromium）、单一网络观测点、固定站点清单，作者明确称只确立机制而非普适常数；目标数有限（31 个） | SoK Flow Labels (arXiv 2026)；[[2026-arXiv-SoK__Where_Do_Flow_Labels_Come_From__Auditing_Label_Provenance_in_Encrypted_Traffic_Benchmarks]] |
+| NestTor Benchmark | ToP / Non-ToP；四类语义保留 | 双向 TCP 流/PCAP 与行为特征 | 349,891 流、1,663 域名、四代理、2025-01 至 2026-07 | Pure Proxy 与 Direct Tor 困难负类；域名/capture 隔离；确认 2,300、later 23,374 | 公开 650 流 compatibility 样例不含 Pure Proxy，不是完整开发/确认集；全量访问需另核对 | [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]]，§V-A、Appendix D |
 
 ## 数据集使用频率统计
 
@@ -103,3 +104,75 @@ updated: "2026-09-19"
 
 ### 2026-09-29 增量证据
 - Forge、HiFi-WF、RoFiRe、TraVerse均指向多标签、子页面、真实Tor或动态条件；当前笔记仅记录论文声明，未将数据规模和切分规则写入可比数值列。
+
+## 2026-10-26 新入库数据集审计（待审核）
+
+本批论文摘要/解析文本中出现的 ISCX、QUIC、CIC-IDS2017、CIC-DoHBrw、UNSW-NB15 等均为已有数据集或协议名；尚未确认有需要新建条目的公共数据集。ARI-LLM、MonPlan、协议模糊测试和多篇隐蔽信道论文的实验数据来源需回看正文后再决定是否新增。
+
+| 论文 | 解析到的候选数据集/协议 | 状态 |
+|---|---|---|
+| ARI-LLM: Autoregressive Imputation for Network Traffic Matrix via Large Language Models | 摘要未明确说明 | pending_review |
+| Automated Construction of High-Quality Initial Seed Corpus for Network Protocol Fuzzing | 摘要未明确说明 | pending_review |
+| HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields | 摘要未明确说明 | pending_review |
+| MonPlan: Taming Network Measurement with Accurate and Resource-Efficient Sketch-INT Co-Design | 摘要未明确说明 | pending_review |
+| PP-OpenNet: Privacy-Preserved Open Set Classification for Network Traffic | 摘要未明确说明 | pending_review |
+| PacketLoom: A Unified Preprocessing Framework for Multi-Modal Network Traffic Analysis | 摘要未明确说明 | pending_review |
+| Practical VPN Fingerprinting using Coarse Inference of Field Specifications in Data Channels | 摘要未明确说明 | pending_review |
+| Synecdoche: Efficient and Accurate In-Network Traffic Classification via Direct Packet Sequential Pattern Matching | 摘要未明确说明 | pending_review |
+| Tap Dance on Android External Storage: Covert Channels Built on File Operations | 摘要未明确说明 | pending_review |
+| A Unified Oversampling-Based Imbalance Processing Framework for Network Traffic Anomaly Detection | 摘要未明确说明 | pending_review |
+| Behavioral Evidence-Based Hierarchical Decision Refinement for Encrypted Malicious Traffic Classification in Decentralized Data Circulation | 摘要未明确说明 | pending_review |
+| Drift-Aware Adaptive Website Fingerprinting | 摘要未明确说明 | pending_review |
+| Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | 摘要未明确说明 | pending_review |
+| GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | 摘要未明确说明 | pending_review |
+| Generating Adversarial Network Traffic via Multi-Model Guided Adversarial Diffusion | 摘要未明确说明 | pending_review |
+| Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification | 摘要未明确说明 | pending_review |
+| QuicReflo: Exploiting Multi-Flow Redundancy for Restoration-Free Covert Communication Over QUIC | 摘要未明确说明 | pending_review |
+| RearView: Secure Two-Stage Malicious Traffic Identification with Dynamic Relationship Awareness | 摘要未明确说明 | pending_review |
+| TridentDNS: Detecting Diverse DNS Tunnels Via Multidimensional Features | 摘要未明确说明 | pending_review |
+| DualGuard: An Adaptive Detection Framework for Concurrent Malicious and Normality Drifts in Network Traffic | 摘要未明确说明 | pending_review |
+| Feign East, Strike West! Constructing Covert Channel on TLS 1.3 | 摘要未明确说明 | pending_review |
+| InvisiTunnel: Causality-Preserving Covert Communication over DoH through Request Substitution | 摘要未明确说明 | pending_review |
+| Stego-Vector Driven Simultaneous Covert Channels in Streaming Applications | 摘要未明确说明 | pending_review |
+| Two Heads Are Better Than One: Models-to-Model Learning for Encrypted Traffic Analysis | 摘要未明确说明 | pending_review |
+| Two Heads Are Not Better Than One: Continual Learning From Multiple Models for Encrypted Traffic Analysis | 摘要未明确说明 | pending_review |
+| Avatar: Securing Anonymous Communication With Relay Anonymity | 摘要未明确说明 | pending_review |
+| Enabling Entangled Cache Probing for Remotely Reconstructing DNS Query Dynamics | 摘要未明确说明 | pending_review |
+| Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning | 摘要未明确说明 | pending_review |
+| Fighting the Enemy Within: Traffic Semantics-Driven Framework Against Noisy Labels for Robust Traffic Classification | 摘要未明确说明 | pending_review |
+| KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network | 摘要未明确说明 | pending_review |
+| Making the Best of Both Worlds: Universal Perturbations for Live Black-Box Evasion Against NIDS in Encrypted Traffic | 摘要未明确说明 | pending_review |
+| QDCR: DNS–QUIC Cross-Protocol Traffic Amplification for Denial-of-Service Attacks | 摘要未明确说明 | pending_review |
+| SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer | 摘要未明确说明 | pending_review |
+| When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection | 摘要未明确说明 | pending_review |
+
+## 2026-11-17　2026-COSINT-北邮时金桥 学术报告线索
+
+| 报告中的数据组合 | 规模 | 任务和条件 | 来源定位 | 可用性 |
+|---|---|---|---|---|
+| DHOR 混淆类与多源背景 | Obfs4 67,274，Meek 25,539，WebTunnel 39,760，Malicious DoH 12,271，背景约 1.3×10⁸ TCP 流 | 五分类，含 Office、MAWI 与其他公共背景，具体划分待补核 | [[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]] 第 26–31 页 | 自采部分 unknown，完整组合 unknown |
+| DHBCorr 合并关联数据 | DeepCoFFEA 29,576 + DeepCorr 7,324，每侧测试 20,113 条 | 按报告链路/网站互斥，约 4.05×10⁸ 候选对 | [[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]] 第 46 页 | 合并划分与处理产物 unknown |
+
+以上登记报告使用的数据组合，数量和标签按其对应工作解释。
+
+
+## 2026-11-18　新数据集及新评估口径
+
+| 数据集或设置 | 任务 | 数据类型 | 规模 | 特点 | 局限 | 相关论文 |
+| --- | --- | --- | --- | --- | --- | --- |
+| CryptoFormer 自建语料 | 多币种流量分类 | 节点日志对齐的子会话 | 18 种资产和背景，>188K 带标签会话流 | 同时包含明文与密文协议，来源于节点观测 | 公开入口待核。同连接/节点划分和密文对照需单列 | [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] |
+| Threat2Traffic 采集语料 | 防御数据构建与行为覆盖 | 抓包与分样本行为参照 | 采样 1,077 个样本，八类。论文表 2 报 895 个有效样本 | 输入和行为验证使用不同来源 | 采样渠道和环境依赖造成选择性缺失 | [[03-paper-notes/2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence\|Threat2Traffic]] |
+| NF-UNSW-NB15 和 NF-CSE-CIC-IDS2018 v2/v3 | 流级异常检测 | 以 IP 构流图的 NetFlow | 四个版本 2.37M–20.12M 流 | 用于相同任务的不同拓扑规模和聚合版本 | v2/v3 聚合不同；图拓扑可见性及验证标签会影响结果 | [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] |
+| AnoShift / Kyoto-2006+ | 跨年份异常检测 | 分时期的流统计特征 | IID 2006–2010、NEAR 2011–2013、FAR 2014–2015 | 可对照源阈值直接迁移和目标良性再校准 | 年份与业务同时变化；再校准需登记目标域访问 | [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] |
+| SEDMS 四个遥测子集 | 流类型聚类与异常检测 | 按设备的包级遥测快照 | N-BaIoT 两个设备、Kitsune 两个子集；每个快照 115 指标 | 可评估空间及指标比例与下游性能 | 类型顺序拼接构造部分变化；不同于自然时间留出 | [[03-paper-notes/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks\|SEDMS]] |
+| CAIDA15 / CAIDA19 与 MAWI samplepoint-F | 流大小估计及跨域校正 | 已匿名化骨干 trace | CAIDA 各 60 trace，MAWI 2024 两个 15 分钟 trace | 适合观察内存与流量偏斜变化 | 基准为管理面流大小误差，需另测检测 | [[03-paper-notes/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures\|PS-ML]] |
+| SaTor 配对 RTT 与模拟电路 | Tor 链路时延 | 中继对与电路 RTT | 约 10 万仿真电路，局部双宿主实际测量 | 能比较相同电路的底层路由 | 模拟校准范围与实际部署覆盖分别记录 | [[03-paper-notes/2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency\|SaTor]] |
+
+## 2026-11-18　深读证据补充
+
+| 资料 | 可复用的评估分组 | 依据 |
+| --- | --- | --- |
+| [[03-paper-notes/2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence\|Threat2Traffic]] | 样本家族、情报来源和独立行为参照分组。失败样本仍进入覆盖分母。 | §4.1、§4.5、附录 C.2 |
+| [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion\|Contorter]] | DARPA E3 分模型核对切分与正例类型。UNICORN、StreamSpot 用图级标签。 | §4、附录 B |
+| [[03-paper-notes/2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements\|CenRL]] | 同候选池的受控比较与不同候选池的实测对照分别汇总。 | §5.1–5.2 |
+| [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] | 区分随机插补、连续预测和规则标注异常。联合与分开训练单列。 | §III-G、§IV-D/E |

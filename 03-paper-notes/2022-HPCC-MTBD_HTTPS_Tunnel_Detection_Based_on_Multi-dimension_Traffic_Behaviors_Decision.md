@@ -26,7 +26,15 @@ research_area: ["HTTPS隧道检测", "加密流量分析", "网络安全"]
 task: ["隧道检测", "流量分类"]
 method: ["burst traffic filtering", "multi-dimension voting", "machine learning"]
 created: "2026-05-27"
-updated: "2026-05-29"
+updated: "2026-10-21"
+venue_factor: 0.65
+time_factor: 0.6
+citation_impact: 1.0
+composite_weight: 0.39
+internal_citation_count: 1
+citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
+citation_count_verified: "2026-10-21"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # MTBD: HTTPS Tunnel Detection Based on Multi-dimension Traffic Behaviors Decision

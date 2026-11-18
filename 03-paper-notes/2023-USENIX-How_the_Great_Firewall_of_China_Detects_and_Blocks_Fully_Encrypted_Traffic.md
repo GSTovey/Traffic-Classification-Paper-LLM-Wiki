@@ -23,7 +23,15 @@ related_papers: []
 kb_read_only: true
 promoted_to: ""
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-10-21"
+venue_factor: 1.0
+time_factor: 0.7
+citation_impact: 1.5
+composite_weight: 1.05
+internal_citation_count: 11
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # How the Great Firewall of China Detects and Blocks Fully Encrypted Traffic

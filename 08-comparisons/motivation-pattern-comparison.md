@@ -2,7 +2,7 @@
 type: comparison
 name: motivation-pattern-comparison
 created: "2026-06-01"
-updated: "2026-06-10"
+updated: "2026-10-21"
 ---
 
 # 研究动机模式横向对比表
@@ -29,6 +29,7 @@ updated: "2026-06-10"
 | TrafficMoE | 2026 | 加密流量分类 | 技术驱动 + 需求驱动 | 现有框架依赖静态同质流水线 → 统一参数共享和静态融合策略将协议信号与加密噪声混淆 → 加密流量本质是异质的（header 确定性 vs payload 随机性） | 方法论缺陷 + 理论缺陷 | H1: 双分支稀疏 MoE 可解耦 header 和 payload 的异质建模; H2: 不确定性感知过滤可量化 token 可靠性并抑制高方差表示; H3: 路由引导的条件聚合可动态适配流量上下文 | 主实验（6 数据集 SOTA）+ 消融实验（DFA 三组件各自贡献）+ 专家利用率分析 | 论文明确证明 |
 | STAR | 2025 | 网站指纹（零样本） | 技术驱动 + 需求驱动 | 现有 WF 依赖监督学习 + 特定网站标注 → 流量漂移需频繁重训 → 无法处理未见网站 → 跨模态检索范式在其他领域成功 | 能力缺失 + 场景缺失 | H1: 加密流量 trace 与语义逻辑 profile 之间存在内在对齐关系; H2: 双编码器 + 对比学习可学习跨模态联合嵌入空间; H3: 零样本检索可替代传统分类实现 WF | 主实验（1,600 未见网站 87.9% top-1）+ 开世界实验（AUC 0.963）+ Tip-Adapter 少样本增强 + 对齐锚点分析 | 论文明确证明 |
 | BiasSeeker (Bias in the Shadows) | 2026 | 加密流量分类（鲁棒性） | 评估驱动 + 文献驱动 | 预训练模型 shortcut learning 问题 → 现有方法依赖模型特定解释技术或专家知识 → 缺乏模型无关、数据驱动的 shortcut 检测方案 | 评估不足 + 方法论缺陷 | H1: 原始二进制流量的统计相关性分析可检测数据集特定 shortcut; H2: shortcut 特征应系统分类而非一刀切移除; H3: 数据集特定诊断比通用规则更有效 | 19 个公开数据集 + 3 个 NTC 任务 + shortcut 分类与验证策略 + 特征遮蔽实验 | 论文明确证明 |
+| [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] | 2026 | ToP 检测 | 观察条件变化 + 目标分解 | 代理变换破坏 cell 对齐 → 识别代理不等于识别内层 Tor → 四类负样本和独立边界 | 观察条件/目标结构/评估协议缺口 | 高层交互行为跨代理保留；两个条件应分别学习 | 147 候选审计、等表示等 RF 总预算结构对照、later/背景/重分段 | 本文协议内实证支持，跨分布仍退化 |
 
 > **动机类型**：现象驱动 / 文献驱动 / 技术驱动 / 需求驱动 / 攻击驱动 / 评估驱动
 >
@@ -127,3 +128,47 @@ updated: "2026-06-10"
 1. **技术驱动型动机最常见于顶会**：将已有领域（CV/NLP）的成功模式迁移到流量分析，是构建动机最安全的方式——它同时提供了方法灵感和论证框架（ET-BERT 的 NLP 类比、DF 的 CV 迁移）
 2. **需求驱动型动机适合 NDSS/USENIX**：Flowprint 从 BYOD 安全运维的实际需求出发，比纯学术 Gap 更有说服力——安全会议偏好"解决真实问题"的论文
 3. **性能瓶颈是最有力的 Gap 证据**：ET-BERT 用 PERT 43.45% 这个具体数字作为"现有方法不行"的铁证，比泛泛说"效果有限"更有冲击力——建议在动机中引入一个"令人震惊的数字"
+
+## 2026-10-26 新入库动机与叙事候选（待审核）
+
+| 论文 | venue/年份 | 动机模式 | 证据位置 |
+|---|---|---|---|
+| HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields | INFOCOM 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Synecdoche: Efficient and Accurate In-Network Traffic Classification via Direct Packet Sequential Pattern Matching | INFOCOM 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| A Unified Oversampling-Based Imbalance Processing Framework for Network Traffic Anomaly Detection | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Behavioral Evidence-Based Hierarchical Decision Refinement for Encrypted Malicious Traffic Classification in Decentralized Data Circulation | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Drift-Aware Adaptive Website Fingerprinting | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| QuicReflo: Exploiting Multi-Flow Redundancy for Restoration-Free Covert Communication Over QUIC | TDSC 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| RearView: Secure Two-Stage Malicious Traffic Identification with Dynamic Relationship Awareness | TDSC 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| TridentDNS: Detecting Diverse DNS Tunnels Via Multidimensional Features | TDSC 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| InvisiTunnel: Causality-Preserving Covert Communication over DoH through Request Substitution | TIFS 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| Two Heads Are Better Than One: Models-to-Model Learning for Encrypted Traffic Analysis | TIFS 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| Two Heads Are Not Better Than One: Continual Learning From Multiple Models for Encrypted Traffic Analysis | TIFS 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning | TON 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Fighting the Enemy Within: Traffic Semantics-Driven Framework Against Noisy Labels for Robust Traffic Classification | TON 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network | TON 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Making the Best of Both Worlds: Universal Perturbations for Live Black-Box Evasion Against NIDS in Encrypted Traffic | TON 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer | TON 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection | TON 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+
+
+## 2026-11-18　L3 论文动机检索
+
+| 论文 | 年份 | 方向 | 动机类型 | 问题发现路径 | Gap 类型 | 核心假设 | 验证 | 证据条件 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | 2025 | 恶意流量检测 | 目标错位 | 分离训练和检测 → 联合重构 | 目标与评分不一致 | 图关系与共现能为正常流重构增加证据 | T-MAE 和 SimpleAE | 条件化实验，规模和切分待外推 |
+| [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 2025 | 流量基础模型 | 部署瓶颈 | 端侧代价 → 分解输入、算子与执行 | 模型通用性与设备资源 | 局部字节模式足以支撑有限前缀下的通用任务 | 设备负载与字段归因 | 原型实测，口径依硬件 |
+| [[03-paper-notes/2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency\|SaTor]] | 2026 | Tor 性能 | 约束冲突 | 电路时延与中继选择随机性 → 底层链路 | 路径变化与 RTT | 同一中继选择下卫星链路可缩短部分电路 RTT | 实测校准和多部署模拟 | 实测与模拟分列 |
+| [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 2026 | 加密流量分类 | 观测异质 | 多币种明密文与行为混淆 → 两层表示 | 内容及行为的不同可见性 | 自适应融合在混合流量样本中改善会话判断 | 同数据的组件消融 | 单采集基准，密文需单测 |
+| [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] | 2026 | 恶意流量检测 | 判定依据 | 原 IDS 受变化影响 → 跨视角补充分数 | 正常参考的可迁移性 | 分层学习的正常参考可补判，但会随漂移失稳 | 固定 FPR 和时间留出 | 控制与历史漂移对照 |
+| [[03-paper-notes/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures\|PS-ML]] | 2026 | 网络测量 | 读写约束 | 计数饱和与大流稀缺 → 查询侧专门化 | 共享计数压缩的信息损失 | 多行读数改善同写入流大小估计 | 同内存多结构与留出 trace | 真实骨干与合成增强 |
+| [[03-paper-notes/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks\|SEDMS]] | 2026 | 网络遥测 | 流式资源 | 全量遥测负担和统计变化 → 摘要与更新 | 空间与信息保留 | 摘要协方差可用于有效指标选择 | 静态/动态、比例、吞吐 | 四设备子集，含拼接 |
+| [[03-paper-notes/2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence\|Threat2Traffic]] | 2026 | 恶意流量数据构建 | 采样缺口与真值可靠性 | 从行为覆盖缺口拆分采集失败 | 数据与评估缺口 | 输入与参照分源，逐步核对采集缺失 | 三阶段指标及八类对照 | 评估条件较明确，外部渠道仍待验证 |
+| [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion\|Contorter]] | 2026 | 溯源图稳健性 | 上下文敏感性 | 检测依赖关系 → 区分图的语义与判定 | 观测依赖 | 在安全真值固定时图判定仍随上下文而动 | 同模型的前后结果与标签范围 | 受控实证，模型和数据条件敏感 |
+| [[03-paper-notes/2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements\|CenRL]] | 2026 | 互联网测量 | 样本分配与预算 | 固定测量预算 → 按反馈选择 | 测量覆盖 | 有共同阻断倾向的站点组可加速发现 | 模拟同池及真实同预算对照 | 真实候选池有差异 |
+| [[03-paper-notes/2026-S&P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_Descriptor_Flood\|Descriptors of Exposure]] | 2026 | 匿名网络可用性 | 实现与协议相互作用 | 缓存计量偏差 → 进程/服务资源 | 逻辑状态与物理存储 | 资源压力可超出缓存逻辑占用预期 | 组件测量与分配器比较 | 网络层外推需权重和配置 |
+| [[03-paper-notes/2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR\|SIR]] | 2026 | 流式监测 | 表达与部署差异 | 多语言语义差异 → 统一状态 | 工程与语义 | 有键寄存器自动机可承载代表查询 | 回放语义及编译结构核算 | 五例，硬件吞吐另验 |
+| [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] | 2026 | 网络流量矩阵 | 多尺度干扰 | 共享模型受分辨率差异影响 → 阶段解耦 | 架构容量及多任务 | 阶段独立参数和任务条件改善部分任务 | 等数据前作及消融与任务共享 | 跨任务与域存在反例 |

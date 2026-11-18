@@ -18,7 +18,15 @@ dataset: [NordVPN, SuperVPN, Surfshark, TurboVPN, ISCXVPN2016, CIC-AndMal2017, U
 code: "unknown"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-10"
+updated: "2026-10-21"
+venue_factor: 0.65
+time_factor: 1.0
+citation_impact: 1.0
+composite_weight: 0.65
+internal_citation_count: 2
+citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
+citation_count_verified: "2026-10-21"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # 2026-arXiv BiasSeeker

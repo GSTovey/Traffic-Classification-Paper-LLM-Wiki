@@ -373,3 +373,37 @@ updated: "2026-09-19"
 
 - [[2025-INFOCOM-Cross-Environmental_Website_Fingerprinting]]：该 INFOCOM 2025 论文已有完整深度结构，本次只补齐 CCF-A/DOI 元数据并纳入覆盖核对；不重复分析。
 
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | Practical VPN Fingerprinting using Coarse Inference of Field Specifications in Data Channels | INFOCOM | [[2026-INFOCOM-Practical_VPN_Fingerprinting_using_Coarse_Inference_of_Field_Specifications_in_Data_Channels]] | DOI: 10.1109/INFOCOM59046.2026.11571535；摘要/正文候选证据待审核 |
+| 2026 | Drift-Aware Adaptive Website Fingerprinting | TDSC | [[2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting]] | DOI: 10.1109/TDSC.2026.3723526；摘要/正文候选证据待审核 |
+| 2026 | Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | TDSC | [[2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses]] | DOI: 10.1109/TDSC.2026.3722663；摘要/正文候选证据待审核 |
+
+## 2024–2026 四大安全顶会批次：网站指纹攻击与防御（2026-11-03）
+
+本批次补齐以下攻击、迁移、漂移和防御论文入口：
+
+### 2024
+- [[2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis]]（CCS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale]]（CCS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization]]（IEEE Symposium on Security and Privacy (S&P) 2024）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes]]（USENIX Security 2024）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+### 2025
+- [[2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities]]（ACM CCS 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for_Website_Fingerprinting_Defense]]（ACM CCS 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis]]（ACM CCS 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]]（ACM CCS 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction]]（IEEE S&P 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+### 2026
+- [[2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization]]（NDSS 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement]]（NDSS 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting]]（USENIX Security 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+**使用边界**：上述入口用于定位论文和方法，不把单篇作者声称直接当作领域共识；数值结果须回到对应 MinerU 原文核对。

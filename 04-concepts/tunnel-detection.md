@@ -12,7 +12,7 @@ tags:
   - traffic-fingerprinting
   - network-security
 created: "2026-05-27"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Encrypted Tunnel Detection（加密隧道检测）
@@ -168,3 +168,20 @@ updated: "2026-09-19"
 - 能否将隧道检测（是否经过隧道）和隧道下的应用识别统一为一个端到端框架？
 - 随着 HTTP/3 和 QUIC 的普及，基于 UDP 的隧道（如 QUIC 隧道）是否需要全新的检测范式？
 - 流量整形（traffic shaping）能否从根本上消除隧道的统计指纹？其信息论下界是什么？
+
+## 2026-10-21：NestTor 的外层与内层条件分解
+
+[[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] 补充“加密代理中是否承载 Tor”这一目标。其 [[factorized-detection]] 分别学习外层代理与代理域内 Tor，最终 AND。使用完整流的 62 维全局行为和 37 维相对阶段统计；负类校准用独立 Pure Proxy 的 99% 上分位数，不访问目标 ToP 标签。校准收益依代理而变（Table IV 中 Trojan 下降），异质背景固定 AND 的 FPR 为 3.14%，不能用事后乘积分数工作点替代。依据：§IV、Tables IV/VI。
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | Tap Dance on Android External Storage: Covert Channels Built on File Operations | INFOCOM | [[2026-INFOCOM-Tap_Dance_on_Android_External_Storage__Covert_Channels_Built_on_File_Operations]] | DOI: 10.1109/INFOCOM59046.2026.11571343；摘要/正文候选证据待审核 |
+| 2026 | QuicReflo: Exploiting Multi-Flow Redundancy for Restoration-Free Covert Communication Over QUIC | TDSC | [[2026-TDSC-QuicReflo__Exploiting_Multi-Flow_Redundancy_for_Restoration-Free_Covert_Communication_Over_QUIC]] | DOI: 10.1109/TDSC.2026.3721648；摘要/正文候选证据待审核 |
+| 2026 | TridentDNS: Detecting Diverse DNS Tunnels Via Multidimensional Features | TDSC | [[2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Features]] | DOI: 10.1109/TDSC.2026.3741607；摘要/正文候选证据待审核 |
+| 2026 | Feign East, Strike West! Constructing Covert Channel on TLS 1.3 | TIFS | [[2026-TIFS-Feign_East_Strike_West_Constructing_Covert_Channel_on_TLS_1.3]] | DOI: 10.1109/TIFS.2026.3725552；摘要/正文候选证据待审核 |
+| 2026 | InvisiTunnel: Causality-Preserving Covert Communication over DoH through Request Substitution | TIFS | [[2026-TIFS-InvisiTunnel__Causality-Preserving_Covert_Communication_over_DoH_through_Request_Substitution]] | DOI: 10.1109/TIFS.2026.3744608；摘要/正文候选证据待审核 |
+| 2026 | Stego-Vector Driven Simultaneous Covert Channels in Streaming Applications | TIFS | [[2026-TIFS-Stego-Vector_Driven_Simultaneous_Covert_Channels_in_Streaming_Applications]] | DOI: 10.1109/TIFS.2026.3705932；摘要/正文候选证据待审核 |

@@ -9,8 +9,8 @@ doi: "10.1145/3719027.3744804"
 url: "https://dl.acm.org/doi/10.1145/3719027.3744804"
 pdf: "00-inbox/PDFs/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.pdf"
 mineru_md: "02-parsed-markdown/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["network traffic analysis", "multi-modal learning", "pre-trained model", "encrypted traffic analysis"]
 task: ["traffic classification", "encrypted malware detection", "encrypted proxy classification", "website identification", "browser classification", "mobile application identification"]
 method: ["multi-modal pre-training", "BERT", "cross-attention fusion", "masked language modeling", "transfer learning", "self-supervised learning"]
@@ -18,7 +18,15 @@ dataset: ["DataCon2020", "DataCon2021-p1", "DataCon2021-p2", "Browser", "NUDT_Mo
 code: unknown
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.md", "02-parsed-markdown/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+internal_citation_count: 5
+citation_impact: 1.2
+composite_weight: 0.78
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # MM4flow: A Pre-trained Multi-modal Model for Versatile Network Traffic Analysis
@@ -741,3 +749,12 @@ MM4flow 的多模态有效性源于以下几个层面：
 5. **增量学习**：当出现新的应用或攻击类型时，如何在不重新预训练的情况下更新模型？
 6. **隐私问题**：在网关处采集 77.6 TB 的 payload byte stream 是否涉及用户隐私？如何在保护隐私的前提下进行预训练数据采集？
 7. **与大语言模型的结合**：是否可以利用 LLM 的能力对网络流量的语义进行更深层次的理解？
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[survey-encrypted-traffic-analysis]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

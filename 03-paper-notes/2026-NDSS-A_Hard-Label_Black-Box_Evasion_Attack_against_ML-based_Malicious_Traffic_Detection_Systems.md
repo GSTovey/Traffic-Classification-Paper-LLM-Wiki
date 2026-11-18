@@ -424,3 +424,7 @@ $$(t \geq \tau) \vee \left(\max_{i=1,2} Q_{\omega_i}(s_t, a_t) \geq \xi - \beta 
 - [[2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis]]：CertTA 提供 certified robustness（认证鲁棒性）防御，NetMasquerade 则从攻击侧证明即使是 certifiably robust 的 BARS 方法也可被逃逸；两者构成攻防对称视角，CertTA 的认证边界恰好是 NetMasquerade 逃逸能力的上界
 - [[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]]：该文从检测侧出发，用跨模态特征融合在极少量样本下训练恶意流量检测器，NetMasquerade 从攻击侧出发，用 Traffic-BERT 的跨模态注意力（Bi-Cross Attention）捕获良性模式用于逃逸；两者都关注包大小+IPD 双特征序列的跨模态建模，但目标相反
 - [[2023-USENIX-Subverting_Website_Fingerprinting_Defenses_with_Robust_Traffic_Representation]]：该文提出用鲁棒流量表示绕过 WF 防御，是流量分析领域的对抗攻击先驱工作；NetMasquerade 将类似思路从 WF 场景推广到通用恶意流量检测，且将攻击设置从灰盒放松到硬标签黑盒
+
+## 2026-11 评估补充
+
+以固定数据、检测单位与参考真值对照误判，并按数据来源核对可迁移性。相关证据入口见 [[09-claims/claims-index]]。

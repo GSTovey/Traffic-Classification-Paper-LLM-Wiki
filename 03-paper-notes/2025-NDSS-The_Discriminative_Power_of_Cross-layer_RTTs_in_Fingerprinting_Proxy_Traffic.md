@@ -8,7 +8,7 @@ venue: "NDSS 2025"
 publication_status: published
 doi: unknown
 url: unknown
-pdf: ""
+pdf: "00-inbox/PDFs/2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_Traffic.pdf"
 mineru_md: "02-parsed-markdown/2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_Traffic.md"
 status: deep-analyzed
 reading_level: L3
@@ -23,7 +23,15 @@ related_papers: []
 kb_read_only: true
 promoted_to: ""
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-10-21"
+venue_factor: 1.0
+time_factor: 1.0
+citation_impact: 1.2
+composite_weight: 1.2
+internal_citation_count: 5
+citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
+citation_count_verified: "2026-10-21"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # The Discriminative Power of Cross-layer RTTs in Fingerprinting Proxy Traffic

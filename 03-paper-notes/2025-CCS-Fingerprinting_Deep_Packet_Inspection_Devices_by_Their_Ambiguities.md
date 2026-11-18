@@ -9,7 +9,7 @@ doi: "10.1145/3719027.3765145"
 url: "https://doi.org/10.1145/3719027.3765145"
 pdf: ""
 mineru_md: "02-parsed-markdown/2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities.md"
-status: processed
+status: deep-analyzed
 reading_level: L3
 research_area: ["DPI fingerprinting", "network measurement", "censorship measurement", "middlebox characterization"]
 task: ["DPI device identification", "behavioral fingerprinting", "censorship infrastructure mapping"]
@@ -18,7 +18,10 @@ dataset: ["Censored Planet", "open-source DPIs (Zeek, nDPI, Suricata, Snort)", "
 code: "https://github.com/censoredplanet/CenDPI"
 relevance: high
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities.md", "02-parsed-markdown/2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # Fingerprinting Deep Packet Inspection Devices by Their Ambiguities
@@ -452,3 +455,12 @@ dMAP 分为三个阶段：（1）候选探测生成——基于确定性模糊�
 | 实验组织逻辑 | 已知 DPI 验证 → 全球发现 → 一致性验证 → 稳定性验证 → 噪声处理 | "先验证后发现"的实验叙事 |
 | 局限性讨论方式 | 承认多 DPI/中间件/非对称审查的盲区，但论证方法的长期可行性 | 诚实局限 + 可行性论证 |
 | 最值得借鉴的一句话/一段结构 | "shifting the focus from how DPIs write to how they read" | 用一句话概括核心视角转换 |
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[encrypted-traffic-analysis]]、[[traffic-classification]]、[[censorship-circumvention]]、[[tunnel-detection]]、[[anomaly-detection]]、[[survey-encrypted-traffic-analysis]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

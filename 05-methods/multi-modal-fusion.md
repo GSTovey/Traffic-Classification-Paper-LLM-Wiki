@@ -121,3 +121,10 @@ updated: "2026-09-19"
 
 
 新增论文联动（2026-09-29）：A Priority-Aware 使用原始字节与统计特征双通道图像融合；具体优先级目标和融合消融待核验。
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 自适应门控混合包内容与行为表示。对同一协议和明密文分层检查，避免混合平均掩盖某一模态的失效。 |

@@ -175,3 +175,11 @@ Transformer 是一种完全基于 Self-Attention 机制的序列建模架构，�
 - [[2026-arXiv-Unknown-Traffic_Detection_Calibration_and_Shortcut_Reliance_in_Distilled_Encrypted-Traffic_Classifiers_over_One_Year]]（2026 批量深度分析；证据需正文复核）
 
 - [[2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams]]（2026 批量深度分析；证据需正文复核）
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | 批内 Transformer 重构图嵌入，关闭位置编码与测试期随机掩码。SimpleAE 对照反映注意力的边际作用。 |
+| [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 短会话的内容/行为融合，作者在混合明密文的多币种基准上报告 macro F1 95.02%。 |

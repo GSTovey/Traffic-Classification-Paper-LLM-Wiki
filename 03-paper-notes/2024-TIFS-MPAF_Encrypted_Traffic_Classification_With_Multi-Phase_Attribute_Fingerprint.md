@@ -18,7 +18,15 @@ dataset: [manually-collected, automatically-collected, cross-platform-android, c
 code: "unknown"
 relevance: medium
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-10-21"
+venue_factor: 0.85
+time_factor: 0.85
+citation_impact: 1.0
+composite_weight: 0.7225
+internal_citation_count: 3
+citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
+citation_count_verified: "2026-10-21"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 ## §0 基础信息

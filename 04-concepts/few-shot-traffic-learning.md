@@ -118,3 +118,13 @@ Few-shot Traffic Learning（少样本流量学习）是指在标注样本极少�
 - 如何设计轻量化的少样本流量分析模型，使其能够在边缘设备或高速网络中实时部署？
 - 多模态融合策略（如 tFusion 的 crossmodal attention）能否与元学习框架结合，进一步降低数据需求？
 - 开放世界场景下的聚类数自动确定问题是否有更可靠的解决方案？
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | PP-OpenNet: Privacy-Preserved Open Set Classification for Network Traffic | INFOCOM | [[2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_Traffic]] | DOI: 10.1109/INFOCOM59046.2026.11571190；摘要/正文候选证据待审核 |
+| 2026 | Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | TDSC | [[2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses]] | DOI: 10.1109/TDSC.2026.3722663；摘要/正文候选证据待审核 |
+| 2026 | When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection | TON | [[2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection]] | DOI: 10.1109/TON.2026.3674624；摘要/正文候选证据待审核 |

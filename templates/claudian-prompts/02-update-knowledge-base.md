@@ -105,3 +105,9 @@
 - Open questions:
   -
 ```
+
+## 9. 跨论文综合与创新点挖掘
+
+对进入核心研究方向的论文，使用 `templates/claudian-prompts/09-research-problem-analysis.md` 进行综合分析。输出必须连接具体论文和原文定位，区分作者明确结论、作者声称、跨论文综合判断和个人待验证假设。不得仅凭论文局限列表、模型组合或摘要推理认定创新。
+
+证据账本只登记重要主张、关键反证和候选创新点，不复制普通论文的全部实验结果。未经审核的记录保持 `pending_review`，不得自动修改正式 Claims 或 research-front 共识。

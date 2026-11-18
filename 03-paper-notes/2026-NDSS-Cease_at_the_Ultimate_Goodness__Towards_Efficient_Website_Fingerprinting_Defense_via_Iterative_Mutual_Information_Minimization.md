@@ -9,7 +9,7 @@ doi: unknown
 url: unknown
 pdf: ""
 mineru_md: "02-parsed-markdown/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization.md"
-status: processed
+status: deep-analyzed
 reading_level: L3
 research_area: ["website fingerprinting", "traffic obfuscation", "privacy defense", "encrypted traffic analysis"]
 task: ["WF defense", "traffic obfuscation", "mutual information minimization", "Tor traffic protection"]
@@ -18,7 +18,10 @@ dataset: ["DF dataset (Sirinam et al. 2018)", "95 monitored websites", "40000 un
 code: "https://github.com/Junowww/FRUGAL-ndss"
 relevance: high
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization.md", "02-parsed-markdown/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # Cease at the Ultimate Goodness: Towards Efficient Website Fingerprinting Defense via Iterative Mutual Information Minimization
@@ -602,3 +605,12 @@ WF 攻击威胁 Tor 匿名性 --> 现有防御面临三大挑战（攻击模型�
 - 讨论节较短，未深入讨论与 Palette 等方法的组合可能性
 - 未讨论 DF dataset 的时间跨度问题（数据采集时间与测试时间的关系）
 - Theorem 1 的证明依赖于 f_phi 是贝叶斯分类器的假设，实际中 f_phi 是神经网络近似
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[website-fingerprinting]]、[[encrypted-traffic-analysis]]、[[survey-website-fingerprinting]]、[[survey-encrypted-traffic-analysis]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

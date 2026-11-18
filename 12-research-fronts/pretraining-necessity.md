@@ -99,3 +99,21 @@ related_methods:
 - [[pre-training-finetuning]]
 - [[claims-index]] — 相关 claims: #7, #19, #29
 - [[contradictions]] — 相关矛盾: "预训练是否必要"、"预训练必要性的进一步证据"
+
+## 2026-10-26 新入库候选证据（pending_review）
+
+| 年份 | 论文 | venue | 方向 | 条件边界 |
+|---:|---|---|---|---|
+| 2026 | HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields | INFOCOM | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+| 2026 | GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | TDSC | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+| 2026 | Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning | TON | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+| 2026 | When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection | TON | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+| 2026 | Two Heads Are Better Than One: Models-to-Model Learning for Encrypted Traffic Analysis | TIFS | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+
+
+## 2026-11-18　待审核的新增证据链
+
+| 年份 | 论文 | 方向 | 关联及适用条件 | 证据位置 | 状态 |
+| --- | --- | --- | --- | --- | --- |
+| 2026 | [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 相邻任务 | 强窄任务监督模型胜出，架构和训练条件不同 | §V-E 表 V | EV-20261118-CRYPTO-MODAL · pending_review |
+| 2025 | [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 相邻机制 | 隔离预训练来源及时间；资源约束为同类模型的附加测试条件 | §V-A–C 表 II、IV | EV-20261118-NEPCO-COST · pending_review |

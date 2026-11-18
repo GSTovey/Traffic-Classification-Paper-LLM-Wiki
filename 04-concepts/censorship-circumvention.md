@@ -130,3 +130,16 @@ Censorship Circumvention（审查规避）是指绕过国家级互联网审查�
 - 去中心化审查规避（如 P2P 隧道、域名前置等）能否从根本上解决中心化规避工具的封锁问题？
 - 如何评估规避工具在不同审查国家（如中国、伊朗、俄罗斯）的通用性？
 - 规避工具的"不可观测性"是否有信息论下界？
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements\|CenRL]] | 主动测量的采样策略影响可见的审查活动。结果按候选域名、测量预算及观测点给出。 |
+
+## 2026-11-18　深读证据补充
+
+| 新增论文 | 联动点 | 证据口径与可迁移结论 |
+| --- | --- | --- |
+| [[03-paper-notes/2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements\|CenRL]] | 观察范围与选择策略 | 真实测量中 Top–10K 的自适应选点和仅前 2,000 名的静态对照使用相同测量次数。发现量比较需写清候选域与观测点。 |

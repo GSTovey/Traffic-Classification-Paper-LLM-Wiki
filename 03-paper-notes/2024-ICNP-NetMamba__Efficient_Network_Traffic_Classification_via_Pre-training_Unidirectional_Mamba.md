@@ -41,7 +41,15 @@ dataset:
 code: "available (link in paper)"
 relevance: high
 created: 2026-06-09
-updated: 2026-08-17
+updated: "2026-10-21"
+venue_factor: 0.65
+time_factor: 0.85
+citation_impact: 1.8
+composite_weight: 0.9945
+internal_citation_count: 23
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # NetMamba: Efficient Network Traffic Classification via Pre-training Unidirectional Mamba

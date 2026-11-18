@@ -28,6 +28,11 @@ code: unknown
 relevance: high
 created: 2026-06-09
 updated: 2026-06-09
+internal_citation_count: 3
+citation_impact: 1.0
+composite_weight: 0.65
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # TraGe: A Generic Packet Representation for Traffic Classification Based on Header-Payload Differences

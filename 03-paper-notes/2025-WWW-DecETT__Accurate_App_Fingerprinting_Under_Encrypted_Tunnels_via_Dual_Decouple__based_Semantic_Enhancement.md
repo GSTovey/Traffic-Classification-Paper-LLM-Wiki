@@ -18,7 +18,15 @@ dataset: ["54 mobile apps", "5 encrypted tunnels (Shadowsocks, ShadowsocksR, V2R
 code: "https://github.com/DecETT/DecETT"
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-10-21"
+venue_factor: 0.85
+time_factor: 1.0
+citation_impact: 1.0
+composite_weight: 0.85
+internal_citation_count: 1
+citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
+citation_count_verified: "2026-10-21"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # DecETT: Accurate App Fingerprinting Under Encrypted Tunnels via Dual Decouple-based Semantic Enhancement

@@ -18,7 +18,15 @@ dataset: ["campus network traffic traces"]
 code: unknown
 relevance: medium
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-10-21"
+venue_factor: 0.65
+time_factor: 0.25
+citation_impact: 1.0
+composite_weight: 0.1625
+internal_citation_count: 1
+citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
+citation_count_verified: "2026-10-21"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # Detection of Encrypted Tunnels across Network Boundaries

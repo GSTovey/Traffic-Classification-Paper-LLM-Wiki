@@ -128,3 +128,10 @@ Traffic Foundation Model（流量基础模型）是指借鉴 NLP/CV 领域的预
 - [[pretraining-necessity]] — 预训练是否必要、替代路径
 - [[multimodal-fusion-strategy]] — 多模态融合最优策略
 - [[tokenization-optimal]] — 流量 tokenization 最优方案
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 前 5 包局部卷积预训练模型部署在 BlueField-3。按新流到达率统计完成流数和平均/P99 分析时延。 |

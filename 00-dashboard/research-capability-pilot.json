@@ -1,0 +1,29 @@
+{
+  "pilot_id": "tor-over-proxy-low-fpr-detection",
+  "question": "在代理封装、观测条件变化和真实背景流量下，哪些条件允许稳定区分 Tor-over-Proxy 与 Pure Proxy 或其他背景，并达到预设低误报工作点？",
+  "notes": [
+    "03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions.md",
+    "03-paper-notes/2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_Traffic.md",
+    "03-paper-notes/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.md",
+    "03-paper-notes/2024-TON-Website_Fingerprinting_on_Encrypted_Proxies__A_Flow-Context-Aware_Approach_and_Countermeasures.md",
+    "03-paper-notes/2025-WWW-DecETT__Accurate_App_Fingerprinting_Under_Encrypted_Tunnels_via_Dual_Decouple__based_Semantic_Enhancement.md",
+    "03-paper-notes/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.md",
+    "03-paper-notes/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.md",
+    "03-paper-notes/2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks.md",
+    "03-paper-notes/2022-USENIX-Online_Website_Fingerprinting__Evaluating_Website_Fingerprinting_Attacks_on_Tor_in_the_Real_World.md",
+    "03-paper-notes/2024-USENIX-OpenVPN_is_Open_to_VPN_Fingerprinting.md",
+    "03-paper-notes/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.md"
+  ],
+  "fronts": [
+    "12-research-fronts/tor-over-proxy-low-fpr-detection.md"
+  ],
+  "methods": [
+    "05-methods/factorized-detection.md"
+  ],
+  "claim_ids": [
+    "NEST-01",
+    "NEST-02",
+    "NEST-03",
+    "NEST-04"
+  ]
+}

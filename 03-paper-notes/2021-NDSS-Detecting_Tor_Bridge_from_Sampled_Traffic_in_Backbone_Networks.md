@@ -24,7 +24,16 @@ research_area: ["Tor流量检测", "流量采样", "网络安全"]
 task: ["Tor bridge检测", "obfs4 bridge识别", "采样流量分析"]
 method: ["Nested Count Bloom Filter", "random forest", "traffic sampling"]
 created: 2026-06-09
-updated: 2026-06-09
+updated: "2026-10-21"
+venue_factor: 0.65
+time_factor: 0.45
+citation_impact: 1.0
+composite_weight: 0.2925
+internal_citation_count: 1
+citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
+citation_count_verified: "2026-10-21"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
+weight_venue_basis: "NestTor reference [2]: MADWeb workshop, not NDSS main symposium"
 ---
 
 # Detecting Tor Bridge from Sampled Traffic in Backbone Networks

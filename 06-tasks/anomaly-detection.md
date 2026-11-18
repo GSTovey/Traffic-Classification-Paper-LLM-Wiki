@@ -124,3 +124,29 @@ Network Anomaly Detection（网络异常检测）是指通过分析网络流量�
 - 如何利用大语言模型的通用知识辅助异常检测？
 - 跨网络环境的异常检测模型如何迁移？
 - 如何设计有效的对抗训练策略提升对 evasion 攻击的鲁棒性？
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | A Unified Oversampling-Based Imbalance Processing Framework for Network Traffic Anomaly Detection | TDSC | [[2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Network_Traffic_Anomaly_Detection]] | DOI: 10.1109/TDSC.2026.3732576；摘要/正文候选证据待审核 |
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | 在正常流图上联合训练一跳图编码与掩码重构；训练自监督，验证期仍需要标签选阈值。 |
+| [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion\|Contorter]] | 以系统审计溯源图为观测输入，给出 PIDS 上下文敏感性的证据。端点日志与流级网络数据分开比较。 |
+| [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] | 输出聚合 OD 矩阵时段的残差异常。双阈值构造标签的结论应与网络安全攻击真值隔开。 |
+| [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] | 用特征分区和双编码器距离补充 IDS。严重时间漂移削弱正常参考，小量目标良性样本能在文中部分恢复。 |
+| [[03-paper-notes/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks\|SEDMS]] | 分布变化的协方差误差触发指标更新。检测分数和误报还取决于更新后可观察到的特征。 |
+
+## 2026-11-18　深读证据补充
+
+| 新增论文 | 联动点 | 证据口径与可迁移结论 |
+| --- | --- | --- |
+| [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion\|Contorter]] | 主机节点与图 | 相同图扰动不一定造成相同节点、图级告警变化，分列二者的支持数据、真值和原始阈值。 |
+| [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] | OD 聚合时段异常 | 规则生成的异常标签、动态残差阈值与真实安全事件需按其来源解释，尤其在源/目标拓扑发生变化时。 |

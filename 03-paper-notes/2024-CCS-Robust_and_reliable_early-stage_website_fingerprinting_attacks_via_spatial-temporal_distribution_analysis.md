@@ -12,8 +12,8 @@ doi: "10.1145/3658644.3670272"
 url: ""
 pdf: "00-inbox/PDFs/2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis.pdf"
 mineru_md: "02-parsed-markdown/2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["网站指纹识别", "流量分类", "隐私攻击"]
 task: ["网站指纹识别", "早期流量识别", "暗网检测"]
 method: ["supervised-contrastive-learning", "adaptive-data-augmentation", "spatial-temporal-distribution-analysis", "feature-attribution", "SHAP"]
@@ -27,7 +27,15 @@ dataset:
 code: "https://github.com/HolmesWF/Holmes"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis.md", "02-parsed-markdown/2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+internal_citation_count: 30
+citation_impact: 1.8
+composite_weight: 1.53
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # Holmes: 基于时空分布分析的鲁棒可靠早期网站指纹攻击
@@ -497,3 +505,12 @@ Holmes 的核心思想是利用同一网站早期阶段流量与完整流量之�
 - [[2026-NDSS-A_Hard-Label_Black-Box_Evasion_Attack_against_ML-based_Malicious_Traffic_Detection_Systems]]：NetMasquerade 是逃逸攻击（攻击者视角），Holmes 是 WF 攻击（监控者视角）；两者都关注 ML 流量分析系统的鲁棒性
 - **方法关联**：Holmes 的 SCL 对比学习 → MIETT 的 FCL 对比学习 → Oscar 的度量学习，三种方法都通过变换特征空间提升分类性能
 - **任务关联**：Holmes（早期 WF）+ Oscar（细粒度 WPF）共同推进 WF 攻击的实用性；NetMasquerade 从攻击者角度揭示 ML 检测系统的脆弱性
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[website-fingerprinting]]、[[traffic-classification]]、[[contrastive-learning]]、[[encrypted-traffic-analysis]]、[[transformer]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

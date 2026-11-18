@@ -9,8 +9,8 @@ doi: unknown
 url: "https://www.usenix.org/conference/usenixsecurity24/presentation/xue-fingerprinting"
 pdf: "00-inbox/PDFs/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.pdf"
 mineru_md: "02-parsed-markdown/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["Internet censorship", "traffic fingerprinting", "encrypted traffic analysis", "circumvention"]
 task: ["proxy traffic detection", "obfuscated traffic classification", "encapsulated TLS handshake fingerprinting"]
 method: ["similarity-based classification", "Chi-squared test", "Mahalanobis distance", "n-gram features", "burst features", "passive traffic fingerprinting"]
@@ -18,7 +18,18 @@ dataset: ["Merit ISP traffic (50 Gbps, 110M+ flows over 30 days)", "Cloudflare T
 code: unknown
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.md", "02-parsed-markdown/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+venue_factor: 1.0
+time_factor: 0.85
+citation_impact: 1.8
+composite_weight: 1.53
+internal_citation_count: 13
+citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
+citation_count_verified: "2026-10-21"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # Fingerprinting Obfuscated Proxy Traffic with Encapsulated TLS Handshakes
@@ -739,3 +750,12 @@ $$Dis = \sqrt{(s[i:i+W_b] - \vec{M})^T C^{-1} (s[i:i+W_b] - \vec{M})}$$
 6. **对抗性攻击**：代理能否通过流量整形（traffic shaping）主动模拟正常的 TLS-over-non-TLS 模式？
 7. **多特征融合**：能否将封装 TLS 握手指纹与覆盖协议缺陷特征、网络层特征等融合，构建更强的综合检测系统？
 8. **隐私影响**：该技术的反向应用（如用于识别使用翻墙工具的个人用户）对隐私的影响如何缓解？
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[survey-encrypted-traffic-analysis]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

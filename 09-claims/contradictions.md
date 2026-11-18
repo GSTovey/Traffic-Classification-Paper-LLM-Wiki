@@ -2,7 +2,7 @@
 type: claims
 name: contradictions
 created: "2026-05-27"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Contradictions
@@ -30,3 +30,31 @@ updated: "2026-09-19"
 | 加密流量三类侧信道特征（包长/方向/时序）的效用排序 | COMST 2022 Survey：将包长度、包方向、包时间（packet length / direction / timing）并列为加密流量分析中最常用且最有效的三类特征 | TARL (JCN 2026)、HyTMTC (TNSM 2026)、Colossus (arXiv 2026)：三篇独立消融修正该排序——TARL 的 PCA 特征重要性中 IAT 类最高、length 类入选最少；HyTMTC 仅方向输入 F1 50.94%，远低于仅长度 80.07%/仅字节 90.55%；Colossus 方向/时序无叠加增益（包长确为最强单特征 0.7944 vs 方向 0.5855/时序 0.5560） | 综述的「三类并列最有效」论断与现代消融的效用排序不一致：方向类单独效用弱、时序类无稳定叠加增益，「最常用」被表述为「同等最有效」 | 「最常用」的文献统计被表述成了「同等最有效」的效用结论；现代消融显示边际贡献高度不均匀：方向类单独效用最弱、时序类条件依赖、包长类最稳定 | context_dependent | 三篇独立工作的消融一致指向「包长最强、方向弱」的排序修正（2026-09-19 批次）；原观点宜限定为「最常用」，效用排序按任务条件化 | medium |
 | 真实世界 WF 攻击有效性是否成立 | Reality Check (arXiv 2026)：以 800K+ 真实 Tor 用户 trace 为开放世界非监控集，DF 达 π₁₀=0.956、召回 0.922，证明真实 Tor 开放世界下 WF 高度有效 | Conformal Prediction for Offensive Security (arXiv 2026)：引用 Juarez 2014 与 Cherubin 2022 的批评，称 WF 在真实世界是否有效尚不明确，可能仅对定向个体或受限网页成立 | 一方以大规模真实采集直接测出高攻击性能；另一方质疑既往真实世界评估的样本与场景偏差，认为结论无法外推 | 采样与目标集定义差异：Reality Check 的非监控集是真实用户流量、但监控目标仍为定向网站；Cherubin 类批评针对的是「对任意用户、任意网页普适」的强主张。两者口径不同，并不构成直接互斥 | context_dependent | 实证（真实 trace 高 π₁₀）与批评（外推性受限）各自成立（2026-09-19 批次）；当前证据支持「定向场景有效」，普适主张未被支持 | medium |
 | 净化/恢复攻击对 WF 防御的可恢复性是否普适 | DTPN (WSDM 2025)：条件扩散净化无需重训即可让已有 WF 分类器在 AdvTraffic 类防御下恢复至 71.0% | Chameleon (arXiv 2026)：同口径评估中净化恢复攻击 DAAE 对既有防御有效（Palette 下 DF 回复至 83.67% F1、Adaptive Tamaraw 下 86.44%），但对 many-to-many 变形防御仅恢复至 23.86%（RF 35.19%） | DTPN 主张条件扩散净化为通用的攻击恢复手段；Chameleon 证明同类恢复攻击对多对多变形类防御失效 | 恢复能力取决于防御是否保留可逆对齐结构：对齐/扰动类防御的逆映射唯一，净化可找到稳定目标；many-to-many 变形使一个原始流量对应多个变形输出，逆映射不唯一，净化无稳定目标可循 | context_dependent | 恢复有效性依赖防御的可逆结构（2026-09-19 批次新证据）；对 many-to-many 变形类防御恢复失效，净化并非通用手段 | medium |
+
+## 2026-10-21：NestTor 对浅层/深度比较的条件澄清
+
+| 问题 | 新证据 | current_verdict | verdict_basis | verdict_confidence |
+|---|---|---|---|---|
+| ToP 上浅层分解系统优于字节/序列深模型，是否证明深度表征无效？ | [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] 原生端到端 99.45% 对最强 FS-Net 87.46%；共用代理门控后 FS-Net 99.50% 与 NestTor 99.45% 的差异 CI [-0.36,0.46] 跨零；匹配 RF 结构实验支持独立边界 | context_dependent | 任务定义、决策结构与表示同时影响对照；该文不是统一 frozen encoder 的表示优劣实验，亦未复现全部任务上的深度失效 | high |
+
+## 2026-10-26 待核验关系（不改变既有 verdict）
+
+| 关系 | 候选论文 | 需要核验的条件 |
+|---|---|---|
+| 预训练收益 vs 非预训练路线 | HF-Transformer；GenETC；When Pre-Training Meets Contrast Learning | 需统一数据划分、冻结/微调口径和标注预算后比较 |
+| 流量过滤/噪声处理是否总能提升分类 | Is the Data Really Noisy?；Fighting the Enemy Within | 需核验“噪声”定义、过滤策略和标签质量，避免把分布变化当作噪声 |
+| WF 漂移适应与少样本防御的边界 | Drift-Aware Adaptive WF；Fooling Multi-Tab Browsing | 需核验开放世界、跨时间、跨浏览器和防御设置是否同口径 |
+
+
+## 2026-11-18　待审核的条件差异
+
+| 比较 | 表面张力 | 核对依据 | 当前判断 |
+| --- | --- | --- | --- |
+| [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] / Anomal-E | v3 的收益在 v2 CIC 上缩小或逆转 | §4.2、表 3，聚合与图数据规模分母 | 按数据版本与规模比较，不能推出图联合训练总是占优 |
+| [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] / [[03-paper-notes/2026-COSINT-北邮时金桥\|COSINT 汇报]] | 正常参照局部紧密与严重时间漂移下失效 | HAD 表 XI–XII，报告第 18–25、27、31 页 | 相邻机制，任务和 FPR 量级不同 |
+| [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] / 预训练基线 | 混合基准中有监督窄任务模型胜出 | 表 V、图 8；检查字段、数据与模型预算 | 限于同论文协议，待做等输入等训练预算对照 |
+| [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] / ARI-LLM | GÉANT 与 WS-DREAM 的指标排序不同 | §IV-B 表 V | 扩展稿中的条件差异，不能作为相互独立的证据票数 |
+
+## 2026-11-18　深读证据补充
+
+[[03-paper-notes/2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements|CenRL]] 摘要报实测平均约 2.5 倍，§6.2 报 2.75 倍。引用整体增幅前应先核对汇总分母。等预算下不同候选范围的实测对照提供部署场景证据，策略归因参考同候选池的 §5.1 受控比较。

@@ -1,8 +1,17 @@
 ---
+type: paper
+title_original: "Enhancing Website Fingerprinting Attacks against Traffic Drift"
+authors: ["Xinhao Deng", "Yixiang Zhang", "Qi Li", "Zhuotao Liu", "Yabo Wang", "Ke Xu"]
+mineru_md: "02-parsed-markdown/2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift.md"
+task: [website-fingerprinting, traffic-drift-adaptation]
+method: [unsupervised-domain-adaptation, MMD, entropy-minimization, GMM-pseudo-labeling]
+dataset: [real-world-tor-traces]
+code: "论文中声明已开源，URL未在本地笔记中明确"
 reading_level: L3
 relevance: high
 year: 2026
 venue: "NDSS 2026"
+status: deep-analyzed
 tags:
   - website-fingerprinting
   - encrypted-traffic-analysis
@@ -16,6 +25,10 @@ related_concepts:
   - "[[survey-website-fingerprinting]]"
   - "[[traffic-representation-learning]]"
   - "[[few-shot-traffic-learning]]"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift.md", "02-parsed-markdown/2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # Enhancing Website Fingerprinting Attacks against Traffic Drift
@@ -263,6 +276,14 @@ obfs4下Proteus平均F1提升66.48%；Front防御下平均F1提升48.1%。
 4. **全面的漂移评估**：覆盖6种漂移场景，350,000+真实Tor trace，是迄今最全面的Tor流量漂移评估
 5. **即插即用**：可与现有任意DL-based WF攻击集成
 
+## 6.1 学习与应用（复现要点）
+
+- **开源状态**：笔记记录论文声明已开源，但本地材料未给出可核验的仓库 URL；保留为“URL 未明确”。
+- **复现输入**：需要一套已有的 WF 基础模型、源域有标签流量，以及攻击阶段可持续获取的无标签漂移流量；论文覆盖时间、Tor 版本、网络地点、浏览行为和防御条件等漂移来源。
+- **复现流程**：先提取源域与漂移域特征，计算动态带宽 MMD；再执行熵最小化并保持 batch 多样性；用 GMM 对熵分布建模、筛选可靠伪标签，最后进行在线微调。
+- **复现重点**：必须保持“无标签漂移流量”这一威胁模型；有监督微调只能作为对照，不能替代 Proteus 的主设置。需要同时报告闭世界、开放世界、长期漂移、跨网络条件和防御条件，避免只报告单一时间点结果。
+- **迁移价值**：三模块可迁移到其他加密流量域适应任务，但其有效性依赖目标域存在足够的无标签样本以及源域/目标域仍有可对齐的行为结构；论文未证明对任意新协议或任意大幅内容变化都有效。
+
 ## 7. 局限性与未来方向
 
 | 局限 | 说明 |
@@ -296,3 +317,12 @@ obfs4下Proteus平均F1提升66.48%；Front防御下平均F1提升48.1%。
 | RF (Shen 2023) | Proteus的默认基础模型，聚合特征在漂移下更稳定 |
 | Holmes (Deng 2024) | 时空分布分析方法，对比基线 |
 | UAF (Zhang 2023) | 无监督自适应WF，对比基线 |
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[website-fingerprinting]]、[[encrypted-traffic-analysis]]、[[survey-website-fingerprinting]]、[[traffic-representation-learning]]、[[few-shot-traffic-learning]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

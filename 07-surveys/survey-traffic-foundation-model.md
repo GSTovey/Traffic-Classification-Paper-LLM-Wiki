@@ -239,3 +239,52 @@ updated: "2026-09-19"
 - [[pretraining-necessity]] — 预训练必要性边界
 - [[multimodal-fusion-strategy]] — 多模态融合策略
 - [[tokenization-optimal]] — tokenization 最优方案
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields | INFOCOM | [[2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classification_Model_Based_on_Packet_Header_Fields]] | DOI: 10.1109/INFOCOM59046.2026.11571583；摘要/正文候选证据待审核 |
+| 2026 | GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | TDSC | [[2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Classification]] | DOI: 10.1109/TDSC.2026.3741875；摘要/正文候选证据待审核 |
+| 2026 | Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning | TON | [[2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrastive_Self-Supervised_Learning]] | DOI: 10.1109/TON.2026.3737411；摘要/正文候选证据待审核 |
+| 2026 | KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network | TON | [[2026-TON-KAN-Vis__Efficient_and_Lightweight_Visual_Technique_for_Network_Traffic_Classification_Using_KolmogorovArnold_Network]] | DOI: 10.1109/TON.2026.3722338；摘要/正文候选证据待审核 |
+| 2026 | SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer | TON | [[2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision_Transformer]] | DOI: 10.1109/TON.2026.3699540；摘要/正文候选证据待审核 |
+| 2026 | When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection | TON | [[2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection]] | DOI: 10.1109/TON.2026.3674624；摘要/正文候选证据待审核 |
+
+## 2024–2026 四大安全顶会批次：流量表征与预训练（2026-11-03）
+
+本批次补齐以下多模态、预训练和表示鲁棒性论文入口：
+
+### 2024
+- [[2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale]]（CCS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic]]（NDSS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization]]（IEEE Symposium on Security and Privacy (S&P) 2024）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+### 2025
+- [[2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis]]（ACM CCS 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]]（ACM CCS 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dynamic_Network_Conditions]]（CCS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]]（ACM CCS 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction]]（IEEE S&P 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data]]（S&P）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis]]（USENIX Security）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+### 2026
+- [[2026-NDSS-A_Hard-Label_Black-Box_Evasion_Attack_against_ML-based_Malicious_Traffic_Detection_Systems]]（NDSS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection]]（NDSS 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization]]（NDSS 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift]]（NDSS 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement]]（NDSS 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting]]（USENIX Security 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning]]（USENIX Security 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+**使用边界**：上述入口用于定位论文和方法，不把单篇作者声称直接当作领域共识；数值结果须回到对应 MinerU 原文核对。
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 基础模型与硬件协同的实例。位置敏感的字节归因、采集前缀、完成率及过载对照是理解性能的条件。 |

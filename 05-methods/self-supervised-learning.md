@@ -183,3 +183,10 @@ updated: "2026-09-19"
 - [[2026-arXiv-Secrets_in_Radio_Waves__Towards_Practical_and_Protocol-Agnostic_PHY_Information_Hiding]]（2026 批量深度分析；证据需正文复核）
 
 - [[2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams]]（2026 批量深度分析；证据需正文复核）
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | 正常流训练，掩码作用于注意力连边。模型选择和阈值使用带标签的验证集（§4.3–4.5）。 |

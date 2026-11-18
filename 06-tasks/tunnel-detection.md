@@ -4,7 +4,7 @@ name: "Encrypted Tunnel Detection"
 aliases: ["加密隧道检测", "Tunnel Traffic Analysis", "VPN/SSH Tunnel Detection"]
 tags: [tunnel-detection, encrypted-tunnel, SSH, VPN, HTTPS-proxy, traffic-separation, statistical-fingerprint]
 created: "2026-05-27"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Encrypted Tunnel Detection（加密隧道检测）
@@ -133,3 +133,36 @@ Encrypted Tunnel Detection（加密隧道检测）是指识别网络流量中使
 
 
 新增论文联动（2026-09-29）：TunnelEye 针对恶意 DoH，使用方向/采样稳定特征和 DoH-Sketch；OPC UA 工作关注控制面变化导致的异常检测可靠性。
+
+## 2026-10-21：NestTor / Tor-over-Proxy 检测
+
+| 项目 | 本篇定义 |
+|---|---|
+| 输入与输出 | 完整单条双向 TCP 流的方向、长度、相对 IAT → ToP / Non-ToP |
+| 困难负类 | Pure Proxy、Direct Tor；另含 Ordinary |
+| 数据与划分 | 349,891 流，四代理；域名/capture 双重隔离；确认 2,300 流 |
+| 结果 | 确认 macro-F1 99.45%，later 88.50%；固定 AND 的异质背景 FPR 3.14% |
+| 工程条件 | 完整流离线流程 16.0 流/秒；512B 重分段退化到 71.45%；不是首包早检 |
+| 证据 | [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]]，§III–VI、Table III/V/VI、Fig. 8 |
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | Tap Dance on Android External Storage: Covert Channels Built on File Operations | INFOCOM | [[2026-INFOCOM-Tap_Dance_on_Android_External_Storage__Covert_Channels_Built_on_File_Operations]] | DOI: 10.1109/INFOCOM59046.2026.11571343；摘要/正文候选证据待审核 |
+| 2026 | QuicReflo: Exploiting Multi-Flow Redundancy for Restoration-Free Covert Communication Over QUIC | TDSC | [[2026-TDSC-QuicReflo__Exploiting_Multi-Flow_Redundancy_for_Restoration-Free_Covert_Communication_Over_QUIC]] | DOI: 10.1109/TDSC.2026.3721648；摘要/正文候选证据待审核 |
+| 2026 | TridentDNS: Detecting Diverse DNS Tunnels Via Multidimensional Features | TDSC | [[2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Features]] | DOI: 10.1109/TDSC.2026.3741607；摘要/正文候选证据待审核 |
+| 2026 | Feign East, Strike West! Constructing Covert Channel on TLS 1.3 | TIFS | [[2026-TIFS-Feign_East_Strike_West_Constructing_Covert_Channel_on_TLS_1.3]] | DOI: 10.1109/TIFS.2026.3725552；摘要/正文候选证据待审核 |
+| 2026 | InvisiTunnel: Causality-Preserving Covert Communication over DoH through Request Substitution | TIFS | [[2026-TIFS-InvisiTunnel__Causality-Preserving_Covert_Communication_over_DoH_through_Request_Substitution]] | DOI: 10.1109/TIFS.2026.3744608；摘要/正文候选证据待审核 |
+| 2026 | Stego-Vector Driven Simultaneous Covert Channels in Streaming Applications | TIFS | [[2026-TIFS-Stego-Vector_Driven_Simultaneous_Covert_Channels_in_Streaming_Applications]] | DOI: 10.1109/TIFS.2026.3705932；摘要/正文候选证据待审核 |
+
+## 2026-11-17　2026-COSINT-北邮时金桥 学术报告线索
+
+[[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]]（第 13–14、26–31 页）将三类 Tor 混淆承载与 Malicious DoH 纳入五分类，背景含约 1.3 亿 TCP 流。适合跟踪 HTTPS 外观近似与随机化目标的困难负类。代理内部 Tor 存在性仍需同代理 Pure/ToP 真值及相应观测协议验证。
+
+
+## 2026-11-18　低基率判定与报告线索
+
+DHOR 的邻域拒判可以作为负类尾部的诊断。单流混淆类的低基率结果、同代理背景下的 ToP 检测和跨点配对需分别标注输出单位。按同等召回及覆盖率比较判定，并检查源阈值在异质背景中的行为。来源见 [[03-paper-notes/2026-COSINT-北邮时金桥|COSINT 汇报]] 第 18–31 页及 [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection|HAD]] §VII。

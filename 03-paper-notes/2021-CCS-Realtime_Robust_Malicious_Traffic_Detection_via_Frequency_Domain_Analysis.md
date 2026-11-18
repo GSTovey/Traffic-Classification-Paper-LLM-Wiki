@@ -22,7 +22,15 @@ dataset: "WIDE MAWI Gigabit骨干网流量 + 42种攻击数据集（含传统DoS
 code: "https://github.com/fuchuanpu/Whisper"
 relevance: "高频域特征用于恶意流量检测，具有信息损失有界性理论保证，对逃逸攻击鲁棒性强"
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-10-21"
+venue_factor: 1.0
+time_factor: 0.45
+citation_impact: 1.8
+composite_weight: 0.81
+internal_citation_count: 26
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # 0 - 基础信息表格

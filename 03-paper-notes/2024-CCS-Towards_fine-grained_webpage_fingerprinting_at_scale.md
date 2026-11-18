@@ -16,8 +16,8 @@ doi: "10.1145/3658644.3690211"
 url: ""
 pdf: "00-inbox/PDFs/2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale.pdf"
 mineru_md: "02-parsed-markdown/2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["网站指纹识别", "流量分类", "隐私攻击"]
 task: ["网页指纹识别", "多标签识别", "细粒度流量分类"]
 method: ["metric-learning", "multi-label-classification", "data-augmentation", "proxy-based-loss", "sample-based-loss", "k-NN-classifier"]
@@ -27,7 +27,10 @@ dataset:
 code: "https://github.com/OscarWPF/Oscar"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale.md", "02-parsed-markdown/2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # Oscar: 面向大规模细粒度网页指纹攻击
@@ -472,3 +475,12 @@ Oscar 的核心思想是通过多标签度量学习变换特征空间，从混�
 - [[2026-NDSS-A_Hard-Label_Black-Box_Evasion_Attack_against_ML-based_Malicious_Traffic_Detection_Systems]]：NetMasquerade 是逃逸攻击，Oscar 是 WF 攻击；两者都关注 ML 流量分析系统的实际部署
 - **方法关联**：Oscar 的多标签度量学习 → Holmes 的监督对比学习 → MIETT 的 Flow Contrastive Learning，三种方法都通过变换特征空间提升分类性能
 - **任务关联**：Oscar（网页级 WPF）+ Holmes（早期 WF）共同推进 WF 攻击的实用性；Oscar 首次将 WF 从网站级扩展到网页级
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[website-fingerprinting]]、[[traffic-classification]]、[[contrastive-learning]]、[[encrypted-traffic-analysis]]、[[few-shot-traffic-learning]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

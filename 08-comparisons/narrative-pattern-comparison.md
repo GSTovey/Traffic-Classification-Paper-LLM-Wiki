@@ -2,7 +2,7 @@
 type: comparison
 name: narrative-pattern-comparison
 created: "2026-06-01"
-updated: "2026-06-10"
+updated: "2026-10-21"
 ---
 
 # 叙事模式横向对比表
@@ -29,6 +29,7 @@ updated: "2026-06-10"
 | TrafficMoE | 2026 | 加密流量分类 | 颠覆型 + 填补型 | 问题开头 | DFA（Disentangle-Filter-Aggregate）范式打破静态同质流水线，用稀疏 MoE 解耦 header/payload 异质建模 | 7 |
 | STAR | 2025 | 网站指纹（零样本） | 首次型 + 跨域迁移型 | 矛盾开头 | HTTPS/ECH 加密隐私仍可被语义泄漏攻破——将 WF 重构为零样本跨模态检索问题，无需目标网站流量 | 7 |
 | BiasSeeker (Bias in the Shadows) | 2026 | 加密流量分类（鲁棒性） | 颠覆型 + 评估驱动型 | 定义开头 | 预训练模型依赖 shortcut 特征泛化失败——首个模型无关、数据驱动的半自动 shortcut 检测框架 | 6 |
+| [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] | 2026 | ToP 检测 | 语义分解 + 证据递进 + 条件边界 | 代理改变可见路径和可观察行为 | 先定义两个条件，再验证可见信号、检测、结构贡献与分布迁移 | 7（另含附录 A–E） |
 
 > **叙事模式**：颠覆型 / 填补型 / 统一型 / 工程型 / 首次型
 >
@@ -176,3 +177,47 @@ updated: "2026-06-10"
 4. **问题分解式叙事适合多维度创新**：ASNet 从 word-level 和 packet-level 两个层面分别分析问题并给出对应方案，这种"问题-方案"配对结构清晰且有说服力——适合有多个创新点的论文
 5. **现象驱动叙事建立真实紧迫感**：Multi-ARCL 从 AppBrain 真实数据出发，用百万级应用/年下架的数字建立紧迫感，比纯学术 Gap 更有冲击力——适合解决实际部署问题的论文
 6. **统一框架叙事扩大影响力**：TrafficGPT 将分类和生成统一到一个框架中，强调通用性——适合基础模型类论文，可同时吸引不同子方向的关注
+
+## 2026-10-26 新入库动机与叙事候选（待审核）
+
+| 论文 | venue/年份 | 动机模式 | 证据位置 |
+|---|---|---|---|
+| HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields | INFOCOM 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Synecdoche: Efficient and Accurate In-Network Traffic Classification via Direct Packet Sequential Pattern Matching | INFOCOM 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| A Unified Oversampling-Based Imbalance Processing Framework for Network Traffic Anomaly Detection | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Behavioral Evidence-Based Hierarchical Decision Refinement for Encrypted Malicious Traffic Classification in Decentralized Data Circulation | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Drift-Aware Adaptive Website Fingerprinting | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification | TDSC 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| QuicReflo: Exploiting Multi-Flow Redundancy for Restoration-Free Covert Communication Over QUIC | TDSC 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| RearView: Secure Two-Stage Malicious Traffic Identification with Dynamic Relationship Awareness | TDSC 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| TridentDNS: Detecting Diverse DNS Tunnels Via Multidimensional Features | TDSC 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| InvisiTunnel: Causality-Preserving Covert Communication over DoH through Request Substitution | TIFS 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| Two Heads Are Better Than One: Models-to-Model Learning for Encrypted Traffic Analysis | TIFS 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| Two Heads Are Not Better Than One: Continual Learning From Multiple Models for Encrypted Traffic Analysis | TIFS 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning | TON 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Fighting the Enemy Within: Traffic Semantics-Driven Framework Against Noisy Labels for Robust Traffic Classification | TON 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network | TON 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| Making the Best of Both Worlds: Universal Perturbations for Live Black-Box Evasion Against NIDS in Encrypted Traffic | TON 2026 | 新攻击面或通信机制 | 摘要/引言，待正文复核 |
+| SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer | TON 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+| When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection | TON 2026 | 性能/泛化改进 | 摘要/引言，待正文复核 |
+
+
+## 2026-11-18　L3 论文叙事案例
+
+| 论文 | 开篇张力 | 论证与实验结构 |
+| --- | --- | --- |
+| [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | 分离训练和检测 → 联合重构 | 从分离训练与检测的错位提出共享重构目标。消融把可比较的两个因素定义为局部图与批内注意力，并用两类规模的数据展示它们的边际收益。部署讨论进一步拆开前向时间和整条观测链路。 |
+| [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 端侧代价 → 分解输入、算子与执行 | 先将表面上的通用性/效率冲突分解到前处理、架构与执行，再以局部性观测支持卷积选择。最后用同设备负载扫描和完成量验证端到端收益。 |
+| [[03-paper-notes/2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency\|SaTor]] | 电路时延与中继选择随机性 → 底层链路 | 从降低时延与保持中继随机性的矛盾提出底层链路选择。先校准仿真再扫部署覆盖，最后将时延收益和可见性分别讨论。 |
+| [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 多币种明密文与行为混淆 → 两层表示 | 由明密文并存及多币种会话相似引出两级表示。主表对照总体效果，错误矩阵和消融定位信号来源，最后以训练时间讨论部署成本。 |
+| [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] | 原 IDS 受变化影响 → 跨视角补充分数 | 论文先通过特征分区提出正常样本跨视角一致的假设，再用分层表示实现防御。独立防御、附加检测和时间漂移各用相应主结果，FAR 的恢复另列目标数据访问。 |
+| [[03-paper-notes/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures\|PS-ML]] | 计数饱和与大流稀缺 → 查询侧专门化 | 从 RatioSketch 的按域失效和大流样本稀缺出发，以丰富查询信息和专用模型回应两种误差来源。按内存、时间和跨域报告，同时保留写入与查询的区别。 |
+| [[03-paper-notes/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks\|SEDMS]] | 全量遥测负担和统计变化 → 摘要与更新 | 从全量遥测的内存/通信负担与固定子集的陈旧性出发，给出摘要与更新两项机制。实验分别检验判别性、保留比例、速度和分布变化。 |
+| [[03-paper-notes/2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence\|Threat2Traffic]] | 从行为覆盖缺口拆分采集失败 | 采集缺口引出条件证据与配置验证两类失败。正文依次交代阶段指标、源隔离对照、消融和产出，最后用失败样本厘清语料覆盖。 |
+| [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion\|Contorter]] | 检测依赖关系 → 区分图的语义与判定 | 论证先从强上下文为何有助检测转到它的可变性。节点级和图级结果分开呈现，切分、权限与标注范围的差异决定结论边界。 |
+| [[03-paper-notes/2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements\|CenRL]] | 固定测量预算 → 按反馈选择 | 受控部分将固定预算和动态变化分开验证。真实部署同时改变站点选择范围和调度，写作时补上这一点，避免把全部收益归因于 UCB。 |
+| [[03-paper-notes/2026-S&P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_Descriptor_Flood\|Descriptors of Exposure]] | 缓存计量偏差 → 进程/服务资源 | 论文从组件内存异常推导服务影响，夹杂实测与估计。可借鉴按组件、服务与网络层组织结果，再用审稿疑问核对中间推断。 |
+| [[03-paper-notes/2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR\|SIR]] | 多语言语义差异 → 统一状态 | 先把语言差异写成可检查的状态行为，再用每个前端的一个代表机制说明如何统一表达。资源表提供工程比较的输入，部署收益由后续平台实测回答。 |
+| [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] | 共享模型受分辨率差异影响 → 阶段解耦 | 文章从多尺度重构过渡到多任务架构。主比较、去阶段消融、联合训练和跨拓扑是四个不同证据，不能用一个平均赢家概括。 |

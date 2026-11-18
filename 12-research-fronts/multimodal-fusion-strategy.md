@@ -90,3 +90,18 @@ related_methods:
 - [[traffic-foundation-model]]
 - [[claims-index]] — 相关 claims: #11, #19
 - [[contradictions]] — 相关矛盾: "MoE vs SSM vs Transformer 架构选择之争"
+
+## 2026-10-26 新入库候选证据（pending_review）
+
+| 年份 | 论文 | venue | 方向 | 条件边界 |
+|---:|---|---|---|---|
+| 2026 | PacketLoom: A Unified Preprocessing Framework for Multi-Modal Network Traffic Analysis | INFOCOM | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+| 2026 | GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | TDSC | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+| 2026 | Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning | TON | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+
+
+## 2026-11-18　待审核的新增证据链
+
+| 年份 | 论文 | 方向 | 关联及适用条件 | 证据位置 | 状态 |
+| --- | --- | --- | --- | --- | --- |
+| 2026 | [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 条件支持 | 同数据的门控/简单融合消融，需按协议分层 | §IV-D、§V-G 图 8 | EV-20261118-CRYPTO-MODAL · pending_review |

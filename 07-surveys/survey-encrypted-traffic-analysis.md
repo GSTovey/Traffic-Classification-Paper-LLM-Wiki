@@ -3,7 +3,7 @@ type: survey
 topic: "Encrypted Traffic Analysis（加密流量分析综述）"
 status: evolving
 created: "2026-05-27"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Encrypted Traffic Analysis（加密流量分析综述）
@@ -58,22 +58,22 @@ updated: "2026-09-19"
 
 ## 3. 技术分类
 
-| 类别 | 核心思想 | 代表论文 | 优点 | 局限 |
-|---|---|---|---|---|
-| **传统机器学习 + 手工特征** | 从加密流量中提取统计特征（包大小均值/方差/分位数、包间隔时间、突发模式等），使用 RF/SVM/k-NN 等分类器 | CUMUL (Panchenko et al., 2016); AppScanner (Taylor et al., 2018) | 可解释性强、训练快、计算成本低、在正确评估下仍优于深度学习 | 依赖专家经验进行特征工程、泛化能力有限、难以应对海量类别 |
-| **深度学习（CNN）** | 将流量转换为 1D 序列或 2D 图像，利用 CNN 自动提取局部特征 | DeepFingerprinting (Sirinam et al., 2018); FGFR-Net (Zhang et al., 2026) | 自动特征提取、局部模式捕获能力强、计算效率较高 | 感受野有限、可能忽略全局上下文信息、需固定输入长度 |
-| **深度学习（RNN/LSTM）** | 将流量序列输入 RNN/GRU/LSTM 网络，端到端学习特征并分类 | FS-Net (Liu et al., 2019); Prasse et al. (2019) | 自动特征提取、建模长期依赖、端到端训练 | 训练较慢、难以并行化、对超长序列存在梯度问题 |
-| **深度学习（GNN）** | 将流量交互建模为图结构，使用 GNN 提取特征 | GraphDApp (Shen et al., 2021) | 隐式保留 direction/length/ordering/burst 多维信息、无需手工特征 | 计算复杂度较高、图构建方式影响表示质量 |
-| **预训练模型（BERT 类）** | 将流量字节序列视为类文本 token，使用 Masked Language Modeling 进行双向编码器预训练 | ET-BERT (Lin et al., 2022); PERT; TrafficFormer | 捕获双向上下文依赖、成熟的预训练-微调范式、few-shot 能力强 | 自注意力二次复杂度、预训练计算成本高、表征质量存疑 |
-| **预训练模型（MAE/ViT 类）** | 将流量表示为二维矩阵，使用 Masked Autoencoder 范式进行高比例掩码重建预训练 | YaTC (AAAI 2023); Flow-MAE | 流量字节更像像素而非词汇、高掩码率验证流量数据高冗余性 | 固定矩阵尺寸限制灵活性、预训练阶段与微调阶段不一致 |
-| **预训练模型（SSM 类）** | 使用 Mamba 等状态空间模型替代 Transformer，以线性时间复杂度建模流量序列 | NetMamba+ (Wang et al., 2026) | 线性复杂度、推理效率高（比 Transformer 高 1.7 倍）、内存占用低 | 在网络流量领域验证尚不充分、单向建模可能遗漏部分信息 |
-| **协议头特征 + 浅层模型** | 仅从协议头部字段提取特征，忽略加密 payload，使用浅层 ML 模型 | Sweet Danger (Zhao et al., 2025) 中的 Shallow Baseline | 在正确评估下性能最优、计算效率高、可解释性强 | 特征设计仍需专家知识、难以利用 payload 长度以外的信息 |
-| **多模态融合** | 将流量划分为多种互补模态（如 payload byte stream + packet length sequence），分别预训练后融合 | MM4flow (CCS 2025); tFusion (CCS 2025) | 兼顾内容信息和行为信息、在加密隧道等任务上优势显著 | 计算成本高（双模型 + 融合模块）、模态选择仍需探索 |
-| **多实例 Transformer** | 将 flow 中每个 packet 视为独立实例，通过 Two-Level Attention（Packet Attention + Flow Attention）分层建模 token 级和 packet 级关系 | MIETT (Chen et al., AAAI 2025) | 层次化建模符合流量结构、计算效率优于扁平化方案、专用预训练任务（PRPP+FCL） | Packet 数量固定、预训练-微调不一致、packet 级 encoder 冻结限制端到端优化 |
-| **无预训练方法** | 直接使用预训练 BERT 并通过流量特定适配模块（词义聚合 + 语义分离）快速适配，无需从头预训练 | ASNet (Peng et al., TIFS 2025) | 无需预训练大幅降低计算成本、WSA 保持完整词义、CSS 显式分离类别语义空间 | 依赖 BERT 的通用语言知识、流量特定预训练的长期价值尚不明确 |
-| **异质性感知 MoE** | 将头部和载荷解耦为独立 MoE 分支，通过不确定性感知过滤噪声 token、路由引导条件聚合跨模态特征 | TrafficMoE (He et al., 2026) | 显式建模模态异质性、自适应融合、稀疏计算高效 | 三阶段 MoE 结构参数量较大、步幅分割可能引入边界效应 |
-| **捷径检测与评估批判** | 通过调整互信息（AMI）统计分析直接在原始二进制流量上检测数据集特定的捷径特征，揭示模型依赖虚假关联的问题 | BiasSeeker (Wang et al., 2026); Sweet Danger (Zhao et al., 2025) | 模型无关、数据驱动、系统分类捷径特征 | 需要领域知识进行特征分类、半自动化 |
-| **零样本/跨模态方法** | 将流量分析重新定义为跨模态检索问题，通过学习模态间的对齐关系实现对未见类别的泛化 | STAR (2025); Swallow (2025) | 无需目标类别的流量样本、可扩展性强 | 依赖高质量的语义侧信息获取、跨模态对齐的理论基础仍在探索中 |
+| 类别                   | 核心思想                                                                                                       | 代表论文                                                                     | 优点                                               | 局限                                               |
+| -------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
+| **传统机器学习 + 手工特征**    | 从加密流量中提取统计特征（包大小均值/方差/分位数、包间隔时间、突发模式等），使用 RF/SVM/k-NN 等分类器                                                 | CUMUL (Panchenko et al., 2016); AppScanner (Taylor et al., 2018)         | 可解释性强、训练快、计算成本低、在正确评估下仍优于深度学习                    | 依赖专家经验进行特征工程、泛化能力有限、难以应对海量类别                     |
+| **深度学习（CNN）**        | 将流量转换为 1D 序列或 2D 图像，利用 CNN 自动提取局部特征                                                                        | DeepFingerprinting (Sirinam et al., 2018); FGFR-Net (Zhang et al., 2026) | 自动特征提取、局部模式捕获能力强、计算效率较高                          | 感受野有限、可能忽略全局上下文信息、需固定输入长度                        |
+| **深度学习（RNN/LSTM）**   | 将流量序列输入 RNN/GRU/LSTM 网络，端到端学习特征并分类                                                                         | FS-Net (Liu et al., 2019); Prasse et al. (2019)                          | 自动特征提取、建模长期依赖、端到端训练                              | 训练较慢、难以并行化、对超长序列存在梯度问题                           |
+| **深度学习（GNN）**        | 将流量交互建模为图结构，使用 GNN 提取特征                                                                                    | GraphDApp (Shen et al., 2021)                                            | 隐式保留 direction/length/ordering/burst 多维信息、无需手工特征 | 计算复杂度较高、图构建方式影响表示质量                              |
+| **预训练模型（BERT 类）**    | 将流量字节序列视为类文本 token，使用 Masked Language Modeling 进行双向编码器预训练                                                  | ET-BERT (Lin et al., 2022); PERT; TrafficFormer                          | 捕获双向上下文依赖、成熟的预训练-微调范式、few-shot 能力强               | 自注意力二次复杂度、预训练计算成本高、表征质量存疑                        |
+| **预训练模型（MAE/ViT 类）** | 将流量表示为二维矩阵，使用 Masked Autoencoder 范式进行高比例掩码重建预训练                                                            | YaTC (AAAI 2023); Flow-MAE                                               | 流量字节更像像素而非词汇、高掩码率验证流量数据高冗余性                      | 固定矩阵尺寸限制灵活性、预训练阶段与微调阶段不一致                        |
+| **预训练模型（SSM 类）**     | 使用 Mamba 等状态空间模型替代 Transformer，以线性时间复杂度建模流量序列                                                              | NetMamba+ (Wang et al., 2026)                                            | 线性复杂度、推理效率高（比 Transformer 高 1.7 倍）、内存占用低         | 在网络流量领域验证尚不充分、单向建模可能遗漏部分信息                       |
+| **协议头特征 + 浅层模型**     | 仅从协议头部字段提取特征，忽略加密 payload，使用浅层 ML 模型                                                                       | Sweet Danger (Zhao et al., 2025) 中的 Shallow Baseline                     | 在正确评估下性能最优、计算效率高、可解释性强                           | 特征设计仍需专家知识、难以利用 payload 长度以外的信息                  |
+| **多模态融合**            | 将流量划分为多种互补模态（如 payload byte stream + packet length sequence），分别预训练后融合                                      | MM4flow (CCS 2025); tFusion (CCS 2025)                                   | 兼顾内容信息和行为信息、在加密隧道等任务上优势显著                        | 计算成本高（双模型 + 融合模块）、模态选择仍需探索                       |
+| **多实例 Transformer**  | 将 flow 中每个 packet 视为独立实例，通过 Two-Level Attention（Packet Attention + Flow Attention）分层建模 token 级和 packet 级关系 | MIETT (Chen et al., AAAI 2025)                                           | 层次化建模符合流量结构、计算效率优于扁平化方案、专用预训练任务（PRPP+FCL）        | Packet 数量固定、预训练-微调不一致、packet 级 encoder 冻结限制端到端优化 |
+| **无预训练方法**           | 直接使用预训练 BERT 并通过流量特定适配模块（词义聚合 + 语义分离）快速适配，无需从头预训练                                                          | ASNet (Peng et al., TIFS 2025)                                           | 无需预训练大幅降低计算成本、WSA 保持完整词义、CSS 显式分离类别语义空间          | 依赖 BERT 的通用语言知识、流量特定预训练的长期价值尚不明确                 |
+| **异质性感知 MoE**        | 将头部和载荷解耦为独立 MoE 分支，通过不确定性感知过滤噪声 token、路由引导条件聚合跨模态特征                                                        | TrafficMoE (He et al., 2026)                                             | 显式建模模态异质性、自适应融合、稀疏计算高效                           | 三阶段 MoE 结构参数量较大、步幅分割可能引入边界效应                     |
+| **捷径检测与评估批判**        | 通过调整互信息（AMI）统计分析直接在原始二进制流量上检测数据集特定的捷径特征，揭示模型依赖虚假关联的问题                                                      | BiasSeeker (Wang et al., 2026); Sweet Danger (Zhao et al., 2025)         | 模型无关、数据驱动、系统分类捷径特征                               | 需要领域知识进行特征分类、半自动化                                |
+| **零样本/跨模态方法**        | 将流量分析重新定义为跨模态检索问题，通过学习模态间的对齐关系实现对未见类别的泛化                                                                   | STAR (2025); Swallow (2025)                                              | 无需目标类别的流量样本、可扩展性强                                | 依赖高质量的语义侧信息获取、跨模态对齐的理论基础仍在探索中                    |
 
 ## 4. 发展脉络
 
@@ -444,3 +444,71 @@ TrafficMoE (2026) 提出了解耦-过滤-聚合（DFA）范式，首次将稀疏
 ### 2026-09-29 新增证据
 - GAN-based Tor obfuscated traffic identification 聚焦类别不平衡下的生成增强；具体增益暂不纳入定量共识，因正文证据尚未完成核验。
 
+## 2026-10-21：NestTor——嵌套目标、分解决策与纵向边界
+
+[[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]]（IEEE TNSM 2026）将 ToP 识别组织为两个独立条件：代理门控区分 ToP/Pure Proxy 与 Ordinary/Direct Tor，内层模型在代理域区分 ToP 与 Pure Proxy。完整双向流的 62 维 base 与 37 维阶段统计不解析加密载荷，也不恢复 Tor cell。
+
+其证据链依次为跨代理协议审计、域名/capture 隔离确认、匹配结构对照与跨分布评估。2,300 流确认 macro-F1 为 99.45%，原生最强外部基线 FS-Net 为 87.46%；共用门控时 FS-Net 为 99.50%，差值区间跨零。later 23,374 流为 88.50%，512B 重分段为 71.45%，完整离线处理为 16.0 流/秒。综述应将收益归因于任务与结构条件，分别报告模型吞吐、系统吞吐及开放背景误报，不写成普遍鲁棒的早期检测方法。依据：§IV–VI、Fig. 5/6/8、Tables III/V/VI。
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields | INFOCOM | [[2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classification_Model_Based_on_Packet_Header_Fields]] | DOI: 10.1109/INFOCOM59046.2026.11571583；摘要/正文候选证据待审核 |
+| 2026 | PP-OpenNet: Privacy-Preserved Open Set Classification for Network Traffic | INFOCOM | [[2026-INFOCOM-PP-OpenNet__Privacy-Preserved_Open_Set_Classification_for_Network_Traffic]] | DOI: 10.1109/INFOCOM59046.2026.11571190；摘要/正文候选证据待审核 |
+| 2026 | PacketLoom: A Unified Preprocessing Framework for Multi-Modal Network Traffic Analysis | INFOCOM | [[2026-INFOCOM-PacketLoom__A_Unified_Preprocessing_Framework_for_Multi-Modal_Network_Traffic_Analysis]] | DOI: 10.1109/INFOCOM59046.2026.11571397；摘要/正文候选证据待审核 |
+| 2026 | Practical VPN Fingerprinting using Coarse Inference of Field Specifications in Data Channels | INFOCOM | [[2026-INFOCOM-Practical_VPN_Fingerprinting_using_Coarse_Inference_of_Field_Specifications_in_Data_Channels]] | DOI: 10.1109/INFOCOM59046.2026.11571535；摘要/正文候选证据待审核 |
+| 2026 | Synecdoche: Efficient and Accurate In-Network Traffic Classification via Direct Packet Sequential Pattern Matching | INFOCOM | [[2026-INFOCOM-Synecdoche__Efficient_and_Accurate_In-Network_Traffic_Classification_via_Direct_Packet_Sequential_Pattern_Matching]] | DOI: 10.1109/INFOCOM59046.2026.11571501；摘要/正文候选证据待审核 |
+| 2026 | A Unified Oversampling-Based Imbalance Processing Framework for Network Traffic Anomaly Detection | TDSC | [[2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Network_Traffic_Anomaly_Detection]] | DOI: 10.1109/TDSC.2026.3732576；摘要/正文候选证据待审核 |
+| 2026 | Behavioral Evidence-Based Hierarchical Decision Refinement for Encrypted Malicious Traffic Classification in Decentralized Data Circulation | TDSC | [[2026-TDSC-Behavioral_Evidence-Based_Hierarchical_Decision_Refinement_for_Encrypted_Malicious_Traffic_Classification_in_Decentralized_Data_Circulation]] | DOI: 10.1109/TDSC.2026.3731286；摘要/正文候选证据待审核 |
+| 2026 | Drift-Aware Adaptive Website Fingerprinting | TDSC | [[2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting]] | DOI: 10.1109/TDSC.2026.3723526；摘要/正文候选证据待审核 |
+| 2026 | Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | TDSC | [[2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses]] | DOI: 10.1109/TDSC.2026.3722663；摘要/正文候选证据待审核 |
+| 2026 | GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | TDSC | [[2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Classification]] | DOI: 10.1109/TDSC.2026.3741875；摘要/正文候选证据待审核 |
+| 2026 | Generating Adversarial Network Traffic via Multi-Model Guided Adversarial Diffusion | TDSC | [[2026-TDSC-Generating_Adversarial_Network_Traffic_via_Multi-Model_Guided_Adversarial_Diffusion]] | DOI: 10.1109/TDSC.2026.3740103；摘要/正文候选证据待审核 |
+| 2026 | Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification | TDSC | [[2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Traffic_Classification]] | DOI: 10.1109/TDSC.2026.3725472；摘要/正文候选证据待审核 |
+| 2026 | RearView: Secure Two-Stage Malicious Traffic Identification with Dynamic Relationship Awareness | TDSC | [[2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynamic_Relationship_Awareness]] | DOI: 10.1109/TDSC.2026.3720570；摘要/正文候选证据待审核 |
+| 2026 | Two Heads Are Better Than One: Models-to-Model Learning for Encrypted Traffic Analysis | TIFS | [[2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted_Traffic_Analysis]] | DOI: 10.1109/TIFS.2026.3723131；摘要/正文候选证据待审核 |
+| 2026 | Two Heads Are Not Better Than One: Continual Learning From Multiple Models for Encrypted Traffic Analysis | TIFS | [[2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Models_for_Encrypted_Traffic_Analysis]] | DOI: 10.1109/TIFS.2026.3712230；摘要/正文候选证据待审核 |
+| 2026 | Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning | TON | [[2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrastive_Self-Supervised_Learning]] | DOI: 10.1109/TON.2026.3737411；摘要/正文候选证据待审核 |
+| 2026 | Fighting the Enemy Within: Traffic Semantics-Driven Framework Against Noisy Labels for Robust Traffic Classification | TON | [[2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_Noisy_Labels_for_Robust_Traffic_Classification]] | DOI: 10.1109/TON.2026.3739909；摘要/正文候选证据待审核 |
+| 2026 | KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network | TON | [[2026-TON-KAN-Vis__Efficient_and_Lightweight_Visual_Technique_for_Network_Traffic_Classification_Using_KolmogorovArnold_Network]] | DOI: 10.1109/TON.2026.3722338；摘要/正文候选证据待审核 |
+| 2026 | Making the Best of Both Worlds: Universal Perturbations for Live Black-Box Evasion Against NIDS in Encrypted Traffic | TON | [[2026-TON-Making_the_Best_of_Both_Worlds__Universal_Perturbations_for_Live_Black-Box_Evasion_Against_NIDS_in_Encrypted_Traffic]] | DOI: 10.1109/TON.2026.3710207；摘要/正文候选证据待审核 |
+| 2026 | SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer | TON | [[2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision_Transformer]] | DOI: 10.1109/TON.2026.3699540；摘要/正文候选证据待审核 |
+| 2026 | When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection | TON | [[2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection]] | DOI: 10.1109/TON.2026.3674624；摘要/正文候选证据待审核 |
+
+## 2024–2026 四大安全顶会批次：加密流量与代理分析（2026-11-03）
+
+本批次补齐以下可直接用于方法比较和证据追踪的论文入口：
+
+### 2024
+- [[2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum]]（NDSS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor]]（NDSS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+### 2025
+- [[2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dynamic_Network_Conditions]]（CCS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers]]（IEEE S&P 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data]]（S&P）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation]]（USENIX Security 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+### 2026
+- [[2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection]]（NDSS 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift]]（NDSS 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic]]（USENIX Security 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+**使用边界**：上述入口用于定位论文和方法，不把单篇作者声称直接当作领域共识；数值结果须回到对应 MinerU 原文核对。
+
+## 2026-11-17　2026-COSINT-北邮时金桥 学术报告线索
+
+[[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]] 可归入“低基率下的检索式识别与高效跨点关联”。DHOR 的主比较、来源留出及消融分别使用不同 λ，引用时逐项标注。DHBCorr 的精度测试、规模扫描及吞吐测试采用不同流数量，分别记录匹配质量与计算代价。材料类型为学术报告，发表及代码状态为 unknown。
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 前 5 包局部卷积预训练模型部署在 BlueField-3。按新流到达率统计完成流数和平均/P99 分析时延。 |
+| [[03-paper-notes/2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency\|SaTor]] | 卫星/地面 RTT 实测校准与部署仿真。给时序特征提供异构路径变量，未直接评估分类或关联。 |
+| [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 短会话的内容/行为融合，作者在混合明密文的多币种基准上报告 macro F1 95.02%。 |
+| [[03-paper-notes/2026-COSINT-北邮时金桥\|COSINT 汇报]] | DHOR 第 18–31 页涉及背景尾部和拒判，关联 HAD 的正常性漂移与 GraphIDS 的阈值条件。DHBCorr 第 46–51 页按候选对测量，关联 SaTor 的 RTT 变量及 Nepco、PS-ML 的成本分解。 |

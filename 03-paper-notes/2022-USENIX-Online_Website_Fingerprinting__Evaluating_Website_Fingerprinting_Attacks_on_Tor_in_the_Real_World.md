@@ -24,7 +24,15 @@ dataset:
 code: unknown
 relevance: high
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-10-21"
+venue_factor: 1.0
+time_factor: 0.6
+citation_impact: 1.8
+composite_weight: 1.08
+internal_citation_count: 28
+citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
+citation_count_verified: "2026-10-21"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # Online Website Fingerprinting: Evaluating Website Fingerprinting Attacks on Tor in the Real World

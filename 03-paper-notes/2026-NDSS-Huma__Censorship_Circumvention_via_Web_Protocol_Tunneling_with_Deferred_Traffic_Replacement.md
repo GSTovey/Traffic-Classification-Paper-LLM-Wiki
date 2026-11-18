@@ -9,7 +9,7 @@ doi: unknown
 url: unknown
 pdf: ""
 mineru_md: "02-parsed-markdown/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement.md"
-status: processed
+status: deep-analyzed
 reading_level: L3
 research_area: ["censorship circumvention", "web protocol tunneling", "traffic analysis resistance", "privacy-enhancing technologies"]
 task: ["censorship circumvention", "covert communication", "traffic fingerprinting resistance", "behavioral realism"]
@@ -18,7 +18,10 @@ dataset: ["Tranco top-100", "Kulshrestha et al. browsing dataset (2,148 users)"]
 code: "https://doi.org/10.5281/zenodo.17790334"
 relevance: high
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement.md", "02-parsed-markdown/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # Huma: Censorship Circumvention via Web Protocol Tunneling with Deferred Traffic Replacement
@@ -534,3 +537,12 @@ OUS核心是无头浏览器，模拟页面访问、点击链接、重新访问�
 | 实验组织逻辑 | 按评估目标分节，每个目标独立验证 | 适用于多维度评估论文 |
 | 局限性讨论方式 | 在实验中自然呈现（如行为真实性AUC 0.87） | 适用于需要诚实评估的论文 |
 | 最值得借鉴的一句话/一段结构 | "By deferring covert data transmissions, Huma allows a website...to first respond with unmodified content" | 一句话清晰传达核心创新 |
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[censorship-circumvention]]、[[tunnel-detection]]、[[encrypted-traffic-analysis]]、[[traffic-classification]]、[[survey-encrypted-traffic-analysis]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

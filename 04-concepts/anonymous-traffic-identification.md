@@ -14,7 +14,7 @@ tags:
   - network-security
   - privacy
 created: "2026-06-15"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Anonymous Traffic Identification（匿名流量识别）
@@ -118,3 +118,26 @@ updated: "2026-09-19"
 - 匿名网络（如 Tor）不断演进（新的混淆协议、新的路由策略），分类方法如何保持时效性？
 - 跨匿名网络（Tor、I2P、VPN）的统一分类方法是否可行？
 - 如何在保护用户隐私的前提下进行匿名流量研究？
+
+## 2026-10-21：NestTor 的嵌套匿名通信识别
+
+[[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] 识别 Tor-over-Proxy 的存在性，而非网站身份或外层代理本身。四种外层代理为 Shadowsocks、Trojan、VMess、VLESS；四类语义共同区分“只有代理”“只有 Tor”“两者皆有”“两者皆无”。完整双向流、无 payload/标识输入、域名与 capture 隔离是该结果的条件。确认集 99.45% macro-F1，later 88.50%，不据此推断单向或任意未见封装能力。依据：§III-A、§V-A、Table III/V。
+
+## 2026-11-17　2026-COSINT-北邮时金桥 学术报告线索
+
+[[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]]（第 6、13–14、33 页）明确给出单流五分类和双观测点流关联两个任务。五分类目标包含 Obfs4、Meek、WebTunnel、Malicious DoH 与背景，关联输出为同一会话的跨点对应关系。按报告型材料登记，适合研究低基率混淆识别与大规模关联。
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2026-S&P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_Descriptor_Flood\|Descriptors of Exposure]] | Tor 描述符缓存的可用性与隐私风险，适合作为中继或服务缺失的条件背景。与流量分类任务的统计单位分开。 |
+| [[03-paper-notes/2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency\|SaTor]] | 在既有中继选择下改变底层传输，观察 RTT/尾时延的异质性。为匿名流量和跨点关联研究提供路径分层条件。 |
+| [[03-paper-notes/2026-COSINT-北邮时金桥\|COSINT 汇报]] | 交叉阅读 DHOR 的单流分类与 DHBCorr 的双点匹配。SaTor 的 RTT 测量和节点可用性研究为两类任务增加了观察条件。 |
+
+## 2026-11-18　深读证据补充
+
+| 新增论文 | 联动点 | 证据口径与可迁移结论 |
+| --- | --- | --- |
+| [[03-paper-notes/2026-S&P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_Descriptor_Flood\|Descriptors of Exposure]] | 服务层观测缺失 | 跟踪服务可用性时区分组件实测与网络覆盖估计，按共识选择权重理解样本缺失。与 SaTor 的 RTT 分层并列解释。 |

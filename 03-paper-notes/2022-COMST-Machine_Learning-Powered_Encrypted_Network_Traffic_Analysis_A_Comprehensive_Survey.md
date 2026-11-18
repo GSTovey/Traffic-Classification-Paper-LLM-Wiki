@@ -27,6 +27,11 @@ code: ""
 relevance: "high"
 created: "2026-05-27"
 updated: "2026-05-27"
+internal_citation_count: 20
+citation_impact: 1.8
+composite_weight: 0.702
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # Machine Learning-Powered Encrypted Network Traffic Analysis: A Comprehensive Survey

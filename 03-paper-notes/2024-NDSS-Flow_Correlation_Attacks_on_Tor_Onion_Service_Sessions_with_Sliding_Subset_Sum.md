@@ -477,3 +477,7 @@ DeepCorr/DeepCoFFEA 使用深度学习进行流量关联，针对 clearnet 流�
 | 实验组织逻辑 | 从理想条件到实际部署的逐步验证 | 渐进式验证 |
 | 局限性讨论方式 | 提出 4 种具体对策 | 攻防双向思考 |
 | 最值得借鉴的一句话/一段结构 | "our SUMo classifier yields a throughput two orders of magnitude higher than DeepCoFFEA" | 用数量级对比突出优势 |
+
+## 2026-11 评估补充
+
+以固定数据、检测单位与参考真值对照误判，并按数据来源核对可迁移性。相关证据入口见 [[09-claims/claims-index]]。

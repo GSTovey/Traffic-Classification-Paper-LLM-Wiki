@@ -9,7 +9,7 @@ doi: "unknown"
 url: "https://www.usenix.org/conference/usenixsecurity26/presentation/lee-jiho"
 pdf: "00-inbox/PDFs/2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic.md"
-status: processed
+status: deep-analyzed
 reading_level: L3
 research_area: [anonymous-traffic-identification]
 task: [traffic-classification]
@@ -18,7 +18,10 @@ dataset: [自采集 VR 应用流量（75 款应用 / 23 名用户）, BOXRR-23�
 code: "https://doi.org/10.5281/zenodo.20343460"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic.md", "02-parsed-markdown/2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # Motion in the Clear: Reconstructing VR User Behavior from Network Traffic
@@ -435,3 +438,12 @@ VR 的沉浸体验依赖高频运动遥测，而"低延迟"这一性能诉求把
 | 实验组织逻辑 | 双轨（breadth/depth）显式写出来，主动承认"正弦太简单" | 预判审稿人"cherry picking"质疑并先手设防 |
 | 局限性讨论方式 | 在 Threat Model 与 Discussion 两处主动列边界（加密失效、系统键盘、背景流量有限） | 把限制写进威胁模型而非只放结论前，提前封堵 |
 | 最值得借鉴的一句话/一段结构 | "serialization is not encryption…the serialization process preserves the correlation between input motion and output bytes"（§2.1）；以及 Observation 1/2 的编号化归纳 | 用两条编号 Observation 把测量结果直接转化为攻击设计前提，形成"测量→设计"的可引用链条 |
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[anonymous-traffic-identification]]、[[encrypted-traffic-analysis]]、[[traffic-classification]]、[[open-source-registry]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

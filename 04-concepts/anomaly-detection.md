@@ -148,3 +148,22 @@ updated: "2026-09-19"
 新增论文联动（2026-09-29）：UnDif 以跨样本不确定性偏差检测漂移异常；OPC UA 私有 5G 工作以控制面上下文做阈值自适应，均强调部署条件对误报的影响。
 - DNS响应操纵、DNS自放大与权威引擎验证构成DNS安全异常检测的三个层次：路径事件、基础设施风险、实现缺陷。
 
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | A Unified Oversampling-Based Imbalance Processing Framework for Network Traffic Anomaly Detection | TDSC | [[2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Network_Traffic_Anomaly_Detection]] | DOI: 10.1109/TDSC.2026.3732576；摘要/正文候选证据待审核 |
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | 在正常流图上联合训练一跳图编码与掩码重构；训练自监督，验证期仍需要标签选阈值。 |
+| [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion\|Contorter]] | 以系统审计溯源图为观测输入，给出 PIDS 上下文敏感性的证据。端点日志与流级网络数据分开比较。 |
+| [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] | ARI-LLM 的独立扩展稿。阶段专家支持多任务，矩阵插补的收益因数据集和指标而异。 |
+| [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] | 用特征分区和双编码器距离补充 IDS。严重时间漂移削弱正常参考，小量目标良性样本能在文中部分恢复。 |
+| [[03-paper-notes/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks\|SEDMS]] | 逐设备矩阵摘要和协方差误差触发用于遥测指标选择。记录保留率、下游质量与吞吐权衡。 |

@@ -3,7 +3,7 @@ type: research-front
 question: "深度表征学习模型在正确评估下是否仍有价值？"
 status: diverging
 created: "2026-06-21"
-last_updated: "2026-09-19"
+last_updated: "2026-10-21"
 related_concepts:
   - "[[traffic-representation-learning]]"
   - "[[traffic-foundation-model]]"
@@ -48,6 +48,7 @@ related_methods:
 | 2026 | TDDM-Melatt | arXiv | 反对（浅层胜出） | §5.3 Table 3/§5.6 Table 7：冻结预训练骨干下 ET-BERT/TrafficFormer/NetMamba/YaTC 在 TLS-120class 全面低于 0.25，均低于 76 维手工特征 + XGBoost 的 0.684 | 高（严格流级 7:1:2 划分 + 冻结编码器 + 去捷径匿名化） | 反对 |
 | 2026 | Colossus | arXiv | 支持预训练表征（含反例） | §V-C Table IV：预训练模型（YaTC 1.0000、ET-BERT 0.9316）远高于手工特征 SVM 的 CUMUL 0.7731；但非预训练深度模型 DF 0.5855 / Tik-Tok 0.5679 反低于 CUMUL | 高（per-visit split 防泄漏） | 支持 |
 | 2026 | BBQ | arXiv | 扩展（防御强度调节） | §5.3.5：轻防御（HTTPOS）下手工艺 k-FP 最强，重防御（FRONT/CL-Tamaraw/LLaMA）下 RobustFP-CNN/Holmes 等 CNN 最强；未防御时两类均 ≥0.9——优劣取决于防御扰动的类型与强度 | 中（5 数据集 × 5 攻击者 + 信息论泄漏估计） | 扩展 |
+| 2026 | [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] | TNSM | 支持任务条件化比较 | 原生 99.45% 对 FS-Net 87.46%；共用门控 FS-Net 99.50% 与 NestTor 差异 CI 跨零；同表示/总 RF 树预算支持独立边界 | 高（域名/capture 隔离与匹配结构）；非 frozen-encoder 表示纯对照 | 结构收益证据，不作普适深浅胜负 |
 
 ## 当前共识方向
 
@@ -106,3 +107,24 @@ related_methods:
 - **UnDif (WWW 2025)** 把异常判据从样本内重构误差转向证据空间不确定性，提示“表示优劣”需要和异常分数定义同时评估。
 - **FENIX (NSDI 2026)**、**SPLIDT (NSDI 2026)** 和 **SegSketch (WWW 2026)** 将模型比较推进到线速、资源和状态回流约束；离线 F1 不能单独代表网内可用性。
 - 当前判断：表征/浅层争论应同时报告模型容量、部署预算、状态维护和严格切分协议。
+
+## 2026-10-21：NestTor 同步判断
+
+状态保持 `diverging`。[[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] 增加“目标与判别结构必须匹配”的证据，不能与不同任务、模态或 frozen-encoder 协议直接合并。新增研究空白是如何在同一复合目标、同样条件分解与同样标签权限下单独比较表示；Auto Research 可据此设计隔离表示与结构贡献的对照。这里的设计建议不是已验证结果。
+
+## 2026-10-26 新入库候选证据（pending_review）
+
+| 年份 | 论文 | venue | 方向 | 条件边界 |
+|---:|---|---|---|---|
+| 2026 | HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields | INFOCOM | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+| 2026 | GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | TDSC | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+| 2026 | Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification | TDSC | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+| 2026 | KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network | TON | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+
+
+## 2026-11-18　待审核的新增证据链
+
+| 年份 | 论文 | 方向 | 关联及适用条件 | 证据位置 | 状态 |
+| --- | --- | --- | --- | --- | --- |
+| 2025 | [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | 条件支持及反例 | T-MAE、SimpleAE 和外部基线表随 v2、v3 变化 | §4.6 表 3 | EV-20261118-GRAPH-CAL · pending_review |
+| 2026 | [[03-paper-notes/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures\|PS-ML]] | 相邻任务 | 查询状态能否提供可用差异取决于计数碰撞，目标为流大小 | §VII-C/D 图 6、8–9 | EV-20261118-PSML-READ · pending_review |

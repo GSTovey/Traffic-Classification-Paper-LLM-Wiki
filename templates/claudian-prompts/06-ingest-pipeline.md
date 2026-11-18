@@ -229,6 +229,26 @@ python3 scripts/generate_bibliography.py --skip-api  # 从 bibliography.json 重
 7. **README 和 AGENTS 必须同步更新**：每次入库完成后自动检查并更新，不需要用户提醒
 8. **Git 提交仅在用户要求时执行**：不要自动 commit 或 push。`10-outputs/` 目录不参与版本控制
 
+## 研究判断门禁
+
+论文入库后的知识更新分为两层：
+
+### 自动同步
+
+- 追加论文笔记、来源链接和候选概念/方法/任务关联；
+- 重要主张写入 `09-claims/evidence-ledger.jsonl`，初始状态设为 `pending_review`；
+- 记录可能的跨论文关系、矛盾和研究前沿候选项；
+- 生成审核队列，不直接改变正式研究结论。
+
+### 人工审核后更新
+
+- 只有证据位置、条件、证据类型和反证均已核验，才可标记为 `verified`；
+- 只有 `verified` 记录才可更新 consensus_count、confidence_score 或研究前沿状态；
+- `contested` 记录进入 contradictions 或研究前沿反证区，不自动提高或降低共识；
+- 候选创新点必须经过 Research Landscape、Cross-paper Relations、Counterevidence Check 和 Testable Hypotheses 后，才能进入正式研究规划。
+
+正常论文入库不因普通字段缺失而阻断；仅当来源丢失、解析严重错误或重要证据不可追溯时，才标记为需要人工处理。
+
 ---
 
 ## 输出格式

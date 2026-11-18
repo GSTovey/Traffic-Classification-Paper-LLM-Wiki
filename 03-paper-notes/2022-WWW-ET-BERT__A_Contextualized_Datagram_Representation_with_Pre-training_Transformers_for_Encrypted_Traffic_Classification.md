@@ -27,7 +27,15 @@ dataset:
 code: "https://github.com/linwhitehat/ET-BERT"
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-29"
+updated: "2026-10-21"
+venue_factor: 0.85
+time_factor: 0.6
+citation_impact: 1.8
+composite_weight: 0.918
+internal_citation_count: 74
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # ET-BERT: A Contextualized Datagram Representation with Pre-training Transformers for Encrypted Traffic Classification

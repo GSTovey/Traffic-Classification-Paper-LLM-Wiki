@@ -19,6 +19,11 @@ code: "https://github.com/UniBuc/NetMamba"
 relevance: high
 created: "2026-05-27"
 updated: "2026-06-10"
+internal_citation_count: 1
+citation_impact: 1.0
+composite_weight: 0.65
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # NetMamba+: A Framework of Pre-trained Models for Efficient and Accurate Network Traffic Classification

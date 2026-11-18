@@ -160,3 +160,11 @@ Traffic Representation（流量表示）是指将原始二进制网络流量数�
 - 流量字节更像图像像素（90% 最优掩码率）还是自然语言词汇（<20% 最优掩码率）？两种范式的适用场景如何区分？
 - 多模态表示的最优模态组合是什么？不同下游任务是否需要不同的模态选择？
 - 能否设计统一的流量表示框架，同时支持分类、检测、生成等多种下游任务？
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | 在正常流图上联合训练一跳图编码与掩码重构；训练自监督，验证期仍需要标签选阈值。 |
+| [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 前 5 包局部卷积预训练模型部署在 BlueField-3。按新流到达率统计完成流数和平均/P99 分析时延。 |

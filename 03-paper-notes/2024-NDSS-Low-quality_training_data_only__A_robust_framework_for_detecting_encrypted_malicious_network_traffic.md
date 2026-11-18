@@ -18,8 +18,8 @@ doi: ""
 url: ""
 pdf: "00-inbox/PDFs/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic.pdf"
 mineru_md: "02-parsed-markdown/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area:
   - malicious-traffic-detection
   - encrypted-traffic-analysis
@@ -44,7 +44,15 @@ dataset:
 code: ""
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic.md", "02-parsed-markdown/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+internal_citation_count: 19
+citation_impact: 1.8
+composite_weight: 1.53
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # RAPIER: 仅低质量训练数据下的鲁棒加密恶意流量检测框架
@@ -511,3 +519,12 @@ RAPIER 的核心思想是利用正常和恶意流量在特征空间中的分布�
 | 核心洞察 | "normal data denser, malicious data sparser" | 从数据分布差异发现解题线索 |
 | 实验设计 | 6 种噪声率 × 3 种训练规模 × 4 种比例 = 大规模矩阵实验 | 系统化的参数空间扫描 |
 | 最值得借鉴的写法 | "encryption protocols prevent us from manually correcting these noises" — 用技术约束解释问题的不可回避性 | 约束驱动的问题定义 |
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[malicious-traffic-detection]]、[[encrypted-traffic-analysis]]、[[anomaly-detection]]、[[pre-training-finetuning]]、[[self-supervised-learning]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

@@ -266,3 +266,53 @@ updated: "2026-09-19"
 - [[2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking]]（2026 批量深度分析；证据需正文复核）
 
 - [[2026-TNSM-TunnelEye_An_Explainable_Framework_for_Real-Time_Detection_of_Malicious_DoH_Traffic_in_High-Speed_Backbone_Networks]]（2026 批量深度分析；证据需正文复核）
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | A Unified Oversampling-Based Imbalance Processing Framework for Network Traffic Anomaly Detection | TDSC | [[2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Network_Traffic_Anomaly_Detection]] | DOI: 10.1109/TDSC.2026.3732576；摘要/正文候选证据待审核 |
+| 2026 | Behavioral Evidence-Based Hierarchical Decision Refinement for Encrypted Malicious Traffic Classification in Decentralized Data Circulation | TDSC | [[2026-TDSC-Behavioral_Evidence-Based_Hierarchical_Decision_Refinement_for_Encrypted_Malicious_Traffic_Classification_in_Decentralized_Data_Circulation]] | DOI: 10.1109/TDSC.2026.3731286；摘要/正文候选证据待审核 |
+| 2026 | Generating Adversarial Network Traffic via Multi-Model Guided Adversarial Diffusion | TDSC | [[2026-TDSC-Generating_Adversarial_Network_Traffic_via_Multi-Model_Guided_Adversarial_Diffusion]] | DOI: 10.1109/TDSC.2026.3740103；摘要/正文候选证据待审核 |
+| 2026 | RearView: Secure Two-Stage Malicious Traffic Identification with Dynamic Relationship Awareness | TDSC | [[2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynamic_Relationship_Awareness]] | DOI: 10.1109/TDSC.2026.3720570；摘要/正文候选证据待审核 |
+| 2026 | Making the Best of Both Worlds: Universal Perturbations for Live Black-Box Evasion Against NIDS in Encrypted Traffic | TON | [[2026-TON-Making_the_Best_of_Both_Worlds__Universal_Perturbations_for_Live_Black-Box_Evasion_Against_NIDS_in_Encrypted_Traffic]] | DOI: 10.1109/TON.2026.3710207；摘要/正文候选证据待审核 |
+
+## 2024–2026 四大安全顶会批次：恶意与异常流量（2026-11-03）
+
+本批次补齐以下检测、鲁棒性与对抗分析论文入口：
+
+### 2024
+- [[2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packet_length_patterns]]（CCS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic]]（NDSS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+### 2025
+- [[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]]（ACM CCS 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane]]（NDSS 2025）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis]]（USENIX Security）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+### 2026
+- [[2026-NDSS-A_Hard-Label_Black-Box_Evasion_Attack_against_ML-based_Malicious_Traffic_Detection_Systems]]（NDSS）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+- [[2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning]]（USENIX Security 2026）：L3 笔记已完成；方法、实验、局限和证据边界见单篇笔记。
+
+**使用边界**：上述入口用于定位论文和方法，不把单篇作者声称直接当作领域共识；数值结果须回到对应 MinerU 原文核对。
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | 在正常流图上联合训练一跳图编码与掩码重构；训练自监督，验证期仍需要标签选阈值。 |
+| [[03-paper-notes/2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence\|Threat2Traffic]] | 新增采集语料需记录条件依赖、源隔离的行为参照和未采得样本，以免检测基准继承环境偏差。 |
+| [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion\|Contorter]] | 以系统审计溯源图为观测输入，给出 PIDS 上下文敏感性的证据。端点日志与流级网络数据分开比较。 |
+| [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] | 用特征分区和双编码器距离补充 IDS。严重时间漂移削弱正常参考，小量目标良性样本能在文中部分恢复。 |
+| [[03-paper-notes/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks\|SEDMS]] | 逐设备矩阵摘要和协方差误差触发用于遥测指标选择。记录保留率、下游质量与吞吐权衡。 |
+| [[03-paper-notes/2026-COSINT-北邮时金桥\|COSINT 汇报]] | 报告中的 DHOR 与 HAD 分别采用邻域和跨视角分数补判。并排比较时记录 FPR 分母、召回和可参与校准的数据。 |
+
+## 2026-11-18　深读证据补充
+
+| 新增论文 | 联动点 | 证据口径与可迁移结论 |
+| --- | --- | --- |
+| [[03-paper-notes/2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence\|Threat2Traffic]] | 源隔离与捕获覆盖 | 用家族抽样、来源分离和样本级行为覆盖审计语料构造。标注失败样本的缺失机制，避免把采集环境当成类别线索。 |
+| [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion\|Contorter]] | 上下文的条件稳健性 | 先核对节点和图两个层次及每个 PIDS 实际标签，主机溯源结论只能作为 NetFlow 图模型的邻域稳健性线索。 |

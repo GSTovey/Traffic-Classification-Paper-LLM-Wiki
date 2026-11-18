@@ -24,7 +24,15 @@ research_area: ["加密流量分类", "深度学习"]
 task: ["加密流量分类", "应用识别"]
 method: ["RNN", "GRU", "encoder-decoder"]
 created: "2026-05-27"
-updated: "2026-05-29"
+updated: "2026-10-21"
+venue_factor: 0.85
+time_factor: 0.25
+citation_impact: 1.8
+composite_weight: 0.3825
+internal_citation_count: 68
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # FS-Net: A Flow Sequence Network For Encrypted Traffic Classification

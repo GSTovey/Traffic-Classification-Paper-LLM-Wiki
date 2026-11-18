@@ -15,7 +15,7 @@ tags:
   - VPN
   - Tor
 created: "2026-05-27"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Encrypted Traffic Analysis（加密流量分析）
@@ -290,3 +290,36 @@ updated: "2026-09-19"
 ### 2026-09-29 联动更新
 - Tor混淆流量识别与WF防御共同提示：类别不平衡、网络动态性和攻击—防御适配应在同一评估框架中报告。
 
+## 2026-10-21：NestTor 的代理内部检测证据
+
+[[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] 在客户端至代理这一跳，使用完整双向 TCP 流的方向、TCP payload 长度和相对到达间隔构造 99 维行为表示，不解析载荷内容。2,300 条域名/capture 隔离确认集上 macro-F1 为 99.45%，later 23,374 流上为 88.50%。这说明该任务的元数据有判别力，不构成加密 payload 不可学习的独立证明。512B 重分段下为 71.45%，需保留包边界条件。证据：§III–IV、Table III/V、Fig. 8。
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | A Unified Oversampling-Based Imbalance Processing Framework for Network Traffic Anomaly Detection | TDSC | [[2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Network_Traffic_Anomaly_Detection]] | DOI: 10.1109/TDSC.2026.3732576；摘要/正文候选证据待审核 |
+| 2026 | Behavioral Evidence-Based Hierarchical Decision Refinement for Encrypted Malicious Traffic Classification in Decentralized Data Circulation | TDSC | [[2026-TDSC-Behavioral_Evidence-Based_Hierarchical_Decision_Refinement_for_Encrypted_Malicious_Traffic_Classification_in_Decentralized_Data_Circulation]] | DOI: 10.1109/TDSC.2026.3731286；摘要/正文候选证据待审核 |
+| 2026 | GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification | TDSC | [[2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Classification]] | DOI: 10.1109/TDSC.2026.3741875；摘要/正文候选证据待审核 |
+| 2026 | Generating Adversarial Network Traffic via Multi-Model Guided Adversarial Diffusion | TDSC | [[2026-TDSC-Generating_Adversarial_Network_Traffic_via_Multi-Model_Guided_Adversarial_Diffusion]] | DOI: 10.1109/TDSC.2026.3740103；摘要/正文候选证据待审核 |
+| 2026 | Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification | TDSC | [[2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Traffic_Classification]] | DOI: 10.1109/TDSC.2026.3725472；摘要/正文候选证据待审核 |
+| 2026 | RearView: Secure Two-Stage Malicious Traffic Identification with Dynamic Relationship Awareness | TDSC | [[2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynamic_Relationship_Awareness]] | DOI: 10.1109/TDSC.2026.3720570；摘要/正文候选证据待审核 |
+| 2026 | Two Heads Are Better Than One: Models-to-Model Learning for Encrypted Traffic Analysis | TIFS | [[2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted_Traffic_Analysis]] | DOI: 10.1109/TIFS.2026.3723131；摘要/正文候选证据待审核 |
+| 2026 | Two Heads Are Not Better Than One: Continual Learning From Multiple Models for Encrypted Traffic Analysis | TIFS | [[2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Models_for_Encrypted_Traffic_Analysis]] | DOI: 10.1109/TIFS.2026.3712230；摘要/正文候选证据待审核 |
+| 2026 | Making the Best of Both Worlds: Universal Perturbations for Live Black-Box Evasion Against NIDS in Encrypted Traffic | TON | [[2026-TON-Making_the_Best_of_Both_Worlds__Universal_Perturbations_for_Live_Black-Box_Evasion_Against_NIDS_in_Encrypted_Traffic]] | DOI: 10.1109/TON.2026.3710207；摘要/正文候选证据待审核 |
+| 2026 | SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer | TON | [[2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision_Transformer]] | DOI: 10.1109/TON.2026.3699540；摘要/正文候选证据待审核 |
+| 2026 | When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection | TON | [[2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection]] | DOI: 10.1109/TON.2026.3674624；摘要/正文候选证据待审核 |
+
+## 2026-11-17　2026-COSINT-北邮时金桥 学术报告线索
+
+[[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]]（第 18–31、38–51 页）把大背景下的局部混淆与平方规模候选匹配联系到表示、判定和成本。DHOR 使用语义哈希及邻域消歧，DHBCorr 使用 FFC 哈希与行列竞争。数值按报告展示记录，观察单位、基率、召回和计算预算需随结论保留。
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 前 5 包局部卷积预训练模型部署在 BlueField-3。按新流到达率统计完成流数和平均/P99 分析时延。 |
+| [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 短会话的内容/行为融合，作者在混合明密文的多币种基准上报告 macro F1 95.02%。 |

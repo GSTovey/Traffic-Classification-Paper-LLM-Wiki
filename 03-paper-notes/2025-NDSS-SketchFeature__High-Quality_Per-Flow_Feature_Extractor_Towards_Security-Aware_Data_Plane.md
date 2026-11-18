@@ -9,7 +9,7 @@ doi: "10.14722/ndss.2025.241071"
 url: ""
 pdf: "00-inbox/Aug_inbox/2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane.pdf"
 mineru_md: "02-parsed-markdown/2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane.md"
-status: processed
+status: deep-analyzed
 reading_level: L3
 relevance: high
 research_area: ["in-network data plane", "traffic feature extraction", "sketch", "intrusion detection"]
@@ -18,7 +18,10 @@ method: ["Count-Min sketch", "sketch virtualization", "phantom decoding", "Bloom
 dataset: ["CAIDA", "Facet CSC", "CIC-DDoS", "ISCX botnet", "CTC"]
 code: unknown
 created: "2026-08-17"
-updated: "2026-08-17"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane.md", "02-parsed-markdown/2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # SketchFeature: High-Quality Per-Flow Feature Extractor Towards Security-Aware Data Plane
@@ -443,3 +446,12 @@ unknown。论文全文（摘要、正文、脚注、参考文献）均未给出�
 | 理论处理 | 概率分析只给结论性公式（Lemma/Theorem）+ 指向证明，正文不展开细节，避免打断叙事 | 理论放在独立章节且"结论先行"，读者可按需深入 |
 | 对比组织 | 每个基线单列小节：先复述其设计假设，再指出其假设的不可靠处，最后用数据对比 | "假设-攻击面-数据"三步法逐基线拆解，比纯表格更有说服力 |
 | 最值得借鉴的一句话/一段结构 | "without workarounds to eliminate attack surfaces fundamentally"（§II-C 设计目标 4）——把"不做变通"本身当作卖点 | 用否定式表达定义方案的哲学立场（"无妥协设计"），比堆叠优势更鲜明 |
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[malicious-traffic-detection]]、[[anomaly-detection]]、[[traffic-classification]]、[[survey-malicious-traffic-detection]]、[[method-comparison-table]]、[[dataset-comparison-table]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

@@ -135,3 +135,13 @@ WF 的主要应用场景为 Tor 匿名网络，但也可扩展至 VPN、HTTPS �
 - 多标签页浏览（Multi-tab Browsing）和页面内导航场景下的 WF 攻防效果如何？
 - 语义泄漏（semantic leakage）是否是加密协议的根本性隐私缺陷？能否从协议设计层面消除对齐锚点？
 - 自监督预训练模型（如 Swallow 的 BYOL encoder）能否作为通用的加密流量表示基础模型，迁移到其他流量分析任务？
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | Practical VPN Fingerprinting using Coarse Inference of Field Specifications in Data Channels | INFOCOM | [[2026-INFOCOM-Practical_VPN_Fingerprinting_using_Coarse_Inference_of_Field_Specifications_in_Data_Channels]] | DOI: 10.1109/INFOCOM59046.2026.11571535；摘要/正文候选证据待审核 |
+| 2026 | Drift-Aware Adaptive Website Fingerprinting | TDSC | [[2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting]] | DOI: 10.1109/TDSC.2026.3723526；摘要/正文候选证据待审核 |
+| 2026 | Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | TDSC | [[2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses]] | DOI: 10.1109/TDSC.2026.3722663；摘要/正文候选证据待审核 |

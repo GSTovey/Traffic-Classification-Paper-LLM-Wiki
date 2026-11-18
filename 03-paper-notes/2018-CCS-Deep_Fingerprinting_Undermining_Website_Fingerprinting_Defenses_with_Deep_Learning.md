@@ -25,6 +25,11 @@ task: ["网站指纹识别", "Tor流量分析"]
 method: ["CNN", "deep learning"]
 created: "2026-05-27"
 updated: "2026-05-27"
+internal_citation_count: 107
+citation_impact: 1.8
+composite_weight: 0.2925
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # Deep Fingerprinting: Undermining Website Fingerprinting Defenses with Deep Learning

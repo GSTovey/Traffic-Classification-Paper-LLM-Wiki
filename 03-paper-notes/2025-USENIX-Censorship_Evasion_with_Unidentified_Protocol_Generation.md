@@ -9,7 +9,7 @@ doi: unknown
 url: "https://www.usenix.org/conference/usenixsecurity25/presentation/wails"
 pdf: unknown
 mineru_md: "02-parsed-markdown/2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation.md"
-status: processed
+status: deep-analyzed
 reading_level: L3
 research_area: ["censorship circumvention", "encrypted protocol generation", "traffic analysis resistance"]
 task: ["protocol generation", "censorship evasion", "collateral damage maximization"]
@@ -18,7 +18,10 @@ dataset: ["custom UPGen traffic traces", "WIDE MAWI", "Tor Shadow simulation"]
 code: "https://github.com/unblockable/upgen"
 relevance: high
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation.md", "02-parsed-markdown/2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # Censorship Evasion with Unidentified Protocol Generation
@@ -554,3 +557,12 @@ K=已知, M=误识别, U=未识别。UPGen 的 93-100% 流量被 DPI 工具标�
 3. **协议指纹识别**：UPGen 的参数空间分析（Table 1）揭示了哪些协议特征具有最高的区分度（子协议模式 8.3 bits，证书 6.5 bits），对协议指纹识别研究有参考价值
 4. **DPI 工具的局限性**：WIDE 数据集分析表明现有 DPI 工具存在大量覆盖盲区，这对 [[tunnel-detection]] 和恶意流量检测研究有重要启示
 5. **审查与反审查的军备竞赛**：UPGen 代表了审查规避领域从"模仿已知协议"到"生成未知协议"的范式转变，可能推动审查技术的相应演进
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[traffic-classification]]、[[encrypted-traffic-analysis]]、[[tunnel-detection]]、[[censorship-circumvention]]、[[survey-encrypted-traffic-analysis]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

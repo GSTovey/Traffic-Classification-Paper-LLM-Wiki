@@ -199,3 +199,13 @@ WF 攻击的威胁模型通常假设攻击者位于客户端与 Tor Guard Node �
 - 多标签现实化方向新增 Forge（盲源分离）、HiFi-WF（层次子页面识别）、RoFiRe（真实Tor增强归一化）和 TraVerse（LLM动态表示）；RAMAD 将防御侧推进到多智能体攻防适配。
 - 这些工作共同把评估单位从单站点首页扩展到混合标签、子页面、时间漂移和真实网络条件；定量横向比较仍需统一数据切分、FPR和开销口径。
 
+
+## 2026-10-26 新入库批次（待审核证据）
+
+本节仅追加本批34篇论文的候选关联；不改变既有共识或权重。
+
+| 年份 | 论文 | venue | 笔记 | 关联说明 |
+|---:|---|---|---|---|
+| 2026 | Practical VPN Fingerprinting using Coarse Inference of Field Specifications in Data Channels | INFOCOM | [[2026-INFOCOM-Practical_VPN_Fingerprinting_using_Coarse_Inference_of_Field_Specifications_in_Data_Channels]] | DOI: 10.1109/INFOCOM59046.2026.11571535；摘要/正文候选证据待审核 |
+| 2026 | Drift-Aware Adaptive Website Fingerprinting | TDSC | [[2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting]] | DOI: 10.1109/TDSC.2026.3723526；摘要/正文候选证据待审核 |
+| 2026 | Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | TDSC | [[2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses]] | DOI: 10.1109/TDSC.2026.3722663；摘要/正文候选证据待审核 |

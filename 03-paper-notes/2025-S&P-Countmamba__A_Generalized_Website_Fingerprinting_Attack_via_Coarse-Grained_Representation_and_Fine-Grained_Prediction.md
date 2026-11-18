@@ -9,7 +9,7 @@ doi: "unknown"
 url: "unknown"
 pdf: "00-inbox/PDFs/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.pdf"
 mineru_md: "02-parsed-markdown/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.md"
-status: processed
+status: deep-analyzed
 reading_level: L3
 research_area: [website-fingerprinting, encrypted-traffic-analysis]
 task: [robust-website-fingerprinting, early-stage-attack, multi-tab-attack, tor-traffic-analysis]
@@ -18,7 +18,10 @@ dataset: [DFset, ARESset, TMWFset, k-NNset, Walkie-Talkie]
 code: "https://github.com/SJTUdxw/CountMamba-WF"
 relevance: high
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.md", "02-parsed-markdown/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # COUNTMAMBA: A Generalized Website Fingerprinting Attack via Coarse-Grained Representation and Fine-Grained Prediction
@@ -561,3 +564,12 @@ COUNTMAMBA范式：**粗粒度表示（时间窗口计数矩阵）→ 细粒度�
 | 实验组织逻辑 | 鲁棒→早期→多标签→消融→参数→联合→新数据集，逐步验证每个假设 | 每个实验对应一个假设/质疑 |
 | 局限性讨论方式 | §7 Discussion中的Countermeasure主动讨论如何防御本方法 | 展示安全研究的攻防思维 |
 | 最值得借鉴的一句话/一段结构 | Figure 1的两张流程图对比：传统"细粒度→粗粒度" vs COUNTMAMBA"粗粒度→细粒度" | 可视化对比是传达范式反转的最有效方式 |
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[website-fingerprinting]]、[[encrypted-traffic-analysis]]、[[state-space-model]]、[[traffic-representation-learning]]、[[transformer]]、[[survey-website-fingerprinting]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

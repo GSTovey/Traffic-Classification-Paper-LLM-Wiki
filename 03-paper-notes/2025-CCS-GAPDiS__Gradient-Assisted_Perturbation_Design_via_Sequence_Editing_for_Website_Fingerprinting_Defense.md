@@ -18,7 +18,7 @@ doi: "10.1145/3719027.3765084"
 url: "https://dl.acm.org/doi/10.1145/3719027.3765084"
 pdf: "00-inbox/PDFs/2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for_Website_Fingerprinting_Defense.pdf"
 mineru_md: "02-parsed-markdown/2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for_Website_Fingerprinting_Defense.md"
-status: processed
+status: deep-analyzed
 reading_level: L3
 research_area: ["对抗攻击", "网站指纹防御", "隐私与匿名", "加密流量分析"]
 task: ["对抗扰动生成", "网站指纹防御", "Tor流量混淆", "序列编辑优化"]
@@ -29,7 +29,10 @@ dataset:
 code: "https://github.com/ByskyXie/GAPDiS"
 relevance: high
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for_Website_Fingerprinting_Defense.md", "02-parsed-markdown/2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for_Website_Fingerprinting_Defense.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
 ---
 
 # GAPDiS: Gradient-Assisted Perturbation Design via Sequence Editing for Website Fingerprinting Defense
@@ -688,3 +691,12 @@ DNN-based WF攻击准确率超98%，严重威胁Tor匿名性。现有防御面�
 | WFGuard | 0.61009 | 0.53805 | 0.53786 | 2.56% | 113.9 |
 | Minipatch | 0.23563 | 0.37504 | 0.32218 | 2.56% | 385.7 |
 | **GAPDiS** | **0.07218** | **0.24800** | **0.13150** | **2.56%** | **60.9** |
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for_Website_Fingerprinting_Defense.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[website-fingerprinting]]、[[encrypted-traffic-analysis]]、[[convolutional-network]]、[[survey-website-fingerprinting]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

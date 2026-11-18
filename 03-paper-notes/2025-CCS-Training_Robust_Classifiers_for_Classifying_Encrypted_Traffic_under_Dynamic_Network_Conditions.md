@@ -18,8 +18,8 @@ doi: "10.1145/3719027.3765073"
 url: ""
 pdf: "00-inbox/PDFs/2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dynamic_Network_Conditions.pdf"
 mineru_md: "02-parsed-markdown/2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dynamic_Network_Conditions.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area:
   - encrypted-traffic-classification
   - robust-machine-learning
@@ -43,7 +43,18 @@ dataset:
 code: ""
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dynamic_Network_Conditions.md", "02-parsed-markdown/2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dynamic_Network_Conditions.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+venue_factor: 1.0
+time_factor: 1.0
+citation_impact: 1.2
+composite_weight: 1.2
+internal_citation_count: 5
+citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
+citation_count_verified: "2026-10-21"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # MetaTraffic: 动态网络条件下加密流量分类的鲁棒分类器训练框架
@@ -593,3 +604,12 @@ MetaTraffic 的核心思想是通过元学习帮助 DL 模型学习稳定特征�
 - [[2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis]]：同为提升鲁棒性的工作，CertTA 提供认证鲁棒性（对抗特定扰动模型），MetaTraffic 提供条件鲁棒性（对抗网络条件变化），前者关注安全性，后者关注泛化性
 - [[2025-NIPS-FlowRefiner__A_Robust_Traffic_Classification_Framework_against_Label_Noise]]：同为提升分类鲁棒性的工作，FlowRefiner 处理标签噪声，MetaTraffic 处理特征分布偏移，两者互补
 - [[2025-KDD-Wedjat_Detecting_Sophisticated_Evasion_Attacks_via_Real-time_Causal_Analysis]]：同为加密流量分析，Wedjat 关注恶意流量检测中的逃逸鲁棒性（因果关系不可逃逸），MetaTraffic 关注动态条件下的分类鲁棒性（稳定特征表示），两者从不同角度提升鲁棒性
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dynamic_Network_Conditions.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[pre-training-finetuning]]、[[traffic-classification]]、[[transformer]]、[[few-shot-traffic-learning]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

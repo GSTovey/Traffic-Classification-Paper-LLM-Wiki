@@ -9,8 +9,8 @@ doi: "10.1145/3658644.3670353"
 url: "unknown"
 pdf: "00-inbox/PDFs/2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packet_length_patterns.pdf"
 mineru_md: "02-parsed-markdown/2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packet_length_patterns.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: [tunnel-detection, malicious-traffic-detection]
 task: [tunneled-traffic-detection, ddos-detection, flooding-detection]
 method: [deep-learning, cnn, semantic-analysis, packet-length-patterns]
@@ -18,7 +18,15 @@ dataset: [120-attacks, institutional-network, real-world-deployment]
 code: "unknown"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packet_length_patterns.md", "02-parsed-markdown/2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packet_length_patterns.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+internal_citation_count: 7
+citation_impact: 1.2
+composite_weight: 1.02
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 ## §0 基础信息
@@ -643,3 +651,12 @@ CNN语义分析 → 相关性提取 → 流量分类
 - **加密流量分类**：[[2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification]] - LEXNet使用CNN进行流量分类，但采用prototype-based方法实现可解释性
 - **HyperVision**：[34] - 基于流交互图的无监督检测方法，Exosphere的基线之一
 - **Whisper**：[33] - 基于流级特征的无监督检测方法，Exosphere的基线之一
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packet_length_patterns.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：[[tunnel-detection]]、[[malicious-traffic-detection]]、[[encrypted-traffic-analysis]]
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

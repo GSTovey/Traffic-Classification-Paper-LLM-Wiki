@@ -31,6 +31,11 @@ code: "https://github.com/pengwei-iie/ASNET"
 relevance: high
 created: 2026-06-09
 updated: 2026-06-09
+internal_citation_count: 5
+citation_impact: 1.2
+composite_weight: 0.78
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
 ---
 
 # Bottom Aggregating, Top Separating: An Aggregator and Separator Network for Encrypted Traffic Understanding

@@ -150,3 +150,17 @@ GNN 在流量分析中的典型流程如下：
 
 
 新增论文联动（2026-09-29）：SaGNN 引入语义感知异构图；其数据与指标尚待原文表格核验。
+
+
+## 2026-11-18　新论文证据
+
+| 论文或报告 | 关联与适用条件 |
+| --- | --- |
+| [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | IP 为节点，单向流为边，E-GraphSAGE 只采样一跳。§4.6 的无图消融随网络规模和数据版本而变。 |
+| [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion\|Contorter]] | 邻接关系受可合法变化的系统上下文影响，可结合独立事件证据评估鲁棒性。观测来源为主机审计。 |
+
+## 2026-11-18　深读证据补充
+
+| 新增论文 | 联动点 | 证据口径与可迁移结论 |
+| --- | --- | --- |
+| [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion\|Contorter]] | 节点与图的稳健性 | 模型的节点预测与聚合告警可分开受扰。GraphIDS 的 NetFlow 边重构提供同类问题的网络观察版本，比较需按窗口、背景源与告警单位留出。 |

@@ -9,8 +9,8 @@ doi: unknown
 url: unknown
 pdf: "00-inbox/PDFs/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.pdf"
 mineru_md: "02-parsed-markdown/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.md"
-status: processed
-reading_level: L2
+status: deep-analyzed
+reading_level: L3
 research_area: ["encrypted traffic classification", "network security", "machine learning"]
 task: ["traffic classification", "dataset evaluation", "overfitting analysis"]
 method: ["feature occlusion experiments", "systematic literature review", "taxonomy"]
@@ -18,7 +18,18 @@ dataset: ["CipherSpectrum", "CSTNET-TLS1.3", "ISCXVPN2016", "ISCXTor2016", "USTC
 code: "https://cspectrum.web.cse.unsw.edu.au"
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-03"
+deep_analysis_verified: "2026-11-03"
+deep_analysis_sources: ["03-paper-notes/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.md", "02-parsed-markdown/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.md"]
+evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+venue_factor: 1.0
+time_factor: 1.0
+citation_impact: 1.8
+composite_weight: 1.8
+internal_citation_count: 13
+citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
+citation_count_verified: "2026-11-18"
+citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
 ---
 
 # SoK: Decoding the Enigma of Encrypted Network Traffic Classifiers
@@ -617,3 +628,12 @@ $$b^n = \{p^i \in P \mid t^i - t^{i-1} \leq \Delta t\}$$
 6. **实时部署**：在高速网络环境中，考虑这些最佳实践后，NTC 模型的性能和效率如何平衡？
 7. **对抗性攻击**：了解这些过拟合来源后，攻击者是否可以利用这些弱点逃避检测？
 8. **多模态方法**：多模态 NTC 方法是否也存在类似的数据集和设计选择问题？
+
+
+## §14 深度分析复核与知识层同步（2026-11-03）
+
+- **复核范围**：按 L3 深度分析要求核对方法动机、输入→处理→输出、公式/算法、方法对比、实验设计与指标、局限性、复现条件和迁移价值；详细内容保留在本文 §3–§13。
+- **证据基线**：本文现有分析与 `02-parsed-markdown/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.md` 配对使用；未在 MinerU 原文中明确的内容继续标为“论文未明确说明”，不补造代码、数据划分或额外结果。
+- **证据边界**：本次更新只提升分析等级、补充可追溯入口并同步索引；本文已有数字和作者结论仍以 MinerU 原文定位为准，不自动升级为领域共识。
+- **知识层入口**：论文现有 §9 链接；本次不创建空白页
+- **状态**：`status: deep-analyzed`，`reading_level: L3`；如需把单条结论写入 Claims 或研究前沿，须另行完成来源定位、条件核验和反证检查。

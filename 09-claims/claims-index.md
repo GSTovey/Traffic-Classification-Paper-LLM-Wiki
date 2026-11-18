@@ -2,7 +2,7 @@
 type: claims
 name: claims-index
 created: "2026-05-27"
-updated: "2026-09-19"
+updated: "2026-10-21"
 ---
 
 # Claims Index
@@ -133,3 +133,129 @@ updated: "2026-09-19"
 - [[2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection]]：Tor 电路异常可用于识别恶意协作者；该结论不等同于网站指纹攻击成功率。
 - [[2026-NDSS-MVPNalyzer__An_Investigative_Framework_for_Auditing_the_Security_&_Privacy_of_Mobile_VPNs]]：移动 VPN 的可识别性和配置合规性应作为独立审计维度。
 - [[2026-NDSS-Identifying_Logical_Vulnerabilities_in_QUIC_Implementations]]：QUIC 逻辑漏洞证据来自实现覆盖与双检测器结果，不能外推为所有 QUIC 实现的普遍缺陷。
+
+## 2026-10-21：NestTor 已核验观点
+
+以下观点均来自同一篇 [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]]，不能把四条观点计成四篇独立支持论文。按现行 AGENTS.md §11，TNSM 属未单列的其他期刊，venue_factor=0.65；time_factor=1.0；当前可核验主库内部被引为 0，citation_impact=0.8；composite_weight=0.52。各观点 consensus_count=1，confidence_score=0.52，last_confirmed=2026。
+
+| 观点 | 支撑论文 | 证据位置 | 可用于什么场景 | venue_factor | time_factor | citation_impact | composite_weight | consensus_count | confidence_score |
+|---|---|---|---|---|---|---|---|---|---|
+| NEST-01：在 ToP 四类语义下，同 99 维、RF、总 400 棵树预算的独立 Gate + Inner 达 94.12% macro-F1，平面 86.67%、共享多任务 88.11%；支持该任务的条件分解 | [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] | §III-A、§V-E2、Fig. 6 | 复合目标设计、匹配结构消融 | 0.65 | 1.0 | 0.8 | 0.52 | 1 | 0.52 |
+| NEST-02：单流方向/长度/相对时间的阶段行为表示能支持域名/capture 隔离的 ToP 确认 99.45% macro-F1，但 later 为 88.50%、512B 重分段为 71.45% | [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] | §IV-A、Table III/V、Fig. 8 | 元数据证据与泛化边界；不证明 payload 密码学不可学 | 0.65 | 1.0 | 0.8 | 0.52 | 1 | 0.52 |
+| NEST-03：独立目标 Pure Proxy 上分位数校准不使用目标 ToP 标签，但收益依代理；Residual 的 Trojan 从 97.24% 降至 93.60%，其他三代理改善 | [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] | §IV-C、Appendix B、Table IV | 负类校准与标签权限说明 | 0.65 | 1.0 | 0.8 | 0.52 | 1 | 0.52 |
+| NEST-04：冻结 AND 在 11,131 异质背景流中产生 350 FP（3.14%）；0.99/0.10/0.01% FPR 点使用乘积分数另行扫阈值，不是同一冻结决策 | [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions|NestTor (TNSM 2026)]] | Table VI、§VI-RQ4、Appendix C | 开放背景误报率、工作点审计 | 0.65 | 1.0 | 0.8 | 0.52 | 1 | 0.52 |
+
+与既有共识的关系：本篇扩展元数据可用性、浅层/深度比较和迁移校准证据，但没有直接证明“强加密 payload 不可学”“三类特征同等最有效”或“所有严格评估下浅层普遍最优”。因此不机械增加这些更强命题的 consensus_count。旧个人版本不参与主库共识或被引计数。
+
+## 2026-10-26 自动提取候选主张（pending_review）
+
+以下条目只登记待审核证据，不更新既有 consensus_count、confidence_score 或正式 verdict。
+
+| claim_id | 候选主张 | 来源 | 状态 | consensus_count | confidence_score |
+|---|---|---|---|---:|---:|
+| C-20261026-03 | HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields 的摘要方法/结果主张需复核 | [[2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classification_Model_Based_on_Packet_Header_Fields]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-08 | Synecdoche: Efficient and Accurate In-Network Traffic Classification via Direct Packet Sequential Pattern Matching 的摘要方法/结果主张需复核 | [[2026-INFOCOM-Synecdoche__Efficient_and_Accurate_In-Network_Traffic_Classification_via_Direct_Packet_Sequential_Pattern_Matching]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-10 | A Unified Oversampling-Based Imbalance Processing Framework for Network Traffic Anomaly Detection 的摘要方法/结果主张需复核 | [[2026-TDSC-A_Unified_Oversampling-Based_Imbalance_Processing_Framework_for_Network_Traffic_Anomaly_Detection]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-11 | Behavioral Evidence-Based Hierarchical Decision Refinement for Encrypted Malicious Traffic Classification in Decentralized Data Circulation 的摘要方法/结果主张需复核 | [[2026-TDSC-Behavioral_Evidence-Based_Hierarchical_Decision_Refinement_for_Encrypted_Malicious_Traffic_Classification_in_Decentralized_Data_Circulation]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-12 | Drift-Aware Adaptive Website Fingerprinting 的摘要方法/结果主张需复核 | [[2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-13 | Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses 的摘要方法/结果主张需复核 | [[2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-14 | GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification 的摘要方法/结果主张需复核 | [[2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Classification]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-16 | Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification 的摘要方法/结果主张需复核 | [[2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Traffic_Classification]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-18 | RearView: Secure Two-Stage Malicious Traffic Identification with Dynamic Relationship Awareness 的摘要方法/结果主张需复核 | [[2026-TDSC-RearView__Secure_Two-Stage_Malicious_Traffic_Identification_with_Dynamic_Relationship_Awareness]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-19 | TridentDNS: Detecting Diverse DNS Tunnels Via Multidimensional Features 的摘要方法/结果主张需复核 | [[2026-TDSC-TridentDNS__Detecting_Diverse_DNS_Tunnels_Via_Multidimensional_Features]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-24 | Two Heads Are Better Than One: Models-to-Model Learning for Encrypted Traffic Analysis 的摘要方法/结果主张需复核 | [[2026-TIFS-Two_Heads_Are_Better_Than_One__Models-to-Model_Learning_for_Encrypted_Traffic_Analysis]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-25 | Two Heads Are Not Better Than One: Continual Learning From Multiple Models for Encrypted Traffic Analysis 的摘要方法/结果主张需复核 | [[2026-TIFS-Two_Heads_Are_Not_Better_Than_One__Continual_Learning_From_Multiple_Models_for_Encrypted_Traffic_Analysis]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-28 | Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning 的摘要方法/结果主张需复核 | [[2026-TON-Encrypted_Network_Traffic_Classification_Using_Generative_and_Contrastive_Self-Supervised_Learning]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-29 | Fighting the Enemy Within: Traffic Semantics-Driven Framework Against Noisy Labels for Robust Traffic Classification 的摘要方法/结果主张需复核 | [[2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_Noisy_Labels_for_Robust_Traffic_Classification]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-30 | KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network 的摘要方法/结果主张需复核 | [[2026-TON-KAN-Vis__Efficient_and_Lightweight_Visual_Technique_for_Network_Traffic_Classification_Using_KolmogorovArnold_Network]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-31 | Making the Best of Both Worlds: Universal Perturbations for Live Black-Box Evasion Against NIDS in Encrypted Traffic 的摘要方法/结果主张需复核 | [[2026-TON-Making_the_Best_of_Both_Worlds__Universal_Perturbations_for_Live_Black-Box_Evasion_Against_NIDS_in_Encrypted_Traffic]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-33 | SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer 的摘要方法/结果主张需复核 | [[2026-TON-SRViT__A_Robust_Online_Encrypted_Traffic_Classification_Based_on_Vision_Transformer]] §2.1 | pending_review | 0 | 0 |
+| C-20261026-34 | When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection 的摘要方法/结果主张需复核 | [[2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection]] §2.1 | pending_review | 0 | 0 |
+
+## 2024–2026 四大安全顶会深度分析证据入口（待审核）
+
+本节只登记已完成 L3 笔记的证据入口，状态保持 `pending_review`；不修改现有共识计数。
+
+| 论文 | 方向 | 证据来源 | 状态 |
+|---|---|---|---|
+| [[2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packet_length_patterns]] | 恶意/异常流量 | `02-parsed-markdown/2024-CCS-Detecting_tunneled_flooding_traffic_via_deep_semantic_analysis_of_packet_length_patterns.md` + 单篇笔记 §10 | `pending_review` |
+| [[2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis]] | 网站指纹/隐私 | `02-parsed-markdown/2024-CCS-Robust_and_reliable_early-stage_website_fingerprinting_attacks_via_spatial-temporal_distribution_analysis.md` + 单篇笔记 §10 | `pending_review` |
+| [[2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale]] | 网站指纹/隐私 | `02-parsed-markdown/2024-CCS-Towards_fine-grained_webpage_fingerprinting_at_scale.md` + 单篇笔记 §10 | `pending_review` |
+| [[2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum]] | 代理/隧道/审查 | `02-parsed-markdown/2024-NDSS-Flow_Correlation_Attacks_on_Tor_Onion_Service_Sessions_with_Sliding_Subset_Sum.md` + 单篇笔记 §10 | `pending_review` |
+| [[2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic]] | 恶意/异常流量 | `02-parsed-markdown/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic.md` + 单篇笔记 §10 | `pending_review` |
+| [[2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor]] | 代理/隧道/审查 | `02-parsed-markdown/2024-NDSS-MirageFlow__A_New_Bandwidth_Inflation_Attack_on_Tor.md` + 单篇笔记 §10 | `pending_review` |
+| [[2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization]] | 网站指纹/隐私 | `02-parsed-markdown/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.md` + 单篇笔记 §10 | `pending_review` |
+| [[2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes]] | 网站指纹/隐私 | `02-parsed-markdown/2024-USENIX-Fingerprinting_Obfuscated_Proxy_Traffic_with_Encapsulated_TLS_Handshakes.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities]] | 网站指纹/隐私 | `02-parsed-markdown/2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for_Website_Fingerprinting_Defense]] | 网站指纹/隐私 | `02-parsed-markdown/2025-CCS-GAPDiS__Gradient-Assisted_Perturbation_Design_via_Sequence_Editing_for_Website_Fingerprinting_Defense.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis]] | 网站指纹/隐私 | `02-parsed-markdown/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning]] | 网站指纹/隐私 | `02-parsed-markdown/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dynamic_Network_Conditions]] | 流量分析 | `02-parsed-markdown/2025-CCS-Training_Robust_Classifiers_for_Classifying_Encrypted_Traffic_under_Dynamic_Network_Conditions.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion]] | 恶意/异常流量 | `02-parsed-markdown/2025-CCS-Training_with_Only_1.0 ‰_Samples__Malicious_Traffic_Detection_via_Cross-Modality_Feature_Fusion.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane]] | 恶意/异常流量 | `02-parsed-markdown/2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction]] | 网站指纹/隐私 | `02-parsed-markdown/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers]] | 流量分析 | `02-parsed-markdown/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data]] | 流量表征/预训练 | `02-parsed-markdown/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation]] | 代理/隧道/审查 | `02-parsed-markdown/2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation.md` + 单篇笔记 §10 | `pending_review` |
+| [[2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis]] | 恶意/异常流量 | `02-parsed-markdown/2025-USENIX-CertTA__Certified_Robustness_Made_Practical_for_Learning-Based_Traffic_Analysis.md` + 单篇笔记 §10 | `pending_review` |
+| [[2026-NDSS-A_Hard-Label_Black-Box_Evasion_Attack_against_ML-based_Malicious_Traffic_Detection_Systems]] | 恶意/异常流量 | `02-parsed-markdown/2026-NDSS-A_Hard-Label_Black-Box_Evasion_Attack_against_ML-based_Malicious_Traffic_Detection_Systems.md` + 单篇笔记 §10 | `pending_review` |
+| [[2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection]] | 代理/隧道/审查 | `02-parsed-markdown/2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection.md` + 单篇笔记 §10 | `pending_review` |
+| [[2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization]] | 网站指纹/隐私 | `02-parsed-markdown/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization.md` + 单篇笔记 §10 | `pending_review` |
+| [[2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift]] | 流量分析 | `02-parsed-markdown/2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift.md` + 单篇笔记 §10 | `pending_review` |
+| [[2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement]] | 网站指纹/隐私 | `02-parsed-markdown/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement.md` + 单篇笔记 §10 | `pending_review` |
+| [[2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic]] | 流量分析 | `02-parsed-markdown/2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic.md` + 单篇笔记 §10 | `pending_review` |
+| [[2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting]] | 网站指纹/隐私 | `02-parsed-markdown/2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.md` + 单篇笔记 §10 | `pending_review` |
+| [[2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning]] | 恶意/异常流量 | `02-parsed-markdown/2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning.md` + 单篇笔记 §10 | `pending_review` |
+
+## 2026-11-17　2026-COSINT-北邮时金桥 学术报告线索
+
+以下为报告展示的待核主张，证据状态均为 `pending_review`，来源类型为 `report-only`。论文级方法配置与复现证据待补核，权重字段暂记 `unknown`。
+
+| claim_id | 主张 | 来源与定位 | evidence_id | venue_factor | time_factor | citation_impact | composite_weight | consensus_count | confidence_score |
+|---|---|---|---|---|---|---|---|---|---|
+| COSINT-01 | DHOR 给出最低基率标签下的 81.94% 精确率和 1.43×10⁻⁶ FPR | [[03-paper-notes/2026-COSINT-北邮时金桥|2026-COSINT-北邮时金桥]]，第 27 页 Table IV/脚注 | EV-COSINT-01 | unknown | unknown | unknown | unknown | unknown | unknown |
+| COSINT-02 | 编码器、邻域判定与哈希设计均在 DHOR 消融中影响精确率 | 同上，第 31 页 Table VII–VIII | EV-COSINT-02 | unknown | unknown | unknown | unknown | unknown | unknown |
+| COSINT-03 | DHBCorr 在每侧 20,000 流时报告精确率 99.33%、TPR 84.85%、FPR 2.9×10⁻⁷ | 同上，第 48 页 Table 2 | EV-COSINT-03 | unknown | unknown | unknown | unknown | unknown | unknown |
+| COSINT-04 | DHBCorr 以每侧 23,312 流支持 5 秒约 5.4×10⁸ 候选对 | 同上，第 49 页 Table 3，第 50 页耗时分解 | EV-COSINT-04 | unknown | unknown | unknown | unknown | unknown | unknown |
+
+
+## 2026-11-18　批次证据候选
+
+状态为 pending_review。权重列只反映来源资料，破折号表示尚未经共识核验。
+
+| claim_id | 条件化主张 | 来源及定位 | evidence_id | venue | time | citation | composite | consensus | confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| KB-20261118-GRAPH-CAL | 流级自监督训练与标签校准是两个条件。GraphIDS 用验证标签选模型和阈值，在 CIC-v2 的 PR-AUC 均值低于 Anomal-E。 | [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]]，§4.2–4.6，表 3 | EV-20261118-GRAPH-CAL | 0.85 | 1.00 | 0.80 | 0.680 | — | — |
+| KB-20261118-NEPCO-COST | SmartNIC 分析速度和完成量随新流负载变化。报告需并列前缀、NFPS、P99 与完成量。 | [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]]，§V-A/C，图 7–8，表 IV | EV-20261118-NEPCO-COST | 0.65 | 1.00 | 1.00 | 0.650 | — | — |
+| KB-20261118-NEPCO-BYTE | 局部字节重要性和地址依赖可共存，归因覆盖多个协议头字段。 | [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]]，§IV-B/C，附录 A–B | EV-20261118-NEPCO-BYTE | 0.65 | 1.00 | 1.00 | 0.650 | — | — |
+| KB-20261118-HAD-DRIFT | 严重正常性漂移可使以紧密良性为参照的距离模型退化。少量可信的目标域良性用于再锚定时可以部分改善。 | [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]]，§VII-A–C，表 XI–XII | EV-20261118-HAD-DRIFT | 0.85 | 1.00 | 0.80 | 0.680 | — | — |
+| KB-20261118-SAT-RTT | 底层链路变化改变 Tor RTT。加权 100 中继部署仿真中约 40.5% 电路平均缩短 21.8 ms。 | [[03-paper-notes/2026-S&P-SaTor__Exploring_Satellite_Routing_in_Tor_to_Reduce_Latency\|SaTor]]，§5.4，表 1；§5.7–5.8，图 13 | EV-20261118-SAT-RTT | 1.00 | 1.00 | 0.80 | 0.800 | — | — |
+| KB-20261118-CRYPTO-MODAL | 构造的明密文混合币种数据中，移除包内容后 macro F1 下降，但幅度不能归给密文信号。 | [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]]，§V-A/E/G，表 IV–V，图 8 | EV-20261118-CRYPTO-MODAL | 0.85 | 1.00 | 0.80 | 0.680 | — | — |
+| KB-20261118-MPA-EXT | MPA-LLM 延续 ARI-LLM 的粗到细重构，GÉANT 插补 NRMSE 改善；WS-DREAM 多列误差仍由 ARI-LLM 占优。 | [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]]，§I、§II-C；§IV-B 表 V | EV-20261118-MPA-EXT | 0.85 | 1.00 | 0.80 | 0.680 | — | — |
+| KB-20261118-PSML-READ | 对共享计数器的查询校正可改善流包数误差，写入保持原 sketch，读侧新增计算。 | [[03-paper-notes/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures\|PS-ML]]，§V-C，§VII-C/D 图 6、8–9 | EV-20261118-PSML-READ | 0.85 | 1.00 | 0.80 | 0.680 | — | — |
+| KB-20261118-SEDMS-UPDATE | 动态更新遥测指标可降低部分数据上的上报比例，并承担更多每快照处理成本。 | [[03-paper-notes/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks\|SEDMS]]，§VI-A、§VII-F–H，表 II–III | EV-20261118-SEDMS-UPDATE | 0.85 | 1.00 | 0.80 | 0.680 | — | — |
+| KB-20261118-T2T-COVER | 将输入与验证行为的来源分开能减少直接循环验证；样本级未捕获仍会造成语料覆盖偏差。 | [[03-paper-notes/2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence\|Threat2Traffic]]，§4.1–4.2 表 1、附录 C.2、§5 图 7 | EV-20261118-T2T-COVER | 0.85 | 1.00 | 0.80 | 0.680 | — | — |
+
+
+### 2026-11-18　COSINT 联动待验证
+
+以下是跨论文提出的比较条件，状态为 pending_review，来源见 [[03-paper-notes/2026-COSINT-北邮时金桥|报告第 14 节]]。
+
+| 证据编号 | 主题 | 定位 | 待验证判断 |
+| --- | --- | --- | --- |
+| EV-20261118-COSINT-NORMAL-REF | 困难背景的得分分布和工作点 | COSINT 第 18–31 页；HAD §VII-B–C 表 XI–XII；GraphIDS §4.3–4.6 | 以训练侧正常参考进行局部筛查是否能在同召回和覆盖下改善目标承载留出的误报，需要同表示和按背景来源留出的验证。 |
+| EV-20261118-COSINT-TIMING | 底层路由及跨点匹配条件 | COSINT 第 46–51 页；SaTor §5.4 表 1、§5.7–5.8 图 13 | 链路时延和抖动可以作为联合阅读的分层变量，尚待在相同候选集合和真值上验证是否改变匹配分数与尾部。 |
+| EV-20261118-COSINT-COST | 摘要、编码和查询匹配的成本 | COSINT 第 49–50 页；Nepco §V-C 表 IV；PS-ML §V-C；SEDMS §VII-F–G | 处理速度需要对应观测单位与完成量。编码压缩是否降低总体时间需计量观测等待、编码、队列和匹配，并固定误报工作点与覆盖。 |
+
+## 2026-11-18　深读证据补充
+
+以下为补足 L3 后新增的证据候选，状态为 pending_review。
+
+| 证据编号 | 主张 | 来源定位 | 条件 |
+| --- | --- | --- | --- |
+| EV-20261118-L3-T2T-COVERAGE-F1 | 不同家族的约束提取 F1 不同，整体为 81.0%。行为真值覆盖还需按独立参照衡量。 | [[03-paper-notes/2026-ICML-Threat2Traffic__Multi-Agent_Environment_Synthesis_for_Malware_Traffic_Generation_from_Threat_Intelligence\|Threat2Traffic]] §4.3，附录 D.2 表 7 | 标签来自该文人工约束参照，家族间数据量和条件异质性不同。 |
+| EV-20261118-L3-CONTORTER-UNIT | 上下文变化后的召回受数据和决策单位影响。OpTC2 对 Flash 与 Threatrace 显示零变化。 | [[03-paper-notes/2026-S&P-A_Context_Is_Worth_a_Thousand_Lies__Evading_Intrusion_Detectors_via_Intelligent_Context_Distortion\|Contorter]] §4.1，表 2 与表 4，附录 B | 主机审计。模型标签、分割及评估范围需固定后才能作模型内对比。 |
+| EV-20261118-L3-CENRL-POOL | 实测每个观测点使用 2,000 次测量。CenRL 从更大的候选池选点，发现量包含候选范围与调度的共同影响。 | [[03-paper-notes/2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements\|CenRL]] §5.1–5.2、§6.2 图 9 | 十五个国家各一个观测点。受控实验比较共同候选池。 |
+| EV-20261118-L3-DESC-RESOURCE | 逻辑缓存占用与 RSS 压力不同。局部资源测量不能直接给出按共识权重计算的网络影响。 | [[03-paper-notes/2026-S&P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_Descriptor_Flood\|Descriptors of Exposure]] §2.4、§6、附录 B 与 C.4 | Tor 实现和部署条件依赖。论文部分网络影响是估计。 |
+| EV-20261118-L3-SIR-SCALE | 查询结构的寄存器计数需要结合活跃键和窗口语义才能用来核算部署资源。 | [[03-paper-notes/2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR\|SIR]] 原 PDF 第 4–6 页，§3.3、§4.1、表 1 | 五个示例查询。跨输入流相对到达顺序没有全局保证。 |
+| EV-20261118-L3-MPA-JOINT | 统一架构下，阶段参数和联合训练对各任务贡献不同。Abilene 联合训练插补 NMAE 变差、预测 NMAE 改善。 | [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] §III-G、§IV-E 表 VIII、§IV-H 图 7 | 论文的源矩阵、掩码和分别训练/联合训练条件。异常标签为规则构造。 |
