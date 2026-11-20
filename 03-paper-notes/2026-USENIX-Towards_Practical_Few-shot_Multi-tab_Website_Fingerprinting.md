@@ -6,7 +6,7 @@ authors: [Lin Liu, Ziling Wei, Zhuotao Liu, Xinhao Deng, Zixuan Dong, Shuhui Che
 year: 2026
 venue: "USENIX Security 2026"
 doi: "unknown"
-url: "unknown"
+url: "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-lin"
 pdf: "00-inbox/PDFs/2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.md"
 status: deep-analyzed
@@ -18,10 +18,11 @@ dataset: [自采集多标签页数据集（50+25 网站）, WFlib 合成多标�
 code: "unknown"
 relevance: high
 created: "2026-09-19"
-updated: "2026-11-03"
+updated: "2026-11-20"
 deep_analysis_verified: "2026-11-03"
 deep_analysis_sources: ["03-paper-notes/2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.md", "02-parsed-markdown/2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.md"]
 evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+pages: "3083--3102"
 ---
 
 # Towards Practical Few-shot Multi-tab Website Fingerprinting

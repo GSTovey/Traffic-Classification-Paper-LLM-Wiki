@@ -7,7 +7,7 @@ year: 2026
 venue: "arXiv 2026"
 doi: unknown
 url: unknown
-pdf: ""
+pdf: "00-inbox/PDFs/2026-arXiv-Where_Do_Flow_Semantics_Reside__A_Protocol-Native_Tabular_Pretraining_Paradigm_for_Encrypted_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-Where_Do_Flow_Semantics_Reside__A_Protocol-Native_Tabular_Pretraining_Paradigm_for_Encrypted_Traffic_Classification.md"
 status: processed
 reading_level: L2

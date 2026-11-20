@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification"
-title_cn: "unknown"
+title_cn: "数据真的有噪声吗？重新审视加密流量分类中的流量过滤"
 authors: ["Chungang Lin", "Weiyao Zhang", "Meng Shen", "Yilong Jiang", "Tianyu Zuo", "Haitong Luo", "Yequan Wang", "Xuying Meng", "Yujun Zhang"]
 year: 2026
 venue: "TDSC"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "https://github.com/lincgcg/TraCare-ICT"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Is the Data Really Noisy? Rethinking Traffic Filtering for Encrypted Traffic Classification

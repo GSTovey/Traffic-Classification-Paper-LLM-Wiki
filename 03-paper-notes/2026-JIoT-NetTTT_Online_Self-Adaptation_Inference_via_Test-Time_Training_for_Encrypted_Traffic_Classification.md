@@ -5,8 +5,8 @@ title_cn: "NetTTT：基于测试时训练的在线自适应加密流量分类推
 authors: ["Ling Liu", "Xiaowei Song", "Ning Hu", "Zhaoquan Gu", "Zhihong Tian", "Yan Jia"]
 year: 2026
 venue: "IEEE Internet of Things Journal (JIoT)"
-doi: unknown
-url: unknown
+doi: "10.1109/jiot.2026.3652996"
+url: "https://doi.org/10.1109/jiot.2026.3652996"
 pdf: "00-inbox/PDFs/2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["ISCX-Tor", "ISCX-VPN", "CSTNET-TLS1.3", "USTC-TFC2016"]
 code: unknown
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-20"
 ---
 
 # NetTTT: Online Self-Adaptation Inference via Test-Time Training for Encrypted Traffic Classification
@@ -39,6 +39,7 @@ updated: "2026-05-27"
 | 是否开源 | 否 |
 | PDF | 00-inbox/PDFs/2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-JIoT-NetTTT_Online_Self-Adaptation_Inference_via_Test-Time_Training_for_Encrypted_Traffic_Classification.md |
+| DOI | [10.1109/jiot.2026.3652996](https://doi.org/10.1109/jiot.2026.3652996) |
 
 ## 1. 一句话总结
 

@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "SaGNN: Encrypted traffic classification with semantic-aware heterogeneous graph neural network"
-title_cn: ""
-authors: []
+title_cn: "SaGNN：基于语义感知异构图的加密流量分类"
+authors: ["Junjie Luo", "Min Liu", "Sheng Sun", "Yali Chen", "Qixun Tang", "Yuwei Wang"]
 year: 2026
 venue: JCN
-doi: unknown
-url: unknown
+doi: "10.1016/j.comnet.2026.112763"
+url: "https://doi.org/10.1016/j.comnet.2026.112763"
 pdf: "00-inbox/PDFs/2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network.pdf"
 mineru_md: "02-parsed-markdown/2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["加密流量分类"]
+task: ["应用及恶意流量分类"]
+method: ["H-TIG、Triple Embedding 与 STGAT"]
+dataset: ["ISCX-VPN、ISCX-nonVPN、USTC-TFC"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-09-29"
+updated: "2026-11-20"
 ---
 
 # SaGNN: Encrypted traffic classification with semantic-aware heterogeneous graph neural network
@@ -31,34 +31,79 @@ updated: "2026-09-29"
 | 会议/期刊 | JCN |
 | PDF | [[2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network.pdf]] |
 | MinerU Markdown | [[2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network.md]] |
+| 作者 | Junjie Luo, Min Liu, Sheng Sun, Yali Chen, Qixun Tang, Yuwei Wang |
+| DOI | [10.1016/j.comnet.2026.112763](https://doi.org/10.1016/j.comnet.2026.112763) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+以异构图表达握手与传输阶段的不同包交互，再融合各字节区域的表示做流级分类。
 
 ## 2. 摘要原文
 both the interaction relationships and rich node attributes in the constructed H-TIG, producing a comprehensive flow-level representation vector. This vector is finally fed into the Classifier to obtain the classification results. The main contributions of this paper are summarized as follows: • <sub>We define the H-TIG to represent an encrypted flow. It preserves</sub> the interaction relationships within the flow while distinguishing the semantics between the Handshake Stage and the Transmission Stage. • <sub>We design Triple Embedding, a packet representation method that</sub> independently encodes the packet header, handshake payload, and transmission payload, thereby avoiding semantic conflicts and enriching the node attributes of the H-TIG. • <sub>We propose an encrypted traffic classification method named</sub> SaGNN, which utilizes a carefully designed heterogeneous graph neural network STGAT to learn the interaction relationships and node attributes of the H-TIG, extracting rich and discriminative semantic features to achieve accurate encrypted traffic classification. • <sub>We conduct extensive experiments on the ISCX VPN-nonVPN</sub> dataset and USTC-TFC dataset. The proposed method outperforms representative approaches, achieving an average F1-score improvement of 2.27%, which convincingly demonstrates its effectiveness. The rest of this paper is organized as follows. Section 2 presents the problem formulation and background knowledge of encrypted traffic. Section 3 reviews related work on encrypted traffic classification. Section 4 details the proposed method. Section 5 provides experimental results and analysis. Finally, Section 7 concludes the paper.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+从流构造有类型的包和关系，分别表示包中不同区域，以异构图模型输出流级类别。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：ISCX-VPN、ISCX-nonVPN、USTC-TFC。
+- 作者报告：摘要报告三组评估数据的平均 F1 相比代表方法提高 2.27%。具体分组及预处理后的类别规模见 Table 2。
+- 原文位置：[[02-parsed-markdown/2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network|原文解析稿]] · 摘要、§5.1.1 Table 2、§7。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+两份公开语料中的 VPN 与非 VPN 子集和 USTC-TFC 分开报告。现实新网络、新协议与少数类条件需相应验证。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
+
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-JCN-SaGNN__Encrypted_traffic_classification_with_semantic-aware_heterogeneous_graph_neural_network|原文解析稿]] · 摘要、§5.1.1 Table 2、§7。可引用的结论须保留所列实验条件。
+
+### 并行深度分析（2026-09-29）
+- 方法/问题：SaGNN proposes a semantic-aware heterogeneous graph neural network for encrypted traffic classification. Input graph construction, semantic relations, message passing and output classifier require verification from MinerU because the current extraction is incomplete. Missing: datasets, splits, baselines, metrics, ablations and code.
+- 证据边界：以上仅使用对应 MinerU 解析稿摘要及可稳定提取段落；未提取到的数值、数据集、代码和参数均不作推断。
+- 复现建议：先核对原文表格、附录、代码仓库和数据划分，再确定 L3/L4 复现。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
 - MinerU：已完成；解析质量需人工抽查。
 - Bib 元数据：待官方 API/论文首页核验。
+
 
 
 ## 深度分析（自动证据提取，需人工复核）
@@ -81,7 +126,4 @@ Transformers to extract spatial and temporal features [5,12–15]. Re cent studi
 - 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
 
 
-### 并行深度分析（2026-09-29）
-- 方法/问题：SaGNN proposes a semantic-aware heterogeneous graph neural network for encrypted traffic classification. Input graph construction, semantic relations, message passing and output classifier require verification from MinerU because the current extraction is incomplete. Missing: datasets, splits, baselines, metrics, ablations and code.
-- 证据边界：以上仅使用对应 MinerU 解析稿摘要及可稳定提取段落；未提取到的数值、数据集、代码和参数均不作推断。
-- 复现建议：先核对原文表格、附录、代码仓库和数据划分，再确定 L3/L4 复现。
+```

@@ -13,12 +13,12 @@ status: processed
 reading_level: L2
 research_area: ["anomaly-detection"]
 task: ["anomaly-detection"]
-method: []
+method: ["eBPF 草图优化与可编程测量基准"]
 dataset: ["CAIDA 2018", "CAIDA 2019", "MAWI", "IMC", "Zipf-0.95", "Zipf-0.99"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Carrera: Enabling High-Performance eBPF-based Sketches in Network Measurement

@@ -5,8 +5,8 @@ title_cn: "数据高效的跨域少样本网站指纹：基于无监督域适配
 authors: ["Siyu Wang", "Xiaoyan Hu", "Guang Cheng", "Ruidong Li", "Hua Wu"]
 year: 2026
 venue: "IEEE TIFS 2026"
-doi: unknown
-url: unknown
+doi: "10.1109/tifs.2026.3694650"
+url: "https://doi.org/10.1109/tifs.2026.3694650"
 pdf: "00-inbox/PDFs/2026-TIFS-Data-Efficient_Cross-Domain_Few-Shot_Website_Fingerprinting_With_Unsupervised_Domain_Adaptation.pdf"
 mineru_md: "02-parsed-markdown/2026-TIFS-Data-Efficient_Cross-Domain_Few-Shot_Website_Fingerprinting_With_Unsupervised_Domain_Adaptation.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["AWF Dataset", "WF Dataset (self-collected)", "DF Dataset", "Wang Data
 code: unknown
 relevance: high
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Data-Efficient Cross-Domain Few-Shot Website Fingerprinting With Unsupervised Domain Adaptation
@@ -39,6 +39,7 @@ updated: "2026-09-19"
 | 是否开源 | unknown（解析稿未提及代码仓库） |
 | PDF | 00-inbox/PDFs/2026-TIFS-Data-Efficient_Cross-Domain_Few-Shot_Website_Fingerprinting_With_Unsupervised_Domain_Adaptation.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-TIFS-Data-Efficient_Cross-Domain_Few-Shot_Website_Fingerprinting_With_Unsupervised_Domain_Adaptation.md |
+| DOI | [10.1109/tifs.2026.3694650](https://doi.org/10.1109/tifs.2026.3694650) |
 
 > ⚠️ MinerU 解析问题：解析稿系统性丢失连字 "ff"（正文中 Efficient/Efficiently/different/traffic 被写成 Eficient/diferent/trafic，标题首行亦如此）。本笔记在引用原文时已还原为正常拼写；引用具体数值时未受该问题影响。
 

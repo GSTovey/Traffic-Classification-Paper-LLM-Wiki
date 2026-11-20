@@ -5,7 +5,7 @@ title_cn: "揭示地下钓鱼生态：深网与暗网论坛的十二年纵向研
 authors: ["Dohee Kim", "Hui Zhao", "Doowon Kim", "Sungjae Hwang"]
 year: 2026
 venue: "ACM Web Conference 2026 (WWW'26)"
-doi: unknown
+doi: "10.1145/3774904.3792737"
 url: "https://doi.org/10.1145/3774904.3792737"
 pdf: "00-inbox/PDFs/2026-WWW-Unveiling_the_Underground_Phishing_Ecosystem__A_12-Year_Longitudinal_Study_of_Deep_and_Dark_Web_Forums.pdf"
 mineru_md: "02-parsed-markdown/2026-WWW-Unveiling_the_Underground_Phishing_Ecosystem__A_12-Year_Longitudinal_Study_of_Deep_and_Dark_Web_Forums.md"
@@ -18,7 +18,7 @@ dataset: ["394,034 posts (343,334 unique)", "13 English D2Web forums", "April 20
 code: "unknown (prompts disclosed in Appendix A.2; raw dataset/code availability not stated)"
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # Unveiling the Underground Phishing Ecosystem: A 12-Year Longitudinal Study of Deep and Dark Web Forums
@@ -38,7 +38,7 @@ updated: "2026-10-10"
 | 方法关键词 | ACHE crawler、GPT-4o-mini、Role-Play/Specificity/Few-shot prompting、人工归一化、七阶段框架 |
 | 数据集 | 13 个英语 D2Web 论坛，2013-04 至 2025-08；394,034 帖，去重 343,334；70,055 钓鱼相关 |
 | 是否开源 | unknown；附录公布提示词，未说明原始数据/代码公开位置 |
-| DOI | 10.1145/3774904.3792737 |
+| DOI | [10.1145/3774904.3792737](https://doi.org/10.1145/3774904.3792737) |
 | PDF | 00-inbox/PDFs/2026-WWW-Unveiling_the_Underground_Phishing_Ecosystem__A_12-Year_Longitudinal_Study_of_Deep_and_Dark_Web_Forums.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-WWW-Unveiling_the_Underground_Phishing_Ecosystem__A_12-Year_Longitudinal_Study_of_Deep_and_Dark_Web_Forums.md |
 

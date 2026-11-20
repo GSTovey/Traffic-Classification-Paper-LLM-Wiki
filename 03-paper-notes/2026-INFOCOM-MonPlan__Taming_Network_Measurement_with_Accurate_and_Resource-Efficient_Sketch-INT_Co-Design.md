@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "MonPlan: Taming Network Measurement with Accurate and Resource-Efficient Sketch-INT Co-Design"
-title_cn: "unknown"
+title_cn: "MonPlan：草图与带内遥测协同的高效网络测量"
 authors: ["Xiang Chen", "Linying Zheng", "Longlong Zhu", "Zedi Chen", "Qing Shu", "Jialu Tian", "Siqi Dong", "Qun Huang", "Jianshan Zhang", "Xuan Liu", "Haifeng Zhou", "Hongyan Liu", "Dong Zhang", "Chunming Wu"]
 year: 2026
 venue: "INFOCOM"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "https://github.com/p4lang/p4-applications/blob/"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # MonPlan: Taming Network Measurement with Accurate and Resource-Efficient Sketch-INT Co-Design

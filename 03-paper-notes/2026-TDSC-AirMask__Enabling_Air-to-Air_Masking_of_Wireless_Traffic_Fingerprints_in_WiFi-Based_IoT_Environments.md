@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-TDSC-AirMask__Enabling_Air-to-Air_Masking_of_Wireless_T
 mineru_md: "02-parsed-markdown/2026-TDSC-AirMask__Enabling_Air-to-Air_Masking_of_Wireless_Traffic_Fingerprints_in_WiFi-Based_IoT_Environments.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
+research_area: ["无线 IoT 隐私"]
+task: ["抵御 Wi‑Fi 流量指纹推断"]
+method: ["空对空指纹遮蔽评估"]
 dataset: ["UNSW", "Mon(IoT)r", "IoTrace"]
 code: "https://github.com/smith0818/AirMask"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # AirMask: Enabling Air-to-Air Masking of Wireless Traffic Fingerprints in WiFi-Based IoT Environments

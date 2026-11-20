@@ -7,7 +7,7 @@ year: 2025
 venue: "IEEE TDSC 2025"
 doi: "10.1109/tdsc.2025.3549149"
 url: "https://doi.org/10.1109/tdsc.2025.3549149"
-pdf: "00-inbox/Aug_inbox/2025-TDSC-QuicCourier__Leveraging_the_Dynamics_of_QUIC-_Based_Website_Browsing_Behaviors_Through_Proxy_for_Covert_Communication.pdf"
+pdf: "00-inbox/PDFs/2025-TDSC-QuicCourier__Leveraging_the_Dynamics_of_QUIC-_Based_Website_Browsing_Behaviors_Through_Proxy_for_Covert_Communication.pdf"
 mineru_md: "02-parsed-markdown/2025-TDSC-QuicCourier__Leveraging_the_Dynamics_of_QUIC-_Based_Website_Browsing_Behaviors_Through_Proxy_for_Covert_Communication.md"
 status: processed
 reading_level: L2

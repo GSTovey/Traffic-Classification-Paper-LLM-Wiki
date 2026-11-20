@@ -7,7 +7,7 @@ year: 2023
 venue: "IEEE/ACM TON 2023"
 doi: "10.1109/TNET.2022.3215507"
 url: "https://doi.org/10.1109/TNET.2022.3215507"
-pdf: ""
+pdf: "00-inbox/PDFs/2023-TON-A_Novel_Multimodal_Deep_Learning_Framework_for_Encrypted_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2023-TON-A_Novel_Multimodal_Deep_Learning_Framework_for_Encrypted_Traffic_Classification.md"
 status: processed
 reading_level: L2

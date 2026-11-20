@@ -13,12 +13,13 @@ status: deep-analyzed
 reading_level: L3
 research_area: ["censorship-circumvention"]
 task: ["app-fingerprinting"]
-method: []
-dataset: []
+method: ["远程多视点 VoIP 可达性测量"]
+dataset: ["作者 71 国、11 个 VoIP 应用的采集及 Hyperquack 探测"]
 code: "https://doi.org/10.5281/zenodo.20362017"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-10-10"
+updated: "2026-11-20"
+pages: "3063--3082"
 ---
 
 # Revelio: A Global Study of VoIP Blocking

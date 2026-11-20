@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Stego-Vector Driven Simultaneous Covert Channels in Streaming Applications"
-title_cn: "unknown"
+title_cn: "流式应用中基于隐写向量的同时隐蔽信道研究"
 year: 2026
 venue: "TIFS"
 doi: "10.1109/TIFS.2026.3705932"

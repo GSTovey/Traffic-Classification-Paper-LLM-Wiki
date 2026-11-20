@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection"
-title_cn: "unknown"
+title_cn: "预训练结合对比学习：少样本加密流量分类与新颖性检测"
 authors: ["Lixin Zhao", "Changhao Wu", "Aimin Yu"]
 year: 2026
 venue: "TON"
@@ -18,7 +18,7 @@ dataset: ["ISCX"]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection

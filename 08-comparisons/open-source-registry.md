@@ -2,7 +2,7 @@
 type: comparison
 name: open-source-registry
 created: "2026-05-29"
-updated: "2026-10-21"
+updated: "2026-11-20"
 ---
 
 # 开源模型/方法注册表
@@ -118,6 +118,8 @@ updated: "2026-10-21"
 | 97 | MPA-LLM | 2026 | 流量矩阵分析 | [产物](https://github.com/Labman-Wangjunjie/MPA-LLM) | 作者代码与实验配置 | Python | [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] |
 | 98 | HAD | 2026 | IDS 防御 | [产物](https://github.com/kalendsyang/HAD) | 作者分层防御实现 | Python | [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] |
 | 99 | SEDMS | 2026 | 流式遥测指标选择 | [产物](https://github.com/SyCode2005/SEDMS) | 作者实验实现 | 仓库见说明 | [[03-paper-notes/2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks\|SEDMS]] |
+| 100 | TACO | 2026 | 加密流量分类 | [作者仓库](https://github.com/NSSL-SJTU/TaCo) | 代码，README 链接预训练权重并说明数据处理 | Python | [[03-paper-notes/2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach\|TACO]] |
+| 101 | HPETC | 2025 | 匿名流量分类 | [作者仓库](https://github.com/MHTTHM/HPETC) | 部分代码备份，完整复现材料待核 | 仓库见说明 | [[03-paper-notes/2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World\|HPETC]] |
 
 
 ---
@@ -235,7 +237,7 @@ updated: "2026-10-21"
 
 | 类别 | 数量 |
 |---|---:|
-| 已确认公开仓库（本知识库论文） | 99（含 4 项仅数据集公开；具体授权与发布范围逐项核对） |
+| 已确认公开产物（本知识库论文） | 101（含 4 项仅数据集公开和 1 项部分代码备份，授权与发布范围逐项记录） |
 | 计划开源 / 待确认 | 9 |
 | 高频对比基线无开源地址 | 20+ |
 | CLET 论文确认有实现但缺地址 | 5 |
@@ -243,14 +245,14 @@ updated: "2026-10-21"
 
 ### 按任务领域分布（已开源）
 
-> 按主要任务域归类（每项记 1 次），2026-11-18 新增 7 个产物，合计 99。
+> 按主要任务域归类，每项计一次。截至 2026-11-20 合计 101 项，新增 TACO 和 HPETC。
 
 | 领域 | 已开源数量 | 代表方法 |
 |---|---:|---|
-| 加密流量分类 | 20 | Nepco, ET-BERT, YaTC, NetMamba+, TrafficMoE, MH-Net, BTRFormer, UTFormer, PERO, Pruned Traffic Trees |
+| 加密流量分类 | 21 | Nepco, ET-BERT, YaTC, NetMamba+, TrafficMoE, MH-Net, BTRFormer, UTFormer, PERO, Pruned Traffic Trees, TACO |
 | 网站指纹（攻击+防御） | 23 | DF, RF, Palette, STAR, CountMamba, CELLSHIFT, Cease, FMWF, Stinger, PA3, BBQ |
 | 恶意流量检测/异常检测 | 12 | GraphIDS, HAD, Whisper, TFusion, MET-LLM, FreeUp, ConMD, LotBoNC, TIPSO-GAN, Tracegram |
-| 应用/匿名流量分类 | 4 | Flowprint, AN-Net, DecETT, Motion in the Clear |
+| 应用/匿名流量分类 | 5 | Flowprint, AN-Net, DecETT, Motion in the Clear, HPETC |
 | 审查规避/测量 | 6 | CenRL, UPGen, Huma, Censored Planet, GFW, Revelio |
 | 流量关联/匿名攻击 | 1 | SUMo |
 | 评估/基准 | 3 | SoK Decoding, SweetDanger, SoK Flow Labels |

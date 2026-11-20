@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Two Heads Are Not Better Than One: Continual Learning From Multiple Models for Encrypted Traffic Analysis"
-title_cn: "unknown"
+title_cn: "多模型未必更好：面向加密流量分析的多模型持续学习"
 authors: ["Jia Liu", "Bin Lu", "Qingjun Yuan", "Weina Niu", "Ding Li", "Jian Chai", "Yong Yu"]
 year: 2026
 venue: "TIFS"
@@ -18,7 +18,7 @@ dataset: ["ISCX"]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Two Heads Are Not Better Than One: Continual Learning From Multiple Models for Encrypted Traffic Analysis

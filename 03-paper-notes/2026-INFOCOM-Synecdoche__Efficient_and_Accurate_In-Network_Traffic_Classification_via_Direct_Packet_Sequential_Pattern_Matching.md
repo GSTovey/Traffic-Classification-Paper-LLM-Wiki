@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Synecdoche: Efficient and Accurate In-Network Traffic Classification via Direct Packet Sequential Pattern Matching"
-title_cn: "unknown"
+title_cn: "Synecdoche：基于直接包序列模式匹配的高效网内流量分类"
 authors: ["Minyuan Xiao", "Yunchun Li", "Yuchen Zhao", "Tong Guan", "Mingyuan Xia", "Wei Li"]
 year: 2026
 venue: "INFOCOM"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "https://github.com/swampx/Synecdoche"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Synecdoche: Efficient and Accurate In-Network Traffic Classification via Direct Packet Sequential Pattern Matching

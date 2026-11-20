@@ -7,7 +7,7 @@ year: 2023
 venue: "ACM SIGCOMM 2023"
 doi: "10.1145/3603269.3604840"
 url: "https://dl.acm.org/doi/10.1145/3603269.3604840"
-pdf: ""
+pdf: "00-inbox/PDFs/2023-SIGCOMM-GGFAST__Automating_Generation_of_Flexible_Network_Traffic_Classifiers.pdf"
 mineru_md: "02-parsed-markdown/2023-SIGCOMM-GGFAST__Automating_Generation_of_Flexible_Network_Traffic_Classifiers.md"
 status: processed
 reading_level: L2

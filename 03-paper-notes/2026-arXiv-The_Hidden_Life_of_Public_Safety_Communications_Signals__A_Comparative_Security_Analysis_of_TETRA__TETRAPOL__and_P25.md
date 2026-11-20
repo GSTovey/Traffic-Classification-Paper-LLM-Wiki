@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-arXiv-The_Hidden_Life_of_Public_Safety_Communications_S
 mineru_md: "02-parsed-markdown/2026-arXiv-The_Hidden_Life_of_Public_Safety_Communications_Signals__A_Comparative_Security_Analysis_of_TETRA__TETRAPOL__and_P25.md"
 status: processed
 reading_level: L1
-research_area: []
-task: []
-method: []
+research_area: ["公共安全通信隐私"]
+task: ["评估数字集群信令可见性"]
+method: ["P25、TETRA 和 TETRAPOL 规范与观测对照"]
 dataset: ["TETRA 单部署语料（>1,600 万记录 / 36.25h）", "TETRAPOL 单部署语料（46 文件 / >3,300 万记录）", "P25 十系统语料（688,866 记录）", "CONUS P25 普查（567 系统 / 48 州）"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # The Hidden Life of Public Safety Communications Signals: A Comparative Security Analysis of TETRA, TETRAPOL, and P25

@@ -5,7 +5,7 @@ title_cn: "共形预测用于攻击性安全"
 authors: ["Giovanni Cherubin"]
 year: 2026
 venue: "arXiv 2026"
-doi: "unknown"
+doi: "10.1007/978-3-032-15120-9_14"
 url: "https://arxiv.org/abs/2609.05165"
 pdf: "00-inbox/PDFs/2026-arXiv-Conformal_Prediction_for_Offensive_Security.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-Conformal_Prediction_for_Offensive_Security.md"
@@ -13,12 +13,12 @@ status: processed
 reading_level: L1
 research_area: ["website-fingerprinting"]
 task: ["website-fingerprinting"]
-method: []
+method: ["共形预测与受控安全评估"]
 dataset: ["Adult", "DF Tor WF dataset（95 个监控站点 × 1,000 traces；40,716 条开放世界 traces）"]
 code: "unknown"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Conformal Prediction for Offensive Security
@@ -39,6 +39,7 @@ updated: "2026-09-19"
 | 是否开源 | 解析稿未提及代码仓库，`code` 记为 unknown |
 | PDF | 00-inbox/PDFs/2026-arXiv-Conformal_Prediction_for_Offensive_Security.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-arXiv-Conformal_Prediction_for_Offensive_Security.md |
+| DOI | [10.1007/978-3-032-15120-9_14](https://doi.org/10.1007/978-3-032-15120-9_14) |
 
 > ⚠️ MinerU 解析问题：排版为 `fi`/`ff` 连字丢失，全文出现 "Ofensive/ofensive"、"trafic"、"diferent"、"eficient" 等拼写（原文应为 Offensive、traffic、different、efficient）；标题栏亦写作 "Ofensive Security"。
 

@@ -5,7 +5,7 @@ title_cn: "NetMamba+: 高效准确网络流量分类的预训练模型框架"
 authors: ["Tongze Wang", "Xiaohui Xie", "Wenduo Wang", "Chuyi Wang", "Jinzhou Liu", "Boyan Huang", "Yannan Hu", "Youjian Zhao", "Yong Cui"]
 year: 2026
 venue: "arXiv (extended version of ICNP 2024)"
-doi: unknown
+doi: "10.1109/ton.2026.3734044"
 url: "https://arxiv.org/abs/2405.11449v3"
 pdf: "00-inbox/PDFs/2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.md"
@@ -18,7 +18,7 @@ dataset: ["Browser", "Kitsune", "CipherSpectrum", "CSTNET-TLS1.3", "CrossNet2021
 code: "https://github.com/UniBuc/NetMamba"
 relevance: high
 created: "2026-05-27"
-updated: "2026-06-10"
+updated: "2026-11-20"
 internal_citation_count: 1
 citation_impact: 1.0
 composite_weight: 0.65
@@ -44,6 +44,7 @@ citation_count_verified: "2026-11-18"
 | 是否开源 | 是 |
 | PDF | 00-inbox/PDFs/2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification.md |
+| DOI | [10.1109/ton.2026.3734044](https://doi.org/10.1109/ton.2026.3734044) |
 
 ## 1. 一句话总结
 

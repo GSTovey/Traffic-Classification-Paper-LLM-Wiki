@@ -5,8 +5,8 @@ title_cn: "野外环境中鲁棒的多标签网站指纹攻击"
 authors: [Xinhao Deng, Qilei Yin, Zhuotao Liu, Xiyuan Zhao, Qi Li, Mingwei Xu, Ke Xu, Jianping Wu]
 year: 2023
 venue: "S&P"
-doi: "unknown"
-url: "unknown"
+doi: "10.1109/sp46215.2023.10179464"
+url: "https://doi.org/10.1109/sp46215.2023.10179464"
 pdf: "00-inbox/PDFs/2023-S&P-Robust_Multi-tab_Website_Fingerprinting_Attacks_in_the_Wild.pdf"
 mineru_md: "02-parsed-markdown/2023-S&P-Robust_Multi-tab_Website_Fingerprinting_Attacks_in_the_Wild.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: [500K-multi-tab-sessions, tor-browsing-dataset]
 code: "unknown"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-20"
 ---
 
 ## §0 基础信息

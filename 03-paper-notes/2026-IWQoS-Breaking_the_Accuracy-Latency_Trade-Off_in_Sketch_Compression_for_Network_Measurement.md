@@ -13,12 +13,12 @@ status: processed
 reading_level: L2
 research_area: ["anomaly-detection"]
 task: ["anomaly-detection"]
-method: []
+method: ["LightRanger 草图压缩与准确率、延迟比较"]
 dataset: ["CAIDA 2019 (Equinix-Chicago)", "MAWI", "Webdocs (fimi.ua.ac.be)", "Zipf (Web Polygraph 合成)"]
 code: "unknown（论文未提及开源仓库，仅说明 C++ 实现）"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Breaking the Accuracy-Latency Trade-Off in Sketch Compression for Network Measurement

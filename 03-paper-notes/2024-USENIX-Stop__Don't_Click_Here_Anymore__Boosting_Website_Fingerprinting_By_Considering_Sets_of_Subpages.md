@@ -14,8 +14,8 @@ venue_target: "USENIX Security 2024"
 publication_status: published
 doi: ""
 url: "https://www.usenix.org/conference/usenixsecurity24/presentation/mitseva"
-pdf: ""
-mineru_md: "02-parsed-markdown/2024-USENIX-Stop__Don't_Click_Here_Anymore__Boosting_Website_Fingerprinting_By_Considering_Sets_of_Subpages.md"
+pdf: "00-inbox/PDFs/2024-USENIX-Stop__Don’t_Click_Here_Anymore__Boosting_Website_Fingerprinting_By_Considering_Sets_of_Subpages.pdf"
+mineru_md: "02-parsed-markdown/2024-USENIX-Stop__Don’t_Click_Here_Anymore__Boosting_Website_Fingerprinting_By_Considering_Sets_of_Subpages.md"
 status: deep-analyzed
 research_area:
   - website-fingerprinting

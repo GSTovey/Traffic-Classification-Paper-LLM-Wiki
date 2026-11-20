@@ -9,7 +9,7 @@ authors:
 year: 2026
 venue: "电子学报（Acta Electronica Sinica）"
 doi: "10.12263/DZXB.20251034"
-url: "https://doi.org/10.12263/DZXB.20251034"
+url: "https://www.ejournal.org.cn/en/article/doi/10.12263/DZXB.20251034"
 arxiv: "https://arxiv.org/abs/2602.14055"
 pdf: "00-inbox/PDFs/2026-AES-The_Inevitability_of_Side-Channel_Leakage_in_Encrypted_Traffic.pdf"
 mineru_md: "02-parsed-markdown/2026-AES-The_Inevitability_of_Side-Channel_Leakage_in_Encrypted_Traffic.md"
@@ -31,11 +31,15 @@ method:
   - "Lipschitz continuity"
   - "Pinsker's inequality"
   - "mutual information lower bound"
-dataset: []
+dataset: ["形式化理论模型，无实测数据集"]
 code: unknown
 relevance: high
 created: "2026-06-21"
-updated: "2026-08-17"
+updated: "2026-11-20"
+volume: "54"
+number: "2"
+pages: "837--850"
+local_version: "arXiv:2602.14055"
 ---
 
 # The Inevitability of Side-Channel Leakage in Encrypted Traffic
@@ -54,6 +58,7 @@ updated: "2026-08-17"
 | 方法关键词 | 信息论、复合信道模型、数据处理不等式、Lipschitz 连续性、Pinsker 不等式、互信息下界 |
 | 数据集 | 无（纯理论论文） |
 | 是否开源 | N/A |
+| 本地原文版本 | arXiv:2602.14055 |
 
 ---
 

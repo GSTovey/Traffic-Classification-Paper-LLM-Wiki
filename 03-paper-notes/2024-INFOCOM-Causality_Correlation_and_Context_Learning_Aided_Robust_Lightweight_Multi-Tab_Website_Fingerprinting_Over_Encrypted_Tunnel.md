@@ -11,8 +11,8 @@ authors:
   - Siyu Cheng
 year: 2024
 venue: "INFOCOM 2024"
-doi: ""
-url: ""
+doi: "10.1109/infocom52122.2024.10621235"
+url: "https://doi.org/10.1109/infocom52122.2024.10621235"
 pdf: "00-inbox/PDFs/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.pdf"
 mineru_md: "02-parsed-markdown/2024-INFOCOM-Causality_Correlation_and_Context_Learning_Aided_Robust_Lightweight_Multi-Tab_Website_Fingerprinting_Over_Encrypted_Tunnel.md"
 status: processed
@@ -20,11 +20,11 @@ reading_level: L2
 research_area: ["网站指纹识别", "多标签", "加密流量", "鲁棒性"]
 task: ["网站指纹识别"]
 method: ["causality-learning", "context-learning", "random-forest"]
-dataset: []
+dataset: ["SSH70", "OpenVPN40", "Monkey500"]
 code: "https://github.com/chenxiailian/robustweb"
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-29"
+updated: "2026-11-20"
 ---
 
 # 0. 元信息

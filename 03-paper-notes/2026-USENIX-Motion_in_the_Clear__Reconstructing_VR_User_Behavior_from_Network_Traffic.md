@@ -13,12 +13,12 @@ status: deep-analyzed
 reading_level: L3
 research_area: [anonymous-traffic-identification]
 task: [traffic-classification]
-method: []
+method: ["VR 应用生态测量与被动流量隐私评估"]
 dataset: [自采集 VR 应用流量（75 款应用 / 23 名用户）, BOXRR-23（Beat Saber 运动数据集）]
 code: "https://doi.org/10.5281/zenodo.20343460"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-11-03"
+updated: "2026-11-20"
 deep_analysis_verified: "2026-11-03"
 deep_analysis_sources: ["03-paper-notes/2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic.md", "02-parsed-markdown/2026-USENIX-Motion_in_the_Clear__Reconstructing_VR_User_Behavior_from_Network_Traffic.md"]
 evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"

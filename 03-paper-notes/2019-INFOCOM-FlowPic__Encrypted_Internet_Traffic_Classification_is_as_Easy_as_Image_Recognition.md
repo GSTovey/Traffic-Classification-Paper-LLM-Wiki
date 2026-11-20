@@ -7,8 +7,8 @@ authors:
   - Yuval Shavitt
 year: 2019
 venue: IEEE INFOCOM
-doi: unknown
-url: unknown
+doi: "10.1109/infcomw.2019.8845315"
+url: "https://doi.org/10.1109/infcomw.2019.8845315"
 pdf: "00-inbox/PDFs/2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition.pdf"
 mineru_md: "02-parsed-markdown/2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition.md"
 status: processed
@@ -23,7 +23,7 @@ research_area: ["加密流量分类", "流量图像化", "深度学习"]
 task: ["流量分类", "应用识别", "加密方式识别"]
 method: ["CNN", "FlowPic", "LeNet-5"]
 created: 2026-06-09
-updated: 2026-06-09
+updated: "2026-11-20"
 internal_citation_count: 12
 citation_impact: 1.8
 composite_weight: 0.2925
@@ -49,6 +49,7 @@ citation_count_verified: "2026-11-18"
 | 是否开源 | 否 |
 | PDF | `../00-inbox/PDFs/2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition.pdf` |
 | MinerU Markdown | `../02-parsed-markdown/2019-INFOCOM-FlowPic__Encrypted_Internet_Traffic_Classification_is_as_Easy_as_Image_Recognition.md` |
+| DOI | [10.1109/infcomw.2019.8845315](https://doi.org/10.1109/infcomw.2019.8845315) |
 
 ---
 

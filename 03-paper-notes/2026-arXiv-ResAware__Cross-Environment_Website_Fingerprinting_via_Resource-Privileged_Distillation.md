@@ -7,7 +7,7 @@ year: 2026
 venue: "arXiv 2026"
 doi: unknown
 url: "https://arxiv.org/abs/2605.xxxxx"
-pdf: unknown
+pdf: "00-inbox/PDFs/2026-arXiv-ResAware__Cross-Environment_Website_Fingerprinting_via_Resource-Privileged_Distillation.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-ResAware__Cross-Environment_Website_Fingerprinting_via_Resource-Privileged_Distillation.md"
 status: processed
 reading_level: L2
@@ -373,14 +373,14 @@ CESM_F(s,t) = 1 - Delta_same^F / Delta_diff^F，衡量特征 F 在跨环境条�
 
 ### 9.2 相关方法
 
-- [[knowledge-distillation]]
-- [[privileged-information-learning]]
-- [[cross-modal-learning]]
+- knowledge-distillation
+- privileged-information-learning
+- cross-modal-learning
 
 ### 9.3 相关任务
 
 - [[website-fingerprinting]]
-- [[cross-environment-generalization]]
+- cross-environment-generalization
 
 ### 9.4 可更新的综述页面
 

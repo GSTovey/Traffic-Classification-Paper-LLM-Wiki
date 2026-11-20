@@ -7,7 +7,7 @@ year: 2026
 venue: "arXiv 2026"
 doi: "unknown"
 url: "https://arxiv.org/abs/2606"
-pdf: ""
+pdf: "00-inbox/PDFs/2026-arXiv-Treat_Traffic_Like_Trees__A_Semantic-Preserving_Hierarchical_Graph-Based_Expert_Framework_for_Encrypted_Traffic_Analysis.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-Treat_Traffic_Like_Trees__A_Semantic-Preserving_Hierarchical_Graph-Based_Expert_Framework_for_Encrypted_Traffic_Analysis.md"
 status: processed
 reading_level: L2
@@ -365,8 +365,8 @@ PTGAMoE 的工作流分为三个主要阶段：
 
 ### 9.2 相关方法
 
-- [[graph-attention-network]] — PTGAMoE 的核心消息传递机制
-- [[mixture-of-experts]] — 层专用专家和 Sigmoid 协作门控
+- [[05-methods/graph-neural-network|graph-attention-network]] — PTGAMoE 的核心消息传递机制
+- mixture-of-experts — 层专用专家和 Sigmoid 协作门控
 - Protocol Tree Graph — 本文提出的协议树图构建方法
 - Hierarchical Gating — 字段级和专家级门控机制
 

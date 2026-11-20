@@ -5,8 +5,8 @@ title_cn: "Pathfinder：探索路径多样性以评估互联网审查的不一�
 authors: [Xiaoqin Liang, Guannan Liu, Lin Jin, Shuai Hao, Haining Wang]
 year: 2025
 venue: "ACSAC 2025"
-doi: unknown
-url: unknown
+doi: "10.1109/acsac67867.2025.00063"
+url: "https://doi.org/10.1109/acsac67867.2025.00063"
 pdf: "00-inbox/PDFs/2025-ACSAC-Pathfinder__Exploring_Path_Diversity_for_Assessing_Internet_Censorship_Inconsistency.pdf"
 mineru_md: "02-parsed-markdown/2025-ACSAC-Pathfinder__Exploring_Path_Diversity_for_Assessing_Internet_Censorship_Inconsistency.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: [Proxyrack-RESIP, Disguiser-domain-list, AWS-GCP-Azure-control-servers]
 code: unknown
 relevance: high
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Pathfinder: Exploring Path Diversity for Assessing Internet Censorship Inconsistency
@@ -39,7 +39,7 @@ updated: "2026-09-19"
 | 方法关键词 | 住宅 IP 代理（RESIP）vantage points；多地 back-end 控制服务器制造路径多样性；静态 payload ground truth（源自 Disguiser 思路）；应用层 traceroute；缓存代理剔除与 inbound censor 排除 |
 | 数据集 | 自采测量数据：实验 1（IP 目的地方向）144,418 个 VP / 120 国 / 60 周；实验 2（托管平台方向）66,123 个 VP / 120 国 / 36 周；测试域名列表来自 Disguiser 汇编的国别被审域名清单 |
 | 是否开源 | 未提及（代码与数据发布方式解析稿未给出；测试域名列表指向 Disguiser 的公开仓库 github.com/e2ecensor/Disguiser_public） |
-| DOI | unknown |
+| DOI | [10.1109/acsac67867.2025.00063](https://doi.org/10.1109/acsac67867.2025.00063) |
 | 备注 | 伦理设计：RESIP 经 ToS 确认、每个住宅 IP 每周仅使用一次、探测不触达真实被审内容、获机构 IRB 豁免；附录 A/B 给出国别不一致分档表与完整 traceroute 结果 |
 
 ---

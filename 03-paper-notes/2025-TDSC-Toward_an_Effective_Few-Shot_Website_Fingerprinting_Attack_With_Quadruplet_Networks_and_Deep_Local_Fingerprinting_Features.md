@@ -13,7 +13,7 @@ year: 2025
 venue: "IEEE TDSC 2025"
 doi: "10.1109/TDSC.2025.3563389"
 url: ""
-pdf: ""
+pdf: "00-inbox/PDFs/2025-TDSC-Toward_an_Effective_Few-Shot_Website_Fingerprinting_Attack_With_Quadruplet_Networks_and_Deep_Local_Fingerprinting_Features.pdf"
 mineru_md: "02-parsed-markdown/2025-TDSC-Toward_an_Effective_Few-Shot_Website_Fingerprinting_Attack_With_Quadruplet_Networks_and_Deep_Local_Fingerprinting_Features.md"
 status: processed
 reading_level: L2

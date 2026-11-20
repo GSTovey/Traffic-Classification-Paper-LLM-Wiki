@@ -1,9 +1,15 @@
 ---
 type: research-front
 question: "流量分析中多模态融合的最优策略是什么？"
-status: converging
+status: conditional_support
+synthesis_state: signed
+last_synthesized: "2026-11-18"
+synthesized_by: "Codex（维护者授权按原文核验）"
+synthesis_claim_ids: ["CLM-0401","CLM-0402","CLM-0005","CLM-0403"]
+synthesis_evidence_ids: ["EV-V2-MM4FLOW-MODAL","EV-V2-BPFDAG-ABLATION","EV-V2-CRYPTO-CONTENT"]
+historical_status: converging
 created: "2026-06-21"
-last_updated: "2026-09-19"
+last_updated: "2026-11-18"
 related_concepts:
   - "[[traffic-foundation-model]]"
   - "[[traffic-representation-learning]]"
@@ -16,6 +22,29 @@ related_methods:
 
 # 多模态融合的最优策略
 
+## 当前研究认识
+
+单视图与融合消融支持各自任务内的结果。原文给出了包长、字节和图结构等不同视图，跨任务排序需在比较时匹配这些条件。
+
+- MM4flow 的 SFT 单视图对照在 DataCon2021-p2 上给出包长 0.8999、字节 0.0125 的 F1，在 Browser 上分别是 0.8580、0.9903。（CLM-0401，EV-V2-MM4FLOW-MODAL）
+- BPF-DAG 在 ISCX-VPN 的 Table VIII 报告完整方案 accuracy 0.9912，去时序 0.8440，去拓扑 0.9793，拼接 0.9742，平均 0.9587。（CLM-0402，EV-V2-BPFDAG-ABLATION）
+- CryptoFormer Fig. 8 在明密文协议混合的完整 18 种资产数据上报告，去掉包内容模块后的 accuracy 与 F1 下降最大。（CLM-0005，EV-V2-CRYPTO-CONTENT）
+- 在相同字段、骨干和训练预算下，早期与晚期融合的排序能否在独立数据复现，现有审定材料证据不足。（CLM-0403）
+
+## 签审记录
+
+2026-11-18 由Codex（维护者授权按原文核验）按原文研究条件更新。旧判断及文献沿革保留在下方。
+
+### 签审前快照
+
+**待签审。** 本轮原文复核、证据边界与拟议结论见 [[front-review-2026-11-18#multimodal-fusion-strategy]]. 签审后在此记录结论、适用条件、反证和未解决问题。
+
+
+## 历史研究记录
+
+> 下方保留历次研究记录，含旧制的共识和状态表述。当前引用以命题索引和签审快照为准。
+
+<!-- evidence-governance:archive:start -->
 ## 核心问题
 
 网络流量天然包含多种模态（payload 内容、packet length、packet direction、packet timing、header fields）。如何最优地融合这些模态以提升分类、检测和分析性能？
@@ -105,3 +134,4 @@ related_methods:
 | 年份 | 论文 | 方向 | 关联及适用条件 | 证据位置 | 状态 |
 | --- | --- | --- | --- | --- | --- |
 | 2026 | [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 条件支持 | 同数据的门控/简单融合消融，需按协议分层 | §IV-D、§V-G 图 8 | EV-20261118-CRYPTO-MODAL · pending_review |
+<!-- evidence-governance:archive:end -->

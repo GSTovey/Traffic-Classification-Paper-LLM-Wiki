@@ -22,6 +22,7 @@ updated: "2026-11-03"
 deep_analysis_verified: "2026-11-03"
 deep_analysis_sources: ["03-paper-notes/2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning.md", "02-parsed-markdown/2026-USENIX-Tracegram__Framing_Trace-Level_Traffic_Analysis_with_Temporally-Aware_Multiple_Instance_Learning.md"]
 evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+artifact_doi: "10.5281/zenodo.17978903"
 ---
 
 # Tracegram: Framing Trace-Level Traffic Analysis with Temporally-Aware Multiple Instance Learning

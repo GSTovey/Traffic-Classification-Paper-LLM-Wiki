@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses"
-title_cn: "unknown"
+title_cn: "多标签页浏览的少样本网站指纹与轻量混淆防御"
 authors: ["Yuwen Qian", "Wenwen Meng", "Chuan Ma", "Ming Ding", "Biwen Chen", "Tao Xiang"]
 year: 2026
 venue: "TDSC"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "https://github.com/WW-Meng/FMWF"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses

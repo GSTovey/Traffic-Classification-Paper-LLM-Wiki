@@ -5,8 +5,8 @@ title_cn: "COUNTMAMBA：基于粗粒度表示与细粒度预测的通用网站�
 authors: [Xianwen Deng, Ruijie Zhao, Yanhao Wang, Mingwei Zhan, Zhi Xue, Yijun Wang]
 year: 2025
 venue: "IEEE S&P 2025"
-doi: "unknown"
-url: "unknown"
+doi: "10.1109/sp61157.2025.00154"
+url: "https://doi.org/10.1109/sp61157.2025.00154"
 pdf: "00-inbox/PDFs/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.pdf"
 mineru_md: "02-parsed-markdown/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.md"
 status: deep-analyzed
@@ -18,7 +18,7 @@ dataset: [DFset, ARESset, TMWFset, k-NNset, Walkie-Talkie]
 code: "https://github.com/SJTUdxw/CountMamba-WF"
 relevance: high
 created: "2026-06-21"
-updated: "2026-11-03"
+updated: "2026-11-20"
 deep_analysis_verified: "2026-11-03"
 deep_analysis_sources: ["03-paper-notes/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.md", "02-parsed-markdown/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.md"]
 evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
@@ -43,6 +43,7 @@ evidence_audit: "source-linked; existing numerical claims remain subject to sour
 | 是否开源 | 是 — https://github.com/SJTUdxw/CountMamba-WF |
 | PDF | `00-inbox/PDFs/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.pdf` |
 | MinerU Markdown | `02-parsed-markdown/2025-S&P-Countmamba__A_Generalized_Website_Fingerprinting_Attack_via_Coarse-Grained_Representation_and_Fine-Grained_Prediction.md` |
+| DOI | [10.1109/sp61157.2025.00154](https://doi.org/10.1109/sp61157.2025.00154) |
 
 ---
 

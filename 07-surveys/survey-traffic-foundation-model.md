@@ -190,6 +190,8 @@ updated: "2026-09-19"
 
 ## 7. 关键争议
 
+> 目前的预训练、模态与 token 结论按 [[pretraining-necessity]]、[[multimodal-fusion-strategy]] 和 [[tokenization-optimal]] 的签审快照引用。下文为历史讨论。
+
 1. **流量是"语言"还是"图像"？**：BERT 类将流量字节视为 token（最优 mask ratio <20%），YaTC 论证流量字节更像像素（90% 最优 mask ratio）。两种范式各有优势，尚无定论。
 2. **2-gram vs. Byte-level tokenization**：ET-BERT 使用 2-gram 编码，MM4flow 论证 byte-level 更优（2-gram 的 mask 可由相邻 token 推断），但系统对比不足。
 3. **Payload 的价值**：NetMamba+ 消融实验显示 payload 在部分数据集上有帮助，在另一些数据集上反而有害；MM4flow 证明在加密隧道任务中 packet length 才是关键。

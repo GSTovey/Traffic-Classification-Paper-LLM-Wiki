@@ -14,8 +14,8 @@ authors:
   - Qi Li
 year: 2024
 venue: "NDSS"
-doi: ""
-url: ""
+doi: "10.14722/ndss.2024.23081"
+url: "https://doi.org/10.14722/ndss.2024.23081"
 pdf: "00-inbox/PDFs/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic.pdf"
 mineru_md: "02-parsed-markdown/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic.md"
 status: deep-analyzed
@@ -44,7 +44,7 @@ dataset:
 code: ""
 relevance: high
 created: "2026-06-03"
-updated: "2026-11-03"
+updated: "2026-11-20"
 deep_analysis_verified: "2026-11-03"
 deep_analysis_sources: ["03-paper-notes/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic.md", "02-parsed-markdown/2024-NDSS-Low-quality_training_data_only__A_robust_framework_for_detecting_encrypted_malicious_network_traffic.md"]
 evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
@@ -68,6 +68,7 @@ citation_count_verified: "2026-11-18"
 | 会议/期刊 | NDSS 2024 |
 | 关键词 | Encrypted Malicious Traffic Detection, Low-Quality Training Data, Label Noise, Data Augmentation, Auto-Encoder, GAN |
 | 代码 | 论文未明确说明 |
+| DOI | [10.14722/ndss.2024.23081](https://doi.org/10.14722/ndss.2024.23081) |
 
 ## 1. 一句话总结
 

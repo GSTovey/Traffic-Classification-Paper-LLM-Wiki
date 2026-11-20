@@ -5,9 +5,9 @@ title_cn: "Huma：基于延迟流量替换的Web协议隧道审查规避"
 authors: ["Sina Kamali", "Diogo Barradas"]
 year: 2026
 venue: "NDSS 2026"
-doi: unknown
-url: unknown
-pdf: ""
+doi: "10.14722/ndss.2026.240328"
+url: "https://doi.org/10.14722/ndss.2026.240328"
+pdf: "00-inbox/PDFs/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement.md"
 status: deep-analyzed
 reading_level: L3
@@ -18,7 +18,7 @@ dataset: ["Tranco top-100", "Kulshrestha et al. browsing dataset (2,148 users)"]
 code: "https://doi.org/10.5281/zenodo.17790334"
 relevance: high
 created: "2026-06-21"
-updated: "2026-11-03"
+updated: "2026-11-20"
 deep_analysis_verified: "2026-11-03"
 deep_analysis_sources: ["03-paper-notes/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement.md", "02-parsed-markdown/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement.md"]
 evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
@@ -42,6 +42,7 @@ evidence_audit: "source-linked; existing numerical claims remain subject to sour
 | 是否开源 | 是（DOI: 10.5281/zenodo.17790334） |
 | PDF | - |
 | MinerU Markdown | 02-parsed-markdown/2026-NDSS-Huma__Censorship_Circumvention_via_Web_Protocol_Tunneling_with_Deferred_Traffic_Replacement.md |
+| DOI | [10.14722/ndss.2026.240328](https://doi.org/10.14722/ndss.2026.240328) |
 
 ---
 
@@ -426,28 +427,28 @@ OUS核心是无头浏览器，模拟页面访问、点击链接、重新访问�
 
 ### 9.2 相关方法
 
-- [[web-protocol-tunneling]]
-- [[traffic-fingerprinting]]
-- [[behavioral-realism]]
-- [[content-replacement]]
-- [[deferred-processing]]
+- web-protocol-tunneling
+- traffic-fingerprinting
+- behavioral-realism
+- content-replacement
+- deferred-processing
 
 ### 9.3 相关任务
 
-- [[covert-communication]]
-- [[censorship-evasion]]
-- [[privacy-protection]]
-- [[traffic-analysis-resistance]]
+- covert-communication
+- censorship-evasion
+- privacy-protection
+- traffic-analysis-resistance
 
 ### 9.4 可更新的综述页面
 
 - [[survey-encrypted-traffic-analysis]]
-- [[survey-censorship-circumvention]]
+- survey-censorship-circumvention
 
 ### 9.5 可加入的对比表
 
-- [[comparison-censorship-circumvention-tools]]
-- [[comparison-traffic-analysis-defenses]]
+- comparison-censorship-circumvention-tools
+- comparison-traffic-analysis-defenses
 
 ---
 

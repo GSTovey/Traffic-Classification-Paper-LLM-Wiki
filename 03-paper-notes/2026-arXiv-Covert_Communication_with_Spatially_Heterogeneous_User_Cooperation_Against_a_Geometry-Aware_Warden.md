@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-arXiv-Covert_Communication_with_Spatially_Heterogeneous
 mineru_md: "02-parsed-markdown/2026-arXiv-Covert_Communication_with_Spatially_Heterogeneous_User_Cooperation_Against_a_Geometry-Aware_Warden.md"
 status: processed
 reading_level: L1
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["无线通信的可观察性"]
+task: ["分析空间异质性对信道检测的影响"]
+method: ["大尺度衰落模型与数值对照"]
+dataset: ["3GPP Urban Macrocell 模型的仿真"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Covert Communication with Spatially Heterogeneous User Cooperation Against a Geometry-Aware Warden

@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-arXiv-Hidden_Threat_in_Synthetic_Data__Covert_Targeted_
 mineru_md: "02-parsed-markdown/2026-arXiv-Hidden_Threat_in_Synthetic_Data__Covert_Targeted_Bias_Injection_through_Benign_Text.md"
 status: processed
 reading_level: L1
-research_area: []
-task: []
-method: []
+research_area: ["合成数据安全"]
+task: ["评估训练数据引入的模型偏差"]
+method: ["受控合成数据与下游偏差比较"]
 dataset: ["BBQ", "Creative-Writing-ShareGPT", "Evol-Instruct", "MetaMathQA", "OpenMathInstruct-2", "ARC", "GSM8K", "MBPP"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Hidden Threat in Synthetic Data: Covert Targeted Bias Injection through Benign Text

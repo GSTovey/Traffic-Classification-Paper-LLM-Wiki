@@ -7,7 +7,7 @@ year: 2024
 venue: "IEEE TIFS 2024"
 doi: "10.1109/TIFS.2023.3327662"
 url: unknown
-pdf: unknown
+pdf: "00-inbox/PDFs/2024-TIFS-WFDefProxy__Real_World_Implementation_and_Evaluation_of_Website_Fingerprinting_Defenses.pdf"
 mineru_md: "02-parsed-markdown/2024-TIFS-WFDefProxy__Real_World_Implementation_and_Evaluation_of_Website_Fingerprinting_Defenses.md"
 status: processed
 reading_level: L2

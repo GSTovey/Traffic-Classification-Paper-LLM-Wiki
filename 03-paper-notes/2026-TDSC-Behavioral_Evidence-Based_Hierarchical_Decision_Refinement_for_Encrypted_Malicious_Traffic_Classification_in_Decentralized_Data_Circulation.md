@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Behavioral Evidence-Based Hierarchical Decision Refinement for Encrypted Malicious Traffic Classification in Decentralized Data Circulation"
-title_cn: "unknown"
+title_cn: "去中心化数据流通中基于行为证据的加密恶意流量分层决策"
 authors: ["Mengyu Wang", "Chengxiang Si", "Zijian Zhang", "Yi Zhao", "Peishuai Sun", "Weixuan Mao", "Wei Liang"]
 year: 2026
 venue: "TDSC"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Behavioral Evidence-Based Hierarchical Decision Refinement for Encrypted Malicious Traffic Classification in Decentralized Data Circulation

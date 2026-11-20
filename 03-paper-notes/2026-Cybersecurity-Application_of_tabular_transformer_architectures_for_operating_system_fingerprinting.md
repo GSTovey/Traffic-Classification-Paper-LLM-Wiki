@@ -11,7 +11,7 @@ year: 2026
 venue: "Cybersecurity (Springer)"
 doi: "10.1186/s42400-025-00494-y"
 url: "https://doi.org/10.1186/s42400-025-00494-y"
-pdf: "00-inbox/Aug_inbox/2026-Cybersecurity-Application_of_tabular_transformer_architectures_for_operating_system_fingerprinting.pdf"
+pdf: "00-inbox/PDFs/2026-Cybersecurity-Application_of_tabular_transformer_architectures_for_operating_system_fingerprinting.pdf"
 mineru_md: "02-parsed-markdown/2026-Cybersecurity-Application_of_tabular_transformer_architectures_for_operating_system_fingerprinting.md"
 status: processed
 reading_level: L2

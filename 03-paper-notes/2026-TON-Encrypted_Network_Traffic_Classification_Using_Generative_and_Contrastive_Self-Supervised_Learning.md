@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning"
-title_cn: "unknown"
+title_cn: "基于生成式与对比式自监督学习的加密网络流量分类"
 authors: ["Md. Shamim Towhid", "Nashid Shahriar"]
 year: 2026
 venue: "TON"
@@ -18,7 +18,7 @@ dataset: ["ISCX, QUIC"]
 code: "https://github.com/thuml/few-shot/tree/master"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning

@@ -1,5 +1,7 @@
 ---
 type: paper
+pdf: "00-inbox/PDFs/2023-S&P-SoK__A_Critical_Evaluation_of_Efficient_Website_Fingerprinting_Defenses.pdf"
+mineru_md: "02-parsed-markdown/2023-S&P-SoK__A_Critical_Evaluation_of_Efficient_Website_Fingerprinting_Defenses.md"
 title_original: "SoK: A Critical Evaluation of Efficient Website Fingerprinting Defenses"
 title_cn: "SoK：高效网站指纹防御的批判性评估"
 authors:
@@ -21,12 +23,14 @@ dataset:
   - "GoodEnough: 50网站用于对比"
 relevance: high
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-20"
 internal_citation_count: 18
 citation_impact: 1.8
 composite_weight: 0.819
 citation_count_scope: "verified DOI or normalized complete titles in vault References; lower bound"
 citation_count_verified: "2026-11-18"
+doi: "10.1109/sp46215.2023.10179289"
+url: "https://doi.org/10.1109/sp46215.2023.10179289"
 ---
 
 # SoK: A Critical Evaluation of Efficient Website Fingerprinting Defenses
@@ -46,6 +50,7 @@ citation_count_verified: "2026-11-18"
 | 方法关键词 | 深度学习攻击、信息泄漏分析、闭世界/开世界评估、防御实现可行性、防御分层组合 |
 | 数据集 | BigEnough (95网站 × 200样本), BigEnough-TS, GoodEnough (50网站) |
 | 相关知识域 | [[website-fingerprinting]], [[website-fingerprinting-defense]], [[encrypted-traffic-analysis]], [[survey-website-fingerprinting]] |
+| DOI | [10.1109/sp46215.2023.10179289](https://doi.org/10.1109/sp46215.2023.10179289) |
 
 ---
 

@@ -11,7 +11,7 @@ year: 2023
 venue: "IEEE/ACM TON 2023"
 doi: "10.1109/TNET.2022.3209979"
 url: unknown
-pdf: ""
+pdf: "00-inbox/PDFs/2023-TON-A_Two-Phase_Approach_to_Fast_and_Accurate_Classification_of_Encrypted_Traffic.pdf"
 mineru_md: "02-parsed-markdown/2023-TON-A_Two-Phase_Approach_to_Fast_and_Accurate_Classification_of_Encrypted_Traffic.md"
 status: processed
 reading_level: L2

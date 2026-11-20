@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-TIFS-HookSteg__A_Truly_Lossless_Steganography_Based_on_
 mineru_md: "02-parsed-markdown/2026-TIFS-HookSteg__A_Truly_Lossless_Steganography_Based_on_Process_Hooking_for_Lossy_Network_Channels.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
+research_area: ["图像隐写安全"]
+task: ["评估失真信道中的恢复可靠性"]
+method: ["失真条件及恢复率对照"]
 dataset: ["BossBase v1.01"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # HookSteg: A Truly Lossless Steganography Based on Process Hooking for Lossy Network Channels

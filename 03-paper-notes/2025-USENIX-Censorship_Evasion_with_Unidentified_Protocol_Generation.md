@@ -7,7 +7,7 @@ year: 2025
 venue: "USENIX Security 2025"
 doi: unknown
 url: "https://www.usenix.org/conference/usenixsecurity25/presentation/wails"
-pdf: unknown
+pdf: "00-inbox/PDFs/2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation.pdf"
 mineru_md: "02-parsed-markdown/2025-USENIX-Censorship_Evasion_with_Unidentified_Protocol_Generation.md"
 status: deep-analyzed
 reading_level: L3

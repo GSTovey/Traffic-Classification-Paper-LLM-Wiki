@@ -5,8 +5,8 @@ title_cn: "GMM-cGAN：缓解数据稀缺和标签噪声以实现鲁棒的加密�
 authors: ["Kwizera K. Jonath", "Abida Naz", "Shigeng Zhang"]
 year: 2026
 venue: "JCN"
-doi: "unknown"
-url: "unknown"
+doi: "10.1016/j.comnet.2025.111823"
+url: "https://doi.org/10.1016/j.comnet.2025.111823"
 pdf: "00-inbox/PDFs/2026-JCN-GMM-cGAN__Mitigating_data_scarcity_and_label_noise_for_robust_encrypted_malicious_traffic_classification.pdf"
 mineru_md: "02-parsed-markdown/2026-JCN-GMM-cGAN__Mitigating_data_scarcity_and_label_noise_for_robust_encrypted_malicious_traffic_classification.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["CIRA-CIC-DoHBrw-2020", "CSE-CIC-IDS2018", "TON-IoT"]
 code: "unknown"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-20"
 ---
 
 ## §0 基础信息

@@ -1,85 +1,67 @@
 ---
 type: paper
-title_original: "AdvTG: An Adversarial Trafic Generation Framework to Deceive DL-Based Malicious Trafic Detection Models"
-title_cn: ""
-authors: []
+title_original: "AdvTG: An Adversarial Traffic Generation Framework to Deceive DL-Based Malicious Traffic Detection Models"
+title_cn: "AdvTG：检测系统对对抗流量变化的鲁棒性研究"
+authors: ["Peishuai Sun", "Xiaochun Yun", "Shuhao Li", "Tao Yin", "Chengxiang Si", "Jiang Xie"]
 year: 2025
 venue: WWW
-doi: unknown
-url: unknown
+doi: "10.1145/3696410.3714876"
+url: "https://doi.org/10.1145/3696410.3714876"
 pdf: "00-inbox/PDFs/2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models.pdf"
 mineru_md: "02-parsed-markdown/2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models.md"
 status: deep-analyzed
 reading_level: L3
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["恶意流量检测鲁棒性"]
+task: ["评估模型与协议兼容性边界"]
+method: ["受控威胁模型与鲁棒性评估"]
+dataset: ["CICIDS2017、CICIoT2023 与作者语料"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
-# AdvTG: An Adversarial Trafic Generation Framework to Deceive DL-Based Malicious Trafic Detection Models
+# AdvTG: An Adversarial Traffic Generation Framework to Deceive DL-Based Malicious Traffic Detection Models
 
 ## 0. 论文基础信息
 | 项目 | 内容 |
 |---|---|
-| 原文标题 | AdvTG: An Adversarial Trafic Generation Framework to Deceive DL-Based Malicious Trafic Detection Models |
+| 原文标题 | AdvTG: An Adversarial Traffic Generation Framework to Deceive DL-Based Malicious Traffic Detection Models |
 | 年份 | 2025 |
 | 会议/期刊 | WWW |
 | PDF | [[2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models.pdf]] |
 | MinerU Markdown | [[2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models.md]] |
+| 作者 | Peishuai Sun, Xiaochun Yun, Shuhao Li, Tao Yin, Chengxiang Si, Jiang Xie |
+| DOI | [10.1145/3696410.3714876](https://doi.org/10.1145/3696410.3714876) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+本文以受控流量变化评估恶意流量检测器的失效条件和协议兼容性。
 
 ## 2. 摘要原文
 Deep learning-based (DL-based) malicious trafic detection models are efective but vulnerable to adversarial attacks. Existing adver sarial attacks have shown promising results when targeting trafic detection models based on statistics and sequence features. However, these attacks are less efective against models that rely on payload analysis. The main reason is the dificulty in generating semantic, compliant, and functional payloads, which limits their practical application. In this paper, we propose AdvTG, an adversarial trafic generation framework to deceive DL-based malicious trafic based on the large language model (LLM) and reinforcement learning (RL). Specifically, AdvTG is designed to attack various DL-based detection models across diverse payload features and architectures, thereby enhancing the generalization capabilities of the generated adversarial trafic. Moreover, we design a specialized prompt for trafic generation tasks, where functional fields and target types are supplied as input, while non-functional fields are generated to produce the mutated trafic. This fine-tuning endows the LLM with task comprehension and trafic pattern reasoning abilities, al lowing it to generate trafic that remains compliant and functional. Furthermore, leveraging RL, AdvTG automatically selects trafic fields that exhibit more robust adversarial properties. Experimental results show that AdvTG achieves over 40% attack success rate (ASR) across six detection models on four base datasets and two extended datasets, significantly outperforming other adversarial attack methods.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+分别检查模型响应、样本结构合规与扩展测试集中的外部有效性。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：CICIDS2017、CICIoT2023 与作者语料。
+- 作者报告：Table 5 列出主要与扩展测试语料。特定明文 HTTP 设置下作者报告变换后的样本影响所测检测器，实验另核对结构合规率。
+- 原文位置：[[02-parsed-markdown/2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models|原文解析稿]] · 摘要、Tables 2–7 与本页 L3 分析。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+明文 HTTP 与指定检测器是适用条件。合规检查不等同于端到端业务成功，实际加密环境需要另评。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
-- MinerU：已完成；解析质量需人工抽查。
-- Bib 元数据：待官方 API/论文首页核验。
 
-
-## 深度分析（自动证据提取，需人工复核）
-
-### 研究问题与证据
-- 主题线索：anomaly, tor, transformer, adversarial。
-- 摘要证据：Deep learning-based (DL-based) malicious trafic detection models are efective but vulnerable to adversarial attacks. Existing adver sarial attacks have shown promising results when targeting trafic detection models based on statistics and sequence features. However, these attacks are less efective against models that rely on payload analysis. The main reason is the dificulty in generating semantic, compliant, and functional payloads, which limits their practical application. In this paper, we propose AdvTG, an adversarial trafic generation framework to deceive DL-based malicious trafic based on the large language model (LLM) and reinforcement learning (RL). Specifically, AdvTG is designed to attack various DL-based detection models across diverse payload features and architectures, thereby enhancing the generalization capabilities of the generated adversarial trafic. Moreover, we design a specialized prompt for trafic generation tasks, where functional fields and target types are supplied as input, while non-functional fields are generated to produce the mutated trafic. This fine-tuning endows the LLM with task comprehension and trafic pattern reasoning abilities, al lowing it to generate trafic that remains compliant and functional. Furthermore, leveraging RL, AdvTG automatically selects trafic fields that exhibit more robust adversarial properties. Experimental results show that AdvTG achieves over 40% attack success rate (ASR) across six detection models on four base datasets and two extended datasets, significantly outperforming other adversarial attack methods.
-
-### 方法机制
-正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
-
-### 实验与结果
-实验段落未稳定提取；不补造数据集、baseline、指标或数值。
-
-### 局限与复现
-论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
-
-### 开源与证据等级
-- 代码线索：检测到 GitHub 线索。
-- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
-
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2025-WWW-AdvTG__An_Adversarial_Traffic_Generation_Framework_to_Deceive_DL-Based_Malicious_Traffic_Detection_Models|原文解析稿]] · 摘要、Tables 2–7 与本页 L3 分析。可引用的结论须保留所列实验条件。
 
 ### 并行深度分析（2026-09-29）
 - 方法/问题：AdvTG uses LLM plus reinforcement learning to generate semantic, protocol-compliant adversarial traffic targeting payload/statistical/sequence detectors; prompt constraints preserve functional fields. Evidence: abstract and method sections in MinerU. Missing: exact RL state/action/reward, datasets, attack success and overhead tables.
@@ -227,3 +209,63 @@ $$R(x,y)=r_\theta(x,y)-\beta\log[\pi_\phi^{RL}(y|x)/\pi^{SFT}(y|x)].$$
 
 - 本笔记前部的自动入库、摘要级或待核验段落是入库时的历史快照，按规范保留以避免删除原始记录。
 - 本次新增的深度分析段落、证据记录和局限说明优先；历史段落中的“待深读/待核验”状态不代表当前分析尚未完成。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
+- MinerU：已完成；解析质量需人工抽查。
+- Bib 元数据：待官方 API/论文首页核验。
+
+
+
+## 深度分析（自动证据提取，需人工复核）
+
+### 研究问题与证据
+- 主题线索：anomaly, tor, transformer, adversarial。
+- 摘要证据：Deep learning-based (DL-based) malicious trafic detection models are efective but vulnerable to adversarial attacks. Existing adver sarial attacks have shown promising results when targeting trafic detection models based on statistics and sequence features. However, these attacks are less efective against models that rely on payload analysis. The main reason is the dificulty in generating semantic, compliant, and functional payloads, which limits their practical application. In this paper, we propose AdvTG, an adversarial trafic generation framework to deceive DL-based malicious trafic based on the large language model (LLM) and reinforcement learning (RL). Specifically, AdvTG is designed to attack various DL-based detection models across diverse payload features and architectures, thereby enhancing the generalization capabilities of the generated adversarial trafic. Moreover, we design a specialized prompt for trafic generation tasks, where functional fields and target types are supplied as input, while non-functional fields are generated to produce the mutated trafic. This fine-tuning endows the LLM with task comprehension and trafic pattern reasoning abilities, al lowing it to generate trafic that remains compliant and functional. Furthermore, leveraging RL, AdvTG automatically selects trafic fields that exhibit more robust adversarial properties. Experimental results show that AdvTG achieves over 40% attack success rate (ASR) across six detection models on four base datasets and two extended datasets, significantly outperforming other adversarial attack methods.
+
+### 方法机制
+正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
+
+### 实验与结果
+实验段落未稳定提取；不补造数据集、baseline、指标或数值。
+
+### 局限与复现
+论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
+
+### 开源与证据等级
+- 代码线索：检测到 GitHub 线索。
+- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+
+
+```

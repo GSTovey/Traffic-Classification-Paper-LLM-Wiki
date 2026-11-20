@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Two Heads Are Better Than One: Models-to-Model Learning for Encrypted Traffic Analysis"
-title_cn: "unknown"
+title_cn: "集思广益：面向加密流量分析的多模型到单模型学习"
 authors: ["Jia Liu", "Bin Lu", "Qingjun Yuan", "Pinghui Wang", "Yong Yu", "Ding Li", "Jian Chai"]
 year: 2026
 venue: "TIFS"
@@ -18,7 +18,7 @@ dataset: ["ISCX"]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Two Heads Are Better Than One: Models-to-Model Learning for Encrypted Traffic Analysis

@@ -1,85 +1,67 @@
 ---
 type: paper
-title_original: "Helios: Learning and Adaptation of Matching Rules for Continual In-Network Malicious Trafic Detection"
-title_cn: ""
-authors: []
+title_original: "Helios: Learning and Adaptation of Matching Rules for Continual In-Network Malicious Traffic Detection"
+title_cn: "Helios：匹配规则的学习和在线适配"
+authors: ["Zhenning Shi", "Dan Zhao", "Yijia Zhu", "Guorui Xie", "Qing Li", "Yong Jiang"]
 year: 2025
 venue: WWW
-doi: unknown
-url: unknown
+doi: "10.1145/3696410.3714742"
+url: "https://doi.org/10.1145/3696410.3714742"
 pdf: "00-inbox/PDFs/2025-WWW-Helios__Learning_and_Adaptation_of_Matching_Rules_for_Continual_In_Network_Malicious_Traffic_Detection.pdf"
 mineru_md: "02-parsed-markdown/2025-WWW-Helios__Learning_and_Adaptation_of_Matching_Rules_for_Continual_In_Network_Malicious_Traffic_Detection.md"
 status: deep-analyzed
 reading_level: L3
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["网内恶意流量检测"]
+task: ["识别已知和未知攻击并增量适配"]
+method: ["原型学习、匹配规则与增量更新"]
+dataset: ["CICIDS2018、TON-IoT、UNSW-NB15"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
-# Helios: Learning and Adaptation of Matching Rules for Continual In-Network Malicious Trafic Detection
+# Helios: Learning and Adaptation of Matching Rules for Continual In-Network Malicious Traffic Detection
 
 ## 0. 论文基础信息
 | 项目 | 内容 |
 |---|---|
-| 原文标题 | Helios: Learning and Adaptation of Matching Rules for Continual In-Network Malicious Trafic Detection |
+| 原文标题 | Helios: Learning and Adaptation of Matching Rules for Continual In-Network Malicious Traffic Detection |
 | 年份 | 2025 |
 | 会议/期刊 | WWW |
 | PDF | [[2025-WWW-Helios__Learning_and_Adaptation_of_Matching_Rules_for_Continual_In_Network_Malicious_Traffic_Detection.pdf]] |
 | MinerU Markdown | [[2025-WWW-Helios__Learning_and_Adaptation_of_Matching_Rules_for_Continual_In_Network_Malicious_Traffic_Detection.md]] |
+| 作者 | Zhenning Shi, Dan Zhao, Yijia Zhu, Guorui Xie, Qing Li, Yong Jiang |
+| DOI | [10.1145/3696410.3714742](https://doi.org/10.1145/3696410.3714742) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+作者把已知类和未见攻击判别编为交换机规则，比较增量条件下的分类与部署代价。
 
 ## 2. 摘要原文
 Network Intrusion Detection Systems (NIDS) are critical for web security by identifying and blocking malicious trafic. In-network NIDS leverage programmable switches for high-speed trafic pro cessing. However, they are unable to reconcile the fine-grained classification of known classes and the identification of unseen attacks. Moreover, they lack support for incremental updates. In this paper, we propose Helios, an in-network malicious trafic detection system, for continual adaptation in attack-incremental scenarios. First, we design a novel Supervised Mixture Prototypical Learning (SMPL) method combined with clustering initialization to learn prototypes that encapsulate the knowledge, based on the weighted infinity norm distance. SMPL enables known class classification and unseen attack identification through similarity comparison between prototypes and samples. Then, we design boundary calibration and overlap refinement to transform learned prototypes into priority guided matching rules, ensuring precise and eficient in-network deployment. Additionally, Helios supports incremental prototype learning and rule updates, achieving low-cost hardware reconfigu ration. We implement Helios on a Tofino switch and evaluation on three datasets shows that Helios achieves superior performance in classifying known classes (92%+ in ACC and F1) as well as identi fying unseen attacks (62% - 98% in TPR). Helios has also reduced resource consumption and reconfiguration time, demonstrating its scalability and eficiency for real-world deployment.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+用所选数据比较分类和新类检测，并在 Tofino 平台观察规则重配。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：CICIDS2018、TON-IoT、UNSW-NB15。
+- 作者报告：摘要报告三个数据集上已知类 ACC 和 F1 超 92%，未见攻击 TPR 在设定组合中为约 62%–98%。
+- 原文位置：[[02-parsed-markdown/2025-WWW-Helios__Learning_and_Adaptation_of_Matching_Rules_for_Continual_In_Network_Malicious_Traffic_Detection|原文解析稿]] · 摘要、评估与本页 L3 分析。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+指标取决于任务阶段、未见类定义及设备。规则部署代价与识别指标分别按实验定位。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
-- MinerU：已完成；解析质量需人工抽查。
-- Bib 元数据：待官方 API/论文首页核验。
 
-
-## 深度分析（自动证据提取，需人工复核）
-
-### 研究问题与证据
-- 主题线索：anomaly, tor。
-- 摘要证据：Network Intrusion Detection Systems (NIDS) are critical for web security by identifying and blocking malicious trafic. In-network NIDS leverage programmable switches for high-speed trafic pro cessing. However, they are unable to reconcile the fine-grained classification of known classes and the identification of unseen attacks. Moreover, they lack support for incremental updates. In this paper, we propose Helios, an in-network malicious trafic detection system, for continual adaptation in attack-incremental scenarios. First, we design a novel Supervised Mixture Prototypical Learning (SMPL) method combined with clustering initialization to learn prototypes that encapsulate the knowledge, based on the weighted infinity norm distance. SMPL enables known class classification and unseen attack identification through similarity comparison between prototypes and samples. Then, we design boundary calibration and overlap refinement to transform learned prototypes into priority guided matching rules, ensuring precise and eficient in-network deployment. Additionally, Helios supports incremental prototype learning and rule updates, achieving low-cost hardware reconfigu ration. We implement Helios on a Tofino switch and evaluation on three datasets shows that Helios achieves superior performance in classifying known classes (92%+ in ACC and F1) as well as identi fying unseen attacks (62% - 98% in TPR). Helios has also reduced resource consumption and reconfiguration time, demonstrating its scalability and eficiency for real-world deployment.
-
-### 方法机制
-正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
-
-### 实验与结果
-实验段落未稳定提取；不补造数据集、baseline、指标或数值。
-
-### 局限与复现
-论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
-
-### 开源与证据等级
-- 代码线索：未检测到明确 GitHub 线索。
-- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
-
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2025-WWW-Helios__Learning_and_Adaptation_of_Matching_Rules_for_Continual_In_Network_Malicious_Traffic_Detection|原文解析稿]] · 摘要、评估与本页 L3 分析。可引用的结论须保留所列实验条件。
 
 ### 并行深度分析（2026-09-29）
 - 方法/问题：Helios supports continual in-network malicious traffic detection with supervised mixture prototypical learning, clustering initialization, weighted infinity-norm prototypes, boundary calibration and overlap refinement for known/unseen attacks and incremental updates. Missing: switch target/resource limits, traffic features, attack-incremental schedule and full metrics.
@@ -255,3 +237,63 @@ TON-IoT 消融表给出：
 
 - 本笔记前部的自动入库、摘要级或待核验段落是入库时的历史快照，按规范保留以避免删除原始记录。
 - 本次新增的深度分析段落、证据记录和局限说明优先；历史段落中的“待深读/待核验”状态不代表当前分析尚未完成。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
+- MinerU：已完成；解析质量需人工抽查。
+- Bib 元数据：待官方 API/论文首页核验。
+
+
+
+## 深度分析（自动证据提取，需人工复核）
+
+### 研究问题与证据
+- 主题线索：anomaly, tor。
+- 摘要证据：Network Intrusion Detection Systems (NIDS) are critical for web security by identifying and blocking malicious trafic. In-network NIDS leverage programmable switches for high-speed trafic pro cessing. However, they are unable to reconcile the fine-grained classification of known classes and the identification of unseen attacks. Moreover, they lack support for incremental updates. In this paper, we propose Helios, an in-network malicious trafic detection system, for continual adaptation in attack-incremental scenarios. First, we design a novel Supervised Mixture Prototypical Learning (SMPL) method combined with clustering initialization to learn prototypes that encapsulate the knowledge, based on the weighted infinity norm distance. SMPL enables known class classification and unseen attack identification through similarity comparison between prototypes and samples. Then, we design boundary calibration and overlap refinement to transform learned prototypes into priority guided matching rules, ensuring precise and eficient in-network deployment. Additionally, Helios supports incremental prototype learning and rule updates, achieving low-cost hardware reconfigu ration. We implement Helios on a Tofino switch and evaluation on three datasets shows that Helios achieves superior performance in classifying known classes (92%+ in ACC and F1) as well as identi fying unseen attacks (62% - 98% in TPR). Helios has also reduced resource consumption and reconfiguration time, demonstrating its scalability and eficiency for real-world deployment.
+
+### 方法机制
+正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
+
+### 实验与结果
+实验段落未稳定提取；不补造数据集、baseline、指标或数值。
+
+### 局限与复现
+论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
+
+### 开源与证据等级
+- 代码线索：未检测到明确 GitHub 线索。
+- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+
+
+```

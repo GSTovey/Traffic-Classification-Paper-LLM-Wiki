@@ -12,8 +12,8 @@ authors:
   - Zhi Xue
 year: 2023
 venue: "AAAI"
-doi: ""
-url: ""
+doi: "10.1609/aaai.v37i4.25674"
+url: "https://doi.org/10.1609/aaai.v37i4.25674"
 pdf: "00-inbox/PDFs/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.pdf"
 mineru_md: "02-parsed-markdown/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation.md"
 status: processed
@@ -28,7 +28,7 @@ dataset:
 code: "https://github.com/NSSL-SJTU/YaTC"
 relevance: high
 created: "2026-05-27"
-updated: "2026-10-21"
+updated: "2026-11-20"
 venue_factor: 0.85
 time_factor: 0.7
 citation_impact: 1.8

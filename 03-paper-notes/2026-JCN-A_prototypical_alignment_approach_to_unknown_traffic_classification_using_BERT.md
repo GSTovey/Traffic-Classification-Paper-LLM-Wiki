@@ -5,8 +5,8 @@ title_cn: "基于 BERT 的原型对齐未知流量分类方法"
 authors: ["Minho Cho", "Yongseok Kwon", "Seyoung Ahn", "Sunwon Kwon", "Sunghyun Cho"]
 year: 2026
 venue: "Journal of Computer Networks (JCN)"
-doi: unknown
-url: unknown
+doi: "10.1016/j.comnet.2026.112062"
+url: "https://doi.org/10.1016/j.comnet.2026.112062"
 pdf: "00-inbox/PDFs/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.pdf"
 mineru_md: "02-parsed-markdown/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["ISCX-VPN", "USTC-TFC"]
 code: unknown
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-20"
 ---
 
 # A prototypical alignment approach to unknown traffic classification using BERT
@@ -39,6 +39,7 @@ updated: "2026-05-27"
 | 是否开源 | 否（作者未获数据共享权限） |
 | PDF | 00-inbox/PDFs/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-JCN-A_prototypical_alignment_approach_to_unknown_traffic_classification_using_BERT.md |
+| DOI | [10.1016/j.comnet.2026.112062](https://doi.org/10.1016/j.comnet.2026.112062) |
 
 ## 1. 一句话总结
 

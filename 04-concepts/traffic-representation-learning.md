@@ -124,6 +124,8 @@ Traffic Representation Learning 是指将原始网络流量数据（字节序列
 
 ## 7. 当前共识
 
+> 本文保留原有分析。表征与浅层方法的当前证据比较见 [[representation-vs-shallow#当前研究认识]]。
+
 1. **预训练范式有效但需谨慎评估**：预训练 + fine-tuning 在加密流量分类中展现出强大潜力，但 frozen encoder 下的表征质量才是检验预训练是否真正学到有意义表示的试金石。
 2. **数据划分方法至关重要**：per-packet split 会导致同一流的包同时出现在训练集和测试集，引发严重的 data leakage；per-flow split 是更合理的评估方式。
 3. **流量数据存在大量冗余**：YaTC 的 90% 最优 mask ratio 远高于 NLP（<20%），说明分类任务本质上是对稀疏特征的模式识别，而非对全部内容的理解。

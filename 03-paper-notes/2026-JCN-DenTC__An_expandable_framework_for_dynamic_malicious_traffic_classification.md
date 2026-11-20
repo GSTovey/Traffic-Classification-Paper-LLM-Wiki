@@ -5,8 +5,8 @@ title_cn: "DenTC：面向动态恶意流量分类的可扩展框架"
 authors: ["Rui Chen", "Lailong Luo", "Bangbang Ren", "Deke Guo", "Changhao Qiu", "Shangsen Li", "Xiaodong Wang"]
 year: 2026
 venue: "JCN"
-doi: "unknown"
-url: "unknown"
+doi: "10.1016/j.comnet.2026.112078"
+url: "https://doi.org/10.1016/j.comnet.2026.112078"
 pdf: "00-inbox/PDFs/2026-JCN-DenTC__An_expandable_framework_for_dynamic_malicious_traffic_classification.pdf"
 mineru_md: "02-parsed-markdown/2026-JCN-DenTC__An_expandable_framework_for_dynamic_malicious_traffic_classification.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["USTC-TFC2016", "CICIDS2017"]
 code: "unknown"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-20"
 ---
 
 ## §0 基础信息

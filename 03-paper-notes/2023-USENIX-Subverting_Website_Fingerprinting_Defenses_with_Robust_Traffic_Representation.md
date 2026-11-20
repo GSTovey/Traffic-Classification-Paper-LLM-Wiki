@@ -20,11 +20,11 @@ reading_level: L2
 research_area: ["网站指纹识别", "流量分析", "对抗鲁棒性"]
 task: ["网站指纹识别"]
 method: ["CNN", "adversarial-training"]
-dataset: []
+dataset: ["作者的无防御及多种防御配置下的 Tor 轨迹"]
 code: "https://github.com/robust-fingerprinting/RF"
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-29"
+updated: "2026-11-20"
 ---
 
 # Subverting Website Fingerprinting Defenses with Robust Traffic Representation

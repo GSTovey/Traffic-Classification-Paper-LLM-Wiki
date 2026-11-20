@@ -5,9 +5,9 @@ title_cn: "基于大语言模型多模态推理的加密流量解读：一个基
 authors: ["Longgang Zhang", "Xiaowei Fu", "Fuxiang Huang", "Lei Zhang"]
 year: 2026
 venue: "arXiv 2026"
-doi: ""
-url: ""
-pdf: ""
+doi: "10.1109/tmm.2026.3730256"
+url: "https://doi.org/10.1109/tmm.2026.3730256"
+pdf: "00-inbox/PDFs/2026-arXiv-Multimodal_Reasoning_with_LLM_for_Encrypted_Traffic_Interpretation__A_Benchmark.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-Multimodal_Reasoning_with_LLM_for_Encrypted_Traffic_Interpretation__A_Benchmark.md"
 status: processed
 reading_level: L2
@@ -18,7 +18,7 @@ dataset: ["CrossPlatform-Android", "CrossPlatform-iOS", "ISCXVPN2016", "ISCX-Tor
 code: "Traffic-Reasoning-Project"
 relevance: high
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-20"
 ---
 
 # Multimodal Reasoning with LLM for Encrypted Traffic Interpretation: A Benchmark
@@ -37,6 +37,7 @@ updated: "2026-06-21"
 | 方法关键词 | multimodal reasoning, joint optimization, perception-cognition architecture, semantic-priority guided generation, auxiliary classification head, LoRA fine-tuning |
 | 数据集 | CrossPlatform-Android (38,673), CrossPlatform-iOS (36,535), ISCXVPN2016 (42,000), ISCX-Tor-2016 (80,000), CSTNet-TLS1.3 (46,372), USTC-TFC-2016 (66,388) |
 | 是否开源 | 是（Traffic-Reasoning-Project） |
+| DOI | [10.1109/tmm.2026.3730256](https://doi.org/10.1109/tmm.2026.3730256) |
 
 ## 1. 一句话总结
 

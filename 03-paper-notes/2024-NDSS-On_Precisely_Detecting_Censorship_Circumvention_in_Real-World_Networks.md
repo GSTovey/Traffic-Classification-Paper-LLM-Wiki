@@ -6,8 +6,8 @@ authors: ["Ryan Wails", "George Arnold Sullivan", "Micah Sherr", "Rob Jansen"]
 year: 2024
 venue: "NDSS 2024"
 publication_status: published
-doi: unknown
-url: unknown
+doi: "10.14722/ndss.2024.23394"
+url: "https://doi.org/10.14722/ndss.2024.23394"
 pdf: "00-inbox/PDFs/2024-NDSS-On_Precisely_Detecting_Censorship_Circumvention_in_Real-World_Networks.pdf"
 mineru_md: "02-parsed-markdown/2024-NDSS-On_Precisely_Detecting_Censorship_Circumvention_in_Real-World_Networks.md"
 status: deep-analyzed
@@ -23,7 +23,7 @@ related_papers: []
 kb_read_only: true
 promoted_to: ""
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-20"
 ---
 
 # On Precisely Detecting Censorship Circumvention in Real-World Networks
@@ -49,6 +49,7 @@ updated: "2026-06-21"
 | 是否开源 | unknown |
 | PDF | `00-inbox/PDFs/2024-NDSS-On_Precisely_Detecting_Censorship_Circumvention_in_Real-World_Networks.pdf` |
 | MinerU Markdown | `02-parsed-markdown/2024-NDSS-On_Precisely_Detecting_Censorship_Circumvention_in_Real-World_Networks.md` |
+| DOI | [10.14722/ndss.2024.23394](https://doi.org/10.14722/ndss.2024.23394) |
 
 ---
 

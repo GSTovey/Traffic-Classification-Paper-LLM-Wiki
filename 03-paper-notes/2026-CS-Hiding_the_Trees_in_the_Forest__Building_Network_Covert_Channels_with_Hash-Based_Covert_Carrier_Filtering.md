@@ -5,10 +5,10 @@ title_cn: "在森林中藏树：基于哈希隐蔽载体过滤的网络隐蔽信
 authors: ["Zexiao Zou", "Zhiqiang Wang", "Baoxu Liu", "Yuyang Han", "Yan Zhang"]
 year: 2026
 venue: "Computer & Security 2026"
-doi: unknown
-url: unknown
-pdf: ""
-mineru_md: ""
+doi: "10.1016/j.cose.2026.104981"
+url: "https://doi.org/10.1016/j.cose.2026.104981"
+pdf: "00-inbox/PDFs/2026-CS-Hiding_the_Trees_in_the_Forest__Building_Network_Covert_Channels_with_Hash-Based_Covert_Carrier_Filtering.pdf"
+mineru_md: "02-parsed-markdown/2026-CS-Hiding_the_Trees_in_the_Forest__Building_Network_Covert_Channels_with_Hash-Based_Covert_Carrier_Filtering.md"
 status: processed
 reading_level: L2
 research_area: ["network-covert-channel", "traffic-analysis", "information-hiding"]
@@ -18,7 +18,7 @@ dataset: ["office-web-browsing-traffic", "video-surveillance-traffic"]
 code: unknown
 relevance: medium
 created: 2026-06-21
-updated: 2026-06-21
+updated: "2026-11-20"
 ---
 
 # Hiding the Trees in the Forest: Building Network Covert Channels with Hash-Based Covert Carrier Filtering
@@ -39,6 +39,7 @@ updated: 2026-06-21
 | 是否开源 | 否（Data will be made available on request） |
 | PDF | - |
 | MinerU Markdown | - |
+| DOI | [10.1016/j.cose.2026.104981](https://doi.org/10.1016/j.cose.2026.104981) |
 
 ---
 

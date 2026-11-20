@@ -11,7 +11,7 @@ year: 2026
 venue: "IEEE Access"
 doi: "10.1109/access.2026.3681766"
 url: "https://doi.org/10.1109/access.2026.3681766"
-pdf: "00-inbox/Aug_inbox/2026-Access-Website_Fingerprinting_Techniques_Over_Tor_Network_A_Survey.pdf"
+pdf: "00-inbox/PDFs/2026-Access-Website_Fingerprinting_Techniques_Over_Tor_Network_A_Survey.pdf"
 mineru_md: "02-parsed-markdown/2026-Access-Website_Fingerprinting_Techniques_Over_Tor_Network_A_Survey.md"
 status: processed
 reading_level: L1
@@ -279,8 +279,8 @@ WF 攻击的威胁被高估还是低估，取决于评估基准与安全假设�
 
 ### 9.1 相关概念
 
-- [[网站指纹攻击]]
-- [[加密流量分析]]
+- [[06-tasks/website-fingerprinting|网站指纹攻击]]
+- [[04-concepts/encrypted-traffic-analysis|加密流量分析]]
 
 ### 9.2 相关方法
 
@@ -289,8 +289,8 @@ WF 攻击的威胁被高估还是低估，取决于评估基准与安全假设�
 
 ### 9.3 相关任务
 
-- [[网站指纹]]
-- [[流量分类]]
+- [[04-concepts/website-fingerprinting|网站指纹]]
+- [[06-tasks/traffic-classification|流量分类]]
 
 ### 9.4 可更新的综述页面
 

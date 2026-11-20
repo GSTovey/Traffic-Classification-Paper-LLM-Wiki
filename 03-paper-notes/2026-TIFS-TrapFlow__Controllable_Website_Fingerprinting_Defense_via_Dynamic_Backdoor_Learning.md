@@ -7,7 +7,7 @@ year: 2026
 venue: "IEEE TIFS 2026"
 doi: "10.1109/tifs.2026.3663989"
 url: unknown
-pdf: "00-inbox/Aug_inbox/2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Backdoor_Learning.pdf"
+pdf: "00-inbox/PDFs/2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Backdoor_Learning.pdf"
 mineru_md: "02-parsed-markdown/2026-TIFS-TrapFlow__Controllable_Website_Fingerprinting_Defense_via_Dynamic_Backdoor_Learning.md"
 status: processed
 reading_level: L3

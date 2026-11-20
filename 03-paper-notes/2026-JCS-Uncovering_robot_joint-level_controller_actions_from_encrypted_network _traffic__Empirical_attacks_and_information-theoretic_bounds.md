@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "Uncovering robot joint-level controller actions from encrypted network traffic: Empirical attacks and information-theoretic bounds"
-title_cn: ""
-authors: []
+title_cn: "加密流量中的机器人关节控制隐私风险"
+authors: ["Cheng Tang", "Diogo Barradas", "Urs Hengartner", "Yue Hu"]
 year: 2026
 venue: JCS
-doi: unknown
-url: unknown
+doi: "10.1016/j.cose.2026.105018"
+url: "https://doi.org/10.1016/j.cose.2026.105018"
 pdf: "00-inbox/PDFs/2026-JCS-Uncovering_robot_joint-level_controller_actions_from_encrypted_network _traffic__Empirical_attacks_and_information-theoretic_bounds.pdf"
 mineru_md: "02-parsed-markdown/2026-JCS-Uncovering_robot_joint-level_controller_actions_from_encrypted_network _traffic__Empirical_attacks_and_information-theoretic_bounds.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["工业通信隐私"]
+task: ["量化机器人远程操作的流量侧信道风险"]
+method: ["控制模式对照与互信息分析"]
+dataset: ["受控协作机械臂实验"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-09-29"
+updated: "2026-11-20"
 ---
 
 # Uncovering robot joint-level controller actions from encrypted network traffic: Empirical attacks and information-theoretic bounds
@@ -31,34 +31,79 @@ updated: "2026-09-29"
 | 会议/期刊 | JCS |
 | PDF | [[2026-JCS-Uncovering_robot_joint-level_controller_actions_from_encrypted_network _traffic__Empirical_attacks_and_information-theoretic_bounds.pdf]] |
 | MinerU Markdown | [[2026-JCS-Uncovering_robot_joint-level_controller_actions_from_encrypted_network _traffic__Empirical_attacks_and_information-theoretic_bounds.md]] |
+| 作者 | Cheng Tang, Diogo Barradas, Urs Hengartner, Yue Hu |
+| DOI | [10.1016/j.cose.2026.105018](https://doi.org/10.1016/j.cose.2026.105018) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+作者利用有标记的机械臂试验比较不同关节控制模式的流量隐私风险。
 
 ## 2. 摘要原文
 论文未明确提取摘要。
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+对齐位置、速度和扭矩控制下四类动作的观测口径，再以经验分类和信息论上界评价泄露。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：受控协作机械臂实验。
+- 作者报告：摘要报告所测扭矩控制的可推断信息多于经验模型捕获的，速度控制在所测设置下暴露较少。同时评估了填充防护的边界。
+- 原文位置：[[02-parsed-markdown/2026-JCS-Uncovering_robot_joint-level_controller_actions_from_encrypted_network _traffic__Empirical_attacks_and_information-theoretic_bounds|原文解析稿]] · 摘要与泄露上界、防护评估。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+实验涵盖一个受控机械臂系统及四类动作。经验指标与信息论上界应分开引用。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
+
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-JCS-Uncovering_robot_joint-level_controller_actions_from_encrypted_network _traffic__Empirical_attacks_and_information-theoretic_bounds|原文解析稿]] · 摘要与泄露上界、防护评估。可引用的结论须保留所列实验条件。
+
+### 并行深度分析（2026-09-29）
+- 方法/问题：The paper empirically infers robot joint-level controller actions from encrypted traffic and derives information-theoretic bounds, linking side-channel leakage to action observability. Missing: robot/platform traces, attacker observation model, bounds assumptions, accuracy/leakage values and reproducibility assets.
+- 证据边界：以上仅使用对应 MinerU 解析稿摘要及可稳定提取段落；未提取到的数值、数据集、代码和参数均不作推断。
+- 复现建议：先核对原文表格、附录、代码仓库和数据划分，再确定 L3/L4 复现。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
 - MinerU：已完成；解析质量需人工抽查。
 - Bib 元数据：待官方 API/论文首页核验。
+
 
 
 ## 深度分析（自动证据提取，需人工复核）
@@ -81,7 +126,4 @@ updated: "2026-09-29"
 - 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
 
 
-### 并行深度分析（2026-09-29）
-- 方法/问题：The paper empirically infers robot joint-level controller actions from encrypted traffic and derives information-theoretic bounds, linking side-channel leakage to action observability. Missing: robot/platform traces, attacker observation model, bounds assumptions, accuracy/leakage values and reproducibility assets.
-- 证据边界：以上仅使用对应 MinerU 解析稿摘要及可稳定提取段落；未提取到的数值、数据集、代码和参数均不作推断。
-- 复现建议：先核对原文表格、附录、代码仓库和数据划分，再确定 L3/L4 复现。
+```

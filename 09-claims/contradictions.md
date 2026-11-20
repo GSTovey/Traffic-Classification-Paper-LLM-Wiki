@@ -2,13 +2,88 @@
 type: claims
 name: contradictions
 created: "2026-05-27"
-updated: "2026-10-21"
+updated: "2026-11-19"
 ---
 
 # Contradictions
 
 本页面用于记录不同论文之间的结论冲突、适用条件差异和实验设置差异。
 
+## 当前关系
+
+2026-11-19 依据维护者授权，由 Codex 对照原文处置 26 项历史关系。`unresolved` 保留证据缺口。历史编号见 [[claim-migration-map]]。
+
+| 关系 ID | relation_type | 关联命题 | 签审记录 |
+| --- | --- | --- | --- |
+| LEG-R-001 | method_difference | CLM-0001、CLM-0003、CLM-0006、CLM-0007 | [[03-paper-notes/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification\|ET-BERT]] §3.2、Tables 3–4 使用原文的字节流表示。[[03-paper-notes/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification\|Sweet Danger]] Tables 3、5–6 在同一冻结模型控制划分。[[03-paper-notes/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers\|SoK]] §5.3.8 与 [[03-paper-notes/2026-IMC-Replicability__Challenging_the_Myth_of_Randomness_Patterns_in_Encrypted_Traffic\|IMC 复核]] §5–6 分别控制输入和统计混杂。旧命题缺平行的输入隔离。 |
+| LEG-R-002 | method_difference | CLM-0003、CLM-0101、CLM-0103 | [[03-paper-notes/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers\|SoK]] §5.1–5.3 比较数据组成和输入遮蔽。[[03-paper-notes/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification\|Sweet Danger]] Tables 7–8 在 TLS-120 内比较手工与冻结表示，分列去 IP 结果。排序以各自数据、划分及输入为限。 |
+| LEG-R-003 | temporal_evolution | CLM-0301、CLM-0302、CLM-0304 | [[03-paper-notes/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning\|DF]] Table 3 与 [[03-paper-notes/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization\|Palette]] Table 3 对应不同代际防御和闭集语料。Palette 的 DF 行同列带宽与时间开销。 |
+| LEG-R-004 | method_difference | CLM-0003 | [[03-paper-notes/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification\|Sweet Danger]] Tables 3、5 的 TLS-120 冻结 ET-BERT macro-F1 为按包 97.0%、按流 6.7%。未冻结的 96.8% 与 21.5% 属另一组。 |
+| LEG-R-005 | scope_difference | CLM-0101、CLM-0103、CLM-0401 | [[03-paper-notes/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis\|MM4flow]] Table 3 的多视图下游对照与 [[03-paper-notes/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification\|Sweet Danger]] Tables 3、8 的包分类比较缺统一输入集合与训练预算，分别解释。 |
+| LEG-R-006 | method_difference | CLM-0103 | [[03-paper-notes/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification\|ET-BERT]] §4.1 明确使用 Macro Average。[[03-paper-notes/2024-ICNP-NetMamba__Efficient_Network_Traffic_Classification_via_Pre-training_Unidirectional_Mamba\|NetMamba]] §IV-A 标为 weighted F1。[[03-paper-notes/2023-AAAI-Yet_Another_Traffic_Classifier_a_Masked_Autoencoder_Based_Traffic_Transformer_With_Multi-level_Flow_Representation\|YaTC]] Metrics 给出 F1 公式。[[03-paper-notes/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification\|Sweet Danger]] §4 批评若干既有报告的聚合方式。旧表关于 ET-BERT 使用 micro 的说法由原文纠正。 |
+| LEG-R-007 | scope_difference | CLM-0001、CLM-0003、CLM-0007 | [[03-paper-notes/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers\|SoK]] §5.3.8 用 E1 隔离载荷、E2/E3 保留长度变换。[[03-paper-notes/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification\|ET-BERT]] §3.2 与 Table 4 是原系统的编码和预训练对照，输入归因边界不同。 |
+| LEG-R-008 | method_difference | CLM-0302、CLM-0304 | [[03-paper-notes/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization\|Palette]] §6.1–6.2 的闭集评估和 [[03-paper-notes/2025-CCS-Swallow__A_Transfer-Robust_Website_Fingerprinting_Attack_via_Consistent_Feature_Learning\|Swallow]] §2、§6 及附录的跨条件评估均包含 Palette。对应语料、目标域适配资料与训练设置分别保留。 |
+| LEG-R-009 | scope_difference | CLM-0201、CLM-0202、CLM-0204 | [[03-paper-notes/2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding\|ASNet]] §III-A 沿用语言 BERT 的已有预训练表征，省去额外流量预训练。[[03-paper-notes/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification\|ET-BERT]] Table 4 记录模型内消融。不同初始化与输入使结论适用范围不同。 |
+| LEG-R-010 | method_difference | CLM-0103、CLM-0204、CLM-0403 | [[03-paper-notes/2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification\|TrafficMoE]] 的架构和消融、[[03-paper-notes/2026-arXiv-NetMamba+__A_Framework_of_Pre-trained_Models_for_Efficient_and_Accurate_Network_Traffic_Classification\|NetMamba+]] Tables V、VII 分别检验各自方案。架构排序缺同输入、参数预算与训练协议的正面对照。 |
+| LEG-R-011 | scope_difference | CLM-0304 | [[03-paper-notes/2025-INFOCOM-STAR__Semantic-Traffic_Alignment_and_Retrieval_for_Zero-Shot_HTTPS_Website_Fingerprinting\|STAR]] §V、Fig. 4 对未见 HTTPS 网站做跨模态检索。[[03-paper-notes/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning\|DF]] §5–6 使用监督式 Tor 网站识别。已知网站描述及目标流量标签权限不同。 |
+| LEG-R-012 | method_difference | CLM-0003、CLM-0007、CLM-0103 | [[03-paper-notes/2026-arXiv-Bias_in_the_Shadows__Explore_Shortcuts_in_Encrypted_Network_Traffic_Classification\|Bias in the Shadows]] §4 干预标识和时间字段，[[03-paper-notes/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification\|ET-BERT]] Tables 2–3 使用原评估协议，[[03-paper-notes/2025-SIGCOMM-The_Sweet_Danger_of_Sugar_Debunking_Representation_Learning_for_Encrypted_Traffic_Classification\|Sweet Danger]] Tables 3、5 改变分组划分。共有语料和各类控制分别追踪。 |
+| LEG-R-013 | scope_difference | CLM-0201、CLM-0203、CLM-0204 | [[03-paper-notes/2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification\|TrafficMoE]] 的去预训练结果属于其自身设置，[[03-paper-notes/2025-TIFS-Bottom_Aggregating_Top_Separating_An_Aggregator_and_Separator_Network_for_Encrypted_Traffic_Understanding\|ASNet]] §III-A 依赖语言预训练表征。跨架构必要性仍需共同对照。 |
+| LEG-R-014 | scope_difference | CLM-0401、CLM-0402、CLM-0403 | [[03-paper-notes/2025-CCS-MM4flow__A_Pre-trained_Multi-modal_Model_for_Versatile_Network_Traffic_Analysis\|MM4flow]] Table 3 报告单视图与多视图。[[03-paper-notes/2026-arXiv-Multimodal_Reasoning_with_LLM_for_Encrypted_Traffic_Interpretation__A_Benchmark\|mmTraffic]] 对齐讨论中 USTC-TFC-2016 的 0.9887 与 0.8624 来自 NetMamba 与 mmTraffic 的系统对照。分类与多任务对齐条件分别保留。 |
+| LEG-R-015 | unresolved | CLM-0602、CLM-0401、CLM-0403 | [[03-paper-notes/2022-COMST-Machine_Learning-Powered_Encrypted_Network_Traffic_Analysis_A_Comprehensive_Survey\|COMST 综述]] 描述常见特征。[[03-paper-notes/2026-JCN-TARL__Multi-task_adaptive_representation_learning_for_secure_encrypted_traffic_analysis\|TARL]] 的 PCA、[[03-paper-notes/2026-TNSM-HyTMTC__A_Pre-Training_Method_for_Multi-Scenario_Network_Traffic_Classification_With_Hybrid_Transformer-Mamba\|HyTMTC]] Table VIII 与 [[03-paper-notes/2026-arXiv-The_Colossus_with_Feet_of_Clay__Debunking_Encrypted_Traffic_Classifiers_under_PQC_Evolution\|Colossus]] N-N 特征消融对应不同任务及干预，普适排序缺共同实验。 |
+| LEG-R-016 | scope_difference | CLM-0303、CLM-0304 | [[03-paper-notes/2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World\|Reality Check]] Table 3 的 π₁₀ 与召回对应指定观测、监控集和基率。[[03-paper-notes/2026-arXiv-Conformal_Prediction_for_Offensive_Security\|Conformal Prediction]] §4.1 引述较早的外部有效性问题，[[03-paper-notes/2022-USENIX-Online_Website_Fingerprinting__Evaluating_Website_Fingerprinting_Attacks_on_Tor_in_the_Real_World\|Online WF]] Fig. 9 比较不同监控集合。两侧缺可比的单一评估口径。 |
+| LEG-R-017 | method_difference | CLM-0302、CLM-0304 | [[03-paper-notes/2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_Fingerprinting\|DTPN]] Tables 2、4 报告自身设置下的准确率，[[03-paper-notes/2026-arXiv-Chameleon__Robust_Defense_Against_Tor_Website_Fingerprinting_via_Many-to-Many_Traffic_Morphing\|Chameleon]] 另在不同防御及样本条件报告 F1。恢复方法、指标和语料分别记录。 |
+| LEG-R-018 | method_difference | CLM-0102、CLM-0601 | [[03-paper-notes/2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions\|NestTor]] Figs. 5–6 分列共用代理门控、端到端与匹配输入和树预算的结构消融。macro-F1 按 ToP、Non-ToP 两类计算。 |
+| LEG-R-019 | scope_difference | CLM-0201、CLM-0202、CLM-0203、CLM-0204 | [[03-paper-notes/2026-INFOCOM-HF-Transformer__A_Non-Pretrained_Encrypted_Network_Traffic_Classification_Model_Based_on_Packet_Header_Fields\|HF-Transformer]] Tables III–IV 是包头字段监督路线，[[03-paper-notes/2026-TDSC-GenETC__Dynamic_Graph-enhanced_Fine-tuning_for_Encrypted_Traffic_Classification\|GenETC]] Table VII 是保留动态图的初始化消融，[[03-paper-notes/2026-TON-When_Pre-Training_Meets_Contrast_Learning__Few-Shot_Encrypted_Traffic_Classification_With_Novelty_Detection\|少样本预训练研究]] 分别比较少样本与新类检测。范围各异。 |
+| LEG-R-020 | method_difference | CLM-0003、CLM-0103 | [[03-paper-notes/2026-TDSC-Is_the_Data_Really_Noisy_Rethinking_Traffic_Filtering_for_Encrypted_Traffic_Classification\|TraCare]] 研究流量筛选导致的观测样本变化。[[03-paper-notes/2026-TON-Fighting_the_Enemy_Within__Traffic_Semantics-Driven_Framework_Against_Noisy_Labels_for_Robust_Traffic_Classification\|FlowRefiner+]] 研究训练标签噪声。干预对象与评估口径不同。 |
+| LEG-R-021 | scope_difference | CLM-0304 | [[03-paper-notes/2026-TDSC-Drift-Aware_Adaptive_Website_Fingerprinting\|Aion]] Tables II–III 定义 14–270 天时间漂移，[[03-paper-notes/2026-TDSC-Fooling_Multi-Tab_Browsing__Few-Shot_Website_Fingerprinting_Attacks_and_Lightweight_Obfuscation_Defenses\|FMWF]] Tables II–III 研究少量多标签页真实样本。站点、时间及目标标签权限未匹配。 |
+| LEG-R-022 | scope_difference | CLM-0104、CLM-0103 | [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] Table 3 的 CSE-CIC-IDS2018 v3 PR-AUC 均值为 0.8819 对 0.2555，v2 为 0.9201 对 0.9287。版本共享底层语料，特征与聚合不同。 |
+| LEG-R-023 | scope_difference | CLM-0607、CLM-0609 | [[03-paper-notes/2026-TIFS-HAD__Hierarchical_Adversarial_Defense_for_Network_Intrusion_Detection\|HAD]] Tables XI–XII 测 AnoShift 时间漂移和良性适配。[[03-paper-notes/2026-COSINT-北邮时金桥\|COSINT 报告]] 第 27 页 Table IV 报告低基率单流多类别识别。任务标签、校准与误报分母各自保留。 |
+| LEG-R-024 | scope_difference | CLM-0005、CLM-0103、CLM-0403 | [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] Table V 给定基准下的系统比较，Fig. 8 单列 18 种资产明密文混合消融。缺等字段等预算的预训练范式反事实。 |
+| LEG-R-025 | scope_difference | — | [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] §I、§IV-B Table V 明确承接 [[03-paper-notes/2026-INFOCOM-ARI-LLM__Autoregressive_Imputation_for_Network_Traffic_Matrix_via_Large_Language_Models\|ARI-LLM]]。GÉANT 的插补 NRMSE 与 WS-DREAM 的多列误差排序会变，按同谱系和指标登记。 |
+| LEG-R-026 | unresolved | — | [[03-paper-notes/2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements\|CenRL]] 摘要与 §6.2 对实测汇总给出约 2.5× 与约 2.75×，可见文本缺共同的汇总分母和聚合步骤。引用两个表述时保留各自出处。 |
+
+## 待核验关系
+
+本批旧关系已逐项处置。仍缺同口径证据或汇总资料的事项在上表标为 `unresolved`。
+
+## 签审前候选关系
+
+以下保留候选表原文。
+
+表中关系用于本轮复核，实际可比性和方向由人工审核。用途与状态见 [[proposition-index]]。
+
+| 旧记录 | relation_type | 关联命题 | 可比性依据 |
+| --- | --- | --- | --- |
+| LEG-R-001 | method_difference | CLM-0001、CLM-0003、CLM-0006、CLM-0007 | 输入分离与统计假设有差异，尚缺同设置正反结果。 |
+| LEG-R-002 | method_difference | CLM-0003、CLM-0101、CLM-0103 | 表示、训练协议、数据构成与输入共同改变。 |
+| LEG-R-003 | temporal_evolution | CLM-0301、CLM-0302、CLM-0304 | 不同代际防御和数据，各自闭集结果可追原表。 |
+| LEG-R-004 | method_difference | CLM-0003 | 同一复核中用匹配冻结条件比较两种划分。 |
+| LEG-R-005 | scope_difference | CLM-0101、CLM-0103、CLM-0401 | 任务、视图与预算不同。 |
+| LEG-R-006 | method_difference | CLM-0103 | 宏微聚合评估口径不同；需要相同预测和分母。 |
+| LEG-R-007 | scope_difference | CLM-0001、CLM-0003、CLM-0007 | 纯密文对照与含可见字段的字节输入分开。 |
+| LEG-R-008 | method_difference | CLM-0302、CLM-0304 | 是否重训、数据和评估条件待匹配。 |
+| LEG-R-009 | scope_difference | CLM-0201、CLM-0202、CLM-0204 | 模型、输入和任务不同，旧“必要性”拆为受控命题。 |
+| LEG-R-010 | method_difference | CLM-0103、CLM-0204、CLM-0403 | 骨干与输入、预训练、训练预算混杂。 |
+| LEG-R-011 | scope_difference | CLM-0304 | 目标标签权限与监控集合分别建条件。 |
+| LEG-R-012 | method_difference | CLM-0003、CLM-0007、CLM-0103 | 不同的输入遮蔽、漏划与数据组成应各自核对。 |
+| LEG-R-013 | scope_difference | CLM-0201、CLM-0203、CLM-0204 | 具体预训练消融和必要性是不同尺度的判断。 |
+| LEG-R-014 | scope_difference | CLM-0401、CLM-0402、CLM-0403 | 视图、融合代价和任务不同。 |
+| LEG-R-015 | unresolved | CLM-0602、CLM-0401、CLM-0403 | 缺三种侧信道同输入、同任务的受控排序。 |
+| LEG-R-016 | scope_difference | CLM-0303、CLM-0304 | 不同站点选择、监控负类、数据来源和指标。 |
+| LEG-R-017 | method_difference | CLM-0302、CLM-0304 | 各防御与观测条件不同，适用性待受控验证。 |
+| LEG-R-018 | method_difference | CLM-0102、CLM-0601 | 相同门控和端到端协议分开；匹配 RF 是独立对照问题。 |
+| LEG-R-019 | scope_difference | CLM-0201、CLM-0202、CLM-0203、CLM-0204 | HF 与 GenETC 各自可读原表，不能直接对照初始化。 |
+| LEG-R-020 | method_difference | CLM-0003、CLM-0103 | 噪声定义、过滤、标签和数据划分不同。 |
+| LEG-R-021 | scope_difference | CLM-0304 | 漂移与多标签页防御需相同站点、采集域和标签权限。 |
+| LEG-R-022 | scope_difference | CLM-0104、CLM-0103 | CIC v2/v3 底层语料共享，特征与聚合变化。 |
+| LEG-R-023 | scope_difference | CLM-0607、CLM-0609 | 负类参照、标签与漂移设置不同。 |
+| LEG-R-024 | scope_difference | CLM-0005、CLM-0103、CLM-0403 | 窄任务明密文混合对照与通用表示不同。 |
+
+## 历史关系记录
+
+> 旧裁决保留在历史原表。可比证据、不同条件及时间演化按现行关系记录追踪。
+
+<!-- evidence-governance:archive:start -->
 ## 矛盾记录
 
 | 问题 | 论文 A | 论文 B | 冲突点 | 可能原因 | current_verdict | verdict_basis | verdict_confidence |
@@ -58,3 +133,4 @@ updated: "2026-10-21"
 ## 2026-11-18　深读证据补充
 
 [[03-paper-notes/2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements|CenRL]] 摘要报实测平均约 2.5 倍，§6.2 报 2.75 倍。引用整体增幅前应先核对汇总分母。等预算下不同候选范围的实测对照提供部署场景证据，策略归因参考同候选池的 §5.1 受控比较。
+<!-- evidence-governance:archive:end -->

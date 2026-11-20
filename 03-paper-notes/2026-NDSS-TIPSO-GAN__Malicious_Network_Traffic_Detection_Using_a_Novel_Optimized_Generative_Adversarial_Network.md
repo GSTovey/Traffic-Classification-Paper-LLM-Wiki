@@ -5,8 +5,8 @@ title_cn: "TIPSO-GAN：使用新型优化生成对抗网络的恶意网络流量
 authors: [Ernest Akpaku, Jinfu Chen, Joshua Ofoeda]
 year: 2026
 venue: "NDSS 2026"
-doi: "unknown"
-url: "unknown"
+doi: "10.14722/ndss.2026.243241"
+url: "https://doi.org/10.14722/ndss.2026.243241"
 pdf: "00-inbox/PDFs/2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network.md"
 status: deep-analyzed
@@ -18,7 +18,7 @@ dataset: [CIC-IDS2018, CIC-DDoS2019, CICAPT-IIoT2024]
 code: "artifact/代码归档 DOI（非论文 DOI）：https://doi.org/10.5281/zenodo.17759516"
 relevance: high
 created: "2026-09-19"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # TIPSO-GAN: Malicious Network Traffic Detection Using a Novel Optimized Generative Adversarial Network
@@ -39,6 +39,7 @@ updated: "2026-10-10"
 | 是否开源 | 声明提供 artifact 归档（Zenodo DOI 10.5281/zenodo.17759516）；未给出 GitHub 仓库 |
 | PDF | 00-inbox/PDFs/2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-NDSS-TIPSO-GAN__Malicious_Network_Traffic_Detection_Using_a_Novel_Optimized_Generative_Adversarial_Network.md |
+| DOI | [10.14722/ndss.2026.243241](https://doi.org/10.14722/ndss.2026.243241) |
 
 ---
 

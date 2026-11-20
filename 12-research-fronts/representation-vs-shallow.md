@@ -1,9 +1,15 @@
 ---
 type: research-front
 question: "深度表征学习模型在正确评估下是否仍有价值？"
-status: diverging
+status: conditional_support
+synthesis_state: signed
+last_synthesized: "2026-11-18"
+synthesized_by: "Codex（维护者授权按原文核验）"
+synthesis_claim_ids: ["CLM-0101","CLM-0102","CLM-0104","CLM-0103"]
+synthesis_evidence_ids: ["EV-V2-SWEET-BASELINES","EV-V2-NEST-GATE-CONTROL","EV-V2-GRAPHIDS-VERSIONS"]
+historical_status: diverging
 created: "2026-06-21"
-last_updated: "2026-10-21"
+last_updated: "2026-11-18"
 related_concepts:
   - "[[traffic-representation-learning]]"
   - "[[traffic-foundation-model]]"
@@ -17,6 +23,29 @@ related_methods:
 
 # 表征学习 vs 浅层模型的真实价值
 
+## 当前研究认识
+
+同一研究中的比较能确认具体输入、门控和数据版本下的结果。跨研究外推需核对字段、数据版本、训练预算和决策协议。
+
+- Sweet Danger 在 TLS-120 按流划分且保留 IP 的 base 设置中，LightGBM 与冻结 Pcap-Encoder 的 macro-F1 为 82.4% 和 63.7%。各自去 IP 后为 40.6% 和 13.0%。（CLM-0101，EV-V2-SWEET-BASELINES）
+- NestTor 原文确认集上，FS-Net 与 NestTor 共用代理门控时的二类 macro-F1 为 99.50% 和 99.45%，差值 95% CI 包含零。各自端到端时为 87.46% 与 99.45%。（CLM-0102，EV-V2-NEST-GATE-CONTROL）
+- GraphIDS 对 Anomal-E 的 CSE-CIC-IDS2018 PR-AUC 均值在 v3 为 0.8819 对 0.2555，在 v2 为 0.9201 对 0.9287。两个版本的特征和聚合定义不同。（CLM-0104，EV-V2-GRAPHIDS-VERSIONS）
+- 在数据、输入字段、划分和训练预算匹配时，浅层与深度表示的排序能否跨任务复现，现有审定材料证据不足。（CLM-0103）
+
+## 签审记录
+
+2026-11-18 由Codex（维护者授权按原文核验）按原文研究条件更新。旧判断及文献沿革保留在下方。
+
+### 签审前快照
+
+**待签审。** 本轮原文复核、证据边界与拟议结论见 [[front-review-2026-11-18#representation-vs-shallow]]. 签审后在此记录结论、适用条件、反证和未解决问题。
+
+
+## 历史研究记录
+
+> 下方保留历次研究记录，含旧制的共识和状态表述。当前引用以命题索引和签审快照为准。
+
+<!-- evidence-governance:archive:start -->
 ## 核心问题
 
 在正确的评估设置（per-flow split + frozen encoder）下，深度表征学习模型（ET-BERT、YaTC、NetMamba 等）是否仍优于传统浅层模型（RF/XGBoost/LightGBM + 手工特征）？
@@ -128,3 +157,4 @@ related_methods:
 | --- | --- | --- | --- | --- | --- |
 | 2025 | [[03-paper-notes/2025-NIPS-Self-Supervised_Learning_of_Graph_Representations_for_Network_Intrusion_Detection\|GraphIDS]] | 条件支持及反例 | T-MAE、SimpleAE 和外部基线表随 v2、v3 变化 | §4.6 表 3 | EV-20261118-GRAPH-CAL · pending_review |
 | 2026 | [[03-paper-notes/2026-TON-Post-Sketch_Machine_Learning_for_Accurate_Flow-Size_Estimation_Across_Sketch_Structures\|PS-ML]] | 相邻任务 | 查询状态能否提供可用差异取决于计数碰撞，目标为流大小 | §VII-C/D 图 6、8–9 | EV-20261118-PSML-READ · pending_review |
+<!-- evidence-governance:archive:end -->

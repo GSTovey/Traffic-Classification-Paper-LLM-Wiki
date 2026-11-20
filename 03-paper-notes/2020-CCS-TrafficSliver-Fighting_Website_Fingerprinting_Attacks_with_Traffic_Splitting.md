@@ -2,19 +2,13 @@
 type: paper
 title_original: "TrafficSliver: Fighting Website Fingerprinting Attacks with Traffic Splitting"
 title_cn: "TrafficSliver：用流量分割对抗网站指纹攻击"
-authors:
-  - Wladimir De la Cadena
-  - Asya Mitseva
-  - Jan Pennekamp
-  - Fabian Lanze
-  - Andriy Panchenko
-  - Klaus Wehrle
+authors: ["Wladimir De la Cadena", "Asya Mitseva", "Jens Hiller", "Jan Pennekamp", "Sebastian Reuter", "Julian Filter", "Thomas Engel", "Klaus Wehrle", "Andriy Panchenko"]
 year: 2020
 venue: "ACM CCS 2020"
-doi: "https://doi.org/10.1145/3372297.3417893"
-url: unknown
+doi: "10.1145/3372297.3423351"
+url: "https://doi.org/10.1145/3372297.3423351"
 pdf: "00-inbox/PDFs/2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting.pdf"
-mineru_md: ""
+mineru_md: "02-parsed-markdown/2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting.md"
 status: processed
 reading_level: L3
 research_area:
@@ -37,8 +31,13 @@ dataset:
 code: unknown
 relevance: high
 created: "2026-06-14"
-updated: "2026-06-14"
+updated: "2026-11-20"
+pages: "1971--1985"
+canonical_note: "[[2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting]]"
 ---
+
+> [!note] 历史整理稿
+> 当前文献入口为 [[2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting]]。此页留供追溯。
 
 # TrafficSliver: Fighting Website Fingerprinting Attacks with Traffic Splitting
 
@@ -50,7 +49,7 @@ updated: "2026-06-14"
 |---|---|
 | 原文标题 | TrafficSliver: Fighting Website Fingerprinting Attacks with Traffic Splitting |
 | 中文标题 | TrafficSliver：用流量分割对抗网站指纹攻击 |
-| 作者 | Wladimir De la Cadena, Asya Mitseva, Jan Pennekamp, Fabian Lanze, Andriy Panchenko, Klaus Wehrle |
+| 作者 | Wladimir De la Cadena, Asya Mitseva, Jens Hiller, Jan Pennekamp, Sebastian Reuter, Julian Filter, Thomas Engel, Klaus Wehrle, Andriy Panchenko |
 | 年份 | 2020 |
 | 会议/期刊 | ACM CCS 2020 |
 | 研究方向 | [[website-fingerprinting-defense]]、[[encrypted-traffic-analysis]]、匿名网络隐私保护 |
@@ -60,6 +59,7 @@ updated: "2026-06-14"
 | 是否开源 | 未提及 |
 | PDF | `00-inbox/PDFs/2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting.pdf` |
 | MinerU Markdown | 无 |
+| DOI | [10.1145/3372297.3423351](https://doi.org/10.1145/3372297.3423351) |
 
 ---
 

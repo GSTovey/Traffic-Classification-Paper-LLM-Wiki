@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Supercharging Packet-level Network Simulation of Large Model Training via Memoization and Fast-Forwarding"
-title_cn: ""
+title_cn: "利用记忆化与快进加速大模型训练的包级网络仿真"
 authors: ["Fei Long", "Kaihui Gao", "Li Chen", "Dan Li", "Yiwei Zhang", "Fei Gui", "Yitao Xing", "Wenjia Wei", "Bingyang Liu"]
 year: 2026
 venue: NSDI
@@ -18,7 +18,7 @@ dataset: ["SimAI GPT/MoE workloads", "GPT-18B real trace"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # Supercharging Packet-level Network Simulation of Large Model Training via Memoization and Fast-Forwarding

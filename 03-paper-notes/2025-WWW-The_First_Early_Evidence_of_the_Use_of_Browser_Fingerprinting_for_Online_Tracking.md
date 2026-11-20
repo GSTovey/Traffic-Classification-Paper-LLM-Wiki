@@ -7,7 +7,7 @@ year: 2025
 venue: "WWW 2025"
 doi: "10.1145/3696410.3714548"
 url: "https://doi.org/10.1145/3696410.3714548"
-pdf: "00-inbox/Aug_inbox/2025-WWW-The_First_Early_Evidence_of_the_Use_of_Browser_Fingerprinting_for_Online_Tracking.pdf"
+pdf: "00-inbox/PDFs/2025-WWW-The_First_Early_Evidence_of_the_Use_of_Browser_Fingerprinting_for_Online_Tracking.pdf"
 mineru_md: "02-parsed-markdown/2025-WWW-The_First_Early_Evidence_of_the_Use_of_Browser_Fingerprinting_for_Online_Tracking.md"
 status: processed
 reading_level: L3

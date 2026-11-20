@@ -1,17 +1,30 @@
 ---
 type: research-front
 question: ""
-status: diverging
+status: pending_review
+synthesis_state: pending_review
+last_synthesized: null
+synthesized_by: null
+synthesis_claim_ids: []
+synthesis_evidence_ids: []
 problem_state: candidate
 evidence_state: pending
-created: "2026-06-21"
-last_updated: "2026-06-21"
+created: ""
+last_updated: ""
 last_reviewed: ""
 related_concepts: []
 related_methods: []
 ---
 
 # [研究问题]
+
+## 当前研究认识
+
+待签审。综合后列出命题 ID、关键证据 ID、适用条件、反证与证据缺口。签审日期记入 `last_synthesized`。
+
+## 历史研究记录
+
+追加旧版快照原文、修改原因、证据依据、签审人和日期。
 
 ## 核心问题
 
@@ -35,10 +48,6 @@ related_methods: []
 
 | 年份 | 论文 | venue | 结论方向 | 关键发现 | 实验严格度 | 支持/反对 |
 |------|------|-------|----------|----------|-----------|----------|
-
-## 当前共识方向
-
-（基于证据链中的共识_count + recency + citation_impact 综合判断）
 
 ## 研究空白
 

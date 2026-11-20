@@ -1,5 +1,7 @@
 ---
 type: paper
+pdf: "00-inbox/PDFs/2021-TDSC-BiMorphing_A_Bi-Directional_Bursting_Defense_against_Website_Fingerprinting_Attacks.pdf"
+mineru_md: "02-parsed-markdown/2021-TDSC-BiMorphing_A_Bi-Directional_Bursting_Defense_against_Website_Fingerprinting_Attacks.md"
 title_original: "BiMorphing: A Bi-Directional Bursting Defense against Website Fingerprinting Attacks"
 title_cn: "BiMorphing：基于双向突发的网站指纹攻击防御"
 authors:
@@ -22,7 +24,9 @@ research_area: ["网站指纹防御", "流量分析", "隐私与匿名"]
 task: ["网站指纹防御", "Tor流量混淆"]
 method: ["统计采样", "凸优化", "双向突发变形"]
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-20"
+doi: "10.1109/tdsc.2019.2907240"
+url: "https://doi.org/10.1109/tdsc.2019.2907240"
 ---
 
 # BiMorphing: A Bi-Directional Bursting Defense against Website Fingerprinting Attacks
@@ -37,6 +41,7 @@ updated: "2026-06-21"
 | 期刊 | IEEE Transactions on Dependable and Secure Computing (TDSC) |
 | 发表时间 | 2021 |
 | 关键词 | traffic analysis; website fingerprinting defenses; bi-directional bursting; optimization |
+| DOI | [10.1109/tdsc.2019.2907240](https://doi.org/10.1109/tdsc.2019.2907240) |
 
 ## 1. 一句话总结
 

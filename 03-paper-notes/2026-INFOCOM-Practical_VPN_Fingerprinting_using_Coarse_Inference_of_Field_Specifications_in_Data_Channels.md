@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Practical VPN Fingerprinting using Coarse Inference of Field Specifications in Data Channels"
-title_cn: "unknown"
+title_cn: "基于数据通道字段粗粒度推断的 VPN 指纹识别"
 authors: ["Taewook Kim", "Jinhwan Kim", "Sangmin Lee", "Yeongpil Cho"]
 year: 2026
 venue: "INFOCOM"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "https://github.com/"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Practical VPN Fingerprinting using Coarse Inference of Field Specifications in Data Channels

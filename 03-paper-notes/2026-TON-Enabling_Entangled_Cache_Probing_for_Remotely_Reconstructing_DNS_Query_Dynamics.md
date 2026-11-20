@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Enabling Entangled Cache Probing for Remotely Reconstructing DNS Query Dynamics"
-title_cn: "unknown"
+title_cn: "基于纠缠式缓存探测的 DNS 查询动态推断"
 year: 2026
 venue: "TON"
 doi: "10.1109/TON.2026.3690532"

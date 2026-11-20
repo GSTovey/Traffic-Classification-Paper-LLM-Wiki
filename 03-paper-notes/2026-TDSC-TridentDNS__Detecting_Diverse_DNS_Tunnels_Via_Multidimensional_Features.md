@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "TridentDNS: Detecting Diverse DNS Tunnels Via Multidimensional Features"
-title_cn: "unknown"
+title_cn: "TridentDNS：基于多维特征的多类 DNS 隧道检测"
 authors: ["Lin Ye", "Runze Xie", "Zhongyun Hua", "Yunting Zhang", "Wei Jiang"]
 year: 2026
 venue: "TDSC"
@@ -18,7 +18,7 @@ dataset: ["QUIC"]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # TridentDNS: Detecting Diverse DNS Tunnels Via Multidimensional Features

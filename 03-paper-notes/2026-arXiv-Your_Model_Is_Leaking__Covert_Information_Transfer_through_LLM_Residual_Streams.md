@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "Your Model Is Leaking: Covert Information Transfer through LLM Residual Streams"
-title_cn: ""
-authors: []
+title_cn: "LLM 中间激活导出与信息泄露风险"
+authors: ["Mingyuan Li", "Yanna Jiang", "Guangsheng Yu", "Qin Wang", "Xu Wang", "Wei Ni", "Ren Ping Liu"]
 year: 2026
 venue: arXiv
-doi: unknown
-url: unknown
+doi: "10.48550/arXiv.2609.27996"
+url: "https://doi.org/10.48550/arXiv.2609.27996"
 pdf: "00-inbox/PDFs/2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["模型运行时安全"]
+task: ["评估诊断产物泄露风险"]
+method: ["运行时威胁建模与泄露评估"]
+dataset: ["作者所测模型与诊断导出环境"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-09-29"
+updated: "2026-11-20"
 ---
 
 # Your Model Is Leaking: Covert Information Transfer through LLM Residual Streams
@@ -31,34 +31,84 @@ updated: "2026-09-29"
 | 会议/期刊 | arXiv |
 | PDF | [[2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams.pdf]] |
 | MinerU Markdown | [[2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams.md]] |
+| 作者 | Mingyuan Li, Yanna Jiang, Guangsheng Yu, Qin Wang, Xu Wang, Wei Ni, Ren Ping Liu |
+| DOI | [10.48550/arXiv.2609.27996](https://doi.org/10.48550/arXiv.2609.27996) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+论文讨论在外发中间激活时，运行时组件被攻陷所带来的额外数据泄露面。
 
 ## 2. 摘要原文
 —Privacy-sensitive organizations may run LLMs in restricted or air-gapped environments while still exporting selected diagnostic or audit artifacts. These artifacts may be available to authorized reviewers who should not learn sensitive information from the underlying inference process. We show, however, that a compromised LLM runtime component can hide sensitive information in intermediate activations that are allowed to leave the restricted environment. An offline observer can recover this information with a simple linear decoder. The attack requires no retraining, weight changes, or control over the export process. This creates a covert exfiltration channel. We introduce RESIDUALMUX, a residual-stream covertchannel attack that embeds sensitive information into routine activation artifacts. Our attack maps each message to a codeword and injected it into an intermediate residual stream through a compromised runtime hook. The signal then propagates with normal model execution and is captured by an authorized downstream activation recorder; once the artifact crosses the trust boundary, an offline linear decoder recovers the message. To maintain recoverability, RESIDUALMUX scales the injection strength with the local residual norm using the signal-to-residualnorm ratio (SRR). Across eleven models from seven architecture families, our evaluation shows high recovery with limited output changes (91–100% recovery on nine models; KL divergence 0.001–0.007), while the evaluated activation-level detectors remain close to random guessing (AUC ≤ 0.56) and tested posthoc defenses do not reliably eliminate the channel. An activation artifact can thus be schema-valid while carrying information that is not authorized to cross the boundary. Our code is hosted at https://anonymous.4open.science/r/ResidualMux-6D23.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+将激活导出视为需审计的数据路径，以受控模型运行证明接收方可从被干预的导出产物推断敏感信息。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：作者所测模型与诊断导出环境。
+- 作者报告：摘要给出一个条件性风险结果。作者在已控制推理组件且诊断产物外发的设定中演示了可恢复的信息。
+- 原文位置：[[02-parsed-markdown/2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams|原文解析稿]] · 摘要与威胁模型。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+风险成立需要运行时被影响和导出权限等前提。可据此审查诊断导出信任边界，不能把结果归因于一般模型推理。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
+
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams|原文解析稿]] · 摘要与威胁模型。可引用的结论须保留所列实验条件。
+
+## 深度分析（并行深度分析更新 2026-09-29）
+
+### 方法、实验与证据
+LLM残差流注入实现隐蔽信息传递；11模型、7架构、0.1B–27B，比较水印/令牌/时序/KV等基线。Mahalanobis+PCA检测AUC 0.46–0.50，监督MLP 0.50–0.57；攻击前提是代码级管线和hidden states访问，闭源API不在范围。
+
+### 横向联动与局限
+- 该论文可联动 [[method-comparison-table]]、[[narrative-pattern-comparison]] 与相关任务/方法页；当前仅追加证据，不改写既有结论。
+- 复现/引用前需核对 MinerU 表格、官方 PDF 与代码仓库；未从正文稳定提取的字段保留 unknown。
+- 证据等级：摘要与方法/实验章节可定位；跨论文比较不据此自动推断因果或部署保证。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
 - MinerU：已完成；解析质量需人工抽查。
 - Bib 元数据：待官方 API/论文首页核验。
+
 
 
 ## 深度分析（自动证据提取，需人工复核）
@@ -81,12 +131,4 @@ $$ \mathrm{acc} _ {\text { chance }} = \frac {1}{K}.\tag{19} $$ For $K { = } 1 6
 - 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
 
 
-## 深度分析（并行深度分析更新 2026-09-29）
-
-### 方法、实验与证据
-LLM残差流注入实现隐蔽信息传递；11模型、7架构、0.1B–27B，比较水印/令牌/时序/KV等基线。Mahalanobis+PCA检测AUC 0.46–0.50，监督MLP 0.50–0.57；攻击前提是代码级管线和hidden states访问，闭源API不在范围。
-
-### 横向联动与局限
-- 该论文可联动 [[method-comparison-table]]、[[narrative-pattern-comparison]] 与相关任务/方法页；当前仅追加证据，不改写既有结论。
-- 复现/引用前需核对 MinerU 表格、官方 PDF 与代码仓库；未从正文稳定提取的字段保留 unknown。
-- 证据等级：摘要与方法/实验章节可定位；跨论文比较不据此自动推断因果或部署保证。
+```

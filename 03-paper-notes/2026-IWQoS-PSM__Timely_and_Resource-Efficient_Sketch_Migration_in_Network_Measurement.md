@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-IWQoS-PSM__Timely_and_Resource-Efficient_Sketch_Migrati
 mineru_md: "02-parsed-markdown/2026-IWQoS-PSM__Timely_and_Resource-Efficient_Sketch_Migration_in_Network_Measurement.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["网络遥测"]
+task: ["测量点变化时迁移草图状态"]
+method: ["受控草图迁移与资源成本对照"]
+dataset: ["四类常用 Sketch 和两类测量应用的实验"]
 code: "https://github.com/zxzx2002/Sketch Migration.git"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # PSM: Timely and Resource-Efficient Sketch Migration in Network Measurement

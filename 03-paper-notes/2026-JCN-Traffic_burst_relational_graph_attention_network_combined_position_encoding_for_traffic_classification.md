@@ -5,8 +5,8 @@ title_cn: "基于流量突发关系图注意力网络结合位置编码的流量
 authors: ["Xi Xiao", "Zeming Wu", "Siji Chen", "Guangwu Hu", "Le Yu", "Qing Li", "Hao Li", "Qingjun Yuan"]
 year: 2026
 venue: "Journal of Computer Networks (JCN)"
-doi: unknown
-url: unknown
+doi: "10.1016/j.comnet.2026.112072"
+url: "https://doi.org/10.1016/j.comnet.2026.112072"
 pdf: "00-inbox/PDFs/2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification.pdf"
 mineru_md: "02-parsed-markdown/2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["ISCX-VPN2016", "USTC-TFC2016", "DADABox", "CTU-13"]
 code: unknown
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-20"
 ---
 
 # Traffic burst relational graph attention network combined position encoding for traffic classification
@@ -39,6 +39,7 @@ updated: "2026-05-27"
 | 是否开源 | 否（Data will be made available on request） |
 | PDF | 00-inbox/PDFs/2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-JCN-Traffic_burst_relational_graph_attention_network_combined_position_encoding_for_traffic_classification.md |
+| DOI | [10.1016/j.comnet.2026.112072](https://doi.org/10.1016/j.comnet.2026.112072) |
 
 ## 1. 一句话总结
 

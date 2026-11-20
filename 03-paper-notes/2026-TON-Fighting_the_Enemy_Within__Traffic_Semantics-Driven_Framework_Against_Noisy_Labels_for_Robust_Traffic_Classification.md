@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Fighting the Enemy Within: Traffic Semantics-Driven Framework Against Noisy Labels for Robust Traffic Classification"
-title_cn: "unknown"
+title_cn: "面向噪声标签的流量语义驱动鲁棒分类框架"
 authors: ["Mingwei Zhan", "Ruijie Zhao", "Xianwen Deng", "Zhi Xue", "Qi Li", "Zhuotao Liu", "Guang Cheng", "Ke Xu"]
 year: 2026
 venue: "TON"
@@ -18,7 +18,7 @@ dataset: ["ISCX"]
 code: "https://github.com/NSSL-SJTU/FlowRefinerPlus"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Fighting the Enemy Within: Traffic Semantics-Driven Framework Against Noisy Labels for Robust Traffic Classification

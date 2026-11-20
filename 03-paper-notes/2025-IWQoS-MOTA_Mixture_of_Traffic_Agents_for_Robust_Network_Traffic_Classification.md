@@ -5,8 +5,8 @@ title_cn: "MOTA: 基于混合流量代理的鲁棒网络流量分类"
 authors: ["Shaowei Li", "Zhiwen Gan", "Mengbai Xiao", "Pengfei Hu", "Xiuzhen Cheng", "Chunxiao Wang", "Feng Li"]
 year: 2025
 venue: "IEEE IWQoS 2025"
-doi: unknown
-url: unknown
+doi: "10.1109/iwqos65803.2025.11143417"
+url: "https://doi.org/10.1109/iwqos65803.2025.11143417"
 pdf: "00-inbox/PDFs/2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["SJTU-AN21", "ISCX-Tor-2016", "ISCX-VPN-2016", "USTC-TFC-2016"]
 code: unknown
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-20"
 internal_citation_count: 2
 citation_impact: 1.0
 composite_weight: 0.65
@@ -44,6 +44,7 @@ citation_count_verified: "2026-11-18"
 | 是否开源 | 否（论文提及使用开源模型和工具如 LlamaFactory、vLLM，但未提供 MOTA 本身代码） |
 | PDF | 00-inbox/PDFs/2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification.pdf |
 | MinerU Markdown | 02-parsed-markdown/2025-IWQoS-MOTA_Mixture_of_Traffic_Agents_for_Robust_Network_Traffic_Classification.md |
+| DOI | [10.1109/iwqos65803.2025.11143417](https://doi.org/10.1109/iwqos65803.2025.11143417) |
 
 ## 1. 一句话总结
 

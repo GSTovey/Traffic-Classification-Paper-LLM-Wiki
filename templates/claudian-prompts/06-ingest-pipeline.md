@@ -111,35 +111,24 @@ python3 scripts/extract_key_figures.py
 - **dataset-comparison-table.md**：如果论文使用了新的数据集，添加一行
 - **open-source-registry.md**：如果论文有开源代码，添加到第 1 节；如果论文声明将开源，添加到第 2 节
 
-#### 3f. 更新 Claims（09-claims/）
+### 阶段 3.5：登记候选证据
 
-提取论文中值得沉淀的核心观点：
-- 如有新的可引用观点 → 添加到 `claims-index.md`（填写 venue_factor、time_factor、citation_impact、composite_weight、consensus_count、confidence_score 所有权重字段）
-- 如与已有论文存在矛盾 → 添加到 `contradictions.md`（填写 current_verdict、verdict_basis、verdict_confidence）
+- 识别可检验命题，引用 `09-claims/proposition-index.md` 的现有 ID。新命题分配新 ID，登记在待签审区。保留作者报告结果、原文定位、任务与输入、观测单位、数据集、划分、指标、适用范围和两种来源谱系。
+- 按 `09-claims/evidence-ledger.schema.json` 准备 v2 JSONL，`status` 为 `pending_review`。证据可记录初判方向 `supports` / `challenges` / `neutral` 及带来源的初步复核说明。实验条件不同的候选记具体差异。
+- 通过候选入口登记，随后刷新结构审计和审核队列：
 
-#### 3.5a. Claims 共识更新
+```bash
+python3 scripts/research_capability_audit.py add-candidates --input <候选JSONL文件>
+python3 scripts/research_capability_audit.py audit --all-fronts --write
+```
 
-- 新论文是否支持现有 `claims-index.md` 中的观点？→ `consensus_count += 1`，更新 `last_confirmed` 年份，重新计算 `confidence_score`（公式：`venue_factor × time_factor × citation_impact × consensus_count`，详见 AGENTS.md 第 11 节）
-- 新论文是否挑战现有 claims？→ 更新 `contradictions.md` 的 `current_verdict` 和 `verdict_confidence`
-- 新论文是否提出了全新的可引用观点？→ 追加到 `claims-index.md`，填写所有权重字段
-
-#### 3.5b. Citation Impact 更新
-
-- 新论文引用了哪些已有论文？→ 对应论文的 `citation_impact` 计数 +1，重新计算 `composite_weight`
-- 在 `paper-registry.md` 的对应行中更新 `claims_supported` 和 `claims_challenged` 字段
-
-#### 3.5c. 研究前沿同步
-
-- 检查新论文是否与 `12-research-fronts/` 中某个研究前沿的核心问题相关
-- 如相关 → 更新该 research-front 页面的证据链表格（追加新行）
-- 如新论文揭示了全新的研究前沿问题 → 创建新的 research-front 页面（使用 `templates/research-front-template.md`）
-- 更新 research-front 的 `status` 字段（converging / diverging / stale）
+- 在相关知识页追加论文事实和链接。新的研究前沿可用 `12-research-fronts/research-front-template.md` 建立待签审页，并接入研究前沿索引。正式命题、关系和前沿快照由人工审核与维护者签审更新。
 
 ### 阶段 4：更新全局索引
 
 #### 4a. 更新论文注册表
 
-在 `00-dashboard/paper-registry.md` 末尾追加一行，包含新论文的 doi、title_key、year、venue、first_author、filename、note、claims_supported、claims_challenged 字段。
+在 `00-dashboard/paper-registry.md` 末尾追加一行，包含新论文的 doi、title_key、year、venue、first_author、filename、note、claims_supported、claims_challenged 字段。后两列用于兼容历史表格，新行填 `—`。
 
 #### 4b. 更新阅读队列
 
@@ -147,7 +136,7 @@ python3 scripts/extract_key_figures.py
 
 #### 4c. 更新 Dashboard
 
-- `00-dashboard/index.md`：更新页面计数
+- 用 `python3 scripts/research_capability_audit.py stats` 从注册表和实际页面生成统计，更新 `00-dashboard/index.md`、`00-dashboard/project-overview.md` 和 README 的当前数字
 - `00-dashboard/project-overview.md`：如论文属于重点论文，更新相关章节
 
 #### 4d. 更新参考文献
@@ -231,21 +220,9 @@ python3 scripts/generate_bibliography.py --skip-api  # 从 bibliography.json 重
 
 ## 研究判断门禁
 
-论文入库后的知识更新分为两层：
-
-### 自动同步
-
-- 追加论文笔记、来源链接和候选概念/方法/任务关联；
-- 重要主张写入 `09-claims/evidence-ledger.jsonl`，初始状态设为 `pending_review`；
-- 记录可能的跨论文关系、矛盾和研究前沿候选项；
-- 生成审核队列，不直接改变正式研究结论。
-
-### 人工审核后更新
-
-- 只有证据位置、条件、证据类型和反证均已核验，才可标记为 `verified`；
-- 只有 `verified` 记录才可更新 consensus_count、confidence_score 或研究前沿状态；
-- `contested` 记录进入 contradictions 或研究前沿反证区，不自动提高或降低共识；
-- 候选创新点必须经过 Research Landscape、Cross-paper Relations、Counterevidence Check 和 Testable Hypotheses 后，才能进入正式研究规划。
+1. **结构校验**：`validate --all-fronts` 检查 Schema、ID、来源文件、审核字段、快照和索引一致性。
+2. **语义复核**：人工对照论文，判断命题方向、证据直接性、研究与数据谱系、评估条件以及反证。有实质疑问的证据为 `contested`；条件可比且结果相反的两项已核验证据分别保留 `verified + supports` 和 `verified + challenges`，由命题记录分歧。
+3. **维护者签审**：按 AGENTS.md §11 更新命题和“当前研究认识”，记录签审日期与依据。上一版正文、变更原因、证据 ID 和审核人日期写入历史。证据不足、存在分歧和适用范围未明均为可签审结果。
 
 正常论文入库不因普通字段缺失而阻断；仅当来源丢失、解析严重错误或重要证据不可追溯时，才标记为需要人工处理。
 
@@ -272,11 +249,11 @@ python3 scripts/generate_bibliography.py --skip-api  # 从 bibliography.json 重
 | 方法页 | 更新了 [[zzz]] |
 | 对比表 | method-comparison-table 新增 1 行 |
 | 开源注册表 | 新增 1 个开源方法 / 无需更新 |
-| Claims | 新增 1 条观点 / 无需更新 |
-| Research Fronts | 更新了 [[xxx-front]] / 新建了 [[xxx-front]] / 无需更新 |
+| 命题与证据 | 新增 1 条候选证据 / 无需更新 |
+| 研究前沿 | 关联 [[xxx-front]] 的候选项 / 新建待签审前沿 / 无需更新 |
 
 ### 全局更新
-- paper-registry.md：新增 1 行（#51，claims_supported/claims_challenged 已填写）
+- paper-registry.md：新增 1 行（#51，两列历史 Claims 计数填 `—`）
 - reading-queue.md：新增 1 行
 - index.md：计数更新
 - bibliography.json：新增 1 条条目（citation_key: xxx）

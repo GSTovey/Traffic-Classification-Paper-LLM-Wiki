@@ -5,8 +5,8 @@ title_cn: "TriFusion：自监督学习增强的双层级多模态流量分类框
 authors: ["Haodong Yue", "Haozhen Zhang", "Xi Xiao", "Le Yu", "Guangwu Hu", "Qing Li"]
 year: 2026
 venue: "ICASSP"
-doi: "unknown"
-url: "unknown"
+doi: "10.1109/icassp55912.2026.11460777"
+url: "https://doi.org/10.1109/icassp55912.2026.11460777"
 pdf: "00-inbox/PDFs/2026-ICASSP-TriFusion_A_Self-Supervised_Learning_Enhanced_Dual-Level_Multimodal_Framework_for_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2026-ICASSP-TriFusion_A_Self-Supervised_Learning_Enhanced_Dual-Level_Multimodal_Framework_for_Traffic_Classification.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["ISCX-VPN", "CICIoT", "ISCX-nonTor"]
 code: "unknown"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-20"
 ---
 
 ## §0 基础信息

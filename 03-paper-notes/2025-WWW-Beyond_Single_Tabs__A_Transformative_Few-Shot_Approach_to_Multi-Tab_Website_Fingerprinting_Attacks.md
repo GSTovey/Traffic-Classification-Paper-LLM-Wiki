@@ -7,7 +7,7 @@ year: 2025
 venue: "WWW 2025"
 doi: "10.1145/3696410.3714811"
 url: "https://doi.org/10.1145/3696410.3714811"
-pdf: "00-inbox/Aug_inbox/2025-WWW-Beyond_Single_Tabs__A_Transformative_Few-Shot_Approach_to_Multi-Tab_Website_Fingerprinting_Attacks.pdf"
+pdf: "00-inbox/PDFs/2025-WWW-Beyond_Single_Tabs__A_Transformative_Few-Shot_Approach_to_Multi-Tab_Website_Fingerprinting_Attacks.pdf"
 mineru_md: "02-parsed-markdown/2025-WWW-Beyond_Single_Tabs__A_Transformative_Few-Shot_Approach_to_Multi-Tab_Website_Fingerprinting_Attacks.md"
 status: processed
 reading_level: L3

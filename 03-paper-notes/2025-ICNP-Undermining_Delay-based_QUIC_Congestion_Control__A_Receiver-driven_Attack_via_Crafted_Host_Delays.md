@@ -12,13 +12,13 @@ mineru_md: "02-parsed-markdown/2025-ICNP-Undermining_Delay-based_QUIC_Congestion
 status: processed
 reading_level: L2
 research_area: ["encrypted-traffic-analysis"]
-task: []
-method: []
-dataset: []
+task: ["评估 QUIC 时延型拥塞控制的稳健性"]
+method: ["受控时延变化、仿真和物理测试床比较"]
+dataset: ["Mininet 仿真与 10 Gbps 物理测试床"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Undermining Delay-based QUIC Congestion Control: A Receiver-driven Attack via Crafted Host Delays

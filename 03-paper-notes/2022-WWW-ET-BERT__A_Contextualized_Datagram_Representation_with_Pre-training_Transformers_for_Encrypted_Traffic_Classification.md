@@ -11,8 +11,8 @@ authors:
   - Jing Yu
 year: 2022
 venue: "WWW"
-doi: ""
-url: ""
+doi: "10.1145/3485447.3512217"
+url: "https://doi.org/10.1145/3485447.3512217"
 pdf: "00-inbox/PDFs/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2022-WWW-ET-BERT__A_Contextualized_Datagram_Representation_with_Pre-training_Transformers_for_Encrypted_Traffic_Classification.md"
 status: processed
@@ -27,7 +27,7 @@ dataset:
 code: "https://github.com/linwhitehat/ET-BERT"
 relevance: high
 created: "2026-05-27"
-updated: "2026-10-21"
+updated: "2026-11-20"
 venue_factor: 0.85
 time_factor: 0.6
 citation_impact: 1.8
@@ -51,6 +51,7 @@ citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traf
 | 会议/期刊 | WWW (The Web Conference 2022) |
 | 关键词 | Encrypted Traffic Classification, Pre-training, Transformer, Masked BURST Model, Same-origin BURST Prediction |
 | 代码 | https://github.com/linwhitehat/ET-BERT |
+| DOI | [10.1145/3485447.3512217](https://doi.org/10.1145/3485447.3512217) |
 
 ## 1. 一句话总结
 

@@ -5,8 +5,8 @@ title_cn: "ByteDance：让字节在多视图加密流量分类中大放异彩"
 authors: ["Yuwei Xu", "Zhiyuan Liang", "Xiaotian Fang", "Kehui Song", "Meng Wang", "Qiao Xiang", "Guang Cheng"]
 year: 2026
 venue: "Journal of Network and Computer Applications (JNCA)"
-doi: unknown
-url: unknown
+doi: "10.1016/j.comnet.2025.111843"
+url: "https://doi.org/10.1016/j.comnet.2025.111843"
 pdf: "00-inbox/PDFs/2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification.pdf"
 mineru_md: "02-parsed-markdown/2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["CSTNET-TLS1.3", "MOBILE-APP", "TOR", "TROJAN-VPN"]
 code: unknown
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-20"
 ---
 
 # ByteDance: Let bytes perform brilliantly in multi-view encrypted traffic classification
@@ -39,6 +39,7 @@ updated: "2026-05-27"
 | 是否开源 | 否（计划发表后开源） |
 | PDF | 00-inbox/PDFs/2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-JCN-ByteDance__Let_bytes_perform_brilliantly_in_multi-view_encrypted_traffic_classification.md |
+| DOI | [10.1016/j.comnet.2025.111843](https://doi.org/10.1016/j.comnet.2025.111843) |
 
 ## 1. 一句话总结
 

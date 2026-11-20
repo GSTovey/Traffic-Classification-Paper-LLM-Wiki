@@ -7,7 +7,7 @@ year: 2025
 venue: "WWW 2025"
 doi: "10.1145/3696410.3714699"
 url: "https://doi.org/10.1145/3696410.3714699"
-pdf: "00-inbox/Aug_inbox/2025-WWW-FP-Rainbow__Fingerprint-Based_Browser_Configuration_Identification.pdf"
+pdf: "00-inbox/PDFs/2025-WWW-FP-Rainbow__Fingerprint-Based_Browser_Configuration_Identification.pdf"
 mineru_md: "02-parsed-markdown/2025-WWW-FP-Rainbow__Fingerprint-Based_Browser_Configuration_Identification.md"
 status: processed
 reading_level: L3

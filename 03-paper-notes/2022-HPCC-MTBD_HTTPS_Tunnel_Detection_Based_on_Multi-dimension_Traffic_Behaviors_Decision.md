@@ -12,8 +12,8 @@ authors:
   - Chang Liu
 year: 2022
 venue: "HPCC"
-doi: "10.1109/HPCC57118.2022.00178"
-url: ""
+doi: "10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00091"
+url: "https://doi.org/10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00091"
 pdf: "00-inbox/PDFs/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.pdf"
 mineru_md: "02-parsed-markdown/2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.md"
 status: processed
@@ -26,7 +26,7 @@ research_area: ["HTTPS隧道检测", "加密流量分析", "网络安全"]
 task: ["隧道检测", "流量分类"]
 method: ["burst traffic filtering", "multi-dimension voting", "machine learning"]
 created: "2026-05-27"
-updated: "2026-10-21"
+updated: "2026-11-20"
 venue_factor: 0.65
 time_factor: 0.6
 citation_impact: 1.0
@@ -35,6 +35,7 @@ internal_citation_count: 1
 citation_count_scope: "verified normalized-title matches in parsed References; lower bound"
 citation_count_verified: "2026-10-21"
 citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traffic_with_Factorized_Decisions"
+pages: "474--481"
 ---
 
 # MTBD: HTTPS Tunnel Detection Based on Multi-dimension Traffic Behaviors Decision
@@ -50,6 +51,7 @@ citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traf
 | 研究领域 | 网络安全, 加密流量分析, HTTPS隧道检测 |
 | 关键词 | HTTPS tunnel, multi-dimension traffic behaviors decision, traffic burst, machine learning |
 | 代码/数据 | 未公开 |
+| DOI | [10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00091](https://doi.org/10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00091) |
 
 ## 1. 一句话总结
 

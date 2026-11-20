@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-TMC-Characterization_and_Prediction_of_Cell-Level_Mobil
 mineru_md: "02-parsed-markdown/2026-TMC-Characterization_and_Prediction_of_Cell-Level_Mobile_Network_Traffic__A_Reinforced_Meta-Learning-Based_Framework.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
+research_area: ["蜂窝网络测量"]
+task: ["小区级流量特征分析与预测"]
+method: ["FFT 分析与强化元学习"]
 dataset: [Big Data Challenge (BDC), SONE, LTE]
 code: unknown
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Characterization and Prediction of Cell-Level Mobile Network Traffic: A Reinforced Meta-Learning-Based Framework

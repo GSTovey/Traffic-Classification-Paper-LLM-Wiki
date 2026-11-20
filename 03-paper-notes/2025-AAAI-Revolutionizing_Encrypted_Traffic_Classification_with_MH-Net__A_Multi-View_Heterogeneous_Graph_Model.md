@@ -7,7 +7,7 @@ year: 2025
 venue: "AAAI 2025"
 doi: "10.1609/aaai.v39i1.32091"
 url: "https://doi.org/10.1609/aaai.v39i1.32091"
-pdf: "00-inbox/Aug_inbox/2025-AAAI-Revolutionizing_Encrypted_Traffic_Classification_with_MH-Net__A_Multi-View_Heterogeneous_Graph_Model.pdf"
+pdf: "00-inbox/PDFs/2025-AAAI-Revolutionizing_Encrypted_Traffic_Classification_with_MH-Net__A_Multi-View_Heterogeneous_Graph_Model.pdf"
 mineru_md: "02-parsed-markdown/2025-AAAI-Revolutionizing_Encrypted_Traffic_Classification_with_MH-Net__A_Multi-View_Heterogeneous_Graph_Model.md"
 status: processed
 reading_level: L3

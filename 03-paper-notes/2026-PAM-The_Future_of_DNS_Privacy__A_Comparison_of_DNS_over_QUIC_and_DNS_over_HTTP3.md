@@ -5,20 +5,20 @@ title_cn: "DNS 隐私的未来：DNS over QUIC 与 DNS over HTTP/3 的大规模�
 authors: [Philipp Bielefeld, Felix Hofmann, Stefen Sassalla, vasilis ververis, Vaibhav Bajpai]
 year: 2026
 venue: "PAM 2026"
-doi: "unknown"
-url: "unknown"
+doi: "10.1007/978-3-032-18268-5_10"
+url: "https://doi.org/10.1007/978-3-032-18268-5_10"
 pdf: "00-inbox/PDFs/2026-PAM-The_Future_of_DNS_Privacy__A_Comparison_of_DNS_over_QUIC_and_DNS_over_HTTP3.pdf"
 mineru_md: "02-parsed-markdown/2026-PAM-The_Future_of_DNS_Privacy__A_Comparison_of_DNS_over_QUIC_and_DNS_over_HTTP3.md"
 status: processed
 reading_level: L2
 research_area: [encrypted-traffic-analysis]
-task: []
-method: []
+task: ["加密 DNS 采用情况与加载性能测量"]
+method: ["解析器能力和网页加载时延对照"]
 dataset: [Tranco Top 1M]
 code: "https://doi.org/10.5281/zenodo.17860118"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # The Future of DNS Privacy: A Comparison of DNS over QUIC and DNS over HTTP/3
@@ -39,6 +39,7 @@ updated: "2026-09-19"
 | 是否开源 | 是：作者声明 "We release our datasets, source code, and analysis scripts"，工件 DOI 见 `code` 字段（该 DOI 为工件 DOI，非论文 DOI） |
 | PDF | 00-inbox/PDFs/2026-PAM-The_Future_of_DNS_Privacy__A_Comparison_of_DNS_over_QUIC_and_DNS_over_HTTP3.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-PAM-The_Future_of_DNS_Privacy__A_Comparison_of_DNS_over_QUIC_and_DNS_over_HTTP3.md |
+| DOI | [10.1007/978-3-032-18268-5_10](https://doi.org/10.1007/978-3-032-18268-5_10) |
 
 > 注：解析稿中未出现论文自身的 DOI/URL（参考文献中的 DOI 均属他文），故 `doi`/`url` 填 `unknown`。Zenodo 条目 10.5281/zenodo.17860118 为作者工件（参考文献 [25]，2025 年提交），按规则记入 `code`。
 

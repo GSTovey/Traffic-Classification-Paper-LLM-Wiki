@@ -7,7 +7,7 @@ year: 2021
 venue: "USENIX Security 2021"
 doi: unknown
 url: "https://www.usenix.org/conference/usenixsecurity21/presentation/izhikevich"
-pdf: "00-inbox/PDFs/2021-USENIX-LZR__Identifying_Unexpected_Internet_Services.md"
+pdf: "00-inbox/PDFs/2021-USENIX-LZR__Identifying_Unexpected_Internet_Services.pdf"
 mineru_md: "02-parsed-markdown/2021-USENIX-LZR__Identifying_Unexpected_Internet_Services.md"
 status: processed
 reading_level: L3

@@ -2,7 +2,7 @@
 
 [English](./README.md)
 
-基于 Obsidian 的**网络流量分类**、**加密流量分析**和**流量基础模型**研究论文知识库。收录 355 篇来自顶级会议/期刊（CCS、S&P、USENIX、NDSS、SIGCOMM、INFOCOM、AAAI、NeurIPS、TIFS、TSC、WWW、KDD 等）的结构化论文笔记，覆盖 2008--2026 年的研究成果。
+基于 Obsidian 的**网络流量分类**、**加密流量分析**和**流量基础模型**研究论文知识库。收录 355 篇来自顶级会议/期刊（CCS、S&P、USENIX、NDSS、SIGCOMM、INFOCOM、AAAI、NeurIPS、TIFS、TSC、WWW、KDD 等）的结构化论文笔记，卷期题录年份为 2008–2027 年。
 
 ---
 
@@ -10,12 +10,12 @@
 
 - **355 篇结构化论文笔记**，中英双语 frontmatter，含方法分析与证据追踪
 - **142 篇深度分析论文**（L3/L4 级），含公式推导、消融实验、跨论文关联
-- **43 个知识页面**（12 概念页、10 方法页、9 任务页、5 综述页、5 对比表及 2 证据索引）
+- **44 个知识页面**（13 概念页、10 方法页、9 任务页、5 综述页、5 对比表及 2 证据索引）
 - **7 个活跃研究前沿**，追踪收敛/分歧研究问题，含证据链和 Auto Research 指引
 - **跨论文创新点挖掘流程**，串联证据、共同假设、研究空白、反证、可证伪假设和研究排序
-- **共识权重系统**：venue 等级 × 时间衰减 × 引用影响三维评分
-- **99 个已确认公开的方法或数据产物**
-- **参考文献库**含 372 条 BibTeX 和 355 条结构化 JSON 记录，保留既有 17 条仅在 BibTeX 收录的条目
+- **分层核验证据**，记录来源、实验条件、作者报告值及已签审的跨论文关系
+- **101 个已确认公开的方法或数据产物**
+- **参考文献库**含 373 条 BibTeX 和 356 条结构化 JSON 记录，已覆盖 355 篇注册论文，另保留历史引文
 - **研究地图**按主题、方法和会议交叉索引
 
 ## 目录结构
@@ -27,7 +27,7 @@ Traffic_Papers/
 ├── 01-mineru-output/       # MinerU 原始解析结果（已 gitignore，可重新生成）
 ├── 02-parsed-markdown/     # MinerU 解析后的 Markdown
 ├── 03-paper-notes/         # 结构化论文笔记（355 篇）★
-├── 04-concepts/            # 概念页（12 个）★
+├── 04-concepts/            # 概念页（13 个）★
 ├── 05-methods/             # 方法页（10 个）★
 ├── 06-tasks/               # 任务页（9 个）★
 ├── 07-surveys/             # 综述页（5 个）★
@@ -36,7 +36,7 @@ Traffic_Papers/
 ├── 10-outputs/             # 草稿、报告、复现笔记（已 gitignore）
 ├── 12-research-fronts/     # 研究前沿追踪（7 个前沿 + 索引 + 模板）★
 ├── 00-dashboard/           # 阅读队列、研究地图、开放问题
-├── bibliography.json       # 结构化 BibTeX 元数据（355 条）
+├── bibliography.json       # 结构化引文元数据（356 条）
 ├── bibliography.bib        # LaTeX 可用 BibTeX 文件（可直接复制）
 ├── scripts/                # MinerU 批量解析 + 参考文献生成脚本
 └── templates/              # 笔记模板
@@ -88,7 +88,7 @@ Traffic_Papers/
 - **PDF 解析**：[MinerU](https://github.com/opendatalab/MinerU) API 将 PDF 转为结构化 Markdown
 - **笔记生成**：Claude Code（AI 辅助结构化笔记生成）
 - **知识管理**：Obsidian + Dataview 插件
-- **参考文献库**：`bibliography.bib` 有 372 条，`bibliography.json` 有 355 条；增量更新保留已有 BibTeX 条目，避免覆盖历史未同步项。
+- **参考文献库**：`bibliography.bib` 有 373 条，`bibliography.json` 有 356 条；增量更新保留已有 BibTeX 条目，避免覆盖历史未同步项。
 - **自动化工作流**：一键入库管道（去重 → 解析 → 笔记生成 → 知识层全量更新 → 参考文献更新 → README/AGENTS 同步）
 - **去重方法**：五轮联合匹配（文件名 + 标题 + 摘要 + DOI + 作者/年份/venue）
 

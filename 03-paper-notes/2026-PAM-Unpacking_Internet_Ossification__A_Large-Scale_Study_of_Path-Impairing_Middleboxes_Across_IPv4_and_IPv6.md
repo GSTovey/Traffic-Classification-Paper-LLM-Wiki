@@ -5,20 +5,20 @@ title_cn: "解构互联网僵化：跨越 IPv4 与 IPv6 的路径损伤型中间
 authors: [Fahad Hilal, Taha Albakour, Oliver Gasser, Kevin Vermeulen]
 year: 2026
 venue: "PAM 2026"
-doi: "unknown"
-url: "unknown"
+doi: "10.1007/978-3-032-18268-5_5"
+url: "https://doi.org/10.1007/978-3-032-18268-5_5"
 pdf: "00-inbox/PDFs/2026-PAM-Unpacking_Internet_Ossification__A_Large-Scale_Study_of_Path-Impairing_Middleboxes_Across_IPv4_and_IPv6.pdf"
 mineru_md: "02-parsed-markdown/2026-PAM-Unpacking_Internet_Ossification__A_Large-Scale_Study_of_Path-Impairing_Middleboxes_Across_IPv4_and_IPv6.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
+research_area: ["互联网路径测量"]
+task: ["识别与比较 IPv4 和 IPv6 路径中的中间设备行为"]
+method: ["大规模路径测量与协议族对照"]
 dataset: [Tranco Top 1M, Routeviews, CAIDA AS Classification, RIPE Atlas]
 code: "unknown"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Unpacking Internet Ossification: A Large-Scale Study of Path-Impairing Middleboxes Across IPv4 and IPv6
@@ -39,6 +39,7 @@ updated: "2026-09-19"
 | 是否开源 | 解析稿未提及代码/数据发布；文中称将部署并定期刷新一个供运营商查询的 web 服务，但其 URL 在解析稿中被截断（"The service is available at:" 之后为空）→ code: unknown |
 | PDF | 00-inbox/PDFs/2026-PAM-Unpacking_Internet_Ossification__A_Large-Scale_Study_of_Path-Impairing_Middleboxes_Across_IPv4_and_IPv6.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-PAM-Unpacking_Internet_Ossification__A_Large-Scale_Study_of_Path-Impairing_Middleboxes_Across_IPv4_and_IPv6.md |
+| DOI | [10.1007/978-3-032-18268-5_5](https://doi.org/10.1007/978-3-032-18268-5_5) |
 
 > 注：解析稿中未见论文自身 DOI/URL（文末参考文献之外的标识缺失），故 `doi`/`url` 填 `unknown`。
 

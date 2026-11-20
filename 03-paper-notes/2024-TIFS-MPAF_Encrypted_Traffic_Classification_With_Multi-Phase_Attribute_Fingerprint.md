@@ -7,7 +7,7 @@ year: 2024
 venue: "IEEE TIFS 2024"
 doi: "10.1109/TIFS.2024.3428839"
 url: "unknown"
-pdf: "unknown"
+pdf: "00-inbox/PDFs/2024-TIFS-MPAF_Encrypted_Traffic_Classification_With_Multi-Phase_Attribute_Fingerprint.pdf"
 mineru_md: "02-parsed-markdown/2024-TIFS-MPAF_Encrypted_Traffic_Classification_With_Multi-Phase_Attribute_Fingerprint.md"
 status: processed
 reading_level: L2

@@ -2,7 +2,7 @@
 
 [中文说明](./README.zh-CN.md)
 
-An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 355 structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, KDD, etc.), covering 2008--2026.
+An Obsidian-based knowledge base for systematic literature review in **network traffic classification**, **encrypted traffic analysis**, and **traffic foundation models**. Contains 355 structured paper notes from top-tier venues (CCS, S&P, USENIX, NDSS, SIGCOMM, INFOCOM, AAAI, NeurIPS, TIFS, TSC, WWW, KDD, etc.), with bibliographic years from 2008 to 2027.
 
 ---
 
@@ -10,12 +10,12 @@ An Obsidian-based knowledge base for systematic literature review in **network t
 
 - **355 structured paper notes** with bilingual (Chinese/English) frontmatter, methodology analysis, and evidence tracking
 - **142 deep-analyzed papers** (L3/L4 level) with formula derivations, ablation studies, and cross-paper connections
-- **43 knowledge pages**: 12 concepts, 10 methods, 9 tasks, 5 surveys, 5 comparison tables, 2 claim indexes
+- **44 knowledge pages**: 13 concepts, 10 methods, 9 tasks, 5 surveys, 5 comparison tables, 2 active evidence indexes
 - **7 active research fronts** tracking convergent/divergent research questions with evidence chains and Auto Research guidance
 - **Cross-paper innovation workflow** linking evidence, assumptions, gaps, counterevidence, testable hypotheses, and research prioritization
-- **Consensus weight system** with venue-tier × time-decay × citation-impact scoring for all claims
-- **99 public method or data artifacts**
-- **Bibliography**: 372 BibTeX entries and 355 structured JSON records, including the 13 new papers and 17 BibTeX-only entries
+- **Evidence review** records sources, study conditions, author-reported results, and signed cross-paper relations
+- **101 public method or data artifacts**
+- **Bibliography**: 373 BibTeX entries and 356 structured JSON records. All 355 registered papers have a linked citation record
 - **Research map** linking papers by topic, method, and venue
 - **Personal research tracking** with isolated paper notes and research trajectory page (strictly separated from main KB)
 - **Key figure gallery** with 559 figures archived locally and selected previews in the public repo (see `10-outputs/key-figures/`)
@@ -29,7 +29,7 @@ Traffic_Papers/
 ├── 01-mineru-output/       # MinerU raw API output (gitignored, regenerable)
 ├── 02-parsed-markdown/     # MinerU text for archived sources
 ├── 03-paper-notes/         # Structured paper notes (355 active records) ★
-├── 04-concepts/            # Concept pages (12 files) ★
+├── 04-concepts/            # Concept pages (13 files) ★
 ├── 05-methods/             # Method pages (10 files) ★
 ├── 06-tasks/               # Task pages (9 files) ★
 ├── 07-surveys/             # Survey pages (5 files) ★
@@ -43,7 +43,7 @@ Traffic_Papers/
 │   └── my-paper-registry.md   # Personal paper registry
 ├── 12-research-fronts/     # Research front tracking (7 fronts + index + template) ★
 ├── 00-dashboard/           # Reading queue, research map, open questions
-├── bibliography.json       # Structured BibTeX metadata (355 records)
+├── bibliography.json       # Structured citation metadata (356 records)
 ├── bibliography.bib        # LaTeX-ready BibTeX file (ready to copy)
 ├── scripts/                # MinerU batch parsing + bibliography generation
 └── templates/              # Note templates
@@ -108,7 +108,7 @@ This is an **Obsidian vault**. To use:
 - **PDF Parsing**: [MinerU](https://github.com/opendatalab/MinerU) API for converting PDFs to structured Markdown
 - **Note Generation**: Claude Code (AI-assisted structured note generation)
 - **Knowledge Management**: Obsidian with Dataview plugin
-- **Bibliography**: `bibliography.bib` contains 372 entries, and `bibliography.json` contains 355 structured records. Existing BibTeX-only entries are preserved during incremental updates.
+- **Bibliography**: `bibliography.bib` contains 373 entries, and `bibliography.json` contains 356 structured records. Existing BibTeX-only entries are preserved during incremental updates.
 - **Automated Workflow**: One-command paper ingestion pipeline (dedup → parse → note → knowledge layer update → bibliography → README/AGENTS sync)
 - **Dedup Method**: Five-round joint matching (filename + title + abstract + DOI + author/year/venue)
 
@@ -120,11 +120,16 @@ When a new paper PDF is added to the vault, the system automatically:
 2. Parses PDF via MinerU API (pauses to request API token if `MINERU_API_TOKEN` not set)
 3. Extracts key framework/architecture figures via `extract_key_figures.py`
 4. Generates a structured paper note with bilingual frontmaterial
-5. Updates all related knowledge pages (concepts, methods, tasks, surveys, comparisons, claims)
-6. Updates research front evidence chains if the paper is relevant to an active front
+5. Adds source-grounded facts and links to the relevant concepts, methods, tasks, surveys and comparisons
+6. Registers relevant evidence as pending review and links it to the appropriate propositions and research fronts
 7. Updates global indexes (paper-registry, reading-queue, dashboard)
 8. Updates `bibliography.json` and regenerates `bibliography.bib`
 9. Syncs README.md and AGENTS.md statistics
+
+The [proposition index](09-claims/proposition-index.md) is the entry point for signed claims and their scope. The [seven-front review](09-claims/front-review-2026-11-18.md) records the signed findings and evidence gaps from the source review. The [migration map](09-claims/claim-migration-map.md) links earlier assessments and evidence records to their dispositions. Venue, year and citation information remain bibliographic metadata.
+
+To regenerate the current collection counts, run `python3 scripts/research_capability_audit.py stats`. The counts use registered notes and their types.
+
 
 The public repository contains the knowledge pages and selected source material. Some source files and reports are available in the local vault.
 
@@ -147,7 +152,7 @@ This repository contains academic paper notes for research purposes. All paper c
 
 ## Highlighted academic talk · 2026-11-17
 
-[2026-COSINT-北邮时金桥](./03-paper-notes/2026-COSINT-北邮时金桥.md) covers DHOR low-base-rate detection and DHBCorr large-scale flow correlation. The local archive includes the original PDF and all 54 pages of summaries, rendered slides, and extracted text. Marked `academic-talk`, `L3`, `high relevance`, and `report-only`. The collection now includes 342 standard paper notes and 1 academic talk.
+[2026-COSINT-北邮时金桥](./03-paper-notes/2026-COSINT-北邮时金桥.md) covers DHOR low-base-rate detection and DHBCorr large-scale flow correlation. The local archive includes the original PDF and all 54 pages of summaries, rendered slides, and extracted text. Marked `academic-talk`, `L3`, `high relevance`, and `report-only`. At the time of intake, the collection included 342 standard paper notes and 1 academic talk.
 
 
 ### 2026-11-18 literature intake

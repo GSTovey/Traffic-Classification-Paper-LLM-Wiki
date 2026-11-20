@@ -5,20 +5,20 @@ title_cn: "随机时隙与能量分散的时间跳变隐蔽通信"
 authors: [Kun Lu, Zhe Song, Shuai Wang, Tingting Li, Gaofeng Pan, Heng Liu, George Karagiannidis]
 year: 2026
 venue: "IEEE TIFS 2026"
-doi: "unknown"
-url: "unknown"
+doi: "10.1109/tifs.2026.3675458"
+url: "https://doi.org/10.1109/tifs.2026.3675458"
 pdf: "00-inbox/PDFs/2026-TIFS-Time-Hopping_Covert_Communication_With_Random_Slots_and_Dispersed_Energy.pdf"
 mineru_md: "02-parsed-markdown/2026-TIFS-Time-Hopping_Covert_Communication_With_Random_Slots_and_Dispersed_Energy.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["无线通信的可观察性"]
+task: ["评估时隙不确定性对信号可见性的影响"]
+method: ["概率模型与数值仿真"]
+dataset: ["作者数值仿真，无实测数据集"]
 code: unknown
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Time-Hopping Covert Communication With Random Slots and Dispersed Energy
@@ -41,6 +41,7 @@ updated: "2026-09-19"
 | 是否开源 | 解析稿未给出代码链接 → unknown |
 | PDF | 00-inbox/PDFs/2026-TIFS-Time-Hopping_Covert_Communication_With_Random_Slots_and_Dispersed_Energy.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-TIFS-Time-Hopping_Covert_Communication_With_Random_Slots_and_Dispersed_Energy.md |
+| DOI | [10.1109/tifs.2026.3675458](https://doi.org/10.1109/tifs.2026.3675458) |
 
 > ⚠️ MinerU 解析问题：全文 fi 连字丢失（"dificult"/"efort" 等）；部分公式编号标签被污染（如出现 `\tag{（}\tag{29}` 一类的半角/全角混排）；Fig. 3 的行为仿真伪代码在解析稿中只剩图注，算法步骤以正文 (1)–(4) 列表形式保留。
 

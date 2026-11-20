@@ -5,8 +5,8 @@ title_cn: "Surakav：生成逼真流量轨迹的强 Website Fingerprinting 防�
 authors: ["Jiajun Gong", "Wuqi Zhang", "Charles Zhang", "Tao Wang"]
 year: 2022
 venue: "IEEE S&P 2022"
-doi: unknown
-url: unknown
+doi: "10.1109/sp46214.2022.9833722"
+url: "https://doi.org/10.1109/sp46214.2022.9833722"
 pdf: "00-inbox/PDFs/2022-S&P-Surakav__Generating_Realistic_Traces_for_a_Strong_Website_Fingerprinting_Defense.pdf"
 mineru_md: "02-parsed-markdown/2022-S&P-Surakav__Generating_Realistic_Traces_for_a_Strong_Website_Fingerprinting_Defense.md"
 status: processed
@@ -20,7 +20,7 @@ relevance: high
 related_papers: ["2020-CCS-TrafficSliver-Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting", "2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning"]
 kb_read_only: true
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-20"
 ---
 
 # Surakav: Generating Realistic Traces for a Strong Website Fingerprinting Defense
@@ -41,6 +41,7 @@ updated: "2026-06-21"
 | 是否开源 | 是（GAN 训练代码 + WFDefProxy 实现代码） |
 | PDF | `00-inbox/PDFs/2022-S&P-Surakav__Generating_Realistic_Traces_for_a_Strong_Website_Fingerprinting_Defense.pdf` |
 | MinerU Markdown | `02-parsed-markdown/2022-S&P-Surakav__Generating_Realistic_Traces_for_a_Strong_Website_Fingerprinting_Defense.md` |
+| DOI | [10.1109/sp46214.2022.9833722](https://doi.org/10.1109/sp46214.2022.9833722) |
 
 ---
 
@@ -385,26 +386,26 @@ $$|b_c| = \begin{cases} \max(1, \perp), & |b_c^{real}| < \perp \\ |b_c^{real}|, 
 
 ### 9.2 相关方法
 
-- [[generative-adversarial-network]] — 核心技术基础，WGAN-div 变体
-- [[WGAN-div]] — 本文采用的 GAN 训练框架
-- [[burst-sequence-representation]] — 将 cell sequence 转换为 burst sequence 的表征方法
-- [[kernel-density-estimation]] — 用于建模 burst 间时间间隔分布
+- generative-adversarial-network — 核心技术基础，WGAN-div 变体
+- WGAN-div — 本文采用的 GAN 训练框架
+- burst-sequence-representation — 将 cell sequence 转换为 burst sequence 的表征方法
+- kernel-density-estimation — 用于建模 burst 间时间间隔分布
 
 ### 9.3 相关任务
 
 - [[website-fingerprinting-defense]] — 主要任务
-- [[traffic-anonymization]] — 流量匿名化
-- [[tor-privacy-protection]] — Tor 网络隐私保护
+- traffic-anonymization — 流量匿名化
+- tor-privacy-protection — Tor 网络隐私保护
 
 ### 9.4 可更新的综述页面
 
 - [[survey-website-fingerprinting]] — 可加入 Surakav 作为 GAN 防御代表
-- [[survey-wf-defense]] — 防御方法综述可引用本文
+- [[07-surveys/survey-website-fingerprinting|survey-wf-defense]] — 防御方法综述可引用本文
 
 ### 9.5 可加入的对比表
 
-- [[comparison-wf-defenses]] — 可加入 Surakav vs FRONT/Tamaraw/WTF-PAD 的对比
-- [[comparison-defense-overhead]] — 可对比各防御方法的数据和时间开销
+- comparison-wf-defenses — 可加入 Surakav vs FRONT/Tamaraw/WTF-PAD 的对比
+- comparison-defense-overhead — 可对比各防御方法的数据和时间开销
 
 ---
 

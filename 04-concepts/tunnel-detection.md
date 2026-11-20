@@ -136,6 +136,8 @@ updated: "2026-10-21"
 
 ## 7. 当前共识
 
+> ToP 的固定阈值、误报分母、观测单位与适用条件见 [[tor-over-proxy-low-fpr-detection#当前研究认识]]。下列保留原有综合。
+
 1. **加密不等于不可见**：payload 加密后，packet size、IAT、direction 等 IP 层统计特征仍然泄露大量信息，这是所有隧道检测方法的基础。
 2. **多维度特征优于单维度**：MTBD 的实验明确表明，Flow/Host/Packet 三维投票决策显著优于任何单一维度（F1 从约 83%-91% 提升至 99%）。
 3. **短期特征对匿名流量更鲁棒**：AN-Net 的实验表明，短期连续包更可能来自同一流，以此为基础的表征学习能有效抵抗 irrelevant packet noise。

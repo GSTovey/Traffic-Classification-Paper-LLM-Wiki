@@ -5,8 +5,8 @@ title_cn: "基于视觉流表示的轻量级加密流量分类深度学习框架
 authors: ["Zengyu Cai", "Banghao Liang", "Jianwei Zhang", "Liang Zhu", "Ying Hu"]
 year: 2026
 venue: "CCPE"
-doi: "unknown"
-url: "unknown"
+doi: "10.1002/cpe.70679"
+url: "https://doi.org/10.1002/cpe.70679"
 pdf: "00-inbox/PDFs/2026-CCPE-A_Lightweight_Deep_Learning_Framework_for_Encrypted_Traffic_Classification_via_Visual_Flow_Representation.pdf"
 mineru_md: "02-parsed-markdown/2026-CCPE-A_Lightweight_Deep_Learning_Framework_for_Encrypted_Traffic_Classification_via_Visual_Flow_Representation.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["ISCXVPN2016", "ISCXTor2016", "USTC-TFC2016", "CICIoT2022"]
 code: "unknown"
 relevance: medium
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-20"
 ---
 
 ## §0 基础信息

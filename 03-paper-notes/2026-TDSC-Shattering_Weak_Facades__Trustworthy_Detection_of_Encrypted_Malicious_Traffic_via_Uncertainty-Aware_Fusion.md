@@ -7,7 +7,7 @@ year: 2026
 venue: "IEEE TDSC 2026"
 doi: "10.1109/tdsc.2026.3667905"
 url: unknown
-pdf: "00-inbox/Aug_inbox/2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion.pdf"
+pdf: "00-inbox/PDFs/2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion.pdf"
 mineru_md: "02-parsed-markdown/2026-TDSC-Shattering_Weak_Facades__Trustworthy_Detection_of_Encrypted_Malicious_Traffic_via_Uncertainty-Aware_Fusion.md"
 status: processed
 reading_level: L2

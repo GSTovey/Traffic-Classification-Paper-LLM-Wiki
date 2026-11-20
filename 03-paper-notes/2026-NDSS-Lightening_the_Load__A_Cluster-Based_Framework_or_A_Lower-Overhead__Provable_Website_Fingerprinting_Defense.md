@@ -7,7 +7,7 @@ year: 2026
 venue: "NDSS 2026"
 doi: "10.14722/ndss.2026.241760"
 url: "https://www.ndss-symposium.org/ndss2026/"
-pdf: ""
+pdf: "00-inbox/PDFs/2026-NDSS-Lightening_the_Load__A_Cluster-Based_Framework_or_A_Lower-Overhead__Provable_Website_Fingerprinting_Defense.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-Lightening_the_Load__A_Cluster-Based_Framework_or_A_Lower-Overhead__Provable_Website_Fingerprinting_Defense.md"
 status: processed
 reading_level: L3
@@ -89,12 +89,12 @@ updated: "2026-06-21"
 
 ### 3.2 相关方法
 
-- [[k-anonymity]] — 匿名集构造的核心隐私模型，每个匿名集包含至少 k 个不同流量模式
-- [[l-diversity]] — 确保匿名集内模式来自至少 l 个不同网页，防止标签同质化
-- [[CAST-clustering]] — 改进的 Cluster Affinity Search Technique，用于网页内模式检测
-- [[ECDIRE]] — 早期时序分类框架，用于在安全时间点从全局参数切换到局部参数
-- [[Holmes]] — 空间-时间 CNN 编码器，用于早期网页级预测
-- [[k-fingerprinting]] — 轻量随机森林分类器，用于细粒度模式预测
+- k-anonymity — 匿名集构造的核心隐私模型，每个匿名集包含至少 k 个不同流量模式
+- l-diversity — 确保匿名集内模式来自至少 l 个不同网页，防止标签同质化
+- CAST-clustering — 改进的 Cluster Affinity Search Technique，用于网页内模式检测
+- ECDIRE — 早期时序分类框架，用于在安全时间点从全局参数切换到局部参数
+- Holmes — 空间-时间 CNN 编码器，用于早期网页级预测
+- k-fingerprinting — 轻量随机森林分类器，用于细粒度模式预测
 
 ### 3.3 相关任务
 

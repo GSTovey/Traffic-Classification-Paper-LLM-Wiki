@@ -7,7 +7,7 @@ year: 2025
 venue: "IEEE TIFS 2025"
 doi: "10.1109/tifs.2025.3565994"
 url: unknown
-pdf: "00-inbox/Aug_inbox/2025-TIFS-WF-A2D_Enhancing_Privacy_With_Asymmetric_Adversarial_Defense_Against_Website_Fingerprinting.pdf"
+pdf: "00-inbox/PDFs/2025-TIFS-WF-A2D_Enhancing_Privacy_With_Asymmetric_Adversarial_Defense_Against_Website_Fingerprinting.pdf"
 mineru_md: "02-parsed-markdown/2025-TIFS-WF-A2D_Enhancing_Privacy_With_Asymmetric_Adversarial_Defense_Against_Website_Fingerprinting.md"
 status: processed
 reading_level: L3

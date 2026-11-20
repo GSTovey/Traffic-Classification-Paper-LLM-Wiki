@@ -12,7 +12,7 @@ year: 2024
 venue: "IEEE TIFS 2024"
 doi: "10.1109/TIFS.2024.3520014"
 url: "https://ieeexplore.ieee.org/document/10791048"
-pdf: ""
+pdf: "00-inbox/PDFs/2024-TIFS-Multi-Level_Resource-Coherented_Graph_Learning_for_Website_Fingerprinting_Attacks.pdf"
 mineru_md: "02-parsed-markdown/2024-TIFS-Multi-Level_Resource-Coherented_Graph_Learning_for_Website_Fingerprinting_Attacks.md"
 status: processed
 reading_level: L2

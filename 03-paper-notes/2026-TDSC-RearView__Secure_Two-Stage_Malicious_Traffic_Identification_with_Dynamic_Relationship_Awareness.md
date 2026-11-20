@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "RearView: Secure Two-Stage Malicious Traffic Identification with Dynamic Relationship Awareness"
-title_cn: "unknown"
+title_cn: "RearView：基于动态关系感知的两阶段恶意流量识别"
 authors: ["Peng Fang", "Ziming Zhao", "Ziqi Yang", "Yixin Jiang", "Wenqian Xu", "Zhihong Liang", "Fan Zhang"]
 year: 2026
 venue: "TDSC"
@@ -18,7 +18,7 @@ dataset: ["UNSW-NB15, CrossAttack"]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # RearView: Secure Two-Stage Malicious Traffic Identification with Dynamic Relationship Awareness

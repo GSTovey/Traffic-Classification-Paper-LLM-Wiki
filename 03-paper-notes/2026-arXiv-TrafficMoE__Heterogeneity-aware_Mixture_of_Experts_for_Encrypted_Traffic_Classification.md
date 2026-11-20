@@ -5,8 +5,8 @@ title_cn: "TrafficMoE：异质性感知的混合专家加密流量分类框架"
 authors: [Qing He, Xiaowei Fu, Lei Zhang]
 year: 2026
 venue: "arXiv"
-doi: "unknown"
-url: "https://arxiv.org/abs/2605"
+doi: "10.48550/arXiv.2603.29520"
+url: "https://arxiv.org/abs/2603.29520"
 pdf: "00-inbox/PDFs/2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: [CSTNET-TLS1.3, ISCX-Tor2016, CIC-IoT2022, USTC-TFC2016, ISCX-VPN-App, 
 code: "https://github.com/Posuly/TrafficMoE"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-10"
+updated: "2026-11-20"
 ---
 
 # 2026-arXiv TrafficMoE

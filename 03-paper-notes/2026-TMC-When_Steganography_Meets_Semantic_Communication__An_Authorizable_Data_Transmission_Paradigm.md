@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-TMC-When_Steganography_Meets_Semantic_Communication__An
 mineru_md: "02-parsed-markdown/2026-TMC-When_Steganography_Meets_Semantic_Communication__An_Authorizable_Data_Transmission_Paradigm.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
+research_area: ["语义通信安全"]
+task: ["评估语义传输中的授权与泄露风险"]
 method: ["convolutional-network"]
 dataset: ["Tiny-ImageNet", "DIV2K"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # When Steganography Meets Semantic Communication: An Authorizable Data Transmission Paradigm

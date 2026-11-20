@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "Tracking the Stray Sheep: Understanding DNS Response Manipulation in the Wild"
-title_cn: ""
-authors: []
+title_cn: "野外 DNS 响应操纵的测量与归因"
+authors: ["Wenhao Wu", "Zhaohua Wang", "Zihan Li", "Qinxin Li", "Yiming Xia", "Chuan Gao", "Guangxing Zhang", "Zhenyu Li"]
 year: 2026
 venue: WWW
-doi: unknown
-url: unknown
+doi: "10.1145/3774904.3792405"
+url: "https://doi.org/10.1145/3774904.3792405"
 pdf: "00-inbox/PDFs/2026-WWW-Tracking_the_Stray_Sheep__Understanding_DNS_Response_Manipulation_in_the_Wild.pdf"
 mineru_md: "02-parsed-markdown/2026-WWW-Tracking_the_Stray_Sheep__Understanding_DNS_Response_Manipulation_in_the_Wild.md"
 status: deep-analyzed
 reading_level: L3
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["DNS 网络测量"]
+task: ["测量 DNS 响应污染与篡改"]
+method: ["跨视点测量与响应一致性比较"]
+dataset: ["作者的 DNS 测量数据"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # Tracking the Stray Sheep: Understanding DNS Response Manipulation in the Wild
@@ -31,54 +31,37 @@ updated: "2026-10-10"
 | 会议/期刊 | WWW |
 | PDF | [[2026-WWW-Tracking_the_Stray_Sheep__Understanding_DNS_Response_Manipulation_in_the_Wild.pdf]] |
 | MinerU Markdown | [[2026-WWW-Tracking_the_Stray_Sheep__Understanding_DNS_Response_Manipulation_in_the_Wild.md]] |
+| 作者 | Wenhao Wu, Zhaohua Wang, Zihan Li, Qinxin Li, Yiming Xia, Chuan Gao, Guangxing Zhang, Zhenyu Li |
+| DOI | [10.1145/3774904.3792405](https://doi.org/10.1145/3774904.3792405) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+论文在多样的 DNS 解析环境中研究如何区别响应操纵与正常解析变化。
 
 ## 2. 摘要原文
 The Domain Name System (DNS) plays a crucial role in modern web applications; however, manipulations such as hijacking, tampering, and censorship can disrupt domain resolution, posing significant privacy and security risks. While such manipulations are prevalent across global DNS infrastructures, their scope and mechanisms remain poorly understood. Existing studies focus on country-level censorship or rely on authoritative data and passive trafic from selected domains, which prevents a comprehensive understanding. Moreover, the dynamic nature of modern DNS resolution, in which a single domain may resolve to thousands of edge servers, further complicates the detection of manipulated responses. In this work, we propose a novel approach for measuring DNS manipulations based on resolution path analysis. Our method leverages CNAME chains and attributes of intermediate nodes in the DNS resolution process to link dynamic resolution results, enabling accurate detection of manipulation in highly dynamic DNS environments. We conduct large-scale measurements for 2,283 popular domains across global open DNS infrastructures. Measurement re sults reveal critical insights into DNS manipulation, uncovering the strategies and preferences of malicious manipulation operators and demonstrating how specific domains are exploited. <sup>∗</sup>Corresponding author: Zhenyu Li. CCS Concepts • Networks → Network measurement.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+比较不同解析条件下可观察的响应，记录可辨别的异常与归因边界。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：作者的 DNS 测量数据。
+- 作者报告：文章用测量证据描述 DNS 操纵的范围与可能机制。详细规模和类型以本页 L3 原文复核区的表和时间窗为准。
+- 原文位置：[[02-parsed-markdown/2026-WWW-Tracking_the_Stray_Sheep__Understanding_DNS_Response_Manipulation_in_the_Wild|原文解析稿]] · 摘要、引言与本页 L3 分析。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+动态 CDN 和同一域名的多个合法地址会影响对照，观察异常与确定干预者需要分开。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
-- MinerU：已完成；解析质量需人工抽查。
-- Bib 元数据：待官方 API/论文首页核验。
 
-
-## 深度分析（自动证据提取，需人工复核）
-
-### 研究问题与证据
-- 主题线索：anomaly, dns, tor, covert。
-- 摘要证据：The Domain Name System (DNS) plays a crucial role in modern web applications; however, manipulations such as hijacking, tampering, and censorship can disrupt domain resolution, posing significant privacy and security risks. While such manipulations are prevalent across global DNS infrastructures, their scope and mechanisms remain poorly understood. Existing studies focus on country-level censorship or rely on authoritative data and passive trafic from selected domains, which prevents a comprehensive understanding. Moreover, the dynamic nature of modern DNS resolution, in which a single domain may resolve to thousands of edge servers, further complicates the detection of manipulated responses. In this work, we propose a novel approach for measuring DNS manipulations based on resolution path analysis. Our method leverages CNAME chains and attributes of intermediate nodes in the DNS resolution process to link dynamic resolution results, enabling accurate detection of manipulation in highly dynamic DNS environments. We conduct large-scale measurements for 2,283 popular domains across global open DNS infrastructures. Measurement re sults reveal critical insights into DNS manipulation, uncovering the strategies and preferences of malicious manipulation operators and demonstrating how specific domains are exploited. <sup>∗</sup>Corresponding author: Zhenyu Li. CCS Concepts • Networks → Network measurement.
-
-### 方法机制
-正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
-
-### 实验与结果
-实验段落未稳定提取；不补造数据集、baseline、指标或数值。
-
-### 局限与复现
-论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
-
-### 开源与证据等级
-- 代码线索：未检测到明确 GitHub 线索。
-- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-WWW-Tracking_the_Stray_Sheep__Understanding_DNS_Response_Manipulation_in_the_Wild|原文解析稿]] · 摘要、引言与本页 L3 分析。可引用的结论须保留所列实验条件。
 
 ## 深度分析（2026-09-29）
 
@@ -142,3 +125,62 @@ The Domain Name System (DNS) plays a crucial role in modern web applications; ho
 
 - 本笔记前部的自动入库、摘要级或待核验段落是入库时的历史快照，按规范保留以避免删除原始记录。
 - 本次新增的深度分析段落、证据记录和局限说明优先；历史段落中的“待深读/待核验”状态不代表当前分析尚未完成。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
+- MinerU：已完成；解析质量需人工抽查。
+- Bib 元数据：待官方 API/论文首页核验。
+
+
+
+## 深度分析（自动证据提取，需人工复核）
+
+### 研究问题与证据
+- 主题线索：anomaly, dns, tor, covert。
+- 摘要证据：The Domain Name System (DNS) plays a crucial role in modern web applications; however, manipulations such as hijacking, tampering, and censorship can disrupt domain resolution, posing significant privacy and security risks. While such manipulations are prevalent across global DNS infrastructures, their scope and mechanisms remain poorly understood. Existing studies focus on country-level censorship or rely on authoritative data and passive trafic from selected domains, which prevents a comprehensive understanding. Moreover, the dynamic nature of modern DNS resolution, in which a single domain may resolve to thousands of edge servers, further complicates the detection of manipulated responses. In this work, we propose a novel approach for measuring DNS manipulations based on resolution path analysis. Our method leverages CNAME chains and attributes of intermediate nodes in the DNS resolution process to link dynamic resolution results, enabling accurate detection of manipulation in highly dynamic DNS environments. We conduct large-scale measurements for 2,283 popular domains across global open DNS infrastructures. Measurement re sults reveal critical insights into DNS manipulation, uncovering the strategies and preferences of malicious manipulation operators and demonstrating how specific domains are exploited. <sup>∗</sup>Corresponding author: Zhenyu Li. CCS Concepts • Networks → Network measurement.
+
+### 方法机制
+正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
+
+### 实验与结果
+实验段落未稳定提取；不补造数据集、baseline、指标或数值。
+
+### 局限与复现
+论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
+
+### 开源与证据等级
+- 代码线索：未检测到明确 GitHub 线索。
+- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+
+```

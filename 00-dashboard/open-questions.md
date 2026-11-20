@@ -1,5 +1,7 @@
 # Open Questions
 
+当前证据缺口从 [[proposition-index]] 与 [[12-research-fronts/index|研究前沿]] 进入。本页下方原问题列表保留为历史问题梳理。
+
 本页面从 [[claims-index]] 和 [[contradictions]] 中提炼开放研究问题。
 
 ---

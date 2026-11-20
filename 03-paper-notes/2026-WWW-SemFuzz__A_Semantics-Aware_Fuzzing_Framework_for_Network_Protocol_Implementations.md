@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "SemFuzz: A Semantics-Aware Fuzzing Framework for Network Protocol Implementations"
-title_cn: ""
-authors: []
+title_cn: "SemFuzz：网络协议实现的语义测试框架"
+authors: ["Yanbang Sun", "Quan Luo", "Yuelin Wang", "Qian Chen", "Benjin Liu", "Ruiqi Chen", "Qing Huang", "Xiaohong Li", "Junjie Wang"]
 year: 2026
 venue: WWW
-doi: unknown
-url: unknown
+doi: "10.1145/3774904.3792541"
+url: "https://doi.org/10.1145/3774904.3792541"
 pdf: "00-inbox/PDFs/2026-WWW-SemFuzz__A_Semantics-Aware_Fuzzing_Framework_for_Network_Protocol_Implementations.pdf"
 mineru_md: "02-parsed-markdown/2026-WWW-SemFuzz__A_Semantics-Aware_Fuzzing_Framework_for_Network_Protocol_Implementations.md"
 status: deep-analyzed
 reading_level: L3
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["协议实现安全"]
+task: ["协议一致性与异常行为检测"]
+method: ["RFC 规则核对与响应差异评估"]
+dataset: ["七种协议实现的测试对象"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # SemFuzz: A Semantics-Aware Fuzzing Framework for Network Protocol Implementations
@@ -31,55 +31,37 @@ updated: "2026-10-10"
 | 会议/期刊 | WWW |
 | PDF | [[2026-WWW-SemFuzz__A_Semantics-Aware_Fuzzing_Framework_for_Network_Protocol_Implementations.pdf]] |
 | MinerU Markdown | [[2026-WWW-SemFuzz__A_Semantics-Aware_Fuzzing_Framework_for_Network_Protocol_Implementations.md]] |
+| 作者 | Yanbang Sun, Quan Luo, Yuelin Wang, Qian Chen, Benjin Liu, Ruiqi Chen, Qing Huang, Xiaohong Li, Junjie Wang |
+| DOI | [10.1145/3774904.3792541](https://doi.org/10.1145/3774904.3792541) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+论文评估结构化规范如何辅助协议实现的防御性测试。
 
 ## 2. 摘要原文
 Network protocols are the foundation of modern communication, yet their implementations often contain semantic vulnerabilities stemming from inadequate understanding of specification semantics. Existing gray-box and black-box testing approaches lack semantic modeling of protocols, making it dificult to precisely express testing intent and cover boundary conditions. Moreover, they typically rely on coarse-grained oracles such as crashes, which are inadequate for identifying deep semantic vulnerabilities. To address these limitations, we present a semantics-aware fuzzing framework, SemFuzz. The framework leverages large language models to extract structured semantic rules from RFC documents and generates test cases that intentionally violate these rules to encode specific testing intents. It then detects deep semantic vulnerabilities by comparing the observed responses with the expected ones. Evalu ation on seven widely deployed protocol implementations shows that SemFuzz identified sixteen potential vulnerabilities, ten of which have been confirmed. Among the confirmed vulnerabilities, five were previously unknown and four have been assigned CVEs. These results demonstrate the efectiveness of SemFuzz in detecting semantic vulnerabilities.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+将 RFC 语义约束用于预期行为核对，根据测试响应与规范的一致性识别疑似缺陷。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：七种协议实现的测试对象。
+- 作者报告：摘要报告七种实现上共 16 项潜在问题，其中 10 项确认、5 项此前未知、4 项获得 CVE。
+- 原文位置：[[02-parsed-markdown/2026-WWW-SemFuzz__A_Semantics-Aware_Fuzzing_Framework_for_Network_Protocol_Implementations|原文解析稿]] · 摘要、作者评估及本页 L3 分析。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+潜在、确认与获得编号是不同口径。测试覆盖取决于所选实现和规范规则。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
-- MinerU：已完成；解析质量需人工抽查。
-- Bib 元数据：待官方 API/论文首页核验。
 
-
-## 深度分析（自动证据提取，需人工复核）
-
-### 研究问题与证据
-- 主题线索：anomaly, dns, tor。
-- 摘要证据：Network protocols are the foundation of modern communication, yet their implementations often contain semantic vulnerabilities stemming from inadequate understanding of specification semantics. Existing gray-box and black-box testing approaches lack semantic modeling of protocols, making it dificult to precisely express testing intent and cover boundary conditions. Moreover, they typically rely on coarse-grained oracles such as crashes, which are inadequate for identifying deep semantic vulnerabilities. To address these limitations, we present a semantics-aware fuzzing framework, SemFuzz. The framework leverages large language models to extract structured semantic rules from RFC documents and generates test cases that intentionally violate these rules to encode specific testing intents. It then detects deep semantic vulnerabilities by comparing the observed responses with the expected ones. Evalu ation on seven widely deployed protocol implementations shows that SemFuzz identified sixteen potential vulnerabilities, ten of which have been confirmed. Among the confirmed vulnerabilities, five were previously unknown and four have been assigned CVEs. These results demonstrate the efectiveness of SemFuzz in detecting semantic vulnerabilities.
-
-### 方法机制
-正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
-
-### 实验与结果
-实验段落未稳定提取；不补造数据集、baseline、指标或数值。
-
-### 局限与复现
-论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
-
-### 开源与证据等级
-- 代码线索：检测到 GitHub 线索。
-- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
-
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-WWW-SemFuzz__A_Semantics-Aware_Fuzzing_Framework_for_Network_Protocol_Implementations|原文解析稿]] · 摘要、作者评估及本页 L3 分析。可引用的结论须保留所列实验条件。
 
 ## 深度分析（并行深度分析更新 2026-09-29）
 
@@ -146,3 +128,63 @@ SemFuzz 的关键抽象是“从规范约束生成违反意图，再用规范行
 
 - 本笔记前部的自动入库、摘要级或待核验段落是入库时的历史快照，按规范保留以避免删除原始记录。
 - 本次新增的深度分析段落、证据记录和局限说明优先；历史段落中的“待深读/待核验”状态不代表当前分析尚未完成。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
+- MinerU：已完成；解析质量需人工抽查。
+- Bib 元数据：待官方 API/论文首页核验。
+
+
+
+## 深度分析（自动证据提取，需人工复核）
+
+### 研究问题与证据
+- 主题线索：anomaly, dns, tor。
+- 摘要证据：Network protocols are the foundation of modern communication, yet their implementations often contain semantic vulnerabilities stemming from inadequate understanding of specification semantics. Existing gray-box and black-box testing approaches lack semantic modeling of protocols, making it dificult to precisely express testing intent and cover boundary conditions. Moreover, they typically rely on coarse-grained oracles such as crashes, which are inadequate for identifying deep semantic vulnerabilities. To address these limitations, we present a semantics-aware fuzzing framework, SemFuzz. The framework leverages large language models to extract structured semantic rules from RFC documents and generates test cases that intentionally violate these rules to encode specific testing intents. It then detects deep semantic vulnerabilities by comparing the observed responses with the expected ones. Evalu ation on seven widely deployed protocol implementations shows that SemFuzz identified sixteen potential vulnerabilities, ten of which have been confirmed. Among the confirmed vulnerabilities, five were previously unknown and four have been assigned CVEs. These results demonstrate the efectiveness of SemFuzz in detecting semantic vulnerabilities.
+
+### 方法机制
+正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
+
+### 实验与结果
+实验段落未稳定提取；不补造数据集、baseline、指标或数值。
+
+### 局限与复现
+论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
+
+### 开源与证据等级
+- 代码线索：检测到 GitHub 线索。
+- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+
+
+```

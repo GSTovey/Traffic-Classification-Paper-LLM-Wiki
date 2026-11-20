@@ -7,7 +7,7 @@ year: 2026
 venue: "NDSS 2026"
 doi: "10.14722/ndss.2026.242086"
 url: unknown
-pdf: "00-inbox/Aug_inbox/2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection.pdf"
+pdf: "00-inbox/PDFs/2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-Beyond_RTT__An_Adversarially_Robust_Two-Tiered_Approach_for_Residential_Proxy_Detection.md"
 status: deep-analyzed
 reading_level: L3

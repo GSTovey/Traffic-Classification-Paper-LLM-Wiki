@@ -1,64 +1,114 @@
 ---
 type: paper
-title_original: "Quantifying the Privacy Implications of High-Fidelity Synthetic Network Trafic"
-title_cn: ""
-authors: []
+title_original: "Quantifying the Privacy Implications of High-Fidelity Synthetic Network Traffic"
+title_cn: "高保真合成网络流量的数据隐私风险评估"
+authors: ["Van Tran", "Shinan Liu", "Tian Li", "Nick Feamster"]
 year: 2026
 venue: IMC
-doi: unknown
-url: unknown
+doi: "10.1145/3777912.3839833"
+url: "https://doi.org/10.1145/3777912.3839833"
 pdf: "00-inbox/PDFs/2026-IMC-Quantifying_the_Privacy_Implications_of_High-Fidelity_Synthetic_Network_Traffic.pdf"
 mineru_md: "02-parsed-markdown/2026-IMC-Quantifying_the_Privacy_Implications_of_High-Fidelity_Synthetic_Network_Traffic.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["合成流量隐私"]
+task: ["评估成员和网络标识泄露"]
+method: ["隐私指标对比与生成模型审计"]
+dataset: ["作者的合成流量及训练样本对照"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-09-29"
+updated: "2026-11-20"
 ---
 
-# Quantifying the Privacy Implications of High-Fidelity Synthetic Network Trafic
+# Quantifying the Privacy Implications of High-Fidelity Synthetic Network Traffic
 
 ## 0. 论文基础信息
 | 项目 | 内容 |
 |---|---|
-| 原文标题 | Quantifying the Privacy Implications of High-Fidelity Synthetic Network Trafic |
+| 原文标题 | Quantifying the Privacy Implications of High-Fidelity Synthetic Network Traffic |
 | 年份 | 2026 |
 | 会议/期刊 | IMC |
 | PDF | [[2026-IMC-Quantifying_the_Privacy_Implications_of_High-Fidelity_Synthetic_Network_Traffic.pdf]] |
 | MinerU Markdown | [[2026-IMC-Quantifying_the_Privacy_Implications_of_High-Fidelity_Synthetic_Network_Traffic.md]] |
+| 作者 | Van Tran, Shinan Liu, Tian Li, Nick Feamster |
+| DOI | [10.1145/3777912.3839833](https://doi.org/10.1145/3777912.3839833) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+合成流量存在训练样本与标识泄露风险，作者用跨模型、跨数据集指标量化差别。
 
 ## 2. 摘要原文
 To address the scarcity and privacy concerns of network trafic data, various generative models have been developed to produce synthetic trafic. However, synthetic trafic is not inherently privacy-preserving, and the extent to which it leaks sensitive information, and how to measure such leakage, remain largely unexplored. This challenge is further compounded by the diversity of model architectures, which shape how trafic is represented and synthesized. We introduce a comprehensive set of privacy metrics for synthetic network trafic, combining standard approaches like membership inference attacks (MIA) and data extraction attacks with network-specific identifiers and attributes. Using these metrics, we systematically evaluate the vulnerability of diferent representative generative models and examine the factors that influence attack success. Our results reveal substantial variability in privacy risks across models and datasets. MIA success ranges from 0% to 88%, and up to 100% of network identifiers can be recovered from generated trafic, highlighting serious privacy vulnerabilities. We further identify key factors that significantly afect attack outcomes, including dataset diversity and how well the generative model fits the training data. These findings provide actionable guidance for designing and deploying generative models that minimize privacy leakage, establishing a foundation for safer synthetic network trafic generation. We release our code and evaluation framework to support reproducibility and facilitate future research.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+评估成员推断、数据提取和网络标识保留，比较生成模型拟合与数据多样性。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：作者的合成流量及训练样本对照。
+- 作者报告：摘要中成员推断成功率在不同条件下为 0%–88%，最高观测到 100% 的网络标识可从生成流量恢复。这是各具体模型与数据集的结果。
+- 原文位置：[[02-parsed-markdown/2026-IMC-Quantifying_the_Privacy_Implications_of_High-Fidelity_Synthetic_Network_Traffic|原文解析稿]] · 摘要与作者隐私评估。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+模型、样本、标识定义和指标不同会改变泄露结果。隐私判断需针对实际拟发布生成数据验证。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
+
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-IMC-Quantifying_the_Privacy_Implications_of_High-Fidelity_Synthetic_Network_Traffic|原文解析稿]] · 摘要与作者隐私评估。可引用的结论须保留所列实验条件。
+
+## 深度分析（并行深度分析更新 2026-09-29）
+
+### 方法、实验与证据
+针对多流PCAP合成，采用成员推断、数据提取和网络特定隐私攻击，并评估缓解与下游效用；五类IoT/服务/攻击数据集，PCAP切分至最多2000包。模型能力差异导致攻击并非都适用，NetShare不泄露目的IP等结果需核表。
+
+### 横向联动与局限
+- 该论文可联动 [[method-comparison-table]]、[[narrative-pattern-comparison]] 与相关任务/方法页；当前仅追加证据，不改写既有结论。
+- 复现/引用前需核对 MinerU 表格、官方 PDF 与代码仓库；未从正文稳定提取的字段保留 unknown。
+- 证据等级：摘要与方法/实验章节可定位；跨论文比较不据此自动推断因果或部署保证。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
 - MinerU：已完成；解析质量需人工抽查。
 - Bib 元数据：待官方 API/论文首页核验。
+
 
 
 ## 深度分析（自动证据提取，需人工复核）
@@ -81,12 +131,4 @@ Privacy From Multiple Perspectives Our findings high light the need to evaluate 
 - 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
 
 
-## 深度分析（并行深度分析更新 2026-09-29）
-
-### 方法、实验与证据
-针对多流PCAP合成，采用成员推断、数据提取和网络特定隐私攻击，并评估缓解与下游效用；五类IoT/服务/攻击数据集，PCAP切分至最多2000包。模型能力差异导致攻击并非都适用，NetShare不泄露目的IP等结果需核表。
-
-### 横向联动与局限
-- 该论文可联动 [[method-comparison-table]]、[[narrative-pattern-comparison]] 与相关任务/方法页；当前仅追加证据，不改写既有结论。
-- 复现/引用前需核对 MinerU 表格、官方 PDF 与代码仓库；未从正文稳定提取的字段保留 unknown。
-- 证据等级：摘要与方法/实验章节可定位；跨论文比较不据此自动推断因果或部署保证。
+```

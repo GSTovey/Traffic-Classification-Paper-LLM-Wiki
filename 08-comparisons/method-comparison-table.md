@@ -7,6 +7,8 @@ updated: "2026-10-21"
 
 # Method Comparison Table
 
+> 结果按照各论文的任务、输入和划分解释。跨论文科学判断从 [[proposition-index]] 和 [[contradictions]] 进入。
+
 ## 方法对比表
 
 | 论文 | 年份 | 任务 | 方法类别 | 核心思路 | 优点 | 局限 | 适用场景 | 开源 | 代码地址 |
@@ -51,8 +53,8 @@ updated: "2026-10-21"
 | ASNet | 2025 | 加密流量分类 | WSA + CSS（无预训练） | 提出 Word Sense Aggregator (WSA) 使 BERT 适应流量数据（无额外参数）+ Category-constrained Semantic Separator (CSS) 在不同类别语义空间独立学习特征 | 无需预训练即可达到 SOTA（节省大量计算资源）；WSA 保持完整 word sense；CSS 显式分离类别语义空间；5 个数据集 7 个任务全面领先 | WSA 依赖 BERT 预训练权重；CSS 需要类别标签信息；对 BERT 架构有依赖性 | 加密流量分类的高效替代方案；计算资源受限场景；需可解释性的流量分析 | ✅ | [GitHub](https://github.com/pengwei-iie/ASNET) |
 | STAR | 2025 | 网站指纹（零样本） | 双编码器 + 对比学习 + Tip-Adapter | 将 WF 重构为零样本跨模态检索问题，设计双编码器架构学习加密流量 trace 与语义逻辑 profile 的联合嵌入空间，通过对比学习和结构感知增强训练，推理时用 cosine 相似度匹配 | 首次实现零样本 WF（无需目标网站流量数据）；1,600 个未见网站 top-1 准确率 87.9%、AUC 0.963；仅需 4 个标注样本即可通过 Tip-Adapter 提升至 top-5 98.8%；STAR-200K 数据集开源 | 依赖语义逻辑 profile 的质量；跨模态对齐假设在极端混淆下可能失效；推理时需构建大规模指纹库 | HTTPS/ECH 场景下的网站指纹攻击；零样本/少样本 WF 研究；语义泄漏隐私风险评估 | ✅ | [GitHub](https://github.com/2654400439/STAR-Website-Fingerprinting) |
 | BiasSeeker (Bias in the Shadows) | 2026 | 加密流量分类（鲁棒性分析） | AMI + 统计相关性 + 特征遮蔽 | 提出首个模型无关、数据驱动的半自动框架 BiasSeeker，通过互信息 (AMI) 统计相关性分析直接在原始二进制流量上检测数据集特定的 shortcut 特征，引入系统化分类和类别特定验证策略 | 首个模型无关的 shortcut 检测框架；跨 19 个公开数据集、3 个 NTC 任务验证；揭示预训练模型依赖 TCP Timestamp 等虚假相关性的问题；为数据集质量评估提供新视角 | 分析框架而非分类方法，不直接提升分类性能；shortcut 检测依赖统计阈值选择；对动态网络环境的适应性未验证 | 数据集质量诊断与 benchmark 可靠性评估；模型训练前的特征选择；加密流量分类鲁棒性研究 | N/A | N/A（分析方法，非分类模型） |
-| SequOcc | 2025 | 匿名流量分类 | 图像化 CNN + 预处理优化 | 提出 SequOcc 预处理方法（Stream Merging + Pixelization），通过流合并和像素化压缩将匿名流量转化为图像表示，实现预处理速度提升 54.55%，首次提出真实骨干网匿名流量数据集 | 首个真实骨干网匿名流量数据集；预处理效率显著提升（54.55%）；数据量减少 27.4%；满足实时部署需求 | 分类精度略有下降（F1 降低 0.7-1.24%）；压缩系数敏感；骨干网数据集不可公开；CNN 架构未创新 | 骨干网实时匿名流量检测；资源受限环境下的匿名流量分类 | ❌ | 暂未找到 |
-| Contrastive Pre-training (Flow Semantics) | 2026 | 加密流量分类 | 包级+流级对比预训练 | 提出双层对比预训练框架：包级预训练学习字节级语义，流级预训练学习包间关系语义；设计四种流量特定数据增强策略（包重排、包丢失、包分割、时间抖动）；提出后训练策略（FT-S）解决预训练-微调兼容性 | 全面超越 ET-BERT 等方法（性能提升 >50%）；双层语义学习更完整；流量特定数据增强有效；后训练策略解决兼容性问题 | 预训练数据量较小（~100MB）；流长截断可能丢失信息；代码未开源 | 加密流量分类、恶意流量检测、流量相似度分析 | ❌ | 暂未找到 |
+| HPETC | 2025 | 低基率匿名流量分类 | 在线筛选 + 离线细分 | 按任务区分背景假阳性和目标错分，并计算 B-precision | Table III 展示 r=1000 下精确率和召回的取舍 | 结果依赖背景、目标比例和评估口径 | Tor 类型及网站流量的分阶段评估 | 部分公开 | [作者部分备份](https://github.com/MHTTHM/HPETC) |
+| TACO | 2026 | 加密流量分类与协议适配 | 流语义增强 + 对比预训练 | 保持任务相关流语义，通过窗口设置适配下游任务 | Table 2 给出四数据集 F1，Table 4 报告未见协议适配 | Table 3 中通用增强有负向例子。开放世界评估依赖作者的类别与采样 | 有少量标签的分类和作者协议迁移设定 | 公开 | [代码与预训练权重入口](https://github.com/NSSL-SJTU/TaCo) |
 | FRONT (Zero-delay Lightweight Defenses) | 2020 | 网站指纹防御 | Front Obfuscation + Trace Gluing | 提出零延迟轻量级防御：front obfuscation 通过 Rayleigh 分布填充混淆流量前端，trace gluing 将多个访问合并为统一模式 | 零延迟开销；带宽开销低；SoK 2023 识别为 Pareto 前沿防御之一 | 对深度学习攻击鲁棒性有限；SoK 评估显示实际安全性低于预期 | Tor 流量保护；低延迟要求的 WF 防御 | ✅ | [GitHub](https://github.com/websitefingerprinting/WebsiteFingerprinting/) |
 | TrafficSliver | 2020 | 网站指纹防御 | 多路径流量分割 | 提出 batched-weighted-random 和 HTTP Range Option 两种流量分割策略，将 Tor 流量分散到多条路径传输 | 降低单条路径上的信息量；SoK 2023 识别为 Pareto 前沿防御之一 | 无法防御观察完整流量的本地攻击者；需多路径路由支持 | Tor 多路径流量保护 | ✅ | [GitHub](https://github.com/TrafficSliver) |
 | Surakav | 2022 | 网站指纹防御 | GAN 流量生成 | 利用 GAN (WGAN-div) 生成多样化的逼真 burst sequence，配合 Burst Adjustment 和 Random Response 机制实时调节数据包发送 | 55% 带宽+16% 时间开销将 DF TPR 降低 57%；比 Tamaraw 少 50% 开销 | GAN 训练需大量真实数据；对自适应攻击者鲁棒性需验证 | Tor 流量保护；低开销 WF 防御 | ✅ | [GitHub](https://github.com/websitefingerprinting/surakav-imp) |

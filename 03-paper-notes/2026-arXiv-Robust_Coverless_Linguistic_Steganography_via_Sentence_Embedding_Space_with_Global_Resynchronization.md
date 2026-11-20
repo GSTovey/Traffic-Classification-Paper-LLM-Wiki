@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-arXiv-Robust_Coverless_Linguistic_Steganography_via_Sen
 mineru_md: "02-parsed-markdown/2026-arXiv-Robust_Coverless_Linguistic_Steganography_via_Sentence_Embedding_Space_with_Global_Resynchronization.md"
 status: processed
 reading_level: L1
-research_area: []
-task: []
-method: []
+research_area: ["文本通信安全"]
+task: ["评估文本扰动下的隐写鲁棒性"]
+method: ["句级表示与扰动条件比较"]
 dataset: ["PersonaChat", "C4", "IMDB"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Robust Coverless Linguistic Steganography via Sentence Embedding Space with Global Resynchronization

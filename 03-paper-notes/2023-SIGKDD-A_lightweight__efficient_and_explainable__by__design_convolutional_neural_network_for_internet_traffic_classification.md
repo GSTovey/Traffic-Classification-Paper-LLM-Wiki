@@ -8,8 +8,8 @@ authors:
   - Dario Rossi
 year: 2023
 venue: "SIGKDD 2023"
-doi: ""
-url: ""
+doi: "10.1145/3580305.3599762"
+url: "https://doi.org/10.1145/3580305.3599762"
 pdf: "00-inbox/PDFs/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.pdf"
 mineru_md: "02-parsed-markdown/2023-SIGKDD-A_lightweight__efficient_and_explainable__by__design_convolutional_neural_network_for_internet_traffic_classification.md"
 status: processed
@@ -17,11 +17,11 @@ reading_level: L2
 research_area: ["流量分类", "可解释AI", "轻量级CNN"]
 task: ["流量分类"]
 method: ["CNN", "prototype-network", "ResNet"]
-dataset: []
+dataset: ["AppClassNet", "MIRAGE", "CESNET-TLS", "MNIST（非流量对照）"]
 code: "https://github.com/XAIseries/LEXNet"
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-29"
+updated: "2026-11-20"
 ---
 
 # 0. 元信息

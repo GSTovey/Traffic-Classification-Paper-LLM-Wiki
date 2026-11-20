@@ -5,8 +5,8 @@ title_cn: "非均匀性即一切：用 ECHO 实现高效及时的加密流量分
 authors: ["Shilo Daum", "Anat Bremler-Barr", "Tal Shapira", "David Hay"]
 year: 2025
 venue: "IEEE ICNP 2025"
-doi: "unknown"
-url: "unknown"
+doi: "10.1109/icnp65844.2025.11192379"
+url: "https://doi.org/10.1109/icnp65844.2025.11192379"
 pdf: "00-inbox/PDFs/2025-ICNP-Non-uniformity_is_All_You_Need__Efficient_and_Timely_Encrypted_Traffic_Classification_With_ECHO.pdf"
 mineru_md: "02-parsed-markdown/2025-ICNP-Non-uniformity_is_All_You_Need__Efficient_and_Timely_Encrypted_Traffic_Classification_With_ECHO.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["QUIC traffic dataset", "ISCX combined traffic dataset", "VPN services
 code: "unknown"
 relevance: high
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 internal_citation_count: 2
 citation_impact: 1.0
 composite_weight: 0.65
@@ -44,6 +44,7 @@ citation_count_verified: "2026-11-18"
 | 是否开源 | 论文承诺"代码与处理后数据集在双盲评审结束后公开"（§8.1 Reproducability），解析稿未给出仓库地址 |
 | PDF | 00-inbox/PDFs/2025-ICNP-Non-uniformity_is_All_You_Need__Efficient_and_Timely_Encrypted_Traffic_Classification_With_ECHO.pdf |
 | MinerU Markdown | 02-parsed-markdown/2025-ICNP-Non-uniformity_is_All_You_Need__Efficient_and_Timely_Encrypted_Traffic_Classification_With_ECHO.md |
+| DOI | [10.1109/icnp65844.2025.11192379](https://doi.org/10.1109/icnp65844.2025.11192379) |
 
 > ⚠️ MinerU 解析问题：(1) 标题中的连字丢失（"Efficient"→"Eficient"、"Traffic"→"Trafic"）；(2) §7.1.1 Explainability 的正文与其后的 §7.2 标题顺序错乱——"see that bin boundaries are correlated to the data distribution..." 一段属于 §7.1.1，却出现在 "## 7.2 Early Classification (EC) of Traffic" 之后；(3) §7.3 标题被拆成两行（"## 7.3 Early Classification with" + "## Hyperparameter Optimization (ECHO)"）；(4) 参考文献 [5] 为 "Anonymous. 2023. Private Communincation."，疑为占位/损坏条目；(5) 所有图表以图片形式存在，数值只能依赖正文与表内文字。
 

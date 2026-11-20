@@ -7,7 +7,7 @@ year: 2026
 venue: "IEEE TDSC 2026"
 doi: "10.1109/TDSC.2025.3605197"
 url: ""
-pdf: ""
+pdf: "00-inbox/PDFs/2026-TDSC-WFCAT__Augmenting_Website_Fingerprinting_With_Channel-Wise_Attention_on_Timing_Features.pdf"
 mineru_md: "02-parsed-markdown/2026-TDSC-WFCAT__Augmenting_Website_Fingerprinting_With_Channel-Wise_Attention_on_Timing_Features.md"
 status: processed
 reading_level: L2

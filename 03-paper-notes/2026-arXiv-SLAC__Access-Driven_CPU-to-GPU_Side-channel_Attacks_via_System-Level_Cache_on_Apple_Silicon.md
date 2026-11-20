@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-arXiv-SLAC__Access-Driven_CPU-to-GPU_Side-channel_Attac
 mineru_md: "02-parsed-markdown/2026-arXiv-SLAC__Access-Driven_CPU-to-GPU_Side-channel_Attacks_via_System-Level_Cache_on_Apple_Silicon.md"
 status: processed
 reading_level: L1
-research_area: []
-task: []
-method: []
+research_area: ["异构 SoC 安全"]
+task: ["评估 CPU 与 GPU 共享缓存的隐私风险"]
+method: ["受控缓存行为及可观察性测量"]
 dataset: ["Cora", "Citeseer", "Pubmed", "Computers", "Photo", "MedQuad", "FinancialQA"]
 code: "https://anonymous.4open.science/r/SLAC_CCS2026-7FB3"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # SLAC: Access-Driven CPU-to-GPU Side-channel Attacks via System-Level Cache on Apple Silicon

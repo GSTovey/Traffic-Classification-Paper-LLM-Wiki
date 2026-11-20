@@ -7,7 +7,7 @@ year: 2025
 venue: "ACM CCS 2025"
 doi: "10.1145/3719027.3765145"
 url: "https://doi.org/10.1145/3719027.3765145"
-pdf: ""
+pdf: "00-inbox/PDFs/2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities.pdf"
 mineru_md: "02-parsed-markdown/2025-CCS-Fingerprinting_Deep_Packet_Inspection_Devices_by_Their_Ambiguities.md"
 status: deep-analyzed
 reading_level: L3

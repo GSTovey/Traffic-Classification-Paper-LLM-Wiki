@@ -13,12 +13,12 @@ status: processed
 reading_level: L2
 research_area: ["anomaly-detection"]
 task: ["anomaly-detection"]
-method: []
+method: ["适配可编程交换机流水线的近似堆"]
 dataset: ["CAIDA (2018 IP trace)", "WebPage (fimi.ua.ac.be)"]
 code: "https://github.com/PipHeap/PipHeap"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # PipHeap: Approximate Heap in the Pipeline Empowering Network Measurement

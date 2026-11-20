@@ -7,7 +7,7 @@ year: 2025
 venue: "Computer Networks (Elsevier)"
 doi: "10.1016/j.comnet.2024.110975"
 url: "https://doi.org/10.1016/j.comnet.2024.110975"
-pdf: "00-inbox/Aug_inbox/2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneous_information_network.pdf"
+pdf: "00-inbox/PDFs/2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneous_information_network.pdf"
 mineru_md: "02-parsed-markdown/2025-JCN-Enhanced_detection_of_obfuscated_HTTPS_tunnel_traffic_using_heterogeneous_information_network.md"
 status: processed
 reading_level: L2
@@ -312,24 +312,24 @@ ACC、TPR、FPR、AUC（§5.3）。
 
 ### 9.1 相关概念
 
-- [[HTTPS 隧道]]
+- [[06-tasks/tunnel-detection|HTTPS 隧道]]
 
 ### 9.2 相关方法
 
-- [[异构信息网络]]
-- [[图注意力网络]]
+- 异构信息网络
+- [[05-methods/graph-neural-network|图注意力网络]]
 
 ### 9.3 相关任务
 
-- [[加密流量分析]]
+- [[04-concepts/encrypted-traffic-analysis|加密流量分析]]
 
 ### 9.4 可更新的综述页面
 
-- [[综述-加密流量分析]]
+- [[07-surveys/survey-encrypted-traffic-analysis|综述-加密流量分析]]
 
 ### 9.5 可加入的对比表
 
-- [[对比表-隧道检测方法]]
+- 对比表-隧道检测方法
 
 ## 10. 证据记录
 

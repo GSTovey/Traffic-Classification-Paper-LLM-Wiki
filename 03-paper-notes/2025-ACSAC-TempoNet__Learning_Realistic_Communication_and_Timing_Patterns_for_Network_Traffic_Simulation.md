@@ -5,8 +5,8 @@ title_cn: "TempoNet：学习真实的通信与时序模式用于网络流量仿�
 authors: [Kristen Moore, Diksha Goel, Cody James Christopher, Zhen Wang, Minjune Kim, Ahmed Ibrahim, Ahmad Mohsin, Seyit Camtepe]
 year: 2025
 venue: "ACSAC 2025"
-doi: unknown
-url: unknown
+doi: "10.1109/acsac67867.2025.00097"
+url: "https://doi.org/10.1109/acsac67867.2025.00097"
 pdf: "00-inbox/PDFs/2025-ACSAC-TempoNet__Learning_Realistic_Communication_and_Timing_Patterns_for_Network_Traffic_Simulation.pdf"
 mineru_md: "02-parsed-markdown/2025-ACSAC-TempoNet__Learning_Realistic_Communication_and_Timing_Patterns_for_Network_Traffic_Simulation.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: [LANL, CIDDS, IoT-TON, DC]
 code: unknown
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # TempoNet: Learning Realistic Communication and Timing Patterns for Network Traffic Simulation
@@ -39,7 +39,7 @@ updated: "2026-09-19"
 | 方法关键词 | 多标记时序点过程（multi-mark TPP）；LogNormMix（对数正态混合）强度无关 TPP；LSTM 历史编码；多任务学习（每字段一个预测模块、等权 NLL 损失）；NetFlow 两阶段生成 |
 | 数据集 | LANL（Unified Host and Network Dataset）、CIDDS、ToN-IoT（IoT-TON）、DC（IMC 2010 数据中心 PCAP） |
 | 是否开源 | 未提及（解析稿未给出本文代码/数据发布；DKC 检查实现沿用 Schoen et al. [19] 的公开代码库） |
-| DOI | unknown |
+| DOI | [10.1109/acsac67867.2025.00097](https://doi.org/10.1109/acsac67867.2025.00097) |
 | 备注 | 与库内 WF/分类主线为间接相关：本文面向「真实良性背景流量」的生成与评估方法论，评测框架（realism/diversity/novelty/compliance）与 IDS 效用验证可迁移到流量数据集合成质量评估 |
 
 ---

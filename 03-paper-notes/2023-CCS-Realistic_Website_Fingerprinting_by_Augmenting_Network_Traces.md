@@ -10,7 +10,7 @@ year: 2023
 venue: "ACM CCS 2023"
 doi: "10.1145/3576915.3616639"
 url: "https://dl.acm.org/doi/10.1145/3576915.3616639"
-pdf: ""
+pdf: "00-inbox/PDFs/2023-CCS-Realistic_Website_Fingerprinting_by_Augmenting_Network_Traces.pdf"
 mineru_md: "02-parsed-markdown/2023-CCS-Realistic_Website_Fingerprinting_by_Augmenting_Network_Traces.md"
 status: processed
 reading_level: L3

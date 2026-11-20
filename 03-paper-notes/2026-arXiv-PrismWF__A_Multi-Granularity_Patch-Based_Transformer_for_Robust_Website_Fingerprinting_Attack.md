@@ -11,9 +11,9 @@ authors:
   - Nan Cheng
 year: 2026
 venue: "arXiv 2026"
-doi: unknown
-url: unknown
-pdf: ""
+doi: "10.1109/tdsc.2026.3746307"
+url: "https://doi.org/10.1109/tdsc.2026.3746307"
+pdf: "00-inbox/PDFs/2026-arXiv-PrismWF__A_Multi-Granularity_Patch-Based_Transformer_for_Robust_Website_Fingerprinting_Attack.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-PrismWF__A_Multi-Granularity_Patch-Based_Transformer_for_Robust_Website_Fingerprinting_Attack.md"
 status: processed
 reading_level: L2
@@ -26,7 +26,7 @@ research_area: ["网站指纹", "流量分析", "多标签分类", "隐私与匿
 task: ["多标签网站指纹攻击", "Tor 流量分析", "多 Tab 混合流量识别"]
 method: ["Transformer", "Multi-Granularity Attention", "CNN", "Router Token"]
 created: "2026-06-21"
-updated: "2026-06-21"
+updated: "2026-11-20"
 ---
 
 # PrismWF: A Multi-Granularity Patch-Based Transformer for Robust Website Fingerprinting Attack
@@ -45,6 +45,7 @@ updated: "2026-06-21"
 | 代码仓库 | 未开源 |
 | Confidence | medium |
 | 晋升状态 | 未晋升 |
+| DOI | [10.1109/tdsc.2026.3746307](https://doi.org/10.1109/tdsc.2026.3746307) |
 
 ---
 

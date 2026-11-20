@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "Robust and Invisible Flow Watermarking With Invertible Neural Network for Traffic Tracking"
-title_cn: ""
-authors: []
+title_cn: "基于可逆神经网络的网络流量水印评估"
+authors: ["Yali Yuan", "Ruolin Ma", "Jian Ge", "Guang Cheng"]
 year: 2026
 venue: TNSM
-doi: unknown
-url: unknown
+doi: "10.1109/tnsm.2025.3645079"
+url: "https://doi.org/10.1109/tnsm.2025.3645079"
 pdf: "00-inbox/PDFs/2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking.pdf"
 mineru_md: "02-parsed-markdown/2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["流量隐私与测量"]
+task: ["水印可检与统计可辨性的评估"]
+method: ["可逆表示及盲提取对照"]
+dataset: ["模拟与作者真实 Tor 流量"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-09-29"
+updated: "2026-11-20"
 ---
 
 # Robust and Invisible Flow Watermarking With Invertible Neural Network for Traffic Tracking
@@ -31,34 +31,84 @@ updated: "2026-09-29"
 | 会议/期刊 | TNSM |
 | PDF | [[2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking.pdf]] |
 | MinerU Markdown | [[2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking.md]] |
+| 作者 | Yali Yuan, Ruolin Ma, Jian Ge, Guang Cheng |
+| DOI | [10.1109/tnsm.2025.3645079](https://doi.org/10.1109/tnsm.2025.3645079) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+论文测试流量水印在模拟与 Tor 环境中的可提取性与统计可辨性。
 
 ## 2. 摘要原文
 —This paper introduces an innovative blind flow watermarking framework on the basis of Invertible Neural Network (INN) called IFW, which aims to solve the problem of suboptimal encoder-decoder coupling in existing end-to-end watermarking architectures. The framework tightly couples the encoder and decoder to achieve highly consistent feature mapping using the same parameters, thus effectively avoiding redundant feature embedding. In addition, this paper adopts the INN to implement watermarking, which supports forward encoding and backward decoding, and the watermark extraction is completely dependent on the embedding algorithm without the need for the original network flow. This feature enables both the embedding and the blind extraction of watermarks simultaneously. Extensive experiments demonstrate that the proposed IFW method achieves a watermark extraction accuracy exceeding 96.6% and maintains a stable K-S test p-value above 0.85 in both simulated and realworld Tor traffic environments. These results indicate a clear advantage over mainstream baselines, highlighting the method’s ability to jointly ensure robustness and invisibility, as well as its strong potential for real-world deployment. Index Terms—Flow watermarking, inter-packet delay, INN, invisibility, robustness.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+在作者所设流量分布与对照下，分别测量水印提取和统计差异。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：模拟与作者真实 Tor 流量。
+- 作者报告：摘要报告两类环境中的提取准确率超过 96.6%，K–S 检验 p 值超过 0.85。
+- 原文位置：[[02-parsed-markdown/2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking|原文解析稿]] · 摘要与作者模拟、Tor 实验。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+K–S 检验针对作者用的统计量。较高 p 值只能按该检验的样本规模和假设解读。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
+
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-TNSM-Robust_and_Invisible_Flow_Watermarking_With_Invertible_Neural_Network_for_Traffic_Tracking|原文解析稿]] · 摘要与作者模拟、Tor 实验。可引用的结论须保留所列实验条件。
+
+## 深度分析（并行深度分析更新 2026-09-29）
+
+### 方法、实验与证据
+IFW使用可逆神经网络耦合编码器/解码器进行流水印，指标含TPR、FPR、BER；Tor真实IPD数据来自港新两端、6个中继、两组各500次3MB上传。需核对攻击场景、对比方法和表格数值，复现依赖Tor采集环境。
+
+### 横向联动与局限
+- 该论文可联动 [[method-comparison-table]]、[[narrative-pattern-comparison]] 与相关任务/方法页；当前仅追加证据，不改写既有结论。
+- 复现/引用前需核对 MinerU 表格、官方 PDF 与代码仓库；未从正文稳定提取的字段保留 unknown。
+- 证据等级：摘要与方法/实验章节可定位；跨论文比较不据此自动推断因果或部署保证。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
 - MinerU：已完成；解析质量需人工抽查。
 - Bib 元数据：待官方 API/论文首页核验。
+
 
 
 ## 深度分析（自动证据提取，需人工复核）
@@ -81,12 +131,4 @@ updated: "2026-09-29"
 - 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
 
 
-## 深度分析（并行深度分析更新 2026-09-29）
-
-### 方法、实验与证据
-IFW使用可逆神经网络耦合编码器/解码器进行流水印，指标含TPR、FPR、BER；Tor真实IPD数据来自港新两端、6个中继、两组各500次3MB上传。需核对攻击场景、对比方法和表格数值，复现依赖Tor采集环境。
-
-### 横向联动与局限
-- 该论文可联动 [[method-comparison-table]]、[[narrative-pattern-comparison]] 与相关任务/方法页；当前仅追加证据，不改写既有结论。
-- 复现/引用前需核对 MinerU 表格、官方 PDF 与代码仓库；未从正文稳定提取的字段保留 unknown。
-- 证据等级：摘要与方法/实验章节可定位；跨论文比较不据此自动推断因果或部署保证。
+```

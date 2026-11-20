@@ -1,3 +1,59 @@
+<!-- evidence-audit:generated:start -->
+# 研究审核队列
+
+试点：`tor-over-proxy-low-fpr-detection`；生成日期：2026-11-20
+
+| 优先级 | 位置 | 待处理事项 |
+|---|---|---|
+| — | — | 当前没有待处理事项 |
+
+处理规则：先修复来源和定位问题，再审核证据方向；未经审核的记录不得进入正式共识。
+<!-- evidence-audit:generated:end -->
+
+## 2026-11-18 核验前候选队列
+
+原表供追溯，现行处理状态见上方生成区及证据账本。
+
+| 证据 | 命题 | 初判方向 | 状态 |
+| --- | --- | --- | --- |
+| EV-V2-SOK-CIPHERTEXT | CLM-0001 | supports | pending_review |
+| EV-V2-LEAKAGE-THEOREM | CLM-0002 | supports | pending_review |
+| EV-V2-SWEET-SPLIT | CLM-0003 | supports | pending_review |
+| EV-V2-SOK-CORPUS | CLM-0004 | supports | pending_review |
+| EV-V2-CRYPTO-CONTENT | CLM-0005 | supports | pending_review |
+| EV-V2-IMC-REPLICATION | CLM-0006 | supports | pending_review |
+| EV-V2-SWEET-BASELINES | CLM-0101 | supports | pending_review |
+| EV-V2-NEST-GATE-CONTROL | CLM-0102 | supports | pending_review |
+| EV-V2-GRAPHIDS-VERSIONS | CLM-0104 | supports | pending_review |
+| EV-V2-ETBERT-PRETRAIN | CLM-0201 | supports | pending_review |
+| EV-V2-HF-SUPERVISED | CLM-0202 | supports | pending_review |
+| EV-V2-GENETC-PRETRAIN | CLM-0203 | supports | pending_review |
+| EV-V2-DF-DEFENSES | CLM-0301 | supports | pending_review |
+| EV-V2-PALETTE-DEFINED | CLM-0302 | supports | pending_review |
+| EV-V2-ONLINE-WF | CLM-0303 | supports | pending_review |
+| EV-V2-MM4FLOW-MODAL | CLM-0401 | supports | pending_review |
+| EV-V2-BPFDAG-ABLATION | CLM-0402 | supports | pending_review |
+| EV-V2-MET-EMBEDDING | CLM-0501 | supports | pending_review |
+| EV-V2-TRAFFICFORMER-OVERLAP | CLM-0502 | supports | pending_review |
+| EV-V2-PACKETLOOM-PREPROCESSING | CLM-0503 | supports | pending_review |
+| EV-V2-NEST-FACTORIZE | CLM-0601 | supports | pending_review |
+| EV-V2-NEST-CONFIRM | CLM-0602 | supports | pending_review |
+| EV-V2-NEST-CALIBRATION | CLM-0603 | supports | pending_review |
+| EV-V2-NEST-FROZEN-FPR | CLM-0604 | supports | pending_review |
+| EV-V2-NEST-SWEPT-FPR | CLM-0605 | supports | pending_review |
+| EV-V2-NEST-LATER-RESEGMENT | CLM-0606 | supports | pending_review |
+| EV-V2-COSINT-DHOR | CLM-0607 | neutral | pending_review |
+| EV-V2-COSINT-DHBCORR | CLM-0608 | neutral | pending_review |
+| EV-V2-BTR-BLOCK | CLM-0007 | neutral | pending_review |
+| EV-V2-FLOWSEM-FROZEN | CLM-0103 | neutral | pending_review |
+| EV-V2-BIAS-FIELD | CLM-0003 | neutral | pending_review |
+| EV-V2-WF-REALITY | CLM-0304 | neutral | pending_review |
+| EV-V2-HYTMTC-FUSION | CLM-0403 | neutral | pending_review |
+| EV-V2-WF-DRIFT-AION | CLM-0304 | neutral | pending_review |
+| EV-V2-RTT-PROXY-ADJACENT | CLM-0609 | neutral | pending_review |
+
+## 历史人工记录
+
 # 研究审核队列
 
 试点：`tor-over-proxy-low-fpr-detection`；生成日期：2026-10-23

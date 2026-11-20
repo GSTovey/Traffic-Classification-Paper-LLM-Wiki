@@ -25,7 +25,9 @@
 - [[malicious-traffic-detection]] — 恶意流量检测
 - [[anomaly-detection]] — 异常检测
 - [[tunnel-detection]] — 隧道检测
-- [[website-fingerprinting]] — 网站指纹识别
+- [[06-tasks/website-fingerprinting]] — 网站指纹识别
+- [[website-fingerprinting-defense]] — 防御机制与可比评估
+- [[network-telemetry]] — 流式遥测与部署开销
 - [[encrypted-traffic-detection]] — 加密流量检测
 - [[app-fingerprinting]] — 应用指纹识别
 - [[traffic-representation]] — 流量表征任务
@@ -61,6 +63,20 @@
 
 ## 3. Claims 与矛盾
 
+- [[proposition-index]] — 可检验命题、适用范围和签审状态
+- [[contradictions]] — 可比冲突、条件差异和研究演进
+- [[claim-migration-map]] — 旧记录与新命题的复核映射
+
+## 4. 研究前沿追踪
+
+- [[12-research-fronts/index|七条前沿及签审状态]] — 跟踪各专题的当前快照
+- [[front-review-2026-11-18|本轮审核稿]] — 按前沿核对结果、反证和待验证条件
+
+<details>
+<summary>旧制入口与状态记录</summary>
+
+## 3. Claims 与矛盾
+
 - [[claims-index]] — 关键观点索引（33 条核心 Claims，含共识权重评分）
 - [[contradictions]] — 论文间矛盾记录（13 组冲突，含裁决倾向）
 
@@ -75,6 +91,10 @@
 - [[wf-attack-defense-limit]] — WF 攻防的极限与新范式（diverging ↔）
 - [[multimodal-fusion-strategy]] — 多模态融合的最优策略（converging ↑）
 - [[tokenization-optimal]] — 流量 tokenization 最优方案（diverging ↔）
+
+---
+
+</details>
 
 ---
 

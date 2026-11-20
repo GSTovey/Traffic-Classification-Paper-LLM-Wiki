@@ -7,7 +7,7 @@ year: 2026
 venue: "IEEE TIFS 2026"
 doi: "10.1109/tifs.2026.3655514"
 url: unknown
-pdf: "00-inbox/Aug_inbox/2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection.pdf"
+pdf: "00-inbox/PDFs/2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection.pdf"
 mineru_md: "02-parsed-markdown/2026-TIFS-Contextual_Masking_Distillation_for_Network_Traffic_Anomaly_Detection.md"
 status: processed
 reading_level: L2

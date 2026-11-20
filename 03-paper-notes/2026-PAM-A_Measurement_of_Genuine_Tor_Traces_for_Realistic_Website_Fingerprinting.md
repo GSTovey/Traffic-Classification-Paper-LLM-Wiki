@@ -5,20 +5,20 @@ title_cn: "面向真实网站指纹的 Tor 真实踪迹测量：GTT23 数据集"
 authors: ["Rob Jansen", "Ryan Wails", "Aaron Johnson"]
 year: 2026
 venue: "PAM 2026"
-doi: "unknown"
-url: "unknown"
+doi: "10.1007/978-3-032-18268-5_13"
+url: "https://doi.org/10.1007/978-3-032-18268-5_13"
 pdf: "00-inbox/PDFs/2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting.pdf"
 mineru_md: "02-parsed-markdown/2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting.md"
 status: processed
 reading_level: L3
 research_area: ["website-fingerprinting", "anonymous-traffic-identification", "encrypted-traffic-analysis"]
 task: ["website-fingerprinting"]
-method: []
+method: ["匿名化出口流量测量与合成语料对照"]
 dataset: ["GTT23", "BigEnough", "GoodEnough"]
 code: "https://doi.org/10.5281/zenodo.10620520"
 relevance: high
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # A Measurement of Genuine Tor Traces for Realistic Website Fingerprinting
@@ -39,6 +39,7 @@ updated: "2026-09-19"
 | 是否开源 | GTT23 为受控发布：自 2024 年起向验证过的研究者按需提供（§1、§5）；数据集 DOI 10.5281/zenodo.10620520（文中 ref [27]，论文本身未给 DOI/arXiv 标识）|
 | PDF | 00-inbox/PDFs/2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-PAM-A_Measurement_of_Genuine_Tor_Traces_for_Realistic_Website_Fingerprinting.md |
+| DOI | [10.1007/978-3-032-18268-5_13](https://doi.org/10.1007/978-3-032-18268-5_13) |
 
 > ⚠️ MinerU 解析问题：(1) 结论段 "available to researchers upon request since 2004 since [27]" 年份系原文笔误（§1 明确写 since 2024），且 "since…since" 重复；(2) Appendix B 的 Table 3 caption 出现严重 small-caps 下标碎片化（`T<sub>a</sub>bl<sub>e</sub> 3 <sub>:</sub>…`），表体单元格亦有错位、跨行信息粘连，引用时需回原文核对；(3) 连字（ligature）普遍丢失：effectiveness→"efectiveness"、suffix→"sufix"、different→"diferent"、offline→"ofline"、efficiency→"eficacy/eficient"；§2.2.2 中编码函数名多次显示为占位符 �（公式本体 Eq.(1) 完整）；(4) 摘要含 "per formance" 断词、`$D S _ { T o r }$` 等 LaTeX 碎片，Listing 1 的 JSON 被逐字符插入空格。
 

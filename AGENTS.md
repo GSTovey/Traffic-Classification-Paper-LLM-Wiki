@@ -89,7 +89,7 @@ Traffic_Papers 是一个面向网络流量安全研究的本地论文知识库�
 - 对比页用于横向比较；
 - 对比页共 5 个：`method-comparison-table.md`（方法对比）、`dataset-comparison-table.md`（数据集对比）、`open-source-registry.md`（开源注册表）、`motivation-pattern-comparison.md`（研究动机模式横向对比）、`narrative-pattern-comparison.md`（叙事模式横向对比）；
 - 开源注册表（`08-comparisons/open-source-registry.md`）用于追踪方法/模型的开源状态、代码仓库地址和高频基线的代码可用性；
-- Claims 页用于记录可引用观点及其证据来源。
+- 命题索引记录适用条件、审核状态和证据 ID。历史 Claims 表用于追溯既有判断。
 
 ### 2.4 研究前沿追踪层
 
@@ -102,10 +102,10 @@ Traffic_Papers 是一个面向网络流量安全研究的本地论文知识库�
 - 每个研究前沿问题对应一个独立页面；
 - 前沿页面按时间顺序追踪同一研究问题的证据链；
 - 每条证据记录论文、年份、结论方向（支持/反对/中性）和实验严格度；
-- 前沿页面包含"当前共识方向"和"研究空白"分析；
+- 前沿顶部包含“当前研究认识”，下方保留证据链、研究空白与历次判断；
 - 前沿页面包含"Auto Research 指引"，为后续自动化研究提供选题和方案设计支撑；
-- 前沿页面有 `status` 字段：`converging`（共识收敛）、`diverging`（观点分歧）、`stale`（长期无新进展）；
-- 新论文入库时，自动判断是否与某个 research-front 相关并更新证据链。
+- 前沿的 `status` 记录签审后的进展。待签审时使用 `pending_review`；证据不足时可使用 `insufficient_evidence`；
+- 新论文入库时，自动登记相关前沿的候选证据。修改当前认识及状态须经维护者签审。
 
 ### 2.5 关键图表提取
 
@@ -269,8 +269,8 @@ pretraining-necessity.md
 - **阶段 0：去重检查** — 读取 `00-dashboard/paper-registry.md`，通过文件名 + 标题 + 摘要 + DOI + 作者/年份/venue 五轮联合匹配检查是否重复（详见 `templates/claudian-prompts/00-check-duplicate.md`）；
 - **阶段 1：PDF 解析** — 默认使用 MinerU API 解析（如 `MINERU_API_TOKEN` 未设置则暂停向用户索要）；解析完成后自动运行 `scripts/extract_key_figures.py` 提取关键框架图；
 - **阶段 2：生成论文笔记** — 按 `templates/paper-note-template.md` 生成结构化笔记到 `03-paper-notes/`；
-- **阶段 3：自动更新知识层** — 自动判断并更新所有相关概念页、方法页、任务页、综述页、对比表、开源注册表和 Claims，**不需要用户单独询问**；
-- **阶段 3.5：共识更新与研究前沿同步** — 根据新论文内容生成待审核的 Claims 证据、跨论文关系和研究前沿候选更新；只有完成来源定位、条件和反证核验的 `verified` 记录，才允许更新 consensus_count、confidence_score 或研究前沿状态，详见 `templates/claudian-prompts/06-ingest-pipeline.md`；
+- **阶段 3：自动更新知识层** — 追加论文事实、来源和相关概念、方法、任务、综述、对比与开源信息；
+- **阶段 3.5：候选证据登记** — 写入证据账本和审核队列，标记相关命题、跨论文关系和研究前沿。正式判断走 §11 的核验与签审流程；
 - **阶段 4：更新全局索引** — paper-registry、reading-queue、index、log；
 - **阶段 5：自动更新 README.md 和 AGENTS.md** — 同步更新统计数据和关键论文列表，**不需要用户提醒**；
 - **阶段 6：Git 提交（仅用户要求时）** — 仅当用户明确说"上传"、"提交"、"push"时才执行 commit，不自动 push。`10-outputs/` 目录大部分不参与版本控制，但 `10-outputs/key-figures/` 子目录可上传（自动提取的关键框架图）。
@@ -291,8 +291,8 @@ pretraining-necessity.md
 ### 5.3 关键原则
 
 1. **一篇论文一次完成**：单篇论文的入库 + 知识层全量更新 + 文档同步在一次流程中全部完成；
-2. **不需要逐步确认**：阶段 0-5 自动执行，仅去重阶段的疑似重复需要用户确认；
-3. **追加不覆盖**：知识层更新只追加新行，不修改已有内容；
+2. **入库与签审**：阶段 0–5 自动执行，疑似重复由用户确认。正式科学判断单独经过语义审核和维护者签审；
+3. **保留历史，允许修订当前结论**：原始论文、来源材料、历史判断和人工记录原样保留。签审后可更新当前综合结论，并保留上一版判断、修改原因、证据依据与审核记录；
 4. **README/AGENTS 自动同步**：每次入库后自动检查并更新，不需要用户提醒。
 
 ### 5.1.1 跨论文综合与创新点挖掘
@@ -306,7 +306,7 @@ pretraining-necessity.md
 - 必须主动检查相邻工作、替代解释、数据划分和指标差异；
 - 证据账本只登记重要主张、关键反证和候选创新点，不复制普通论文的全部实验结果；
 - `auto_extracted`、`pending_review`、`verified`、`contested` 和 `retired` 是证据状态，未经审核的记录不得升级为领域共识；
-- 使用 `python3 scripts/research_capability_audit.py audit --pilot 00-dashboard/research-capability-pilot.json --write` 生成质量报告和人工审核队列。脚本不得自动修改论文笔记、Claims、研究前沿、方法页或个人研究页。
+- 在项目 Python 环境安装 `scripts/requirements.txt` 中的依赖。使用 `python3 scripts/research_capability_audit.py audit --all-fronts --write` 生成质量报告和人工审核队列。脚本不得自动修改论文笔记、Claims、研究前沿、方法页或个人研究页。
 
 ---
 
@@ -335,7 +335,7 @@ pretraining-necessity.md
 4. 概念页应链接到代表论文；
 5. 综述页应链接到关键论文和方法页；
 6. Claims 必须链接到证据来源。
-7. 个人论文笔记（`11-my-papers/`）中的链接指向主知识库为只读方向。主知识库页面不得自动添加指向 `11-my-papers/` 的链接。如需在主知识库中引用个人论文，必须由用户手动添加且论文 confidence 为 high。
+7. 个人论文笔记（`11-my-papers/`）中的链接指向主知识库为只读方向。主知识库页面不得自动添加指向 `11-my-papers/` 的链接。主知识库对个人论文的正式引用须经用户明确授权，并按 §11 核对来源、条件和引用范围。
 
 ---
 
@@ -417,37 +417,23 @@ pretraining-necessity.md
   - Marked as L3 core paper.
 ```
 
-## 11. 共识权重系统
+## 11. 证据、命题与研究前沿
 
-每篇论文和每条观点的可信度由三个维度共同决定：
+### 11.1 入库与核验
 
-### 11.1 权重三因子
+- 论文笔记记录作者报告的结果、实验条件和原文位置。发表场所、年份及有来源的引用量属于文献元数据。`reading_level` 表示阅读深度。
+- 自动入库用 v2 Schema 登记 `pending_review` 候选证据。候选可关联命题和研究前沿，写入审核队列。旧评分及注册表旧计数留档，新注册行的两列 Claims 计数填 `—`。
+- 人工核对结果、条件、方向、独立性与反证，记下审核人、日期与依据后，方可将证据标记为 `verified`。证据自身的解释、来源或归属还有实质争议时，用 `contested`。两项已核验且方向相反的可比实验可以分别是 `verified + supports` 和 `verified + challenges`。
+- `study_lineage` 追踪主要实验归属，扩展版本和综述转述回指主实验。`data_lineage` 追踪采集样本及派生语料。同一数据上不同研究的复现只能提供这批数据条件下的可复现性。未知谱系用 `unknown`，适用范围与独立性取决于实际核对。
 
-| 因子 | 含义 | 计算方式 |
-|------|------|----------|
-| venue_factor | 发表场所权重 | Tier 1 (USENIX/NDSS/CCS/S&P) = 1.0；Tier 2 (SIGCOMM/AAAI/NeurIPS/ICML/WWW/KDD/TIFS/TSC/TDSC/TON/INFOCOM/IMC/COMST) = 0.85；Tier 3 (arXiv/其他) = 0.65 |
-| time_factor | 时间衰减因子 | 2025-2026 = 1.0；2024 = 0.85；2023 = 0.7；2022 = 0.6；2020-2021 = 0.45；≤2019 = 0.25 |
-| citation_impact | 知识库内部引用影响 | 12+ 篇其他论文引用 = 1.8；8-11 篇 = 1.5；4-7 篇 = 1.2；1-3 篇 = 1.0；0 篇 = 0.8 |
+### 11.2 当前判断与历史
 
-### 11.2 计算公式
-
-```text
-composite_weight = venue_factor × time_factor × citation_impact
-confidence_score = composite_weight × consensus_count
-```
-
-### 11.3 设计理念
-
-- **时间维度**：越靠近现在的论文，其方法和结论越具参考价值
-- **共识维度**：越多独立论文支持的观点越接近事实
-- **引用影响**：被后续论文反复引用的经典工作，即使年代较早仍具高权重（如 ET-BERT 2022 被 15+ 篇引用，citation_impact = 1.8，有效弥补时间衰减）
-- 三因子共同作用避免了"唯新是论"和"唯众是论"的单一偏差
-
-### 11.4 维护规则
-
-- 每次新论文入库时自动更新被引用论文的 citation_impact
-- consensus_count 在新论文支持或挑战已有 claim 时自动更新
-- confidence_score 随上述变化自动重算
+- `09-claims/proposition-index.md` 为命题入口。一条命题对应一个可检验的判断及其条件。`claim_state` 取 `supported`、`contested`、`insufficient_evidence` 或 `superseded`，由人工审核确定。单项已核验实验可支持其范围内的命题；领域共识需要可比的独立直接证据和反证核验。
+- `09-claims/claims-index.md` 保存历史观点表。旧 ID、原文与审核记录保留。迁移到新命题时重新确认 v2 字段和证据关系，旧分数与审核标签不作为升级依据。
+- `09-claims/contradictions.md` 按 `direct_conflict`、`scope_difference`、`method_difference`、`temporal_evolution`、`unresolved` 记录跨论文关系。可比条件下且结论确实冲突才是 `direct_conflict`。
+- 前沿以页顶“当前研究认识”为准。签审后的证据不足、分歧和范围未明均为有效快照。`last_synthesized` 只记录维护者签审日期。`converging`、`diverging` 和 `stale` 描述进展；科研优先级由个人研究目标与验证可行性决定。
+- 更新正式判断前，将上一版原文、变更原因、证据 ID、审核人和日期记入历史。原始资料、人工记录和历史表始终保留。正式判断所用关键证据须有可查的原文定位与 v2 审核记录。
+- 结构审计、语义复核、最终签审依次完成。脚本检查字段、ID、来源路径和状态一致性；人工判断原文与命题的关系；维护者决定快照发布。待签审内容只显示为草案。
 
 ## 12. 当前数量快照（2026-11-03）
 
@@ -473,3 +459,10 @@ confidence_score = composite_weight × consensus_count
 ### 2026-11-18　批次深读补充
 
 - 本批 13 篇均完成 L3。新增 6 条待审核的深读证据，链接到相关概念、方法、任务、综述与对比页。
+
+## 15. 全库复核快照（2026-11-20）
+
+- 已对应 355 篇注册论文的笔记、PDF、解析稿和参考文献。其中 142 篇为 L3/L4，另有 1 份独立学术报告。
+- 核心知识页 44 个，含 13 个概念、10 个方法、9 个任务、5 个综述、5 个对比和 2 个现行证据入口。确认公开产物 101 项，图库已归档 559 张。
+- 七条前沿均已更新签审快照。35 条现行命题涵盖 26 条范围内有直接证据的判断、2 条报告级判断和 7 条证据不足的判断。61 条旧账本证据均有迁移记录。
+- 引文库覆盖所有注册论文，计 356 条 JSON 和 373 条 BibTeX。题录、原始材料、结构检查和模拟入库结果见 Dashboard 的质量检查报告。

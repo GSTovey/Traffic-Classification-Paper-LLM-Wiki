@@ -5,7 +5,7 @@ title_cn: "HiFi-WF：面向多标签页与子页面识别的真实网站指纹�
 authors: ["Songyang Wu", "Long Yuan", "Chuan Ma", "Biwen Chen", "Tao Xiang", "Ming Ding", "Yuwen Qian"]
 year: 2026
 venue: "ACM Web Conference 2026 (WWW'26)"
-doi: unknown
+doi: "10.1145/3774904.3792412"
 url: "https://doi.org/10.1145/3774904.3792412"
 pdf: "00-inbox/PDFs/2026-WWW-HiFi-WF__Toward_Realistic_Website_Fingerprinting_with_Multi-tab_and_Subpage_Recognition.pdf"
 mineru_md: "02-parsed-markdown/2026-WWW-HiFi-WF__Toward_Realistic_Website_Fingerprinting_with_Multi-tab_and_Subpage_Recognition.md"
@@ -18,7 +18,7 @@ dataset: ["Chrome homepage/subpage 50-site dataset", "MP-SA/SP-MA multi-tab data
 code: "https://github.com/wusongyang02-blip/HiFi-WF"
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # HiFi-WF: Toward Realistic Website Fingerprinting with Multi-tab and Subpage Recognition
@@ -38,7 +38,7 @@ updated: "2026-10-10"
 | 方法关键词 | 两行方向矩阵、CNN extractor、channel/spatial attention、dual-path segmentation、multi-head cross-attention、Enhanced SubHead、Hierarchical Focal Loss |
 | 数据与规模 | 50 个 monitored websites、每站 10 个子页面；Chrome 主页/子页面、多标签 MP-SA/SP-MA、12K open-world、Tor 2,500 条样本 |
 | 是否开源 | 是：https://github.com/wusongyang02-blip/HiFi-WF |
-| DOI | 10.1145/3774904.3792412 |
+| DOI | [10.1145/3774904.3792412](https://doi.org/10.1145/3774904.3792412) |
 | PDF | 00-inbox/PDFs/2026-WWW-HiFi-WF__Toward_Realistic_Website_Fingerprinting_with_Multi-tab_and_Subpage_Recognition.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-WWW-HiFi-WF__Toward_Realistic_Website_Fingerprinting_with_Multi-tab_and_Subpage_Recognition.md |
 

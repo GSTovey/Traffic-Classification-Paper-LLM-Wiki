@@ -47,6 +47,8 @@ AND 来自目标语义，而不是随意增加模型级联。Pure Proxy 与 Dire
 
 ## 6. 知识链接
 
+> 匹配 RF 的结构对照、端到端与共用代理门控条件分别见 [[proposition-index]] 的 CLM-0601 和 CLM-0102。
+
 [[04-concepts/tunnel-detection|tunnel-detection]]、[[anonymous-traffic-identification]]、[[04-concepts/traffic-classification|traffic-classification]]、[[traffic-representation-learning]]、[[representation-vs-shallow]]。
 
 ## 7. 审计补充：机制边界与证据状态

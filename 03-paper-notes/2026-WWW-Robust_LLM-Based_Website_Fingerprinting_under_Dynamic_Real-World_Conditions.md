@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "Robust LLM-Based Website Fingerprinting under Dynamic Real-World Conditions"
-title_cn: ""
-authors: []
+title_cn: "TraVerse：动态真实条件下 Tor 网站指纹的鲁棒评估"
+authors: ["Xiyuan Zhao", "Xinhao Deng", "Tianyu Cui", "Yixiang Zhang", "Ke Xu", "Qi Li"]
 year: 2026
 venue: WWW
-doi: unknown
-url: unknown
+doi: "10.1145/3774904.3792288"
+url: "https://doi.org/10.1145/3774904.3792288"
 pdf: "00-inbox/PDFs/2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions.pdf"
 mineru_md: "02-parsed-markdown/2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions.md"
 status: deep-analyzed
 reading_level: L3
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["匿名流量分析"]
+task: ["实际轨迹与时序漂移中的网站指纹评估"]
+method: ["预训练表征与轻量分类"]
+dataset: ["GTT23、GTT23 派生双标签页模拟集"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # Robust LLM-Based Website Fingerprinting under Dynamic Real-World Conditions
@@ -31,54 +31,37 @@ updated: "2026-10-10"
 | 会议/期刊 | WWW |
 | PDF | [[2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions.pdf]] |
 | MinerU Markdown | [[2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions.md]] |
+| 作者 | Xiyuan Zhao, Xinhao Deng, Tianyu Cui, Yixiang Zhang, Ke Xu, Qi Li |
+| DOI | [10.1145/3774904.3792288](https://doi.org/10.1145/3774904.3792288) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+用 GTT23 考查表征模型在时间漂移、少量标注和开放集条件下的表现。
 
 ## 2. 摘要原文
 Website Fingerprinting (WF) attacks aim to infer the websites vis ited by Tor users by analyzing patterns in encrypted network trafic. However, most existing WF attacks are evaluated on trafic collected in controlled environments with fixed configurations, failing to re flect the complexity and variability of real-world conditions. In practice, trafic is far more dynamic and diverse due to heterogeneous network conditions, the large number of subpages within individual websites, and continuous evolution of website content. These factors increase intra-class variability and induce temporal feature drift, which ultimately degrades the long-term efectiveness of existing attacks. In this paper, we propose TraVerse, an LLM-based representation learning framework designed to achieve robust WF attacks under real-world conditions. TraVerse applies architectural adaptation and large-scale fine-tuning on diverse un labeled trafic to learn generalizable and resilient representations that remain efective in dynamic and evolving environments. Fur thermore, TraVerse integrates a lightweight classifier atop the LLM derived representations, enabling accurate website identification and eficient few-shot adaptation with minimal model updates. We prototype TraVerse and conduct comprehensive evaluations using real-user trafic. Experimental results show that TraVerse improves Accuracy@3 by an average of 176.3% and weighted F1 by 343.3% over state-of-the-art baselines, while maintaining strong performance throughout a three-month longitudinal evaluation.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+分别比较原作者的真实出口数据、时间留出与合成双标签页评估。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：GTT23、GTT23 派生双标签页模拟集。
+- 作者报告：摘要报告 Accuracy@3 和 weighted F1 相比所测基线的平均相对提升为 176.3% 与 343.3%。绝对工作点及各任务见本页 L3 原文分析。
+- 原文位置：[[02-parsed-markdown/2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions|原文解析稿]] · 摘要、数据划分与本页 L3 分析。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+实验真实轨迹来自出口侧。双标签页是合成，入口与防御环境需要直接测量。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
-- MinerU：已完成；解析质量需人工抽查。
-- Bib 元数据：待官方 API/论文首页核验。
 
-
-## 深度分析（自动证据提取，需人工复核）
-
-### 研究问题与证据
-- 主题线索：website fingerprint, tor, transformer, adversarial。
-- 摘要证据：Website Fingerprinting (WF) attacks aim to infer the websites vis ited by Tor users by analyzing patterns in encrypted network trafic. However, most existing WF attacks are evaluated on trafic collected in controlled environments with fixed configurations, failing to re flect the complexity and variability of real-world conditions. In practice, trafic is far more dynamic and diverse due to heterogeneous network conditions, the large number of subpages within individual websites, and continuous evolution of website content. These factors increase intra-class variability and induce temporal feature drift, which ultimately degrades the long-term efectiveness of existing attacks. In this paper, we propose TraVerse, an LLM-based representation learning framework designed to achieve robust WF attacks under real-world conditions. TraVerse applies architectural adaptation and large-scale fine-tuning on diverse un labeled trafic to learn generalizable and resilient representations that remain efective in dynamic and evolving environments. Fur thermore, TraVerse integrates a lightweight classifier atop the LLM derived representations, enabling accurate website identification and eficient few-shot adaptation with minimal model updates. We prototype TraVerse and conduct comprehensive evaluations using real-user trafic. Experimental results show that TraVerse improves Accuracy@3 by an average of 176.3% and weighted F1 by 343.3% over state-of-the-art baselines, while maintaining strong performance throughout a three-month longitudinal evaluation.
-
-### 方法机制
-正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
-
-### 实验与结果
-实验段落未稳定提取；不补造数据集、baseline、指标或数值。
-
-### 局限与复现
-论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
-
-### 开源与证据等级
-- 代码线索：未检测到明确 GitHub 线索。
-- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-WWW-Robust_LLM-Based_Website_Fingerprinting_under_Dynamic_Real-World_Conditions|原文解析稿]] · 摘要、数据划分与本页 L3 分析。可引用的结论须保留所列实验条件。
 
 ## 深度分析（2026-09-29）
 
@@ -143,3 +126,62 @@ TraVerse 将网络流量表示从“直接训练分类器”转化为“先用�
 
 - 本笔记前部的自动入库、摘要级或待核验段落是入库时的历史快照，按规范保留以避免删除原始记录。
 - 本次新增的深度分析段落、证据记录和局限说明优先；历史段落中的“待深读/待核验”状态不代表当前分析尚未完成。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
+- MinerU：已完成；解析质量需人工抽查。
+- Bib 元数据：待官方 API/论文首页核验。
+
+
+
+## 深度分析（自动证据提取，需人工复核）
+
+### 研究问题与证据
+- 主题线索：website fingerprint, tor, transformer, adversarial。
+- 摘要证据：Website Fingerprinting (WF) attacks aim to infer the websites vis ited by Tor users by analyzing patterns in encrypted network trafic. However, most existing WF attacks are evaluated on trafic collected in controlled environments with fixed configurations, failing to re flect the complexity and variability of real-world conditions. In practice, trafic is far more dynamic and diverse due to heterogeneous network conditions, the large number of subpages within individual websites, and continuous evolution of website content. These factors increase intra-class variability and induce temporal feature drift, which ultimately degrades the long-term efectiveness of existing attacks. In this paper, we propose TraVerse, an LLM-based representation learning framework designed to achieve robust WF attacks under real-world conditions. TraVerse applies architectural adaptation and large-scale fine-tuning on diverse un labeled trafic to learn generalizable and resilient representations that remain efective in dynamic and evolving environments. Fur thermore, TraVerse integrates a lightweight classifier atop the LLM derived representations, enabling accurate website identification and eficient few-shot adaptation with minimal model updates. We prototype TraVerse and conduct comprehensive evaluations using real-user trafic. Experimental results show that TraVerse improves Accuracy@3 by an average of 176.3% and weighted F1 by 343.3% over state-of-the-art baselines, while maintaining strong performance throughout a three-month longitudinal evaluation.
+
+### 方法机制
+正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
+
+### 实验与结果
+实验段落未稳定提取；不补造数据集、baseline、指标或数值。
+
+### 局限与复现
+论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
+
+### 开源与证据等级
+- 代码线索：未检测到明确 GitHub 线索。
+- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+
+```

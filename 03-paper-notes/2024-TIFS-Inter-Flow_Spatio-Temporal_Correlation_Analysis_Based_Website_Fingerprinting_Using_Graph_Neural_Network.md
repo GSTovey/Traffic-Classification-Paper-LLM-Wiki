@@ -14,7 +14,7 @@ year: 2024
 venue: "IEEE TIFS 2024"
 doi: "10.1109/TIFS.2024.3441935"
 url: ""
-pdf: ""
+pdf: "00-inbox/PDFs/2024-TIFS-Inter-Flow_Spatio-Temporal_Correlation_Analysis_Based_Website_Fingerprinting_Using_Graph_Neural_Network.pdf"
 mineru_md: "02-parsed-markdown/2024-TIFS-Inter-Flow_Spatio-Temporal_Correlation_Analysis_Based_Website_Fingerprinting_Using_Graph_Neural_Network.md"
 status: processed
 reading_level: L2

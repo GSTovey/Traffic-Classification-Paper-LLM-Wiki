@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Feign East, Strike West! Constructing Covert Channel on TLS 1.3"
-title_cn: "unknown"
+title_cn: "声东击西：TLS 1.3 隐蔽信道研究"
 year: 2026
 venue: "TIFS"
 doi: "10.1109/TIFS.2026.3725552"

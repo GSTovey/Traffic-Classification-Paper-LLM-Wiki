@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Avatar: Securing Anonymous Communication With Relay Anonymity"
-title_cn: "unknown"
+title_cn: "Avatar：借助中继匿名性保护匿名通信"
 authors: ["Hao Zhu", "Mei Wang", "Zengpeng Li", "Jing Chen"]
 year: 2026
 venue: "TON"
@@ -18,7 +18,7 @@ dataset: ["论文未明确说明"]
 code: "https://github.com/Jemtaly/pymcl"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Avatar: Securing Anonymous Communication With Relay Anonymity

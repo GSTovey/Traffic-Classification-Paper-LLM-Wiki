@@ -52,7 +52,9 @@
 运行：
 
 ```bash
-python3 scripts/research_capability_audit.py audit --pilot 00-dashboard/research-capability-pilot.json --write
+python3 scripts/research_capability_audit.py audit --all-fronts --write
 ```
 
 问题分为阻断性错误、重要质量问题和非阻断性建议。脚本只生成审计报告和审核队列，不自动修改论文笔记、Claims、Research-front、方法页或个人研究页。
+
+发布前运行 `validate --all-fronts`。结构通过后，由人工核实原文是否支持命题、可比性与独立性，再由维护者签审。

@@ -13,12 +13,12 @@ status: processed
 reading_level: L2
 research_area: ["encrypted-traffic-analysis", "anomaly-detection", "traffic-classification"]
 task: ["traffic-classification", "anomaly-detection"]
-method: []
+method: ["聚类生成、类别平衡与分类器对照"]
 dataset: ["CICIDS2017", "Darknet traffic data"]
 code: "https://github.com/harshilpatel22/Synthetic-Traffic-Generator"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Generative AI for Encrypted Traffic Analysis: Synthetic Dataset Generation and Classifier Evaluation

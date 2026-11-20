@@ -5,8 +5,8 @@ title_cn: "基于监督对比学习和掩码序列预测的加密流量分类半
 authors: ["Zhongyu Guo", "Wei Wu", "Zhaoyun Liu", "Bin Lu", "Man Guo", "Xiangnan Lin"]
 year: 2025
 venue: "ICAACE 2025"
-doi: unknown
-url: unknown
+doi: "10.1109/icaace65325.2025.11020246"
+url: "https://doi.org/10.1109/icaace65325.2025.11020246"
 pdf: "00-inbox/PDFs/2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks.pdf"
 mineru_md: "02-parsed-markdown/2025-ICAACE-A_Semi-Supervised_Learning_Framework_for_Encrypted_Traffic_Classification_Based_on_Supervised_Contrastive_Learning_and_Masked_Sequence_Prediction_Tasks.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["DAPT2020", "CICAndMal2017", "Cross-Platform", "ISCX-Tor-nonTor", "ISC
 code: unknown
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-20"
 ---
 
 # A Semi-Supervised Learning Framework for Encrypted Traffic Classification Based on Supervised Contrastive Learning and Masked Sequence Prediction Tasks
@@ -39,6 +39,7 @@ updated: "2026-05-27"
 | 是否开源 | 否 |
 | 作者单位 | Key Laboratory of Cyberspace Security, Ministry of Education, Zhengzhou, China |
 | 资助 | 国家自然科学基金（Nos. 62302520, 62402524） |
+| DOI | [10.1109/icaace65325.2025.11020246](https://doi.org/10.1109/icaace65325.2025.11020246) |
 
 ## 1. 一句话总结
 

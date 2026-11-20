@@ -5,8 +5,8 @@ title_cn: "基于流量聚类匿名化的实时 Website Fingerprinting 防御"
 authors: ["Meng Shen", "Kexin Ji", "Jinhe Wu", "Qi Li", "Xiangdong Kong", "Ke Xu", "Liehuang Zhu"]
 year: 2024
 venue: "IEEE Symposium on Security and Privacy (S&P) 2024"
-doi: unknown
-url: unknown
+doi: "10.1109/sp54263.2024.00247"
+url: "https://doi.org/10.1109/sp54263.2024.00247"
 pdf: "00-inbox/PDFs/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.pdf"
 mineru_md: "02-parsed-markdown/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.md"
 status: deep-analyzed
@@ -18,7 +18,7 @@ dataset: ["public WF dataset (95 websites, 1000 traces each)", "Tranco top-100 w
 code: "https://github.com/kxdkxd/Palette"
 relevance: high
 created: "2026-05-27"
-updated: "2026-11-03"
+updated: "2026-11-20"
 deep_analysis_verified: "2026-11-03"
 deep_analysis_sources: ["03-paper-notes/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.md", "02-parsed-markdown/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.md"]
 evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
@@ -42,6 +42,7 @@ evidence_audit: "source-linked; existing numerical claims remain subject to sour
 | 是否开源 | 是（https://github.com/kxdkxd/Palette） |
 | PDF | 00-inbox/PDFs/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.pdf |
 | MinerU Markdown | 02-parsed-markdown/2024-S&P-Real-Time_Website_Fingerprinting_Defense_via_Traffic_Cluster_Anonymization.md |
+| DOI | [10.1109/sp54263.2024.00247](https://doi.org/10.1109/sp54263.2024.00247) |
 
 ## 1. 一句话总结
 

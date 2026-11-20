@@ -8,8 +8,8 @@ authors:
   - Tanja Zseby
 year: 2022
 venue: "ICMLA"
-doi: ""
-url: ""
+doi: "10.1109/icmla55696.2022.00094"
+url: "https://doi.org/10.1109/icmla55696.2022.00094"
 pdf: "00-inbox/PDFs/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.pdf"
 mineru_md: "02-parsed-markdown/2022-ICMLA-Separating_Flows_in_Encrypted_Tunnel_Traffic.md"
 status: processed
@@ -23,7 +23,7 @@ research_area: ["加密流量分析", "流分离", "流量去匿名化"]
 task: ["流分离", "数据包归属"]
 method: ["LSTM", "random projection", "Viterbi search"]
 created: "2026-05-27"
-updated: "2026-05-29"
+updated: "2026-11-20"
 ---
 
 # Separating Flows in Encrypted Tunnel Traffic
@@ -39,6 +39,7 @@ updated: "2026-05-29"
 | 会议/期刊 | ICMLA (International Conference on Machine Learning and Applications) |
 | 关键词 | Tunnel Encryption, Encrypted Traffic Analysis, Deanonymization, Deep Learning, Anomaly Detection, Flow Separation |
 | 代码 | https://gitlab.tuwien.ac.at/e389-cnpub/separatingflows/ |
+| DOI | [10.1109/icmla55696.2022.00094](https://doi.org/10.1109/icmla55696.2022.00094) |
 
 ## 1. 一句话总结
 

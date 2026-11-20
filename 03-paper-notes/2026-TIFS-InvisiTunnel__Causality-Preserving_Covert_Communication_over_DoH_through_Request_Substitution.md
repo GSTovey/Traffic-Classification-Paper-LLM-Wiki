@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "InvisiTunnel: Causality-Preserving Covert Communication over DoH through Request Substitution"
-title_cn: "unknown"
+title_cn: "InvisiTunnel：保持因果关系的 DoH 隐蔽通信研究"
 year: 2026
 venue: "TIFS"
 doi: "10.1109/TIFS.2026.3744608"

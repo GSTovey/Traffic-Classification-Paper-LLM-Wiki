@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "ODNS Clustering: Unveiling Client-Side Dependency in Open DNS Infrastructure"
-title_cn: ""
-authors: []
+title_cn: "开放 DNS 聚类：解析基础设施的客户端依赖"
+authors: ["Wenhao Wu", "Zhaohua Wang", "Qinxin Li", "Zihan Li", "Yi Li", "Jin Yan", "Zhenyu Li"]
 year: 2025
 venue: WWW
-doi: unknown
-url: unknown
+doi: "10.1145/3696410.3714834"
+url: "https://doi.org/10.1145/3696410.3714834"
 pdf: "00-inbox/PDFs/2025-WWW-ODNS_Clustering__Unveiling_Client-Side_Dependency_in_Open_DNS_Infrastructure.pdf"
 mineru_md: "02-parsed-markdown/2025-WWW-ODNS_Clustering__Unveiling_Client-Side_Dependency_in_Open_DNS_Infrastructure.md"
 status: deep-analyzed
 reading_level: L3
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["DNS 网络测量"]
+task: ["识别转发与上游递归依赖"]
+method: ["开放解析器测量与依赖聚类"]
+dataset: ["作者对开放 DNS 地址的测量样本"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # ODNS Clustering: Unveiling Client-Side Dependency in Open DNS Infrastructure
@@ -31,54 +31,37 @@ updated: "2026-10-10"
 | 会议/期刊 | WWW |
 | PDF | [[2025-WWW-ODNS_Clustering__Unveiling_Client-Side_Dependency_in_Open_DNS_Infrastructure.pdf]] |
 | MinerU Markdown | [[2025-WWW-ODNS_Clustering__Unveiling_Client-Side_Dependency_in_Open_DNS_Infrastructure.md]] |
+| 作者 | Wenhao Wu, Zhaohua Wang, Qinxin Li, Zihan Li, Yi Li, Jin Yan, Zhenyu Li |
+| DOI | [10.1145/3696410.3714834](https://doi.org/10.1145/3696410.3714834) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+将开放 DNS IP 的转发关系聚成群组，用实测结构衡量上游集中性。
 
 ## 2. 摘要原文
 There are over a million open DNS servers in the wild. However, not all servers perform recursive queries directly. Instead, many DNS forwarders forward queries to upstream recursive servers or other DNS forwarders for name resolving on their behalf. The groups of open servers that have such dependencies on each other form ODNS Clusters. The dependencies can result in vulnerabilities; yet we have little knowledge of the ODNS cluster structure. In this work, we measure the inter-dependence of open DNS resolvers and find that 1.9 million open DNS servers form only 81,636 ODNS clusters. We further analyze the characteristics of the clustered ODNS structure. The key observations include biased cluster size distribution, discrepancy of ODNS infrastructures among countries, concentration in major public DNS server providers, and potential security and resilience risks due to the dependence.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+用可观测的递归和转发依赖把 DNS 地址归入组，比较组织与地区结构。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：作者对开放 DNS 地址的测量样本。
+- 作者报告：摘要报告约 190 万开放 DNS 地址与 81,636 个集群。论文分析还需区分发现地址数和完成全部观测的样本。
+- 原文位置：[[02-parsed-markdown/2025-WWW-ODNS_Clustering__Unveiling_Client-Side_Dependency_in_Open_DNS_Infrastructure|原文解析稿]] · 摘要、测量语料和本页 L3 分析。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+结果受测量时间、短期地址波动及可达性影响，归因应按服务和上游链路的论文定义。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
-- MinerU：已完成；解析质量需人工抽查。
-- Bib 元数据：待官方 API/论文首页核验。
 
-
-## 深度分析（自动证据提取，需人工复核）
-
-### 研究问题与证据
-- 主题线索：dns, tor, covert。
-- 摘要证据：There are over a million open DNS servers in the wild. However, not all servers perform recursive queries directly. Instead, many DNS forwarders forward queries to upstream recursive servers or other DNS forwarders for name resolving on their behalf. The groups of open servers that have such dependencies on each other form ODNS Clusters. The dependencies can result in vulnerabilities; yet we have little knowledge of the ODNS cluster structure. In this work, we measure the inter-dependence of open DNS resolvers and find that 1.9 million open DNS servers form only 81,636 ODNS clusters. We further analyze the characteristics of the clustered ODNS structure. The key observations include biased cluster size distribution, discrepancy of ODNS infrastructures among countries, concentration in major public DNS server providers, and potential security and resilience risks due to the dependence.
-
-### 方法机制
-Results analysis: With the cache-snooping results, we classify all servers into the following types based on their behavior: • Caching forwarders: Servers have not cached current record is a caching forwarder (�2), indicating that this server is not an upstream resolver. Instead, it is a forwarder and has independent cache processing itself. • Proxies & Resolver: Servers have cached current record is a upstream resolver (�4) or non-caching proxy (�3). This signifies that the cache record passed through such servers when the DNS query was initially performed. While non-caching proxies [10] simply follow the status of the upstream resolver, such proxies are classified into the same category with upstream resolver. • New-trigger: In addition, if our cache snooping triggers a new DNS response from ADNS, we mark such server as a new-trigger.
-
-### 实验与结果
-实验段落未稳定提取；不补造数据集、baseline、指标或数值。
-
-### 局限与复现
-论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
-
-### 开源与证据等级
-- 代码线索：检测到 GitHub 线索。
-- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2025-WWW-ODNS_Clustering__Unveiling_Client-Side_Dependency_in_Open_DNS_Infrastructure|原文解析稿]] · 摘要、测量语料和本页 L3 分析。可引用的结论须保留所列实验条件。
 
 ## 深度分析（2026-09-29）
 
@@ -182,3 +165,62 @@ Results analysis: With the cache-snooping results, we classify all servers into 
 
 - 本笔记前部的自动入库、摘要级或待核验段落是入库时的历史快照，按规范保留以避免删除原始记录。
 - 本次新增的深度分析段落、证据记录和局限说明优先；历史段落中的“待深读/待核验”状态不代表当前分析尚未完成。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
+- MinerU：已完成；解析质量需人工抽查。
+- Bib 元数据：待官方 API/论文首页核验。
+
+
+
+## 深度分析（自动证据提取，需人工复核）
+
+### 研究问题与证据
+- 主题线索：dns, tor, covert。
+- 摘要证据：There are over a million open DNS servers in the wild. However, not all servers perform recursive queries directly. Instead, many DNS forwarders forward queries to upstream recursive servers or other DNS forwarders for name resolving on their behalf. The groups of open servers that have such dependencies on each other form ODNS Clusters. The dependencies can result in vulnerabilities; yet we have little knowledge of the ODNS cluster structure. In this work, we measure the inter-dependence of open DNS resolvers and find that 1.9 million open DNS servers form only 81,636 ODNS clusters. We further analyze the characteristics of the clustered ODNS structure. The key observations include biased cluster size distribution, discrepancy of ODNS infrastructures among countries, concentration in major public DNS server providers, and potential security and resilience risks due to the dependence.
+
+### 方法机制
+Results analysis: With the cache-snooping results, we classify all servers into the following types based on their behavior: • Caching forwarders: Servers have not cached current record is a caching forwarder (�2), indicating that this server is not an upstream resolver. Instead, it is a forwarder and has independent cache processing itself. • Proxies & Resolver: Servers have cached current record is a upstream resolver (�4) or non-caching proxy (�3). This signifies that the cache record passed through such servers when the DNS query was initially performed. While non-caching proxies [10] simply follow the status of the upstream resolver, such proxies are classified into the same category with upstream resolver. • New-trigger: In addition, if our cache snooping triggers a new DNS response from ADNS, we mark such server as a new-trigger.
+
+### 实验与结果
+实验段落未稳定提取；不补造数据集、baseline、指标或数值。
+
+### 局限与复现
+论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
+
+### 开源与证据等级
+- 代码线索：检测到 GitHub 线索。
+- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+
+```

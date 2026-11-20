@@ -1,9 +1,15 @@
 ---
 type: research-front
 question: "预训练范式在流量分析中是否必要？在什么条件下必要？"
-status: diverging
+status: conditional_support
+synthesis_state: signed
+last_synthesized: "2026-11-18"
+synthesized_by: "Codex（维护者授权按原文核验）"
+synthesis_claim_ids: ["CLM-0201","CLM-0202","CLM-0203","CLM-0204"]
+synthesis_evidence_ids: ["EV-V2-ETBERT-PRETRAIN","EV-V2-HF-SUPERVISED","EV-V2-GENETC-PRETRAIN"]
+historical_status: diverging
 created: "2026-06-21"
-last_updated: "2026-09-19"
+last_updated: "2026-11-18"
 related_concepts:
   - "[[traffic-foundation-model]]"
   - "[[traffic-representation-learning]]"
@@ -16,6 +22,29 @@ related_methods:
 
 # 预训练范式的必要性边界
 
+## 当前研究认识
+
+原文消融记录了指定条件下的预训练收益。包头监督路线提供一种可行的基准，跨采集域收益仍需匹配预算和输入后检验。
+
+- ET-BERT 在 ISCX-VPN-App 的原论文 packet 消融中，完整方案和去预训练对照的 F1 分别为 0.9395 与 0.5638。（CLM-0201，EV-V2-ETBERT-PRETRAIN）
+- HF-Transformer 以包头字段监督学习，在论文所用 CSTNET-TLS1.3 设置下取得 F1 0.9150。（CLM-0202，EV-V2-HF-SUPERVISED）
+- GenETC Table VII 保留动态图模块、改用随机初始化时，所测六个基准的 F1 均低于对应的预训练配置。（CLM-0203，EV-V2-GENETC-PRETRAIN）
+- 预训练收益能否在表示、标注与算力匹配时迁移到独立采集域，现有审定材料证据不足。（CLM-0204）
+
+## 签审记录
+
+2026-11-18 由Codex（维护者授权按原文核验）按原文研究条件更新。旧判断及文献沿革保留在下方。
+
+### 签审前快照
+
+**待签审。** 本轮原文复核、证据边界与拟议结论见 [[front-review-2026-11-18#pretraining-necessity]]. 签审后在此记录结论、适用条件、反证和未解决问题。
+
+
+## 历史研究记录
+
+> 下方保留历次研究记录，含旧制的共识和状态表述。当前引用以命题索引和签审快照为准。
+
+<!-- evidence-governance:archive:start -->
 ## 核心问题
 
 大规模预训练在流量分析中是否必要？是否存在不需要预训练即可达到 SOTA 的替代路径？预训练的收益在什么架构和任务条件下最大化？
@@ -117,3 +146,4 @@ related_methods:
 | --- | --- | --- | --- | --- | --- |
 | 2026 | [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 相邻任务 | 强窄任务监督模型胜出，架构和训练条件不同 | §V-E 表 V | EV-20261118-CRYPTO-MODAL · pending_review |
 | 2025 | [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 相邻机制 | 隔离预训练来源及时间；资源约束为同类模型的附加测试条件 | §V-A–C 表 II、IV | EV-20261118-NEPCO-COST · pending_review |
+<!-- evidence-governance:archive:end -->

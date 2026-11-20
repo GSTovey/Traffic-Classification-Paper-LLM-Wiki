@@ -17,9 +17,11 @@
 | [[project-overview]] | **项目全景速览** — 任何智能体首次对齐上下文的入口 |
 | [[paper-registry]] | **论文去重注册表** — 355 条注册记录的 DOI/标题索引，新入库前必须比对 |
 | [[reading-queue]] | 论文阅读状态与重要性标记（含 2026-11-18 批次） |
-| [[open-questions]] | 从 Claims 与矛盾记录中提炼的开放研究问题 |
+| [[proposition-index]] | 正式命题、适用范围和待签审索引 |
+| [[front-review-2026-11-18]] | 七条研究前沿审核稿 |
+| [[open-questions]] | 历史开放问题与当前证据缺口 |
 | [[research-map]] | 研究主题地图，链接到实际存在的概念页与方法页 |
-| [[quality-check-report]] | 知识库质量检查报告 |
+| [[quality-check-report]] | 2026 年 6 月历史质量快照 |
 | [[research-capability-audit]] | 跨论文综合与创新点挖掘能力审计 |
 | [[research-review-queue]] | 重要证据与研究判断人工审核队列 |
 | [[log]] | 知识库维护日志 |
@@ -41,15 +43,15 @@
 | 目录 | 用途 | 当前数量 |
 |---|---|---|
 | `03-paper-notes/` | 单篇论文结构化笔记 | 355 篇，另有学术报告 1 份 |
-| `04-concepts/` | 研究概念页 | 12 个 |
+| `04-concepts/` | 研究概念页 | 13 个 |
 | `05-methods/` | 方法页 | 10 个 |
 | `06-tasks/` | 任务页 | 9 个 |
 | `07-surveys/` | 综述页 | 5 个 |
 | `08-comparisons/` | 对比表（含开源注册表） | 5 个 |
-| `09-claims/` | 观点、证据与矛盾记录 | 2 个 |
+| `09-claims/` | 命题、证据、关系与历史档案 | 2 个现行入口，另有审核稿与迁移清单 |
 | `10-outputs/` | 草稿、报告、项目申报材料和复现笔记 | — |
 | `11-my-papers/` | 个人研究材料区（隔离于主知识库，详见 [[my-research-thread]]） | 1 个个人研究点（NestTor，已晋升）+ 2 篇背景引用 |
-| `12-research-fronts/` | 研究前沿追踪（证据链 + 共识方向 + Auto Research 指引） | 7 个前沿 + 索引 + 模板 |
+| `12-research-fronts/` | 研究前沿追踪（签审快照 + 证据链 + 验证指引） | 7 个前沿 + 索引 + 模板 |
 
 ---
 
@@ -65,7 +67,8 @@
 - [[malicious-traffic-detection]] — 恶意流量检测
 - [[anomaly-detection]] — 异常检测
 - [[tunnel-detection]] — 隧道检测
-- [[website-fingerprinting]] — 网站指纹识别
+- [[04-concepts/website-fingerprinting]] — 网站指纹识别
+- [[website-fingerprinting-defense]] — 网站指纹防御与可比评估
 - [[anonymous-traffic-identification]] — 匿名流量识别
 - [[censorship-circumvention]] — 审查规避与流量混淆
 - [[network-telemetry]] — 网络流式遥测和观测单位
@@ -95,7 +98,8 @@
 
 - [[traffic-classification]] — 流量分类
 - [[malicious-traffic-detection]] — 恶意流量检测
-- [[website-fingerprinting]] — 网站指纹识别
+- [[04-concepts/website-fingerprinting]] — 网站指纹识别
+- [[website-fingerprinting-defense]] — 网站指纹防御与可比评估
 - [[encrypted-traffic-detection]] — 加密流量检测
 - [[app-fingerprinting]] — 应用指纹识别
 - [[anomaly-detection]] — 异常检测
@@ -114,7 +118,7 @@
 - [[survey-few-shot-learning]] — 少样本学习综述
 - [[dataset-comparison-table]] — 数据集对比表
 - [[method-comparison-table]] — 方法对比表
-- [[open-source-registry]] — 开源模型/方法注册表（99 个已确认公开仓库 + 高频基线追踪）
+- [[open-source-registry]] — 方法和数据产物注册表（101 个已确认公开产物与高频基线追踪）
 - [[motivation-pattern-comparison]] — 研究动机模式横向对比
 - [[narrative-pattern-comparison]] — 叙事模式横向对比
 
@@ -122,24 +126,24 @@
 
 ## 8. Claims 页面
 
-- [[claims-index]] — 关键观点索引（105 条核心 Claims）
-- [[contradictions]] — 论文间矛盾记录（18 组冲突）
+- [[proposition-index]] — 当前命题索引与待签审命题
+- [[contradictions]] — 已签审的关系、条件差异及历史记录
 
 ---
 
 ## 9. 当前状态
 
-- 355 篇标准论文 PDF 已导入 `00-inbox/PDFs/`。
-- MinerU Markdown 已生成至 `01-mineru-output/`。
-- 355 篇有效的结构化论文笔记已创建于 `03-paper-notes/`。
-- 12 个概念页已创建于 `04-concepts/`。
+- 355 篇注册论文的笔记、原版 PDF、解析稿和引文已逐项对应。其中 142 篇为 L3/L4，另有 1 份 COSINT 学术报告。
+- 正式研究前沿快照覆盖 7 条前沿。35 条现行命题已按原文范围签审，其中 7 条记为证据不足，2 条仅用于引用 COSINT 报告结果。
+- [[quality-check-report#2026-11-20　全库结构与论文笔记补齐|11 月 20 日全库复核记录]] 包含题录、正文、链接和模拟入库的检查结果。
+- 13 个概念页已创建于 `04-concepts/`。
 - 10 个方法页已创建于 `05-methods/`。
 - 9 个任务页已创建于 `06-tasks/`。
 - 5 个综述页已创建于 `07-surveys/`。
 - 5 个对比表已创建于 `08-comparisons/`（含开源注册表和动机/叙事对比）。
-- 2 个 Claims 页面已创建于 `09-claims/`（含 105 条核心观点和 18 组矛盾记录，均带共识权重评分）。
+- [[proposition-index|命题索引]] 与 [[contradictions|跨论文关系]] 为现行证据入口。旧文档计数留存于 [[claims-index|历史 Claims]] 和 [[claim-migration-map|迁移清单]]。
 - 9 个研究前沿文件已创建于 `12-research-fronts/`（7 个活跃前沿 + 索引 + 模板）。
-- 参考文献现为 355 条 JSON 记录与 372 条 BibTeX。本批 13 条按 Crossref、OpenAlex/arXiv 或 PMLR 题录增补。
+- 参考文献现为 356 条 JSON 与 373 条 BibTeX，全覆盖 355 篇注册论文。未注册的 TrafficSliver 旧记录作为历史引文保留。
 
 ---
 

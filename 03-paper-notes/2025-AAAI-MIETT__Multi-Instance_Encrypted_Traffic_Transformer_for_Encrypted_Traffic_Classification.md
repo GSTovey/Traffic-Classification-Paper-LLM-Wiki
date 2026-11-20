@@ -9,8 +9,8 @@ authors:
   - Han-Jia Ye
 year: 2025
 venue: AAAI
-doi: unknown
-url: unknown
+doi: "10.1609/aaai.v39i15.33748"
+url: "https://doi.org/10.1609/aaai.v39i15.33748"
 pdf: "00-inbox/PDFs/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification.md"
 status: processed
@@ -41,7 +41,7 @@ dataset:
 code: unknown
 relevance: high
 created: 2026-06-09
-updated: 2026-06-09
+updated: "2026-11-20"
 ---
 
 # MIETT: Multi-Instance Encrypted Traffic Transformer for Encrypted Traffic Classification
@@ -62,6 +62,7 @@ updated: 2026-06-09
 | 是否开源 | 否 |
 | PDF | `../00-inbox/PDFs/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification.pdf` |
 | MinerU Markdown | `../02-parsed-markdown/2025-AAAI-MIETT__Multi-Instance_Encrypted_Traffic_Transformer_for_Encrypted_Traffic_Classification.md` |
+| DOI | [10.1609/aaai.v39i15.33748](https://doi.org/10.1609/aaai.v39i15.33748) |
 
 ---
 

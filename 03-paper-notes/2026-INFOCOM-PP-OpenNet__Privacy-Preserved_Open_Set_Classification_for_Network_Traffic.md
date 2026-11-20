@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "PP-OpenNet: Privacy-Preserved Open Set Classification for Network Traffic"
-title_cn: "unknown"
+title_cn: "PP-OpenNet：保持隐私的网络流量开放集分类"
 authors: ["Jingze Zhang", "Leijie Wu", "Xi Peng", "Qingqing Yang", "Ruilun Liu", "Hong Xu"]
 year: 2026
 venue: "INFOCOM"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # PP-OpenNet: Privacy-Preserved Open Set Classification for Network Traffic

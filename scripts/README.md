@@ -138,3 +138,29 @@ A: 检查网络连接，确认 Token 有效，确认 PDF 文件未损坏。
 
 **Q: 解析结果中找不到 full.md**
 A: 可能是 PDF 内容过于特殊导致解析失败，查看 `01-mineru-output/` 中对应目录的原始内容，检查 `99-logs/` 中的日志。
+
+## 10. 证据账本与研究前沿审核
+
+在项目 Python 环境安装本目录依赖。已有 `.venv` 可用 `source .venv/bin/activate` 激活。
+
+```bash
+python3 scripts/research_capability_audit.py stats
+python3 scripts/research_capability_audit.py validate --all-fronts
+python3 scripts/research_capability_audit.py audit --all-fronts --write
+```
+
+`stats` 根据注册表关联的笔记计算当前数量。`validate` 执行只读结构检查。`audit --write` 更新两个报告的生成段，保留历史和人工记录。普通试点格式问题继续按重要或建议列出，发布阻断错误另行统计。
+
+候选写入入口接受一份 v2 JSONL。先在命题索引登记命题，再运行以下命令。重跑相同的证据 ID 和内容只保留一份。
+
+```bash
+python3 scripts/research_capability_audit.py add-candidates --input candidate-evidence.jsonl
+python3 scripts/research_capability_audit.py audit --all-fronts --write
+```
+
+### 正式签审
+
+1. 人工对照原文，确认结果、条件、直接性、方向、谱系和反证。v2 核验通过后写 `verified`、`reviewed_by`、`reviewed_on`、`review_note`。来源定位用 `page`、`section`、`table`、`figure` 或 `appendix`，并指向本地原文。旧记录保留其历史属性。
+2. 维护者更新命题索引的正式区，每行写 `CLM-...`、命题与条件、`claim_state`、关键证据 ID、签审人和日期。使用相同 ID 时保留上一版记录。未找到可用的关键证据可填 `—`，并以证据不足签审。
+3. 更新签审通过的前沿正文及属性。`synthesis_state` 用 `signed`，填 `last_synthesized`、`synthesized_by` 及快照中的命题和证据 ID 列表。研究前沿索引同步状态和日期。旧判断、修改原因、审核记录和证据依据追加到历史。库内快照与命题使用相同 ID 和证据范围。
+4. 重跑 `validate --all-fronts`。程序核对结构、签审记录与来源路径。原文是否支持命题、何时发布由对应的人工审核和签审决定。

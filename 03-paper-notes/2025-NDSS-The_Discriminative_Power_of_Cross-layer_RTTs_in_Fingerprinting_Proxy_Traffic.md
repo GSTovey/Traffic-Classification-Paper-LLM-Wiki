@@ -6,8 +6,8 @@ authors: ["Diwen Xue", "Robert Stanley", "Piyush Kumar", "Roya Ensafi"]
 year: 2025
 venue: "NDSS 2025"
 publication_status: published
-doi: unknown
-url: unknown
+doi: "10.14722/ndss.2025.240966"
+url: "https://doi.org/10.14722/ndss.2025.240966"
 pdf: "00-inbox/PDFs/2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_Traffic.pdf"
 mineru_md: "02-parsed-markdown/2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_Traffic.md"
 status: deep-analyzed
@@ -23,7 +23,7 @@ related_papers: []
 kb_read_only: true
 promoted_to: ""
 created: "2026-06-21"
-updated: "2026-10-21"
+updated: "2026-11-20"
 venue_factor: 1.0
 time_factor: 1.0
 citation_impact: 1.2
@@ -57,6 +57,7 @@ citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traf
 | 是否开源 | Zeek 插件已开源 |
 | PDF | - |
 | MinerU Markdown | 02-parsed-markdown/2025-NDSS-The_Discriminative_Power_of_Cross-layer_RTTs_in_Fingerprinting_Proxy_Traffic.md |
+| DOI | [10.14722/ndss.2025.240966](https://doi.org/10.14722/ndss.2025.240966) |
 
 ---
 

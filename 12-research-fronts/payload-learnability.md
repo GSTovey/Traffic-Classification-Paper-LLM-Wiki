@@ -1,9 +1,15 @@
 ---
 type: research-front
 question: "加密 payload 中是否存在可学习的内在模式？"
-status: converging
+status: insufficient_evidence
+synthesis_state: signed
+last_synthesized: "2026-11-18"
+synthesized_by: "Codex（维护者授权按原文核验）"
+synthesis_claim_ids: ["CLM-0001","CLM-0002","CLM-0003","CLM-0004","CLM-0005","CLM-0006","CLM-0602","CLM-0007"]
+synthesis_evidence_ids: ["EV-V2-SOK-CIPHERTEXT","EV-V2-LEAKAGE-THEOREM","EV-V2-SWEET-SPLIT","EV-V2-SOK-CORPUS","EV-V2-CRYPTO-CONTENT","EV-V2-IMC-REPLICATION","EV-V2-NEST-CONFIRM"]
+historical_status: converging
 created: "2026-06-21"
-last_updated: "2026-10-21"
+last_updated: "2026-11-18"
 related_concepts:
   - "[[encrypted-traffic-analysis]]"
   - "[[traffic-representation-learning]]"
@@ -15,6 +21,33 @@ related_methods:
 
 # 加密 Payload 的可学习性
 
+## 当前研究认识
+
+原文分别报告纯密文输入对照、会话和长度混杂、可见元数据及混合语料结果。隔离纯密文字节后的跨采集可复现增益仍缺相应对照。
+
+- SoK 的 E1–E3 对照中，ET-BERT 的平均准确率均约 0.12，范围为论文所测分类器、语料与输入变换。（CLM-0001，EV-V2-SOK-CIPHERTEXT）
+- 二元语义侧信道定理在指定先验、语义区分、映射非退化和连续性条件下给出观测轨迹的正互信息下界。（CLM-0002，EV-V2-LEAKAGE-THEOREM）
+- Sweet Danger 的 TLS-120 冻结 ET-BERT 按包划分和按流划分的 macro-F1 分别是 97.0% 和 6.7%。原文另设未冻结模型的隐式流标识对照。（CLM-0003，EV-V2-SWEET-SPLIT）
+- SoK §5.1.3 Fig. 2a 报告所核查 ISCXVPN2016 与 USTC-TFC2016 中的未加密会话比例为 98.9% 与 94.7%。（CLM-0004，EV-V2-SOK-CORPUS）
+- CryptoFormer Fig. 8 在明密文协议混合的完整 18 种资产数据上报告，去掉包内容模块后的 accuracy 与 F1 下降最大。（CLM-0005，EV-V2-CRYPTO-CONTENT）
+- IMC 复核在所测试的密文统计特征中发现会话划分和序列长度混杂，受控比较未支持所复核的稳定判别信号。（CLM-0006，EV-V2-IMC-REPLICATION）
+- NestTor Table III 的 2,300 条完整双向流确认集上，代理条件内层阈值为 99.45%，统一内层阈值为 99.41%，均按 ToP/Non-ToP 两类计算 macro-F1。（CLM-0602，EV-V2-NEST-CONFIRM）
+- 纯密文字节在独立采集、同协议且等长度控制下，是否优于保留长度的随机化对照，现有审定材料证据不足。（CLM-0007）
+
+## 签审记录
+
+2026-11-18 由Codex（维护者授权按原文核验）按原文研究条件更新。旧判断及文献沿革保留在下方。
+
+### 签审前快照
+
+**待签审。** 本轮原文复核、证据边界与拟议结论见 [[front-review-2026-11-18#payload-learnability]]. 签审后在此记录结论、适用条件、反证和未解决问题。
+
+
+## 历史研究记录
+
+> 下方保留历次研究记录，含旧制的共识和状态表述。当前引用以命题索引和签审快照为准。
+
+<!-- evidence-governance:archive:start -->
 ## 核心问题
 
 在 TLS 1.3 + AES-GCM 等强加密条件下，加密流量的 payload 字节中是否存在可供机器学习模型利用的内在模式？还是分类器仅仅在利用 payload 长度等元信息？
@@ -125,3 +158,4 @@ ET-BERT 和 YaTC 报告的高性能主要来自：
 | --- | --- | --- | --- | --- | --- |
 | 2026 | [[03-paper-notes/2026-TDSC-CryptoFormer__Multi-Currency_Traffic_Classification_Via_Two-Stage_Transformer_Architecture\|CryptoFormer]] | 中性 | 明文和密文混合的会话消融，未隔离加密载荷 | §V-A、图 8 | EV-20261118-CRYPTO-MODAL · pending_review |
 | 2025 | [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 中性 | 字节归因集中在局部字段，部分高分来自地址 | §IV-B、附录 A–B | EV-20261118-NEPCO-BYTE · pending_review |
+<!-- evidence-governance:archive:end -->

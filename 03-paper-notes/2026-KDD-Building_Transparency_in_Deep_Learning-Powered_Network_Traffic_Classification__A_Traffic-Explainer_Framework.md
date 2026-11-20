@@ -5,8 +5,8 @@ title_cn: "在深度学习驱动的网络流量分类中构建透明性：Traffi
 authors: [Riya Ponraj, Ram Durairajan, Yu Wang]
 year: 2026
 venue: "KDD"
-doi: "unknown"
-url: "unknown"
+doi: "10.1145/3770854.3783939"
+url: "https://doi.org/10.1145/3770854.3783939"
 pdf: "00-inbox/PDFs/2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classification__A_Traffic-Explainer_Framework.pdf"
 mineru_md: "02-parsed-markdown/2026-KDD-Building_Transparency_in_Deep_Learning-Powered_Network_Traffic_Classification__A_Traffic-Explainer_Framework.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: [ISCX-VPN, ISCX-NonVPN, ISCX-Tor, ISCX-NonTor, iOS-Cross-Platform, Andr
 code: "https://anonymous.4open.science/r/TrafficExplainer-5E2E/README.md"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-20"
 ---
 
 # 2026-KDD Traffic-Explainer

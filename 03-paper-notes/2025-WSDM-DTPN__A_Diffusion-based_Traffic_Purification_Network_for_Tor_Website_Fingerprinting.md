@@ -7,7 +7,7 @@ year: 2025
 venue: "WSDM 2025"
 doi: "10.1145/3701551.3703547"
 url: "https://doi.org/10.1145/3701551.3703547"
-pdf: "00-inbox/Aug_inbox/2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_Fingerprinting.pdf"
+pdf: "00-inbox/PDFs/2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_Fingerprinting.pdf"
 mineru_md: "02-parsed-markdown/2025-WSDM-DTPN__A_Diffusion-based_Traffic_Purification_Network_for_Tor_Website_Fingerprinting.md"
 status: processed
 reading_level: L3

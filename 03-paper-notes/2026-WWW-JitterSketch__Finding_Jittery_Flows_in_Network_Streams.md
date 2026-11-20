@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "JitterSketch: Finding Jittery Flows in Network Streams"
-title_cn: ""
+title_cn: "JitterSketch：在网络流中检测抖动流"
 authors: ["Zhongxian Liang", "Zihan Li", "Yangyang Wang", "Qilong Shi", "Wenjun Li", "Mingwei Xu", "Xiyan Liang", "Tong Yang", "Weizhe Zhang"]
 year: 2026
 venue: WWW
@@ -18,7 +18,7 @@ dataset: ["CAIDA Equinix-Chicago", "MAWI2020", "MAWI2025"]
 code: "yes (Zenodo: 10.5281/zenodo.18300502)"
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # JitterSketch: Finding Jittery Flows in Network Streams

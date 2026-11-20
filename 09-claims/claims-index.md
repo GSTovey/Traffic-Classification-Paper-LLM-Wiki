@@ -9,6 +9,9 @@ updated: "2026-10-21"
 
 本页面用于记录可以在综述、论文、项目申报中复用的关键观点。
 
+> **历史观点表。** 本页保留原表、原 ID、旧评分及各次补记。当前命题见 [[proposition-index]]，逐项对应关系见 [[claim-migration-map]]。
+
+<!-- evidence-governance:archive:start -->
 ## 观点记录
 
 | 观点 | 支撑论文 | 证据位置 | 可用于什么场景 | venue_factor | time_factor | citation_impact | composite_weight | consensus_count | confidence_score |
@@ -259,3 +262,4 @@ updated: "2026-10-21"
 | EV-20261118-L3-DESC-RESOURCE | 逻辑缓存占用与 RSS 压力不同。局部资源测量不能直接给出按共识权重计算的网络影响。 | [[03-paper-notes/2026-S&P-Descriptors_of_Exposure__Undermining_Tor_Anonymity_Through_Exploiting_Descriptor_Flood\|Descriptors of Exposure]] §2.4、§6、附录 B 与 C.4 | Tor 实现和部署条件依赖。论文部分网络影响是估计。 |
 | EV-20261118-L3-SIR-SCALE | 查询结构的寄存器计数需要结合活跃键和窗口语义才能用来核算部署资源。 | [[03-paper-notes/2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR\|SIR]] 原 PDF 第 4–6 页，§3.3、§4.1、表 1 | 五个示例查询。跨输入流相对到达顺序没有全局保证。 |
 | EV-20261118-L3-MPA-JOINT | 统一架构下，阶段参数和联合训练对各任务贡献不同。Abilene 联合训练插补 NMAE 变差、预测 NMAE 改善。 | [[03-paper-notes/2026-TDSC-Trustworthy_Traffic_Analysis_via_Large_Language_Models\|MPA-LLM]] §III-G、§IV-E 表 VIII、§IV-H 图 7 | 论文的源矩阵、掩码和分别训练/联合训练条件。异常标签为规则构造。 |
+<!-- evidence-governance:archive:end -->

@@ -364,16 +364,16 @@ $$\mu_w^{new} = \frac{n_w \cdot \mu_w + v}{n_w + 1}$$
 
 ### 9.2 相关方法
 
-- [[Triplet-Fingerprinting]]（Sirinam et al., CCS 2019）
-- [[Deep-Fingerprinting]]（Sirinam et al., CCS 2018）
-- [[N-shot-learning]]
-- [[online-learning]]
+- Triplet-Fingerprinting（Sirinam et al., CCS 2019）
+- [[03-paper-notes/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning|Deep-Fingerprinting]]（Sirinam et al., CCS 2018）
+- N-shot-learning
+- online-learning
 
 ### 9.3 相关任务
 
-- [[Tor-流量分析]]
-- [[匿名网络攻击]]
-- [[网站指纹防御]]
+- [[04-concepts/anonymous-traffic-identification|Tor-流量分析]]
+- 匿名网络攻击
+- [[04-concepts/website-fingerprinting-defense|网站指纹防御]]
 
 ### 9.4 可更新的综述页面
 

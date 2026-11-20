@@ -13,12 +13,12 @@ status: processed
 reading_level: L2
 research_area: [tunnel-detection, anomaly-detection]
 task: [tunnel-detection, anomaly-detection]
-method: []
+method: ["STUN 协议字段审查与隐蔽信道检测评估"]
 dataset: [ITC-Net-blend-60, MAWI]
 code: "unknown"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # STUN comprehension-optional attributes as a covert channel: Design, implementation, and detection

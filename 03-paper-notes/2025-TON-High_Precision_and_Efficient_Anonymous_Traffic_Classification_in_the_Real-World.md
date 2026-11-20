@@ -1,5 +1,132 @@
 ---
 type: paper
+title_original: "High Precision and Efficient Anonymous Traffic Classification in the Real-World"
+title_cn: "真实网络环境下高精度的高效匿名流量分类"
+authors: ["Hantao Mei", "Guang Cheng", "Yali Yuan"]
+year: 2025
+venue: "IEEE Transactions on Networking"
+doi: "10.1109/TON.2024.3518976"
+url: "https://doi.org/10.1109/TON.2024.3518976"
+pdf: "00-inbox/PDFs/2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World.pdf"
+mineru_md: "02-parsed-markdown/2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World.md"
+status: processed
+reading_level: L4
+research_area: ["anonymous traffic identification", "low-base-rate evaluation", "deployment efficiency"]
+task: ["低基率 Tor 流量识别", "Tor 流量类型分类", "网站指纹分析"]
+method: ["两阶段分类", "级联评估", "B-precision"]
+dataset: ["Type Dataset", "Website Dataset", "常规网络背景流量"]
+code: "https://github.com/MHTTHM/HPETC"
+relevance: high
+created: "2026-06-15"
+updated: "2026-11-20"
+volume: "33"
+number: "3"
+pages: "966--981"
+citation_key: "xie2025high"
+code_availability: "partial-code-backup"
+---
+
+# High Precision and Efficient Anonymous Traffic Classification in the Real-World
+
+正文按原版 PDF 和出版记录复核。旧整理稿见页末。
+
+## 0. 论文基础信息
+
+| 项目 | 内容 |
+| --- | --- |
+| 中文题名 | 真实网络环境下高精度的高效匿名流量分类 |
+| 作者 | Hantao Mei, Guang Cheng, Yali Yuan |
+| 方法 | HPETC |
+| 正式出版 | IEEE Transactions on Networking，2025，33(3)，966–981 |
+| DOI | [10.1109/TON.2024.3518976](https://doi.org/10.1109/TON.2024.3518976) |
+| 代码 | [作者仓库](https://github.com/MHTTHM/HPETC)。当前 README 说明仅保有部分代码备份 |
+| 原文 | [[00-inbox/PDFs/2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World.pdf]] |
+
+## 1. 一句话总结
+
+HPETC 以在线筛选和离线细分组成两阶段分类，在论文定义的低基率设定中评估整体精确率、召回和处理开销。
+
+## 2. 摘要翻译
+
+摘要原文见 PDF 首页。作者指出闭集分类分数可能掩盖真实网络背景中的基率效应。论文将 Tor 筛选和类别细分分开，并比较不同增强方式在低基率问题上的误报与召回。
+
+## 3. 方法动机
+
+### 3.4 问题发现路径
+
+原文 §I、§II-B 用大规模背景中目标稀少解释闭集分数与实际精确率的差距。§IV-D 区分目标的错误细分类和背景的误报，再用该计数口径设置 §V 的对照。
+
+### 3.5 科学假设形成
+
+可检验的判断是，在相同背景比例设定下，级联和作者的组件控制能改变精确率与端到端召回的权衡。Table III 给出同任务策略对照，Fig. 9 给出网站分类任务对照。
+
+## 4. 方法设计
+
+| 阶段 | 输入与处理 | 输出 |
+| --- | --- | --- |
+| 在线识别 | 原始流的可见特征用于初筛 | 进入后续分类的候选流 |
+| 离线细分 | 对候选 Tor 流输出类型或网站标签 | 对应任务的标签 |
+| 评估 | 记录两阶段召回、背景误报和目标错分，按设定基率计算 B-precision | 可分母追溯的指标 |
+
+流程和两阶段定义见 §IV，计数见 Table I、§IV-D。此处记录论文研究方法与证据口径。
+
+## 5. 与其他方法对比
+
+不同任务的原文基线包括 RF、CUMUL、k-Fingerprinting 和 Tik-Tok 等。Table IV 的 NET／HPETC 对照在指定设置下比较相同分类器，Fig. 9 网站评估另行报告。
+
+## 6. 实验表现与优势
+
+| 任务与设置 | B-precision | Recall | 原文位置 |
+| --- | ---: | ---: | --- |
+| 类型分类，NET，r=1000 | 51.84% | 96.50% | Table III |
+| 类型分类，SLIGHTLY，r=1000 | 93.24% | 92.64% | Table III |
+| 类型分类，STRONG，r=1000 | 94.96% | 81.21% | Table III |
+| 网站指纹，HPETC，r=1000 | 81.12% | 按 Fig. 9 原列与精确率分别引用 | §V-D，Fig. 9 |
+
+Table II 区分七类 Tor 类型、监控网站与一般背景，背景测试规模为 200 万条流。原文的 r 是非目标与目标的比例。B-precision 将背景假阳性按 r 加权，计数定义见 §IV-D。
+
+### 6.7 局限性
+
+类型分类、网站指纹及背景筛选三种口径分开。作者在 §VI 指出特征人工设计，低基率下仍需实证防御及其他场景。表内设定的 B-precision 可用于评价基率敏感性，现场告警还需相应的背景来源、样本和阈值证据。
+
+## 7. 学习与应用
+
+复核性能须核对候选流、目标错分和背景误报的分母。作者仓库目前为部分备份，数据、全部配置和模型权重的可取得性按实际材料记录。
+
+## 8. 总结
+
+分开记录筛选、细分和背景误报，基率变化时保留相应的精确率与召回定义。
+
+## 9. Obsidian 知识链接
+
+- [[anonymous-traffic-identification]] · [[encrypted-traffic-analysis]]
+- [[wf-attack-defense-limit]] · [[tor-over-proxy-low-fpr-detection]]
+
+## 10. 证据记录
+
+Table II 提供采集与评估分母。Table III 提供类型分类的低基率权衡。Fig. 9 单列网站指纹。§IV-D 定义 B-precision 和级联召回。
+
+## 11. 原始资料链接
+
+- [[00-inbox/PDFs/2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World.pdf]]
+- [[02-parsed-markdown/2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World]]
+
+## 12. 后续问题
+
+同一来源留出、同期独立背景和真实目标比例下，观察这些精确率与召回变化是否仍能复现。
+
+## 13. 写作叙事与故事线分析
+
+原文从基率效应引出为什么闭集结果不够，再给出可追溯计数和两阶段设计。在 §V 将类型分类、网站指纹及效率分列，最后在 §VI 说明论文评估的边界。
+
+## 历史整理稿
+
+> 原整理稿曾错配论文题名、作者和方法，留作修订追溯。
+
+<!-- identity-correction:archive:start -->
+````markdown
+---
+type: paper
 title_original: "High-Precision and Efficient Anonymous Traffic Classification in the Real-World Network Environment"
 title_cn: "真实网络环境下高精度高效的匿名流量分类"
 authors: ["Longtian Xie", "Shuiqiao Yang", "Wei Ye", "Guangcan Li", "Yonglin Xie", "Jian Zhang", "Qixu Liu"]
@@ -7,8 +134,8 @@ year: 2025
 venue: "IEEE/ACM Transactions on Networking (TON)"
 doi: "10.1109/TNET.2025.3582301"
 url: "https://ieeexplore.ieee.org/document/11084593"
-pdf: "[[2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World.pdf]]"
-mineru_md: "[[02-parsed-markdown/2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World]]"
+pdf: "00-inbox/PDFs/2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World.pdf"
+mineru_md: "02-parsed-markdown/2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World.md"
 status: processed
 reading_level: L4
 research_area: ["anonymous traffic identification", "real-time deployment", "image-based traffic analysis"]
@@ -530,3 +657,5 @@ Pixelization 是 SequOcc 的另一个核心组件，其目标是将流量数据�
 - **效率驱动的论文结构**：从部署需求出发，先建立效率标准，再展示精度保持
 - **消融式方法对比**：通过四种方法组合逐步验证每个组件的贡献
 - **真实数据集 + 公开数据集双轨验证**：增强可信度和可复现性
+````
+<!-- identity-correction:archive:end -->

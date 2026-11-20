@@ -2,7 +2,7 @@
 type: dashboard
 purpose: project-quick-reference
 created: "2026-05-27"
-updated: "2026-10-21"
+updated: "2026-11-20"
 ---
 
 # Traffic_Papers 项目全景速览
@@ -12,6 +12,9 @@ updated: "2026-10-21"
 ---
 
 ## 1. 一句话定位
+
+正式判断从 [[proposition-index|命题索引]] 和 [[12-research-fronts/index|前沿快照]] 进入。[[front-review-2026-11-18|七条前沿原文复核]] 记录证据出处、签审结果与缺口。
+
 
 Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知识库**，当前收录 355 篇标准论文笔记（其中 142 篇标注为 L3/L4 深度分析），服务于综述写作、项目申报、方法比较和实验复现。
 
@@ -44,12 +47,12 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 | `01-mineru-output/` | MinerU 原始解析（已 gitignore） | 按论文目录保存 | 调试解析问题 |
 | `02-parsed-markdown/` | 整理后的 MinerU Markdown | 355 份 | 机器可读原文 |
 | `03-paper-notes/` | **结构化论文笔记**（核心） | 355 篇（142 篇标注 L3/L4） | 论文分析、证据追踪 |
-| `04-concepts/` | 概念页 | 11 个 | 理解领域概念 |
-| `05-methods/` | 方法页 | 9 个 | 方法对比、技术选型 |
-| `06-tasks/` | 任务页 | 8 个 | 任务定义、输入输出 |
+| `04-concepts/` | 概念页 | 13 个 | 理解领域概念 |
+| `05-methods/` | 方法页 | 10 个 | 方法对比、技术选型 |
+| `06-tasks/` | 任务页 | 9 个 | 任务定义、输入输出 |
 | `07-surveys/` | 综述页 | 5 个 | 综述写作素材 |
 | `08-comparisons/` | 对比表（含开源注册表） | 5 个 | 横向比较、代码追踪 |
-| `09-claims/` | 观点与矛盾 | 2 个主索引（105 Claims + 18 矛盾），另有历史权重审计页 | 论证、找 research gap |
+| `09-claims/` | 命题与跨论文关系 | 2 个现行入口，另有历史档案、迁移清单和审核稿 | 追溯依据与适用条件 |
 | `10-outputs/` | 草稿、报告、复现笔记、关键图 | 7 个子目录 | 写作产出 |
 | `00-dashboard/` | 导航、队列、地图、日志 | 8 个文件 | 项目状态总览 |
 
@@ -187,6 +190,8 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 ## 6. 105 条表格化 Claims（使用前核对对应证据与范围）
 
+> **历史摘录。** 当前判断请查阅 [[proposition-index]]、[[contradictions]] 及对应前沿。
+
 > 完整列表见 [[claims-index]]。以下为最高价值的 6 条：
 
 1. **数据集虚假繁荣**：ISCXVPN2016 含 98.9% 未加密流量，USTC-TFC2016 含 94.7%，多数 DL 分类器的高准确率来自对未加密内容的学习（SoK 2025）
@@ -199,6 +204,8 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 ---
 
 ## 7. 18 组关键矛盾（Research Gap 来源）
+
+> **历史摘录。** 当前判断请查阅 [[proposition-index]]、[[contradictions]] 及对应前沿。
 
 > 完整列表见 [[contradictions]]。以下为核心冲突：
 
@@ -222,7 +229,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 | 类别 | 数量 | 说明 |
 |------|------|------|
-| 已确认公开仓库（本库论文） | 99 | 含 GitHub/GitLab 地址（其中 4 项仅数据集开源），覆盖主要研究方向 |
+| 已确认公开产物（本库论文） | 101 | 包括代码、数据、权重入口与部分代码备份，按各条发布范围引用 |
 | 计划开源/待确认 | 9 | Swallow、ByteDance、TrustWI、DawnGuard 等 |
 | 高频基线无开源地址 | 20+ | AppScanner (10+ 篇)、TSCRNN (7+ 篇)、CUMUL (5+ 篇) 等 |
 | 第三方参考工具 | 16 | JA3、Kitsune、混淆协议等 |
@@ -232,6 +239,8 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 ---
 
 ## 8. 当前已知质量问题
+
+> 下表为 2026 年 6 月历史记录。现行结构审计见 [[research-capability-audit]]。
 
 > 完整报告见 [[quality-check-report]]
 
@@ -340,7 +349,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 
 ### 场景 A：我要写综述
 1. 读 [[survey-encrypted-traffic-analysis]] 或对应综述页
-2. 查 [[claims-index]] 找可引用观点
+2. 查 [[proposition-index]] 的正式命题、适用范围和证据 ID
 3. 查 [[contradictions]] 找研究 Gap
 4. 查 [[method-comparison-table]] 和 [[dataset-comparison-table]]
 5. 查 [[open-source-registry]] 了解开源生态和高频基线的代码可用性
@@ -362,7 +371,7 @@ Traffic_Papers 是一个基于 Obsidian 的**网络流量安全研究论文知�
 ### 场景 D：我要找 Research Gap
 1. 读 [[contradictions]] 的 18 组冲突
 2. 读 [[open-questions]] 的 16 条开放问题
-3. 交叉比对 [[claims-index]] 中互相矛盾的观点
+3. 按 [[contradictions]] 核对条件差异、反证与证据缺口
 
 ### 场景 E：我要入库新论文（推荐一键流程）
 1. 将 PDF 放入 `00-inbox/PDFs/`

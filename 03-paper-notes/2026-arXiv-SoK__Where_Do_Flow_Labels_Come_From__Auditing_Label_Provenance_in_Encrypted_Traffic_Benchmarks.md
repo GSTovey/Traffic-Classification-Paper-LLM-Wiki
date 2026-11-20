@@ -13,12 +13,12 @@ status: processed
 reading_level: L2
 research_area: [encrypted-traffic-analysis, traffic-classification]
 task: [traffic-classification, website-fingerprinting, malicious-traffic-detection]
-method: []
+method: ["标签出处审计与类别级证据分类"]
 dataset: [ISCXVPN2016, ISCXTor2016, USTC-TFC2016, MIRAGE-2019, CIC-Darknet2020, CIRA-CIC-DoHBrw, CSTNET-TLS1.3, ET-BERT tasks, CESNET-TLS22, CESNET-QUIC22, AppClassNet, CipherSpectrum, Cross-Platform, NUDT MobileTraffic]
 code: "https://anonymous.4open.science/r/traffic_dataset_audit_script-440B/"
 relevance: high
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # SoK: Where Do Flow Labels Come From? Auditing Label Provenance in Encrypted Traffic Benchmarks

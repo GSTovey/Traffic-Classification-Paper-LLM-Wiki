@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "Towards adaptive and robust website fingerprinting defense with multi-agent deep reinforcement learning"
-title_cn: ""
-authors: []
+title_cn: "基于多智能体深度强化学习的自适应网站指纹防御"
+authors: ["Yufei Zhu", "Le Tian", "Yuxiang Hu", "Xinglong Pei", "Qi Zhan", "Qilong Huang"]
 year: 2026
 venue: JCN
-doi: unknown
-url: unknown
+doi: "10.1016/j.comnet.2026.112724"
+url: "https://doi.org/10.1016/j.comnet.2026.112724"
 pdf: "00-inbox/PDFs/2026-JCN-Towards_adaptive_and_robust_website_fingerprinting_defense_with_multi-agent_deep_reinforcement_learning.pdf"
 mineru_md: "02-parsed-markdown/2026-JCN-Towards_adaptive_and_robust_website_fingerprinting_defense_with_multi-agent_deep_reinforcement_learning.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["匿名通信防御"]
+task: ["评估网站指纹防御与代价"]
+method: ["多智能体强化学习、MAPPO"]
+dataset: ["真实 Tor 语料上的防御仿真"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-09-29"
+updated: "2026-11-20"
 ---
 
 # Towards adaptive and robust website fingerprinting defense with multi-agent deep reinforcement learning
@@ -31,34 +31,83 @@ updated: "2026-09-29"
 | 会议/期刊 | JCN |
 | PDF | [[2026-JCN-Towards_adaptive_and_robust_website_fingerprinting_defense_with_multi-agent_deep_reinforcement_learning.pdf]] |
 | MinerU Markdown | [[2026-JCN-Towards_adaptive_and_robust_website_fingerprinting_defense_with_multi-agent_deep_reinforcement_learning.md]] |
+| 作者 | Yufei Zhu, Le Tian, Yuxiang Hu, Xinglong Pei, Qi Zhan, Qilong Huang |
+| DOI | [10.1016/j.comnet.2026.112724](https://doi.org/10.1016/j.comnet.2026.112724) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+作者在 Tor 轨迹驱动的仿真中评估多路径防御对分类表现和通信开销的影响。
 
 ## 2. 摘要原文
 ed as a classifier, where the input is the passively observed traffic feature vector (e.g., timing, packet direction), and the output is the predicted website label. Let ̂�(�) represent the attacker’s classification accuracy under the traffic splitting strategy �. Then, the defender’s optimization objective is : min ̂�(�), subject to the following constraints: (1) Traffic integrity constraint: $\textstyle \sum _ { i } p _ { i } = 1$ , which ensures that the traffic is fully allocated (2) Circuit bandwidth constraint: $\begin{array} { r } { \sum _ { u } b _ { u } \ \le \ B _ { i } , \quad \forall i \ \in \ { \mathfrak { c } } } \end{array}$ , where $b _ { u }$ represents the traffic demand of user $u ,$ and $B _ { i }$ is the bandwidth capacity of circuit �. ![](images/dd039d8ac768001ff6a36e9a39143a5e0d7bbe226a2483e539bac85f4ee3dd56.jpg) Fig. 2. MADRL interaction model. (3) Communication delay constraint: $\begin{array} { r } { \sum _ { i } d _ { i } \ \le \ D _ { m a x } } \end{array}$ , where $d _ { i }$ represents the delay for circuit �, and $D _ { m a x }$ is the maximum acceptable delay for the user. This optimization problem is difficult to model explicitly, especially when the attacker is capable of strategy learning and dynamically adjusting the classifier parameters. The defender faces a highly nonconvex, unstable dynamic optimization problem. Furthermore, consid ering that the attacker has adaptive learning capabilities, the classification strategy may constantly update with changes in the defense mechanism. In this setup, the problem essentially evolves into a two agent adversarial game, where the defender and the attacker agents engage in strategy iteration within the same environment, each attempting to minimize and maximize classification accuracy, respectively: $\begin{array} { r } { \operatorname* { m i n } _ { \pi _ { d } } \operatorname* { m a x } _ { \pi _ { a } } \hat { y } , } \end{array}$ where $\pi _ { d }$ represents the defender’s strategy (i.e., how to generate the splitting vector $p ) _ { : }$ , and $\pi _ { a }$ represents the attacker’s strategy $( \mathrm { i . e . , }$ , how to select the attack model and monitoring paths). During this adversarial game, both agents iteratively update their strategies to optimize their respective objectives. The defender aims to minimize the attacker’s recognition accuracy, while the attacker seeks to maximize it. The expected cumulative reward of this interaction is denoted as $R ,$ reflecti
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+在相同模拟设置下比较学习型防御、Tamaraw、WTF-PAD 与 FRONT 等方案。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：真实 Tor 语料上的防御仿真。
+- 作者报告：摘要报告 RAMAD 在特定仿真设定下对应的攻击成功率为 13.13%，另讨论通信开销和路径分布。
+- 原文位置：[[02-parsed-markdown/2026-JCN-Towards_adaptive_and_robust_website_fingerprinting_defense_with_multi-agent_deep_reinforcement_learning|原文解析稿]] · 摘要与原文仿真设定。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+结果来自模拟环境与所选对手。真实链路、系统部署和外部自适应对手需要独立验证。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
+
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-JCN-Towards_adaptive_and_robust_website_fingerprinting_defense_with_multi-agent_deep_reinforcement_learning|原文解析稿]] · 摘要与原文仿真设定。可引用的结论须保留所列实验条件。
+
+## 深度分析（2026-09-29）
+
+- reading_level: L3
+- 研究定位：WF防御/MADRL
+- 方法机制：RAMAD把WF攻防建模为Dec-POMDP，以异构攻击者和防御者构成多智能体博弈，采用MAPPO、集中训练分散执行，并用多目标奖励联合攻击准确率、流量平衡和路径成本；摘要声称攻击准确率降低超过80%。
+- 输入—处理—输出：输入为部分可观测Tor流量与网络状态；防御策略动态调整流量分割/路径，输出混淆后的流量。
+- 证据边界：性能百分比来自摘要，需核验数据集、基线、开销与训练稳定性；论文为JCN，代码未知。
+- 联动标签：website-fingerprinting；DNS；anomaly-detection；traffic-security
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
 - MinerU：已完成；解析质量需人工抽查。
 - Bib 元数据：待官方 API/论文首页核验。
+
 
 
 ## 深度分析（自动证据提取，需人工复核）
@@ -80,12 +129,4 @@ ed as a classifier, where the input is the passively observed traffic feature ve
 - 代码线索：未检测到明确 GitHub 线索。
 - 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
 
-## 深度分析（2026-09-29）
-
-- reading_level: L3
-- 研究定位：WF防御/MADRL
-- 方法机制：RAMAD把WF攻防建模为Dec-POMDP，以异构攻击者和防御者构成多智能体博弈，采用MAPPO、集中训练分散执行，并用多目标奖励联合攻击准确率、流量平衡和路径成本；摘要声称攻击准确率降低超过80%。
-- 输入—处理—输出：输入为部分可观测Tor流量与网络状态；防御策略动态调整流量分割/路径，输出混淆后的流量。
-- 证据边界：性能百分比来自摘要，需核验数据集、基线、开销与训练稳定性；论文为JCN，代码未知。
-- 联动标签：website-fingerprinting；DNS；anomaly-detection；traffic-security
-
+```

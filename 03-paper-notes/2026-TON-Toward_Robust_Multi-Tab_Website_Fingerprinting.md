@@ -7,7 +7,7 @@ year: 2026
 venue: "IEEE/ACM TON 2026"
 doi: "10.1109/TON.2026.3666721"
 url: unknown
-pdf: ""
+pdf: "00-inbox/PDFs/2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting.pdf"
 mineru_md: "02-parsed-markdown/2026-TON-Toward_Robust_Multi-Tab_Website_Fingerprinting.md"
 status: processed
 reading_level: L2

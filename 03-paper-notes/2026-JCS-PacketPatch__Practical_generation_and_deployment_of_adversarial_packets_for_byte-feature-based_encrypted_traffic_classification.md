@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "PacketPatch: Practical generation and deployment of adversarial packets for byte-feature-based encrypted traffic classification"
-title_cn: ""
-authors: []
+title_cn: "PacketPatch：字节流量分类器的对抗鲁棒性评估"
+authors: ["Yuwei Xu", "Yuanyuan Xu", "Yunpeng Bai", "Jiahui Chen", "Kehui Song", "Jie Cao", "Qiao Xiang", "Guang Cheng"]
 year: 2026
 venue: JCS
-doi: unknown
-url: unknown
+doi: "10.1016/j.cose.2026.104987"
+url: "https://doi.org/10.1016/j.cose.2026.104987"
 pdf: "00-inbox/PDFs/2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification.pdf"
 mineru_md: "02-parsed-markdown/2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["加密流量分类鲁棒性"]
+task: ["评估字节特征分类器对流量变化的敏感性"]
+method: ["受控鲁棒性对照与开销测量"]
+dataset: ["作者使用的三套分类语料"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-09-29"
+updated: "2026-11-20"
 ---
 
 # PacketPatch: Practical generation and deployment of adversarial packets for byte-feature-based encrypted traffic classification
@@ -31,34 +31,79 @@ updated: "2026-09-29"
 | 会议/期刊 | JCS |
 | PDF | [[2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification.pdf]] |
 | MinerU Markdown | [[2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification.md]] |
+| 作者 | Yuwei Xu, Yuanyuan Xu, Yunpeng Bai, Jiahui Chen, Kehui Song, Jie Cao, Qiao Xiang, Guang Cheng |
+| DOI | [10.1016/j.cose.2026.104987](https://doi.org/10.1016/j.cose.2026.104987) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+论文在受控试验中研究字节分类器对可用流量变体的鲁棒性及隐私开销。
 
 ## 2. 摘要原文
 论文未明确提取摘要。
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+对比原始与变体条件下的分类性能，同时测算处理和带宽成本。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：作者使用的三套分类语料。
+- 作者报告：摘要报告三套数据和四个对照方法，效果随论文的分类器和测试条件而异。
+- 原文位置：[[02-parsed-markdown/2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification|原文解析稿]] · 摘要与鲁棒性对照。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+可迁移性取决于接入假设、协议可用性与测试模型。复用时按正文报告的代价、成功率和兼容性分别核对。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
+
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-JCS-PacketPatch__Practical_generation_and_deployment_of_adversarial_packets_for_byte-feature-based_encrypted_traffic_classification|原文解析稿]] · 摘要与鲁棒性对照。可引用的结论须保留所列实验条件。
+
+### 并行深度分析（2026-09-29）
+- 方法/问题：PacketPatch studies practical generation and deployment of adversarial packets against byte-feature encrypted-traffic classifiers. The note requires source verification for packet constraints, optimization, deployment path and attack transferability. Missing: target models, datasets, success/overhead and perturbation validity.
+- 证据边界：以上仅使用对应 MinerU 解析稿摘要及可稳定提取段落；未提取到的数值、数据集、代码和参数均不作推断。
+- 复现建议：先核对原文表格、附录、代码仓库和数据划分，再确定 L3/L4 复现。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
 - MinerU：已完成；解析质量需人工抽查。
 - Bib 元数据：待官方 API/论文首页核验。
+
 
 
 ## 深度分析（自动证据提取，需人工复核）
@@ -81,7 +126,4 @@ updated: "2026-09-29"
 - 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
 
 
-### 并行深度分析（2026-09-29）
-- 方法/问题：PacketPatch studies practical generation and deployment of adversarial packets against byte-feature encrypted-traffic classifiers. The note requires source verification for packet constraints, optimization, deployment path and attack transferability. Missing: target models, datasets, success/overhead and perturbation validity.
-- 证据边界：以上仅使用对应 MinerU 解析稿摘要及可稳定提取段落；未提取到的数值、数据集、代码和参数均不作推断。
-- 复现建议：先核对原文表格、附录、代码仓库和数据划分，再确定 L3/L4 复现。
+```

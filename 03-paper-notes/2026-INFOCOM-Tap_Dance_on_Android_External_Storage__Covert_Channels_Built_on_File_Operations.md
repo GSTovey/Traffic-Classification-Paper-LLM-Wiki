@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Tap Dance on Android External Storage: Covert Channels Built on File Operations"
-title_cn: "unknown"
+title_cn: "Android 外部存储中文件操作的隐蔽信道风险"
 year: 2026
 venue: "INFOCOM"
 doi: "10.1109/INFOCOM59046.2026.11571343"

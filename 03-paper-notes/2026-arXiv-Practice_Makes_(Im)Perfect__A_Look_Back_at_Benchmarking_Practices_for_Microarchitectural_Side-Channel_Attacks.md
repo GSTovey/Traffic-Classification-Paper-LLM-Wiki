@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-arXiv-Practice_Makes_(Im)Perfect__A_Look_Back_at_Benchm
 mineru_md: "02-parsed-markdown/2026-arXiv-Practice_Makes_(Im)Perfect__A_Look_Back_at_Benchmarking_Practices_for_Microarchitectural_Side-Channel_Attacks.md"
 status: processed
 reading_level: L1
-research_area: []
-task: []
-method: []
+research_area: ["微体系结构安全评估"]
+task: ["比较侧信道基准和性能指标"]
+method: ["历史评估口径与基准审计"]
 dataset: ["自建语料：83 篇微架构侧信道论文（2014–2024，CCS/NDSS/S&P/USENIX Security/ASPLOS/HPCA/ISCA/MICRO）"]
 code: "https://github.com/Naeele/Practice_Makes_-Im-Perfect---Artifacts"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Practice Makes (Im)Perfect: A Look Back at Benchmarking Practices for Microarchitectural Side-Channel Attacks

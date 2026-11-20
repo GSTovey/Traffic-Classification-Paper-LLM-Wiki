@@ -2,11 +2,17 @@
   {
     "citation_key": "unknown2026despite",
     "entry_type": "misc",
-    "title": "DESPITE INSTRUCTIONS: FRONTIER AGENTS IMPROVISE COVERT CHANNELS AT TEST TIME",
-    "authors": [],
+    "title": "Despite Instructions: Frontier Agents Improvise Covert Channels at Test Time",
+    "authors": [
+      "Jacob Dineen",
+      "Silei Ren",
+      "Muhao Chen",
+      "Dan Roth",
+      "Ben Zhou"
+    ],
     "year": 2026,
-    "doi": "",
-    "url": "",
+    "doi": "10.48550/arXiv.2609.32701",
+    "url": "https://doi.org/10.48550/arXiv.2609.32701",
     "booktitle": null,
     "journal": null,
     "pages": null,
@@ -22,10 +28,14 @@
     "citation_key": "unknown2026exact",
     "entry_type": "misc",
     "title": "Exact Second-Order Asymptotics for Covert Communication over DMCs with Variational Distance Constraints",
-    "authors": [],
+    "authors": [
+      "Qiaosheng Zhang",
+      "Lin Zhou",
+      "Xuelong Li"
+    ],
     "year": 2026,
-    "doi": "",
-    "url": "",
+    "doi": "10.48550/arXiv.2609.24675",
+    "url": "https://doi.org/10.48550/arXiv.2609.24675",
     "booktitle": null,
     "journal": null,
     "pages": null,
@@ -41,10 +51,17 @@
     "citation_key": "unknown2026feedback",
     "entry_type": "misc",
     "title": "Feedback Coding Enables Inference-Time Covert Agentic Communication",
-    "authors": [],
+    "authors": [
+      "Sidong Guo",
+      "Sajani Vithana",
+      "Atefeh Gilani",
+      "Lalitha Sankar",
+      "Oliver Kosut",
+      "Flavio P. Calmon"
+    ],
     "year": 2026,
-    "doi": "",
-    "url": "",
+    "doi": "10.48550/arXiv.2609.24994",
+    "url": "https://doi.org/10.48550/arXiv.2609.24994",
     "booktitle": null,
     "journal": null,
     "pages": null,
@@ -60,10 +77,16 @@
     "citation_key": "unknown2026multiplexing",
     "entry_type": "misc",
     "title": "Multiplexing approaches to thermoradiative signatureless communications",
-    "authors": [],
+    "authors": [
+      "Valerii Radchenkov",
+      "Peter J. Reece",
+      "Stephen P. Bremner",
+      "Nicholas J. Ekins-Daukes",
+      "Michael P. Nielsen"
+    ],
     "year": 2026,
-    "doi": "",
-    "url": "",
+    "doi": "10.48550/arXiv.2609.21353",
+    "url": "https://doi.org/10.48550/arXiv.2609.21353",
     "booktitle": null,
     "journal": null,
     "pages": null,
@@ -79,10 +102,12 @@
     "citation_key": "unknown2026unknown",
     "entry_type": "misc",
     "title": "Unknown-Traffic Detection, Calibration and Shortcut Reliance in Distilled Encrypted-Traffic Classifiers over One Year",
-    "authors": [],
+    "authors": [
+      "Mahmoud Abbasi"
+    ],
     "year": 2026,
-    "doi": "",
-    "url": "",
+    "doi": "10.48550/arXiv.2609.31141",
+    "url": "https://doi.org/10.48550/arXiv.2609.31141",
     "booktitle": null,
     "journal": null,
     "pages": null,
@@ -98,10 +123,18 @@
     "citation_key": "unknown2026your",
     "entry_type": "misc",
     "title": "Your Model Is Leaking: Covert Information Transfer through LLM Residual Streams",
-    "authors": [],
+    "authors": [
+      "Mingyuan Li",
+      "Yanna Jiang",
+      "Guangsheng Yu",
+      "Qin Wang",
+      "Xu Wang",
+      "Wei Ni",
+      "Ren Ping Liu"
+    ],
     "year": 2026,
-    "doi": "",
-    "url": "",
+    "doi": "10.48550/arXiv.2609.27996",
+    "url": "https://doi.org/10.48550/arXiv.2609.27996",
     "booktitle": null,
     "journal": null,
     "pages": null,
@@ -365,28 +398,26 @@
   },
   {
     "citation_key": "he2026trafficmoe",
-    "entry_type": "article",
+    "entry_type": "misc",
     "title": "TrafficMoE: Heterogeneity-aware Mixture of Experts for Encrypted Traffic Classification",
     "authors": [
-      "Chen, Huimin",
-      "Gao, Dehong",
-      "Zhang, Wenxiao",
-      "Yang, Libin",
-      "Zhou, Zibo"
+      "Qing He",
+      "Xiaowei Fu",
+      "Lei Zhang"
     ],
     "year": 2026,
-    "doi": "10.1007/s44443-026-01202-7",
-    "url": "https://arxiv.org/abs/2605",
-    "booktitle": null,
-    "journal": "Journal of King Saud University Computer and Information Sciences",
-    "pages": null,
-    "volume": "38",
-    "number": "7",
-    "publisher": "Springer Science and Business Media LLC",
-    "abstract": "Abstract\n                  Network traffic analysis is fundamentally challenged by the need to accurately identify malicious behaviors and application types from massive, structurally heterogeneous packet data. Existing deep learning and Large Language Model (LLM)-based methods typically rely on shared parameter spaces optimized for isolated, single-task scenarios. Consequently, when deployed in dynamic multi-task environments, these approaches may be affected by cross-task gradient interference and negative transfer. To address these limitations, we propose TrafficMoE, an LLM-based Mixture-of-Experts (MoE) framework for supervised multi-task network traffic classification. Specifically, TrafficMoE formulates heterogeneous traffic tasks under a unified instruction-to-label generation paradigm by converting packet metadata into text. To mitigate task interference, the framework integrates a shared traffic expert to capture common semantics, multiple task-specialized experts to separate domain knowledge, and a lightweight context-aware router for automatic, sample-wise dispatching under mixed-task inputs. Furthermore, to support continual task evolution, we design a modular sequential expansion strategy that accommodates new tasks by adding a single expert and updating the router. Extensive evaluations across ten public benchmark datasets show that TrafficMoE achieves an average F1-score of 0.9823, while supporting modular task expansion with reduced adaptation overhead.",
+    "doi": "10.48550/arXiv.2603.29520",
+    "url": "https://arxiv.org/abs/2603.29520",
+    "booktitle": "",
+    "journal": "",
+    "pages": "",
+    "volume": "",
+    "number": "",
+    "publisher": "arXiv",
+    "abstract": "Encrypted traffic classification is a critical task for network security. While deep learning has advanced this field, the occlusion of payload semantics by encryption severely challenges standard modeling approaches. Most existing frameworks rely on static and homogeneous pipelines that apply uniform parameter sharing and static fusion strategies across all inputs. This “one-size-fits-all” static design is inherently flawed: by forcing structured headers and randomized payloads into a unified processing pipeline, it inevitably entangles the raw protocol signals with stochastic encryption noise, thereby degrading the fine-grained discriminative features. In this paper, we propose TrafficMoE, a framework that breaks through the bottleneck of static modeling by establishing a Disentangle–Filter–Aggregate (DFA) paradigm. Specifically, to resolve the structural betweencomponents conflict, the architecture disentangles headers and payloads using dual-branch sparse Mixture-of-Experts (MoE), enabling modality-specific modeling. To mitigate the impact of stochastic noise, an uncertainty-aware filtering mechanism is introduced to quantify reliability and selectively suppress highvariance representations. Finally, to overcome the limitations of static fusion, a routing-guided strategy aggregates cross-modality features dynamically, that adaptively weighs contributions based on traffic context. With this DFA paradigm, TrafficMoE maximizes representational efficiency by focusing solely on the most discriminative traffic features. Extensive experiments on six datasets demonstrate TrafficMoE consistently outperforms stateof-the-art methods, validating the necessity of heterogeneityaware modeling in encrypted traffic analysis. The source code is publicly available at https://github.com/Posuly/TrafficMoE main.",
     "source_file": "2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification.pdf",
     "note_file": "2026-arXiv-TrafficMoE__Heterogeneity-aware_Mixture_of_Experts_for_Encrypted_Traffic_Classification.md",
-    "metadata_source": "note"
+    "metadata_source": "arxiv"
   },
   {
     "citation_key": "chen2026dentc",
@@ -508,12 +539,12 @@
     "entry_type": "article",
     "title": "Ultimate Encrypted Traffic Feature Engineering: HTTPS Encrypted Traffic Classification Using Restored Application Data Unit Length",
     "authors": [
-      "Chen, Zihan",
-      "Cheng, Guang",
-      "Niu, Dandan",
-      "Zhao, Yuyu",
-      "Zhou, Yuyang",
-      "Jiang, Shanqing"
+      "Zihan Chen",
+      "Guang Cheng",
+      "Dandan Niu",
+      "Yuyu Zhao",
+      "Yuyang Zhou",
+      "Shanqing Jiang"
     ],
     "year": 2026,
     "doi": "10.1109/tdsc.2025.3615592",
@@ -634,7 +665,7 @@
   {
     "citation_key": "ding2026making",
     "entry_type": "article",
-    "title": "Making the Best of Both Worlds: Universal Perturbations for Live Black-Box Evasion Against NIDS in Encrypted Trafic",
+    "title": "Making the Best of Both Worlds: Universal Perturbations for Live Black-Box Evasion Against NIDS in Encrypted Traffic",
     "authors": [
       "Ding, Hua",
       "Chen, Lixing",
@@ -721,12 +752,12 @@
     "entry_type": "article",
     "title": "TunnelEye: An Explainable Framework for Real-Time Detection of Malicious DoH Traffic in High-Speed Backbone Networks",
     "authors": [
-      "Du, Jiajia",
-      "Liu, Songtao",
-      "Zhi, Cheng",
-      "Zhao, Junfan",
-      "Wu, Hua",
-      "Cheng, Guang"
+      "Jiajia Du",
+      "Songtao Liu",
+      "Cheng Zhi",
+      "Junfan Zhao",
+      "Hua Wu",
+      "Guang Cheng"
     ],
     "year": 2026,
     "doi": "10.1109/tnsm.2026.3682686",
@@ -796,7 +827,7 @@
   {
     "citation_key": "dutta2026kan",
     "entry_type": "article",
-    "title": "KAN-VIS: Eficient and Lightweight Visual Technique for Network Trafic Classification Using Kolmogorov–Arnold Network",
+    "title": "KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network",
     "authors": [
       "Dutta, Anurag",
       "Anand, Pallavi",
@@ -1000,7 +1031,7 @@
   },
   {
     "citation_key": "liu2026inevitability",
-    "entry_type": "inproceedings",
+    "entry_type": "article",
     "title": "The Inevitability of Side-Channel Leakage in Encrypted Traffic",
     "authors": [
       "Guangjie Liu",
@@ -1009,17 +1040,18 @@
     ],
     "year": 2026,
     "doi": "10.12263/DZXB.20251034",
-    "url": "https://doi.org/10.12263/DZXB.20251034",
-    "booktitle": null,
-    "journal": null,
-    "pages": null,
-    "volume": null,
-    "number": null,
+    "url": "https://www.ejournal.org.cn/en/article/doi/10.12263/DZXB.20251034",
+    "booktitle": "",
+    "journal": "Acta Electronica Sinica",
+    "pages": "837--850",
+    "volume": "54",
+    "number": "2",
     "publisher": null,
     "abstract": "",
     "source_file": "2026-AES-The_Inevitability_of_Side-Channel_Leakage_in_Encrypted_Traffic.pdf",
     "note_file": "2026-AES-The_Inevitability_of_Side-Channel_Leakage_in_Encrypted_Traffic.md",
-    "metadata_source": "note"
+    "metadata_source": "publisher",
+    "local_version": "arXiv:2602.14055"
   },
   {
     "citation_key": "zhang2026trojpix",
@@ -1107,29 +1139,29 @@
   },
   {
     "citation_key": "unknown2026improving",
-    "entry_type": "inproceedings",
-    "title": "IMPROVING THE RELIABILITY OF ANOMALY DETECTION FOR ENCRYPTED OPC UA TRAFFIC OVER PRIVATE 5G",
+    "entry_type": "misc",
+    "title": "Improving the Reliability of Anomaly Detection for Encrypted OPC UA Traffic over Private 5G",
     "authors": [
-      "Ha, Song Son",
-      "Foerster, Florian",
-      "Beuster, Henry",
-      "Kittel, Tim",
-      "Merli, Dominik",
-      "Scholl, Gerd"
+      "Song Son Ha",
+      "Florian Foerster",
+      "Henry Beuster",
+      "Tim Kittel",
+      "Dominik Merli",
+      "Gerd Scholl"
     ],
     "year": 2026,
-    "doi": "10.1109/etfa68377.2026.11725251",
-    "url": "https://doi.org/10.1109/etfa68377.2026.11725251",
-    "booktitle": "2026 IEEE 31st International Conference on Emerging Technologies and Factory Automation (ETFA)",
-    "journal": null,
-    "pages": "1-4",
-    "volume": null,
-    "number": null,
-    "publisher": "IEEE",
+    "doi": "10.48550/arXiv.2609.29745",
+    "url": "https://arxiv.org/abs/2609.29745",
+    "booktitle": "",
+    "journal": "",
+    "pages": "",
+    "volume": "",
+    "number": "",
+    "publisher": "arXiv",
     "abstract": "",
     "source_file": "2026-arXiv-Improving_the_Reliability_of_Anomaly_Detection_for_Encrypted_OPC_UA_Traffic_over_Private_5G.pdf",
     "note_file": "2026-arXiv-Improving_the_Reliability_of_Anomaly_Detection_for_Encrypted_OPC_UA_Traffic_over_Private_5G.md",
-    "metadata_source": "note"
+    "metadata_source": "arxiv"
   },
   {
     "citation_key": "han2026when",
@@ -1537,13 +1569,13 @@
   {
     "citation_key": "unknown2026rofire",
     "entry_type": "inproceedings",
-    "title": "RoFiRe: Robust Website Fingerprinting on Real-World Tor Trafic via Improved Augmentation and Normalization",
+    "title": "RoFiRe: Robust Website Fingerprinting on Real-World Tor Traffic via Improved Augmentation and Normalization",
     "authors": [
-      "Jeon, Haeseung",
-      "Kim, Sujin",
-      "Mathews, Nate",
-      "Kang, Hosung",
-      "Oh, Se Eun"
+      "Haeseung Jeon",
+      "Sujin Kim",
+      "Nate Mathews",
+      "Hosung Kang",
+      "Se Eun Oh"
     ],
     "year": 2026,
     "doi": "10.1145/3774904.3792592",
@@ -1720,29 +1752,26 @@
     "entry_type": "inproceedings",
     "title": "Towards Practical Few-shot Multi-tab Website Fingerprinting",
     "authors": [
-      "Ju, Xinlei",
-      "Li, Zhen",
-      "Li, Yang",
-      "Yin, Lihua",
-      "Guan, Zhong",
-      "Gou, Gaopeng",
-      "Zhou, Mi",
-      "Shi, Junzheng",
-      "Xiong, Gang"
+      "Lin Liu",
+      "Ziling Wei",
+      "Zhuotao Liu",
+      "Xinhao Deng",
+      "Zixuan Dong",
+      "Shuhui Chen"
     ],
     "year": 2026,
-    "doi": "10.1109/iwqos70441.2026.11661113",
-    "url": "https://doi.org/10.1109/iwqos70441.2026.11661113",
-    "booktitle": "2026 IEEE/ACM International Symposium on Quality of Service (IWQoS)",
-    "journal": null,
-    "pages": "1-10",
-    "volume": null,
-    "number": null,
-    "publisher": "IEEE",
+    "doi": "",
+    "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-lin",
+    "booktitle": "35th USENIX Security Symposium (USENIX Security 26)",
+    "journal": "",
+    "pages": "3083--3102",
+    "volume": "",
+    "number": "",
+    "publisher": "USENIX Association",
     "abstract": "",
     "source_file": "2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.pdf",
     "note_file": "2026-USENIX-Towards_Practical_Few-shot_Multi-tab_Website_Fingerprinting.md",
-    "metadata_source": "note"
+    "metadata_source": "usenix"
   },
   {
     "citation_key": "pang2026provable",
@@ -1819,24 +1848,26 @@
   },
   {
     "citation_key": "ravi2026remise",
-    "entry_type": "article",
+    "entry_type": "inproceedings",
     "title": "Remise: Authorized Anonymous Communication Systems",
     "authors": [
-      "Kareem, Malath Sabri"
+      "Rohan Ravi",
+      "Paritosh Shukla",
+      "Adithya Vadapalli"
     ],
     "year": 2026,
-    "doi": "10.61401/rmaps.v3i2.510",
+    "doi": "",
     "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/ravi-rohan",
-    "booktitle": null,
-    "journal": "Review of Multidisciplinary Academic and Practice Studies",
-    "pages": "67-80",
-    "volume": "3",
-    "number": "2",
-    "publisher": "Sekolah Tinggi Ilmu Ekonomi Krakatau",
-    "abstract": "Purpose: This study examines the security aspects of anonymous communication systems, which are critical for protecting digital privacy and maintaining freedom of expression online. It focuses on widely used systems, such as the Tor network and Holloway's Freedom protocol, analyzing vulnerabilities, systemic weaknesses, and the advanced attack techniques employed by adversaries to compromise user anonymity, including traffic analysis, de-anonymization, and timing correlation attacks.\r\nResearch Methodology: A literature-based analytical approach was employed, reviewing specialized scientific articles and experimental studies published between 2020 and 2026. Emphasis was placed on research accepted at prominent conferences in network security and privacy protection. The study synthesizes evidence on security threats, attack methodologies, and systemic vulnerabilities affecting anonymous communication systems.\r\nResults: The analysis reveals persistent fundamental weaknesses in current anonymous communication systems, which continue to compromise security. Additionally, the application of big data and artificial intelligence has facilitated increasingly sophisticated attack strategies capable of penetrating multiple layers of anonymity. The study identifies both the limitations of existing systems and the emerging risks that users face.\r\nConclusions: Protecting anonymity in digital communication requires both system-level improvements and strategic countermeasures against evolving attack techniques. Recommendations include technical upgrades, protocol redesigns, and adoption of AI-resistant security measures to ensure the resilience of anonymous communication systems in the future.\r\nLimitations: The study relies on literature review and secondary data rather than primary experimental validation. As such, conclusions may not fully generalize to all types of anonymous systems or evolving attack scenarios.\r\nContribution: This study provides a comprehensive analysis of current threats and vulnerabilities in anonymous communication systems, offering practical and research-oriented recommendations to strengthen digital privacy protection and to future-proof these systems against increasingly sophisticated attacks.",
+    "booktitle": "35th USENIX Security Symposium (USENIX Security 26)",
+    "journal": "",
+    "pages": "3199--3218",
+    "volume": "",
+    "number": "",
+    "publisher": "USENIX Association",
+    "abstract": "We present Remise, a two-server authorized anonymous communication system built on Distributed Oblivious RAM (DORAM). Remise supports two modes of operation: (i) an anonymous bulletin board, where messages are publicly revealed at the end of each epoch without linking senders to messages, and (ii) anonymous commu nication channels, where messages remain secret-shared, and writers selectively grant and revoke read access to chosen readers. In both modes, the two servers execute read and write operations without learning which indices are accessed, which authorization tokens are used, or which relationships exist between writers and readers, assuming no collusion between the servers. A central con tribution of Remise is a lightweight and efficient accesscontrol mechanism. Authorization tokens are maintained in secret-shared form across the two servers, enabling oblivious verification and updates, while preventing leak age even under client–server collusion. Unlike prior DPF-based systems, Remise provides built-in auditing by having the semi-honest servers generate standard-basis vector shares internally, eliminating the need for server side DPF validity checks. We implement a prototype of Remise and evaluate it under realistic network conditions. Our experiments show an 80× improvement in online server time for request validity check when compared to PACL (IEEE S&P 2023) for large database size.",
     "source_file": "2026-USENIX-Remise__Authorized_Anonymous_Communication_Systems.pdf",
     "note_file": "2026-USENIX-Remise__Authorized_Anonymous_Communication_Systems.md",
-    "metadata_source": "note"
+    "metadata_source": "usenix"
   },
   {
     "citation_key": "khajavi2026lightening",
@@ -2282,7 +2313,7 @@
   {
     "citation_key": "liu2026srvit",
     "entry_type": "article",
-    "title": "SRViT: A Robust Online Encrypted Trafic Classification Based on Vision Transformer",
+    "title": "SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer",
     "authors": [
       "Liu, Chang",
       "Han, Lei",
@@ -2309,7 +2340,7 @@
   {
     "citation_key": "liu2026two",
     "entry_type": "article",
-    "title": "Two Heads Are Better Than One: Models-to-Model Learning for Encrypted Trafic Analysis",
+    "title": "Two Heads Are Better Than One: Models-to-Model Learning for Encrypted Traffic Analysis",
     "authors": [
       "Liu, Jia",
       "Lu, Bin",
@@ -2336,7 +2367,7 @@
   {
     "citation_key": "liu2026two_2",
     "entry_type": "article",
-    "title": "Two Heads Are Not Better Than One: Continual Learning From Multiple Models for Encrypted Trafic Analysis",
+    "title": "Two Heads Are Not Better Than One: Continual Learning From Multiple Models for Encrypted Traffic Analysis",
     "authors": [
       "Liu, Jia",
       "Lu, Bin",
@@ -2441,12 +2472,12 @@
   {
     "citation_key": "unknown2026priority",
     "entry_type": "article",
-    "title": "A Priority-Aware Dual-Channel Feature Fusion Method for Urban Rail Service Trafic Classification",
+    "title": "A priority-aware dual-channel feature fusion method for urban rail service traffic classification",
     "authors": [
-      "Liu, Xinpeng",
-      "Zhao, Junhui",
-      "Wu, Zhengyuan",
-      "Li, Huaicheng"
+      "Xinpeng Liu",
+      "Junhui Zhao",
+      "Zhengyuan Wu",
+      "Huaicheng Li"
     ],
     "year": 2026,
     "doi": "10.1007/s10489-026-07560-z",
@@ -2460,7 +2491,8 @@
     "abstract": "",
     "source_file": "2026-arXiv-A_Priority-Aware_Dual-Channel_Feature_Fusion_Method_for_Urban_Rail_Service_Traffic_Classification.pdf",
     "note_file": "2026-arXiv-A_Priority-Aware_Dual-Channel_Feature_Fusion_Method_for_Urban_Rail_Service_Traffic_Classification.md",
-    "metadata_source": "note"
+    "metadata_source": "note",
+    "local_version": "arXiv:2609.32168"
   },
   {
     "citation_key": "xu2026dalens",
@@ -2543,37 +2575,38 @@
     "entry_type": "article",
     "title": "GAN-based Tor obfuscated traffic identification on imbalanced datasets",
     "authors": [
-      "Lu, Tianbo",
-      "Zhao, Pengfei",
-      "Cai, Yingjie",
-      "Abdulla, Subatjan",
-      "Chen, Hanrui"
+      "Tianbo Lu",
+      "Pengfei Zhao",
+      "Yingjie Cai",
+      "Subatjan Abdulla",
+      "Hanrui Chen"
     ],
-    "year": 2026,
-    "doi": "10.2139/ssrn.6709728",
-    "url": "https://doi.org/10.2139/ssrn.6709728",
-    "booktitle": null,
-    "journal": null,
-    "pages": null,
-    "volume": null,
+    "year": 2027,
+    "doi": "10.1016/j.cose.2026.105167",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0167404826003433",
+    "booktitle": "",
+    "journal": "Computers & Security",
+    "pages": "105167",
+    "volume": "172",
     "number": null,
-    "publisher": "Elsevier BV",
+    "publisher": "Elsevier",
     "abstract": "Although deep learning models have demonstrated strong performance in identifying vanilla Tor traffic, the classification of obfuscated Tor traffic, particularly from newly emerged obfuscators, remains under-explored. A practical challenge is that real datasets are often limited, imbalanced, and noisy, which can reduce deep learning performance. To bridge this gap, we adapt the GAN (Generative Adversarial Network) for a semi-supervised classification task of obfuscated Tor traffic. Leveraging the generator&amp;apos;s capacity to synthesize minority-class samples, the discriminator is trained to robustly classify traffic from popular obfuscation tools, including Obfs4, WebTunnel, Snowflake, Dnstt and Shadowsocks. We also curate a diverse dataset to evaluate our model against recent approaches, using Recall and F1-Score as key metrics. Results demonstrate that our method outperforms existing ones, particularly on imbalanced datasets, highlighting its effectiveness in real-world scenarios.",
     "source_file": "2026-JCS-GAN-based_Tor_obfuscated_traffic_identification_on_imbalanced_datasets.pdf",
     "note_file": "2026-JCS-GAN-based_Tor_obfuscated_traffic_identification_on_imbalanced_datasets.md",
-    "metadata_source": "note"
+    "metadata_source": "publisher",
+    "preprint_doi": "10.2139/ssrn.6709728"
   },
   {
     "citation_key": "unknown2026sagnn",
     "entry_type": "article",
     "title": "SaGNN: Encrypted traffic classification with semantic-aware heterogeneous graph neural network",
     "authors": [
-      "Luo, Junjie",
-      "Liu, Min",
-      "Sun, Sheng",
-      "Chen, Yali",
-      "Tang, Qixun",
-      "Wang, Yuwei"
+      "Junjie Luo",
+      "Min Liu",
+      "Sheng Sun",
+      "Yali Chen",
+      "Qixun Tang",
+      "Yuwei Wang"
     ],
     "year": 2026,
     "doi": "10.1016/j.comnet.2026.112763",
@@ -3255,13 +3288,13 @@
     "entry_type": "article",
     "title": "Secrets in Radio Waves: Towards Practical and Protocol-Agnostic PHY Information Hiding",
     "authors": [
-      "Shen, Guanxiong",
-      "Jia, Hailang",
-      "Zhang, Junqing",
-      "Peng, Linning",
-      "Chen, Liquan",
-      "Hu, Aiqun",
-      "Luo, Jun"
+      "Guanxiong Shen",
+      "Hailang Jia",
+      "Junqing Zhang",
+      "Linning Peng",
+      "Liquan Chen",
+      "Aiqun Hu",
+      "Jun Luo"
     ],
     "year": 2026,
     "doi": "10.1109/tmc.2026.3736788",
@@ -3275,7 +3308,8 @@
     "abstract": "Physical layer (PHY) information hiding supports critical applications, such as digital fingerprinting for transmitter identification and undetectable side channels for covert communication, and has attracted considerable attention from the research community. One category of prior studies focuses on theoretical analysis, proposing techniques such as artificial noise or reconfigurable intelligent surfaces to enable undetectable covert transmission. However, hardware prototypes are rarely presented due to their algorithmic complexity or hard-to-satisfy assumptions. Another category of studies focuses on system-level solutions, achieving PHY information hiding by customizing existing modulation schemes. However, these methods are typically designed for specific wireless protocols, limiting their generalizability. In this work, we introduce a new PHY information hiding paradigm that differs fundamentally from the previous two categories of approaches. Inspired by recent advancements in other domains such as image information hiding, we migrate encoder-decoder neural networks to the PHY information hiding field, embedding secrets by introducing imperceptible distortions within the preamble waveform. Sim-to-real fine-tuning is additionally proposed to tackle unique challenges, e.g., fading and hardware imperfections. The designed methodology is practical and protocol-agnostic. We provide case hardware prototypes of two commercially popular wireless technologies, i.e., LoRa and Bluetooth Low Energy (BLE), using commodity software-defined radio (SDR) transceivers, demonstrating excellent feasibility and generalizability. Index Terms—Physical layer security, wireless steganography, information hiding, deep learning, LoRa, Bluetooth Low Energy",
     "source_file": "2026-arXiv-Secrets_in_Radio_Waves__Towards_Practical_and_Protocol-Agnostic_PHY_Information_Hiding.pdf",
     "note_file": "2026-arXiv-Secrets_in_Radio_Waves__Towards_Practical_and_Protocol-Agnostic_PHY_Information_Hiding.md",
-    "metadata_source": "note"
+    "metadata_source": "note",
+    "local_version": "arXiv:2609.23319"
   },
   {
     "citation_key": "shi2026eclipse",
@@ -3360,34 +3394,33 @@
     "entry_type": "inproceedings",
     "title": "Revelio: A Global Study of VoIP Blocking",
     "authors": [
-      "Shin, Kangsik",
-      "Choi, GyuHyeon",
-      "Lee, KyeongSeok",
-      "Lee, Jeongho",
-      "Cho, Ho-Mook"
+      "Arjun Gupta",
+      "Roya Ensafi",
+      "Piyush Kumar",
+      "Devashish Gosain"
     ],
     "year": 2026,
-    "doi": "10.1109/icoin68469.2026.11480550",
+    "doi": "",
     "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/gupta",
-    "booktitle": "2026 40th International Conference on Information Networking (ICOIN)",
-    "journal": null,
-    "pages": "479-483",
-    "volume": null,
-    "number": null,
-    "publisher": "IEEE",
+    "booktitle": "35th USENIX Security Symposium (USENIX Security 26)",
+    "journal": "",
+    "pages": "3063--3082",
+    "volume": "",
+    "number": "",
+    "publisher": "USENIX Association",
     "abstract": "",
     "source_file": "2026-USENIX-Revelio__A_Global_Study_of_VoIP_Blocking.pdf",
     "note_file": "2026-USENIX-Revelio__A_Global_Study_of_VoIP_Blocking.md",
-    "metadata_source": "note"
+    "metadata_source": "usenix"
   },
   {
     "citation_key": "unknown2026replicability",
     "entry_type": "inproceedings",
-    "title": "Replicability: Challenging the Myth of Randomness Paterns in Encrypted Trafic",
+    "title": "Replicability: Challenging the Myth of Randomness Patterns in Encrypted Traffic",
     "authors": [
-      "Shpakov, Timofey",
-      "Burkhart, Martin",
-      "Vanbever, Laurent"
+      "Timofey Shpakov",
+      "Martin Burkhart",
+      "Laurent Vanbever"
     ],
     "year": 2026,
     "doi": "10.1145/3777912.3839783",
@@ -3481,15 +3514,15 @@
     "entry_type": "inproceedings",
     "title": "SemFuzz: A Semantics-Aware Fuzzing Framework for Network Protocol Implementations",
     "authors": [
-      "Sun, Yanbang",
-      "Luo, Quan",
-      "Wang, Yuelin",
-      "Chen, Qian",
-      "Liu, Benjin",
-      "Chen, Ruiqi",
-      "Huang, Qing",
-      "Li, Xiaohong",
-      "Wang, Junjie"
+      "Yanbang Sun",
+      "Quan Luo",
+      "Yuelin Wang",
+      "Qian Chen",
+      "Benjin Liu",
+      "Ruiqi Chen",
+      "Qing Huang",
+      "Xiaohong Li",
+      "Junjie Wang"
     ],
     "year": 2026,
     "doi": "10.1145/3774904.3792541",
@@ -3510,10 +3543,10 @@
     "entry_type": "article",
     "title": "Uncovering robot joint-level controller actions from encrypted network traffic: Empirical attacks and information-theoretic bounds",
     "authors": [
-      "Tang, Cheng",
-      "Barradas, Diogo",
-      "Hengartner, Urs",
-      "Hu, Yue"
+      "Cheng Tang",
+      "Diogo Barradas",
+      "Urs Hengartner",
+      "Yue Hu"
     ],
     "year": 2026,
     "doi": "10.1016/j.cose.2026.105018",
@@ -3602,7 +3635,7 @@
   {
     "citation_key": "towhid2026encrypted",
     "entry_type": "article",
-    "title": "Encrypted Network Trafic Classification Using Generative and Contrastive Self-Supervised Learning",
+    "title": "Encrypted Network Traffic Classification Using Generative and Contrastive Self-Supervised Learning",
     "authors": [
       "Towhid, Md. Shamim",
       "Shahriar, Nashid"
@@ -3624,12 +3657,12 @@
   {
     "citation_key": "unknown2026quantifying",
     "entry_type": "inproceedings",
-    "title": "Quantifying the Privacy Implications of High-Fidelity Synthetic Network Trafic",
+    "title": "Quantifying the Privacy Implications of High-Fidelity Synthetic Network Traffic",
     "authors": [
-      "Tran, Van",
-      "Liu, Shinan",
-      "Li, Tian",
-      "Feamster, Nick"
+      "Van Tran",
+      "Shinan Liu",
+      "Tian Li",
+      "Nick Feamster"
     ],
     "year": 2026,
     "doi": "10.1145/3777912.3839833",
@@ -3700,28 +3733,28 @@
   },
   {
     "citation_key": "unknown2026robust_3",
-    "entry_type": "article",
+    "entry_type": "misc",
     "title": "Robust Transceiver Design for SIM-Assisted Integrated Sensing and Covert Communications",
     "authors": [
-      "Wang, Jiaqi",
-      "Lv, Lu",
-      "Wang, Yilin",
-      "He, Bingtao",
-      "Yang, Long"
+      "Ahmed M. Benaya",
+      "Ali A. Nasir",
+      "Khaled M. Rabie",
+      "A. Abdelaziz Salem",
+      "Daniel B. da Costa"
     ],
     "year": 2026,
-    "doi": "10.1109/lcomm.2026.3686041",
-    "url": "https://doi.org/10.1109/lcomm.2026.3686041",
-    "booktitle": null,
-    "journal": "IEEE Communications Letters",
-    "pages": "1761-1765",
-    "volume": "30",
-    "number": null,
-    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
-    "abstract": "Stacked intelligent metasurfaces (SIMs) have emerged as a promising wave-domain processing technology for sixth-generation integrated sensing and communication networks, reducing reliance on complex radio-frequency hardware. Nevertheless, imperfect channel state information (CSI) can compromise sensing performance and communication reliability. Moreover, ensuring covert transmission introduces a further challenge, as the system must sense potential targets while concealing communication activity from unauthorized wardens. These challenges motivate the development of robust SIM-assisted integrated sensing and covert communication (ISACC) systems. In this paper, we investigate the robust transceiver design of a multi-user, multi-target ISACC system under imperfect CSI. We jointly optimize the transmit and receive beamformers, sensing covariance matrix, and SIM phase shifts to maximize the worst-case minimum sensing signal-to-interference-plus-noise ratio. The formulation enforces constraints on bounded channel uncertainties, user qualityof-service requirements, transmit-power budget, SIM phase shifts, and target detection probabilities. Since the formulated problem is highly non-convex, we develop an alternating optimization framework based on the S-procedure, successive convex approximation, and semidefinite relaxation. Furthermore, to reduce computational complexity, we derive exact lowerdimensional representations of the robust sensing linear matrix inequalities (LMIs) involved in transmit/receive-beamformer designs. We further develop a low-complexity phase-update method that avoids the large sensing LMIs. Numerical results demonstrate that the proposed design outperforms random phase shift and fully digital-beamforming benchmarks, while the low-complexity scheme achieves comparable performance to the LMI-based scheme at substantially lower computational cost. Index Terms—Stacked intelligent metasurfaces, integrated sensing and communication, covert communication, imperfect channel state information, robust design.",
+    "doi": "10.48550/arXiv.2609.33266",
+    "url": "https://arxiv.org/abs/2609.33266",
+    "booktitle": "",
+    "journal": "",
+    "pages": "",
+    "volume": "",
+    "number": "",
+    "publisher": "arXiv",
+    "abstract": "Stacked intelligent metasurfaces (SIMs) have emerged as a promising wave-domain processing technology for sixth-generation integrated sensing and communication networks, reducing reliance on complex radio-frequency hardware. Nevertheless, imperfect channel state information (CSI) can compromise sensing performance and communication reliability. Moreover, ensuring covert transmission introduces a further challenge, as the system must sense potential targets while concealing communication activity from unauthorized wardens. These challenges motivate the development of robust SIM-assisted integrated sensing and covert communication (ISACC) systems. In this paper, we investigate the robust transceiver design of a multi-user, multi-target ISACC system under imperfect CSI. We jointly optimize the transmit and receive beamformers, sensing covariance matrix, and SIM phase shifts to maximize the worst-case minimum sensing signal-to-interference-plus-noise ratio. The formulation enforces constraints on bounded channel uncertainties, user qualityof-service requirements, transmit-power budget, SIM phase shifts, and target detection probabilities. Since the formulated problem is highly non-convex, we develop an alternating optimization framework based on the S-procedure, successive convex approximation, and semidefinite relaxation. Furthermore, to reduce computational complexity, we derive exact lowerdimensional representations of the robust sensing linear matrix inequalities (LMIs) involved in transmit/receive-beamformer designs. We further develop a low-complexity phase-update method that avoids the large sensing LMIs. Numerical results demonstrate that the proposed design outperforms random phase shift and fully digital-beamforming benchmarks, while the low-complexity scheme achieves comparable performance to the LMI-based scheme at substantially lower computational cost.",
     "source_file": "2026-arXiv-Robust_Transceiver_Design_for_SIM-Assisted_Integrated_Sensing_and_Covert_Communications.pdf",
     "note_file": "2026-arXiv-Robust_Transceiver_Design_for_SIM-Assisted_Integrated_Sensing_and_Covert_Communications.md",
-    "metadata_source": "note"
+    "metadata_source": "arxiv"
   },
   {
     "citation_key": "wang2026identifying",
@@ -4027,10 +4060,10 @@
     "entry_type": "inproceedings",
     "title": "Mind the Gap: Policy vs Reality in Post-Quantum TLS Deployment",
     "authors": [
-      "Wickramasinghe, Nimesha",
-      "Li, Frank",
-      "Jha, Sanjay",
-      "Shaghaghi, Arash"
+      "Nimesha Wickramasinghe",
+      "Frank Li",
+      "Sanjay Jha",
+      "Arash Shaghaghi"
     ],
     "year": 2026,
     "doi": "10.1145/3777912.3839797",
@@ -4078,14 +4111,14 @@
     "entry_type": "inproceedings",
     "title": "Tracking the Stray Sheep: Understanding DNS Response Manipulation in the Wild",
     "authors": [
-      "Wu, Wenhao",
-      "Wang, Zhaohua",
-      "Li, Zihan",
-      "Li, Qinxin",
-      "Xia, Yiming",
-      "Gao, Chuan",
-      "Zhang, Guangxing",
-      "Li, Zhenyu"
+      "Wenhao Wu",
+      "Zhaohua Wang",
+      "Zihan Li",
+      "Qinxin Li",
+      "Yiming Xia",
+      "Chuan Gao",
+      "Guangxing Zhang",
+      "Zhenyu Li"
     ],
     "year": 2026,
     "doi": "10.1145/3774904.3792405",
@@ -4273,14 +4306,14 @@
     "entry_type": "article",
     "title": "PacketPatch: Practical generation and deployment of adversarial packets for byte-feature-based encrypted traffic classification",
     "authors": [
-      "Xu, Yuwei",
-      "Xu, Yuanyuan",
-      "Bai, Yunpeng",
-      "Chen, Jiahui",
-      "Song, Kehui",
-      "Cao, Jie",
-      "Xiang, Qiao",
-      "Cheng, Guang"
+      "Yuwei Xu",
+      "Yuanyuan Xu",
+      "Yunpeng Bai",
+      "Jiahui Chen",
+      "Kehui Song",
+      "Jie Cao",
+      "Qiao Xiang",
+      "Guang Cheng"
     ],
     "year": 2026,
     "doi": "10.1016/j.cose.2026.104987",
@@ -4299,29 +4332,31 @@
   {
     "citation_key": "liu2026learning",
     "entry_type": "article",
-    "title": "Learning Flow Semantics via Contrastive Pre-training for Encrypted Traffic Analysis",
+    "title": "Learning Flow Semantics for Encrypted Traffic Analysis: A Contrastive Pre-Training Approach",
     "authors": [
-      "Xueliang Liu",
-      "Shunpu Tang",
-      "Jiaqi Xue",
-      "Yifan Xu",
-      "Jiajun Li",
-      "Chuanpu Chen",
+      "Ruijie Zhao",
+      "Mingwei Zhan",
+      "Qi Li",
+      "Zhuotao Liu",
+      "Xianwen Deng",
+      "Yanhao Wang",
+      "Guang Cheng",
+      "Zhi Xue",
       "Ke Xu"
     ],
     "year": 2026,
-    "doi": "10.1109/TDSC.2025.3596462",
-    "url": "https://ieeexplore.ieee.org/document/11121609",
-    "booktitle": null,
-    "journal": null,
-    "pages": null,
-    "volume": null,
-    "number": null,
-    "publisher": null,
+    "doi": "10.1109/TDSC.2026.3677663",
+    "url": "https://doi.org/10.1109/TDSC.2026.3677663",
+    "booktitle": "",
+    "journal": "IEEE Transactions on Dependable and Secure Computing",
+    "pages": "7864--7877",
+    "volume": "23",
+    "number": "4",
+    "publisher": "IEEE",
     "abstract": "Encrypted traffic analysis is crucial for cyberspace security. Self-supervised learning shows great promise to enhance traffic analysis with the pre-trained traffic encoder, which is constructed using large-scale, readily available unlabeled traffic data. However, existing approaches struggle to handle the increasingly prevalent encrypted traffic, as their generative reconstruction tasks cannot process encrypted content. To this end, we propose TACO, a robust and flexible encrypted traffic analysis system based on flow semantics learning. Specifically, we first design several feasible traffic data augmentation strategies to prepare flow semantics knowledge from the unlabeled traffic. Then, our traffic encoder with a traffic partition module learns the semantics knowledge based on the contrastive pre-training paradigm. It serves as a traffic foundation encoder that can comprehend flow semantics and extract effective semantic representations. Finally, we fine-tune the traffic encoder to leverage flow semantics for various downstream encrypted traffic analysis tasks. The experimental results illustrate that TACO outperforms the optimal baseline by 7.5% in average F1 score on four traffic classification datasets and achieves an improvement of at least 11.62% in average F1 score on the three transfer tasks, while indicating superior efficiency. We will release the source code as well as the experiment data upon publication to foster future research. Index Terms—Traffic analysis, contrastive pre-training, traffic data augmentation, flow semantics learning.",
     "source_file": "2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach.pdf",
     "note_file": "2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach.md",
-    "metadata_source": "note"
+    "metadata_source": "crossref"
   },
   {
     "citation_key": "yuan2026demux",
@@ -4649,10 +4684,10 @@
     "entry_type": "article",
     "title": "Robust and Invisible Flow Watermarking With Invertible Neural Network for Traffic Tracking",
     "authors": [
-      "Yuan, Yali",
-      "Ma, Ruolin",
-      "Ge, Jian",
-      "Cheng, Guang"
+      "Yali Yuan",
+      "Ruolin Ma",
+      "Jian Ge",
+      "Guang Cheng"
     ],
     "year": 2026,
     "doi": "10.1109/tnsm.2025.3645079",
@@ -4975,7 +5010,7 @@
   {
     "citation_key": "zhao2026when",
     "entry_type": "article",
-    "title": "When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Trafic Classification With Novelty Detection",
+    "title": "When Pre-Training Meets Contrast Learning: Few-Shot Encrypted Traffic Classification With Novelty Detection",
     "authors": [
       "Zhao, Lixin",
       "Wu, Changhao",
@@ -5000,12 +5035,12 @@
     "entry_type": "inproceedings",
     "title": "Robust LLM-Based Website Fingerprinting under Dynamic Real-World Conditions",
     "authors": [
-      "Zhao, Xiyuan",
-      "Deng, Xinhao",
-      "Cui, Tianyu",
-      "Zhang, Yixiang",
-      "Xu, Ke",
-      "Li, Qi"
+      "Xiyuan Zhao",
+      "Xinhao Deng",
+      "Tianyu Cui",
+      "Yixiang Zhang",
+      "Ke Xu",
+      "Qi Li"
     ],
     "year": 2026,
     "doi": "10.1145/3774904.3792288",
@@ -5286,12 +5321,12 @@
     "entry_type": "article",
     "title": "Towards adaptive and robust website fingerprinting defense with multi-agent deep reinforcement learning",
     "authors": [
-      "Zhu, Yufei",
-      "Tian, Le",
-      "Hu, Yuxiang",
-      "Pei, Xinglong",
-      "Zhan, Qi",
-      "Huang, Qilong"
+      "Yufei Zhu",
+      "Le Tian",
+      "Yuxiang Hu",
+      "Xinglong Pei",
+      "Qi Zhan",
+      "Qilong Huang"
     ],
     "year": 2026,
     "doi": "10.1016/j.comnet.2026.112724",
@@ -5960,14 +5995,14 @@
   {
     "citation_key": "unknown2025facing",
     "entry_type": "inproceedings",
-    "title": "Facing Anomalies Head-On: Network Trafic Anomaly Detection via Uncertainty-Inspired Inter-Sample Diferences",
+    "title": "Facing Anomalies Head-On: Network Traffic Anomaly Detection via Uncertainty-Inspired Inter-Sample Differences",
     "authors": [
-      "Lian, Xinglin",
-      "Cao, Chengtai",
-      "Liu, Yan",
-      "Xu, Xovee",
-      "Zheng, Yu",
-      "Zhou, Fan"
+      "Xinglin Lian",
+      "Chengtai Cao",
+      "Yan Liu",
+      "Xovee Xu",
+      "Yu Zheng",
+      "Fan Zhou"
     ],
     "year": 2025,
     "doi": "10.1145/3696410.3714621",
@@ -6118,29 +6153,25 @@
   {
     "citation_key": "xie2025high",
     "entry_type": "article",
-    "title": "High-Precision and Efficient Anonymous Traffic Classification in the Real-World Network Environment",
+    "title": "High Precision and Efficient Anonymous Traffic Classification in the Real-World",
     "authors": [
-      "Longtian Xie",
-      "Shuiqiao Yang",
-      "Wei Ye",
-      "Guangcan Li",
-      "Yonglin Xie",
-      "Jian Zhang",
-      "Qixu Liu"
+      "Hantao Mei",
+      "Guang Cheng",
+      "Yali Yuan"
     ],
     "year": 2025,
-    "doi": "10.1109/TNET.2025.3582301",
-    "url": "https://ieeexplore.ieee.org/document/11084593",
-    "booktitle": null,
-    "journal": null,
-    "pages": null,
-    "volume": null,
-    "number": null,
-    "publisher": null,
+    "doi": "10.1109/TON.2024.3518976",
+    "url": "https://doi.org/10.1109/TON.2024.3518976",
+    "booktitle": "",
+    "journal": "IEEE Transactions on Networking",
+    "pages": "966--981",
+    "volume": "33",
+    "number": "3",
+    "publisher": "IEEE",
     "abstract": "Various Traffic Classification (TC) technologies have been developed to de-anonymize anonymous tools, such as Tor, the most popular communication anonymous system. Although current TC methods boast high performance in closedworld scenarios, they frequently encounter challenges when dealing with the low base rate of anonymous traffic in the real open world, a phenomenon referred to as the base rate fallacy. In this paper, we introduce HPETC, an anonymous traffic classification system tailored for real-world scenarios, with a focus on achieving high precision, even in the presence of extremely low rates of anonymous traffic within expansive network environments. HPETC comprises an online classifier that efficiently filters anonymous traffic with minimal resource requirements, alongside an offline classifier responsible for extracting detailed information to support fine-grained classification. In response to the base rate fallacy, we introduce three Enhanced Techniques to enhance the performance of the classifiers within HPETC. Experimental findings illustrate that HPETC markedly diminishes resource consumption and greatly enhances the actual precision in comparison to state-of-the-art methods. Remarkably, in scenarios characterized by an extremely low rate of anonymous traffic (non-Tor/Tor=1000), our HPETC demonstrates an actual precision improvement that exceeds eightfold when benchmarked against commonly utilized models, specifically the Random Forest (RF) and Convolutional Neural Network (CNN) models. Index Terms— Tor, traffic classification, website fingerprinting, machine learning, base rate fallacy.",
     "source_file": "2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World.pdf",
     "note_file": "2025-TON-High_Precision_and_Efficient_Anonymous_Traffic_Classification_in_the_Real-World.md",
-    "metadata_source": "note"
+    "metadata_source": "crossref"
   },
   {
     "citation_key": "luo2025few",
@@ -6441,14 +6472,14 @@
   {
     "citation_key": "unknown2025helios",
     "entry_type": "inproceedings",
-    "title": "Helios: Learning and Adaptation of Matching Rules for Continual In-Network Malicious Trafic Detection",
+    "title": "Helios: Learning and Adaptation of Matching Rules for Continual In-Network Malicious Traffic Detection",
     "authors": [
-      "Shi, Zhenning",
-      "Zhao, Dan",
-      "Zhu, Yijia",
-      "Xie, Guorui",
-      "Li, Qing",
-      "Jiang, Yong"
+      "Zhenning Shi",
+      "Dan Zhao",
+      "Yijia Zhu",
+      "Guorui Xie",
+      "Qing Li",
+      "Yong Jiang"
     ],
     "year": 2025,
     "doi": "10.1145/3696410.3714742",
@@ -6467,14 +6498,14 @@
   {
     "citation_key": "unknown2025advtg",
     "entry_type": "inproceedings",
-    "title": "AdvTG: An Adversarial Trafic Generation Framework to Deceive DL-Based Malicious Trafic Detection Models",
+    "title": "AdvTG: An Adversarial Traffic Generation Framework to Deceive DL-Based Malicious Traffic Detection Models",
     "authors": [
-      "Sun, Peishuai",
-      "Yun, Xiaochun",
-      "Li, Shuhao",
-      "Yin, Tao",
-      "Si, Chengxiang",
-      "Xie, Jiang"
+      "Peishuai Sun",
+      "Xiaochun Yun",
+      "Shuhao Li",
+      "Tao Yin",
+      "Chengxiang Si",
+      "Jiang Xie"
     ],
     "year": 2025,
     "doi": "10.1145/3696410.3714876",
@@ -6567,13 +6598,13 @@
     "entry_type": "inproceedings",
     "title": "ODNS Clustering: Unveiling Client-Side Dependency in Open DNS Infrastructure",
     "authors": [
-      "Wu, Wenhao",
-      "Wang, Zhaohua",
-      "Li, Qinxin",
-      "Li, Zihan",
-      "Li, Yi",
-      "Yan, Jin",
-      "Li, Zhenyu"
+      "Wenhao Wu",
+      "Zhaohua Wang",
+      "Qinxin Li",
+      "Zihan Li",
+      "Yi Li",
+      "Jin Yan",
+      "Zhenyu Li"
     ],
     "year": 2025,
     "doi": "10.1145/3696410.3714834",
@@ -6778,12 +6809,12 @@
     "entry_type": "inproceedings",
     "title": "Do Not Trust What They Tell: Exposing Malicious Accomplices in Tor via Anomalous Circuit Detection",
     "authors": [
-      "Yao, Yixuan",
-      "Yang, Ming",
-      "Liu, Zixia",
-      "Dong, Kai",
-      "Gu, Xiaodan",
-      "Wang, Chunmian"
+      "Yixuan Yao",
+      "Ming Yang",
+      "Zixia Liu",
+      "Kai Dong",
+      "Xiaodan Gu",
+      "Chunmian Wang"
     ],
     "year": 2025,
     "doi": "10.1145/3696410.3714767",
@@ -7953,18 +7984,18 @@
       "Chang Liu"
     ],
     "year": 2022,
-    "doi": "10.1109/HPCC57118.2022.00178",
-    "url": "",
+    "doi": "10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00091",
+    "url": "https://doi.org/10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00091",
     "booktitle": null,
     "journal": null,
-    "pages": null,
+    "pages": "474--481",
     "volume": null,
     "number": null,
     "publisher": null,
     "abstract": "HTTPS protocol is one of the most important protocols on the Internet. Network firewalls generally do not block the HTTPS protocol, so a large number of malwares use HTTPS protocol as transmission tunnel for data leakage. It is difficult to detect HTTPS tunnel accurately using conventional handshake fingerprint and sequence detection methods. In this paper, we propose the MTBD method, which is a multi-stage detection method based on multidimension traffic behaviors. Firstly, we design a traffic burst detection algorithm to filter out 85% normal traffic. Then, in order to avoid the limitations of single dimensional features, we extract core heterogeneous features on flow, host and packet levels. Finally, we use machine learning methods to build models from above three dimensions separately, and vote to decide final results. Meanwhile, we build HTTPS tunnel services and collect datasets to verify effectiveness of MTBD method. The experimental results demonstrate that MTBD method achieves up to 99% precision and recall that is superior to state-of-the-art method. Index Terms—HTTPS tunnel, multi-dimension traffic behaviors decision, traffic burst",
     "source_file": "2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.pdf",
     "note_file": "2022-HPCC-MTBD_HTTPS_Tunnel_Detection_Based_on_Multi-dimension_Traffic_Behaviors_Decision.md",
-    "metadata_source": "note"
+    "metadata_source": "crossref"
   },
   {
     "citation_key": "xue2022openvpn",
@@ -8422,26 +8453,29 @@
     "entry_type": "inproceedings",
     "title": "TrafficSliver: Fighting Website Fingerprinting Attacks with Traffic Splitting",
     "authors": [
-      "Bhadauria, Rishabh",
-      "Fang, Zhiyong",
-      "Hazay, Carmit",
-      "Venkitasubramaniam, Muthuramakrishnan",
-      "Xie, Tiancheng",
-      "Zhang, Yupeng"
+      "Wladimir De la Cadena",
+      "Asya Mitseva",
+      "Jens Hiller",
+      "Jan Pennekamp",
+      "Sebastian Reuter",
+      "Julian Filter",
+      "Thomas Engel",
+      "Klaus Wehrle",
+      "Andriy Panchenko"
     ],
     "year": 2020,
-    "doi": "10.1145/3372297.3417893",
-    "url": "https://doi.org/10.1145/3372297.3417893",
+    "doi": "10.1145/3372297.3423351",
+    "url": "https://doi.org/10.1145/3372297.3423351",
     "booktitle": "Proceedings of the 2020 ACM SIGSAC Conference on Computer and Communications Security",
     "journal": null,
-    "pages": "2025-2038",
+    "pages": "1971--1985",
     "volume": null,
     "number": null,
     "publisher": "ACM",
     "abstract": "",
-    "source_file": "2020-CCS-TrafficSliver-Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting.pdf",
+    "source_file": "2020-CCS-TrafficSliver__Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting.pdf",
     "note_file": "2020-CCS-TrafficSliver-Fighting_Website_Fingerprinting_Attacks_with_Traffic_Splitting.md",
-    "metadata_source": "note"
+    "metadata_source": "crossref"
   },
   {
     "citation_key": "cadena2020trafficsliver_2",
@@ -9107,5 +9141,31 @@
     "metadata_source": "Crossref",
     "source_file": "2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks.pdf",
     "note_file": "2026-TON-SEDMS__Space-Efficient_Dynamic_Metric_Selection_for_Streaming_Telemetry_in_Edge_Networks.md"
+  },
+  {
+    "citation_key": "deng2026enhancing",
+    "entry_type": "inproceedings",
+    "title": "Enhancing Website Fingerprinting Attacks against Traffic Drift",
+    "authors": [
+      "Xinhao Deng",
+      "Yixiang Zhang",
+      "Qi Li",
+      "Zhuotao Liu",
+      "Yabo Wang",
+      "Ke Xu"
+    ],
+    "year": 2026,
+    "doi": "10.14722/ndss.2026.230059",
+    "url": "https://doi.org/10.14722/ndss.2026.230059",
+    "booktitle": "Proceedings 2026 Network and Distributed System Security Symposium",
+    "journal": "",
+    "pages": "",
+    "volume": "",
+    "number": "",
+    "publisher": "Internet Society",
+    "abstract": "",
+    "source_file": "2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift.pdf",
+    "note_file": "2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift.md",
+    "metadata_source": "crossref"
   }
 ]

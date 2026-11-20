@@ -12,8 +12,8 @@ authors:
   - Xiaokang Zhou
 year: 2025
 venue: Journal of Parallel and Distributed Computing (JPDC)
-doi: unknown
-url: unknown
+doi: "10.1016/j.jpdc.2025.105083"
+url: "https://doi.org/10.1016/j.jpdc.2025.105083"
 pdf: "00-inbox/PDFs/2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification.pdf"
 mineru_md: "02-parsed-markdown/2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification.md"
 status: processed
@@ -28,7 +28,7 @@ dataset:
 code: "https://github.com/sailorlee97/What-changes-you"
 relevance: medium
 created: 2026-06-09
-updated: 2026-06-09
+updated: "2026-11-20"
 ---
 
 # Multi-ARCL: Multimodal adaptive relay-based distributed continual learning for encrypted traffic classification
@@ -49,6 +49,7 @@ updated: 2026-06-09
 | 是否开源 | 是（https://github.com/sailorlee97/What-changes-you） |
 | PDF | `../00-inbox/PDFs/2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification.pdf` |
 | MinerU Markdown | `../02-parsed-markdown/2025-JPDC-Multi-ARCL__Multimodal_adaptive_relay-based_distributed_continual_learning_for_encrypted_traffic_classification.md` |
+| DOI | [10.1016/j.jpdc.2025.105083](https://doi.org/10.1016/j.jpdc.2025.105083) |
 
 ---
 

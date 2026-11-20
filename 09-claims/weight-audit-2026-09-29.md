@@ -51,3 +51,40 @@
 | [[2026-arXiv-Secrets_in_Radio_Waves__Towards_Practical_and_Protocol-Agnostic_PHY_Information_Hiding]] | arXiv | 2026 | 0.65 | 1.00 | 0.80 (待核验) | 0.52 |
 | [[2026-arXiv-Unknown-Traffic_Detection_Calibration_and_Shortcut_Reliance_in_Distilled_Encrypted-Traffic_Classifiers_over_One_Year]] | arXiv | 2026 | 0.65 | 1.00 | 0.80 (待核验) | 0.52 |
 | [[2026-arXiv-Your_Model_Is_Leaking__Covert_Information_Transfer_through_LLM_Residual_Streams]] | arXiv | 2026 | 0.65 | 1.00 | 0.80 (待核验) | 0.52 |
+
+
+## 2026-11-18 退役的旧规则
+
+以下为历史制度原文。现行流程从来源、实验条件和审核记录判断证据。
+
+## 11. 共识权重系统
+
+每篇论文和每条观点的可信度由三个维度共同决定：
+
+### 11.1 权重三因子
+
+| 因子 | 含义 | 计算方式 |
+|------|------|----------|
+| venue_factor | 发表场所权重 | Tier 1 (USENIX/NDSS/CCS/S&P) = 1.0；Tier 2 (SIGCOMM/AAAI/NeurIPS/ICML/WWW/KDD/TIFS/TSC/TDSC/TON/INFOCOM/IMC/COMST) = 0.85；Tier 3 (arXiv/其他) = 0.65 |
+| time_factor | 时间衰减因子 | 2025-2026 = 1.0；2024 = 0.85；2023 = 0.7；2022 = 0.6；2020-2021 = 0.45；≤2019 = 0.25 |
+| citation_impact | 知识库内部引用影响 | 12+ 篇其他论文引用 = 1.8；8-11 篇 = 1.5；4-7 篇 = 1.2；1-3 篇 = 1.0；0 篇 = 0.8 |
+
+### 11.2 计算公式
+
+```text
+composite_weight = venue_factor × time_factor × citation_impact
+confidence_score = composite_weight × consensus_count
+```
+
+### 11.3 设计理念
+
+- **时间维度**：越靠近现在的论文，其方法和结论越具参考价值
+- **共识维度**：越多独立论文支持的观点越接近事实
+- **引用影响**：被后续论文反复引用的经典工作，即使年代较早仍具高权重（如 ET-BERT 2022 被 15+ 篇引用，citation_impact = 1.8，有效弥补时间衰减）
+- 三因子共同作用避免了"唯新是论"和"唯众是论"的单一偏差
+
+### 11.4 维护规则
+
+- 每次新论文入库时自动更新被引用论文的 citation_impact
+- consensus_count 在新论文支持或挑战已有 claim 时自动更新
+- confidence_score 随上述变化自动重算

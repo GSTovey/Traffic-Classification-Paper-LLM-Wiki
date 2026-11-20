@@ -1,11 +1,17 @@
 ---
 type: research-front
 question: "在代理封装和观测条件变化下，Tor-over-Proxy 能否稳定实现低误报检测？"
-status: diverging
+status: insufficient_evidence
+synthesis_state: signed
+last_synthesized: "2026-11-18"
+synthesized_by: "Codex（维护者授权按原文核验）"
+synthesis_claim_ids: ["CLM-0604","CLM-0605","CLM-0601","CLM-0602","CLM-0102","CLM-0603","CLM-0606","CLM-0609"]
+synthesis_evidence_ids: ["EV-V2-NEST-FROZEN-FPR","EV-V2-NEST-SWEPT-FPR","EV-V2-NEST-FACTORIZE","EV-V2-NEST-CONFIRM","EV-V2-NEST-GATE-CONTROL","EV-V2-NEST-CALIBRATION","EV-V2-NEST-LATER-RESEGMENT"]
+historical_status: diverging
 problem_state: under_test
 evidence_state: partial
 created: "2026-10-22"
-last_updated: "2026-10-22"
+last_updated: "2026-11-18"
 last_reviewed: "2026-10-22"
 related_concepts:
   - "[[tunnel-detection]]"
@@ -17,6 +23,37 @@ related_methods:
 
 # Tor-over-Proxy 低误报检测的可识别条件
 
+## 当前研究认识
+
+原文以 ToP 与 Non-ToP 两类的 F1 计算 macro-F1。Pure Proxy、普通流量与 Direct Tor 的误报另行列出。完整双向流、确认集、后来采集与异质背景各有对应的评估口径。
+
+- NestTor Table VI 的 Confirmatory 行中，冻结 AND 对 11,131 条异质背景流产生 350 次误报，FPR 3.14%，对另列的 900 条确认 ToP 检出 894 条，TPR 99.33%。（CLM-0604，EV-V2-NEST-FROZEN-FPR）
+- NestTor Table VI 的三个描述性工作点来自连续乘积分数扫阈值，FPR 0.99%、0.10%、0.01% 分别对应确认 ToP TPR 94.44%、86.22%、72.33%。（CLM-0605，EV-V2-NEST-SWEPT-FPR）
+- NestTor Fig. 6 的同 99 维输入和总计 400 棵树的 RF 对照中，Independent Gate + Inner 为 94.12%，Flat Binary 为 86.67%，Shared Multi-task 为 88.11%，均为二类 macro-F1。（CLM-0601，EV-V2-NEST-FACTORIZE）
+- NestTor Table III 的 2,300 条完整双向流确认集上，代理条件内层阈值为 99.45%，统一内层阈值为 99.41%，均按 ToP/Non-ToP 两类计算 macro-F1。（CLM-0602，EV-V2-NEST-CONFIRM）
+- NestTor 原文确认集上，FS-Net 与 NestTor 共用代理门控时的二类 macro-F1 为 99.50% 和 99.45%，差值 95% CI 包含零。各自端到端时为 87.46% 与 99.45%。（CLM-0102，EV-V2-NEST-GATE-CONTROL）
+- NestTor Table IV 留一代理用目标 Pure Proxy 校准后，三个代理折的二类 macro-F1 上升，Trojan 从 97.24% 降至 93.60%。VLESS 参加过前置协议审计。（CLM-0603，EV-V2-NEST-CALIBRATION）
+- NestTor Table V 的 23,374 条后来采集流上二类 macro-F1 为 88.50%。Fig. 8 的确认集 512 B 重分段条件为 71.45%。（CLM-0606，EV-V2-NEST-LATER-RESEGMENT）
+- 固定阈值的预定低误报工作点能否跨代理、负类来源、独立采集域和观测窗口维持，现有审定材料证据不足。（CLM-0609）
+
+## COSINT 报告级相邻证据
+
+2026-11-19 核对 [[2026-COSINT-北邮时金桥|原报告]]。CLM-0607 对应第 27 页的单流多类别总体指标，CLM-0608 对应第 48–49 页的双侧流对关联及另测吞吐。任务标签、统计分母和时间窗口各自保留。两项均作为报告级相邻记录。
+
+## 签审记录
+
+2026-11-18 由Codex（维护者授权按原文核验）按原文研究条件更新。旧判断及文献沿革保留在下方。
+
+### 签审前快照
+
+**待签审。** 本轮原文复核、证据边界与拟议结论见 [[front-review-2026-11-18#tor-over-proxy-low-fpr-detection]]. 签审后在此记录结论、适用条件、反证和未解决问题。
+
+
+## 历史研究记录
+
+> 下方保留历次研究记录，含旧制的共识和状态表述。当前引用以命题索引和签审快照为准。
+
+<!-- evidence-governance:archive:start -->
 ## 问题定义
 
 在客户端到代理的外层观测中，区分 Tor-over-Proxy、同代理 Pure Proxy、Direct Tor 和普通背景流量。重点不是单一模型的最高分，而是明确观测点、负类构成、分布变化和低误报工作点后，哪些 Tor 行为仍可识别。
@@ -92,3 +129,4 @@ DHOR 的类别目标、DHBCorr 的双点匹配及单流代理内 Tor 存在性�
 ### 2026-11-18　补充对照的观察口径
 
 [[03-paper-notes/2026-S&P-CenRL__A_Framework_for_Performing_Intelligent_Censorship_Measurements|CenRL]] 的预算相同但候选范围不同，提供难例抽样与固定评估队列应分开的例子。[[03-paper-notes/2026-FMANO-Toward_Unified_Network_Traffic_Monitoring_Using_SIR|SIR]] 的多输入流顺序和窗口标记表明，报告实际检测时延时需给出观测截止、晚到处理及超时弃权的定义。两项研究均为相邻方法，具体对应见 [[03-paper-notes/2026-COSINT-北邮时金桥|COSINT 汇报]] 第 14 节。
+<!-- evidence-governance:archive:end -->

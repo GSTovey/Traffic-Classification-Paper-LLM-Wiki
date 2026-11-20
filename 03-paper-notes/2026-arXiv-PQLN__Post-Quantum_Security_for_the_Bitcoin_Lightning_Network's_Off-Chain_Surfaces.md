@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-arXiv-PQLN__Post-Quantum_Security_for_the_Bitcoin_Light
 mineru_md: "02-parsed-markdown/2026-arXiv-PQLN__Post-Quantum_Security_for_the_Bitcoin_Lightning_Network's_Off-Chain_Surfaces.md"
 status: processed
 reading_level: L1
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["后量子通信安全"]
+task: ["审查闪电网络链下通信面"]
+method: ["后量子协议安全评估"]
+dataset: ["Bitcoin Core regtest 与作者的闪电网络节点实验"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # PQLN: Post-Quantum Security for the Bitcoin Lightning Network's Off-Chain Surfaces

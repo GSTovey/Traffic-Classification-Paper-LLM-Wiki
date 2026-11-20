@@ -5,8 +5,8 @@ title_cn: "大语言模型的门控注意力机制：非线性、稀疏性与无
 authors: ["Zihan Qiu", "Zekun Wang", "Bo Zheng", "Zeyu Huang", "Kaiyue Wen", "Songlin Yang", "Rui Men", "Le Yu", "Fei Huang", "Suozhi Huang", "Dayiheng Liu", "Jingren Zhou", "Junyang Lin"]
 year: 2025
 venue: "NeurIPS 2025"
-doi: unknown
-url: unknown
+doi: "10.52202/085713-3345"
+url: "https://doi.org/10.52202/085713-3345"
 pdf: "00-inbox/PDFs/2025-NIPS-Gated_Attention_for_Larg.pdf"
 mineru_md: "02-parsed-markdown/2025-NIPS-Gated_Attention_for_Larg.md"
 status: deep-analyzed
@@ -18,7 +18,7 @@ dataset: ["4T high-quality tokens (multilingual, math, general knowledge)"]
 code: unknown
 relevance: high
 created: "2026-05-27"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free
@@ -39,6 +39,7 @@ updated: "2026-10-10"
 | 是否开源 | 是（计划开源代码和模型） |
 | PDF | 00-inbox/PDFs/2025-NIPS-Gated_Attention_for_Larg.pdf |
 | MinerU Markdown | 02-parsed-markdown/2025-NIPS-Gated_Attention_for_Larg.md |
+| DOI | [10.52202/085713-3345](https://doi.org/10.52202/085713-3345) |
 
 ## 1. 一句话总结
 

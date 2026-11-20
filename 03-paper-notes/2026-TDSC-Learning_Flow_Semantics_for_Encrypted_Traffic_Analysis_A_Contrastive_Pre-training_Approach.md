@@ -1,5 +1,136 @@
 ---
 type: paper
+title_original: "Learning Flow Semantics for Encrypted Traffic Analysis: A Contrastive Pre-Training Approach"
+title_cn: "面向加密流量分析的流语义学习：一种对比预训练方法"
+authors: ["Ruijie Zhao", "Mingwei Zhan", "Qi Li", "Zhuotao Liu", "Xianwen Deng", "Yanhao Wang", "Guang Cheng", "Zhi Xue", "Ke Xu"]
+year: 2026
+venue: "IEEE Transactions on Dependable and Secure Computing"
+doi: "10.1109/TDSC.2026.3677663"
+url: "https://doi.org/10.1109/TDSC.2026.3677663"
+pdf: "00-inbox/PDFs/2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach.pdf"
+mineru_md: "02-parsed-markdown/2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach.md"
+status: processed
+reading_level: L4
+research_area: ["encrypted traffic analysis", "pre-training", "contrastive learning"]
+task: ["加密流量分类", "流一致性判定", "未见协议适配", "开放世界评估"]
+method: ["对比预训练", "流语义增强", "可切换的流量窗口", "监督微调"]
+dataset: ["ISCXVPN2016", "CrossPlat2020", "CrossNet2022", "CICEVSE2024", "VPN2023", "QUIC2022"]
+code: "https://github.com/NSSL-SJTU/TaCo"
+relevance: high
+created: "2026-06-15"
+updated: "2026-11-20"
+volume: "23"
+number: "4"
+pages: "7864--7877"
+citation_key: "liu2026learning"
+code_availability: "code-and-weights-link"
+---
+
+# Learning Flow Semantics for Encrypted Traffic Analysis: A Contrastive Pre-Training Approach
+
+正文按原版 PDF 和出版记录复核。旧整理稿见页末。
+
+## 0. 论文基础信息
+
+| 项目 | 内容 |
+| --- | --- |
+| 中文题名 | 面向加密流量分析的流语义学习：一种对比预训练方法 |
+| 作者 | Ruijie Zhao, Mingwei Zhan, Qi Li, Zhuotao Liu, Xianwen Deng, Yanhao Wang, Guang Cheng, Zhi Xue, Ke Xu |
+| 方法 | TACO |
+| 正式出版 | IEEE Transactions on Dependable and Secure Computing，2026，23(4)，7864–7877 |
+| DOI | [10.1109/TDSC.2026.3677663](https://doi.org/10.1109/TDSC.2026.3677663) |
+| 代码 | [作者仓库 TaCo](https://github.com/NSSL-SJTU/TaCo)，README 给出预训练权重链接和数据处理说明 |
+| 原文 | [[00-inbox/PDFs/2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach.pdf]] |
+
+## 1. 一句话总结
+
+TACO 通过保持流语义的增强定义对比预训练样本，再以可切换的窗口分组适配下游流量分析任务。
+
+## 2. 摘要翻译
+
+摘要原文见 PDF 首页。作者关注依赖重建任务的预训练在加密内容上的困难，提出使用无标注流量、语义保持的增强和对比学习获得流编码器，在常规分类、未见协议与开放世界设定中检验迁移。
+
+## 3. 方法动机
+
+### 3.4 问题发现路径
+
+原文 §1–3 从密文字节重建的局限出发，把研究问题转为如何让增强前后的同一流保持可学习的一致性。§6.3 使用传统增强与作者增强的对照检验这一出发点。
+
+### 3.5 科学假设形成
+
+如果增强能够保留任务相关的流语义，对比预训练应有利于后续分类与迁移。Table 3 和 Table 6 分别验证增强选择和组件贡献。这里的判断依据是论文的模型与数据条件。
+
+## 4. 方法设计
+
+| 阶段 | 输入与处理 | 输出 |
+| --- | --- | --- |
+| 预训练 | 无标注流及其语义保持的增强视图，用字节窗口组织输入并学习对比表示 | 预训练流编码器 |
+| 微调 | 载入编码器，在包窗口和流窗口设置下组织局部与全局交互，利用下游标签训练分类层 | 任务级流类别 |
+| 迁移评估 | 在流一致性、未见协议适配及开放世界条件中分别设定目标 | 对应任务的判定指标 |
+
+窗口角色和模型结构见 §5.2–5.3。原文 §6.1 报告移除 IP、端口及时间戳，并用 1,074,861 条无标注流做预训练。
+
+## 5. 与其他方法对比
+
+Table 1、Table 2 比较 SAE、CL-ETC、PEAN、PERT、ET-BERT、YaTC。重点是标签预算、增强规则和冻结或微调方式，跨文章结果需要按这些条件比较。
+
+## 6. 实验表现与优势
+
+| 任务或数据 | 指标 | TACO | 对照或适用范围 |
+| --- | --- | ---: | --- |
+| ISCXVPN2016 | F1 | 94.46 ± 0.70% | Table 2，YaTC 90.65 ± 0.37% |
+| CrossPlat2020 | F1 | 96.24 ± 0.43% | Table 2，YaTC 88.47 ± 1.18% |
+| CrossNet2022 | F1 | 86.41 ± 1.71% | Table 2，YaTC 80.34 ± 1.31% |
+| CICEVSE2024 | F1 | 88.13 ± 0.40% | Table 2，YaTC 75.82 ± 1.71% |
+| 流一致性判定 | F1 | 93.05 ± 1.44% | Table 4 |
+| WireGuard 适配 | F1 | 92.12 ± 0.38% | Table 4 |
+| QUIC 适配 | F1 | 91.53 ± 0.41% | Table 4 |
+| 作者设置的开放世界评估 | F1 | 94.40 ± 1.53% | Table 5，MTA 91.32%，UTA 94.80% |
+
+表内波动是不同随机种子的均值与标准差。四份常规下游数据见 Table 1。未见协议和开放世界指标应按 §6.4 各任务定义阅读。
+
+### 6.7 局限性
+
+Table 3 中传统增强对部分数据反而降低 F1。§7 的字节丢弃敏感度因数据集而异。开放世界结果适用于作者的类别与采样设定。代码和模型已有作者入口，完整实验数据的可取得范围仍需分数据核对。
+
+## 7. 学习与应用
+
+复现时核对公开语料的版本、预训练与测试的分组、增强语义保持假设，以及已见和未见协议定义。报告 F1 的同时保留原论文的重复实验与观察单位。
+
+## 8. 总结
+
+用语义一致性定义对比学习，再将预训练表示应用于有标签分类和协议迁移。
+
+## 9. Obsidian 知识链接
+
+- [[traffic-representation-learning]] · [[contrastive-learning]] · [[pre-training-finetuning]]
+- [[survey-traffic-foundation-model]] · [[pretraining-necessity]]
+
+## 10. 证据记录
+
+四数据集 F1 见 §6.2 Table 2。迁移与开放世界设定见 §6.4 Tables 4–5。预训练增强控制见 §6.3 Table 3 与 §6.6 Table 6。
+
+## 11. 原始资料链接
+
+- [[00-inbox/PDFs/2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach.pdf]]
+- [[02-parsed-markdown/2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach]]
+
+## 12. 后续问题
+
+在统一预训练语料和采集分组、同样标签预算的条件下复核不同增强策略的贡献。
+
+## 13. 写作叙事与故事线分析
+
+原文由密文重建困难引出语义一致性问题，然后将增强、预训练与微调串联。迁移评估与普通分类分列，作者用增强和组件消融对应前文提出的问题。
+
+## 历史整理稿
+
+> 原整理稿曾错配论文题名、作者和方法，留作修订追溯。
+
+<!-- identity-correction:archive:start -->
+````markdown
+---
+type: paper
 title_original: "Learning Flow Semantics via Contrastive Pre-training for Encrypted Traffic Analysis"
 title_cn: "通过对比预训练学习流语义用于加密流量分析"
 authors: ["Xueliang Liu", "Shunpu Tang", "Jiaqi Xue", "Yifan Xu", "Jiajun Li", "Chuanpu Chen", "Ke Xu"]
@@ -7,8 +138,8 @@ year: 2026
 venue: "IEEE Transactions on Dependable and Secure Computing (TDSC)"
 doi: "10.1109/TDSC.2025.3596462"
 url: "https://ieeexplore.ieee.org/document/11121609"
-pdf: "[[2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach.pdf]]"
-mineru_md: "[[02-parsed-markdown/2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach]]"
+pdf: "00-inbox/PDFs/2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach.pdf"
+mineru_md: "02-parsed-markdown/2026-TDSC-Learning_Flow_Semantics_for_Encrypted_Traffic_Analysis_A_Contrastive_Pre-training_Approach.md"
 status: processed
 reading_level: L4
 research_area: ["encrypted traffic analysis", "pre-training", "contrastive learning"]
@@ -594,3 +725,5 @@ unknown（论文未提供代码链接）
 - **对比学习框架设计**：数据增强 → 双层预训练 → 后训练 → 微调的完整流程
 - **全面评估策略**：多任务 × 多数据集的评估范式
 - **消融实验组织**：逐步验证每个组件的贡献
+````
+<!-- identity-correction:archive:end -->

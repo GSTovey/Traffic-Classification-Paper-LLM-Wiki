@@ -5,7 +5,7 @@ title_cn: "阴影中的偏差：探索加密网络流量分类中的捷径学习
 authors: [Chuyi Wang, Xiaohui Xie, Tongze Wang, Yong Cui]
 year: 2026
 venue: "arXiv"
-doi: "unknown"
+doi: "10.1109/iwqos70441.2026.11661209"
 url: "https://arxiv.org/abs/2605"
 pdf: "00-inbox/PDFs/2026-arXiv-Bias_in_the_Shadows__Explore_Shortcuts_in_Encrypted_Network_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-Bias_in_the_Shadows__Explore_Shortcuts_in_Encrypted_Network_Traffic_Classification.md"
@@ -18,7 +18,7 @@ dataset: [NordVPN, SuperVPN, Surfshark, TurboVPN, ISCXVPN2016, CIC-AndMal2017, U
 code: "unknown"
 relevance: high
 created: "2026-06-03"
-updated: "2026-10-21"
+updated: "2026-11-20"
 venue_factor: 0.65
 time_factor: 1.0
 citation_impact: 1.0

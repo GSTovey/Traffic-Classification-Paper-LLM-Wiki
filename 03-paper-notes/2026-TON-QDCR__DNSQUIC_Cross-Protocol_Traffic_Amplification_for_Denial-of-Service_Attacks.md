@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "QDCR: DNS–QUIC Cross-Protocol Traffic Amplification for Denial-of-Service Attacks"
-title_cn: "unknown"
+title_cn: "QDCR：DNS 与 QUIC 跨协议流量放大及拒绝服务风险"
 year: 2026
 venue: "TON"
 doi: "10.1109/TON.2026.3725688"

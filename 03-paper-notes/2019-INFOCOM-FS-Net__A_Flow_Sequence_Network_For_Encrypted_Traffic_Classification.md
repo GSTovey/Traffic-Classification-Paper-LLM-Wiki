@@ -10,8 +10,8 @@ authors:
   - Zhen Li
 year: 2019
 venue: "INFOCOM"
-doi: ""
-url: ""
+doi: "10.1109/infocom.2019.8737507"
+url: "https://doi.org/10.1109/infocom.2019.8737507"
 pdf: "00-inbox/PDFs/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2019-INFOCOM-FS-Net__A_Flow_Sequence_Network_For_Encrypted_Traffic_Classification.md"
 status: processed
@@ -24,7 +24,7 @@ research_area: ["加密流量分类", "深度学习"]
 task: ["加密流量分类", "应用识别"]
 method: ["RNN", "GRU", "encoder-decoder"]
 created: "2026-05-27"
-updated: "2026-10-21"
+updated: "2026-11-20"
 venue_factor: 0.85
 time_factor: 0.25
 citation_impact: 1.8
@@ -47,6 +47,7 @@ citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traf
 | 发表年份 | 2019 |
 | 会议/期刊 | INFOCOM |
 | 关键词 | Encrypted Traffic Classification, Recurrent Neural Network, Reconstruction Mechanism |
+| DOI | [10.1109/infocom.2019.8737507](https://doi.org/10.1109/infocom.2019.8737507) |
 
 ## 1. 一句话总结
 

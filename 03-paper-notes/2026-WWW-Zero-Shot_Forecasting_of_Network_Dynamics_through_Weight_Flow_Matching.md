@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Zero-Shot Forecasting of Network Dynamics through Weight Flow Matching"
-title_cn: ""
+title_cn: "基于权重流匹配的网络动态零样本预测"
 authors: ["ShiHe Zhou", "Ruikun Li", "Huandong Wang", "Yong Li"]
 year: 2026
 venue: WWW
@@ -18,7 +18,7 @@ dataset: ["Hill", "Epidemic", "Twitter", "Collab", "FitzHugh-Nagumo"]
 code: "yes: https://github.com/tsinghua-fib-lab/FNFM"
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # Zero-Shot Forecasting of Network Dynamics through Weight Flow Matching

@@ -5,8 +5,8 @@ title_cn: "面向真实 ISP 网络流量预测的深度学习模型对比分析"
 authors: ["Josef Koumar", "Timotej Smoleň", "Kamil Jeřábek", "Tomáš Cejka"]
 year: 2026
 venue: "IEEE TNSM 2026"
-doi: unknown
-url: unknown
+doi: "10.1109/tnsm.2025.3636557"
+url: "https://doi.org/10.1109/tnsm.2025.3636557"
 pdf: "00-inbox/PDFs/2026-TNSM-Comparative_Analysis_of_Deep_Learning_Models_for_Real-World_ISP_Network_Traffic_Forecasting.pdf"
 mineru_md: "02-parsed-markdown/2026-TNSM-Comparative_Analysis_of_Deep_Learning_Models_for_Real-World_ISP_Network_Traffic_Forecasting.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["CESNET-TimeSeries24"]
 code: "https://github.com/koumajos/isp-forecasting-benchmark"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Comparative Analysis of Deep Learning Models for Real-World ISP Network Traffic Forecasting
@@ -39,6 +39,7 @@ updated: "2026-09-19"
 | 是否开源 | 是（论文正文注明代码与实验发布在 GitHub，见 §7.1） |
 | PDF | 00-inbox/PDFs/2026-TNSM-Comparative_Analysis_of_Deep_Learning_Models_for_Real-World_ISP_Network_Traffic_Forecasting.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-TNSM-Comparative_Analysis_of_Deep_Learning_Models_for_Real-World_ISP_Network_Traffic_Forecasting.md |
+| DOI | [10.1109/tnsm.2025.3636557](https://doi.org/10.1109/tnsm.2025.3636557) |
 
 ---
 

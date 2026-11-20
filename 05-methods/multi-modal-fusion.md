@@ -117,6 +117,8 @@ updated: "2026-09-19"
 
 ## 相关研究前沿
 
+> 当前复核依据按任务、视图消融和融合预算记录于 [[multimodal-fusion-strategy#当前研究认识]]。
+
 - [[multimodal-fusion-strategy]] — 多模态融合的最优策略
 
 

@@ -8,7 +8,7 @@ venue: "USENIX Security 2023"
 publication_status: published
 doi: unknown
 url: "https://www.usenix.org/conference/usenixsecurity23/presentation/wu-mingshi"
-pdf: ""
+pdf: "00-inbox/PDFs/2023-USENIX-How_the_Great_Firewall_of_China_Detects_and_Blocks_Fully_Encrypted_Traffic.pdf"
 mineru_md: "02-parsed-markdown/2023-USENIX-How_the_Great_Firewall_of_China_Detects_and_Blocks_Fully_Encrypted_Traffic.md"
 status: deep-analyzed
 reading_level: L3

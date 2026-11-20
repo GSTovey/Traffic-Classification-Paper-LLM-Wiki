@@ -5,7 +5,7 @@ title_cn: "以太坊点对点网络的日蚀攻击"
 authors: ["Ruisheng Shi", "Qin Wang", "Yuxuan Liang", "Lina Lan", "Zhuoyi Zheng", "Zijun Guo", "Chenfeng Wang"]
 year: 2026
 venue: "ACM Web Conference 2026 (WWW'26)"
-doi: unknown
+doi: "10.1145/3774904.3792231"
 url: "https://doi.org/10.1145/3774904.3792231"
 pdf: "00-inbox/PDFs/2026-WWW-Eclipse_Attacks_on_Ethereum’s_Peer-to-Peer_Network.pdf"
 mineru_md: "02-parsed-markdown/2026-WWW-Eclipse_Attacks_on_Ethereum’s_Peer-to-Peer_Network.md"
@@ -18,7 +18,7 @@ dataset: ["Geth v1.14.3", "Sepolia testnet", "Ethereum mainnet public nodes", "2
 code: "unknown (attack details and pseudocode in paper Appendix F)"
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # Eclipse Attacks on Ethereum’s Peer-to-Peer Network
@@ -38,7 +38,7 @@ updated: "2026-10-10"
 | 方法关键词 | Geth v1.14.3 源码分析、Discv4、17 K-bucket、devp2p crawler、Sepolia 控制实验、mainnet 公开测量 |
 | 数据与范围 | Sepolia testnet、Ethereum mainnet 公共节点、2,000+ 节点空闲槽位扫描、Geth 版本更新历史 |
 | 是否开源 | unknown；论文含 Appendix F 伪代码，未给代码仓库 |
-| DOI | 10.1145/3774904.3792231 |
+| DOI | [10.1145/3774904.3792231](https://doi.org/10.1145/3774904.3792231) |
 | PDF | 00-inbox/PDFs/2026-WWW-Eclipse_Attacks_on_Ethereum’s_Peer-to-Peer_Network.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-WWW-Eclipse_Attacks_on_Ethereum’s_Peer-to-Peer_Network.md |
 

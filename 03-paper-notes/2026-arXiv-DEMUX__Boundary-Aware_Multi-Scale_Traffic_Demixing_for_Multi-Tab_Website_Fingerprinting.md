@@ -7,7 +7,7 @@ year: 2026
 venue: "arXiv 2026"
 doi: "unknown"
 url: "https://arxiv.org/abs/2606"
-pdf: "00-inbox/PDFs/2026-arXiv-DEMUX__Boundary-Aware_Multi-Scale_Traffic_Demixing_for_Multi-Tab_Website_Fingerprinting.md"
+pdf: "00-inbox/PDFs/2026-arXiv-DEMUX__Boundary-Aware_Multi-Scale_Traffic_Demixing_for_Multi-Tab_Website_Fingerprinting.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-DEMUX__Boundary-Aware_Multi-Scale_Traffic_Demixing_for_Multi-Tab_Website_Fingerprinting.md"
 status: processed
 reading_level: L2

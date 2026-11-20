@@ -18,7 +18,8 @@ dataset: ["2^26-entry database prototype", "PACL comparison"]
 code: "https://zenodo.org/records/20438384(artifact 归档,非论文 DOI)"
 relevance: low
 created: "2026-09-19"
-updated: "2026-10-10"
+updated: "2026-11-20"
+pages: "3199--3218"
 ---
 
 # Remise: Authorized Anonymous Communication Systems

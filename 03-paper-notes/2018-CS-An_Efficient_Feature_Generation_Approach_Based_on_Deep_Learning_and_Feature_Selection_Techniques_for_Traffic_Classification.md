@@ -10,8 +10,8 @@ authors:
   - Xuanxuan Cao
 year: 2018
 venue: "Computer Science (Elsevier)"
-doi: ""
-url: ""
+doi: "10.1016/j.comnet.2018.01.007"
+url: "https://doi.org/10.1016/j.comnet.2018.01.007"
 pdf: "00-inbox/PDFs/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.pdf"
 mineru_md: "02-parsed-markdown/2018-CS-An_Efficient_Feature_Generation_Approach_Based_on_Deep_Learning_and_Feature_Selection_Techniques_for_Traffic_Classification.md"
 status: processed
@@ -24,7 +24,7 @@ research_area: ["流量分类", "特征工程", "特征选择", "深度学习"]
 task: ["流量分类", "特征优化"]
 method: ["DBN", "symmetric uncertainty", "feature generation", "dimensionality reduction"]
 created: "2026-05-27"
-updated: "2026-05-29"
+updated: "2026-11-20"
 ---
 
 # 0. 基础信息

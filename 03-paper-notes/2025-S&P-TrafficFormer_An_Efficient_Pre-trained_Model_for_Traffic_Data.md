@@ -11,8 +11,8 @@ authors:
   - Ke Xu
 year: 2025
 venue: "S&P"
-doi: ""
-url: ""
+doi: "10.1109/sp61157.2025.00102"
+url: "https://doi.org/10.1109/sp61157.2025.00102"
 pdf: "00-inbox/PDFs/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data.pdf"
 mineru_md: "02-parsed-markdown/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data.md"
 status: deep-analyzed
@@ -30,7 +30,7 @@ dataset:
 code: ""
 relevance: high
 created: "2026-06-03"
-updated: "2026-11-03"
+updated: "2026-11-20"
 deep_analysis_verified: "2026-11-03"
 deep_analysis_sources: ["03-paper-notes/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data.md", "02-parsed-markdown/2025-S&P-TrafficFormer_An_Efficient_Pre-trained_Model_for_Traffic_Data.md"]
 evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
@@ -57,6 +57,7 @@ citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traf
 | 会议/期刊 | S&P 2025 |
 | 关键词 | Traffic Classification, Pre-training, Transformer, BERT, Masked Burst Modeling, SODF, RIFA |
 | 代码 | 论文未明确说明 |
+| DOI | [10.1109/sp61157.2025.00102](https://doi.org/10.1109/sp61157.2025.00102) |
 
 ## 1. 一句话总结
 

@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "Do Not Trust What They Tell: Exposing Malicious Accomplices in Tor via Anomalous Circuit Detection"
-title_cn: ""
-authors: []
+title_cn: "Tor 异常电路与潜在协同行为测量"
+authors: ["Yixuan Yao", "Ming Yang", "Zixia Liu", "Kai Dong", "Xiaodan Gu", "Chunmian Wang"]
 year: 2025
 venue: WWW
-doi: unknown
-url: unknown
+doi: "10.1145/3696410.3714767"
+url: "https://doi.org/10.1145/3696410.3714767"
 pdf: "00-inbox/PDFs/2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection.pdf"
 mineru_md: "02-parsed-markdown/2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection.md"
 status: deep-analyzed
 reading_level: L3
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["Tor 网络测量"]
+task: ["识别可疑协同电路"]
+method: ["路由与使用异常分类、节点关系分析"]
+dataset: ["作者的 Tor 电路测量样本"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # Do Not Trust What They Tell: Exposing Malicious Accomplices in Tor via Anomalous Circuit Detection
@@ -31,54 +31,37 @@ updated: "2026-10-10"
 | 会议/期刊 | WWW |
 | PDF | [[2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection.pdf]] |
 | MinerU Markdown | [[2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection.md]] |
+| 作者 | Yixuan Yao, Ming Yang, Zixia Liu, Kai Dong, Xiaodan Gu, Chunmian Wang |
+| DOI | [10.1145/3696410.3714767](https://doi.org/10.1145/3696410.3714767) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+论文按电路异常和节点角色寻找需要进一步核实的潜在协同行为。
 
 ## 2. 摘要原文
 The Tor network, while ofering anonymity through trafic routing across volunteer-operated nodes, remains vulnerable to attacks that aim to deanonymize users by correlating trafic patterns between colluded entry and exit nodes in circuits. This paper presents a novel approach for detecting anomalous circuits in the Tor network, and for the first time provides a more comprehensive identification of potential malicious accomplice nodes in Tor by taking roles ofnodes in anomalous circuits into consideration. Our method strategically utilizes modified middle nodes to capture trafic data, followed by a novel circuit classification based on trafic patterns to pinpoint concerned circuits. Two kinds of anomalies are identified: routing anomalies and usage anomalies, that respectively represent the anomalies with explicit or implicit violation of Tor’s circuit construction guidelines. This leads to a successful revealing of totally 1,960 anomalous nodes in Tor. Furthermore, we apply clustering analysis with considering corresponding anomalous circuits and other key characteristics to the detected anomalous nodes, reveal ing potential hidden organizations behind these nodes that can threaten the network’s security. Our findings highlight the neces sity for the Tor project to adopt targeted mitigation strategies to enhance overall network security and privacy.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+区分路由规则异常和实际使用模式异常，通过节点层关联分析归纳潜在簇。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：作者的 Tor 电路测量样本。
+- 作者报告：摘要报告 1,960 个异常节点。此数字为作者口径的可疑异常识别结果。
+- 原文位置：[[02-parsed-markdown/2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection|原文解析稿]] · 摘要、电路异常结果与本页 L3 分析。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+异常和统计聚类只能给出需进一步核实的线索。不同异常节点集合有重叠，无法按类别简单求和。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
-- MinerU：已完成；解析质量需人工抽查。
-- Bib 元数据：待官方 API/论文首页核验。
 
-
-## 深度分析（自动证据提取，需人工复核）
-
-### 研究问题与证据
-- 主题线索：website fingerprint, anomaly, tor, quic。
-- 摘要证据：The Tor network, while ofering anonymity through trafic routing across volunteer-operated nodes, remains vulnerable to attacks that aim to deanonymize users by correlating trafic patterns between colluded entry and exit nodes in circuits. This paper presents a novel approach for detecting anomalous circuits in the Tor network, and for the first time provides a more comprehensive identification of potential malicious accomplice nodes in Tor by taking roles ofnodes in anomalous circuits into consideration. Our method strategically utilizes modified middle nodes to capture trafic data, followed by a novel circuit classification based on trafic patterns to pinpoint concerned circuits. Two kinds of anomalies are identified: routing anomalies and usage anomalies, that respectively represent the anomalies with explicit or implicit violation of Tor’s circuit construction guidelines. This leads to a successful revealing of totally 1,960 anomalous nodes in Tor. Furthermore, we apply clustering analysis with considering corresponding anomalous circuits and other key characteristics to the detected anomalous nodes, reveal ing potential hidden organizations behind these nodes that can threaten the network’s security. Our findings highlight the neces sity for the Tor project to adopt targeted mitigation strategies to enhance overall network security and privacy.
-
-### 方法机制
-正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
-
-### 实验与结果
-实验段落未稳定提取；不补造数据集、baseline、指标或数值。
-
-### 局限与复现
-论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
-
-### 开源与证据等级
-- 代码线索：未检测到明确 GitHub 线索。
-- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2025-WWW-Do_Not_Trust_What_They_Tell__Exposing_Malicious_Accomplices_in_Tor_via_Anomalous_Circuit_Detection|原文解析稿]] · 摘要、电路异常结果与本页 L3 分析。可引用的结论须保留所列实验条件。
 
 ## 深度分析（2026-09-29）
 
@@ -183,3 +166,62 @@ $$F(j_{exit}|i_{entry})=N_{ij}/N^i_{entry},\quad F(i_{entry}|j_{exit})=N_{ij}/N^
 
 - 本笔记前部的自动入库、摘要级或待核验段落是入库时的历史快照，按规范保留以避免删除原始记录。
 - 本次新增的深度分析段落、证据记录和局限说明优先；历史段落中的“待深读/待核验”状态不代表当前分析尚未完成。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
+- MinerU：已完成；解析质量需人工抽查。
+- Bib 元数据：待官方 API/论文首页核验。
+
+
+
+## 深度分析（自动证据提取，需人工复核）
+
+### 研究问题与证据
+- 主题线索：website fingerprint, anomaly, tor, quic。
+- 摘要证据：The Tor network, while ofering anonymity through trafic routing across volunteer-operated nodes, remains vulnerable to attacks that aim to deanonymize users by correlating trafic patterns between colluded entry and exit nodes in circuits. This paper presents a novel approach for detecting anomalous circuits in the Tor network, and for the first time provides a more comprehensive identification of potential malicious accomplice nodes in Tor by taking roles ofnodes in anomalous circuits into consideration. Our method strategically utilizes modified middle nodes to capture trafic data, followed by a novel circuit classification based on trafic patterns to pinpoint concerned circuits. Two kinds of anomalies are identified: routing anomalies and usage anomalies, that respectively represent the anomalies with explicit or implicit violation of Tor’s circuit construction guidelines. This leads to a successful revealing of totally 1,960 anomalous nodes in Tor. Furthermore, we apply clustering analysis with considering corresponding anomalous circuits and other key characteristics to the detected anomalous nodes, reveal ing potential hidden organizations behind these nodes that can threaten the network’s security. Our findings highlight the neces sity for the Tor project to adopt targeted mitigation strategies to enhance overall network security and privacy.
+
+### 方法机制
+正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
+
+### 实验与结果
+实验段落未稳定提取；不补造数据集、baseline、指标或数值。
+
+### 局限与复现
+论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
+
+### 开源与证据等级
+- 代码线索：未检测到明确 GitHub 线索。
+- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+
+```

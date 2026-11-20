@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields"
-title_cn: "unknown"
+title_cn: "HF-Transformer：基于包头字段的免预训练加密流量分类"
 authors: ["Zhenzhen Yan", "Lizhi Peng", "Peiqiang Liu", "Yingshuo Bao", "Bo Yang"]
 year: 2026
 venue: "INFOCOM"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # HF-Transformer: A Non-Pretrained Encrypted Network Traffic Classification Model Based on Packet Header Fields

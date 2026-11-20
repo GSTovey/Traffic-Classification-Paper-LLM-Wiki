@@ -1,9 +1,15 @@
 ---
 type: research-front
 question: "流量数据的最佳 tokenization 策略是什么？"
-status: diverging
+status: conditional_support
+synthesis_state: signed
+last_synthesized: "2026-11-18"
+synthesized_by: "Codex（维护者授权按原文核验）"
+synthesis_claim_ids: ["CLM-0501","CLM-0502","CLM-0503","CLM-0504"]
+synthesis_evidence_ids: ["EV-V2-MET-EMBEDDING","EV-V2-TRAFFICFORMER-OVERLAP","EV-V2-PACKETLOOM-PREPROCESSING"]
+historical_status: diverging
 created: "2026-06-21"
-last_updated: "2026-09-19"
+last_updated: "2026-11-18"
 related_concepts:
   - "[[traffic-foundation-model]]"
   - "[[encrypted-traffic-analysis]]"
@@ -14,6 +20,29 @@ related_methods:
 
 # 流量 Tokenization 的最优方案
 
+## 当前研究认识
+
+已有研究给出了明确的输入定义、预处理条件和任务内对照。跨采集域的性能比较需要同样的字段及序列预算。
+
+- MET-LLM Table 3 去 tokenizer 的 F1 为 0.8957，完整方案为 0.9610。Table 4 的通用 BPE 对照为 0.8839，领域表示和通用 BPE 的序列长度分别为 1,247 与 2,847。（CLM-0501，EV-V2-MET-EMBEDDING）
+- TrafficFormer §3.2.1 对相邻字节构造重叠 bigram 后应用 BPE。这里确认输入定义。（CLM-0502，EV-V2-TRAFFICFORMER-OVERLAP）
+- PacketLoom 在 ISCX-VPN Service-level 子集给出 ET-BERT 与 YaTC 的预处理与复现对照，Table II 报分类指标，Table III 报实现量。（CLM-0503，EV-V2-PACKETLOOM-PREPROCESSING）
+- 在可见字段、有效字节预算与训练预算匹配时，Tokenization 收益能否跨采集域复现，现有审定材料证据不足。（CLM-0504）
+
+## 签审记录
+
+2026-11-18 由Codex（维护者授权按原文核验）按原文研究条件更新。旧判断及文献沿革保留在下方。
+
+### 签审前快照
+
+**待签审。** 本轮原文复核、证据边界与拟议结论见 [[front-review-2026-11-18#tokenization-optimal]]. 签审后在此记录结论、适用条件、反证和未解决问题。
+
+
+## 历史研究记录
+
+> 下方保留历次研究记录，含旧制的共识和状态表述。当前引用以命题索引和签审快照为准。
+
+<!-- evidence-governance:archive:start -->
 ## 核心问题
 
 将原始网络流量转换为模型可处理的 token 序列时，应采用什么粒度和策略？byte-level、2-gram、BPE、还是领域专用方案？不同 tokenization 对模型性能的影响有多大？
@@ -84,3 +113,4 @@ related_methods:
 | 年份 | 论文 | 方向 | 关联及适用条件 | 证据位置 | 状态 |
 | --- | --- | --- | --- | --- | --- |
 | 2025 | [[03-paper-notes/2025-arXiv-Versatile_yet_Efficient_Network_Traffic_Analysis__Offloading_Network_Foundation_Model_to_SmartNIC\|Nepco]] | 中性 | 固定短包前缀与双字节嵌入结合；算子不同，仍需固定预算比较 token 方案 | §IV-B/C、附录 B | EV-20261118-NEPCO-BYTE · pending_review |
+<!-- evidence-governance:archive:end -->

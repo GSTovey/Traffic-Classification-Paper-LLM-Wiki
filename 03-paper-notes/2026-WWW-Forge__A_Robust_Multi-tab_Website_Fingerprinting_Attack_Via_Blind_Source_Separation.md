@@ -5,7 +5,7 @@ title_cn: "Forge：基于盲源分离的鲁棒多标签页网站指纹攻击"
 authors: ["Yitan Huang", "Wei Qiao", "Ding Wang", "Meng Shen", "Di Zhao", "Linxu Li", "Susu Cui", "Bo Jiang", "Zhigang Lu", "Baoxu Liu"]
 year: 2026
 venue: "ACM Web Conference 2026 (WWW'26)"
-doi: unknown
+doi: "10.1145/3774904.3792410"
 url: "https://doi.org/10.1145/3774904.3792410"
 pdf: "00-inbox/PDFs/2026-WWW-Forge__A_Robust_Multi-tab_Website_Fingerprinting_Attack_Via_Blind_Source_Separation.pdf"
 mineru_md: "02-parsed-markdown/2026-WWW-Forge__A_Robust_Multi-tab_Website_Fingerprinting_Attack_Via_Blind_Source_Separation.md"
@@ -18,7 +18,7 @@ dataset: ["WFLib closed/open-world", "defense-enabled WFLib", "dynamic tab/defen
 code: "https://github.com/Carm3nc1ta/FORGE"
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # Forge: A Robust Multi-tab Website Fingerprinting Attack Via Blind Source Separation
@@ -38,7 +38,7 @@ updated: "2026-10-10"
 | 方法关键词 | Takens 时间延迟嵌入、8 通道虚拟观测、BSS 深度展开、Iterative Correction Module、Dual-Domain Consistency Attention |
 | 数据与规模 | WFLib 闭世界/开放世界、多种防御数据、动态标签页/防御混合、0.1%–10% 丢包/抖动/乱序噪声 |
 | 是否开源 | 是：https://github.com/Carm3nc1ta/FORGE |
-| DOI | 10.1145/3774904.3792410 |
+| DOI | [10.1145/3774904.3792410](https://doi.org/10.1145/3774904.3792410) |
 | PDF | 00-inbox/PDFs/2026-WWW-Forge__A_Robust_Multi-tab_Website_Fingerprinting_Attack_Via_Blind_Source_Separation.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-WWW-Forge__A_Robust_Multi-tab_Website_Fingerprinting_Attack_Via_Blind_Source_Separation.md |
 

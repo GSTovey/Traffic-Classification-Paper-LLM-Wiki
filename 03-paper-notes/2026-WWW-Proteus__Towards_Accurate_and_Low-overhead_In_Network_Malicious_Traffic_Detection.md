@@ -7,7 +7,7 @@ year: 2026
 venue: "WWW 2026"
 doi: "10.1145/3774904.3792381"
 url: ""
-pdf: "00-inbox/Aug_inbox/2026-WWW-Proteus__Towards_Accurate_and_Low-overhead_In_Network_Malicious_Traffic_Detection.pdf"
+pdf: "00-inbox/PDFs/2026-WWW-Proteus__Towards_Accurate_and_Low-overhead_In_Network_Malicious_Traffic_Detection.pdf"
 mineru_md: "02-parsed-markdown/2026-WWW-Proteus__Towards_Accurate_and_Low-overhead_In_Network_Malicious_Traffic_Detection.md"
 status: processed
 reading_level: L3

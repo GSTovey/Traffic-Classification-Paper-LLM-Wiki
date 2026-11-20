@@ -7,7 +7,7 @@ year: 2026
 venue: "IEEE TMC 2026"
 doi: "10.1109/tmc.2026.3651574"
 url: "https://doi.org/10.1109/tmc.2026.3651574"
-pdf: "00-inbox/Aug_inbox/2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network.pdf"
+pdf: "00-inbox/PDFs/2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network.pdf"
 mineru_md: "02-parsed-markdown/2026-TMC-FlowXpert__Context-Aware_Flow_Embedding_for_Enhanced_Traffic_Detection_in_IoT_Network.md"
 status: processed
 reading_level: L2

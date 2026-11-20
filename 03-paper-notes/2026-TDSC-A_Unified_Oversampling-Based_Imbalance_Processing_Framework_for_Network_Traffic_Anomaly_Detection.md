@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "A Unified Oversampling-Based Imbalance Processing Framework for Network Traffic Anomaly Detection"
-title_cn: "unknown"
+title_cn: "网络流量异常检测中基于过采样的不均衡统一处理"
 authors: ["Ying Zhong", "Zhiliang Wang", "Xingang Shi", "Jiahai Yang", "Keqin Li"]
 year: 2026
 venue: "TDSC"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # A Unified Oversampling-Based Imbalance Processing Framework for Network Traffic Anomaly Detection

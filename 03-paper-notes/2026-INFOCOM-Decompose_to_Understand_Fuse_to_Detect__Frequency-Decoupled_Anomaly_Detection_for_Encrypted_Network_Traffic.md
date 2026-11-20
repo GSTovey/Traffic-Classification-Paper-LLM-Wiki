@@ -7,7 +7,7 @@ year: 2026
 venue: "IEEE INFOCOM 2026"
 doi: "10.1109/infocom59046.2026.11571273"
 url: ""
-pdf: "00-inbox/Aug_inbox/2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly_Detection_for_Encrypted_Network_Traffic.pdf"
+pdf: "00-inbox/PDFs/2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly_Detection_for_Encrypted_Network_Traffic.pdf"
 mineru_md: "02-parsed-markdown/2026-INFOCOM-Decompose_to_Understand_Fuse_to_Detect__Frequency-Decoupled_Anomaly_Detection_for_Encrypted_Network_Traffic.md"
 status: processed
 reading_level: L3

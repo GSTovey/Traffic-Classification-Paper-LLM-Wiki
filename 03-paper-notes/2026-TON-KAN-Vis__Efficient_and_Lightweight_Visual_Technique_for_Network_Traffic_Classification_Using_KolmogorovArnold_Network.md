@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network"
-title_cn: "unknown"
+title_cn: "KAN-Vis：基于 Kolmogorov–Arnold 网络的轻量可视化流量分类"
 authors: ["Anurag Dutta", "Pallavi Anand", "Sangita Roy", "Rajat Subhra Chakraborty"]
 year: 2026
 venue: "TON"
@@ -18,7 +18,7 @@ dataset: ["ISCX, QUIC"]
 code: "https://github.com/Anurag-Dutta/KAN-Vis"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # KAN-Vis: Efficient and Lightweight Visual Technique for Network Traffic Classification Using Kolmogorov–Arnold Network

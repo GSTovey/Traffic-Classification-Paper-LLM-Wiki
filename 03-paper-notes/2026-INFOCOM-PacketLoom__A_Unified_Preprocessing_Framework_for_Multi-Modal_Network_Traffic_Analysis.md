@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "PacketLoom: A Unified Preprocessing Framework for Multi-Modal Network Traffic Analysis"
-title_cn: "unknown"
+title_cn: "PacketLoom：多模态网络流量分析的统一预处理框架"
 authors: ["Long Li", "Guanping Liang", "Sudan Li", "Biao Han", "Xiaoyan Wang"]
 year: 2026
 venue: "INFOCOM"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # PacketLoom: A Unified Preprocessing Framework for Multi-Modal Network Traffic Analysis

@@ -1,5 +1,9 @@
 ---
 type: paper
+doi: "10.14722/ndss.2026.230059"
+url: "https://www.ndss-symposium.org/ndss-paper/enhancing-website-fingerprinting-attacks-against-traffic-drift/"
+citation_key: "deng2026enhancing"
+pdf: "00-inbox/PDFs/2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift.pdf"
 title_original: "Enhancing Website Fingerprinting Attacks against Traffic Drift"
 authors: ["Xinhao Deng", "Yixiang Zhang", "Qi Li", "Zhuotao Liu", "Yabo Wang", "Ke Xu"]
 mineru_md: "02-parsed-markdown/2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift.md"
@@ -25,10 +29,12 @@ related_concepts:
   - "[[survey-website-fingerprinting]]"
   - "[[traffic-representation-learning]]"
   - "[[few-shot-traffic-learning]]"
-updated: "2026-11-03"
+updated: "2026-11-20"
 deep_analysis_verified: "2026-11-03"
 deep_analysis_sources: ["03-paper-notes/2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift.md", "02-parsed-markdown/2026-NDSS-Enhancing_Website_Fingerprinting_Attacks_against_Traffic_Drift.md"]
 evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
+research_area: ["加密流量分析与时序漂移"]
+title_cn: "增强网站指纹方法对流量漂移的鲁棒性"
 ---
 
 # Enhancing Website Fingerprinting Attacks against Traffic Drift

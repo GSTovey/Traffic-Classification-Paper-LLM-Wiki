@@ -7,7 +7,7 @@ year: 2025
 venue: "NDSS 2025"
 doi: "10.14722/ndss.2025.241071"
 url: ""
-pdf: "00-inbox/Aug_inbox/2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane.pdf"
+pdf: "00-inbox/PDFs/2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane.pdf"
 mineru_md: "02-parsed-markdown/2025-NDSS-SketchFeature__High-Quality_Per-Flow_Feature_Extractor_Towards_Security-Aware_Data_Plane.md"
 status: deep-analyzed
 reading_level: L3

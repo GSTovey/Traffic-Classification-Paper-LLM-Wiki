@@ -13,12 +13,12 @@ status: processed
 reading_level: L2
 research_area: ["malicious-traffic-detection", "encrypted-traffic-analysis"]
 task: ["malicious-traffic-detection", "tunnel-detection"]
-method: []
+method: ["流级自适应推断与 DoH 行为治理"]
 dataset: ["CIC-DoH2023", "Gen-C-DDD-2022"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # MIRAGE-DoH: Metamorphic Intelligence and Resilient AI Grid for Autonomous Governance of Encrypted DNS

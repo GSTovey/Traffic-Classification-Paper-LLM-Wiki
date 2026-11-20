@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Automated Construction of High-Quality Initial Seed Corpus for Network Protocol Fuzzing"
-title_cn: "unknown"
+title_cn: "网络协议模糊测试初始种子语料的自动构建"
 authors: ["Weicheng Lin", "Laile Xi", "Yaowen Zheng", "Shenghao Lin", "Jiaxing Cheng", "Zhen Wang", "Shizhao Tian", "Yubo Li", "Tianheng Qu", "Hongsong Zhu"]
 year: 2026
 venue: "INFOCOM"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Automated Construction of High-Quality Initial Seed Corpus for Network Protocol Fuzzing

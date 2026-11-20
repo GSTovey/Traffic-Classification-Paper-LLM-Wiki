@@ -14,7 +14,7 @@ authors:
   - Andreas Peter
 year: 2020
 venue: "NDSS (Network and Distributed System Security Symposium)"
-doi: ""
+doi: "10.14722/ndss.2020.24412"
 url: "https://github.com/Thijsvanede/Flowprint"
 pdf: "00-inbox/PDFs/2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.pdf"
 mineru_md: "02-parsed-markdown/2020-NDSS-Flowprint__Semi-Supervised_Mobile-App_Fingerprinting_on_Encrypted_Network_Traffic.md"
@@ -33,7 +33,7 @@ dataset:
 code: "https://github.com/Thijsvanede/Flowprint"
 relevance: "Semi-supervised approach for encrypted mobile traffic fingerprinting; handles unseen apps and app updates"
 created: 2026-05-27
-updated: "2026-10-21"
+updated: "2026-11-20"
 venue_factor: 1.0
 time_factor: 0.45
 citation_impact: 1.8
@@ -55,6 +55,7 @@ citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traf
 | 研究领域 | 加密网络流量分析、移动应用指纹识别 |
 | 核心任务 | 从加密流量中半监督地识别已知应用并检测未知应用 |
 | 开源代码 | https://github.com/Thijsvanede/Flowprint |
+| DOI | [10.14722/ndss.2020.24412](https://doi.org/10.14722/ndss.2020.24412) |
 
 ---
 

@@ -16,7 +16,7 @@ year: 2024
 venue: "IEEE/ACM TON 2024"
 doi: "10.1109/TNET.2023.3337270"
 url: ""
-pdf: ""
+pdf: "00-inbox/PDFs/2024-TON-Website_Fingerprinting_on_Encrypted_Proxies__A_Flow-Context-Aware_Approach_and_Countermeasures.pdf"
 mineru_md: "02-parsed-markdown/2024-TON-Website_Fingerprinting_on_Encrypted_Proxies__A_Flow-Context-Aware_Approach_and_Countermeasures.md"
 status: processed
 reading_level: L2
@@ -373,21 +373,21 @@ $$Score(F) = \sqrt{\#occur(F)} \sum_{l \in F} W2I_{ij}$$
 
 - [[website-fingerprinting]]
 - [[encrypted-traffic-analysis]]
-- [[training-testing-asymmetry]]
-- [[flow-correlation]]
+- training-testing-asymmetry
+- flow-correlation
 
 ### 9.2 相关方法
 
-- [[random-forest]]
-- [[DBSCAN]]
-- [[longest-common-subsequence]]
-- [[CNN-traffic-classification]]
+- random-forest
+- DBSCAN
+- longest-common-subsequence
+- [[05-methods/convolutional-network|CNN-traffic-classification]]
 
 ### 9.3 相关任务
 
 - [[website-fingerprinting-defense]]
-- [[encrypted-proxy-traffic-analysis]]
-- [[traffic-analysis-attack]]
+- encrypted-proxy-traffic-analysis
+- traffic-analysis-attack
 
 ### 9.4 可更新的综述页面
 

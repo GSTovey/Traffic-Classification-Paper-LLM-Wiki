@@ -58,6 +58,6 @@
 
 ## 输出约束
 
-所有关键判断必须关联 `source_note` 和 `source_locator`。重要判断写入 `09-claims/evidence-ledger.jsonl`，初始状态为 `pending_review`；只有完成人工核验后才可标记为 `verified`。
+所有关键判断必须关联 `source_note` 和 `source_locator`。重要证据按主入库阶段 3.5 登记为 `pending_review`。人工复核结果、方向、条件和反证后可标记为 `verified`。命题分歧另记在 `claim_state`，研究前沿快照由维护者签审。
 
 不得仅凭论文局限列表、模型名称相加或语言模型推理认定存在创新。

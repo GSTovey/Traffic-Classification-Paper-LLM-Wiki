@@ -12,13 +12,13 @@ mineru_md: "02-parsed-markdown/2026-arXiv-SkillWatermark__An_Embedded_Skill_Wate
 status: processed
 reading_level: L1
 research_area: ["encrypted-traffic-analysis"]
-task: []
-method: []
+task: ["评估智能体工具流量的隐私风险"]
+method: ["受控工具执行流量测量"]
 dataset: ["ClawHub 技能市场全量爬取（65,699 个技能，14 个领域）", "自采集 Claude Code 流量样本（>7,000 条，Clash 代理模拟 VPN）"]
 code: "unknown"
 relevance: medium
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # SkillWatermark: An Embedded Skill Watermark of Progressive Privacy Inference via Benign Prompts

@@ -11,8 +11,8 @@ authors:
   - Yujun Zhang
 year: 2025
 venue: IWQoS
-doi: unknown
-url: unknown
+doi: "10.1109/iwqos65803.2025.11143462"
+url: "https://doi.org/10.1109/iwqos65803.2025.11143462"
 pdf: "00-inbox/PDFs/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences.pdf"
 mineru_md: "02-parsed-markdown/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences.md"
 status: processed
@@ -27,7 +27,7 @@ dataset:
 code: unknown
 relevance: high
 created: 2026-06-09
-updated: 2026-06-09
+updated: "2026-11-20"
 internal_citation_count: 3
 citation_impact: 1.0
 composite_weight: 0.65
@@ -53,6 +53,7 @@ citation_count_verified: "2026-11-18"
 | 是否开源 | 否 |
 | PDF | `../00-inbox/PDFs/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences.pdf` |
 | MinerU Markdown | `../02-parsed-markdown/2025-IWQoS-TraGe_A_Generic_Packet_Representation_for_Traffic_Classification_Based_on_Header-Payload_Differences.md` |
+| DOI | [10.1109/iwqos65803.2025.11143462](https://doi.org/10.1109/iwqos65803.2025.11143462) |
 
 ---
 

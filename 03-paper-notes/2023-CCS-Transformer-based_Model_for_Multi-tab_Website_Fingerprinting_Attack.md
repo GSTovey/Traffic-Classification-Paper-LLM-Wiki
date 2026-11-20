@@ -11,7 +11,7 @@ year: 2023
 venue: "ACM CCS 2023"
 doi: "https://doi.org/10.1145/3576915.3623107"
 url: "https://github.com/jzx-bupt/TMWF"
-pdf: ""
+pdf: "00-inbox/PDFs/2023-CCS-Transformer-based_Model_for_Multi-tab_Website_Fingerprinting_Attack.pdf"
 mineru_md: "02-parsed-markdown/2023-CCS-Transformer-based_Model_for_Multi-tab_Website_Fingerprinting_Attack.md"
 status: processed
 reading_level: L3

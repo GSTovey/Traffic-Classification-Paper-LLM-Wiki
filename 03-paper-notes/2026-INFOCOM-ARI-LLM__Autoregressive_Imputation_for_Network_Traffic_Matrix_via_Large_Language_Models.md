@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "ARI-LLM: Autoregressive Imputation for Network Traffic Matrix via Large Language Models"
-title_cn: "unknown"
+title_cn: "ARI-LLM：基于大语言模型的网络流量矩阵自回归补全"
 authors: ["Fenglin Yan", "Kaiwen Jiang", "Yan Qiao", "Meng Li", "Yuxuan Li", "Peng Yu", "Cuiying Feng"]
 year: 2026
 venue: "INFOCOM"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "https://github.com/JKevin17/ARI-LLM"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 internal_citation_count: 1
 citation_impact: 1.0
 composite_weight: 0.85

@@ -5,8 +5,8 @@ title_cn: "跨网络边界加密隧道检测"
 authors: ["Maurizio Dusi", "Manuel Crotti", "Francesco Gringoli", "Luca Salgarelli"]
 year: 2008
 venue: "IEEE ICC 2008"
-doi: unknown
-url: unknown
+doi: "10.1109/icc.2008.334"
+url: "https://doi.org/10.1109/icc.2008.334"
 pdf: "00-inbox/PDFs/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.pdf"
 mineru_md: "02-parsed-markdown/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["campus network traffic traces"]
 code: unknown
 relevance: medium
 created: "2026-05-27"
-updated: "2026-10-21"
+updated: "2026-11-20"
 venue_factor: 0.65
 time_factor: 0.25
 citation_impact: 1.0
@@ -47,6 +47,7 @@ citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traf
 | 是否开源            | 否                                                                                                    |
 | PDF             | 00-inbox/PDFs/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.pdf                  |
 | MinerU Markdown | 02-parsed-markdown/2008-ICC-Detection_of_Encrypted_Tunnels_Across_Network_Boundaries.md              |
+| DOI | [10.1109/icc.2008.334](https://doi.org/10.1109/icc.2008.334) |
 
 ## 1. 一句话总结
 

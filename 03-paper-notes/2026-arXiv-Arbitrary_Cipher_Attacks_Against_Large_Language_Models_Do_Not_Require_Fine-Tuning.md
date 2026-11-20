@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-arXiv-Arbitrary_Cipher_Attacks_Against_Large_Language_M
 mineru_md: "02-parsed-markdown/2026-arXiv-Arbitrary_Cipher_Attacks_Against_Large_Language_Models_Do_Not_Require_Fine-Tuning.md"
 status: processed
 reading_level: L1
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["大语言模型安全"]
+task: ["评估隐蔽输入对模型安全判定的影响"]
+method: ["受控黑盒对照与安全边界评估"]
+dataset: ["作者常识问答构造的受控试验"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Arbitrary Cipher Attacks Against Large Language Models Do Not Require Fine-Tuning

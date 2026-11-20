@@ -1,84 +1,67 @@
 ---
 type: paper
-title_original: "RoFiRe: Robust Website Fingerprinting on Real-World Tor Trafic via Improved Augmentation and Normalization"
-title_cn: ""
-authors: []
+title_original: "RoFiRe: Robust Website Fingerprinting on Real-World Tor Traffic via Improved Augmentation and Normalization"
+title_cn: "RoFiRe：实际 Tor 流量上的鲁棒网站指纹评估"
+authors: ["Haeseung Jeon", "Sujin Kim", "Nate Mathews", "Hosung Kang", "Se Eun Oh"]
 year: 2026
 venue: WWW
-doi: unknown
-url: unknown
+doi: "10.1145/3774904.3792592"
+url: "https://doi.org/10.1145/3774904.3792592"
 pdf: "00-inbox/PDFs/2026-WWW-RoFiRe__Robust_Website_Fingerprinting_on_Real-World_Tor_Traffic_via_Improved_Augmentation_and_Normalization.pdf"
 mineru_md: "02-parsed-markdown/2026-WWW-RoFiRe__Robust_Website_Fingerprinting_on_Real-World_Tor_Traffic_via_Improved_Augmentation_and_Normalization.md"
 status: deep-analyzed
 reading_level: L3
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["匿名流量分析"]
+task: ["网站指纹的跨采集条件评估"]
+method: ["动态窗口增强与预归一化"]
+dataset: ["GTT23、BigEnough、AWF、DF"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
-# RoFiRe: Robust Website Fingerprinting on Real-World Tor Trafic via Improved Augmentation and Normalization
+# RoFiRe: Robust Website Fingerprinting on Real-World Tor Traffic via Improved Augmentation and Normalization
 
 ## 0. 论文基础信息
 | 项目 | 内容 |
 |---|---|
-| 原文标题 | RoFiRe: Robust Website Fingerprinting on Real-World Tor Trafic via Improved Augmentation and Normalization |
+| 原文标题 | RoFiRe: Robust Website Fingerprinting on Real-World Tor Traffic via Improved Augmentation and Normalization |
 | 年份 | 2026 |
 | 会议/期刊 | WWW |
 | PDF | [[2026-WWW-RoFiRe__Robust_Website_Fingerprinting_on_Real-World_Tor_Traffic_via_Improved_Augmentation_and_Normalization.pdf]] |
 | MinerU Markdown | [[2026-WWW-RoFiRe__Robust_Website_Fingerprinting_on_Real-World_Tor_Traffic_via_Improved_Augmentation_and_Normalization.md]] |
+| 作者 | Haeseung Jeon, Sujin Kim, Nate Mathews, Hosung Kang, Se Eun Oh |
+| DOI | [10.1145/3774904.3792592](https://doi.org/10.1145/3774904.3792592) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+作者在真实出口轨迹上比较适应每条流长度的增强与归一化方法。
 
 ## 2. 摘要原文
 论文未明确提取摘要。
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+用 GTT23 与三套合成语料分别评价闭集、漂移和开放集条件。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：GTT23、BigEnough、AWF、DF。
+- 作者报告：论文在 GTT23 的多个闭集预算显示较基线的优势。开放集高精确率主要集中于少数站点，具体条件见本页 L3 原文分析。
+- 原文位置：[[02-parsed-markdown/2026-WWW-RoFiRe__Robust_Website_Fingerprinting_on_Real-World_Tor_Traffic_via_Improved_Augmentation_and_Normalization|原文解析稿]] · §3–§8、Tables 1–4 与本页 L3 分析。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+GTT23 来自出口侧。实际入口可见性和另一份真实采集语料的表现须单独检验。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
-- MinerU：已完成；解析质量需人工抽查。
-- Bib 元数据：待官方 API/论文首页核验。
 
-
-## 深度分析（自动证据提取，需人工复核）
-
-### 研究问题与证据
-- 主题线索：website fingerprint, tor, transformer。
-- 摘要证据：MinerU 未稳定提取摘要，不能据此补写贡献。
-
-### 方法机制
-正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
-
-### 实验与结果
-实验段落未稳定提取；不补造数据集、baseline、指标或数值。
-
-### 局限与复现
-论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
-
-### 开源与证据等级
-- 代码线索：未检测到明确 GitHub 线索。
-- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-WWW-RoFiRe__Robust_Website_Fingerprinting_on_Real-World_Tor_Traffic_via_Improved_Augmentation_and_Normalization|原文解析稿]] · §3–§8、Tables 1–4 与本页 L3 分析。可引用的结论须保留所列实验条件。
 
 ## 深度分析（2026-09-29）
 
@@ -137,3 +120,62 @@ RoFiRe 的实质贡献是把增强粒度从 burst/time-bin 调整到“按每条
 
 - 本笔记前部的自动入库、摘要级或待核验段落是入库时的历史快照，按规范保留以避免删除原始记录。
 - 本次新增的深度分析段落、证据记录和局限说明优先；历史段落中的“待深读/待核验”状态不代表当前分析尚未完成。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
+- MinerU：已完成；解析质量需人工抽查。
+- Bib 元数据：待官方 API/论文首页核验。
+
+
+
+## 深度分析（自动证据提取，需人工复核）
+
+### 研究问题与证据
+- 主题线索：website fingerprint, tor, transformer。
+- 摘要证据：MinerU 未稳定提取摘要，不能据此补写贡献。
+
+### 方法机制
+正文方法段落未稳定提取；需打开 MinerU 原文核验输入、处理和输出。
+
+### 实验与结果
+实验段落未稳定提取；不补造数据集、baseline、指标或数值。
+
+### 局限与复现
+论文局限段落未稳定提取；复现前需核验数据划分、随机种子、代码和运行环境。
+
+### 开源与证据等级
+- 代码线索：未检测到明确 GitHub 线索。
+- 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
+
+```

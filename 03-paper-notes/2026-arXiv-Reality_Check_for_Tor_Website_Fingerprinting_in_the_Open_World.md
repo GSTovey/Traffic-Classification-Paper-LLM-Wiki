@@ -10,7 +10,7 @@ year: 2026
 venue: "arXiv 2026"
 doi: ""
 url: "https://arxiv.org/abs/2605.xxxxx"
-pdf: ""
+pdf: "00-inbox/PDFs/2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-Reality_Check_for_Tor_Website_Fingerprinting_in_the_Open_World.md"
 status: processed
 reading_level: L2

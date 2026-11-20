@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "DualGuard: An Adaptive Detection Framework for Concurrent Malicious and Normality Drifts in Network Traffic"
-title_cn: "unknown"
+title_cn: "DualGuard：面向恶意与正常流量同时漂移的自适应检测"
 authors: ["Xingkai Kang", "Jiang Xie", "Tao Yin", "Hongbo Xu", "Peishuai Sun", "Zijian Zhang", "Liehuang Zhu", "Shuhao Li", "Xiaochun Yun"]
 year: 2026
 venue: "TIFS"
@@ -18,7 +18,7 @@ dataset: ["论文未明确说明"]
 code: "https://github.com/ghostghost66/DualGuard"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # DualGuard: An Adaptive Detection Framework for Concurrent Malicious and Normality Drifts in Network Traffic

@@ -13,12 +13,12 @@ status: processed
 reading_level: L2
 research_area: ["website-fingerprinting", "encrypted-traffic-analysis", "censorship-circumvention"]
 task: ["website-fingerprinting"]
-method: []
+method: ["与模型无关的流量适配和跨代理对照"]
 dataset: ["PA3 proxied website traffic dataset", "Firefox 132-141 BIH dataset"]
 code: "https://github.com/wesly2000/PA3"
 relevance: high
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Mitigating Proxy-Induced Traffic Drift in Website Fingerprinting via Model-Agnostic Traffic Tailoring

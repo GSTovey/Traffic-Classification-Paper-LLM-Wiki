@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2026-DSN-Q3Fuzz__Multi-Layered_Stateful_Fuzzing_for_the_QUIC
 mineru_md: "02-parsed-markdown/2026-DSN-Q3Fuzz__Multi-Layered_Stateful_Fuzzing_for_the_QUIC-HTTP_3_Protocol_Stack.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["网络协议实现安全"]
+task: ["评估 QUIC 与 HTTP/3 实现的状态一致性"]
+method: ["多层状态模型与受控协议测试"]
+dataset: ["14 种开源 QUIC–HTTP/3 服务端实现的测试"]
 code: "unknown（论文声明 Q3Fuzz 已公开（脚注 1），但解析稿未保留该 URL）"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Q3Fuzz: Multi-Layered Stateful Fuzzing for the QUIC-HTTP/3 Protocol Stack

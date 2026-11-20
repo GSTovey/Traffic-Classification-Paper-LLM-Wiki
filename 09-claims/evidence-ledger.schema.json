@@ -2,48 +2,95 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Traffic_Papers evidence ledger record",
   "type": "object",
+  "$defs": {
+    "text": {"type": "string", "pattern": "\\S"},
+    "known": {
+      "$ref": "#/$defs/text",
+      "not": {"enum": ["unknown", "not_applicable", "—", "null"]}
+    },
+    "ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+    "v2": {"required": ["schema_version"], "properties": {"schema_version": {"const": 2}}},
+    "verified": {"properties": {"status": {"const": "verified"}}}
+  },
   "required": [
-    "record_id",
-    "claim_id",
-    "source_note",
-    "source_locator",
-    "evidence_type",
-    "polarity",
-    "conditions",
-    "counterevidence_ids",
-    "status"
+    "record_id", "claim_id", "source_note", "source_locator", "evidence_type", "polarity",
+    "conditions", "counterevidence_ids", "status"
   ],
   "properties": {
-    "record_id": {"type": "string", "minLength": 1},
-    "claim_id": {"type": "string", "minLength": 1},
-    "source_note": {"type": "string", "minLength": 1},
-    "source_locator": {
-      "type": "object",
-      "additionalProperties": {"type": "string"}
-    },
+    "schema_version": {"enum": [1, 2]},
+    "record_id": {"$ref": "#/$defs/text"},
+    "claim_id": {"$ref": "#/$defs/text"},
+    "source_note": {"$ref": "#/$defs/text"},
+    "source_locator": {"type": "object", "additionalProperties": {"type": "string"}},
+    "source_pdf": {"$ref": "#/$defs/text"},
+    "source_sha256": {"$ref": "#/$defs/text"},
+    "source_type": {"$ref": "#/$defs/text"},
+    "recorded_on": {"$ref": "#/$defs/text"},
     "evidence_type": {
-      "enum": [
-        "author_claim",
-        "direct_experiment",
-        "ablation",
-        "independent_replication",
-        "cross_paper_synthesis"
-      ]
+      "enum": ["author_claim", "direct_experiment", "ablation", "independent_replication", "cross_paper_synthesis", "formal_result"]
     },
     "polarity": {"enum": ["supports", "challenges", "neutral"]},
-    "conditions": {
-      "type": "object",
-      "additionalProperties": {"type": "string"}
-    },
-    "counterevidence_ids": {
-      "type": "array",
-      "items": {"type": "string"}
-    },
-    "status": {
-      "enum": ["auto_extracted", "pending_review", "verified", "contested", "retired"]
-    },
+    "conditions": {"type": "object", "additionalProperties": {"type": "string"}},
+    "counterevidence_ids": {"$ref": "#/$defs/ids"},
+    "status": {"enum": ["auto_extracted", "pending_review", "verified", "contested", "retired"]},
     "reviewed_on": {"type": "string"},
-    "review_note": {"type": "string"}
+    "review_note": {"type": "string"},
+    "reviewed_by": {"$ref": "#/$defs/known"},
+    "reported_result": {"$ref": "#/$defs/text"},
+    "directness": {"enum": ["direct", "indirect"]},
+    "source_document": {"$ref": "#/$defs/text"},
+    "study_lineage": {"$ref": "#/$defs/ids", "minItems": 1},
+    "data_lineage": {"$ref": "#/$defs/ids", "minItems": 1},
+    "legacy_record_ids": {"$ref": "#/$defs/ids"}
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {"$ref": "#/$defs/v2"},
+      "then": {
+        "required": ["source_document", "reported_result", "directness", "study_lineage", "data_lineage"],
+        "properties": {
+          "record_id": {"pattern": "^EV-[A-Za-z0-9][A-Za-z0-9-]*$"},
+          "claim_id": {"pattern": "^CLM-[0-9]{4,}$"},
+          "conditions": {
+            "required": ["task", "input", "observation_point", "observation_unit", "dataset", "split", "metric", "scope"],
+            "additionalProperties": {"$ref": "#/$defs/text"}
+          }
+        }
+      },
+      "else": {
+        "not": {"anyOf": [
+          {"required": ["reported_result"]}, {"required": ["directness"]},
+          {"required": ["source_document"]}, {"required": ["study_lineage"]},
+          {"required": ["data_lineage"]}, {"required": ["legacy_record_ids"]},
+          {"required": ["reviewed_by"]}
+        ]}
+      }
+    },
+    {
+      "if": {"$ref": "#/$defs/verified"},
+      "then": {
+        "properties": {"source_locator": {"minProperties": 1, "additionalProperties": {"$ref": "#/$defs/text"}}}
+      }
+    },
+    {
+      "if": {"allOf": [{"$ref": "#/$defs/v2"}, {"$ref": "#/$defs/verified"}]},
+      "then": {
+        "required": ["reviewed_by", "reviewed_on", "review_note"],
+        "properties": {
+          "reviewed_on": {"format": "date"},
+          "review_note": {"$ref": "#/$defs/known"},
+          "source_locator": {
+            "anyOf": [
+              {"required": ["page"], "properties": {"page": {"$ref": "#/$defs/known"}}},
+              {"required": ["section"], "properties": {"section": {"$ref": "#/$defs/known"}}},
+              {"required": ["table"], "properties": {"table": {"$ref": "#/$defs/known"}}},
+              {"required": ["figure"], "properties": {"figure": {"$ref": "#/$defs/known"}}},
+              {"required": ["appendix"], "properties": {"appendix": {"$ref": "#/$defs/known"}}}
+            ]
+          }
+        }
+      }
+    }
+  ]
 }

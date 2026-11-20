@@ -5,9 +5,9 @@ title_cn: "止于至善：基于迭代互信息最小化的高效网站指纹防
 authors: ["Rong Wang", "Zhen Ling", "Guangchi Liu", "Shaofeng Li", "Junzhou Luo", "Xinwen Fu"]
 year: 2026
 venue: "NDSS 2026"
-doi: unknown
-url: unknown
-pdf: ""
+doi: "10.14722/ndss.2026.240786"
+url: "https://doi.org/10.14722/ndss.2026.240786"
+pdf: "00-inbox/PDFs/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization.pdf"
 mineru_md: "02-parsed-markdown/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization.md"
 status: deep-analyzed
 reading_level: L3
@@ -18,7 +18,7 @@ dataset: ["DF dataset (Sirinam et al. 2018)", "95 monitored websites", "40000 un
 code: "https://github.com/Junowww/FRUGAL-ndss"
 relevance: high
 created: "2026-06-21"
-updated: "2026-11-03"
+updated: "2026-11-20"
 deep_analysis_verified: "2026-11-03"
 deep_analysis_sources: ["03-paper-notes/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization.md", "02-parsed-markdown/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization.md"]
 evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
@@ -42,6 +42,7 @@ evidence_audit: "source-linked; existing numerical claims remain subject to sour
 | 是否开源 | 是（https://github.com/Junowww/FRUGAL-ndss） |
 | PDF |  |
 | MinerU Markdown | 02-parsed-markdown/2026-NDSS-Cease_at_the_Ultimate_Goodness__Towards_Efficient_Website_Fingerprinting_Defense_via_Iterative_Mutual_Information_Minimization.md |
+| DOI | [10.14722/ndss.2026.240786](https://doi.org/10.14722/ndss.2026.240786) |
 
 ---
 
@@ -452,29 +453,29 @@ FRUGAL 在 80% BWO 下对抗训练后 DF ASR 仅 9.42%，而 Palette 为 20.27%�
 - [[website-fingerprinting]]
 - [[website-fingerprinting-defense]]
 - [[encrypted-traffic-analysis]]
-- [[mutual-information]]
-- [[conditional-mutual-information]]
-- [[reinforcement-learning]]
-- [[soft-actor-critic]]
-- [[tor-anonymity-network]]
-- [[traffic-obfuscation]]
-- [[adversarial-training]]
-- [[information-theory]]
+- mutual-information
+- conditional-mutual-information
+- reinforcement-learning
+- soft-actor-critic
+- tor-anonymity-network
+- traffic-obfuscation
+- adversarial-training
+- information-theory
 
 ### 9.2 相关方法
 
-- [[CLUB-estimator]]
-- [[dynamic-feature-elimination]]
-- [[iterative-dummy-packet-injection]]
-- [[dirichlet-multinomial-sampling]]
-- [[deep-fingerprinting-attack]]
-- [[robust-fingerprinting-attack]]
+- CLUB-estimator
+- dynamic-feature-elimination
+- iterative-dummy-packet-injection
+- dirichlet-multinomial-sampling
+- [[03-paper-notes/2018-CCS-Deep_Fingerprinting_Undermining_Website_Fingerprinting_Defenses_with_Deep_Learning|deep-fingerprinting-attack]]
+- robust-fingerprinting-attack
 
 ### 9.3 相关任务
 
 - [[website-fingerprinting-defense]]
-- [[tor-traffic-protection]]
-- [[privacy-preserving-traffic-analysis]]
+- tor-traffic-protection
+- privacy-preserving-traffic-analysis
 
 ### 9.4 可更新的综述页面
 

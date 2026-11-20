@@ -7,7 +7,7 @@ year: 2026
 venue: "NSDI 2026"
 doi: unknown
 url: "https://www.usenix.org/conference/nsdi26/presentation/xie-guorui"
-pdf: "00-inbox/Aug_inbox/2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network_Obfuscation.pdf"
+pdf: "00-inbox/PDFs/2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network_Obfuscation.pdf"
 mineru_md: "02-parsed-markdown/2026-USENIX-Defending_against_Traffic_Analysis_Attacks_with_Flexible_In-Network_Obfuscation.md"
 status: processed
 reading_level: L3

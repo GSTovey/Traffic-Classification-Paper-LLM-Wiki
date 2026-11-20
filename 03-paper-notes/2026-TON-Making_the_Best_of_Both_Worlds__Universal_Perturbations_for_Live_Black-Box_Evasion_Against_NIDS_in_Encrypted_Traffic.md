@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Making the Best of Both Worlds: Universal Perturbations for Live Black-Box Evasion Against NIDS in Encrypted Traffic"
-title_cn: "unknown"
+title_cn: "加密流量入侵检测的实时黑盒通用扰动研究"
 year: 2026
 venue: "TON"
 doi: "10.1109/TON.2026.3710207"

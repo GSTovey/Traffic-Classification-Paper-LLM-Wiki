@@ -13,8 +13,8 @@ authors:
   - Ke Xu
 year: 2025
 venue: "NeurIPS"
-doi: ""
-url: ""
+doi: "10.52202/085713-4270"
+url: "https://doi.org/10.52202/085713-4270"
 pdf: "00-inbox/PDFs/2025-NIPS-FlowRefiner__A_Robust_Traffic_Classification_Framework_against_Label_Noise.pdf"
 mineru_md: "02-parsed-markdown/2025-NIPS-FlowRefiner__A_Robust_Traffic_Classification_Framework_against_Label_Noise.md"
 status: processed
@@ -30,7 +30,7 @@ dataset:
 code: "https://github.com/NSSL-SJTU/FlowRefiner"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-20"
 ---
 
 # FlowRefiner: 抗标签噪声的鲁棒流量分类框架
@@ -46,6 +46,7 @@ updated: "2026-06-03"
 | 会议/期刊 | NeurIPS 2025 |
 | 关键词 | Traffic Classification, Label Noise, Pre-training, Transformer, Robust Learning |
 | 代码 | https://github.com/NSSL-SJTU/FlowRefiner |
+| DOI | [10.52202/085713-4270](https://doi.org/10.52202/085713-4270) |
 
 ## 1. 一句话总结
 

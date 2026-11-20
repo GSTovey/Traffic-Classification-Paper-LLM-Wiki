@@ -5,8 +5,8 @@ title_cn: "通过流交互图分析实时检测未知加密恶意流量"
 authors: [Chuanpu Fu, Qi Li, Ke Xu]
 year: 2023
 venue: "NDSS"
-doi: "unknown"
-url: "unknown"
+doi: "10.14722/ndss.2023.23080"
+url: "https://doi.org/10.14722/ndss.2023.23080"
 pdf: "00-inbox/PDFs/2023-NDSS-Detecting_unknown_encrypted_malicious_traffic_in_real_time_via_flow_interaction_graph_analysis.pdf"
 mineru_md: "02-parsed-markdown/2023-NDSS-Detecting_unknown_encrypted_malicious_traffic_in_real_time_via_flow_interaction_graph_analysis.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: [92-datasets, 48-encrypted-attacks]
 code: "unknown"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-20"
 internal_citation_count: 25
 citation_impact: 1.8
 composite_weight: 1.26

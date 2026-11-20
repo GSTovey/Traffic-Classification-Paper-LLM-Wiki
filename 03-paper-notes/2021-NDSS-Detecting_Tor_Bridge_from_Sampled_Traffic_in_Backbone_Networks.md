@@ -9,8 +9,8 @@ authors:
   - Xiaoyan Hu
 year: 2021
 venue: NDSS
-doi: unknown
-url: unknown
+doi: "10.14722/madweb.2021.23011"
+url: "https://doi.org/10.14722/madweb.2021.23011"
 pdf: "00-inbox/PDFs/2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks.pdf"
 mineru_md: "02-parsed-markdown/2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks.md"
 status: processed
@@ -24,7 +24,7 @@ research_area: ["Tor流量检测", "流量采样", "网络安全"]
 task: ["Tor bridge检测", "obfs4 bridge识别", "采样流量分析"]
 method: ["Nested Count Bloom Filter", "random forest", "traffic sampling"]
 created: 2026-06-09
-updated: "2026-10-21"
+updated: "2026-11-20"
 venue_factor: 0.65
 time_factor: 0.45
 citation_impact: 1.0
@@ -54,6 +54,7 @@ weight_venue_basis: "NestTor reference [2]: MADWeb workshop, not NDSS main sympo
 | 是否开源 | 否 |
 | PDF | `../00-inbox/PDFs/2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks.pdf` |
 | MinerU Markdown | `../02-parsed-markdown/2021-NDSS-Detecting_Tor_Bridge_from_Sampled_Traffic_in_Backbone_Networks.md` |
+| DOI | [10.14722/madweb.2021.23011](https://doi.org/10.14722/madweb.2021.23011) |
 
 ---
 

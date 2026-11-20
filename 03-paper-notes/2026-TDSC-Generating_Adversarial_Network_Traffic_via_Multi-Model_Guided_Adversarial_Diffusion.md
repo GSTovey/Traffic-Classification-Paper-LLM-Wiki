@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Generating Adversarial Network Traffic via Multi-Model Guided Adversarial Diffusion"
-title_cn: "unknown"
+title_cn: "多模型引导的对抗扩散流量生成研究"
 year: 2026
 venue: "TDSC"
 doi: "10.1109/TDSC.2026.3740103"

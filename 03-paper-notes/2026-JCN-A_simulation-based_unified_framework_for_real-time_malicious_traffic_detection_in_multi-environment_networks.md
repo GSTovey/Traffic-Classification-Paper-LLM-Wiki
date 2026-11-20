@@ -7,7 +7,7 @@ year: 2026
 venue: "Computer Networks (Elsevier)"
 doi: "10.1016/j.comnet.2026.112220"
 url: "https://doi.org/10.1016/j.comnet.2026.112220"
-pdf: "00-inbox/Aug_inbox/2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_detection_in_multi-environment_networks.pdf"
+pdf: "00-inbox/PDFs/2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_detection_in_multi-environment_networks.pdf"
 mineru_md: "02-parsed-markdown/2026-JCN-A_simulation-based_unified_framework_for_real-time_malicious_traffic_detection_in_multi-environment_networks.md"
 status: processed
 reading_level: L2
@@ -306,24 +306,24 @@ t 检验（Table 8）：RNN-LSTM-TL vs PLS（t=1.709, p=0.1625）在 95%/90%/85%
 
 ### 9.1 相关概念
 
-- [[多环境网络]]
+- 多环境网络
 
 ### 9.2 相关方法
 
-- [[迁移学习]]
-- [[特征选择]]
+- 迁移学习
+- 特征选择
 
 ### 9.3 相关任务
 
-- [[入侵检测]]
+- 入侵检测
 
 ### 9.4 可更新的综述页面
 
-- [[综述-入侵检测]]
+- 综述-入侵检测
 
 ### 9.5 可加入的对比表
 
-- [[对比表-实时入侵检测系统]]
+- 对比表-实时入侵检测系统
 
 ## 10. 证据记录
 

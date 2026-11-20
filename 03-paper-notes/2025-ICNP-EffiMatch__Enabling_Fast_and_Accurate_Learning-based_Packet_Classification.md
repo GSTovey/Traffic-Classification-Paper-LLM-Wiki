@@ -11,14 +11,14 @@ pdf: "00-inbox/PDFs/2025-ICNP-EffiMatch__Enabling_Fast_and_Accurate_Learning-bas
 mineru_md: "02-parsed-markdown/2025-ICNP-EffiMatch__Enabling_Fast_and_Accurate_Learning-based_Packet_Classification.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
+research_area: ["网络数据面"]
+task: ["基于规则的包分类"]
+method: ["多模型并行查找与递归模型索引"]
 dataset: ["ClassBench"]
 code: "unknown"
 relevance: low
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # EffiMatch: Enabling Fast and Accurate Learning-based Packet Classification

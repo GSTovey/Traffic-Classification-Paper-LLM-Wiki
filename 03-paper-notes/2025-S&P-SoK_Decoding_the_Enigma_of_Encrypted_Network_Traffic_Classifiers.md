@@ -5,8 +5,8 @@ title_cn: "系统化知识：解密加密网络流量分类器之谜"
 authors: ["Nimesha Wickramasinghe", "Arash Shaghaghi", "Gene Tsudik", "Sanjay Jha"]
 year: 2025
 venue: "IEEE S&P 2025"
-doi: unknown
-url: unknown
+doi: "10.1109/sp61157.2025.00165"
+url: "https://doi.org/10.1109/sp61157.2025.00165"
 pdf: "00-inbox/PDFs/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.pdf"
 mineru_md: "02-parsed-markdown/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.md"
 status: deep-analyzed
@@ -18,7 +18,7 @@ dataset: ["CipherSpectrum", "CSTNET-TLS1.3", "ISCXVPN2016", "ISCXTor2016", "USTC
 code: "https://cspectrum.web.cse.unsw.edu.au"
 relevance: high
 created: "2026-05-27"
-updated: "2026-11-03"
+updated: "2026-11-20"
 deep_analysis_verified: "2026-11-03"
 deep_analysis_sources: ["03-paper-notes/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.md", "02-parsed-markdown/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.md"]
 evidence_audit: "source-linked; existing numerical claims remain subject to source-location review"
@@ -50,6 +50,7 @@ citation_update_source: "2026-myPaper-TNSM-NestTor_Detecting_Tor-over-Proxy_Traf
 | 是否开源 | 是（数据集和评估脚本） |
 | PDF | 00-inbox/PDFs/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.pdf |
 | MinerU Markdown | 02-parsed-markdown/2025-S&P-SoK_Decoding_the_Enigma_of_Encrypted_Network_Traffic_Classifiers.md |
+| DOI | [10.1109/sp61157.2025.00165](https://doi.org/10.1109/sp61157.2025.00165) |
 
 ## 1. 一句话总结
 

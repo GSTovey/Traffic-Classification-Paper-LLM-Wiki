@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "Exact Second-Order Asymptotics for Covert Communication over DMCs with Variational Distance Constraints"
-title_cn: ""
-authors: []
+title_cn: "变差距离约束下离散无记忆信道隐蔽通信的精确二阶渐近"
+authors: ["Qiaosheng Zhang", "Lin Zhou", "Xuelong Li"]
 year: 2026
 venue: arXiv
-doi: unknown
-url: unknown
+doi: "10.48550/arXiv.2609.24675"
+url: "https://doi.org/10.48550/arXiv.2609.24675"
 pdf: "00-inbox/PDFs/2026-arXiv-Exact_Second-Order_Asymptotics_in_Covert_Communication_Over_Discrete_Memoryless_Channels.pdf"
 mineru_md: "02-parsed-markdown/2026-arXiv-Exact_Second-Order_Asymptotics_in_Covert_Communication_Over_Discrete_Memoryless_Channels.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["通信信息论"]
+task: ["确定有限块长的理论边界"]
+method: ["变差距离与渐近界分析"]
+dataset: ["二元输入离散无记忆信道模型"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-09-29"
+updated: "2026-11-20"
 ---
 
 # Exact Second-Order Asymptotics for Covert Communication over DMCs with Variational Distance Constraints
@@ -31,34 +31,84 @@ updated: "2026-09-29"
 | 会议/期刊 | arXiv |
 | PDF | [[2026-arXiv-Exact_Second-Order_Asymptotics_in_Covert_Communication_Over_Discrete_Memoryless_Channels.pdf]] |
 | MinerU Markdown | [[2026-arXiv-Exact_Second-Order_Asymptotics_in_Covert_Communication_Over_Discrete_Memoryless_Channels.md]] |
+| 作者 | Qiaosheng Zhang, Lin Zhou, Xuelong Li |
+| DOI | [10.48550/arXiv.2609.24675](https://doi.org/10.48550/arXiv.2609.24675) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+论文给出变差距离约束下二元输入离散无记忆信道的精确二阶项。
 
 ## 2. 摘要原文
 We determine the exact second-order asymptotics of covert communication over binary-input discrete memoryless channels when covertness is measured by variational distance. Previous work by Tahmasbi and Bloch [IEEE Trans. Inf. Theory, Apr. 2019] characterized the first-order asymptotics and derived achievability and converse bounds on the second-order term, but these bounds do not match. The gap arises from an additional penalty of order $n ^ { 1 / 4 }$ in the achievability bound. We show that this penalty can be removed through a sharper analysis of the distribution of the warden’s output induced by pulse-position modulation. Specifically, we express the variational distance through the Bhattacharyya coefficient of two distributions and the expectation of a continuous function of the log-likelihood ratio. Because the resulting expectation involves a continuous function rather than the probability of a likelihoodratio event, an analysis of the characteristic function combined with a Gaussian smoothing argument reduces the approximation error from $O ( n ^ { - 1 / 4 } )$ (derived from the Berry–Esseen bound in prior work) to $O ( n ^ { - 1 / 2 } )$ . With this better controlled approximation error, we manage to derive a matching achievability result to the existing converse result, thus establishing the exact second-order asymptotics
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+分析有限块长下可达界与逆界之间的误差，得到同一理论展开式。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：二元输入离散无记忆信道模型。
+- 作者报告：摘要报告先前可达界中的阶数为 n 的四分之一次方的不匹配项被消除，可达界和既有逆界在二阶上匹配。
+- 原文位置：[[02-parsed-markdown/2026-arXiv-Exact_Second-Order_Asymptotics_in_Covert_Communication_Over_Discrete_Memoryless_Channels|原文解析稿]] · 摘要与论文定理。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+结论适用于论文规定的输入、信道和覆盖性度量。本文为理论推导，数据集与实测吞吐不适用。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
+
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-arXiv-Exact_Second-Order_Asymptotics_in_Covert_Communication_Over_Discrete_Memoryless_Channels|原文解析稿]] · 摘要与论文定理。可引用的结论须保留所列实验条件。
+
+## 深度分析（并行深度分析更新 2026-09-29）
+
+### 方法、实验与证据
+理论工作研究带变分距离约束的DMC隐蔽通信精确二阶渐近；核心是有限块长下容量、散度和二阶项的严格界。需人工核对定理条件、先验分布与是否可用于网络流量实验。
+
+### 横向联动与局限
+- 该论文可联动 [[method-comparison-table]]、[[narrative-pattern-comparison]] 与相关任务/方法页；当前仅追加证据，不改写既有结论。
+- 复现/引用前需核对 MinerU 表格、官方 PDF 与代码仓库；未从正文稳定提取的字段保留 unknown。
+- 证据等级：摘要与方法/实验章节可定位；跨论文比较不据此自动推断因果或部署保证。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
 - MinerU：已完成；解析质量需人工抽查。
 - Bib 元数据：待官方 API/论文首页核验。
+
 
 
 ## 深度分析（自动证据提取，需人工复核）
@@ -81,12 +131,4 @@ We determine the exact second-order asymptotics of covert communication over bin
 - 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
 
 
-## 深度分析（并行深度分析更新 2026-09-29）
-
-### 方法、实验与证据
-理论工作研究带变分距离约束的DMC隐蔽通信精确二阶渐近；核心是有限块长下容量、散度和二阶项的严格界。需人工核对定理条件、先验分布与是否可用于网络流量实验。
-
-### 横向联动与局限
-- 该论文可联动 [[method-comparison-table]]、[[narrative-pattern-comparison]] 与相关任务/方法页；当前仅追加证据，不改写既有结论。
-- 复现/引用前需核对 MinerU 表格、官方 PDF 与代码仓库；未从正文稳定提取的字段保留 unknown。
-- 证据等级：摘要与方法/实验章节可定位；跨论文比较不据此自动推断因果或部署保证。
+```

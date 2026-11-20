@@ -5,8 +5,8 @@ title_cn: "FGFR-Net: 基于字节级流量图的改进残差网络加密流量�
 authors: ["Yi Zhang", "Shanshan Wang", "Zhenxiang Chen", "Bo Yang"]
 year: 2026
 venue: "Journal of Network and Systems Management (JNSM)"
-doi: unknown
-url: unknown
+doi: "10.1007/s10922-025-10011-8"
+url: "https://doi.org/10.1007/s10922-025-10011-8"
 pdf: "00-inbox/PDFs/2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs.pdf"
 mineru_md: "02-parsed-markdown/2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["ISCX-VPNnonVPN", "USTC-TFC"]
 code: "https://github.com/AnaY1115/FGFR_Net"
 relevance: medium
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-20"
 ---
 
 # FGFR-Net: An Improved Residual Network Encrypted Traffic Classification Model Based on Byte-Level Traffic Graphs
@@ -39,6 +39,7 @@ updated: "2026-05-27"
 | 是否开源 | 是（https://github.com/AnaY1115/FGFR_Net） |
 | PDF | 00-inbox/PDFs/2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-JNSM-FGFR-Net_An_Improved_Residual_Network_Encrypted_Traffic_Classification_Model_Based_on_Byte-Level_Traffic_Graphs.md |
+| DOI | [10.1007/s10922-025-10011-8](https://doi.org/10.1007/s10922-025-10011-8) |
 
 ## 1. 一句话总结
 

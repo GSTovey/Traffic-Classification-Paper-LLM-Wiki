@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification"
-title_cn: "unknown"
+title_cn: "GenETC：加密流量分类的动态图增强微调"
 authors: ["Yunxiao Shi", "Gaolei Li", "Jun Wu", "Jianhua Li", "Yibin Zhou", "Wanlei Zhou"]
 year: 2026
 venue: "TDSC"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "https://github.com/SYX0817/GenETC"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # GenETC: Dynamic Graph-enhanced Fine-tuning for Encrypted Traffic Classification

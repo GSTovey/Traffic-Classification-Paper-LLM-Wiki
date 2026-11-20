@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Drift-Aware Adaptive Website Fingerprinting"
-title_cn: "unknown"
+title_cn: "漂移感知的自适应网站指纹识别"
 authors: ["Zhengge Yi", "Tengyao Li", "Jingxi Zhang", "Yifei Meng", "Xiangyang Luo"]
 year: 2026
 venue: "TDSC"
@@ -18,7 +18,7 @@ dataset: [unknown]
 code: "https://github.com/XinhaoDeng/Website-Fingerprinting-Library"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # Drift-Aware Adaptive Website Fingerprinting

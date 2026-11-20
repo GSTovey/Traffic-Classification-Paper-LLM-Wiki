@@ -1,9 +1,15 @@
 ---
 type: research-front
 question: "网站指纹攻防是否存在终极平衡？新攻击范式能否持续攻破新防御？"
-status: diverging
+status: conditional_support
+synthesis_state: signed
+last_synthesized: "2026-11-18"
+synthesized_by: "Codex（维护者授权按原文核验）"
+synthesis_claim_ids: ["CLM-0301","CLM-0302","CLM-0303","CLM-0304"]
+synthesis_evidence_ids: ["EV-V2-DF-DEFENSES","EV-V2-PALETTE-DEFINED","EV-V2-ONLINE-WF"]
+historical_status: diverging
 created: "2026-06-21"
-last_updated: "2026-09-19"
+last_updated: "2026-11-18"
 related_concepts:
   - "[[website-fingerprinting]]"
   - "[[encrypted-traffic-analysis]]"
@@ -15,6 +21,29 @@ related_methods:
 
 # WF 攻防的极限与新范式
 
+## 当前研究认识
+
+各研究的结果对应具体防御、训练访问权限、监控站点集合和评估指标。防御代际与闭集、开放世界对照需保留各自的条件。
+
+- DF 在原闭集实验中对 WTF-PAD 和对称 Walkie-Talkie 分别报告 90.7% 与 49.7% accuracy。（CLM-0301，EV-V2-DF-DEFENSES）
+- Palette Table 3 的闭集设置给出 DF accuracy 20.27 ± 0.14%，对应 84% 带宽与 9% 时间开销。（CLM-0302，EV-V2-PALETTE-DEFINED）
+- Online WF Fig. 9 的 top-100 候选组在监控 1 个和 5 个网站时分别报告平均精确率 0.83 和 0.82，较大的监控集合结果下降。（CLM-0303，EV-V2-ONLINE-WF）
+- 防御、监控站点、基率和时间改变后，闭集所见的 WF 攻防排序能否复现，现有审定材料证据不足。（CLM-0304）
+
+## 签审记录
+
+2026-11-18 由Codex（维护者授权按原文核验）按原文研究条件更新。旧判断及文献沿革保留在下方。
+
+### 签审前快照
+
+**待签审。** 本轮原文复核、证据边界与拟议结论见 [[front-review-2026-11-18#wf-attack-defense-limit]]. 签审后在此记录结论、适用条件、反证和未解决问题。
+
+
+## 历史研究记录
+
+> 下方保留历次研究记录，含旧制的共识和状态表述。当前引用以命题索引和签审快照为准。
+
+<!-- evidence-governance:archive:start -->
 ## 核心问题
 
 网站指纹（Website Fingerprinting）的攻防博弈是否趋向某一均衡？防御方能否构建理论上不可攻破的防御？还是攻击方总能通过更强大的特征表示和迁移学习突破防御？
@@ -117,3 +146,4 @@ related_methods:
 |---:|---|---|---|---|
 | 2026 | Drift-Aware Adaptive Website Fingerprinting | TDSC | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
 | 2026 | Fooling Multi-Tab Browsing: Few-Shot Website Fingerprinting Attacks and Lightweight Obfuscation Defenses | TDSC | 扩展/待核验 | 摘要报告的方法、条件和结果需与正文评估协议对齐 |
+<!-- evidence-governance:archive:end -->

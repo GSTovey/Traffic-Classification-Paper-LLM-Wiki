@@ -1,24 +1,24 @@
 ---
 type: paper
 title_original: "TunnelEye: An Explainable Framework for Real-Time Detection of Malicious DoH Traffic in High-Speed Backbone Networks"
-title_cn: ""
-authors: []
+title_cn: "TunnelEye：高速骨干网络恶意 DoH 流量的可解释检测"
+authors: ["Jiajia Du", "Songtao Liu", "Cheng Zhi", "Junfan Zhao", "Hua Wu", "Guang Cheng"]
 year: 2026
 venue: TNSM
-doi: unknown
-url: unknown
+doi: "10.1109/tnsm.2026.3682686"
+url: "https://doi.org/10.1109/tnsm.2026.3682686"
 pdf: "00-inbox/PDFs/2026-TNSM-TunnelEye_An_Explainable_Framework_for_Real-Time_Detection_of_Malicious_DoH_Traffic_in_High-Speed_Backbone_Networks.pdf"
 mineru_md: "02-parsed-markdown/2026-TNSM-TunnelEye_An_Explainable_Framework_for_Real-Time_Detection_of_Malicious_DoH_Traffic_in_High-Speed_Backbone_Networks.md"
 status: processed
 reading_level: L2
-research_area: []
-task: []
-method: []
-dataset: []
+research_area: ["加密 DNS 安全"]
+task: ["采样单向流量中的恶意 DoH 检测"]
+method: ["协议行为特征与流式 Sketch"]
+dataset: ["CIRA-CIC-DoHBrw-2020、DoH-Extended、作者其他评估数据"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-09-29"
+updated: "2026-11-20"
 ---
 
 # TunnelEye: An Explainable Framework for Real-Time Detection of Malicious DoH Traffic in High-Speed Backbone Networks
@@ -31,34 +31,79 @@ updated: "2026-09-29"
 | 会议/期刊 | TNSM |
 | PDF | [[2026-TNSM-TunnelEye_An_Explainable_Framework_for_Real-Time_Detection_of_Malicious_DoH_Traffic_in_High-Speed_Backbone_Networks.pdf]] |
 | MinerU Markdown | [[2026-TNSM-TunnelEye_An_Explainable_Framework_for_Real-Time_Detection_of_Malicious_DoH_Traffic_in_High-Speed_Backbone_Networks.md]] |
+| 作者 | Jiajia Du, Songtao Liu, Cheng Zhi, Junfan Zhao, Hua Wu, Guang Cheng |
+| DOI | [10.1109/tnsm.2026.3682686](https://doi.org/10.1109/tnsm.2026.3682686) |
 
 ## 1. 一句话总结
-> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+在只能观察单向或采样流量时，用协议行为计数和 Sketch 做实时恶意 DoH 检测。
 
 ## 2. 摘要原文
 —Since plaintext DNS queries are vulnerable to eavesdropping and tampering, encrypted DNS protocols such as DoH (DNS over HTTPS) have been widely adopted. However, attackers can exploit DoH by hiding malicious DNS requests and responses in HTTPS traffic, enabling covert communication and evading detection. Existing methods rely on generic bidirectional traffic statistics that lack interpretability, are costly to compute, and may become unavailable or unstable in backbone monitoring nodes with massive unidirectional and sampled traffic. To address these issues, we propose TunnelEye, an explainable real-time framework for malicious DoH detection. It uses protocol-level behavioral analysis to capture DoH features that remain stable across traffic directions and sampling rates, and introduces an efficient data structure, DoH-Sketch, to ensure real-time performance. Experiments on public and self-collected datasets show that TunnelEye enables second-level detection with high accuracy. On public datasets, it achieves 99.88% accuracy. In backbone networks with sampled traffic, TunnelEye outperforms existing methods, improving accuracy by 14.5% at a 1/128 sampling rate and reducing the false positive rate by 31% under interference from background traffic. Index Terms—DNS over HTTPS, malicious DoH traffic detection, explainability, backbone network, packet sampling.
 
 ## 3. 方法分析
-- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
-- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
-- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+从单向流量测量 DoH 行为统计，使用 DoH-Sketch 保存有限状态特征，再做分类与效率评估。
 
 ## 4. 实验表现
-- 数据集：待从全文核验。
-- Baseline：unknown。
-- 指标与数值：不补造，待表格核验。
+
+- 研究对象：CIRA-CIC-DoHBrw-2020、DoH-Extended、作者其他评估数据。
+- 作者报告：摘要报告公开数据准确率 99.88%，另在骨干采样和背景干扰实验报告改善。§VII 的 35.17 Gbps 是 DoH-Sketch 处理率。
+- 原文位置：[[02-parsed-markdown/2026-TNSM-TunnelEye_An_Explainable_Framework_for_Real-Time_Detection_of_Malicious_DoH_Traffic_in_High-Speed_Backbone_Networks|原文解析稿]] · §V、§VII。
 
 ## 5. 局限性与复现建议
-- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
-- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+准确率、误报和 Sketch 处理率来自不同评估设置。应保留采样率、背景构造及硬件条件。
 
 ## 6. 知识链接
 - [[traffic-classification]]
 - [[encrypted-traffic-analysis]]
 
 ## 7. 证据状态
+
+本页摘要区属于论文级记录。正文方法与结果已对照 [[02-parsed-markdown/2026-TNSM-TunnelEye_An_Explainable_Framework_for_Real-Time_Detection_of_Malicious_DoH_Traffic_in_High-Speed_Backbone_Networks|原文解析稿]] · §V、§VII。可引用的结论须保留所列实验条件。
+
+### 并行深度分析（2026-09-29）
+- 方法/问题：TunnelEye performs explainable real-time malicious DoH detection using direction/sampling-stable protocol behavioral features and a DoH-Sketch data structure for high-speed backbone monitoring. Missing: feature list, sketch error/throughput bounds, dataset composition and comparison values.
+- 证据边界：以上仅使用对应 MinerU 解析稿摘要及可稳定提取段落；未提取到的数值、数据集、代码和参数均不作推断。
+- 复现建议：先核对原文表格、附录、代码仓库和数据划分，再确定 L3/L4 复现。
+
+## 历史自动摘录
+
+> 早期入库生成的字段和占位段落。现行记录见上文。
+
+```markdown
+title_cn: ""
+research_area: []
+task: []
+method: []
+dataset: []
+
+## 1. 一句话总结
+> 基于 MinerU 提取结果的待深读论文记录；具体贡献需结合全文核验。
+
+
+## 3. 方法分析
+- 输入：论文所研究的网络流量、协议、系统或安全数据（以全文为准）。
+- 处理：论文提出的方法或分析流程（摘要级自动提取，待核验）。
+- 输出：分类、检测、预测、攻击/防御或系统验证结果。
+
+
+## 4. 实验表现
+- 数据集：待从全文核验。
+- Baseline：unknown。
+- 指标与数值：不补造，待表格核验。
+
+
+## 5. 局限性与复现建议
+- 当前笔记完成自动入库和摘要级分析，未替代人工深读。
+- 先核验数据来源、代码状态、划分和指标，再决定复现等级。
+
+
+## 7. 证据状态
 - MinerU：已完成；解析质量需人工抽查。
 - Bib 元数据：待官方 API/论文首页核验。
+
 
 
 ## 深度分析（自动证据提取，需人工复核）
@@ -81,7 +126,4 @@ updated: "2026-09-29"
 - 当前分析等级：L2→深度补充；所有未被正文片段直接支持的判断均保留为待核验。
 
 
-### 并行深度分析（2026-09-29）
-- 方法/问题：TunnelEye performs explainable real-time malicious DoH detection using direction/sampling-stable protocol behavioral features and a DoH-Sketch data structure for high-speed backbone monitoring. Missing: feature list, sketch error/throughput bounds, dataset composition and comparison values.
-- 证据边界：以上仅使用对应 MinerU 解析稿摘要及可稳定提取段落；未提取到的数值、数据集、代码和参数均不作推断。
-- 复现建议：先核对原文表格、附录、代码仓库和数据划分，再确定 L3/L4 复现。
+```

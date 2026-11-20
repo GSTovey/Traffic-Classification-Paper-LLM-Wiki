@@ -5,8 +5,8 @@ title_cn: "Stinger：基于投毒数据包序列的轻量级网站指纹防御"
 authors: ["Lihai Nie", "Xiaodong Dong", "Lili Shi", "Laiping Zhao", "Zheli Liu"]
 year: 2026
 venue: "IEEE TIFS 2026"
-doi: unknown
-url: unknown
+doi: "10.1109/tifs.2025.3646493"
+url: "https://doi.org/10.1109/tifs.2025.3646493"
 pdf: "00-inbox/PDFs/2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences.pdf"
 mineru_md: "02-parsed-markdown/2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["DF Dataset", "AWF Dataset", "DF 开放世界子集"]
 code: "https://github.com/sxy888/Stinger-prototype"
 relevance: high
 created: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-11-20"
 ---
 
 # Stinger: A Light-Weight Website Fingerprinting Defense Through Poisoning Packet Sequences
@@ -39,6 +39,7 @@ updated: "2026-09-19"
 | 是否开源 | 是（原型系统 https://github.com/sxy888/Stinger-prototype ；实验细节 https://github.com/sxy888/Stinger/blob/main/experiment.md ） |
 | PDF | 00-inbox/PDFs/2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences.pdf |
 | MinerU Markdown | 02-parsed-markdown/2026-TIFS-Stinger__A_Light-Weight_Website_Fingerprinting_Defense_Through_Poisoning_Packet_Sequences.md |
+| DOI | [10.1109/tifs.2025.3646493](https://doi.org/10.1109/tifs.2025.3646493) |
 
 > ⚠️ MinerU 解析问题：解析稿同样系统性丢失连字 "ff"（effective→efective、suffer→sufer、offline→ofline、difficulty→dificulty、traffic→trafic），引用时已还原。Table III/IV 中标注"次优"的符号（‡）在部分单元格中位置错乱（如 "20.34%‡"、"7.14%‡"），已按表意与正文交叉核对后使用。
 

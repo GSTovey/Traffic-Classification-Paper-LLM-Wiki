@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "OpenOptics: Enabling Open Research and Implementation of Optical Data Center Networks"
-title_cn: ""
+title_cn: "OpenOptics：光学数据中心网络的开放研究与实现"
 authors: ["Yiming Lei", "Federico De Marchi", "Jialong Li", "Raj Joshi", "Shu-Ting Wang", "Xiaoqi Chen", "Balakrishnan Chandrasekaran", "Yiting Xia"]
 year: 2026
 venue: NSDI
@@ -18,7 +18,7 @@ dataset: ["Memcached/Memslap", "Gloo allreduce", "iperf3", "RPC/Hadoop/KV-store 
 code: "yes (paper states open source; exact repository URL not listed in parsed text)"
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 ---
 
 # OpenOptics: Enabling Open Research and Implementation of Optical Data Center Networks

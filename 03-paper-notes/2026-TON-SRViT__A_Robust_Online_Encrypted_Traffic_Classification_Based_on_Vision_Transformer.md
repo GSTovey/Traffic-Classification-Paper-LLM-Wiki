@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer"
-title_cn: "unknown"
+title_cn: "SRViT：基于视觉 Transformer 的鲁棒在线加密流量分类"
 authors: ["Chang Liu", "Lei Han", "Zulong Diao", "Zheng Wu", "Xin He", "Weibei Fan", "Fu Xiao"]
 year: 2026
 venue: "TON"
@@ -18,7 +18,7 @@ dataset: ["ISCX, QUIC"]
 code: "unknown"
 relevance: medium
 created: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-20"
 ---
 
 # SRViT: A Robust Online Encrypted Traffic Classification Based on Vision Transformer

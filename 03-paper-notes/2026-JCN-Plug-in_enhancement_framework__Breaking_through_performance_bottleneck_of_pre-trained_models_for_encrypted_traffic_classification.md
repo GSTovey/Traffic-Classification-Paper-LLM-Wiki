@@ -5,8 +5,8 @@ title_cn: "插件增强框架：突破预训练模型在加密流量分类中的
 authors: ["Chaofan Zheng", "Hailong Ma", "Yanze Qu", "Yiming Jiang", "Wenbo Wang"]
 year: 2026
 venue: "JCN"
-doi: "unknown"
-url: "unknown"
+doi: "10.1016/j.comnet.2026.112122"
+url: "https://doi.org/10.1016/j.comnet.2026.112122"
 pdf: "00-inbox/PDFs/2026-JCN-Plug-in_enhancement_framework__Breaking_through_performance_bottleneck_of_pre-trained_models_for_encrypted_traffic_classification.pdf"
 mineru_md: "02-parsed-markdown/2026-JCN-Plug-in_enhancement_framework__Breaking_through_performance_bottleneck_of_pre-trained_models_for_encrypted_traffic_classification.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["USTC-TFC2016", "ISCXVPN2016", "ISCXTor2016", "CICIDS2017"]
 code: "https://github.com/slg6/Plug-inEnhancementFramework"
 relevance: high
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-11-20"
 ---
 
 ## §0 基础信息

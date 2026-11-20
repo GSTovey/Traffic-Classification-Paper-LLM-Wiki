@@ -7,7 +7,7 @@ year: 2025
 venue: "EuroSys 2025"
 doi: "10.1145/3689031.3696081"
 url: ""
-pdf: "00-inbox/Aug_inbox/2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Traffic_Analysis_Applications.pdf"
+pdf: "00-inbox/PDFs/2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Traffic_Analysis_Applications.pdf"
 mineru_md: "02-parsed-markdown/2025-EuroSys-SuperFE__A_Scalable_and_Flexible_Feature_Extractor_for_ML-based_Traffic_Analysis_Applications.md"
 status: processed
 reading_level: L3

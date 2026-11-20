@@ -12,8 +12,8 @@ authors:
   - Chang Liu
 year: 2023
 venue: "Computer Networks"
-doi: ""
-url: ""
+doi: "10.1016/j.comnet.2023.109731"
+url: "https://doi.org/10.1016/j.comnet.2023.109731"
 pdf: "00-inbox/PDFs/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.pdf"
 mineru_md: "02-parsed-markdown/2023-ComputerNetworks-Few-shot_encrypted_traffic_classification_via_multi-task_representation_enhanced_meta-learning.md"
 status: processed
@@ -21,11 +21,11 @@ reading_level: L2
 research_area: ["加密流量分类", "元学习", "少样本学习"]
 task: ["流量分类"]
 method: ["meta-learning", "deep-learning", "unsupervised-learning", "CNN"]
-dataset: []
+dataset: ["APP60-Origin", "APP60-Update", "ISCX2012", "CICIDS2017"]
 code: "unknown"
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-29"
+updated: "2026-11-20"
 ---
 
 # 0 基础信息

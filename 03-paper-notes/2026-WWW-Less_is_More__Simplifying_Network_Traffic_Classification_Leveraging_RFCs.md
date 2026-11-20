@@ -1,7 +1,7 @@
 ---
 type: paper
 title_original: "Less is More: Simplifying Network Traffic Classification Leveraging RFCs"
-title_cn: ""
+title_cn: "少即是多：使用 RFC 简化网络流量分类"
 authors: ["Nimesha Wickramasinghe", "Arash Shaghaghi", "Elena Ferrari", "Sanjay Jha"]
 year: 2026
 venue: WWW
@@ -18,7 +18,7 @@ dataset: ["CSTNET-TLS1.3"]
 code: unknown
 relevance: medium
 created: "2026-09-29"
-updated: "2026-10-10"
+updated: "2026-11-20"
 internal_citation_count: 3
 citation_impact: 1.0
 composite_weight: 0.85

@@ -156,6 +156,8 @@ Pre-training and Fine-tuning（预训练-微调范式）是一种两阶段学习
 
 ## 相关研究前沿
 
+> 当前证据检查与对应命题见 [[pretraining-necessity#当前研究认识]]。
+
 - [[pretraining-necessity]] — 预训练范式在流量分析中是否必要
 
 

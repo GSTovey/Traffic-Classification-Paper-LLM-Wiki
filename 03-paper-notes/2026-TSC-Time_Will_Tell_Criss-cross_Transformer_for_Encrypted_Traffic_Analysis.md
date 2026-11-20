@@ -5,8 +5,8 @@ title_cn: "时间会证明：用于加密流量分析的交叉 Transformer"
 authors: ["Hua Ding", "Lixing Chen", "Bo Zhang", "Shenghong Li", "Hao Peng", "Zhe Qu", "Yang Bai"]
 year: 2026
 venue: "IEEE Transactions on Service Computing (TSC)"
-doi: unknown
-url: unknown
+doi: "10.1109/tsc.2026.3664705"
+url: "https://doi.org/10.1109/tsc.2026.3664705"
 pdf: "00-inbox/PDFs/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.pdf"
 mineru_md: "02-parsed-markdown/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.md"
 status: processed
@@ -18,7 +18,7 @@ dataset: ["ISCX-VPN2016", "ISCX-Tor2016", "CSTNET-TLS1.3", "USTC-TFC2016", "CIC-
 code: "https://github.com/Amanda-HuaDing/Criss-cross Traffic Transformer"
 relevance: high
 created: "2026-05-27"
-updated: "2026-05-27"
+updated: "2026-11-20"
 ---
 
 # Time Will Tell: Criss-cross Transformer for Encrypted Traffic Analysis
@@ -39,6 +39,7 @@ updated: "2026-05-27"
 | 是否开源            | 是（https://github.com/Amanda-HuaDing/Criss-cross Traffic Transformer）                                                                      |
 | PDF             | 00-inbox/PDFs/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.pdf                                          |
 | MinerU Markdown | 02-parsed-markdown/2026-TSC-Time_Will_Tell_Criss-cross_Transformer_for_Encrypted_Traffic_Analysis.md                                      |
+| DOI | [10.1109/tsc.2026.3664705](https://doi.org/10.1109/tsc.2026.3664705) |
 
 ## 1. 一句话总结
 
